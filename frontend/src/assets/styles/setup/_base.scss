@@ -2,15 +2,15 @@
     box-sizing: border-box;
 }
 
-// ::selection {
-//     // background-color: $clr1;
-//     // color: $clr6;
-// }
+::selection {
+    background-color: $clr1;
+    color: $clr6;
+}
 
 html {
+    // font-family: montserrat;
     line-height: 1.6;
-    // color: $clr2;
-    font-family: roboto-regular, sans-serif;
+    color: $clr2;
 }
 
 body {

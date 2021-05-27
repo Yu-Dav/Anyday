@@ -7,7 +7,7 @@ export const boards =[
     isFavorite: false,
 
     createdBy: {
-        _id: 'u101',
+        _id: 'u102',
         fullname: 'Abi Abambi',
         imgUrl: 'http://some-img',
     },
@@ -102,7 +102,7 @@ export const boards =[
             txt: 'Changed Color',
             createdAt: 154514,
             byMember: {
-                _id: 'u101',
+                _id: 'u102',
                 fullname: 'Abi Abambi',
                 imgUrl: 'http://some-img',
             },
