@@ -1,0 +1,35 @@
+
+
+// this should happen when 
+ 
+async function saveTask({ commit }, {task}) {
+    try {
+        const boardId = 'u101'
+        const task = await boardService.saveTask(boardId, task);
+        commit({ type: 'setTask', task })
+    } catch (err) {
+        console.log('boardStore: Error in loadBoard', err)
+        throw err
+    }
+}
+
+// this should happen when cdm: 
+async function loadBoard() {
+    try {
+        const boardId = 'u101' // URL params 
+        const board = await boardService.getById(boardId);
+        commit({ type: 'setBoard', board }) 
+        socketService.emit('watch-board', boardId) // join('u101')
+        socketService.off('board-updated')
+        socketService.on('board-updated', board => {
+            commit({ type: 'setBoard', board })
+        })
+        socketService.on('task-updated', task => {
+            commit({ type: 'saveTask', task })
+        })
+
+    } catch (err) {
+        console.log('boardStore: Error in loadBoard', err)
+        throw err
+    }
+}
