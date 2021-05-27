@@ -1,0 +1,47 @@
+.sidebar-app {
+    nav {
+        padding: 20px 0;
+        background-color: #292f4c;
+        color: #fff;
+        min-height: 100vh;
+        width: 5vw;
+    }
+    .user-greeting {
+        background-color: #00ca72;
+        transform: rotate(270deg);
+        text-align: center;
+        margin-left: -60px;
+        border-radius: 0 0 20px 20px;
+        padding: 15px;
+        font-size: 1.3em;
+        font-family: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    a {
+        color: inherit;
+    }
+    i {
+        cursor: pointer;
+    }
+    .fas {
+        font-family: fa-solid;
+    }
+    .far {
+        font-family: fa;
+    }
+
+    .fa-th::after {
+        content: '\f00a';
+    }
+    .fa-sign-out-alt {
+        transform: scale(-1, 1); // this doesn't work???
+    }
+    .fa-sign-out-alt::after {
+        content: '\f2f5';
+    }
+    .fa-bell::after {
+        content: '\f0f3';
+    }
+}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { SidebarNav } from '../cmps/SidebarNav.jsx'
+import { SidebarApp } from '../cmps/SidebarApp.jsx'
 import { BoardHeader } from '../cmps/BoardHeader'
 
 import { loadBoard } from '../store/actions/boardActions'
@@ -14,14 +15,11 @@ class _BoardApp extends Component {
 
     render() {
         return (
-            <div>
-                Board app
-                Header
-                Filter
-                BoardCtrlPanel
-                <BoardHeader />
+            <div className="board-app-container flex">
                 {/* GroupList -> map all groups -> GroupPreview -> map all tasks -> TaskPreview*/}
+                <SidebarApp/> 
                 <SidebarNav/>
+                <BoardHeader />
             </div>
         )
     }

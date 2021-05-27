@@ -9,7 +9,13 @@
 @import 'basics/layout';
 @import 'basics/base';
 @import 'basics/buttons';
-
+@import 'basics/reset';
 
 // Components
 
+@import 'cmps/sidebarNav';
+@import 'cmps/sidebarApp';
+
+// Pages
+
+@import 'pages/boardApp';

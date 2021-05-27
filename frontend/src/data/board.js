@@ -1,9 +1,9 @@
 export const boards =[ 
     {
     _id: 'b101',
-    title: 'Robot dev proj',
+    title: 'Final Sprint',
     createdAt: 1589983468418,
-    description: '',
+    description: 'Planning the final sprint and assigning tasks between team members',
     isFavorite: false,
 
     createdBy: {
@@ -73,25 +73,6 @@ export const boards =[
                         fullname: 'Tal Tarablus',
                         imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
                     },
-
-
-                    // checklists: [  // we need to figure this out.
-                    //     {
-                    //         id: 'YEhmF',
-                    //         title: 'Checklist',
-                    //         todos: [
-                    //             {
-                    //                 id: '212jX',
-                    //                 title: 'To Do 1',
-                    //                 isDone: false,
-                    //             },
-                    //         ],
-                    //     },
-                    // ],                   
-                    // style: { // of the TASK aint this the color of the whole group?
-                    //     bgColor: '#26de81',
-                    // },
-
                 },
             ],
         },
