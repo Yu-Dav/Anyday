@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { SidebarNav } from '../cmps/SidebarNav.jsx'
 
 import { loadBoard } from '../store/actions/boardActions'
-
 
  class _BoardApp extends Component {
     state = {
@@ -21,6 +21,7 @@ import { loadBoard } from '../store/actions/boardActions'
                 Filter
                 BoardCtrlPanel
                 {/* GroupList -> map all groups -> GroupPreview -> map all tasks -> TaskPreview*/}
+                <SidebarNav/>
             </div>
         )
     }

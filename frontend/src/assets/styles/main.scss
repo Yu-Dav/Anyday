@@ -1,2 +1,6 @@
-@import './setup/typography';
-@import './basics/base'
+@import './setup/_typography.scss';
+@import './basics/_base.scss';
+@import './setup/_mixins.scss';
+@import './basics/_helpers.scss';
+
+@import './cmps/_sidebarNav.scss'
