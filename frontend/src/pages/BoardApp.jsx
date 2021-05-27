@@ -9,11 +9,13 @@ import { loadBoard } from '../store/actions/boardActions'
 class _BoardApp extends Component {
     
     componentDidMount() {
-        const { boardId } = this.props.match.params
+        const boardId = 'b101'  //later from params
         this.props.loadBoard(boardId)
     }
 
     render() {
+        if (!this.props.currBoard) return <p>Loading</p>
+        console.log('boardtitle', this.props.currBoard);
         return (
             <div className="board-app-container flex">
                 {/* GroupList -> map all groups -> GroupPreview -> map all tasks -> TaskPreview*/}
