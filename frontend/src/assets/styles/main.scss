@@ -1,6 +1,15 @@
-@import './setup/_typography.scss';
-@import './basics/_base.scss';
-@import './setup/_mixins.scss';
-@import './basics/_helpers.scss';
+// Setup
+@import 'setup/variables';
+@import 'setup/functions';
+@import 'setup/mixins';
+@import 'setup/typography';
 
-@import './cmps/_sidebarNav.scss'
+// Basics
+@import 'basics/helpers';
+@import 'basics/layout';
+@import 'basics/base';
+@import 'basics/buttons';
+
+
+// Components
+
