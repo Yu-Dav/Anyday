@@ -7,21 +7,23 @@ import { BoardHeader } from '../cmps/BoardHeader'
 import { loadBoard } from '../store/actions/boardActions'
 import { GroupList } from '../cmps/groups/GroupList'
 class _BoardApp extends Component {
-    
+
     componentDidMount() {
         const boardId = 'b101'  //later from params
         this.props.loadBoard(boardId)
     }
 
     render() {
-        const {currBoard} = this.props
+        const { currBoard } = this.props
         return (
             <div className="board-app-container flex">
-                <GroupList groups={currBoard.groups} key={currBoard._id}/>
                 {/* GroupList -> map all groups -> GroupPreview -> map all tasks -> TaskPreview*/}
-                <SidebarApp/> 
-                <SidebarNav/>
-                <BoardHeader />
+                <SidebarApp />
+                <SidebarNav />
+                <div className="container board-container">
+                    <BoardHeader />
+                    <GroupList groups={currBoard.groups} key={currBoard._id} />
+                </div >
             </div>
         )
     }

@@ -25,7 +25,7 @@ export class BoardHeader extends Component {
 
     render = () => {
         return (
-            <div>
+            <div className="board-header">
                 <ContentEditable className="board-title"
                     name="boardTitle"
                     innerRef={this.contentEditable}

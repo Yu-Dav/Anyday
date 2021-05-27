@@ -1,5 +1,5 @@
 import React from 'react'
-import {GroupHeader} from '../groups/GroupHeader'
+import {GroupHeader} from './GroupHeader'
 import { TaskPreview } from '../tasks/TaskPreview'
 
 export function GroupPreview({ group }) {

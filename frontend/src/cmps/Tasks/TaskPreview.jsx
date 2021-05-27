@@ -1,11 +1,11 @@
 import React from 'react'
-import { CellTitle } from '../tasks/CellTitle'
-import { CellMember } from '../tasks/CellMember'
-import { CellTag } from '../tasks/CellTag'
-import { CellStatus } from '../tasks/CellStatus'
-import { CellPriority } from '../tasks/CellPriority'
-import { CellCreationLog } from '../tasks/CellCreationLog'
-import { CellDate } from '../tasks/CellDate'
+import { CellTitle } from './CellTitle'
+import { CellMember } from './CellMember'
+import { CellTag } from './CellTag'
+import { CellStatus } from './CellStatus'
+import { CellPriority } from './CellPriority'
+import { CellCreationLog } from './CellCreationLog'
+import { CellDate } from './CellDate'
 
 export function TaskPreview({ task }) {
     return (
