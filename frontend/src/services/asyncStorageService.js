@@ -14,7 +14,7 @@ function query(entityType, filterBy) {
     if (!entities || !entities.length) {
         entities = boards
     }
-    console.log ('entities =',entities)
+    // console.log ('entities =',entities)
     return Promise.resolve(entities)
 }
 

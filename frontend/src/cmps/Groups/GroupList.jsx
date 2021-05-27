@@ -1,9 +1,11 @@
 import React from 'react'
+import {GroupPreview} from './GroupPreview'
 
-export function GroupList() {
+export function GroupList({ groups }) {
+    if (!groups || !groups.length) return <p>Loading...</p>
     return (
         <div>
-            Group List
+                {groups.map(group => <GroupPreview key={group.id} group={group} />)}
         </div>
     )
 }

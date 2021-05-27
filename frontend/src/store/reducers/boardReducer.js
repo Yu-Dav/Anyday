@@ -10,7 +10,6 @@ const initialState = {
 export function boardReducer(state = initialState, action) {
     switch (action.type) {
         case 'SET_BOARD': // should come from getById
-        console.log('board action', action.board)
             return { ...state, currBoard: action.board };
 
         case 'SET_BOARDS': // should come from query -> the collection of all the boards 

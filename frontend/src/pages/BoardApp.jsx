@@ -4,7 +4,7 @@ import { SidebarNav } from '../cmps/SidebarNav.jsx'
 import { BoardHeader } from '../cmps/BoardHeader'
 
 import { loadBoard } from '../store/actions/boardActions'
-
+import { GroupList } from '../cmps/groups/GroupList'
 class _BoardApp extends Component {
     
     componentDidMount() {
@@ -13,16 +13,16 @@ class _BoardApp extends Component {
     }
 
     render() {
-        if (!this.props.currBoard) return <p>Loading</p>
-        console.log('boardtitle', this.props.currBoard);
+        const {currBoard} = this.props
         return (
             <div>
                 Board app
                 Header
                 Filter
                 BoardCtrlPanel
-                <h1>{this.props.currBoard.title}</h1>
+                <h1>{currBoard.title}</h1>
                 <BoardHeader />
+                <GroupList groups={currBoard.groups} key={currBoard._id}/>
                 {/* GroupList -> map all groups -> GroupPreview -> map all tasks -> TaskPreview*/}
                 <SidebarNav/>
             </div>
