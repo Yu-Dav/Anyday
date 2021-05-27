@@ -3,14 +3,14 @@
 }
 
 ::selection {
-    background-color: $clr1;
-    color: $clr6;
+    // background-color: $clr1;
+    // color: $clr6;
 }
 
 html {
-    font-family: montserrat;
     line-height: 1.6;
-    color: $clr2;
+    // color: $clr2;
+    font-family: roboto-regular, sans-serif;
 }
 
 body {
