@@ -1,0 +1,13 @@
+.sidebar-nav {
+    background-color: beige;
+    width: 2vw;
+    &.is-expanded {
+        width: 10vw;
+    }
+    .fas {
+        font-family: fa-solid;
+    }
+    .fa-angle-down::after {
+        content: "\f107";
+    }
+}

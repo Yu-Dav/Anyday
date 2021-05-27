@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import {BoardHeader} from '../cmps/BoardHeader'
+import { SidebarNav } from '../cmps/SidebarNav.jsx'
+import { BoardHeader } from '../cmps/BoardHeader'
+
 import { loadBoard } from '../store/actions/boardActions'
 
-
- class _BoardApp extends Component {
-
-
+class _BoardApp extends Component {
+    
     componentDidMount() {
         const boardId = 'b101'  //later from params
         this.props.loadBoard(boardId)
@@ -22,8 +22,9 @@ import { loadBoard } from '../store/actions/boardActions'
                 Filter
                 BoardCtrlPanel
                 <h1>{this.props.currBoard.title}</h1>
-                <BoardHeader/>
+                <BoardHeader />
                 {/* GroupList -> map all groups -> GroupPreview -> map all tasks -> TaskPreview*/}
+                <SidebarNav/>
             </div>
         )
     }
