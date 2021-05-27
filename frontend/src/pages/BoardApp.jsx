@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-
+import {BoardHeader} from '../cmps/BoardHeader'
 import { loadBoard } from '../store/actions/boardActions'
 
 
@@ -20,6 +20,7 @@ import { loadBoard } from '../store/actions/boardActions'
                 Header
                 Filter
                 BoardCtrlPanel
+                <BoardHeader/>
                 {/* GroupList -> map all groups -> GroupPreview -> map all tasks -> TaskPreview*/}
             </div>
         )
