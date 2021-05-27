@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { SidebarNav } from '../cmps/SidebarNav.jsx'
+import { SidebarApp } from '../cmps/SidebarApp.jsx'
 import { BoardHeader } from '../cmps/BoardHeader'
 
 import { loadBoard } from '../store/actions/boardActions'
@@ -15,16 +16,12 @@ class _BoardApp extends Component {
     render() {
         const {currBoard} = this.props
         return (
-            <div>
-                Board app
-                Header
-                Filter
-                BoardCtrlPanel
-                <h1>{currBoard.title}</h1>
-                <BoardHeader />
+            <div className="board-app-container flex">
                 <GroupList groups={currBoard.groups} key={currBoard._id}/>
                 {/* GroupList -> map all groups -> GroupPreview -> map all tasks -> TaskPreview*/}
+                <SidebarApp/> 
                 <SidebarNav/>
+                <BoardHeader />
             </div>
         )
     }

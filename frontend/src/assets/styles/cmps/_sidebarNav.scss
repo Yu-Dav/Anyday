@@ -1,13 +1,48 @@
 .sidebar-nav {
-    background-color: beige;
     width: 2vw;
+    min-height: 100vh;
+    border-right: 1px solid #e6e9ef;
+    // transition: opacity 0.2s ease;
+
     &.is-expanded {
         width: 10vw;
+        // opacity: 1;
+        .arrow {
+            position: absolute;
+            top: 20px;
+            left: 242px;
+        }
+    }
+    i {
+        cursor: pointer;
     }
     .fas {
         font-family: fa-solid;
     }
-    .fa-angle-down::after {
-        content: "\f107";
+    .arrow {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 1px solid #e6e9ef;
+        background-color: white;
+        font-size: 1.3em;
+        display: inline-block;
+        text-align: center;
+        position: absolute;
+        top: 20px;
+        z-index: 1;
+    }
+
+    .arrow-right::after {
+        content: '\f101';
+    }
+    .arrow-left::after {
+        content: '\f100';
+    }
+    .fa-plus::before {
+        content: '\f067';
+    }
+    .fa-search::before {
+        content: '\f002';
     }
 }
