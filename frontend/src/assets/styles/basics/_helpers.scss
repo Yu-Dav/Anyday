@@ -25,6 +25,21 @@
     &.align-center {
         align-items: center;
     }
+    &.space-between {
+        justify-content: space-between;
+    }
+    
+    &.space-around {
+        justify-content: space-around;
+    }
+}
+
+/* list helpers */
+
+.clean-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 // Media helpers
