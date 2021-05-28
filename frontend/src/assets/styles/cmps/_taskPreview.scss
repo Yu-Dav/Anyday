@@ -1,0 +1,10 @@
+.task-row {
+    border-bottom: 1px solid;
+    border-bottom-color: #fff;
+    box-shadow: 0 3px 4px -5px #484444;
+    margin-bottom: 2px;
+    &>*:not(:last-child) {
+        background-color: #f5f6f8;
+        margin: 0 0 0 1px;
+    }
+}
