@@ -8,7 +8,7 @@ export function GroupPreview({ group, board, updateBoard }) {
     return (
         <div className="group-preview" >
             <GroupHeader group={group}/>
-            {tasks.map(task => <TaskPreview board={board} key={task.id} task={task} />)}
+            {tasks.map(task => <TaskPreview board={board} group={group} key={task.id} task={task} updateBoard={updateBoard}/>)}
             <TaskAdd board={board} group={group} updateBoard={updateBoard}/>
         </div>
     )
