@@ -4,7 +4,7 @@ export class CellStatus extends Component {
     render() {
         const { status } = this.props.task
         return (
-            <div>
+            <div className="cell">
                 {status}
             </div>
         )
