@@ -22,7 +22,7 @@ class _BoardApp extends Component {
                 <SidebarNav />
                 <div className="container board-container">
                     <BoardHeader />
-                    <GroupList groups={currBoard.groups} key={currBoard._id} />
+                    <GroupList board={currBoard} groups={currBoard.groups} key={currBoard._id} />
                 </div >
             </div>
         )
