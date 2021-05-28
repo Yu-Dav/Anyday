@@ -1,3 +1,28 @@
 .board-header {
     height: 100px;
+
+    .title-container {
+        .title{
+            font-size: rem(24px);
+            width: rem(300px);
+            height: rem(40px);
+            border: 1px solid transparent;
+            &:hover {
+                border: 1px dashed black;
+            }
+        }
+    }
+    .subtitle-container{
+
+        .subtitle {
+            font-size: rem(14px);
+            width: rem(500px);
+            height: rem(25px);
+            border: 1px solid transparent;
+            &:hover {
+                border: 1px dashed black;
+            }
+        }
+    }
+
 }
