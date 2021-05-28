@@ -4,7 +4,7 @@ import { SidebarNav } from '../cmps/SidebarNav.jsx'
 import { SidebarApp } from '../cmps/SidebarApp.jsx'
 import { BoardHeader } from '../cmps/BoardHeader'
 
-import { loadBoard } from '../store/actions/boardActions'
+import { loadBoard, updateBoard } from '../store/actions/boardActions'
 import { GroupList } from '../cmps/groups/GroupList'
 class _BoardApp extends Component {
 
@@ -21,7 +21,7 @@ class _BoardApp extends Component {
                 <SidebarApp />
                 <SidebarNav />
                 <div className="container board-container">
-                    <BoardHeader />
+                    <BoardHeader board={this.props.currBoard} updateBoard={this.props.updateBoard}/>
                     <GroupList groups={currBoard.groups} key={currBoard._id} />
                 </div >
             </div>
@@ -39,6 +39,7 @@ function mapStateToProps(state) {
 }
 const mapDispatchToProps = {
     loadBoard,
+    updateBoard
 
 }
 

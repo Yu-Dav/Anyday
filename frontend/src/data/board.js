@@ -2,6 +2,7 @@ export const boards = [
     {
         _id: 'b101',
         title: 'Final Sprint',
+        subtitle: 'Our monday',
         createdAt: 1589983468418,
         description:
             'Planning the final sprint and assigning tasks between team members',
