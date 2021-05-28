@@ -76,15 +76,91 @@ export const boards = [
                             imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
                         },
                     },
+                    {
+                        id: 'c105',
+                        labelIds: ['101'],
+                        createdAt: 1590999730348,
+                        dueDate: 16156215211,
+                        title: 'Help me',
+                        tags: ['initialize'],
+                        status: 'Working on it',
+                        priority: 'Medium',
+                        members: [
+                            // TASK members
+                            {
+                                _id: 'u101',
+                                username: 'Tal',
+                                fullname: 'Tal Tarablus',
+                                imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
+                            },
+                        ],
+                        comments: [
+                            {
+                                // popup modal on the side of the screen showing the comments each member left
+                                id: 'ZdPnm',
+                                txt: 'also @yaronb please CR this',
+                                createdAt: 1590999817436.0,
+                                byMember: {
+                                    _id: 'u101',
+                                    fullname: 'Tal Tarablus',
+                                    imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
+                                },
+                            },
+                        ],
+                        byMember: {
+                            _id: 'u101',
+                            username: 'Tal',
+                            fullname: 'Tal Tarablus',
+                            imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
+                        },
+                    },
+                    {
+                        id: 'c106',
+                        labelIds: ['101'],
+                        createdAt: 1590999730348,
+                        dueDate: 16156215211,
+                        title: 'Help me',
+                        tags: ['initialize'],
+                        status: 'Working on it',
+                        priority: 'Medium',
+                        members: [
+                            // TASK members
+                            {
+                                _id: 'u101',
+                                username: 'Tal',
+                                fullname: 'Tal Tarablus',
+                                imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
+                            },
+                        ],
+                        comments: [
+                            {
+                                // popup modal on the side of the screen showing the comments each member left
+                                id: 'ZdPnm',
+                                txt: 'also @yaronb please CR this',
+                                createdAt: 1590999817436.0,
+                                byMember: {
+                                    _id: 'u101',
+                                    fullname: 'Tal Tarablus',
+                                    imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
+                                },
+                            },
+                        ],
+                        byMember: {
+                            _id: 'u101',
+                            username: 'Tal',
+                            fullname: 'Tal Tarablus',
+                            imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
+                        },
+                    },
                 ],
             },
             {
-                id: 'g102',
+                id: 'g103',
                 style: { bgColor: '#26de81' },
                 title: 'Group 1',
                 tasks: [
                     {
-                        id: 'c104',
+                        id: 'c105',
                         labelIds: ['101'],
                         createdAt: 1590999730348,
                         dueDate: 16156215211,

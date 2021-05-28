@@ -8,6 +8,7 @@ import { CellCreationLog } from './CellCreationLog'
 import { CellDate } from './CellDate'
 
 export function TaskPreview({ task }) {
+    console.log ('task =',task)
     return (
         <div className="task-row flex">
             <CellTitle task={task} />
@@ -17,6 +18,7 @@ export function TaskPreview({ task }) {
             <CellPriority task={task} />
             <CellCreationLog task={task} />
             <CellDate task={task} />
+            <div className="task-row-border"></div>
         </div>
     )
 }

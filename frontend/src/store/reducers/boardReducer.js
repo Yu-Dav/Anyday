@@ -26,12 +26,13 @@ export function boardReducer(state = initialState, action) {
                 ),
             };
         case 'UPDATE_BOARD':
+            console.log ('action.board in reducer =',action.board)
             return {
                 ...state, 
                 boards: state.boards.map((board) =>
                     board._id === action.board._id ? action.board : board
                 ),
-                // add also update the curr board that was updated 
+                currBoard: action.board
             };
         case 'LOADING_BOARDS':
             return { ...state, isLoading: action.isLoading, err: null };
