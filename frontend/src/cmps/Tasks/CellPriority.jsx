@@ -8,14 +8,20 @@ export class CellPriority extends Component {
         isExpanded: false
     }
 
+    componentDidMount() {
+        // console.log('mounted')
+        this.setState({ ...this.state, currPriority: this.props.priority })
+    }
+
     onOpenSelector = () => {
         this.setState({ ...this.state, isExpanded: !this.state.isExpanded })
     }
 
     render() {
-        const { priority } = this.props.task
+        // work here
+        const { priority, board } = this.props.task  
         const { isExpanded, currPriority } = this.state
-        console.log(priority)
+        // console.log(priority)
         return (
             // delete innerline style after it works
             <div style={{ color: 'red' }} onClick={this.onOpenSelector}>
@@ -23,11 +29,7 @@ export class CellPriority extends Component {
 
                 {isExpanded &&
                     <div className="floating-priority-select">
-                        {}
-                        <div>High</div>
-                        <div>Medium</div>
-                        <div>Low</div>
-                        <div>Best Effort</div>
+                        { }
 
                     </div>
                     // TODO- support adding a customized label (change names to labels?)
