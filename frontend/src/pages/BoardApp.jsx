@@ -60,7 +60,7 @@ class _BoardApp extends Component {
                 <div className="container board-container">
                     <BoardHeader />
                     <BoardCtrlPanel addNewGroup={this.addNewGroup} />
-                    <GroupList groups={currBoard.groups} key={currBoard._id} />
+                    <GroupList board={currBoard} groups={currBoard.groups} key={currBoard._id} />
                 </div >
             </div>
         )

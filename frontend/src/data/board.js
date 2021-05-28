@@ -18,9 +18,62 @@ export const boards = [
             //  be selectable in other tasks/groups
             {
                 id: 'l101',
-                title: 'Done',
+                title: '#starting',
                 color: '#61bd4f',
             },
+        ],
+
+        priorityLabels: [
+            {
+                id: 'pl1',
+                title: '',
+                color: '#00c875',
+            },
+            {
+                id: 'pl2',
+                title: 'High',
+                color: '#e2445c',
+            },
+            {
+                id: 'pl3',
+                title: 'Medium',
+                color: '#a25ddc',
+            },
+            {
+                id: 'pl4',
+                title: 'Low',
+                color: '#579bfc',
+            },
+
+        ],
+
+        statusLabels: [
+            {
+                id: 'sl1',
+                title: '',
+                color: '#00c875',
+            },
+            {
+                id: 'sl2',
+                title: 'Done',
+                color: '#00c875',
+            },
+            {
+                id: 'sl3',
+                title: 'Working on it',
+                color: '#fdab3d',
+            },
+            {
+                id: 'sl4',
+                title: 'Stuck',
+                color: '#ff8358',
+            },
+            {
+                id: 'sl5',
+                title: 'On hold',
+                color: '#fdab3d',
+            },
+
         ],
 
         members: [
@@ -46,7 +99,11 @@ export const boards = [
                         title: 'Help me',
                         tags: ['initialize'],
                         status: 'Working on it',
-                        priority: 'Medium',
+                        priority: {
+                            id: 'pl3',
+                            title: 'Medium',
+                            color: '#a25ddc',
+                        },
                         members: [
                             // TASK members
                             {
@@ -167,7 +224,11 @@ export const boards = [
                         title: 'Help me',
                         tags: ['initialize'],
                         status: 'Working on it',
-                        priority: 'Medium',
+                        priority: {
+                            id: 'pl3',
+                            title: 'Medium',
+                            color: '#a25ddc',
+                        },
                         members: [
                             // TASK members
                             {

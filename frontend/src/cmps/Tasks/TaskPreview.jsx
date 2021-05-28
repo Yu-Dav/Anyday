@@ -6,20 +6,22 @@ import { CellStatus } from './CellStatus'
 import { CellPriority } from './CellPriority'
 import { CellCreationLog } from './CellCreationLog'
 import { CellDate } from './CellDate'
+import { TaskAdd } from './TaskAdd'
 
-export function TaskPreview({ task }) {
-    console.log ('task =',task)
+export function TaskPreview({ task, board }) {
     return (
-        <div className="task-row flex">
-            <CellTitle task={task} />
-            <CellMember task={task} />
-            <CellTag task={task} />
-            <CellStatus task={task} />
-            <CellPriority task={task} />
-            <CellCreationLog task={task} />
-            <CellDate task={task} />
-            <div className="task-row-border"></div>
-        </div>
+        <React.Fragment>
+            <div className="task-row flex">
+                <CellTitle task={task} />
+                <CellMember task={task} />
+                <CellTag task={task} />
+                <CellStatus task={task} />
+                <CellPriority task={task} board={board}/> 
+                <CellCreationLog task={task} />
+                <CellDate task={task} />
+            </div>
+            <TaskAdd />
+        </React.Fragment>
     )
 }
 
