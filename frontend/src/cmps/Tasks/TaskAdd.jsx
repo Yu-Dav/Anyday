@@ -19,8 +19,16 @@ export class TaskAdd extends Component {
             dueDate: null,
             title: value,
             tags: [],
-            status: '',
-            priority: {},
+            status: {
+                id: 'sl1',
+                title: '',
+                color: '#c4c4c4',
+            },
+            priority: {
+                id: 'pl1',
+                title: '',
+                color: '#c4c4c4',
+            },
             members: [],
             comments: [],
             byMember: {//loggedin user

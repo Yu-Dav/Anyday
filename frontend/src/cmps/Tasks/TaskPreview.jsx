@@ -15,7 +15,7 @@ export function TaskPreview({ task, group, board, updateBoard }) {
                 <CellTitle task={task} group={group} board={board} updateBoard={updateBoard}/>
                 <CellMember task={task} />
                 <CellTag task={task} />
-                <CellStatus task={task} />
+                <CellStatus task={task} board={board} updateBoard={updateBoard} />
                 <CellPriority task={task} board={board} updateBoard={updateBoard}/> 
                 <CellCreationLog task={task} />
                 <CellDate task={task} />
@@ -27,3 +27,4 @@ export function TaskPreview({ task, group, board, updateBoard }) {
 
 
 
+// default label to be grey - dafna- in AddTask

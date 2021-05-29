@@ -7,27 +7,15 @@ export class CellPriority extends Component {
         isExpanded: false
     }
 
-    componentDidMount() {
-        this.setState({ ...this.state, currPriority: this.props.priority })
-    }
-
     handleUpdate = ({ target }) => {
-        // console.log('working on updating', target.dataset.label);
         const newPriority = this.getPriorityById(target.dataset.label)
-       
-        const newBoard = {...this.props.board}
-        newBoard.priority = newPriority
-        // this.props.task.priority= newPriority
-        console.log('task', this.props.task)
-        
-
-
-        // const labelId = this.props.
-        // this.setState
+        this.props.task.priority= newPriority
+        const newBoard = {...this.props.board}  
+        // newBoard.priority = newPriority
+        this.props.updateBoard(newBoard) //updating the entire board
     }
 
     getPriorityById = (labelId) => {
-        // console.log(labelId)
         const { priorityLabels } = this.props.board
         return priorityLabels.find(label => label.id === labelId)
     }

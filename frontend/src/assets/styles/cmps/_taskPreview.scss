@@ -3,7 +3,7 @@
     border-bottom-color: #fff;
     box-shadow: 0 3px 4px -5px #484444;
     margin-bottom: 2px;
-    &>*:not(:last-child) {
+    & > *:not(:last-child) {
         background-color: #f5f6f8;
         margin: 0 0 0 1px;
     }
@@ -17,10 +17,41 @@
         width: 6%;
     }
     .status {
+        color: #ffffff;
         width: 6%;
+        .floating-status-select {
+            //also for priority?
+            position: absolute;
+            width: 133px;
+            background-color: #fff;
+            // padding: 16px 8px 0 2px; orginal -has another div
+            padding: 16px 8px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            text-align: center; //helper?
+        }
+        //todo- a triangle (now a square)
+        // .floating-status-select::before {
+        //     background-color: #fff;
+        //     content: " ";
+        //     position: absolute;
+        //     border: solid transparent;
+        //     bottom: 100%;
+        //     border-color: rgba(225, 225, 225, 0);
+        //     pointer-events: none;
+        //     height: 0;
+        //     width: 0;
+        // }
     }
     .priority {
+        color: #ffffff;
         width: 6%;
+        .floating-priority-select {
+            position: absolute;
+            width: 133px;
+            background-color: #fff;
+        }
     }
     .creation-log {
         width: 10%;

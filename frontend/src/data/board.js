@@ -27,23 +27,23 @@ export const boards = [
         priorityLabels: [
             {
                 id: 'pl1',
-                title: '',
-                color: '#00c875',
-            },
-            {
-                id: 'pl2',
                 title: 'High',
                 color: '#e2445c',
             },
             {
-                id: 'pl3',
+                id: 'pl2',
                 title: 'Medium',
                 color: '#a25ddc',
             },
             {
-                id: 'pl4',
+                id: 'pl3',
                 title: 'Low',
                 color: '#579bfc',
+            },
+            {
+                id: 'pl4',
+                title: '',
+                color: '#c4c4c4',
             },
 
         ],
@@ -51,28 +51,28 @@ export const boards = [
         statusLabels: [
             {
                 id: 'sl1',
-                title: '',
-                color: '#00c875',
-            },
-            {
-                id: 'sl2',
                 title: 'Done',
                 color: '#00c875',
             },
             {
-                id: 'sl3',
+                id: 'sl2',
                 title: 'Working on it',
                 color: '#fdab3d',
             },
             {
-                id: 'sl4',
+                id: 'sl3',
                 title: 'Stuck',
-                color: '#ff8358',
+                color: '#ff642e',
+            },
+            {
+                id: 'sl4',
+                title: 'On hold',
+                color: '#175a63',
             },
             {
                 id: 'sl5',
-                title: 'On hold',
-                color: '#fdab3d',
+                title: '',
+                color: '#c4c4c4',
             },
 
         ],
@@ -99,7 +99,11 @@ export const boards = [
                         dueDate: 16156215211,
                         title: 'Help me',
                         tags: ['initialize'],
-                        status: 'Working on it',
+                        status: {
+                            id: 'sl3',
+                            title: 'Working on it',
+                            color: '#fdab3d',
+                        },
                         priority: {
                             id: 'pl3',
                             title: 'Medium',
@@ -141,7 +145,11 @@ export const boards = [
                         dueDate: 16156215211,
                         title: 'Help me',
                         tags: ['initialize'],
-                        status: 'Working on it',
+                        status: {
+                            id: 'sl3',
+                            title: 'Working on it',
+                            color: '#fdab3d',
+                        },
                         priority: 'Medium',
                         members: [
                             // TASK members
@@ -179,7 +187,11 @@ export const boards = [
                         dueDate: 16156215211,
                         title: 'Help me',
                         tags: ['initialize'],
-                        status: 'Working on it',
+                        status: {
+                            id: 'sl3',
+                            title: 'Working on it',
+                            color: '#fdab3d',
+                        },
                         priority: 'Medium',
                         members: [
                             // TASK members
@@ -224,7 +236,11 @@ export const boards = [
                         dueDate: 16156215211,
                         title: 'Help me',
                         tags: ['initialize'],
-                        status: 'Working on it',
+                        status: {
+                            id: 'sl3',
+                            title: 'Working on it',
+                            color: '#fdab3d',
+                        },
                         priority: {
                             id: 'pl3',
                             title: 'Medium',
