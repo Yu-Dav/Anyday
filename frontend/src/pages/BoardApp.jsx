@@ -19,7 +19,6 @@ class _BoardApp extends Component {
     }
 
     addNewGroup = () => {
-        console.log ('hello')
         const newBoard = {...this.props.currBoard} 
         const newGroup = {
             id: utilService.makeId(),
@@ -47,7 +46,6 @@ class _BoardApp extends Component {
             ],
         }
         newBoard.groups.unshift(newGroup)
-        console.log("🚀 ~ file: BoardApp.jsx ~ line 49 ~ _BoardApp ~ currBoard", newBoard)
         this.props.updateBoard(newBoard)
     }
 

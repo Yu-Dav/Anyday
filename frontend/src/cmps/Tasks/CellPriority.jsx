@@ -41,7 +41,7 @@ export class CellPriority extends Component {
         const { priorityLabels } = this.props.board
         const { isExpanded } = this.state
         return (
-            <div style={{ backgroundColor: priority.color }} className="cell" onClick={this.onOpenSelector}>
+            <div className="cell priority" style={{ backgroundColor: priority.color }}  onClick={this.onOpenSelector}>
                 {priority.title}
 
                 {isExpanded &&

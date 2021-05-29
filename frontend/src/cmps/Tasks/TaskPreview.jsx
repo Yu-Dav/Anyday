@@ -8,11 +8,11 @@ import { CellCreationLog } from './CellCreationLog'
 import { CellDate } from './CellDate'
 
 
-export function TaskPreview({ task, board, updateBoard }) {
+export function TaskPreview({ task, group, board, updateBoard }) {
     return (
         <React.Fragment>
             <div className="task-row flex">
-                <CellTitle task={task} />
+                <CellTitle task={task} group={group} board={board} updateBoard={updateBoard}/>
                 <CellMember task={task} />
                 <CellTag task={task} />
                 <CellStatus task={task} />
