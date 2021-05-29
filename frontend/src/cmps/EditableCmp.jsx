@@ -26,7 +26,7 @@ export class EditableCmp extends Component {
         const { isEditing } = this.state
         // console.log('props', this.props);
         return (
-            <div className={this.props.className} data-name={this.props.name} contentEditable={isEditing}
+            <div className={`editable-cmp ${this.props.className}`} data-name={this.props.name} contentEditable={isEditing}
                 // onInput={this.props.handleChange} 
                 suppressContentEditableWarning={true}
                 onBlur={this.handleUpdate} onKeyUp={this.handleUpdate}

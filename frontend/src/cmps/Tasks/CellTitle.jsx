@@ -19,7 +19,7 @@ export class CellTitle extends Component {
     render() {
         const { title } = this.props.task
         return (
-            <div className="full">
+            <div className="task-title full">
                 {/* cell title + btn to open chat */}
                 {/* {title} */}
                 <EditableCmp className="title" name="title" value={title} updateFunc={this.onUpdateTaskTitle} />
