@@ -29,13 +29,13 @@ export class CellPriority extends Component {
         const { priorityLabels } = this.props.board
         const { isExpanded } = this.state
         return (
-            <div className="cell priority" style={{ backgroundColor: priority.color }}  onClick={this.onOpenSelector}>
+            <div className="cell label" style={{ backgroundColor: priority.color }}  onClick={this.onOpenSelector}>
                 {priority.title}
 
                 {isExpanded &&
-                    <div className="floating-priority-select">
+                    <div className="floating-label-select">
                         {priorityLabels.map((label) => {
-                            return <div onClick={this.handleUpdate} key={label.id} data-label={label.id} style={{ backgroundColor: label.color }}>
+                            return <div className="label-option" onClick={this.handleUpdate} key={label.id} data-label={label.id} style={{ backgroundColor: label.color }}>
                                 {label.title}
                             </div>
                         })}

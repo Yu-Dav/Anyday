@@ -21,11 +21,11 @@
     .tags {
         width: 6%;
     }
-    .status {
+    .label {
         color: #ffffff;
         width: 6%;
-        .floating-status-select {
-            //also for priority?
+        .floating-label-select {
+            z-index: 1;
             position: absolute;
             width: 133px;
             background-color: #fff;
@@ -48,15 +48,6 @@
         //     height: 0;
         //     width: 0;
         // }
-    }
-    .priority {
-        color: #ffffff;
-        width: 6%;
-        .floating-priority-select {
-            position: absolute;
-            width: 133px;
-            background-color: #fff;
-        }
     }
 }
 
