@@ -25,24 +25,24 @@ class _BoardApp extends Component {
             style: { bgColor: '#26de81' },
             title: 'New Group',
             tasks: [
-                {
-                    id: utilService.makeId(),
-                    labelIds: ['101'],
-                    createdAt: 1590999730348,
-                    dueDate: 16156215211,
-                    title: 'New Task',
-                    tags: ['initialize'],
-                    status: '',
-                    priority: '',
-                    members: [],
-                    comments: [],
-                    byMember: {
-                        _id: 'u101',
-                        username: 'Tal',
-                        fullname: 'Tal Tarablus',
-                        imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
-                    },
-                },
+                // {
+                //     id: utilService.makeId(),
+                //     labelIds: ['101'],
+                //     createdAt: 1590999730348,
+                //     dueDate: 16156215211,
+                //     title: 'New Task',
+                //     tags: ['initialize'],
+                //     status: '',
+                //     priority: '',
+                //     members: [],
+                //     comments: [],
+                //     byMember: {
+                //         _id: 'u101',
+                //         username: 'Tal',
+                //         fullname: 'Tal Tarablus',
+                //         imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
+                //     },
+                // },
             ],
         }
         newBoard.groups.unshift(newGroup)

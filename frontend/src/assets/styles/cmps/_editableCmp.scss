@@ -1,0 +1,13 @@
+
+.editable-cmp {
+    border: 1px solid transparent;
+    &:hover {
+        border: 1px dashed black;
+    }
+    &:focus {
+        outline: 1.5px dashed black;
+    }
+    padding: 0 5px;
+    width  : fit-content;
+    height: fit-content;
+}

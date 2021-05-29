@@ -1,24 +1,26 @@
 .group-header {
-    font-size: .8em;
-    .title {
-        width: 33%;
-    }
-    .asignee {
-        width: 4%;
-    }
-    .tags {
-        width: 6%;
-    }
-    .status {
-        width: 6%;
-    }
-    .priority {
-        width: 6%;
-    }
-    .creation-log {
-        width: 10%;
-    }
-    .due-date {
-        width: 10%;
-    }
+    width: 100%;
+    font-size: rem(14px);
+    // .title {
+    //     width: 33%;
+    //     font-size: rem(18px);
+    // }
+    // .asignee {
+    //     width: 4%;
+    // }
+    // .tags {
+    //     width: 6%;
+    // }
+    // .status {
+    //     width: 6%;
+    // }
+    // .priority {
+    //     width: 6%;
+    // }
+    // .creation-log {
+    //     width: 10%;
+    // }
+    // .due-date {
+    //     width: 10%;
+    // }
 }
