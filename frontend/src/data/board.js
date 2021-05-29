@@ -1,9 +1,11 @@
+import { utilService } from '../services/utilService'
+const getTime = Date.now()-utilService.getRandomInt(1000*60*60*24*5,1000*60*60*24*10)
 export const boards = [
     {
         _id: 'b101',
         title: 'Final Sprint',
         subtitle: 'Our monday',
-        createdAt: 1589983468418,
+        createdAt: getTime,
         description:
             'Planning the final sprint and assigning tasks between team members',
         isFavorite: false,
@@ -45,7 +47,6 @@ export const boards = [
                 title: '',
                 color: '#c4c4c4',
             },
-
         ],
 
         statusLabels: [
@@ -74,7 +75,6 @@ export const boards = [
                 title: '',
                 color: '#c4c4c4',
             },
-
         ],
 
         members: [
@@ -88,24 +88,116 @@ export const boards = [
 
         groups: [
             {
-                id: 'g102',
+                id: 'g101',
                 style: { bgColor: '#26de81' },
-                title: 'Group 1',
+                title: 'Features',
                 tasks: [
                     {
-                        id: 'c104',
+                        id: 'g1t101',
                         labelIds: ['101'],
-                        createdAt: 1590999730348,
+                        createdAt: getTime,
                         dueDate: 16156215211,
-                        title: 'Help me',
+                        title: 'Content Editable',
                         tags: ['initialize'],
                         status: {
-                            id: 'sl3',
+                            id: 'sl1',
+                            title: 'Done',
+                            color: '#00c875',
+                        },
+                        priority: {
+                            id: 'pl1',
+                            title: 'High',
+                            color: '#e2445c',
+                        },
+                        members: [
+                            // TASK members
+                            {
+                                _id: 'u101',
+                                username: 'Dafna',
+                                fullname: 'Tal Tarablus',
+                                imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
+                            },
+                        ],
+                        comments: [
+                            {
+                                // popup modal on the side of the screen showing the comments each member left
+                                id: 'ZdPnm',
+                                txt: 'also @yaronb please CR this',
+                                createdAt: 1590999817436.0,
+                                byMember: {
+                                    _id: 'u101',
+                                    fullname: 'Tal Tarablus',
+                                    imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
+                                },
+                            },
+                        ],
+                        byMember: {
+                            _id: 'u101',
+                            username: 'Dafna',
+                            fullname: 'Tal Tarablus',
+                            imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
+                        },
+                    },
+                    {
+                        id: 'g1t102',
+                        labelIds: ['101'],
+                        createdAt: getTime,
+                        dueDate: 16156215211,
+                        title: 'Date Range Picker',
+                        tags: ['initialize'],
+                        status: {
+                            id: 'sl4',
+                            title: 'On hold',
+                            color: '#175a63',
+                        },
+                        priority: {
+                            id: 'pl3',
+                            title: 'Low',
+                            color: '#579bfc',
+                        },
+                        members: [
+                            // TASK members
+                            {
+                                _id: 'u101',
+                                username: 'Yuval',
+                                fullname: 'Tal Tarablus',
+                                imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
+                            },
+                        ],
+                        comments: [
+                            {
+                                // popup modal on the side of the screen showing the comments each member left
+                                id: 'ZdPnm',
+                                txt: 'also @yaronb please CR this',
+                                createdAt: 1590999817436.0,
+                                byMember: {
+                                    _id: 'u101',
+                                    fullname: 'Tal Tarablus',
+                                    imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
+                                },
+                            },
+                        ],
+                        byMember: {
+                            _id: 'u101',
+                            username: 'Yuval',
+                            fullname: 'Tal Tarablus',
+                            imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
+                        },
+                    },
+                    {
+                        id: 'g1t103',
+                        labelIds: ['101'],
+                        createdAt: getTime,
+                        dueDate: 16156215211,
+                        title: 'Drag and Drop',
+                        tags: ['initialize'],
+                        status: {
+                            id: 'sl2',
                             title: 'Working on it',
                             color: '#fdab3d',
                         },
                         priority: {
-                            id: 'pl3',
+                            id: 'pl2',
                             title: 'Medium',
                             color: '#a25ddc',
                         },
@@ -113,7 +205,7 @@ export const boards = [
                             // TASK members
                             {
                                 _id: 'u101',
-                                username: 'Tal',
+                                username: 'Yuval',
                                 fullname: 'Tal Tarablus',
                                 imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
                             },
@@ -133,29 +225,86 @@ export const boards = [
                         ],
                         byMember: {
                             _id: 'u101',
-                            username: 'Tal',
+                            username: 'Yuval',
+                            fullname: 'Tal Tarablus',
+                            imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
+                        },
+                    },
+                ],
+            },
+            {
+                id: 'g102',
+                style: { bgColor: '#26de81' },
+                title: 'UX/UI',
+                tasks: [
+                    {
+                        id: 'g2t101',
+                        labelIds: ['101'],
+                        createdAt: getTime,
+                        dueDate: 16156215211,
+                        title: 'App flow - from home page to boards to selected boards',
+                        tags: ['initialize'],
+                        status: {
+                            id: 'sl2',
+                            title: 'Working on it',
+                            color: '#fdab3d',
+                        },
+                        priority: {
+                            id: 'pl2',
+                            title: 'Medium',
+                            color: '#a25ddc',
+                        },
+                        members: [
+                            // TASK members
+                            {
+                                _id: 'u101',
+                                username: 'Noga, Dafna, Yuval',
+                                fullname: 'Tal Tarablus',
+                                imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
+                            },
+                        ],
+                        comments: [
+                            {
+                                // popup modal on the side of the screen showing the comments each member left
+                                id: 'ZdPnm',
+                                txt: 'also @yaronb please CR this',
+                                createdAt: 1590999817436.0,
+                                byMember: {
+                                    _id: 'u101',
+                                    fullname: 'Tal Tarablus',
+                                    imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
+                                },
+                            },
+                        ],
+                        byMember: {
+                            _id: 'u101',
+                            username: 'Noga',
                             fullname: 'Tal Tarablus',
                             imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
                         },
                     },
                     {
-                        id: 'c105',
+                        id: 'g2t102',
                         labelIds: ['101'],
-                        createdAt: 1590999730348,
+                        createdAt: getTime,
                         dueDate: 16156215211,
-                        title: 'Help me',
+                        title: 'Popup modals and Material UI drawer',
                         tags: ['initialize'],
                         status: {
-                            id: 'sl3',
+                            id: 'sl2',
                             title: 'Working on it',
                             color: '#fdab3d',
                         },
-                        priority: 'Medium',
+                        priority: {
+                            id: 'pl1',
+                            title: 'High',
+                            color: '#e2445c',
+                        },
                         members: [
                             // TASK members
                             {
                                 _id: 'u101',
-                                username: 'Tal',
+                                username: 'Noga, Dafna',
                                 fullname: 'Tal Tarablus',
                                 imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
                             },
@@ -175,29 +324,33 @@ export const boards = [
                         ],
                         byMember: {
                             _id: 'u101',
-                            username: 'Tal',
+                            username: 'Yuval',
                             fullname: 'Tal Tarablus',
                             imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
                         },
                     },
                     {
-                        id: 'c106',
+                        id: 'g2t103',
                         labelIds: ['101'],
-                        createdAt: 1590999730348,
+                        createdAt: getTime,
                         dueDate: 16156215211,
-                        title: 'Help me',
+                        title: 'Add CSS transition/React animations when components changes',
                         tags: ['initialize'],
                         status: {
-                            id: 'sl3',
+                            id: 'sl2',
                             title: 'Working on it',
                             color: '#fdab3d',
                         },
-                        priority: 'Medium',
+                        priority: {
+                            id: 'pl3',
+                            title: 'Low',
+                            color: '#579bfc',
+                        },
                         members: [
                             // TASK members
                             {
                                 _id: 'u101',
-                                username: 'Tal',
+                                username: 'Yuval',
                                 fullname: 'Tal Tarablus',
                                 imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
                             },
@@ -217,7 +370,7 @@ export const boards = [
                         ],
                         byMember: {
                             _id: 'u101',
-                            username: 'Tal',
+                            username: 'Yuval',
                             fullname: 'Tal Tarablus',
                             imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
                         },
@@ -227,30 +380,30 @@ export const boards = [
             {
                 id: 'g103',
                 style: { bgColor: '#26de81' },
-                title: 'Group 1',
+                title: 'Pre Operation',
                 tasks: [
                     {
-                        id: 'c105',
+                        id: 'g3t101',
                         labelIds: ['101'],
-                        createdAt: 1590999730348,
+                        createdAt: getTime,
                         dueDate: 16156215211,
-                        title: 'Help me',
-                        tags: ['initialize'],
+                        title: 'git + initial files setup + initial push/pull',
+                        tags: ['done'],
                         status: {
-                            id: 'sl3',
-                            title: 'Working on it',
-                            color: '#fdab3d',
+                            id: 'sl1',
+                            title: 'Done',
+                            color: '#00c875',
                         },
                         priority: {
-                            id: 'pl3',
-                            title: 'Medium',
-                            color: '#a25ddc',
+                            id: 'pl4',
+                            title: '',
+                            color: '#c4c4c4',
                         },
                         members: [
                             // TASK members
                             {
                                 _id: 'u101',
-                                username: 'Tal',
+                                username: 'Dafna, Noga, Yuval',
                                 fullname: 'Tal Tarablus',
                                 imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
                             },
@@ -270,7 +423,7 @@ export const boards = [
                         ],
                         byMember: {
                             _id: 'u101',
-                            username: 'Tal',
+                            username: 'Noga',
                             fullname: 'Tal Tarablus',
                             imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
                         },

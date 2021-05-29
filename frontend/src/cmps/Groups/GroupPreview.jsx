@@ -10,15 +10,15 @@ export function GroupPreview({ group, board, updateBoard }) {
     const menu = "delete group"
     return (
         <div className="group-container flex" >
-            <SimplePopover clickedEl="^" content={menu}                 
-            anchorOrigin={{
+            <SimplePopover clickedEl="^" content={menu}
+                anchorOrigin={{
                     vertical: 'bottom',
                     horizontal: 'left',
                 }}
                 transformOrigin={{
                     vertical: 'top',
                     horizontal: 'left',
-                }}/>
+                }} />
             {/* <button onClick={handleClick}>^</button> */}
 
             <div className="group-preview">

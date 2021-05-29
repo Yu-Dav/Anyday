@@ -24,6 +24,7 @@ export class SidebarApp extends Component {
                         {/* func changes true/false, need to add a modal from the activities  */}
                     </div>
                     <div className="user-greeting">Hello Guest</div>
+                    {/* change text into a span */}
                     <div className="flex column align-center">
                         <Link to={`/`} ><i className="fas fa-sign-out-alt" title="Sign out"></i></Link>
                     </div>
