@@ -1,0 +1,81 @@
+.color-container {
+    width: 140px;
+
+    .color {
+        width              : 20px;
+        height             : 20px;
+        border-radius      : 50%;
+        // background-color: rgb(247, 166, 166);
+        display            : inline-block;
+        margin             : 3px;
+
+    }
+
+    .darkGreen {
+        background-color: $darkGreen;
+    }
+
+    .green {
+        background-color: $green;
+    }
+
+    .yellowGreen{
+        background-color: $yellowGreen;
+    }
+
+    .beige{
+        background-color: $beige;
+    }
+
+    .yellow{
+        background-color:$yellow;
+    }
+
+    .darkPurple{
+        background-color: $darkPurple;
+    }
+
+    .purple{
+        background-color: $purple;
+    }
+
+    .turquoise{
+        background-color: $turquoise;
+    }
+
+    .blue{
+        background-color: $blue;
+    }
+
+    .lightBlue{
+        background-color: $lightBlue;
+    }
+
+    .darkRed{
+        background-color: $darkRed;
+    }
+
+    .red{
+        background-color: $red;
+    }
+
+    .darkOrange{
+        background-color: $darkOrange;
+    }
+
+    .orange{
+        background-color: $orange;
+    }
+
+    .brown{
+        background-color: $brown;
+    }
+
+    .grey{
+        background-color: $grey;
+    }
+
+    .darkGrey{
+        background-color: $darkGrey;
+    }
+}

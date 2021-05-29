@@ -1,7 +1,7 @@
 .task-row {
     width: 100%;
-    height: 32px;
-    line-height: 32px;
+    height: 36px;
+    line-height: 36px;
     border-bottom: 1px solid;
     border-bottom-color: #fff;
     box-shadow: 0 3px 4px -5px #484444;
@@ -28,11 +28,11 @@
     .tags {
         width: 6%;
     }
-    .status {
+    .label {
         color: #ffffff;
         width: 6%;
-        .floating-status-select {
-            //also for priority?
+        .floating-label-select {
+            z-index: 1;
             position: absolute;
             width: 133px;
             background-color: #fff;
@@ -58,12 +58,17 @@
     }
     .priority {
         color: #ffffff;
-        width: 6%;
+        // width: 6%;
         .floating-priority-select {
             position: absolute;
             width: 133px;
             background-color: #fff;
         }
+    }
+
+    .group-color{
+        height: 100%;
+        width: 8px;
     }
 }
 
