@@ -1,0 +1,14 @@
+.task-add {
+    position: relative;
+    .add {
+        opacity: 0;
+        position: absolute;
+        right: 0;
+    }
+
+    input {
+        &:focus+button {
+            opacity: 1;
+        }
+    }
+}

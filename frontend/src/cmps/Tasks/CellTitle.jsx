@@ -32,7 +32,8 @@ export class CellTitle extends Component {
         return (
             <div className="cell title flex">
                 {/* cell title + btn to open chat */}
-                <div className="remove-task" onClick={this.onRemoveTask}>X</div>
+                <i className="fas fa-trash remove-task" onClick={this.onRemoveTask}></i>
+                {/* <div className="remove-task" onClick={this.onRemoveTask}>X</div> */}
                 <EditableCmp className="title" name="title" value={title} updateFunc={this.onUpdateTaskTitle} />
             </div>
         )

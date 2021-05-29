@@ -1,3 +1,9 @@
-.group-preview {
-    width: 80vw;
+.group-container{
+margin-bottom: 30px;
+    .group-preview {
+        width: 100%;
+    }
+    button{
+        height: fit-content;
+    }
 }

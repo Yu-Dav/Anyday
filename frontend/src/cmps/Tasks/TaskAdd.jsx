@@ -34,7 +34,8 @@ export class TaskAdd extends Component {
         const groupId = this.props.group.id
         const groupIdx = newBoard.groups.findIndex(group => group.id === groupId)
         console.log(groupId, groupIdx);
-        newBoard.groups[groupIdx].tasks.push(newTask)
+        if(!newBoard.groups[groupIdx].tasks || !newBoard.groups[groupIdx].tasks.length) newBoard.groups[groupIdx].tasks = [newTask]
+        else newBoard.groups[groupIdx].tasks.push(newTask)
         this.props.updateBoard(newBoard)
         this.setState({ txt: '' })
     }
@@ -42,7 +43,11 @@ export class TaskAdd extends Component {
 
     handleUpdate = (ev) => {
         if (ev.key === 'Enter' || ev.type === 'blur') {
-            this.setState({ isEditing: false }, () => this.onAddTask(ev))
+            this.setState({ isEditing: false }, 
+                () => {
+                    this.onAddTask(ev)
+                    ev.target.blur()
+                })
         }
         setTimeout(() => {
             this.setState({ isEditing: true })
@@ -58,10 +63,10 @@ export class TaskAdd extends Component {
     render() {
         const { txt } = this.state
         return (
-            <div className="task-add">
+            <div className="task-add flex">
                 {/* <EditableCmp name="title" value="add task" updateFunc={this.onAddTask} /> */}
-                <input name="txt" type="text" placeholder="+ Add" onBlur={this.handleUpdate} onKeyUp={this.handleUpdate} value={txt} onChange={this.handleChange} />
-                <button onClick={this.handleUpdate}>Add</button>
+                <input className="full" name="txt" type="text" placeholder="+ Add" onBlur={this.handleUpdate} onKeyUp={this.handleUpdate} value={txt} onChange={this.handleChange} />
+                <button className="add" onClick={this.handleUpdate}>Add</button>
             </div>
         )
     }
