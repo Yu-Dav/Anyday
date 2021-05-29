@@ -9,6 +9,17 @@
     }
     .title {
         width: 33%;
+        // :hover{
+        //     .remove-task{
+        //         // visibility: visible;
+        //         opacity: 1;
+        //     }
+        // }
+        .remove-task{
+            // visibility: hidden;
+            // opacity: 0;
+            cursor: pointer;
+        }
     }
     .asignee {
         width: 4%;
