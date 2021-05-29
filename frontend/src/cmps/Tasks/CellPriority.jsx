@@ -18,7 +18,7 @@ export class CellPriority extends Component {
         console.log(priority)
         return (
             // delete innerline style after it works
-            <div style={{ color: 'red' }} onClick={this.onOpenSelector}>
+            <div className="priority" style={{ color: 'red' }} onClick={this.onOpenSelector}>
                 {priority.title}
 
                 {isExpanded &&

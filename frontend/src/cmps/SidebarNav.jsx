@@ -35,15 +35,19 @@ class _SidebarNav extends Component {
                     onClick={this.onOpenNavbar}></i>
 
                 {isExpanded &&
-                    <div className="workspace-dropdown" >
-                        <h1>My Workspaces</h1>
-                        <i className="fas fa-plus">Add</i>
-                        <div className="flex">
-                            <label htmlFor="boardName"><i className="fas fa-search"></i></label>
-                            <Input name="searchBy" id="boardName" placeholder="Search by name"
-                                autoComplete="false" disableUnderline={true}
-                                onChange={this.handleChange} value={searchBy} />
+                    <div>
+
+                        <h1>My Workspace</h1>
+                        <div className="sidebar-ops">
+                            <i className="fas fa-plus"><span>Add</span></i>
+                            <div className="flex">
+                                <label htmlFor="boardName"><i className="fas fa-search"></i></label>
+                                <Input name="searchBy" id="boardName" placeholder="Search by name"
+                                    autoComplete="false" disableUnderline={true}
+                                    onChange={this.handleChange} value={searchBy} />
+                            </div>
                         </div>
+
                         {boards.map(board =>
                             <h2 key={board._id} onClick={() => this.onSelectBoard(board._id)}>
                                 {board.title}

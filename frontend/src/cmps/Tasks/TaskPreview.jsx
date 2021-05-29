@@ -9,6 +9,7 @@ import { CellDate } from './CellDate'
 import { TaskAdd } from './TaskAdd'
 
 export function TaskPreview({ task, board }) {
+    // connect to the store 
     return (
         <React.Fragment>
             <div className="task-row flex">

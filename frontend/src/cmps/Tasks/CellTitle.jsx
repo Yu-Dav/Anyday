@@ -4,7 +4,7 @@ export class CellTitle extends Component {
     render() {
         const {title} = this.props.task
         return (
-            <div>
+            <div className="title">
                 {/* cell title + btn to open chat */}
                 {title}
 
