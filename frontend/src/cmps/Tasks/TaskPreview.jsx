@@ -8,7 +8,7 @@ import { CellCreationLog } from './CellCreationLog'
 import { CellDate } from './CellDate'
 
 
-export function TaskPreview({ task, board }) {
+export function TaskPreview({ task, board, updateBoard }) {
     return (
         <React.Fragment>
             <div className="task-row flex">
@@ -16,7 +16,7 @@ export function TaskPreview({ task, board }) {
                 <CellMember task={task} />
                 <CellTag task={task} />
                 <CellStatus task={task} />
-                <CellPriority task={task} board={board}/> 
+                <CellPriority task={task} board={board} updateBoard={updateBoard}/> 
                 <CellCreationLog task={task} />
                 <CellDate task={task} />
             </div>
