@@ -26,6 +26,3 @@ export function TaskPreview({ task, group, board, updateBoard }) {
     )
 }
 
-
-
-// default label to be grey - dafna- in AddTask

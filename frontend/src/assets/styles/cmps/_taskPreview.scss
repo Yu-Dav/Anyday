@@ -16,17 +16,17 @@
             opacity: .5;
         }
     }
-    // .asignee {
-    //     width: 4%;
-    // }
-    // .tags {
-    //     width: 6%;
-    // }
-    .status {
+    .asignee {
+        width: 4%;
+    }
+    .tags {
+        width: 6%;
+    }
+    .label {
         color: #ffffff;
-        // width: 6%;
-        .floating-status-select {
-            //also for priority?
+        width: 6%;
+        .floating-label-select {
+            z-index: 1;
             position: absolute;
             width: 133px;
             background-color: #fff;
