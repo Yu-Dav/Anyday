@@ -4,7 +4,7 @@ export class CellTag extends Component {
     render() {
         const { tags } = this.props.task
         return (
-            <div className="cell">
+            <div className="cell tags">
                 {tags.map(tag => {
                     return <p key={tag}>{tag}</p>
                 })}

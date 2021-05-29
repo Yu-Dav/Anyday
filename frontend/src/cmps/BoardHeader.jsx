@@ -11,14 +11,11 @@ export class BoardHeader extends Component {
     // }
 
     onUpdateBoard = ({ target }) => {
-        console.log('onUpdateBoard');
-        console.log(this.state);
         const { name } = target.dataset
         const value = target.innerText
         const newBoard = { ...this.props.board }
         newBoard[name] = value
         this.props.updateBoard(newBoard)
-        console.log('new board', newBoard);
     }
 
     render = () => {

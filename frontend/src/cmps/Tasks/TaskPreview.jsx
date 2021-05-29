@@ -16,7 +16,7 @@ export function TaskPreview({ task, group, board, updateBoard }) {
                 <CellMember task={task} />
                 <CellTag task={task} />
                 <CellStatus task={task} />
-                <CellPriority task={task} board={board}/> 
+                <CellPriority task={task} board={board} updateBoard={updateBoard}/> 
                 <CellCreationLog task={task} />
                 <CellDate task={task} />
             </div>
