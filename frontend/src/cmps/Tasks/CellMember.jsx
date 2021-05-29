@@ -4,7 +4,7 @@ export class CellMember extends Component {
     render() {
         const {members} = this.props.task
         return (
-            <div className="asignee">
+            <div className="cell asignee">
                 {members.map(member=>{
                     return <p key={member._id}>{member.username}</p>
                 })}

@@ -6,14 +6,13 @@ import { CellStatus } from './CellStatus'
 import { CellPriority } from './CellPriority'
 import { CellCreationLog } from './CellCreationLog'
 import { CellDate } from './CellDate'
-import { TaskAdd } from './TaskAdd'
 
-export function TaskPreview({ task, board }) {
-    // connect to the store 
+
+export function TaskPreview({ task, group, board, updateBoard }) {
     return (
         <React.Fragment>
             <div className="task-row flex">
-                <CellTitle task={task} />
+                <CellTitle task={task} group={group} board={board} updateBoard={updateBoard}/>
                 <CellMember task={task} />
                 <CellTag task={task} />
                 <CellStatus task={task} />
@@ -21,7 +20,7 @@ export function TaskPreview({ task, board }) {
                 <CellCreationLog task={task} />
                 <CellDate task={task} />
             </div>
-            <TaskAdd />
+        
         </React.Fragment>
     )
 }

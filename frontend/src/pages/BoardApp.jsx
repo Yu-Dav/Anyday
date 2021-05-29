@@ -59,7 +59,7 @@ class _BoardApp extends Component {
                 <div className="container board-container">
                     <BoardHeader board={this.props.currBoard} updateBoard={this.props.updateBoard}/>
                     <BoardCtrlPanel addNewGroup={this.addNewGroup} />
-                    <GroupList board={currBoard} groups={currBoard.groups} key={currBoard._id} />
+                    <GroupList board={currBoard} groups={currBoard.groups} key={currBoard._id} updateBoard={this.props.updateBoard}/>
                 </div >
             </div>
         )

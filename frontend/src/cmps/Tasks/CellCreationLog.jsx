@@ -13,7 +13,7 @@ export class CellCreationLog extends Component {
         const { createdAt, byMember } = this.props.task
         const date = this.getTime(createdAt)
         return (
-            <div className="creation-log">
+            <div className="cell creation-log">
                 <p>{byMember.username}</p>
                 <p>{date}</p> 
                 {/* change to named date+ username to avatar */}

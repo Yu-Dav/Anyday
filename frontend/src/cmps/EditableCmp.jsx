@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export class EditableCmp extends Component {
 
     state = {
-        txt: this.props.value,
+        // txt: this.props.value,
         isEditing: true
     }
 
@@ -13,12 +13,24 @@ export class EditableCmp extends Component {
     //     this.setState({...this.state, txt: innerText})
     // }
 
+    handleUpdate = (ev) => {
+        if (ev.key === 'Enter' || ev.type === 'blur'){
+            this.setState({isEditing: false}, ()=> this.props.updateFunc(ev))
+        } 
+        setTimeout(() => {
+            this.setState({ isEditing: true })
+        }, 500)
+    }
 
     render() {
-        const { isEditing, txt } = this.state
-        console.log(this.props);
+        const { isEditing } = this.state
+        // console.log('props', this.props);
         return (
-            <div className={this.props.className} data-name={this.props.name} contentEditable={isEditing} onInput={this.props.handleChange} suppressContentEditableWarning={true}>
+            <div className={this.props.className} data-name={this.props.name} contentEditable={isEditing}
+                // onInput={this.props.handleChange} 
+                suppressContentEditableWarning={true}
+                onBlur={this.handleUpdate} onKeyUp={this.handleUpdate}
+            >
                 {this.props.value}
             </div>
         )
