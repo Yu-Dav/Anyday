@@ -12,6 +12,7 @@ export function TaskPreview({ task, group, board, updateBoard }) {
     return (
         <React.Fragment>
             <div className="task-row flex">
+                <div className="group-color" style={{backgroundColor: group.style.bgColor}}></div>
                 <CellTitle task={task} group={group} board={board} updateBoard={updateBoard}/>
                 <CellMember task={task} />
                 <CellTag task={task} />
