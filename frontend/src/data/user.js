@@ -2,7 +2,7 @@ export const user = [
     {
         _id: 'u101',
         fullname: 'Noga Jacobi',
-        username: 'noga@noga.com',
+        username: 'Noga',
         password: 'noga1234',
         imgUrl: '../assets/imgs/nj.png',
         mentions: [
@@ -16,7 +16,7 @@ export const user = [
     {
         _id: 'u102',
         fullname: 'Dafna Bashan ',
-        username: 'dafna@dafna.com',
+        username: 'Dafna',
         password: 'dafna1234',
         imgUrl: '../assets/imgs/db.png',
         mentions: [
@@ -30,7 +30,7 @@ export const user = [
     {
         _id: 'u103',
         fullname: 'Yuval David',
-        username: 'yuval@yuval.com',
+        username: 'Yuval',
         password: 'yuval1234',
         imgUrl: '../assets/imgs/yd.png',
         mentions: [
@@ -43,8 +43,8 @@ export const user = [
     },
     {
         _id: 'u104',
-        fullname: 'Basya ',
-        username: 'basya@basya.com',
+        fullname: 'Basya coding',
+        username: 'Basya',
         password: 'basya1234',
         imgUrl: '../assets/imgs/qb.png',
         mentions: [

@@ -20,8 +20,8 @@ export function TaskPreview({ task, group, board, updateBoard, index }) {
                         ref={provided.innerRef}
                     >
                         <div className="group-color" style={{ backgroundColor: group.style.bgColor }}></div>
-                        <CellTitle task={task} group={group} board={board} updateBoard={updateBoard} index={index} />
-                        <CellMember task={task} board={board} />
+                        <CellTitle task={task} group={group} board={board} updateBoard={updateBoard} />
+                        <CellMember task={task} board={board} updateBoard={updateBoard} />
                         <CellTag task={task} board={board} updateBoard={updateBoard} />
                         <CellStatus task={task} board={board} updateBoard={updateBoard} />
                         <CellPriority task={task} board={board} updateBoard={updateBoard} />
