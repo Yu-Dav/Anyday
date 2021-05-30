@@ -8,6 +8,7 @@
     margin-bottom: 2px;
     font-size: rem(13px);
     text-align: center;
+    cursor: pointer;
     & > * {
         background-color: #f5f6f8;
     }
@@ -22,15 +23,8 @@
             opacity: 0.5;
         }
     }
-    .asignee {
-        width: 6%;
-    }
-    .tags {
-        width: 6%;
-    }
     .label {
         color: #ffffff;
-        width: 6%;
         .floating-label-select {
             z-index: 1;
             position: absolute;
@@ -56,24 +50,29 @@
         //     width: 0;
         // }
     }
-    .priority {
-        color: #ffffff;
-        // width: 6%;
-        .floating-priority-select {
-            position: absolute;
-            width: 133px;
-            background-color: #fff;
-        }
-    }
+    // .priority {
+    //     color: #ffffff;
+    //     // width: 6%;
+    //     .floating-priority-select {
+    //         position: absolute;
+    //         width: 133px;
+    //         background-color: #fff;
+    //     }
+    // }
 
     .group-color{
         height: 100%;
         width: 8px;
     }
+    // .asignee {
+    //     width: 10%;
+    // }
 }
 
 .title {
-    width: 40%;
+    // width: 40%;
+    flex: 1;
+    text-align: start;
 
     .remove-task {
         opacity: 0;
@@ -88,35 +87,26 @@
     .fa-trash::after {
         content: '\f1f8';
     }
-    .asignee,
-    .tags,
-    .priority,
-    .status,
-    .due-date {
-        cursor: pointer;
-    }
+
 }
 
 .asignee {
-    width: 6%;
+    width: 10%;
+    text-align: center;
 }
 
 .tags {
-    width: 6%;
+    width: 10%;
 }
 
-.status {
-    width: 6%;
-}
-
-.priority {
-    width: 6.5%;
+.label {
+    width: 8%;
 }
 
 .creation-log {
     width: 10%;
 }
 
-.due-date {
-    width: 10%;
+.timeline {
+    width: 15%;
 }

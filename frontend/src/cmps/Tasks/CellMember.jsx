@@ -5,16 +5,18 @@ export function CellMember({task, board}) {
  
         const taskMembers = task.members
         const boardMembers = board.members
-
+console.log(taskMembers, boardMembers);
         return (
             <React.Fragment>
-            <SimplePopover clickedEl={<div className="cell asignee">
+            <SimplePopover className="cell asignee" 
+            clickedEl={<div>
                 {taskMembers.map(member=>{
-                    return <p key={member._id}>{member.username}</p>
+                    return <p key={member._id}>{member.fullname}</p>
                 })}
-            </div>} content={boardMembers.map(member=> {
-                 <p key={member._id}>{member.fullname}</p>
-            })}
+            </div>} 
+            content={<div>{boardMembers.map(member=> {
+                 return <p key={member._id}>{member.fullname}</p>
+            })}</div>}
             anchorOrigin={{
                 vertical: 'bottom',
                 horizontal: 'center',

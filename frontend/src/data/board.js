@@ -1,14 +1,19 @@
 import { utilService } from '../services/utilService'
 import {user} from './user'
 
-const getTime = Date.now()-utilService.getRandomInt(1000*60*60*24*5,1000*60*60*24*10)
-
+function getTime() {
+    return Date.now() -
+        utilService.getRandomInt(
+            1000 * 60 * 60 * 24 * 5,
+            1000 * 60 * 60 * 24 * 10
+        );
+}
 export const boards = [
     {
         _id: 'b101',
         title: 'Final Sprint',
         subtitle: 'Our monday',
-        createdAt: getTime,
+        createdAt: getTime(),
         description:
             'Planning the final sprint and assigning tasks between team members',
         isFavorite: false,
@@ -90,8 +95,8 @@ export const boards = [
                     {
                         id: 'g1t101',
                         labelIds: ['101'],
-                        createdAt: getTime,
-                        dueDate: 16156215211,
+                        createdAt: getTime(),
+                        timeline: [null,null],
                         title: 'Content Editable',
                         tags: ['initialize'],
                         status: {
@@ -136,8 +141,8 @@ export const boards = [
                     {
                         id: 'g1t102',
                         labelIds: ['101'],
-                        createdAt: getTime,
-                        dueDate: 16156215211,
+                        createdAt: getTime(),
+                        timeline: [null,null],
                         title: 'Date Range Picker',
                         tags: ['initialize'],
                         status: {
@@ -182,8 +187,8 @@ export const boards = [
                     {
                         id: 'g1t103',
                         labelIds: ['101'],
-                        createdAt: getTime,
-                        dueDate: 16156215211,
+                        createdAt: getTime(),
+                        timeline: [null,null],
                         title: 'Drag and Drop',
                         tags: ['initialize'],
                         status: {
@@ -229,14 +234,14 @@ export const boards = [
             },
             {
                 id: 'g102',
-                style: { bgColor: '#26de81' },
+                style: { bgColor: '#bb3354' },
                 title: 'UX/UI',
                 tasks: [
                     {
                         id: 'g2t101',
                         labelIds: ['101'],
-                        createdAt: getTime,
-                        dueDate: 16156215211,
+                        createdAt: getTime(),
+                        timeline: [null,null],
                         title: 'App flow - from home page to boards to selected boards',
                         tags: ['initialize'],
                         status: {
@@ -281,8 +286,8 @@ export const boards = [
                     {
                         id: 'g2t102',
                         labelIds: ['101'],
-                        createdAt: getTime,
-                        dueDate: 16156215211,
+                        createdAt: getTime(),
+                        timeline: [null,null],
                         title: 'Popup modals and Material UI drawer',
                         tags: ['initialize'],
                         status: {
@@ -327,8 +332,8 @@ export const boards = [
                     {
                         id: 'g2t103',
                         labelIds: ['101'],
-                        createdAt: getTime,
-                        dueDate: 16156215211,
+                        createdAt: getTime(),
+                        timeline: [null,null],
                         title: 'Add CSS transition/React animations when components changes',
                         tags: ['initialize'],
                         status: {
@@ -374,14 +379,14 @@ export const boards = [
             },
             {
                 id: 'g103',
-                style: { bgColor: '#26de81' },
+                style: { bgColor: '#784bd1' },
                 title: 'Pre Operation',
                 tasks: [
                     {
                         id: 'g3t101',
                         labelIds: ['101'],
-                        createdAt: getTime,
-                        dueDate: 16156215211,
+                        createdAt: getTime(),
+                        timeline: [null,null],
                         title: 'git + initial files setup + initial push/pull',
                         tags: ['done'],
                         status: {

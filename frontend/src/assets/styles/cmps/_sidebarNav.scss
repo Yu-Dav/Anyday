@@ -12,7 +12,8 @@
         .arrow {
             position: absolute;
             top: 20px;
-            left: 288px;
+            left: 303px;
+            // font-size: 1.3em;
         }
         h1 {
             width: 90%;
@@ -30,7 +31,7 @@
             margin-bottom: 20px;
             border-bottom: 1px solid #e6e9ef;
             i span {
-                font-family: roboto,helvetica,sans-serif;
+                font-family: roboto, helvetica, sans-serif;
             }
         }
     }
@@ -46,7 +47,8 @@
         text-align: center;
         position: absolute;
         top: 20px;
-        z-index: 1;
+        left: 105px;
+        // z-index: 1;
     }
     .arrow-right::after {
         content: '\f101';
