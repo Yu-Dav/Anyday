@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export function SimplePopover({ clickedEl, content, anchorOrigin, transformOrigin }) {
+export function SimplePopover({ clickedEl, content, anchorOrigin, transformOrigin, className }) {
     const classes = useStyles();
     const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -27,7 +27,7 @@ export function SimplePopover({ clickedEl, content, anchorOrigin, transformOrigi
     const id = open ? 'simple-popover' : undefined;
 
     return (
-        <div>
+        <div className={className}>
             {/* <Button aria-describedby={id} variant="contained" color="primary" onClick={handleClick}>
           Open Popover
         </Button> */}
