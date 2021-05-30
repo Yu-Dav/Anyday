@@ -7,6 +7,7 @@ import Popper from '@material-ui/core/Popper';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
 import { makeStyles } from '@material-ui/core/styles';
+import { Colors } from '../Colors';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -17,10 +18,24 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export function CellMember({ task, board, updateBoard }) {
+export function GroupMenu({ group, board, updateBoard }) {
 
-    const taskMembers = task.members
-    const boardMembers = board.members
+    const newBoard = board
+    const groupId = group.id
+    const groupIdx = newBoard.groups.findIndex(group => group.id === groupId)
+
+    const onDeleteGroup = (ev) => {
+        newBoard.groups.splice(groupIdx, 1)
+        updateBoard(newBoard)
+        handleClose(ev)
+    }
+
+    const onChangeGroupColor = (ev) => {
+        const { color } = ev.target.dataset
+        newBoard.groups[groupIdx].style.bgColor = color
+        updateBoard(newBoard)
+        handleClose(ev)
+    }
 
     const classes = useStyles();
     const [open, setOpen] = React.useState(false);
@@ -55,60 +70,13 @@ export function CellMember({ task, board, updateBoard }) {
         prevOpen.current = open;
     }, [open]);
 
-    const onAddMember = (ev) => {
-        const memberId = ev.target.dataset.id
-        const member = getMemberById(memberId)
-        taskMembers.unshift(member)
-        const newBoard = { ...board }
-        updateBoard(newBoard)
-        handleClose(ev)
-    }
-
-    const onRemoveMember = (ev) => {
-        const memberId = ev.target.dataset.id
-        const memberIdx = taskMembers.findIndex(member=> member._id === memberId)
-        taskMembers.splice(memberIdx, 1)
-        const newBoard = { ...board }
-        updateBoard(newBoard)
-        handleClose(ev)
-    }
-
-    function getMemberById(id) {
-        return boardMembers.find(member => member._id === id)
-    }
-
-    // const otherMembers = boardMembers.filter((member) => {
-    //     // console.log('board', member);
-    //     return taskMembers.filter(taskMember => 
-    //     //    { console.log('task',taskMember)
-    //     //    console.log(taskMember._id !== member._id)
-    //            return taskMember._id !== member._id})
-    // })
-
-    // var diffArray = arr2.filter(x => {
-    //     let elementsOfArray2PresentInArray1 = arr1.filter(y => {
-    //       return y.id === x
-    //     });
-      
-    //     if (elementsOfArray2PresentInArray1.length > 0) {
-    //       return false
-    //     } else {
-    //       return true;
-    //     }
-    //     //`return !length;` will  return false if length > 0
-    //   });
-
-// console.log('other', otherMembers);
 
     return (
         <div ref={anchorRef}
             aria-controls={open ? 'menu-list-grow' : undefined}
             aria-haspopup="true"
-            onClick={handleToggle} className="cell asignee">
-            <div>{taskMembers.map(member => {
-                return <span key={member._id}>{member.username.charAt(0)} </span>
-            })}
-            </div>
+            onClick={handleToggle}>
+                ^
             <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal style={{zIndex: '1'}}>
                 {({ TransitionProps, placement }) => (
                     <Grow
@@ -118,14 +86,9 @@ export function CellMember({ task, board, updateBoard }) {
                         <Paper>
                             <ClickAwayListener onClickAway={handleClose}>
                                 <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
-                                    {taskMembers.map(member => {
-                                        return <MenuItem key={member._id} data-id={member._id}>{member.fullname}<span onClick={onRemoveMember}> x</span></MenuItem>
-                                    })}
-                                    <hr />
-                                    {boardMembers.map(member => {
-                                        return <MenuItem key={member._id} data-id={member._id} onClick={onAddMember}>{member.fullname}</MenuItem>
-                                    }
-                                    )}
+                                <MenuItem onClick={onDeleteGroup}>Delete group</MenuItem>
+                                {/* <MenuItem onClick={onChangeGroupColor}>Change group color</MenuItem> */}
+                                <MenuItem><Colors onChangeGroupColor={onChangeGroupColor} board={board}/></MenuItem>
                                 </MenuList>
                             </ClickAwayListener>
                         </Paper>
