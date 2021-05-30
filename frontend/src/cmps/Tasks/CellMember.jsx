@@ -5,7 +5,6 @@ export function CellMember({task, board}) {
  
         const taskMembers = task.members
         const boardMembers = board.members
-console.log(taskMembers, boardMembers);
         return (
             <React.Fragment>
             <SimplePopover className="cell asignee" 

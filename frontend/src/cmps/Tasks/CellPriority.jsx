@@ -8,10 +8,10 @@ export class CellPriority extends Component {
     }
 
     handleUpdate = ({ target }) => {
-        const newPriority = this.getPriorityById(target.dataset.label)
-        this.props.task.priority= newPriority
+        const selectedPriority = this.getPriorityById(target.dataset.label)
+        this.props.task.priority= selectedPriority
         const newBoard = {...this.props.board}  
-        // newBoard.priority = newPriority
+        // newBoard.priority = selectedPriority
         this.props.updateBoard(newBoard) //updating the entire board
     }
 
@@ -31,7 +31,6 @@ export class CellPriority extends Component {
         return (
             <div className="cell label" style={{ backgroundColor: priority.color }}  onClick={this.onOpenSelector}>
                 {priority.title}
-
                 {isExpanded &&
                     <div className="floating-label-select">
                         {priorityLabels.map((label) => {
