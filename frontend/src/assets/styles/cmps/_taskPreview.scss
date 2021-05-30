@@ -54,6 +54,13 @@
         //     width: 0;
         // }
     }
+    .tag-container {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        margin-right: 5px;
+     
+    }
 
     .group-color {
         height: 100%;
@@ -87,14 +94,23 @@
 
 .tags {
     width: 10%;
-    .tag-options {
-        width: 140px;
-        position: absolute;
-        z-index: 1;
-        border-radius: 8px 8px 0 0;
-        box-shadow: 0 8px 16px 0 #0000001a ;
-        background-color: #fff;
-    }
+    // .tag-options {
+    //     width: 140px;
+    //     position: absolute;
+    //     z-index: 1;
+    //     border-radius: 8px 8px 0 0;
+    //     box-shadow: 0 8px 16px 0 #0000001a ;
+    //     background-color: #fff;
+    // }
+}
+
+.fas.close::after{
+    content:'\f057'
+}
+
+.modal-li{
+    display: flex;
+    justify-content: space-around;
 }
 
 .label {
