@@ -1,5 +1,8 @@
 import { utilService } from '../services/utilService'
+import {user} from './user'
+
 const getTime = Date.now()-utilService.getRandomInt(1000*60*60*24*5,1000*60*60*24*10)
+
 export const boards = [
     {
         _id: 'b101',
@@ -77,15 +80,7 @@ export const boards = [
             },
         ],
 
-        members: [
-            // BOARD members
-            {
-                _id: 'u101',
-                fullname: 'Tal Tarablus',
-                imgUrl: 'https://www.google.com',
-            },
-        ],
-
+        members: user,
         groups: [
             {
                 id: 'g101',
