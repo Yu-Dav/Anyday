@@ -4,6 +4,8 @@ import { TaskPreview } from '../tasks/TaskPreview'
 import { TaskAdd } from '../tasks/TaskAdd'
 import { SimplePopover } from '../SimplePopover'
 import { Colors } from '../Colors'
+import { Droppable } from 'react-beautiful-dnd';
+
 // import {ReactComponent as dropDownArrow} from '../../assets/imgs/dropDownArrow.svg'
 
 export function GroupPreview({ group, board, updateBoard }) {
@@ -38,25 +40,39 @@ export function GroupPreview({ group, board, updateBoard }) {
     </React.Fragment>
 
     return (
-        <div className="group-container flex" >
-            {/* <dropDownArrow/> */}
-            <SimplePopover clickedEl="^" content={menu}
-                anchorOrigin={{
-                    vertical: 'bottom',
-                    horizontal: 'left',
-                }}
-                transformOrigin={{
-                    vertical: 'top',
-                    horizontal: 'left',
-                }} />
-            {/* <button onClick={handleClick}>^</button> */}
 
-            <div className="group-preview">
-                <GroupHeader group={group} board={board} updateBoard={updateBoard} />
-                {tasks.map(task => <TaskPreview board={board} group={group} key={task.id} task={task} updateBoard={updateBoard} />)}
-                <TaskAdd board={board} group={group} updateBoard={updateBoard} />
-            </div>
-        </div>
+        <Droppable droppableId={group.id}>
+            {provided => (
+                <div className="group-container flex" >
+                    {/* <dropDownArrow/> */}
+                    <SimplePopover clickedEl="^" content={menu}
+                        anchorOrigin={{
+                            vertical: 'bottom',
+                            horizontal: 'left',
+                        }}
+                        transformOrigin={{
+                            vertical: 'top',
+                            horizontal: 'left',
+                        }} />
+                    {/* <button onClick={handleClick}>^</button> */}
+
+                    <div className="group-preview"
+                        ref={provided.innerRef}
+                        {...provided.droppableProps}>
+
+                        <GroupHeader group={group} board={board} updateBoard={updateBoard} />
+                        {tasks.map((task, index) => <TaskPreview index={index} board={board} group={group} key={task.id} task={task} updateBoard={updateBoard} />)}
+                        {provided.placeholder}
+                        <TaskAdd board={board} group={group} updateBoard={updateBoard} />
+                    </div>
+
+                </div>
+            )}
+        </Droppable >
+
+
+
+
     )
 }
 

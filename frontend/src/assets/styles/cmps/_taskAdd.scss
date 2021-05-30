@@ -7,7 +7,8 @@
     }
 
     input {
-        border: 1px solid $grey;
+        border: 1px solid #e6e9ef;
+        // color: #e6e9ef;
         padding: 10px 0px 10px 40px;
         cursor: pointer;
         &:focus + button {

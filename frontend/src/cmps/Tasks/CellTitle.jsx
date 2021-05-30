@@ -13,7 +13,7 @@ export class CellTitle extends Component {
         newBoard.groups[groupIdx].tasks.splice(taskIdx, 1)
         this.props.updateBoard(newBoard)
     }
-    
+
     onUpdateTaskTitle = ({ target }) => {
         const value = target.innerText
         const newBoard = { ...this.props.board }
@@ -30,12 +30,17 @@ export class CellTitle extends Component {
     render() {
         const { title } = this.props.task
         return (
-            <div className="cell title flex">
+
+            <div className="cell title flex"
+                
+            >
                 {/* cell title + btn to open chat */}
                 <i className="fas fa-trash remove-task" onClick={this.onRemoveTask}></i>
                 {/* <div className="remove-task" onClick={this.onRemoveTask}>X</div> */}
                 <EditableCmp className="title" name="title" value={title} updateFunc={this.onUpdateTaskTitle} />
             </div>
+
+
         )
     }
 }

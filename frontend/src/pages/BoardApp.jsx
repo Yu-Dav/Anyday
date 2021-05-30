@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import { utilService } from '../services/utilService'
+import { DragDropContext } from 'react-beautiful-dnd';
 
 import { connect } from 'react-redux'
 import { SidebarNav } from '../cmps/SidebarNav.jsx'
@@ -14,13 +15,16 @@ import { MenuListComposition } from '../cmps/MenuCmp'
 
 class _BoardApp extends Component {
 
+    state = {
+        currBoard: this.props.currBoard
+    }
     componentDidMount() {
         const boardId = 'b101'  //later from params
         this.props.loadBoard(boardId)
     }
 
     addNewGroup = () => {
-        const newBoard = {...this.props.currBoard} 
+        const newBoard = { ...this.props.currBoard }
         const newGroup = {
             id: utilService.makeId(),
             style: { bgColor: '#26de81' },
@@ -49,18 +53,36 @@ class _BoardApp extends Component {
         newBoard.groups.unshift(newGroup)
         this.props.updateBoard(newBoard)
     }
+    onDragEnd = result => {
+        const { destination, source, draggableId } = result;
+        if (!destination) return;
+        if (
+            destination.droppableId === source.droppableId &&
+            destination.index === source.index
+        ) return
+        const sourceGroup = this.props.currBoard.groups.find(group => group.id === source.droppableId);
+        const destinationGroup = this.props.currBoard.groups.find(group => group.id === destination.droppableId);
+        const task = sourceGroup.tasks.find(task => task.id === draggableId)
+        sourceGroup.tasks.splice(source.index, 1);
+        destinationGroup.tasks.splice(destination.index, 0, task);
+        const copyGroup = { ...this.props.currBoard }
+        this.props.updateBoard(copyGroup)
+    }
 
     render() {
         const { currBoard } = this.props
         return (
             <div className="board-app-container flex">
-                {/* GroupList -> map all groups -> GroupPreview -> map all tasks -> TaskPreview*/}
                 <SidebarApp />
                 <SidebarNav />
                 <div className="container board-container">
-                    <BoardHeader board={this.props.currBoard} updateBoard={this.props.updateBoard}/>
+                    <BoardHeader board={this.props.currBoard} updateBoard={this.props.updateBoard} />
                     <BoardCtrlPanel addNewGroup={this.addNewGroup} />
-                    <GroupList board={currBoard} groups={currBoard.groups} key={currBoard._id} updateBoard={this.props.updateBoard}/>
+
+                    <DragDropContext onDragEnd={this.onDragEnd}>
+                        <GroupList board={currBoard} groups={currBoard.groups} key={currBoard._id} updateBoard={this.props.updateBoard} />
+                    </DragDropContext>
+
                 </div >
             </div>
         )
