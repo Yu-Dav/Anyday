@@ -1,4 +1,6 @@
-import { utilService } from '../services/utilService';
+import { utilService } from '../services/utilService'
+import { user } from './user'
+
 function getTime() {
     return Date.now() -
         utilService.getRandomInt(
@@ -26,9 +28,24 @@ export const boards = [
             // empty array at first, then once adding a label in a task it will be updated here and will
             //  be selectable in other tasks/groups
             {
-                id: 'l101',
+                id: 't101',
                 title: '#starting',
                 color: '#61bd4f',
+            },
+            {
+                id: 't102',
+                title: '#problem',
+                color: '#e2445c',
+            },
+            {
+                id: 't103',
+                title: '#development',
+                color: '#579bfc',
+            },
+            {
+                id: 't104',
+                title: '#production',
+                color: '#a25ddc',
             },
         ],
 
@@ -83,15 +100,7 @@ export const boards = [
             },
         ],
 
-        members: [
-            // BOARD members
-            {
-                _id: 'u101',
-                fullname: 'Tal Tarablus',
-                imgUrl: 'https://www.google.com',
-            },
-        ],
-
+        members: user,
         groups: [
             {
                 id: 'g101',
@@ -102,9 +111,15 @@ export const boards = [
                         id: 'g1t101',
                         labelIds: ['101'],
                         createdAt: getTime(),
-                        timeline: [null,null],
+                        timeline: [null, null],
                         title: 'Content Editable',
-                        tags: ['initialize'],
+                        tags: [
+                            {
+                                id: 't101',
+                                title: '#starting',
+                                color: '#61bd4f',
+                            },
+                        ],
                         status: {
                             id: 'sl1',
                             title: 'Done',
@@ -148,9 +163,15 @@ export const boards = [
                         id: 'g1t102',
                         labelIds: ['101'],
                         createdAt: getTime(),
-                        timeline: [null,null],
+                        timeline: [null, null],
                         title: 'Date Range Picker',
-                        tags: ['initialize'],
+                        tags: [
+                            {
+                                id: 't101',
+                                title: '#starting',
+                                color: '#61bd4f',
+                            },
+                        ],
                         status: {
                             id: 'sl4',
                             title: 'On hold',
@@ -194,9 +215,15 @@ export const boards = [
                         id: 'g1t103',
                         labelIds: ['101'],
                         createdAt: getTime(),
-                        timeline: [null,null],
+                        timeline: [null, null],
                         title: 'Drag and Drop',
-                        tags: ['initialize'],
+                        tags: [
+                            {
+                                id: 't103',
+                                title: '#development',
+                                color: '#61bd4f',
+                            },
+                        ],
                         status: {
                             id: 'sl2',
                             title: 'Working on it',
@@ -247,9 +274,15 @@ export const boards = [
                         id: 'g2t101',
                         labelIds: ['101'],
                         createdAt: getTime(),
-                        timeline: [null,null],
+                        timeline: [null, null],
                         title: 'App flow - from home page to boards to selected boards',
-                        tags: ['initialize'],
+                        tags: [
+                            {
+                                id: 't101',
+                                title: '#starting',
+                                color: '#61bd4f',
+                            },
+                        ],
                         status: {
                             id: 'sl2',
                             title: 'Working on it',
@@ -293,9 +326,15 @@ export const boards = [
                         id: 'g2t102',
                         labelIds: ['101'],
                         createdAt: getTime(),
-                        timeline: [null,null],
+                        timeline: [null, null],
                         title: 'Popup modals and Material UI drawer',
-                        tags: ['initialize'],
+                        tags: [
+                            {
+                                id: 't101',
+                                title: '#starting',
+                                color: '#61bd4f',
+                            },
+                        ],
                         status: {
                             id: 'sl2',
                             title: 'Working on it',
@@ -339,9 +378,15 @@ export const boards = [
                         id: 'g2t103',
                         labelIds: ['101'],
                         createdAt: getTime(),
-                        timeline: [null,null],
+                        timeline: [null, null],
                         title: 'Add CSS transition/React animations when components changes',
-                        tags: ['initialize'],
+                        tags: [
+                            {
+                                id: 't101',
+                                title: '#starting',
+                                color: '#61bd4f',
+                            },
+                        ],
                         status: {
                             id: 'sl2',
                             title: 'Working on it',
@@ -392,9 +437,15 @@ export const boards = [
                         id: 'g3t101',
                         labelIds: ['101'],
                         createdAt: getTime(),
-                        timeline: [null,null],
+                        timeline: [null, null],
                         title: 'git + initial files setup + initial push/pull',
-                        tags: ['done'],
+                        tags: [
+                            {
+                                id: 't101',
+                                title: '#starting',
+                                color: '#61bd4f',
+                            },
+                        ],
                         status: {
                             id: 'sl1',
                             title: 'Done',

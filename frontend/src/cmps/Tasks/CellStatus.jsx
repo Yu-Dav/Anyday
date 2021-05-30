@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { SimplePopover } from '../SimplePopover'
 
+
 export class CellStatus extends Component {
     state = {
         isExpanded: false
@@ -26,8 +27,8 @@ export class CellStatus extends Component {
         const { status } = this.props.task
         const { statusLabels } = this.props.board
         const { isExpanded } = this.state
-        // const clickableLabel = <div className="cell status" style={{ backgroundColor: status.color }}>{status.title}</div>
-        // const menu = <div className="floating-status-select">
+        // const clickableLabel = <div style={{ backgroundColor: status.color }}>{status.title}</div>
+        // const menu = <div className="floating-label-select">
         //     {statusLabels.map((label) => {
         //         return <div className="color-option" key={label.id} data-label={label.id} style={{ backgroundColor: label.color }}> {label.title} </div> })}
         //     </div>
@@ -45,8 +46,8 @@ export class CellStatus extends Component {
                 </div>
                 }
             </div>
-
-            // <SimplePopover clickedEl={clickableLabel} content={menu}
+            // <div>
+            // <SimplePopover className="label" clickedEl={clickableLabel} content={menu}
             //     anchorOrigin={{
             //         vertical: 'bottom',
             //         horizontal: 'left',
@@ -55,6 +56,8 @@ export class CellStatus extends Component {
             //         vertical: 'top',
             //         horizontal: 'left',
             //     }} />
+            //      {/* <Typography className={}></Typography> */}
+            // </div>
         )
     }
 }

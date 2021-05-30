@@ -1,14 +1,30 @@
 import React, { Component } from 'react'
+import { SimplePopover } from '../SimplePopover'
 
-export class CellMember extends Component {
-    render() {
-        const {members} = this.props.task
+export function CellMember({task, board}) {
+ 
+        const taskMembers = task.members
+        const boardMembers = board.members
         return (
-            <div className="cell asignee">
-                {members.map(member=>{
-                    return <p key={member._id}>{member.username}</p>
+            <React.Fragment>
+            <SimplePopover className="cell asignee" 
+            clickedEl={<div>
+                {taskMembers.map(member=>{
+                    return <p key={member._id}>{member.fullname}</p>
                 })}
-            </div>
+            </div>} 
+            content={<div>{boardMembers.map(member=> {
+                 return <p key={member._id}>{member.fullname}</p>
+            })}</div>}
+            anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'center',
+            }}
+            transformOrigin={{
+                vertical: 'top',
+                horizontal: 'center',
+            }} />
+            </React.Fragment>
         )
-    }
+    
 }
