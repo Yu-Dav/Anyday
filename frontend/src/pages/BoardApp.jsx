@@ -10,6 +10,7 @@ import { BoardHeader } from '../cmps/BoardHeader'
 import { BoardCtrlPanel } from '../cmps/BoardCtrlPanel'
 import { loadBoard, updateBoard } from '../store/actions/boardActions'
 import { GroupList } from '../cmps/groups/GroupList'
+import { MenuListComposition } from '../cmps/MenuCmp'
 
 class _BoardApp extends Component {
 
