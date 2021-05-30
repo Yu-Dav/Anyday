@@ -7,8 +7,16 @@
     }
 
     input {
-        &:focus+button {
+        border: 1px solid $grey;
+        padding: 10px 0px 10px 40px;
+
+        cursor: pointer;
+        &:focus + button {
             opacity: 1;
         }
+    }
+    .group-color{
+        // height: 100%;
+        width: 8px;
     }
 }

@@ -25,10 +25,10 @@ export class GroupHeader extends Component {
                 {/* <h1 className="title" style={{ color: group.style.bgColor }}>{group.title}</h1> */}
                 <div className="cell asignee">Asignee</div>
                 <div className="cell tags">Tags</div>
-                <div className="cell status">Status</div>
-                <div className="cell priority">Priority</div>
+                <div className="cell label">Status</div>
+                <div className="cell label">Priority</div>
                 <div className="cell creation-log">Creation Log</div>
-                <div className="cell due-date">Due Date</div>
+                <div className="cell timeline">Timeline</div>
             </div>
             // {/* </div> */}
         )

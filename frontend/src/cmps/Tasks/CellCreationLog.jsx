@@ -2,8 +2,10 @@ import React, { Component } from 'react'
 
 export class CellCreationLog extends Component {
     getTime(timestamp) {
-        const date = new Date(timestamp).toLocaleDateString("en-UK")
-        let time = new Date(timestamp).toLocaleTimeString("en-UK")
+        const options = { day: 'numeric', month: 'long',  };
+
+        const date = new Date(timestamp).toLocaleDateString('en-UK', options)
+        let time = new Date(timestamp).toLocaleTimeString('en-UK')
         time = time.slice(0, 5)
         return date
     }
@@ -14,8 +16,7 @@ export class CellCreationLog extends Component {
         const date = this.getTime(createdAt)
         return (
             <div className="cell creation-log">
-                <p>{byMember.username}</p>
-                <p>{date}</p> 
+                <p>{byMember.username} - {date}</p>
                 {/* change to named date+ username to avatar */}
             </div>
         )

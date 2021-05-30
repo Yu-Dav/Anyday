@@ -19,7 +19,7 @@ export function TaskPreview({ task, group, board, updateBoard }) {
                 <CellStatus task={task} board={board} updateBoard={updateBoard} />
                 <CellPriority task={task} board={board} updateBoard={updateBoard}/> 
                 <CellCreationLog task={task} />
-                <CellDate task={task} />
+                <CellDate task={task} board={board} updateBoard={updateBoard}/>
             </div>
         
         </React.Fragment>

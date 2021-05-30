@@ -22,15 +22,8 @@
             opacity: 0.5;
         }
     }
-    .asignee {
-        width: 6%;
-    }
-    .tags {
-        width: 6%;
-    }
     .label {
         color: #ffffff;
-        width: 6%;
         .floating-label-select {
             z-index: 1;
             position: absolute;
@@ -56,24 +49,29 @@
         //     width: 0;
         // }
     }
-    .priority {
-        color: #ffffff;
-        // width: 6%;
-        .floating-priority-select {
-            position: absolute;
-            width: 133px;
-            background-color: #fff;
-        }
-    }
+    // .priority {
+    //     color: #ffffff;
+    //     // width: 6%;
+    //     .floating-priority-select {
+    //         position: absolute;
+    //         width: 133px;
+    //         background-color: #fff;
+    //     }
+    // }
 
     .group-color{
         height: 100%;
         width: 8px;
     }
+    // .asignee {
+    //     width: 10%;
+    // }
 }
 
 .title {
-    width: 40%;
+    // width: 40%;
+    flex: 1;
+    text-align: start;
 
     .remove-task {
         opacity: 0;
@@ -98,25 +96,21 @@
 }
 
 .asignee {
-    width: 6%;
+    width: 10%;
 }
 
 .tags {
-    width: 6%;
+    width: 10%;
 }
 
-.status {
-    width: 6%;
-}
-
-.priority {
-    width: 6.5%;
+.label {
+    width: 8%;
 }
 
 .creation-log {
     width: 10%;
 }
 
-.due-date {
-    width: 10%;
+.timeline {
+    width: 15%;
 }
