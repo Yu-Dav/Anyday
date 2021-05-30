@@ -24,6 +24,94 @@ export const boards = [
             imgUrl: 'http://some-img',
         },
 
+        colors: [
+            {
+                id: 'c101',
+                name: 'darkGreen',
+                value: '#037f4c'
+            },
+            {
+                id: 'c102',
+                name: 'green',
+                value: '#00c875'
+            },
+            {
+                id: 'c103',
+                name: 'yellowGreen',
+                value: '#9cd326'
+            },
+            {
+                id: 'c104',
+                name: 'beige',
+                value: '#cab641'
+            },
+            {
+                id: 'c105',
+                name: 'yellow',
+                value: '#ffcb00'
+            },
+            {
+                id: 'c106',
+                name: 'darkPurple',
+                value: '#784bd1'
+            },
+            {
+                id: 'c107',
+                name: 'purple',
+                value: '#a25ddc'
+            },
+            {
+                id: 'c108',
+                name: 'turquoise',
+                value: '#0086BE'
+            },
+            {
+                id: 'c109',
+                name: 'blue',
+                value: '#579bfc'
+            },
+            {
+                id: 'c110',
+                name: 'lightBlue',
+                value: '#66ccff'
+            },
+            {
+                id: 'c111',
+                name: 'darkRed',
+                value: '#bb3354'
+            },
+            {
+                id: 'c112',
+                name: 'red',
+                value: '#e2445c'
+            },
+            {
+                id: 'c113',
+                name: 'darkOrange',
+                value: '#ff642e'
+            },
+            {
+                id: 'c114',
+                name: 'orange',
+                value: '#fdab3d'
+            },
+            {
+                id: 'c115',
+                name: 'brown',
+                value: '#7f5347'
+            },
+            {
+                id: 'c116',
+                name: 'grey',
+                value: '#c4c4c4'
+            },
+            {
+                id: 'c117',
+                name: 'darkGrey',
+                value: '#808080'
+            }
+        ],
+
         tags: [
             // empty array at first, then once adding a label in a task it will be updated here and will
             //  be selectable in other tasks/groups
@@ -133,10 +221,10 @@ export const boards = [
                         members: [
                             // TASK members
                             {
-                                _id: 'u101',
+                                _id: 'u102',
+                                fullname: 'Dafna Bashan',
                                 username: 'Dafna',
-                                fullname: 'Tal Tarablus',
-                                imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
+                                imgUrl: '../assets/imgs/db.png',
                             },
                         ],
                         comments: [
@@ -144,19 +232,20 @@ export const boards = [
                                 // popup modal on the side of the screen showing the comments each member left
                                 id: 'ZdPnm',
                                 txt: 'also @yaronb please CR this',
-                                createdAt: 1590999817436.0,
+                                createdAt: getTime(),
                                 byMember: {
-                                    _id: 'u101',
-                                    fullname: 'Tal Tarablus',
-                                    imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
+                                    _id: 'u102',
+                                    fullname: 'Dafna Bashan',
+                                    username: 'Dafna',
+                                    imgUrl: '../assets/imgs/db.png',
                                 },
                             },
                         ],
                         byMember: {
-                            _id: 'u101',
+                            _id: 'u102',
+                            fullname: 'Dafna Bashan',
                             username: 'Dafna',
-                            fullname: 'Tal Tarablus',
-                            imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
+                            imgUrl: '../assets/imgs/db.png',
                         },
                     },
                     {
@@ -185,10 +274,10 @@ export const boards = [
                         members: [
                             // TASK members
                             {
-                                _id: 'u101',
+                                _id: 'u103',
+                                fullname: 'Yuval David',
                                 username: 'Yuval',
-                                fullname: 'Tal Tarablus',
-                                imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
+                                imgUrl: '../assets/imgs/yd.png',
                             },
                         ],
                         comments: [
@@ -196,19 +285,20 @@ export const boards = [
                                 // popup modal on the side of the screen showing the comments each member left
                                 id: 'ZdPnm',
                                 txt: 'also @yaronb please CR this',
-                                createdAt: 1590999817436.0,
+                                createdAt: getTime(),
                                 byMember: {
-                                    _id: 'u101',
-                                    fullname: 'Tal Tarablus',
-                                    imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
+                                    _id: 'u103',
+                                    fullname: 'Yuval David',
+                                    username: 'Yuval',
+                                    imgUrl: '../assets/imgs/yd.png',
                                 },
                             },
                         ],
                         byMember: {
-                            _id: 'u101',
+                            _id: 'u103',
+                            fullname: 'Yuval David',
                             username: 'Yuval',
-                            fullname: 'Tal Tarablus',
-                            imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
+                            imgUrl: '../assets/imgs/yd.png',
                         },
                     },
                     {
@@ -237,10 +327,10 @@ export const boards = [
                         members: [
                             // TASK members
                             {
-                                _id: 'u101',
+                                _id: 'u103',
+                                fullname: 'Yuval David',
                                 username: 'Yuval',
-                                fullname: 'Tal Tarablus',
-                                imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
+                                imgUrl: '../assets/imgs/yd.png',
                             },
                         ],
                         comments: [
@@ -248,19 +338,20 @@ export const boards = [
                                 // popup modal on the side of the screen showing the comments each member left
                                 id: 'ZdPnm',
                                 txt: 'also @yaronb please CR this',
-                                createdAt: 1590999817436.0,
+                                createdAt: getTime(),
                                 byMember: {
-                                    _id: 'u101',
-                                    fullname: 'Tal Tarablus',
-                                    imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
+                                    _id: 'u103',
+                                    fullname: 'Yuval David',
+                                    username: 'Yuval',
+                                    imgUrl: '../assets/imgs/yd.png',
                                 },
                             },
                         ],
                         byMember: {
-                            _id: 'u101',
+                            _id: 'u103',
+                            fullname: 'Yuval David',
                             username: 'Yuval',
-                            fullname: 'Tal Tarablus',
-                            imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
+                            imgUrl: '../assets/imgs/yd.png',
                         },
                     },
                 ],
@@ -297,29 +388,42 @@ export const boards = [
                             // TASK members
                             {
                                 _id: 'u101',
-                                username: 'Noga, Dafna, Yuval',
-                                fullname: 'Tal Tarablus',
-                                imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
+                                fullname: 'Noga Jacobi',
+                                username: 'Noga',
+                                imgUrl: '../assets/imgs/nj.png',
                             },
+                            {
+                                _id: 'u102',
+                                fullname: 'Dafna Bashan',
+                                username: 'Dafna',
+                                imgUrl: '../assets/imgs/db.png',
+                            },
+                            {
+                                _id: 'u103',
+                                fullname: 'Yuval David',
+                                username: 'Yuval',
+                                imgUrl: '../assets/imgs/yd.png',
+                            }
                         ],
                         comments: [
                             {
                                 // popup modal on the side of the screen showing the comments each member left
                                 id: 'ZdPnm',
                                 txt: 'also @yaronb please CR this',
-                                createdAt: 1590999817436.0,
+                                createdAt: getTime(),
                                 byMember: {
-                                    _id: 'u101',
-                                    fullname: 'Tal Tarablus',
-                                    imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
-                                },
+                                    _id: 'u103',
+                                    fullname: 'Yuval David',
+                                    username: 'Yuval',
+                                    imgUrl: '../assets/imgs/yd.png',
+                                }
                             },
                         ],
                         byMember: {
-                            _id: 'u101',
-                            username: 'Noga',
-                            fullname: 'Tal Tarablus',
-                            imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
+                            _id: 'u103',
+                            fullname: 'Yuval David',
+                            username: 'Yuval',
+                            imgUrl: '../assets/imgs/yd.png',
                         },
                     },
                     {
@@ -349,29 +453,36 @@ export const boards = [
                             // TASK members
                             {
                                 _id: 'u101',
-                                username: 'Noga, Dafna',
-                                fullname: 'Tal Tarablus',
-                                imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
+                                fullname: 'Noga Jacobi',
+                                username: 'Noga',
+                                imgUrl: '../assets/imgs/nj.png',
                             },
+                            {
+                                _id: 'u102',
+                                fullname: 'Dafna Bashan',
+                                username: 'Dafna',
+                                imgUrl: '../assets/imgs/db.png',
+                            }
                         ],
                         comments: [
                             {
                                 // popup modal on the side of the screen showing the comments each member left
                                 id: 'ZdPnm',
                                 txt: 'also @yaronb please CR this',
-                                createdAt: 1590999817436.0,
+                                createdAt: getTime(),
                                 byMember: {
-                                    _id: 'u101',
-                                    fullname: 'Tal Tarablus',
-                                    imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
+                                    _id: 'u102',
+                                    fullname: 'Dafna Bashan',
+                                    username: 'Dafna',
+                                    imgUrl: '../assets/imgs/db.png',
                                 },
                             },
                         ],
                         byMember: {
                             _id: 'u101',
-                            username: 'Yuval',
-                            fullname: 'Tal Tarablus',
-                            imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
+                            fullname: 'Noga Jacobi',
+                            username: 'Noga',
+                            imgUrl: '../assets/imgs/nj.png',
                         },
                     },
                     {
@@ -400,10 +511,10 @@ export const boards = [
                         members: [
                             // TASK members
                             {
-                                _id: 'u101',
-                                username: 'Yuval',
-                                fullname: 'Tal Tarablus',
-                                imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
+                                _id: 'u104',
+                                fullname: 'Basya coding',
+                                username: 'Basya',
+                                imgUrl: '../assets/imgs/qb.png'
                             },
                         ],
                         comments: [
@@ -411,19 +522,20 @@ export const boards = [
                                 // popup modal on the side of the screen showing the comments each member left
                                 id: 'ZdPnm',
                                 txt: 'also @yaronb please CR this',
-                                createdAt: 1590999817436.0,
+                                createdAt: getTime(),
                                 byMember: {
-                                    _id: 'u101',
-                                    fullname: 'Tal Tarablus',
-                                    imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
+                                    _id: 'u104',
+                                    fullname: 'Basya coding',
+                                    username: 'Basya',
+                                    imgUrl: '../assets/imgs/qb.png'
                                 },
                             },
                         ],
                         byMember: {
-                            _id: 'u101',
-                            username: 'Yuval',
-                            fullname: 'Tal Tarablus',
-                            imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
+                            _id: 'u104',
+                            fullname: 'Basya coding',
+                            username: 'Basya',
+                            imgUrl: '../assets/imgs/qb.png'
                         },
                     },
                 ],
@@ -459,10 +571,16 @@ export const boards = [
                         members: [
                             // TASK members
                             {
-                                _id: 'u101',
-                                username: 'Dafna, Noga, Yuval',
-                                fullname: 'Tal Tarablus',
-                                imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
+                                _id: 'u103',
+                                fullname: 'Yuval David',
+                                username: 'Yuval',
+                                imgUrl: '../assets/imgs/yd.png',
+                            },
+                            {
+                                _id: 'u104',
+                                fullname: 'Basya coding',
+                                username: 'Basya',
+                                imgUrl: '../assets/imgs/qb.png',
                             },
                         ],
                         comments: [
@@ -470,19 +588,20 @@ export const boards = [
                                 // popup modal on the side of the screen showing the comments each member left
                                 id: 'ZdPnm',
                                 txt: 'also @yaronb please CR this',
-                                createdAt: 1590999817436.0,
+                                createdAt: getTime(),
                                 byMember: {
-                                    _id: 'u101',
-                                    fullname: 'Tal Tarablus',
-                                    imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
+                                    _id: 'u104',
+                                    fullname: 'Basya coding',
+                                    username: 'Basya',
+                                    imgUrl: '../assets/imgs/qb.png',
                                 },
                             },
                         ],
                         byMember: {
-                            _id: 'u101',
-                            username: 'Noga',
-                            fullname: 'Tal Tarablus',
-                            imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
+                            _id: 'u104',
+                            fullname: 'Basya coding',
+                            username: 'Basya',
+                            imgUrl: '../assets/imgs/qb.png',
                         },
                     },
                 ],
@@ -493,11 +612,12 @@ export const boards = [
             {
                 id: 'a101',
                 txt: 'Changed Color',
-                createdAt: 154514,
+                createdAt: getTime(),
                 byMember: {
-                    _id: 'u102',
-                    fullname: 'Abi Abambi',
-                    imgUrl: 'http://some-img',
+                    _id: 'u104',
+                    fullname: 'Basya coding',
+                    username: 'Basya',
+                    imgUrl: '../assets/imgs/qb.png',
                 },
                 task: {
                     id: 'c101',
