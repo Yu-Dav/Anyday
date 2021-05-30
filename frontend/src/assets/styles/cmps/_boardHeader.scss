@@ -1,22 +1,46 @@
 .board-header {
     height: 100px;
+    margin-top: 20px;
 
     .title-container {
         .title {
             font-size: rem(24px);
-            width    : rem(300px);
-            height   : rem(40px);
+            // width: rem(150px);
+            height: rem(40px);
+            margin-right: 1095px;
         }
     }
 
     .subtitle-container {
-
         .subtitle {
             font-size: rem(14px);
-            width    : rem(500px);
-            height   : rem(25px);
-
+            width: rem(500px);
+            height: rem(25px);
         }
     }
 
+    .board-header-btns {
+        
+    }
+    .btn {
+        height: 32px;
+        font-size: rem(14px);
+        padding: 4px 8px;
+        font-weight: 400;
+        line-height: 22px;
+        border: none;
+        border-radius: 4px;
+        background-color: transparent;
+        transition: 0.3s;
+        &:hover {
+            background-color: #e6e9ef;
+        }
+        & > *:not(:last-child) {
+            margin-inline-end: 10px;
+        }
+    }
+    svg {
+        height: 24px;
+        width: 24px;
+    }
 }

@@ -15,7 +15,7 @@ export function TaskPreview({ task, group, board, updateBoard }) {
                 <div className="group-color" style={{backgroundColor: group.style.bgColor}}></div>
                 <CellTitle task={task} group={group} board={board} updateBoard={updateBoard}/>
                 <CellMember task={task} board={board}/>
-                <CellTag task={task} />
+                <CellTag task={task} board={board} updateBoard={updateBoard}/>
                 <CellStatus task={task} board={board} updateBoard={updateBoard} />
                 <CellPriority task={task} board={board} updateBoard={updateBoard}/> 
                 <CellCreationLog task={task} />
