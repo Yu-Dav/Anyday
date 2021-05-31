@@ -112,13 +112,17 @@
 }
 
 .fas.close::after{
-    content:'\f057'
+    content:'\f057';
 }
 
-.modal-li{
-    display: flex;
-    justify-content: space-around;
+//wasnt able to apply hover on MUI li
+.fas.close{
+    opacity: 0;
+    &:hover{
+        opacity: 0.5;
+    }
 }
+
 
 .label {
     width: 113px;

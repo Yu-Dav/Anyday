@@ -64,6 +64,11 @@ class _BoardApp extends Component {
         this.props.updateBoard(copyGroup);
     }
 
+    onSetFilter = (filterBy) => {
+        console.log('filterBy' , filterBy)
+        // this.props.loadBoard(filterBy)
+    }
+
     render() {
         const { currBoard } = this.props
         return (
@@ -72,7 +77,7 @@ class _BoardApp extends Component {
                 <SidebarNav />
                 <div className="container board-container">
                     <BoardHeader board={this.props.currBoard} updateBoard={this.props.updateBoard} />
-                    <BoardCtrlPanel addNewGroup={this.addNewGroup} />
+                    <BoardCtrlPanel addNewGroup={this.addNewGroup} onSetFilter={this.onSetFilter} />
 
                     <DragDropContext onDragEnd={this.onDragEnd}>
                         <Droppable droppableId="all-groups" type="group">
