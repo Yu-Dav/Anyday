@@ -48,10 +48,13 @@ export function Colors({ onChangeGroupColor, board }) {
     console.log(board);
 
     const classes = useStyles();
-    const [open, setOpen] = React.useState(false);
+    const [open, setOpen] = React.useState(true);
     const anchorRef = React.useRef(null);
 
-    const handleToggle = () => {
+    const handleToggle = (ev) => {
+              ev.stopPropagation()
+              console.log(open);
+            //   ev.preventDefault()
         setOpen((prevOpen) => !prevOpen);
     };
 
@@ -87,7 +90,7 @@ export function Colors({ onChangeGroupColor, board }) {
             aria-haspopup="true"
             onClick={handleToggle}>
             Change group color
-            <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal style={{ zIndex: '1' }}>
+            <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal style={{ zIndex: '2' }}>
                 {({ TransitionProps, placement }) => (
                     <Grow
                         {...TransitionProps}
@@ -96,9 +99,9 @@ export function Colors({ onChangeGroupColor, board }) {
                         <Paper>
                             <ClickAwayListener onClickAway={handleClose}>
                                 <MenuList className="color-container" autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
-                                    {/* {board.colors.map((color) => { return <MenuItem data-color={color.value} onClick={onChangeGroupColor} /> })} */}
+                                    {board.colors.map((color) => { return <li className={`color ${color.name}`} data-color={color.value} onClick={onChangeGroupColor}></li> })}
                                     {/* <MenuItem data-color={color.value} onClick={onChangeGroupColor} /> */}
-                                    <div className="color-container">
+                                    {/* <div className="color-container">
                                         <div className="color darkGreen" data-color="#037f4c" onClick={onChangeGroupColor}></div>
                                         <div className="color green" data-color="#00c875" onClick={onChangeGroupColor}></div>
                                         <div className="color yellowGreen" data-color="#9cd326" onClick={onChangeGroupColor}></div>
@@ -116,7 +119,7 @@ export function Colors({ onChangeGroupColor, board }) {
                                         <div className="color brown" data-color="#7f5347" onClick={onChangeGroupColor}></div>
                                         <div className="color grey" data-color="#c4c4c4" onClick={onChangeGroupColor}></div>
                                         <div className="color darkGrey" data-color="#808080" onClick={onChangeGroupColor}></div>
-                                    </div>
+                                    </div> */}
                                 </MenuList>
                             </ClickAwayListener>
                         </Paper>

@@ -11,7 +11,10 @@ import { BoardHeader } from '../cmps/BoardHeader'
 import { BoardCtrlPanel } from '../cmps/BoardCtrlPanel'
 import { loadBoard, updateBoard } from '../store/actions/boardActions'
 import { GroupList } from '../cmps/groups/GroupList'
-import { MenuListComposition } from '../cmps/MenuCmp'
+import { ActivityModal } from '../cmps/ActivitySideBar/ActivityModal';
+// import { MenuListComposition } from '../cmps/MenuCmp'
+// import { ChipCmp } from '../cmps/ChipCmp';
+
 
 class _BoardApp extends Component {
 
@@ -29,26 +32,7 @@ class _BoardApp extends Component {
             id: utilService.makeId(),
             style: { bgColor: '#26de81' },
             title: 'New Group',
-            tasks: [
-                // {
-                //     id: utilService.makeId(),
-                //     labelIds: ['101'],
-                //     createdAt: 1590999730348,
-                //     dueDate: 16156215211,
-                //     title: 'New Task',
-                //     tags: ['initialize'],
-                //     status: '',
-                //     priority: '',
-                //     members: [],
-                //     comments: [],
-                //     byMember: {
-                //         _id: 'u101',
-                //         username: 'Tal',
-                //         fullname: 'Tal Tarablus',
-                //         imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
-                //     },
-                // },
-            ],
+            tasks: [],
         }
         newBoard.groups.unshift(newGroup)
         this.props.updateBoard(newBoard)
@@ -82,7 +66,7 @@ class _BoardApp extends Component {
                     <DragDropContext onDragEnd={this.onDragEnd}>
                         <GroupList board={currBoard} groups={currBoard.groups} key={currBoard._id} updateBoard={this.props.updateBoard} />
                     </DragDropContext>
-
+                    {/* <ActivityModal /> */}
                 </div >
             </div>
         )

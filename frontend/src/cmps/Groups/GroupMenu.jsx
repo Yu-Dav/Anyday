@@ -41,7 +41,9 @@ export function GroupMenu({ group, board, updateBoard }) {
     const [open, setOpen] = React.useState(false);
     const anchorRef = React.useRef(null);
 
-    const handleToggle = () => {
+    const handleToggle = (ev) => {
+        // ev.stopPropagation()
+        // ev.preventDefault()
         setOpen((prevOpen) => !prevOpen);
     };
 
@@ -76,8 +78,8 @@ export function GroupMenu({ group, board, updateBoard }) {
             aria-controls={open ? 'menu-list-grow' : undefined}
             aria-haspopup="true"
             onClick={handleToggle}>
-                ^
-            <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal style={{zIndex: '1'}}>
+            ^
+            <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal style={{ zIndex: '1' }}>
                 {({ TransitionProps, placement }) => (
                     <Grow
                         {...TransitionProps}
@@ -86,9 +88,9 @@ export function GroupMenu({ group, board, updateBoard }) {
                         <Paper>
                             <ClickAwayListener onClickAway={handleClose}>
                                 <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
-                                <MenuItem onClick={onDeleteGroup}>Delete group</MenuItem>
-                                {/* <MenuItem onClick={onChangeGroupColor}>Change group color</MenuItem> */}
-                                <MenuItem><Colors onChangeGroupColor={onChangeGroupColor} board={board}/></MenuItem>
+                                    <MenuItem onClick={onDeleteGroup}>Delete group</MenuItem>
+                                    {/* <MenuItem onClick={onChangeGroupColor}>Change group color</MenuItem> */}
+                                    <MenuItem><Colors onChangeGroupColor={onChangeGroupColor} board={board} /></MenuItem>
                                 </MenuList>
                             </ClickAwayListener>
                         </Paper>
