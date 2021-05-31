@@ -77,13 +77,18 @@ export function CellMember({ task, board, updateBoard }) {
         return boardMembers.find(member => member._id === id)
     }
 
-    // const otherMembers = boardMembers.filter((member) => {
-    //     // console.log('board', member);
-    //     return taskMembers.filter(taskMember => 
-    //     //    { console.log('task',taskMember)
-    //     //    console.log(taskMember._id !== member._id)
-    //            return taskMember._id !== member._id})
-    // })
+    const otherMembers = boardMembers.filter((member) => {
+        console.log('board', member);
+        return taskMembers.filter(taskMember => {
+            console.log('task',taskMember)
+           console.log(taskMember._id !== member._id)
+               return taskMember._id !== member._id})
+        
+    })
+console.log('task members', taskMembers);  
+console.log('board memebers', boardMembers);  
+console.log('other', otherMembers);
+    // const otherMembers = 
 
     // var diffArray = arr2.filter(x => {
     //     let elementsOfArray2PresentInArray1 = arr1.filter(y => {

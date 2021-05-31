@@ -11,7 +11,10 @@ import { BoardHeader } from '../cmps/BoardHeader'
 import { BoardCtrlPanel } from '../cmps/BoardCtrlPanel'
 import { loadBoard, updateBoard } from '../store/actions/boardActions'
 import { GroupList } from '../cmps/groups/GroupList'
-import { MenuListComposition } from '../cmps/MenuCmp'
+import { ActivityModal } from '../cmps/ActivitySideBar/ActivityModal';
+// import { MenuListComposition } from '../cmps/MenuCmp'
+// import { ChipCmp } from '../cmps/ChipCmp';
+
 
 class _BoardApp extends Component {
 
@@ -86,7 +89,7 @@ class _BoardApp extends Component {
                             )}
                         </Droppable>
                     </DragDropContext>
-
+                    {/* <ActivityModal /> */}
                 </div >
             </div>
         )
