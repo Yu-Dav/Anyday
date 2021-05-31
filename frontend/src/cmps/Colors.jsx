@@ -42,19 +42,22 @@ const useStyles = makeStyles((theme) => ({
     paper: {
         marginRight: theme.spacing(2),
     },
+    MenuList: {
+        position: 'fixed'
+    }
 }));
 
 export function Colors({ onChangeGroupColor, board }) {
     console.log(board);
 
     const classes = useStyles();
-    const [open, setOpen] = React.useState(true);
+    const [open, setOpen] = React.useState(false);
     const anchorRef = React.useRef(null);
 
     const handleToggle = (ev) => {
-              ev.stopPropagation()
-              console.log(open);
-            //   ev.preventDefault()
+        ev.stopPropagation()
+        console.log(open);
+        //   ev.preventDefault()
         setOpen((prevOpen) => !prevOpen);
     };
 
