@@ -29,26 +29,7 @@ class _BoardApp extends Component {
             id: utilService.makeId(),
             style: { bgColor: '#26de81' },
             title: 'New Group',
-            tasks: [
-                // {
-                //     id: utilService.makeId(),
-                //     labelIds: ['101'],
-                //     createdAt: 1590999730348,
-                //     dueDate: 16156215211,
-                //     title: 'New Task',
-                //     tags: ['initialize'],
-                //     status: '',
-                //     priority: '',
-                //     members: [],
-                //     comments: [],
-                //     byMember: {
-                //         _id: 'u101',
-                //         username: 'Tal',
-                //         fullname: 'Tal Tarablus',
-                //         imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
-                //     },
-                // },
-            ],
+            tasks: [],
         }
         newBoard.groups.unshift(newGroup)
         this.props.updateBoard(newBoard)
@@ -69,6 +50,11 @@ class _BoardApp extends Component {
         this.props.updateBoard(copyGroup)
     }
 
+    onSetFilter = (filterBy) => {
+        console.log('filterBy' , filterBy)
+        // this.props.loadBoard(filterBy)
+    }
+
     render() {
         const { currBoard } = this.props
         return (
@@ -77,7 +63,7 @@ class _BoardApp extends Component {
                 <SidebarNav />
                 <div className="container board-container">
                     <BoardHeader board={this.props.currBoard} updateBoard={this.props.updateBoard} />
-                    <BoardCtrlPanel addNewGroup={this.addNewGroup} />
+                    <BoardCtrlPanel addNewGroup={this.addNewGroup} onSetFilter={this.onSetFilter} />
 
                     <DragDropContext onDragEnd={this.onDragEnd}>
                         <GroupList board={currBoard} groups={currBoard.groups} key={currBoard._id} updateBoard={this.props.updateBoard} />
