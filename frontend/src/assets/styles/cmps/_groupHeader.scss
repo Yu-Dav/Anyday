@@ -3,9 +3,9 @@
     font-size: rem(14px);
     text-align: center;
     color: #323338;
+    // background-color: white;
     & > *:not(:last-child) {
         margin: 0 0 0 1px;
-        
     }
     .title {
         font-size: rem(18px);

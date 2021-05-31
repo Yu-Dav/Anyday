@@ -2,13 +2,12 @@
     width: 140px;
 
     .color {
-        width              : 20px;
-        height             : 20px;
-        border-radius      : 50%;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
         // background-color: rgb(247, 166, 166);
-        display            : inline-block;
-        margin             : 3px;
-
+        display: inline-block;
+        margin: 3px;
     }
 
     .darkGreen {
@@ -19,63 +18,63 @@
         background-color: $green;
     }
 
-    .yellowGreen{
+    .yellowGreen {
         background-color: $yellowGreen;
     }
 
-    .beige{
+    .beige {
         background-color: $beige;
     }
 
-    .yellow{
-        background-color:$yellow;
+    .yellow {
+        background-color: $yellow;
     }
 
-    .darkPurple{
+    .darkPurple {
         background-color: $darkPurple;
     }
 
-    .purple{
+    .purple {
         background-color: $purple;
     }
 
-    .turquoise{
+    .turquoise {
         background-color: $turquoise;
     }
 
-    .blue{
+    .blue {
         background-color: $blue;
     }
 
-    .lightBlue{
+    .lightBlue {
         background-color: $lightBlue;
     }
 
-    .darkRed{
+    .darkRed {
         background-color: $darkRed;
     }
 
-    .red{
+    .red {
         background-color: $red;
     }
 
-    .darkOrange{
+    .darkOrange {
         background-color: $darkOrange;
     }
 
-    .orange{
+    .orange {
         background-color: $orange;
     }
 
-    .brown{
+    .brown {
         background-color: $brown;
     }
 
-    .grey{
+    .grey {
         background-color: $grey;
     }
 
-    .darkGrey{
+    .darkGrey {
         background-color: $darkGrey;
     }
 }

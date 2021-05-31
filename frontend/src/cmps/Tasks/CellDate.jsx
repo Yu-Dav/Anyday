@@ -6,6 +6,7 @@ import uk from 'date-fns/locale/en-GB';
 registerLocale('uk', uk)
 
 export class CellDate extends Component {
+
     state = {
         startDate: (!this.props.task.timeline[0]) ? Date.now() : new Date(this.props.task.timeline[0]),
         endDate: (!this.props.task.timeline[1]) ? Date.now() : new Date(this.props.task.timeline[1]),
