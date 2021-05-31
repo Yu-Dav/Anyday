@@ -73,7 +73,11 @@
 
 .title {
     flex: 1;
+    min-width: 380px;
     text-align: start;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 
     .remove-task {
         opacity: 0;
@@ -91,12 +95,12 @@
 }
 
 .asignee {
-    width: 10%;
+    width: 142px;
     text-align: center;
 }
 
 .tags {
-    width: 10%;
+    width: 142px;
     // .tag-options {
     //     width: 140px;
     //     position: absolute;
@@ -121,13 +125,13 @@
 
 
 .label {
-    width: 8%;
+    width: 113px;
 }
 
 .creation-log {
-    width: 10%;
+    width: 142px;
 }
 
 .timeline {
-    width: 15%;
+    width: 200px;
 }

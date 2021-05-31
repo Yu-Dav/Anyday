@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import { utilService } from '../services/utilService'
-import { DragDropContext } from 'react-beautiful-dnd';
+import { DragDropContext, Droppable } from 'react-beautiful-dnd';
 
 import { connect } from 'react-redux'
 import { SidebarNav } from '../cmps/SidebarNav.jsx'
@@ -11,13 +11,13 @@ import { BoardHeader } from '../cmps/BoardHeader'
 import { BoardCtrlPanel } from '../cmps/BoardCtrlPanel'
 import { loadBoard, updateBoard } from '../store/actions/boardActions'
 import { GroupList } from '../cmps/groups/GroupList'
-import { MenuListComposition } from '../cmps/MenuCmp'
+import { ActivityModal } from '../cmps/ActivitySideBar/ActivityModal';
+// import { MenuListComposition } from '../cmps/MenuCmp'
+// import { ChipCmp } from '../cmps/ChipCmp';
+
 
 class _BoardApp extends Component {
 
-    state = {
-        currBoard: this.props.currBoard
-    }
     componentDidMount() {
         const boardId = 'b101'  //later from params
         this.props.loadBoard(boardId)
@@ -35,19 +35,33 @@ class _BoardApp extends Component {
         this.props.updateBoard(newBoard)
     }
     onDragEnd = result => {
-        const { destination, source, draggableId } = result;
+        const { destination, source, draggableId, type } = result;
         if (!destination) return;
         if (
             destination.droppableId === source.droppableId &&
             destination.index === source.index
         ) return
-        const sourceGroup = this.props.currBoard.groups.find(group => group.id === source.droppableId);
-        const destinationGroup = this.props.currBoard.groups.find(group => group.id === destination.droppableId);
-        const task = sourceGroup.tasks.find(task => task.id === draggableId)
-        sourceGroup.tasks.splice(source.index, 1);
-        destinationGroup.tasks.splice(destination.index, 0, task);
-        const copyGroup = { ...this.props.currBoard }
-        this.props.updateBoard(copyGroup)
+        if (type === 'task') {
+            const sourceGroup = this.props.currBoard.groups.find(group => group.id === source.droppableId);
+            const destinationGroup = this.props.currBoard.groups.find(group => group.id === destination.droppableId);
+            const task = sourceGroup.tasks.find(task => task.id === draggableId)
+            sourceGroup.tasks.splice(source.index, 1);
+            destinationGroup.tasks.splice(destination.index, 0, task);
+            // const copyGroup = { ...this.props.currBoard };
+            // this.props.updateBoard(copyGroup);
+            // return
+        }
+        if (type === 'group') {
+            // console.log(`file: BoardApp.jsx || line 35 || result`, result);
+            // console.log('props.currBoard =', this.props.currBoard);
+            const { currBoard } = this.props;
+            const sourceGroup = this.props.currBoard.groups.find(group => group.id === draggableId);
+            // console.log(`file: BoardApp.jsx || line 53 || sourceGroup`, sourceGroup);
+            currBoard.groups.splice(source.index, 1);
+            currBoard.groups.splice(destination.index, 0, sourceGroup)
+        }
+        const copyGroup = { ...this.props.currBoard };
+        this.props.updateBoard(copyGroup);
     }
 
     onSetFilter = (filterBy) => {
@@ -66,9 +80,21 @@ class _BoardApp extends Component {
                     <BoardCtrlPanel addNewGroup={this.addNewGroup} onSetFilter={this.onSetFilter} />
 
                     <DragDropContext onDragEnd={this.onDragEnd}>
-                        <GroupList board={currBoard} groups={currBoard.groups} key={currBoard._id} updateBoard={this.props.updateBoard} />
-                    </DragDropContext>
+                        <Droppable droppableId="all-groups" type="group">
+                            {provided => (
 
+                                <div
+                                    ref={provided.innerRef}
+                                    {...provided.droppableProps} >
+                                    <GroupList
+
+                                        board={currBoard} groups={currBoard.groups} key={currBoard._id} updateBoard={this.props.updateBoard} />
+                                    {provided.placeholder}
+                                </div>
+                            )}
+                        </Droppable>
+                    </DragDropContext>
+                    {/* <ActivityModal /> */}
                 </div >
             </div>
         )

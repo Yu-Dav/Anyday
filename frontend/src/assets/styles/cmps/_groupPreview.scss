@@ -1,9 +1,15 @@
-.group-container{
-margin-bottom: 30px;
+.group-container {
+    margin-bottom: 30px;
     .group-preview {
         width: 100%;
     }
-    button{
+    button {
         height: fit-content;
+    }
+    .fas {
+        font-family: fa-solid;
+    }
+    .fa-arrows-alt::after {
+        content: "\f0b2";
     }
 }

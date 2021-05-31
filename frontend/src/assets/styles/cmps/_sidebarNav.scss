@@ -1,25 +1,22 @@
 .sidebar-nav {
-    width: 2vw;
+    width: 35px;
     min-height: 100vh;
     border-right: 1px solid #e6e9ef;
     padding: 25px 10px 10px 10px;
     transition: 0.3s ease;
+    white-space: nowrap;
+    font-size: 0.75em;
 
     &.is-expanded {
-        width: 16vw;
-        font-size: 0.75em;
-        // opacity: 1;
+        width: 235px;
         .arrow {
-            // position: absolute;
+            position: sticky;
             top: 20px;
-            // left: 303px;
-            transform: translateX(198px);
+            transform: translateX(168px);
             transition: 0.3s ease;
-
-            // font-size: 1.3em;
         }
         h1 {
-            width: 188px;
+            width: 168px;
             font-size: 16px;
             border: 1px solid #e6e9ef;
             padding: 10px 5px;
@@ -38,22 +35,25 @@
             }
         }
     }
-
+    .sidenav-open {
+        overflow: hidden;
+        position: sticky;
+        top: 52px;
+    }
     .arrow {
+        position: sticky;
+        // position: absolute;
         width: 30px;
         height: 30px;
+        top: 20px;
+        left: 73px;
         border-radius: 50%;
-        border: 1px solid #e6e9ef;
+        border: 1px solid $lightGrey;
         background-color: white;
         font-size: 18px;
         display: inline-block;
         text-align: center;
-        position: absolute;
-        top: 20px;
-        left: 105px;
         transition: 0.3s ease;
-
-        // z-index: 1;
     }
     i {
         font-size: 14px;

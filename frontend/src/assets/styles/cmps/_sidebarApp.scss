@@ -1,24 +1,44 @@
 .sidebar-app {
-    
     nav {
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        width: 54px;
         padding: 20px 0;
         background-color: #292f4c;
         color: #fff;
-        min-height: 100vh;
-        width: 5vw;
+    }
+
+    .logo {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+    }
+    .top-sec > *:not(:last-child) {
+        margin-bottom: 10px;
+    }
+    a {
+        text-decoration: none;
     }
     .user-greeting {
+        min-height: 180px;
+        width: 38px;
+        border-radius: 0 16px 16px 0;
         background-color: #00ca72;
-        transform: rotate(270deg);
-        text-align: center;
-        margin-left: -60px;
-        border-radius: 0 0 20px 20px;
-        padding: 12px 21px;
-        font-size: 1.1em;
-        // font-family: inherit;
+        margin-left: -32px;
+        // padding: 12px 21px;
         display: flex;
+        text-align: center;
         align-items: center;
         justify-content: center;
+        span {
+            transform: rotate(270deg);
+            font-size: rem(14px);
+            // white-space: nowrap;
+            text-align: center;
+            white-space: nowrap;
+
+        }
     }
     a {
         color: inherit;
