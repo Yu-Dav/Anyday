@@ -34,6 +34,7 @@ class _BoardApp extends Component {
         newBoard.groups.unshift(newGroup)
         this.props.updateBoard(newBoard)
     }
+    
     onDragEnd = result => {
         const { destination, source, draggableId, type } = result;
         if (!destination) return;
@@ -108,10 +109,10 @@ function mapStateToProps(state) {
         filterBy: state.boardModule.filterBy
     }
 }
+
 const mapDispatchToProps = {
     loadBoard,
     updateBoard
-
 }
 
 export const BoardApp = connect(mapStateToProps, mapDispatchToProps)(_BoardApp)

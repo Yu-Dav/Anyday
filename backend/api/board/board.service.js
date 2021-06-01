@@ -3,11 +3,12 @@ const dbService = require('../../services/db.service')
 const logger = require('../../services/logger.service')
 const ObjectId = require('mongodb').ObjectId
 
-
 async function query(filterBy = {}) {
+    console.log('xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx')
     // const criteria = _buildCriteria(filterBy)
     try {
         const collection = await dbService.getCollection('board')
+        console.log('collection' ,collection)
         var boards = await collection.find().toArray()
         boards = boards.map(board => {
             board.createdAt = ObjectId(board._id).getTimestamp()

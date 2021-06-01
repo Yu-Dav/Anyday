@@ -9,12 +9,10 @@ export class TagAddNew extends Component {
     //tags is an array with objects
     onAddTag = (ev) => {
         ev.preventDefault()
-        ev.stopPropagation()
-        const value = ev.target.value
-        if (!value) return
+        // if (!value) return
         const newTag = {
             id: utilService.makeId(),
-            title: '#' + value,
+            title: '#' + this.state.txt,
             color: this.getColor()
         }
         this.props.addNewTag(newTag)
@@ -27,28 +25,21 @@ export class TagAddNew extends Component {
         return randomColor.value
     }
 
-    handleUpdate = (ev) => {
-        if (ev.key === 'Enter') {
-            this.onAddTag(ev)
-        }
-    }
-
-    handleChange = ({ target }) => {
-        const { name } = target
-        const { value } = target
+    handleChange = (ev) => {
+        // ev.stopPropagation()
+        const { name } = ev.target
+        const { value } = ev.target
         this.setState({ ...this.state, [name]: value })
     }
 
     render() {
-        console.log('boardcolors', this.props.board.colors)
         const { txt } = this.state
         return (
             <form className="tag-add flex" onSubmit={this.onAddTag}>
-                <input onClick={(ev) => ev.stopPropagation()} style={{ zIndex: '1' }} onKeyUp={this.handleUpdate}
+                <input onClick={(ev) => ev.stopPropagation()} style={{ zIndex: '1' }}
                     value={txt} name="txt" type="text" onChange={this.handleChange}
-                    className="tags-picker-input" placeholder="Add tags" autoComplete="off" spellCheck="false" dir="auto" ></input>
+                    className="tags-picker-input" placeholder="Add tags" autoComplete="off" spellCheck="false" ></input>
                 <button className="add">Add</button>
-
             </form>
         )
     }

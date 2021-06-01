@@ -1,4 +1,4 @@
 module.exports = {
-  dbURL: 'mongodb://localhost:27017',
+  dbURL: 'mongodb+srv://dafna:dafna123789@cluster0.pkr8i.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
   dbName: 'BOARD_DB',
 }
