@@ -97,3 +97,4 @@
 6/1/2021, 2:26:45 PM - INFO - Server is running on port: 3030 
 6/1/2021, 2:26:46 PM - ERROR - cannot find boards | ReferenceError: logger is not defined (sid: uuvDq3g3wi1R_Q8IuvUbzHqTydyn5BJ5)
 6/1/2021, 2:26:47 PM - ERROR - Failed to get boards | ReferenceError: logger is not defined (sid: uuvDq3g3wi1R_Q8IuvUbzHqTydyn5BJ5)
+6/1/2021, 6:08:07 PM - INFO - Server is running on port: 3030 

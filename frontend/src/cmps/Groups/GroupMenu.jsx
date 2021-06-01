@@ -1,102 +1,74 @@
-import React from 'react';
-// import Button from '@material-ui/core/Button';
-import ClickAwayListener from '@material-ui/core/ClickAwayListener';
-import Grow from '@material-ui/core/Grow';
-import Paper from '@material-ui/core/Paper';
-import Popper from '@material-ui/core/Popper';
-import MenuItem from '@material-ui/core/MenuItem';
-import MenuList from '@material-ui/core/MenuList';
-import { makeStyles } from '@material-ui/core/styles';
-import { Colors } from '../Colors';
+import React, { Component } from 'react'
+import { ClickAwayListener } from '@material-ui/core'
+import { Colors } from '../Colors'
 
-const useStyles = makeStyles((theme) => ({
-    root: {
-        display: 'flex',
-    },
-    paper: {
-        marginRight: theme.spacing(2),
-    },
-}));
+export class GroupMenu extends Component {
 
-export function GroupMenu({ group, board, updateBoard }) {
-
-    const newBoard = board
-    const groupId = group.id
-    const groupIdx = newBoard.groups.findIndex(group => group.id === groupId)
-
-    const onDeleteGroup = (ev) => {
-        newBoard.groups.splice(groupIdx, 1)
-        updateBoard(newBoard)
-        handleClose(ev)
+    state = {
+        isExpanded: false,
+        isColor: false
     }
 
-    const onChangeGroupColor = (ev) => {
+    //should arive from props
+    // const newBoard = this.props.board
+    // const groupId = this.props.group.id
+    // const groupIdx = newBoard.groups.findIndex(group => group.id === groupId)
+
+    onDeleteGroup = (ev) => {
+        const newBoard = this.props.board
+        const groupId = this.props.group.id
+        const groupIdx = newBoard.groups.findIndex(group => group.id === groupId)
+
+        newBoard.groups.splice(groupIdx, 1)
+        this.props.updateBoard(newBoard)
+        // handleClose(ev)
+    }
+
+    onChangeGroupColor = (ev) => {
+        console.log('okkkk')
+        const newBoard = this.props.board
+        const groupId = this.props.group.id
+        const groupIdx = newBoard.groups.findIndex(group => group.id === groupId)
+
         const { color } = ev.target.dataset
         newBoard.groups[groupIdx].style.bgColor = color
-        updateBoard(newBoard)
-        handleClose(ev)
+        this.props.updateBoard(newBoard)
+        // handleClose(ev)
     }
 
-    const classes = useStyles();
-    const [open, setOpen] = React.useState(false);
-    const anchorRef = React.useRef(null);
 
-    const handleToggle = (ev) => {
-        // ev.stopPropagation()
-        // ev.preventDefault()
-        setOpen((prevOpen) => !prevOpen);
-    };
-
-    const handleClose = (event) => {
-        if (anchorRef.current && anchorRef.current.contains(event.target)) {
-            return;
-        }
-
-        setOpen(false);
-    };
-
-    function handleListKeyDown(event) {
-        if (event.key === 'Tab') {
-            event.preventDefault();
-            setOpen(false);
-        }
+    onSelectChange = () => {
+        console.log('okkkk')
+        this.setState({ isColor: !this.state.isColor }, console.log(this.state))
+    }
+    onOpenSelector = () => {
+        this.setState({ ...this.state, isExpanded: !this.state.isExpanded })
     }
 
-    // return focus to the button when we transitioned from !open -> open
-    const prevOpen = React.useRef(open);
-    React.useEffect(() => {
-        if (prevOpen.current === true && open === false) {
-            anchorRef.current.focus();
-        }
+    handleClickAway = () => {
+        this.setState({ ...this.state, isExpanded: false })
+    }
 
-        prevOpen.current = open;
-    }, [open]);
+    render() {
+        const { isExpanded, isColor } = this.state
 
+        return (
+            // <ClickAwayListener onClickAway={this.handleClickAway}>
+            <div className="group-modal-choose" onClick={this.onOpenSelector}>^
+                <div>
+                    {isExpanded && <div className="fade-in modal-container">
+                        <div onClick={this.onDeleteGroup}>Delete group</div>
+                        <div onClick={this.onSelectChange}>Choose color</div>
 
-    return (
-        <div ref={anchorRef}
-            aria-controls={open ? 'menu-list-grow' : undefined}
-            aria-haspopup="true"
-            onClick={handleToggle}>
-            ^
-            <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal style={{ zIndex: '1' }}>
-                {({ TransitionProps, placement }) => (
-                    <Grow
-                        {...TransitionProps}
-                        style={{ transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}>
-                        <Paper>
-                            <ClickAwayListener onClickAway={handleClose}>
-                                <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
-                                    <MenuItem onClick={onDeleteGroup}>Delete group</MenuItem>
-                                    {/* <MenuItem onClick={onChangeGroupColor}>Change group color</MenuItem> */}
-                                    <MenuItem><Colors onChangeGroupColor={onChangeGroupColor} board={board} /></MenuItem>
-                                    {/* <MenuItem>lalalalalallalalalalal</MenuItem> */}
-                                </MenuList>
-                            </ClickAwayListener>
-                        </Paper>
-                    </Grow>
-                )}
-            </Popper>
-        </div>
-    );
+                    </div>
+                    }
+                    {/* {isColor
+                        && <Colors onChangeGroupColor={this.onChangeGroupColor} board={this.props.board}></Colors>} */}
+                    {isColor && <div className="TEST">YOYOYOYO</div>}
+                </div>
+
+            </div>
+            // </ClickAwayListener>
+        )
+    }
 }
