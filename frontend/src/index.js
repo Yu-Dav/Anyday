@@ -7,9 +7,15 @@ import reportWebVitals from './reportWebVitals';
 import { App } from './App.jsx';
 
 ReactDOM.render(
+<<<<<<< HEAD
     <Provider store={store}>
         <App />
     </Provider>,
+=======
+        <Provider store={store}>
+            <App />
+        </Provider>,
+>>>>>>> 06338976f2dd4770275b8bf904ed3377dcd715e8
     document.getElementById('root')
 );
 

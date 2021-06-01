@@ -17,6 +17,7 @@ export class Updates extends Component {
 
     render() {
         const task = this.props
+        if (!task) return <div>loading</div>
         return (
             <div className="updates">
                 <form onSubmit={this.onAddUpdate}>
@@ -24,7 +25,7 @@ export class Updates extends Component {
                     <button>Update</button>
                 </form>
                 <div className="updates-list">
-                    {task.comments.map(comment => <UpdatePreview comment={comment} onUpdateComment={this.onUpdateComment} onRemoveComment={this.onRemoveComment}/>)}
+                    {/* {task.comments.map(comment => <UpdatePreview comment={comment} onUpdateComment={this.onUpdateComment} onRemoveComment={this.onRemoveComment}/>)} */}
                 </div>
             </div>
         )

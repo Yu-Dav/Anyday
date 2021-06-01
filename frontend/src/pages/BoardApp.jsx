@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import { Route } from 'react-router-dom'
 import { utilService } from '../services/utilService'
 import { DragDropContext, Droppable } from 'react-beautiful-dnd';
 
@@ -33,6 +33,7 @@ class _BoardApp extends Component {
         newBoard.groups.unshift(newGroup)
         this.props.updateBoard(newBoard)
     }
+    
     onDragEnd = result => {
         const { destination, source, draggableId, type } = result;
         if (!destination) return;
@@ -91,8 +92,11 @@ class _BoardApp extends Component {
                             )}
                         </Droppable>
                     </DragDropContext>
-                    {/* <ActivityModal /> */}
-                </div >
+                    {/* <Route component={ActivityModal} path="/board/:boardId/tasks/:taskId" /> */}
+                    {/* <Route path={`${this.props.match.path}/task/:taskId`} render={(props) => {
+                        return <ActivityModal board={currBoard} {...props} />
+                    }} /> */}
+                </div>
             </div>
         )
     }
@@ -105,10 +109,10 @@ function mapStateToProps(state) {
         filterBy: state.boardModule.filterBy
     }
 }
+
 const mapDispatchToProps = {
     loadBoard,
     updateBoard
-
 }
 
 export const BoardApp = connect(mapStateToProps, mapDispatchToProps)(_BoardApp)
