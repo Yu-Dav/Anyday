@@ -10,6 +10,7 @@
 @import 'basics/layout';
 @import 'basics/base';
 @import 'basics/buttons';
+@import 'basics/animation';
 
 // Components
 
@@ -18,6 +19,8 @@
 @import 'cmps/boardHeader';
 @import 'cmps/BoardCtrlPanel';
 @import 'cmps/boardSearch';
+@import 'cmps/boardFilter';
+@import 'cmps/boardFilterList';
 @import 'cmps/groupPreview';
 @import 'cmps/groupHeader';
 @import 'cmps/taskPreview';

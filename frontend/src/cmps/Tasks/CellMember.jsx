@@ -18,40 +18,28 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export function CellMember({ task, board, updateBoard }) {
-
     const taskMembers = task.members
     const boardMembers = board.members
-
     const classes = useStyles();
     const [open, setOpen] = React.useState(false);
     const anchorRef = React.useRef(null);
-
     const handleToggle = () => {
         setOpen((prevOpen) => !prevOpen);
     };
-
     const handleClose = (event) => {
-        if (anchorRef.current && anchorRef.current.contains(event.target)) {
-            return;
-        }
-
+        if (anchorRef.current && anchorRef.current.contains(event.target)) return
         setOpen(false);
     };
-
     function handleListKeyDown(event) {
         if (event.key === 'Tab') {
             event.preventDefault();
             setOpen(false);
         }
     }
-
     // return focus to the button when we transitioned from !open -> open
     const prevOpen = React.useRef(open);
     React.useEffect(() => {
-        if (prevOpen.current === true && open === false) {
-            anchorRef.current.focus();
-        }
-
+        if (prevOpen.current === true && open === false) anchorRef.current.focus()
         prevOpen.current = open;
     }, [open]);
 
@@ -68,7 +56,7 @@ export function CellMember({ task, board, updateBoard }) {
     const onRemoveMember = (ev) => {
         const memberId = ev.target.dataset.id
         // console.log('member id',memberId);
-        const memberIdx = taskMembers.findIndex(member=> member._id === memberId)
+        const memberIdx = taskMembers.findIndex(member => member._id === memberId)
         taskMembers.splice(memberIdx, 1)
         const newBoard = { ...board }
         updateBoard(newBoard)

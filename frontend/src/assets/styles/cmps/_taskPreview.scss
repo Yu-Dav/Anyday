@@ -1,3 +1,11 @@
+
+// .fade-in {
+//     animation: fade-in 0.5s ease-in-out both;
+// }
+
+
+
+
 .task-row {
     width: 100%;
     height: 36px;
@@ -25,7 +33,14 @@
     }
     .label {
         color: #ffffff;
+        .modal-container{
+            // animation: fade-in 0.3s ease-in-out both;
+            top: -78px;
+        }
         .floating-label-select {
+            animation: fade-in 0.3s ease-in-out both;
+            // animation: fade-out 0.5s ease-in-out both;
+            
             z-index: 1;
             position: absolute;
             color: #ffffff;
@@ -40,6 +55,7 @@
             text-align: center; //helper?
             right: -11px;
         }
+        
     }
     .cell-tag-container{
         width: 142px;
@@ -56,6 +72,7 @@
         height: 100%;
         width: 8px;
     }
+
     .creation-log {
         color: $fontDarkGrey;
     }
@@ -116,9 +133,7 @@
     width: 200px;
 }
 
-.modal-container{
-    top: -78px;
-}
+
 
 .triangle-with-shadow {
    width: 100px;
@@ -143,3 +158,4 @@
 .triangle-with-shadow:hover, .triangle-with-shadow:hover:after {
    box-shadow: none;
 }
+

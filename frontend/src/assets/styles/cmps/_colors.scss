@@ -1,6 +1,11 @@
 .color-container {
-    // width: 140px;
+    animation: fade-in 0.3s ease-in-out both;
+    width: 140px;
+    z-index: 1;
+    background: #fff;
     position: fixed;
+    box-shadow: 0 8px 16px 0px #00000052;
+    border-radius: 4px;
 
     .color {
         width: 20px;
