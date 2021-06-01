@@ -9,7 +9,18 @@
     .fas {
         font-family: fa-solid;
     }
-    .fa-arrows-alt::after {
-        content: "\f0b2";
+    .group-handle::after {
+        content: '\f58e';
+    }
+    &:hover {
+        .group-handle {
+            opacity: .5;
+        }
+    }
+    .group-handle {
+        opacity: 0;
+        &:hover {
+            opacity: 1;
+        }
     }
 }

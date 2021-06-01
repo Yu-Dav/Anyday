@@ -31,7 +31,7 @@ export function GroupPreview({ group, board, updateBoard, index }) {
                     ref={dragProvided.innerRef}
                     >
                     <GroupMenu group={group} board={board} updateBoard={updateBoard} />
-                    <i className="fas fa-arrows-alt" {...dragProvided.dragHandleProps}></i>
+                    <i className="fas group-handle" {...dragProvided.dragHandleProps}></i>
                     <div className="group-preview"
                     // ref={dropProvided.innerRef}
                     // {...dropProvided.droppableProps}
