@@ -62,10 +62,12 @@ export function CellMember({ task, board, updateBoard }) {
         const newBoard = { ...board }
         updateBoard(newBoard)
         handleClose(ev)
+        console.log(taskMembers);
     }
 
     const onRemoveMember = (ev) => {
         const memberId = ev.target.dataset.id
+        // console.log('member id',memberId);
         const memberIdx = taskMembers.findIndex(member=> member._id === memberId)
         taskMembers.splice(memberIdx, 1)
         const newBoard = { ...board }
@@ -77,33 +79,28 @@ export function CellMember({ task, board, updateBoard }) {
         return boardMembers.find(member => member._id === id)
     }
 
-    const otherMembers = boardMembers.filter((member) => {
-        // console.log('board', member);
-        return taskMembers.filter(taskMember => {
-            // console.log('task',taskMember)
-        //    console.log(taskMember._id !== member._id)
-               return taskMember._id !== member._id})
+    // const otherMembers = boardMembers.filter((member) => {
+    //     // console.log('board', member);
+    //     return taskMembers.filter(taskMember => {
+    //         // console.log('task',taskMember)
+    //     //    console.log(taskMember._id !== member._id)
+    //            return taskMember._id !== member._id})
         
-    })
-// console.log('task members', taskMembers);  
-// console.log('board memebers', boardMembers);  
-// console.log('other', otherMembers);
-    // const otherMembers = 
+    // })
 
-    // var diffArray = arr2.filter(x => {
-    //     let elementsOfArray2PresentInArray1 = arr1.filter(y => {
-    //       return y.id === x
-    //     });
-      
-    //     if (elementsOfArray2PresentInArray1.length > 0) {
-    //       return false
-    //     } else {
-    //       return true;
-    //     }
-    //     //`return !length;` will  return false if length > 0
-    //   });
 
-// console.log('other', otherMembers);
+    function getOtherMembers(){
+        const otherMembers = [...boardMembers]
+        otherMembers.forEach((otherMember, idx)=> {
+            taskMembers.forEach((taskMember) => {
+                if(otherMember._id === taskMember._id){
+                    otherMembers.splice(idx, 1)
+                }
+            })
+        })
+        console.log('other members', otherMembers);
+        return otherMembers
+    }
 
     return (
         <div ref={anchorRef}
@@ -124,10 +121,10 @@ export function CellMember({ task, board, updateBoard }) {
                             <ClickAwayListener onClickAway={handleClose}>
                                 <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
                                     {taskMembers.map(member => {
-                                        return <MenuItem key={member._id} data-id={member._id}>{member.fullname}<span onClick={onRemoveMember}> x</span></MenuItem>
+                                        return <MenuItem key={member._id} >{member.fullname}<span data-id={member._id} onClick={onRemoveMember}> x</span></MenuItem>
                                     })}
                                     <hr />
-                                    {boardMembers.map(member => {
+                                    {getOtherMembers().map(member => {
                                         return <MenuItem key={member._id} data-id={member._id} onClick={onAddMember}>{member.fullname}</MenuItem>
                                     }
                                     )}

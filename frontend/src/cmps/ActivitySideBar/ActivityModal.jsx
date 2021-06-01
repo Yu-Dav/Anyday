@@ -14,13 +14,14 @@ class _ActivityModal extends Component {
     }
 
     componentDidMount() {
-        console.log('mounted');
-        this.loadTask()
-        console.log('mounted!');
+        // console.log('mounted');
+        // this.loadTask()
+        // console.log('mounted!');
     }
 
     loadTask = async () =>{
         const taskId = this.props.match.params.taskId;
+        if(!taskId) return
         const boardId = this.props.match.params.boardId;
         console.log(taskId, boardId);
         const board = await this.props.loadBoard(boardId)
@@ -75,6 +76,7 @@ class _ActivityModal extends Component {
 
     render() {
         const { content, task } = this.state
+        
         return (
             <div className="activity-modal">
                 <div className="flex">

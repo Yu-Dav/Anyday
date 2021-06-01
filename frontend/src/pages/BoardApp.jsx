@@ -94,10 +94,9 @@ class _BoardApp extends Component {
                             )}
                         </Droppable>
                     </DragDropContext>
-                    {/* <Route component={ActivityModal} path="/board/:boardId/tasks/:taskId" /> */}
-                    {/* <Route path={`${this.props.match.path}/task/:taskId`} render={(props) => {
+                    <Route path={`${this.props.match.path}/:taskId`} render={(props) => {
                         return <ActivityModal board={currBoard} {...props} />
-                    }} /> */}
+                    }} />
                 </div>
             </div>
         )

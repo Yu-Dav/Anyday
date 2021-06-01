@@ -38,7 +38,7 @@ export class CellTitle extends Component {
                 <i className="fas fa-trash remove-task" onClick={this.onRemoveTask}></i>
                 {/* <div className="remove-task" onClick={this.onRemoveTask}>X</div> */}
                 <EditableCmp className="title" name="title" value={title} updateFunc={this.onUpdateTaskTitle} />
-                <Link to={`/board/${board._id}/task/${id}`}>Updates</Link>
+                <Link to={`/board/${board._id}/${id}`}>Updates</Link>
             </div>
 
 
