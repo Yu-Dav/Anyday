@@ -2,6 +2,18 @@
     margin-bottom: 30px;
     background-color: #ffffffe6;
 
+    .group-modal {
+        animation: fade-in 0.5s ease-in-out both;
+        z-index: 1;
+        font-size: 14px;
+        line-height: 24px;
+        padding: 5px 20px;
+        background-color: #fff;
+        box-shadow: 0 8px 16px 0px #00000052;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
     .group-preview {
         width: 100%;
     }
@@ -12,7 +24,7 @@
         font-family: fa-solid;
     }
     .group-handle::after {
-        content: '\f58e';
+        content: "\f58e";
     }
     &:hover {
         .group-handle {

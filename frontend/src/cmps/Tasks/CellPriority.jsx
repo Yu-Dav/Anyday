@@ -13,7 +13,7 @@ export class CellPriority extends Component {
         this.props.task.priority = selectedPriority
         const newBoard = { ...this.props.board }
         // newBoard.priority = selectedPriority
-        this.props.updateBoard(newBoard) //updating the entire board
+        this.props.updateBoard(newBoard) 
     }
 
     getPriorityById = (labelId) => {
@@ -38,17 +38,13 @@ export class CellPriority extends Component {
             <ClickAwayListener onClickAway={this.handleClickAway}>
                 <div className="cell label" style={{ backgroundColor: priority.color }} onClick={this.onOpenSelector}>
                     {priority.title}
-                    {/* {({ TransitionProps, placement }) => (
-                        <Grow
-                            {...TransitionProps}
-                            style={{ transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}
-                        > */}
                     {isExpanded && <div>
                         <div className=" fade-in modal-container relative">
                             <div className=" triangle-with-shadow relative"></div>
                             <div className=" floating-label-select">
                                 {priorityLabels.map((label) => {
-                                    return <div className="label-option" onClick={this.handleUpdate} key={label.id} data-label={label.id} style={{ backgroundColor: label.color }}>
+                                    return <div className="label-option" onClick={this.handleUpdate} key={label.id} 
+                                    data-label={label.id} style={{ backgroundColor: label.color }}>
                                         {label.title}
                                     </div>
                                 })}
@@ -56,8 +52,6 @@ export class CellPriority extends Component {
                         </div>
                     </div>
                     }
-                    {/* </Grow>
-                    )} */}
                 </div>
 
             </ClickAwayListener>
