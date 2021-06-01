@@ -1,9 +1,26 @@
-.group-container{
-margin-bottom: 30px;
+.group-container {
+    margin-bottom: 30px;
     .group-preview {
         width: 100%;
     }
-    button{
+    button {
         height: fit-content;
+    }
+    .fas {
+        font-family: fa-solid;
+    }
+    .group-handle::after {
+        content: '\f58e';
+    }
+    &:hover {
+        .group-handle {
+            opacity: .5;
+        }
+    }
+    .group-handle {
+        opacity: 0;
+        &:hover {
+            opacity: 1;
+        }
     }
 }

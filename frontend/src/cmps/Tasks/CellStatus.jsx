@@ -35,14 +35,18 @@ export class CellStatus extends Component {
         return (
             <div className="cell label" style={{ backgroundColor: status.color }} onClick={this.onOpenSelector}>
                 {status.title}
-                {isExpanded &&
-                <div className= "floating-label-select">
-                    {statusLabels.map((label)=>{
-                        return <div className="label-option" onClick={this.handleUpdate} key={label.id} data-label={label.id} style={{ backgroundColor: label.color }}>
-                            {label.title}
-                        </div>
-                    })}
+                {isExpanded && <div>
+                    <div className="modal-container relative">
+                        <div  className="triangle-with-shadow relative"></div>
+                        <div className="floating-label-select">
+                            {statusLabels.map((label) => {
+                                return <div className="label-option" onClick={this.handleUpdate} key={label.id} data-label={label.id} style={{ backgroundColor: label.color }}>
+                                    {label.title}
+                                </div>
+                            })}
 
+                        </div>
+                    </div>
                 </div>
                 }
             </div>

@@ -72,9 +72,9 @@ export class TaskAdd extends Component {
         const { txt } = this.state
         return (
             <div className="task-add flex">
-                {/* <EditableCmp name="title" value="add task" updateFunc={this.onAddTask} /> */}
                 <div className="group-color" style={{ backgroundColor: this.props.group.style.bgColor }}></div>
-                <input autoComplete="off" className="full" name="txt" type="text" placeholder="+ Add" onBlur={this.handleUpdate} onKeyUp={this.handleUpdate} value={txt} onChange={this.handleChange} />
+                <input autoComplete="off" className="full" name="txt" type="text" placeholder="+ New Task"
+                    onBlur={this.handleUpdate} onKeyUp={this.handleUpdate} value={txt} onChange={this.handleChange} />
                 <button className="add" onClick={this.handleUpdate}>Add</button>
             </div>
         )

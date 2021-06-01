@@ -9,8 +9,8 @@ export class CellPriority extends Component {
 
     handleUpdate = ({ target }) => {
         const selectedPriority = this.getPriorityById(target.dataset.label)
-        this.props.task.priority= selectedPriority
-        const newBoard = {...this.props.board}  
+        this.props.task.priority = selectedPriority
+        const newBoard = { ...this.props.board }
         // newBoard.priority = selectedPriority
         this.props.updateBoard(newBoard) //updating the entire board
     }
@@ -29,18 +29,24 @@ export class CellPriority extends Component {
         const { priorityLabels } = this.props.board
         const { isExpanded } = this.state
         return (
-            <div className="cell label" style={{ backgroundColor: priority.color }}  onClick={this.onOpenSelector}>
+            <div className="cell label" style={{ backgroundColor: priority.color }} onClick={this.onOpenSelector}>
                 {priority.title}
-                {isExpanded &&
-                    <div className="floating-label-select">
-                        {priorityLabels.map((label) => {
-                            return <div className="label-option" onClick={this.handleUpdate} key={label.id} data-label={label.id} style={{ backgroundColor: label.color }}>
-                                {label.title}
-                            </div>
-                        })}
+
+                {isExpanded && <div>
+                    <div className="modal-container relative">
+                        <div className="triangle-with-shadow relative"></div>
+                        <div className="floating-label-select">
+                            {priorityLabels.map((label) => {
+                                return <div className="label-option" onClick={this.handleUpdate} key={label.id} data-label={label.id} style={{ backgroundColor: label.color }}>
+                                    {label.title}
+                                </div>
+                            })}
+                        </div>
                     </div>
+                </div>
                     // TODO- support adding a customized label (change names to labels?)
                 }
+
             </div>
         )
     }

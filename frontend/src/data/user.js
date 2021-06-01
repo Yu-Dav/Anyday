@@ -9,9 +9,9 @@ export const user = [
             {
                 id: 'm101',
                 boardId: 'm101',
-                taskId: 't101',
-            },
-        ],
+                taskId: 't101'
+            }
+        ]
     },
     {
         _id: 'u102',
@@ -23,9 +23,9 @@ export const user = [
             {
                 id: 'm101',
                 boardId: 'm101',
-                taskId: 't101',
-            },
-        ],
+                taskId: 't101'
+            }
+        ]
     },
     {
         _id: 'u103',
@@ -37,9 +37,9 @@ export const user = [
             {
                 id: 'm101',
                 boardId: 'm101',
-                taskId: 't101',
-            },
-        ],
+                taskId: 't101'
+            }
+        ]
     },
     {
         _id: 'u104',
@@ -51,8 +51,8 @@ export const user = [
             {
                 id: 'm101',
                 boardId: 'm101',
-                taskId: 't101',
-            },
-        ],
-    },
+                taskId: 't101'
+            }
+        ]
+    }
 ];

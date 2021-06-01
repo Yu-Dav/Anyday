@@ -12,13 +12,12 @@ import { Draggable } from 'react-beautiful-dnd';
 export function TaskPreview({ task, group, board, updateBoard, index }) {
     return (
         <React.Fragment>
-            <Draggable draggableId={task.id} index={index}>
+            <Draggable draggableId={task.id} index={index} type="task">
                 {provided => (
                     <div className="task-row flex"
                         {...provided.draggableProps}
                         {...provided.dragHandleProps}
-                        ref={provided.innerRef}
-                    >
+                        ref={provided.innerRef}>
                         <div className="group-color" style={{ backgroundColor: group.style.bgColor }}></div>
                         <CellTitle task={task} group={group} board={board} updateBoard={updateBoard} />
                         <CellMember task={task} board={board} updateBoard={updateBoard} />
@@ -29,9 +28,7 @@ export function TaskPreview({ task, group, board, updateBoard, index }) {
                         <CellDate task={task} board={board} updateBoard={updateBoard} />
                     </div>
                 )}
-
             </Draggable>
-
         </React.Fragment>
     )
 }

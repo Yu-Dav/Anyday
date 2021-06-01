@@ -40,26 +40,13 @@
             flex-wrap: wrap;
             text-align: center; //helper?
         }
-
-        //todo- a triangle (now a square)
-        // .floating-status-select::before {
-        //     background-color: #fff;
-        //     content: " ";
-        //     position: absolute;
-        //     border: solid transparent;
-        //     bottom: 100%;
-        //     border-color: rgba(225, 225, 225, 0);
-        //     pointer-events: none;
-        //     height: 0;
-        //     width: 0;
-        // }
     }
+
     .tag-container {
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
         margin-right: 5px;
-     
     }
 
     .group-color {
@@ -67,13 +54,17 @@
         width: 8px;
     }
     .creation-log {
-        color: $fontDarkGrey
+        color: $fontDarkGrey;
     }
 }
 
 .title {
     flex: 1;
+    min-width: 380px;
     text-align: start;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 
     .remove-task {
         opacity: 0;
@@ -91,12 +82,12 @@
 }
 
 .asignee {
-    width: 10%;
+    width: 142px;
     text-align: center;
 }
 
 .tags {
-    width: 10%;
+    width: 142px;
     // .tag-options {
     //     width: 140px;
     //     position: absolute;
@@ -107,23 +98,57 @@
     // }
 }
 
-.fas.close::after{
-    content:'\f057'
+.fas.close::after {
+    content: "\f057";
 }
 
-.modal-li{
-    display: flex;
-    justify-content: space-around;
+.fas.close {
+    opacity: 0;
+    &:hover {
+        opacity: 0.5;
+    }
 }
 
 .label {
-    width: 8%;
+    width: 113px;
 }
 
 .creation-log {
-    width: 10%;
+    width: 142px;
 }
 
 .timeline {
-    width: 15%;
+    width: 200px;
+}
+
+
+.modal-container{
+    // position: relative;
+    top: -78px;
+}
+
+.triangle-with-shadow {
+   width: 100px;
+   height: 100px;
+//    position: relative;
+   overflow: hidden;
+   box-shadow: 0 16px 10px -17px #00000052;
+}
+.triangle-with-shadow:after {
+    z-index: 2;
+   content: "";
+   transform: rotate(45deg);
+   box-shadow: -1px -1px 10px -2px #00000052;
+   margin-left: 19px;
+   content: "";
+   position: absolute;
+   width: 40px;
+   height: 40px;
+   background: #fff;
+   top: 89px;
+   left: 25px;
+}
+
+.triangle-with-shadow:hover, .triangle-with-shadow:hover:after {
+   box-shadow: none;
 }

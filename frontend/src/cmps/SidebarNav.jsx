@@ -33,10 +33,8 @@ class _SidebarNav extends Component {
             <section className={isExpanded ? "sidebar-nav is-expanded" : "sidebar-nav"}>
                 <i className={isExpanded ? "fas arrow arrow-left" : "fas arrow arrow-right"}
                     onClick={this.onOpenNavbar}></i>
-
                 {isExpanded &&
-                    <div>
-
+                    <div className="sidenav-open">
                         <h1>My Workspace</h1>
                         <div className="sidebar-ops">
                             <i className="fas fa-plus"><span>Add</span></i>
@@ -47,14 +45,12 @@ class _SidebarNav extends Component {
                                     onChange={this.handleChange} value={searchBy} />
                             </div>
                         </div>
-
                         {boards.map(board =>
                             <h2 key={board._id} onClick={() => this.onSelectBoard(board._id)}>
                                 {board.title}
                             </h2>)}
                     </div>
                 }
-
             </section>
         )
     }

@@ -1,5 +1,6 @@
 import React from 'react'
 import { GroupPreview } from './GroupPreview'
+import { Droppable } from 'react-beautiful-dnd';
 
 export function GroupList({ groups, board, updateBoard }) {
 
@@ -7,9 +8,14 @@ export function GroupList({ groups, board, updateBoard }) {
     if (!groups || !groups.length) return <p>Loading...</p>
     return (
 
+        // Droppable here - as all groups are draggable. id doesn't matter much as it won't interact with others. type="group"
 
-        <div className="groups-container">
-            {groups.map(group => <GroupPreview board={board} key={group.id} group={group} updateBoard={updateBoard} />)}
+        < div className="groups-container">
+
+            {groups.map((group, index) => <GroupPreview board={board} key={group.id} group={group}
+                updateBoard={updateBoard} index={index} />)}
+
+
         </div>
 
 
