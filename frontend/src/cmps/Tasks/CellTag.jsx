@@ -9,10 +9,8 @@ import MenuList from '@material-ui/core/MenuList';
 import { TagAddNew } from './TagAddNew'
 
 export function CellTag({ task, board, updateBoard }) {
-    // console.log('task', task.tags)
     const tags = task.tags
     const availableTags = board.tags
-    // console.log('available' , availableTags)
     //   const classes = useStyles();
     const [open, setOpen] = React.useState(false);
     const anchorRef = React.useRef(null);
@@ -23,6 +21,7 @@ export function CellTag({ task, board, updateBoard }) {
 
     const handleClose = (event) => {
         if (!event) return
+        event.stopPropagation()
         if (anchorRef.current && anchorRef.current.contains(event.target)) {
             return;
         }
@@ -43,7 +42,7 @@ export function CellTag({ task, board, updateBoard }) {
         const newBoard = { ...board }
         updateBoard(newBoard)
         // TODO- remove comment below when  modal works
-        handleClose(event)
+        // handleClose(event)
     }
 
     const addNewTag = (tag) => {
@@ -55,30 +54,22 @@ export function CellTag({ task, board, updateBoard }) {
         return availableTags.find(tag => tag.id === tagId)
     }
 
-    const onRemoveTag = (ev) => {
-        // let tags = task.tags
+    const onRemoveTag = async (ev) => {
         ev.stopPropagation()
         // if(!tags) return
         // const tagToRemove = getTagById(ev.target.dataset.tag)
         const tagId = ev.target.dataset.tag
-        // console.log('tag from icon', tagToRemove)
         const tagIdx = availableTags.findIndex(tag => tag.id === tagId)
         console.log('tagIdx', tagIdx)
         availableTags.splice(tagIdx, 1)
         // const inTaskIdx = tags.findIndex(tag => tag.id === tagId)
         // tags.splice(inTaskIdx, 1)
         const newBoard = { ...board }
-        updateBoard(newBoard)
+        await updateBoard(newBoard)
 
         const tags = task.tags
     }
 
-    // function handleListKeyDown(event) {
-    //     if (event.key === 'Tab') {
-    //         event.preventDefault();
-    //         setOpen(false);
-    //     }
-    // }
 
     // return focus to the button when we transitioned from !open -> open
     const prevOpen = React.useRef(open);
@@ -96,8 +87,8 @@ export function CellTag({ task, board, updateBoard }) {
             aria-haspopup="true"
             onClick={handleToggle} className="cell tags">
 
-            <div className="flex justify-center">
-
+            <div className="cell-tag-container flex justify-center">
+ 
                 {tags.map((tag) => {
                     // remove tag add from here its only for dev
                     return <span className="tag-container" style={{ color: tag.color }} >{tag.title}</span>
@@ -110,11 +101,9 @@ export function CellTag({ task, board, updateBoard }) {
                         style={{ transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}
                     >
                         <Paper>
-                            <TagAddNew addNewTag={addNewTag} board={board}/>
+                            <TagAddNew addNewTag={addNewTag} board={board} />
                             <ClickAwayListener onClickAway={handleClose}>
                                 <MenuList autoFocusItem={open} id="menu-list-grow" >
-                                    {/* onKeyDown={handleListKeyDown} */}
-
                                     {availableTags.map((tag) => {
                                         return <MenuItem className="modal-li" style={{
                                             color: tag.color, display: "flex", fontSize: "13px",

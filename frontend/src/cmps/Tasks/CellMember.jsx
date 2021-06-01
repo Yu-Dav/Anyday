@@ -111,7 +111,7 @@ export function CellMember({ task, board, updateBoard }) {
                 return <span key={member._id}>{member.username.charAt(0)} </span>
             })}
             </div>
-            <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal style={{zIndex: '1'}}>
+            <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal style={{ zIndex: '1' }}>
                 {({ TransitionProps, placement }) => (
                     <Grow
                         {...TransitionProps}

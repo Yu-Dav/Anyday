@@ -15,14 +15,12 @@ import { ActivityModal } from '../cmps/ActivitySideBar/ActivityModal';
 // import { MenuListComposition } from '../cmps/MenuCmp'
 // import { ChipCmp } from '../cmps/ChipCmp';
 
-
 class _BoardApp extends Component {
 
     componentDidMount() {
-        const boardId = 'b101'  //later from params
+        const boardId = 'b101'
         this.props.loadBoard(boardId)
     }
-
     addNewGroup = () => {
         const newBoard = { ...this.props.currBoard }
         const newGroup = {
@@ -30,10 +28,12 @@ class _BoardApp extends Component {
             style: { bgColor: '#26de81' },
             title: 'New Group',
             tasks: [],
+            // add all the rest needed in a group 
         }
         newBoard.groups.unshift(newGroup)
         this.props.updateBoard(newBoard)
     }
+    
     onDragEnd = result => {
         const { destination, source, draggableId, type } = result;
         if (!destination) return;
@@ -63,12 +63,10 @@ class _BoardApp extends Component {
         const copyGroup = { ...this.props.currBoard };
         this.props.updateBoard(copyGroup);
     }
-
     onSetFilter = (filterBy) => {
-        console.log('filterBy' , filterBy)
+        console.log('filterBy', filterBy)
         // this.props.loadBoard(filterBy)
     }
-
     render() {
         const { currBoard } = this.props
         return (
@@ -110,10 +108,10 @@ function mapStateToProps(state) {
         filterBy: state.boardModule.filterBy
     }
 }
+
 const mapDispatchToProps = {
     loadBoard,
     updateBoard
-
 }
 
 export const BoardApp = connect(mapStateToProps, mapDispatchToProps)(_BoardApp)

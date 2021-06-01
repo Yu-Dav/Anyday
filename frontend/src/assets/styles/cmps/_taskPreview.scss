@@ -33,13 +33,16 @@
             background-color: #fff;
             box-shadow: 0 8px 16px 0px #00000052;
             border-radius: 4px;
-            // padding: 16px 8px 0 2px; orginal -has another div
-            padding: 16px 8px;
+            padding: 16px 11px;
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
             text-align: center; //helper?
+            right: -11px;
         }
+    }
+    .cell-tag-container{
+        width: 142px;
     }
 
     .tag-container {
@@ -88,14 +91,6 @@
 
 .tags {
     width: 142px;
-    // .tag-options {
-    //     width: 140px;
-    //     position: absolute;
-    //     z-index: 1;
-    //     border-radius: 8px 8px 0 0;
-    //     box-shadow: 0 8px 16px 0 #0000001a ;
-    //     background-color: #fff;
-    // }
 }
 
 .fas.close::after {
@@ -121,16 +116,13 @@
     width: 200px;
 }
 
-
 .modal-container{
-    // position: relative;
     top: -78px;
 }
 
 .triangle-with-shadow {
    width: 100px;
    height: 100px;
-//    position: relative;
    overflow: hidden;
    box-shadow: 0 16px 10px -17px #00000052;
 }
@@ -139,14 +131,13 @@
    content: "";
    transform: rotate(45deg);
    box-shadow: -1px -1px 10px -2px #00000052;
-   margin-left: 19px;
    content: "";
    position: absolute;
-   width: 40px;
-   height: 40px;
+   width: 20px;
+   height: 20px;
    background: #fff;
-   top: 89px;
-   left: 25px;
+   top: 92px;
+   left: 49px;
 }
 
 .triangle-with-shadow:hover, .triangle-with-shadow:hover:after {

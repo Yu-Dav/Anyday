@@ -32,10 +32,7 @@ export function GroupPreview({ group, board, updateBoard, index }) {
                     >
                     <GroupMenu group={group} board={board} updateBoard={updateBoard} />
                     <i className="fas group-handle" {...dragProvided.dragHandleProps}></i>
-                    <div className="group-preview"
-                    // ref={dropProvided.innerRef}
-                    // {...dropProvided.droppableProps}
-                    >
+                    <div className="group-preview">
                         <GroupHeader group={group} board={board} updateBoard={updateBoard} />
                         <Droppable droppableId={group.id} type="task">
                             {provided => (
