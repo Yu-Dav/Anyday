@@ -1,11 +1,15 @@
 .board-ops {
+    button {
+        font-family: inherit;
+    }
     margin: 15px 0 15px 0;
     & > *:not(:last-child) {
         margin-inline-end: 10px;
     }
     .btn-add-group,
     .btn-filter,
-    .btn-sort {
+    .btn-sort,
+    .btn-search {
         height: 32px;
         font-size: rem(14px);
         padding: 4px 8px;
@@ -23,7 +27,8 @@
         }
     }
     .btn-filter,
-    .btn-sort {
+    .btn-sort,
+    .btn-search {
         background-color: transparent;
         transition: 0.3s;
         &:hover {
@@ -36,5 +41,11 @@
     svg {
         width: 16px;
         height: 16px;
+    }
+    .fa-board-search {
+        font-family: fa-solid;
+    }
+    .fa-board-search::before {
+        content: '\f002';
     }
 }

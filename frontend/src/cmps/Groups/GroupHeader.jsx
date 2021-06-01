@@ -22,7 +22,6 @@ export class GroupHeader extends Component {
                 <div className="cell title">
                 <EditableCmp name="group-title" value={group.title} updateFunc={this.onUpdateGroupTitle} style={{ color: group.style.bgColor }}/>
                 </div>
-                {/* <h1 className="title" style={{ color: group.style.bgColor }}>{group.title}</h1> */}
                 <div className="cell asignee">Asignee</div>
                 <div className="cell tags">Tags</div>
                 <div className="cell label">Status</div>

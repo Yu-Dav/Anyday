@@ -33,7 +33,6 @@ class _SidebarNav extends Component {
             <section className={isExpanded ? "sidebar-nav is-expanded" : "sidebar-nav"}>
                 <i className={isExpanded ? "fas arrow arrow-left" : "fas arrow arrow-right"}
                     onClick={this.onOpenNavbar}></i>
-
                 {isExpanded &&
                     <div className="sidenav-open">
                         <h1>My Workspace</h1>
