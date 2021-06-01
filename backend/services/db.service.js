@@ -12,7 +12,6 @@ var dbConn = null
 async function getCollection(collectionName) {
     try {
         const db = await connect()
-        console.log('yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy')
         const collection = await db.collection(collectionName)
         return collection
     } catch (err) {

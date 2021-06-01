@@ -18,40 +18,28 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export function CellMember({ task, board, updateBoard }) {
-
     const taskMembers = task.members
     const boardMembers = board.members
-
     const classes = useStyles();
     const [open, setOpen] = React.useState(false);
     const anchorRef = React.useRef(null);
-
     const handleToggle = () => {
         setOpen((prevOpen) => !prevOpen);
     };
-
     const handleClose = (event) => {
-        if (anchorRef.current && anchorRef.current.contains(event.target)) {
-            return;
-        }
-
+        if (anchorRef.current && anchorRef.current.contains(event.target)) return
         setOpen(false);
     };
-
     function handleListKeyDown(event) {
         if (event.key === 'Tab') {
             event.preventDefault();
             setOpen(false);
         }
     }
-
     // return focus to the button when we transitioned from !open -> open
     const prevOpen = React.useRef(open);
     React.useEffect(() => {
-        if (prevOpen.current === true && open === false) {
-            anchorRef.current.focus();
-        }
-
+        if (prevOpen.current === true && open === false) anchorRef.current.focus()
         prevOpen.current = open;
     }, [open]);
 
@@ -68,7 +56,7 @@ export function CellMember({ task, board, updateBoard }) {
     const onRemoveMember = (ev) => {
         const memberId = ev.target.dataset.id
         // console.log('member id',memberId);
-        const memberIdx = taskMembers.findIndex(member=> member._id === memberId)
+        const memberIdx = taskMembers.findIndex(member => member._id === memberId)
         taskMembers.splice(memberIdx, 1)
         const newBoard = { ...board }
         updateBoard(newBoard)
@@ -85,21 +73,46 @@ export function CellMember({ task, board, updateBoard }) {
     //         // console.log('task',taskMember)
     //     //    console.log(taskMember._id !== member._id)
     //            return taskMember._id !== member._id})
-        
+
     // })
 
+    // function getOtherMembers() {
+    //     const otherMembers = [...boardMembers]
+    //     otherMembers.forEach((otherMember, idx) => {
+    //         taskMembers.forEach((taskMember) => {
+    //             if (otherMember._id === taskMember._id) {
+    //                 otherMembers.splice(idx, 1)
+    //             }
+    //         })
+    //     })
+    //     console.log('other members', otherMembers);
+    //     return otherMembers
+    // }
 
-    function getOtherMembers(){
-        const otherMembers = [...boardMembers]
-        otherMembers.forEach((otherMember, idx)=> {
-            taskMembers.forEach((taskMember) => {
-                if(otherMember._id === taskMember._id){
-                    otherMembers.splice(idx, 1)
+    function getOtherMembers() {
+        const boardMembersCopy = [...boardMembers]
+        const filteredMembers = []
+        let isAdded = true
+        let toAdd = false
+        for (let i = 0; i < boardMembersCopy.length; i++) {
+            const currBoardMember = boardMembersCopy[i]
+            for (let j = 0; j < taskMembers.length; j++) {
+                const currTaskMember = taskMembers[j]
+                if (currBoardMember._id === currTaskMember._id) break
+                else {
+                    toAdd = true
+                    isAdded = false
+                    break
                 }
-            })
-        })
-        console.log('other members', otherMembers);
-        return otherMembers
+            }
+            if (toAdd && !isAdded) {
+                filteredMembers.push(currBoardMember)
+                toAdd = false
+                isAdded = true
+            }
+        }
+        console.log(`file: CellMember.jsx || line 108 || boardMembersCopy`, filteredMembers)
+        return filteredMembers
     }
 
     return (

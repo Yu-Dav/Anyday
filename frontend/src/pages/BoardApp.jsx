@@ -18,7 +18,7 @@ import { ActivityModal } from '../cmps/ActivitySideBar/ActivityModal';
 class _BoardApp extends Component {
 
     componentDidMount() {
-        const boardId = 'b101'
+        const boardId = '60b65fef19a5e8e76413c787'
         this.props.loadBoard(boardId)
     }
     addNewGroup = () => {
@@ -75,7 +75,7 @@ class _BoardApp extends Component {
                 <SidebarNav />
                 <div className="container board-container">
                     <BoardHeader board={this.props.currBoard} updateBoard={this.props.updateBoard} />
-                    <BoardCtrlPanel addNewGroup={this.addNewGroup} onSetFilter={this.onSetFilter} />
+                    <BoardCtrlPanel board={this.props.currBoard} addNewGroup={this.addNewGroup} onSetFilter={this.onSetFilter} loadBoard={this.props.loadBoard}/>
 
                     <DragDropContext onDragEnd={this.onDragEnd}>
                         <Droppable droppableId="all-groups" type="group">

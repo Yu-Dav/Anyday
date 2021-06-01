@@ -31,7 +31,8 @@ export class CellDate extends Component {
         const timeline = [startDate, endDate]
         this.props.task.timeline = timeline
         const newBoard = { ...this.props.board }
-        this.props.updateBoard(newBoard)
+        this.setState({ ...this.state, isDateSet: true, isDateSetting:false }, ()=> this.props.updateBoard(newBoard))
+
     }
     onEnter = () => {
         this.setState({ ...this.state, isHover: true })
@@ -49,7 +50,7 @@ export class CellDate extends Component {
         const difInDays = (timestampEnd - timestampStart) / 1000 / 60 / 60 / 24
         return difInDays
     }
-    
+
     render() {
 
         const { startDate, endDate, isHover, isDateSet, isDateSetting } = this.state
@@ -58,7 +59,7 @@ export class CellDate extends Component {
 
 
                 {isDateSet && isHover &&
-                    <div>{this.getNumOfDays()} d</div>
+                    <span className="num-of-days">{this.getNumOfDays()} d</span>
                 }
                 {isDateSet && !isHover &&
                     <DatePicker
@@ -85,10 +86,10 @@ export class CellDate extends Component {
                     />
                 }
                 {!isDateSet && isHover &&
-                    <div onClick={this.onSetDates}>Set Dates</div>
+                    <span className="set-dates" onClick={this.onSetDates}>Set Dates</span>
                 }
                 {!isDateSet && !isDateSetting &&
-                    <div >-</div>
+                    <span className="no-date">-</span>
                 }
 
             </div>
