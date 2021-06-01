@@ -1,5 +1,7 @@
 .group-container {
     margin-bottom: 30px;
+    background-color: #ffffffe6;
+
     .group-preview {
         width: 100%;
     }
@@ -14,7 +16,7 @@
     }
     &:hover {
         .group-handle {
-            opacity: .5;
+            opacity: 0.5;
         }
     }
     .group-handle {

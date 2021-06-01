@@ -66,7 +66,7 @@ export function CellMember({ task, board, updateBoard }) {
 
     const onRemoveMember = (ev) => {
         const memberId = ev.target.dataset.id
-        const memberIdx = taskMembers.findIndex(member=> member._id === memberId)
+        const memberIdx = taskMembers.findIndex(member => member._id === memberId)
         taskMembers.splice(memberIdx, 1)
         const newBoard = { ...board }
         updateBoard(newBoard)
@@ -78,23 +78,23 @@ export function CellMember({ task, board, updateBoard }) {
     }
 
     const otherMembers = boardMembers.filter((member) => {
-        // console.log('board', member);
-        return taskMembers.filter(taskMember => {
-            // console.log('task',taskMember)
-        //    console.log(taskMember._id !== member._id)
-               return taskMember._id !== member._id})
-        
+        const res = taskMembers.filter(taskMember => {
+            return taskMember._id !== member._id
+        })
+        // console.log('res =', res)
+        // const res1 = {...res}
+        return res
     })
-// console.log('task members', taskMembers);  
-// console.log('board memebers', boardMembers);  
-// console.log('other', otherMembers);
+    // console.log('task members', taskMembers);  
+    // console.log('board memebers', boardMembers);  
+    // console.log('other', otherMembers);
     // const otherMembers = 
 
     // var diffArray = arr2.filter(x => {
     //     let elementsOfArray2PresentInArray1 = arr1.filter(y => {
     //       return y.id === x
     //     });
-      
+
     //     if (elementsOfArray2PresentInArray1.length > 0) {
     //       return false
     //     } else {
@@ -103,7 +103,7 @@ export function CellMember({ task, board, updateBoard }) {
     //     //`return !length;` will  return false if length > 0
     //   });
 
-// console.log('other', otherMembers);
+    // console.log('other', otherMembers);
 
     return (
         <div ref={anchorRef}
@@ -114,7 +114,7 @@ export function CellMember({ task, board, updateBoard }) {
                 return <span key={member._id}>{member.username.charAt(0)} </span>
             })}
             </div>
-            <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal style={{zIndex: '1'}}>
+            <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal style={{ zIndex: '1' }}>
                 {({ TransitionProps, placement }) => (
                     <Grow
                         {...TransitionProps}
@@ -124,7 +124,7 @@ export function CellMember({ task, board, updateBoard }) {
                             <ClickAwayListener onClickAway={handleClose}>
                                 <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
                                     {taskMembers.map(member => {
-                                        return <MenuItem key={member._id} data-id={member._id}>{member.fullname}<span onClick={onRemoveMember}> x</span></MenuItem>
+                                        return <MenuItem key={member._id} data-id={member._id}>{member.fullname}<span onClick={onRemoveMember}>X</span></MenuItem>
                                     })}
                                     <hr />
                                     {boardMembers.map(member => {

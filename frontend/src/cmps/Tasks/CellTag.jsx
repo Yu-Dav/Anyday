@@ -96,7 +96,7 @@ export function CellTag({ task, board, updateBoard }) {
             aria-haspopup="true"
             onClick={handleToggle} className="cell tags">
 
-            <div className="flex justify-center">
+            <div className="flex justify-center" style={{ width: '142px' }}>
 
                 {tags.map((tag) => {
                     // remove tag add from here its only for dev
@@ -110,7 +110,7 @@ export function CellTag({ task, board, updateBoard }) {
                         style={{ transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}
                     >
                         <Paper>
-                            <TagAddNew addNewTag={addNewTag} board={board}/>
+                            <TagAddNew addNewTag={addNewTag} board={board} />
                             <ClickAwayListener onClickAway={handleClose}>
                                 <MenuList autoFocusItem={open} id="menu-list-grow" >
                                     {/* onKeyDown={handleListKeyDown} */}
