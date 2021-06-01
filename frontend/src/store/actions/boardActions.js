@@ -4,7 +4,7 @@ export function loadBoards(filterBy) {
     return async dispatch => {
         try {
             const boards = await boardService.query(filterBy)
-            console.log('baords', boards)
+            console.log('boards', boards)
             dispatch({ type: 'SET_BOARDS', boards })
         } catch (err) {
             console.log('BoardActions: err in loadBoards', err);
@@ -50,6 +50,7 @@ export function updateBoard(board) {
     return async dispatch => {
         try {
             const updatedBoard = await boardService.update(board)
+            console.log('update board in actions');
             dispatch({ type: 'UPDATE_BOARD', board: updatedBoard })
 
         } catch (err) {

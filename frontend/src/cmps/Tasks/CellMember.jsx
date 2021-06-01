@@ -79,27 +79,22 @@ export function CellMember({ task, board, updateBoard }) {
         return boardMembers.find(member => member._id === id)
     }
 
-    // const otherMembers = boardMembers.filter((member) => {
-    //     // console.log('board', member);
-    //     return taskMembers.filter(taskMember => {
-    //         // console.log('task',taskMember)
-    //     //    console.log(taskMember._id !== member._id)
-    //            return taskMember._id !== member._id})
-        
-    // })
-
-
     function getOtherMembers(){
-        const otherMembers = [...boardMembers]
-        otherMembers.forEach((otherMember, idx)=> {
-            taskMembers.forEach((taskMember) => {
-                if(otherMember._id === taskMember._id){
-                    otherMembers.splice(idx, 1)
-                }
-            })
-        })
-        console.log('other members', otherMembers);
-        return otherMembers
+    var otherMembers = boardMembers.filter(x => {
+        let elementsOfArray2PresentInArray1 = taskMembers.filter(y => {
+          return y._id === x._id
+        });
+      
+        if (elementsOfArray2PresentInArray1.length > 0) {
+          return false
+        } else {
+          return true;
+        }
+        //`return !length;` will  return false if length > 0
+      });
+      
+      console.log(otherMembers)
+      return otherMembers
     }
 
     return (

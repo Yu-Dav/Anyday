@@ -69,6 +69,7 @@ class _BoardApp extends Component {
     }
     render() {
         const { currBoard } = this.props
+        if(!currBoard) return <div>loading</div>
         return (
             <div className="board-app-container flex">
                 <SidebarApp />
@@ -92,8 +93,8 @@ class _BoardApp extends Component {
                             )}
                         </Droppable>
                     </DragDropContext>
-                    <Route path={`${this.props.match.path}/:taskId`} render={(props) => {
-                        return <ActivityModal board={currBoard} {...props} />
+                    <Route path={`${this.props.match.path}/:groupId/:taskId`} render={(props) => {
+                        return <ActivityModal {...props} />
                     }} />
                 </div>
             </div>
