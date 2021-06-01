@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
+import { ClickAwayListener } from '@material-ui/core'
+import Grow from '@material-ui/core/Grow';
 
-//try to combine with CellStatus?
 
 export class CellPriority extends Component {
     state = {
@@ -24,30 +25,42 @@ export class CellPriority extends Component {
         this.setState({ ...this.state, isExpanded: !this.state.isExpanded })
     }
 
+
+    handleClickAway = () => {
+        this.setState({ ...this.state, isExpanded: false })
+    }
+
     render() {
         const { priority } = this.props.task
         const { priorityLabels } = this.props.board
         const { isExpanded } = this.state
         return (
-            <div className="cell label" style={{ backgroundColor: priority.color }} onClick={this.onOpenSelector}>
-                {priority.title}
-
-                {isExpanded && <div>
-                    <div className="modal-container relative">
-                        <div className="triangle-with-shadow relative"></div>
-                        <div className="floating-label-select">
-                            {priorityLabels.map((label) => {
-                                return <div className="label-option" onClick={this.handleUpdate} key={label.id} data-label={label.id} style={{ backgroundColor: label.color }}>
-                                    {label.title}
-                                </div>
-                            })}
+            <ClickAwayListener onClickAway={this.handleClickAway}>
+                <div className="cell label" style={{ backgroundColor: priority.color }} onClick={this.onOpenSelector}>
+                    {priority.title}
+                    {/* {({ TransitionProps, placement }) => (
+                        <Grow
+                            {...TransitionProps}
+                            style={{ transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}
+                        > */}
+                    {isExpanded && <div>
+                        <div className=" fade-in modal-container relative">
+                            <div className=" triangle-with-shadow relative"></div>
+                            <div className=" floating-label-select">
+                                {priorityLabels.map((label) => {
+                                    return <div className="label-option" onClick={this.handleUpdate} key={label.id} data-label={label.id} style={{ backgroundColor: label.color }}>
+                                        {label.title}
+                                    </div>
+                                })}
+                            </div>
                         </div>
                     </div>
+                    }
+                    {/* </Grow>
+                    )} */}
                 </div>
-                    // TODO- support adding a customized label (change names to labels?)
-                }
 
-            </div>
+            </ClickAwayListener>
         )
     }
 }

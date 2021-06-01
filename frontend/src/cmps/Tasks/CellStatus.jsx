@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { SimplePopover } from '../SimplePopover'
+import { ClickAwayListener } from '@material-ui/core'
 
 
 export class CellStatus extends Component {
@@ -23,45 +23,38 @@ export class CellStatus extends Component {
         this.setState({ ...this.state, isExpanded: !this.state.isExpanded })
     }
 
+    handleClickAway = () => {
+        this.setState({ ...this.state, isExpanded: false })
+    }
+
     render() {
         const { status } = this.props.task
         const { statusLabels } = this.props.board
         const { isExpanded } = this.state
-        // const clickableLabel = <div style={{ backgroundColor: status.color }}>{status.title}</div>
-        // const menu = <div className="floating-label-select">
-        //     {statusLabels.map((label) => {
-        //         return <div className="color-option" key={label.id} data-label={label.id} style={{ backgroundColor: label.color }}> {label.title} </div> })}
-        //     </div>
         return (
-            <div className="cell label" style={{ backgroundColor: status.color }} onClick={this.onOpenSelector}>
-                {status.title}
-                {isExpanded && <div>
-                    <div className="modal-container relative">
-                        <div  className="triangle-with-shadow relative"></div>
-                        <div className="floating-label-select">
-                            {statusLabels.map((label) => {
-                                return <div className="label-option" onClick={this.handleUpdate} key={label.id} data-label={label.id} style={{ backgroundColor: label.color }}>
-                                    {label.title}
-                                </div>
-                            })}
+            <ClickAwayListener onClickAway={this.handleClickAway}>
+                <div className="cell label" style={{ backgroundColor: status.color }} onClick={this.onOpenSelector}>
+                    {status.title}
 
+                    <div>
+                        {isExpanded && <div>
+                            <div className="fade-in modal-container relative">
+                                <div className="triangle-with-shadow relative"></div>
+                                <div className="floating-label-select">
+                                    {statusLabels.map((label) => {
+                                        return <div className="label-option" onClick={this.handleUpdate} key={label.id} data-label={label.id} style={{ backgroundColor: label.color }}>
+                                            {label.title}
+                                        </div>
+                                    })}
+
+                                </div>
+                            </div>
                         </div>
+                        }
                     </div>
+
                 </div>
-                }
-            </div>
-            // <div>
-            // <SimplePopover className="label" clickedEl={clickableLabel} content={menu}
-            //     anchorOrigin={{
-            //         vertical: 'bottom',
-            //         horizontal: 'left',
-            //     }}
-            //     transformOrigin={{
-            //         vertical: 'top',
-            //         horizontal: 'left',
-            //     }} />
-            //      {/* <Typography className={}></Typography> */}
-            // </div>
+            </ClickAwayListener>
         )
     }
 }

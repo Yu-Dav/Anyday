@@ -90,7 +90,6 @@ export function CellTag({ task, board, updateBoard }) {
             <div className="cell-tag-container flex justify-center">
  
                 {tags.map((tag) => {
-                    // remove tag add from here its only for dev
                     return <span className="tag-container" style={{ color: tag.color }} >{tag.title}</span>
                 })}
             </div>
@@ -109,7 +108,7 @@ export function CellTag({ task, board, updateBoard }) {
                                             color: tag.color, display: "flex", fontSize: "13px",
                                             justifyContent: "space-between"
                                         }}
-                                            onClick={update} data-tag={tag.id}> {tag.title}
+                                            onClick={update} data-tag={tag.id} key={tag.id}> {tag.title}
                                             <i data-tag={tag.id} onClick={onRemoveTag} className="fas close"></i>
                                         </MenuItem>
                                     })}
