@@ -83,14 +83,14 @@ export function GroupMenu({ group, board, updateBoard }) {
                 {({ TransitionProps, placement }) => (
                     <Grow
                         {...TransitionProps}
-                        style={{ transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}
-                    >
+                        style={{ transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}>
                         <Paper>
                             <ClickAwayListener onClickAway={handleClose}>
                                 <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
                                     <MenuItem onClick={onDeleteGroup}>Delete group</MenuItem>
                                     {/* <MenuItem onClick={onChangeGroupColor}>Change group color</MenuItem> */}
                                     <MenuItem><Colors onChangeGroupColor={onChangeGroupColor} board={board} /></MenuItem>
+                                    {/* <MenuItem>lalalalalallalalalalal</MenuItem> */}
                                 </MenuList>
                             </ClickAwayListener>
                         </Paper>
