@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import { Route } from 'react-router-dom'
 import { utilService } from '../services/utilService'
 import { DragDropContext } from 'react-beautiful-dnd';
 
@@ -66,8 +66,11 @@ class _BoardApp extends Component {
                     <DragDropContext onDragEnd={this.onDragEnd}>
                         <GroupList board={currBoard} groups={currBoard.groups} key={currBoard._id} updateBoard={this.props.updateBoard} />
                     </DragDropContext>
-                    {/* <ActivityModal /> */}
-                </div >
+                    {/* <Route component={ActivityModal} path="/board/:boardId/tasks/:taskId" /> */}
+                    {/* <Route path={`${this.props.match.path}/task/:taskId`} render={(props) => {
+                        return <ActivityModal board={currBoard} {...props} />
+                    }} /> */}
+                </div>
             </div>
         )
     }

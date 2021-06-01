@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import { EditableCmp } from '../EditableCmp'
 
 export class CellTitle extends Component {
@@ -28,16 +29,16 @@ export class CellTitle extends Component {
     }
 
     render() {
-        const { title } = this.props.task
+        const { title, id } = this.props.task
+        const {board} = this.props
         return (
 
-            <div className="cell title flex"
-                
-            >
+            <div className="cell title flex">
                 {/* cell title + btn to open chat */}
                 <i className="fas fa-trash remove-task" onClick={this.onRemoveTask}></i>
                 {/* <div className="remove-task" onClick={this.onRemoveTask}>X</div> */}
                 <EditableCmp className="title" name="title" value={title} updateFunc={this.onUpdateTaskTitle} />
+                <Link to={`/board/${board._id}/task/${id}`}>Updates</Link>
             </div>
 
 
