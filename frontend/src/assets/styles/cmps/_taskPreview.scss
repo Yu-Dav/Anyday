@@ -40,26 +40,13 @@
             flex-wrap: wrap;
             text-align: center; //helper?
         }
-
-        //todo- a triangle (now a square)
-        // .floating-status-select::before {
-        //     background-color: #fff;
-        //     content: " ";
-        //     position: absolute;
-        //     border: solid transparent;
-        //     bottom: 100%;
-        //     border-color: rgba(225, 225, 225, 0);
-        //     pointer-events: none;
-        //     height: 0;
-        //     width: 0;
-        // }
     }
+
     .tag-container {
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
         margin-right: 5px;
-     
     }
 
     .group-color {
@@ -67,7 +54,7 @@
         width: 8px;
     }
     .creation-log {
-        color: $fontDarkGrey
+        color: $fontDarkGrey;
     }
 }
 
@@ -111,18 +98,16 @@
     // }
 }
 
-.fas.close::after{
-    content:'\f057';
+.fas.close::after {
+    content: "\f057";
 }
 
-//wasnt able to apply hover on MUI li
-.fas.close{
+.fas.close {
     opacity: 0;
-    &:hover{
+    &:hover {
         opacity: 0.5;
     }
 }
-
 
 .label {
     width: 113px;
@@ -134,4 +119,36 @@
 
 .timeline {
     width: 200px;
+}
+
+
+.modal-container{
+    // position: relative;
+    top: -78px;
+}
+
+.triangle-with-shadow {
+   width: 100px;
+   height: 100px;
+//    position: relative;
+   overflow: hidden;
+   box-shadow: 0 16px 10px -17px #00000052;
+}
+.triangle-with-shadow:after {
+    z-index: 2;
+   content: "";
+   transform: rotate(45deg);
+   box-shadow: -1px -1px 10px -2px #00000052;
+   margin-left: 19px;
+   content: "";
+   position: absolute;
+   width: 40px;
+   height: 40px;
+   background: #fff;
+   top: 89px;
+   left: 25px;
+}
+
+.triangle-with-shadow:hover, .triangle-with-shadow:hover:after {
+   box-shadow: none;
 }
