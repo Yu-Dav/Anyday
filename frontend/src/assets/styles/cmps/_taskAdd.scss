@@ -1,4 +1,9 @@
 .task-add {
+    &:hover{
+        .group-color{
+            opacity: 1;
+        }
+    }
     position: relative;
     .add {
         opacity: 0;
@@ -18,6 +23,7 @@
     .group-color {
         // height: 100%;
         width: 8px;
+        opacity: 0.5;
     }
     button.add {
         height: 100%;

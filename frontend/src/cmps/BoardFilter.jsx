@@ -26,7 +26,7 @@ export class BoardFilter extends Component {
     render() {
         const { board } = this.props
         return (
-            <div className="board-filter ">
+            <div className="board-filter fade-in">
                 {/* <h1>Filter by:</h1> */}
                 <div className=" filter-groups flex flex-column">
 

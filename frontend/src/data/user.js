@@ -4,7 +4,7 @@ export const user = [
         fullname: 'Noga Jacobi',
         username: 'Noga',
         password: 'noga1234',
-        imgUrl: '../assets/imgs/nj.png',
+        imgUrl: 'https://i.ibb.co/qFwz63W/nj.png',
         mentions: [
             {
                 id: 'm101',
@@ -18,7 +18,7 @@ export const user = [
         fullname: 'Dafna Bashan ',
         username: 'Dafna',
         password: 'dafna1234',
-        imgUrl: '../assets/imgs/db.png',
+        imgUrl: 'https://i.ibb.co/qsVBFcb/db.png',
         mentions: [
             {
                 id: 'm101',
@@ -32,7 +32,7 @@ export const user = [
         fullname: 'Yuval David',
         username: 'Yuval',
         password: 'yuval1234',
-        imgUrl: '../assets/imgs/yd.png',
+        imgUrl: 'https://i.ibb.co/HPFsFbq/yd.png',
         mentions: [
             {
                 id: 'm101',
@@ -46,7 +46,7 @@ export const user = [
         fullname: 'Basya coding',
         username: 'Basya',
         password: 'basya1234',
-        imgUrl: '../assets/imgs/qb.png',
+        imgUrl: 'https://i.ibb.co/S6XczhC/qb.png',
         mentions: [
             {
                 id: 'm101',
@@ -56,3 +56,5 @@ export const user = [
         ]
     }
 ];
+
+

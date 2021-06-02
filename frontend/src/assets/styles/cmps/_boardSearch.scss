@@ -1,14 +1,5 @@
-.board-search-ani-enter {
-    opacity: 0;
-}
-.board-search-ani-enter-active {
-    opacity: 1;
-    transition: opacity 500ms;
-}
-.board-search-ani-exit {
-    opacity: 1;
-}
-.board-search-ani-active {
-    opacity: 0;
-    transition: opacity 500ms;
+.board-ops {
+    .board-search.fade-in {
+        animation: fade-in 0.3s ease-in-out both;
+    }
 }

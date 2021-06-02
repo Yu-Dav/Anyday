@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createRef } from 'react';
 // import Button from '@material-ui/core/Button';
 import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 import Grow from '@material-ui/core/Grow';
@@ -67,31 +67,28 @@ export function CellMember({ task, board, updateBoard }) {
         return boardMembers.find(member => member._id === id)
     }
 
-    function getOtherMembers(){
-    var otherMembers = boardMembers.filter(x => {
-        let elementsOfArray2PresentInArray1 = taskMembers.filter(y => {
-          return y._id === x._id
+    function getOtherMembers() {
+        var otherMembers = boardMembers.filter(boardMem => {
+            let filteredArr = taskMembers.filter(taskMem => {
+                return taskMem._id === boardMem._id
+            });
+            if (filteredArr.length > 0) return false
+            return true
+            //`return !length;` will  return false if length > 0
         });
-      
-        if (elementsOfArray2PresentInArray1.length > 0) {
-          return false
-        } else {
-          return true;
-        }
-        //`return !length;` will  return false if length > 0
-      });
-      
-      console.log(otherMembers)
-      return otherMembers
+        return otherMembers
     }
 
     return (
-        <div ref={anchorRef}
+        <div  ref={anchorRef}
             aria-controls={open ? 'menu-list-grow' : undefined}
             aria-haspopup="true"
             onClick={handleToggle} className="cell asignee">
-            <div>{taskMembers.map(member => {
-                return <span key={member._id}>{member.username.charAt(0)} </span>
+            <div className="flex align-center justify-center">{taskMembers.map(member => {
+                // return <span key={member._id}>{member.username.charAt(0)} </span>
+                return <span className="cell-member-avatar flex align-center" key={member._id}>
+                    <img src={member.imgUrl} alt="Member Avatar" />
+                </span>
             })}
             </div>
             <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal style={{ zIndex: '1' }}>
