@@ -1,34 +1,28 @@
-import React from 'react';
-import ClickAwayListener from '@material-ui/core/ClickAwayListener';
-import Grow from '@material-ui/core/Grow';
-import Paper from '@material-ui/core/Paper';
-import Popper from '@material-ui/core/Popper';
-import MenuItem from '@material-ui/core/MenuItem';
-import MenuList from '@material-ui/core/MenuList';
-
+import React, { Component } from 'react'
 import { TagAddNew } from './TagAddNew'
+import { ClickAwayListener } from '@material-ui/core'
+import { socketService } from '../../services/socketService'
 
-export function CellTag({ task, board, updateBoard }) {
-    const tags = task.tags
-    const availableTags = board.tags
-    //   const classes = useStyles();
-    const [open, setOpen] = React.useState(false);
-    const anchorRef = React.useRef(null);
 
-    const handleToggle = () => {
-        setOpen((prevOpen) => !prevOpen);
-    };
 
-    const handleClose = (event) => {
-        if (!event) return
-        event.stopPropagation()
-        if (anchorRef.current && anchorRef.current.contains(event.target)) {
-            return;
-        }
-        setOpen(false);
-    };
+export class CellTag extends Component {
+    state = {
+        isExpanded: false
+    }
 
-    const update = (event, tag) => {
+    handleUpdate = async({ target }) => {
+        const selectedTag = this.getTagById(target.dataset.tag)
+        this.props.task.tags.unshift(selectedTag)
+        const newBoard = { ...this.props.board }
+        await this.props.updateBoard(newBoard) //updating the entire board
+        await socketService.emit('board updated', newBoard._id);
+        this.setState({...this.state, isExpanded:false})
+
+    }
+
+    update =  async (event, tag) => {
+        const availableTags = this.props.board.tags
+        const { task, board, updateBoard } = this.props
         //CREATE
         let selectedTag;
         if (!event) {
@@ -36,90 +30,102 @@ export function CellTag({ task, board, updateBoard }) {
             availableTags.unshift(tag)
         } else {
             // UPDATE
-            selectedTag = getTagById(event.target.dataset.tag)
+            selectedTag = this.getTagById(event.target.dataset.tag)
         }
         task.tags.unshift(selectedTag)
         const newBoard = { ...board }
-        updateBoard(newBoard)
-        // TODO- remove comment below when  modal works
-        // handleClose(event)
+        await updateBoard(newBoard)
+        this.setState({...this.state, isExpanded:false})
     }
 
-    const addNewTag = (tag) => {
-        update(null, tag)
+    addNewTag = (tag) => {
+        this.update(null, tag)
     }
 
-
-    const getTagById = (tagId) => {
+    getTagById = (tagId) => {
+        const availableTags = this.props.board.tags
         return availableTags.find(tag => tag.id === tagId)
     }
 
-    const onRemoveTag = async (ev) => {
-        ev.stopPropagation()
-        // if(!tags) return
-        // const tagToRemove = getTagById(ev.target.dataset.tag)
-        const tagId = ev.target.dataset.tag
-        const tagIdx = availableTags.findIndex(tag => tag.id === tagId)
-        console.log('tagIdx', tagIdx)
-        availableTags.splice(tagIdx, 1)
-        // const inTaskIdx = tags.findIndex(tag => tag.id === tagId)
-        // tags.splice(inTaskIdx, 1)
-        const newBoard = { ...board }
-        await updateBoard(newBoard)
+    onOpenSelector = () => {
+        this.setState({ ...this.state, isExpanded: !this.state.isExpanded })
+    }
 
-        const tags = task.tags
+    
+    handleClickAway = () => {
+        this.setState({ ...this.state, isExpanded: false })
+    }
+
+    onRemoveTag = async (ev) => {
+        // const availableTags = this.props.board.tags
+        const tags = this.props.task.tags
+        if (!tags) return
+        ev.stopPropagation()
+        const tagId = ev.target.dataset.tag
+        const tagIdx = tags.findIndex(tag => tag.id === tagId)
+        tags.splice(tagIdx, 1)
+        const newBoard = { ...this.props.board }
+        await this.props.updateBoard(newBoard)
+    }
+
+    getOtherTags = () => {
+        const availableTags = this.props.board.tags
+        let taskTags = this.props.task.tags
+        var otherTags = availableTags.filter(x => {
+            let elementsOfArray2PresentInArray1 = taskTags.filter(y => {
+                return y.id === x.id
+            });
+            if (elementsOfArray2PresentInArray1.length > 0) {
+                return false
+            } else {
+                return true;
+            }
+        });
+        return otherTags
     }
 
 
-    // return focus to the button when we transitioned from !open -> open
-    const prevOpen = React.useRef(open);
-    React.useEffect(() => {
-        if (prevOpen.current === true && open === false) {
-            anchorRef.current.focus();
-        }
-
-        prevOpen.current = open;
-    }, [open]);
-
-    return (
-        <div ref={anchorRef}
-            aria-controls={open ? 'menu-list-grow' : undefined}
-            aria-haspopup="true"
-            onClick={handleToggle} className="cell tags">
-
-            <div className="cell-tag-container flex justify-center">
- 
-                {tags.map((tag) => {
-                    return <span className="tag-container" style={{ color: tag.color }} >{tag.title}</span>
-                })}
-            </div>
-            <Popper style={{ zIndex: '1' }} open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
-                {({ TransitionProps, placement }) => (
-                    <Grow
-                        {...TransitionProps}
-                        style={{ transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}
-                    >
-                        <Paper>
-                            <TagAddNew addNewTag={addNewTag} board={board} />
-                            <ClickAwayListener onClickAway={handleClose}>
-                                <MenuList autoFocusItem={open} id="menu-list-grow" >
-                                    {availableTags.map((tag) => {
-                                        return <MenuItem className="modal-li" style={{
-                                            color: tag.color, display: "flex", fontSize: "13px",
-                                            justifyContent: "space-between"
-                                        }}
-                                            onClick={update} data-tag={tag.id} key={tag.id}> {tag.title}
-                                            <i data-tag={tag.id} onClick={onRemoveTag} className="fas close"></i>
-                                        </MenuItem>
-                                    })}
-                                </MenuList>
-                            </ClickAwayListener>
-                        </Paper>
-                    </Grow>
-                )}
-            </Popper>
-
-        </div >
-    );
+    render() {
+        const { tags } = this.props.task
+        const { isExpanded } = this.state
+        const { board } = this.props
+        return (
+            <ClickAwayListener  onClickAway={this.handleClickAway}>
+                <div className="cell-tag-container flex justify-center" >
+                    {tags.map((tag) => {
+                        return <span className="tag-container" style={{ color: tag.color }} key={tag.id} onClick={this.onOpenSelector}>{tag.title} </span>
+                    })}
+                    {isExpanded &&
+                        <div className="tag-options fade-in">
+                            <TagAddNew addNewTag={this.addNewTag} board={board} />
+                            {tags.map((tag) => {
+                                return <div className="tag-option"
+                                    key={tag.id} data-tag={tag.id} style={{
+                                        color: tag.color, display: "flex", fontSize: "13px",
+                                        justifyContent: "space-between"
+                                    }}>
+                                    {tag.title} <i data-tag={tag.id} onClick={this.onRemoveTag}
+                                        className="fas close"></i>
+                                </div>
+                            })}
+                            <hr></hr>
+                            {this.getOtherTags().map((tag) => {
+                                return <div className="tag-option" onClick={this.handleUpdate}
+                                    key={tag.id} data-tag={tag.id} style={{
+                                        color: tag.color, display: "flex", fontSize: "13px",
+                                        justifyContent: "space-between"
+                                    }}>
+                                    {tag.title}
+                                </div>
+                            })}
+                        </div>
+                    }
+                </div>
+            </ClickAwayListener>
+        )
+    }
 }
+
+
+
 

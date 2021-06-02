@@ -32,7 +32,13 @@
 @import 'cmps/colors';
 @import 'cmps/activityModal';
 @import 'cmps/cellMember';
+@import 'cmps/header';
 
 // Pages
 
 @import 'pages/boardApp';
+@import 'pages/home';
+
+// user
+
+@import 'cmps/user/login';

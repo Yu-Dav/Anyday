@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 5/24/2021, 10:28:43 AM - INFO - Server is running on port: 3030 
 5/24/2021, 10:47:27 AM - DEBUG - auth.service - login with username: babush (sid: 1fO_DRqLsymLhGTC16742ItmtYeKMngb)
 5/24/2021, 10:47:27 AM - ERROR - Failed to Login Invalid username or password (sid: 1fO_DRqLsymLhGTC16742ItmtYeKMngb)
@@ -202,3 +203,6 @@
 6/2/2021, 11:29:43 PM - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: 22zdgt80n6-rYedSYdwyF6T91cV4mxRp)
 6/2/2021, 11:29:55 PM - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: 22zdgt80n6-rYedSYdwyF6T91cV4mxRp)
 6/2/2021, 11:29:55 PM - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: 22zdgt80n6-rYedSYdwyF6T91cV4mxRp)
+=======
+>>>>>>> eb7261fe6aa8129901c3f45e2ae97c0a7515bff4
+6/2/2021, 11:42:12 PM - INFO - Server is running on port: 3030 

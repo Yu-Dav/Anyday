@@ -7,29 +7,17 @@ import { Colors } from '../Colors'
 import { Droppable, Draggable } from 'react-beautiful-dnd';
 
 import { GroupMenu } from './GroupMenu'
-// import {ReactComponent as dropDownArrow} from '../../assets/imgs/dropDownArrow.svg'
 
-export function GroupPreview({ group, board, updateBoard, index }) {
+
+export function GroupPreview({ group, board, updateBoard, index, currUser}) {
     const { tasks } = group
     return (
-        // All this Droppable should be draggable too. type = group.   
-
-        // I think Draggable should be inside of Droppable. 
-
-
-
-
-        // <Droppable droppableId={group.id} type="task"
-        // 3 lines below belongs to Draggable above.
-        // >
-        // {dropProvided => (
         <Draggable draggableId={group.id} index={index} type="group">
             {dragProvided => (
-
                 <div className="group-container flex"
                     {...dragProvided.draggableProps}
                     ref={dragProvided.innerRef}
-                    >
+                >
                     <GroupMenu group={group} board={board} updateBoard={updateBoard} />
                     <i className="fas group-handle" {...dragProvided.dragHandleProps}></i>
                     <div className="group-preview">
@@ -47,7 +35,7 @@ export function GroupPreview({ group, board, updateBoard, index }) {
                         </Droppable>
 
                         {/* {dragProvided.placeholder} */}
-                        <TaskAdd board={board} group={group} updateBoard={updateBoard} />
+                        <TaskAdd board={board} group={group} updateBoard={updateBoard} currUser={currUser}/>
                     </div>
                 </div>
 

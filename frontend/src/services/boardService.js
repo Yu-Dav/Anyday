@@ -25,7 +25,8 @@ async function remove(boardId) {
 }
 
 async function update(board) {
-    // return storageService.put('board', board); // we might need to change this to the id of the board
+    // we might need to change this to the id of the board
+    // return storageService.put('board', board); 
     return httpService.put(`board/${board._id}`, board);
 }
 

@@ -3,14 +3,18 @@ import React, { Component } from 'react'
 import { EditableCmp } from './EditableCmp'
 import { ReactComponent as StarSvg } from '../assets/imgs/svg/star.svg'
 
+import { socketService } from '../services/socketService'
+
+
 export class BoardHeader extends Component {
 
-    onUpdateBoard = ({ target }) => {
+    onUpdateBoard = async ({ target }) => {
         const { name } = target.dataset
         const value = target.innerText
         const newBoard = { ...this.props.board }
         newBoard[name] = value
-        this.props.updateBoard(newBoard)
+        await this.props.updateBoard(newBoard)
+        socketService.emit('board updated', newBoard._id)
     }
 
     render = () => {

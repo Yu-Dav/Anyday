@@ -7,14 +7,13 @@ export const SOCKET_EVENT_REVIEW_ADDED = 'review-added';
 
 
 const baseUrl = (process.env.NODE_ENV === 'production')? '' : '//localhost:3030'
-// export const socketService = createSocketService()
-export const socketService = createDummySocketService()
+export const socketService = createSocketService()
+// export const socketService = createDummySocketService()
 
 window.socketService = socketService
 
 var socketIsReady = false;
 // socketService.setup()
-
 
 function createSocketService() {
   var socket = null;
@@ -25,10 +24,15 @@ function createSocketService() {
       socket = io(baseUrl, { reconnection: false})
       socketIsReady = true;
     },
+    
     async on(eventName, cb) {
       if (!socket) await socketService.setup()
       socket.on(eventName, cb)
     },
+    // on add group
+    // on add task
+    // on edit -> updateBoard()
+    // 
     async off(eventName, cb=null) {
       if (!socket) await socketService.setup()
       if (!cb) socket.removeAllListeners(eventName)

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { ClickAwayListener } from '@material-ui/core'
+import { socketService } from '../../services/socketService'
 
 
 export class CellStatus extends Component {
@@ -7,11 +8,12 @@ export class CellStatus extends Component {
         isExpanded: false
     }
 
-    handleUpdate = ({ target }) => {
+    handleUpdate = async ({ target }) => {
         const newStatus = this.getStatusById(target.dataset.label)
         this.props.task.status = newStatus
         const newBoard = { ...this.props.board }
-        this.props.updateBoard(newBoard)
+        await this.props.updateBoard(newBoard)
+        await socketService.emit('board updated', newBoard._id);
     }
 
     getStatusById = (labelId) => {

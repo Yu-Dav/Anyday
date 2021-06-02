@@ -21,12 +21,7 @@ export class Updates extends Component {
             txt: this.state.comment,
             createdAt: Date.now(),
             //change to logged in user
-            byMember: {
-                _id: 'u102',
-                fullname: 'Dafna Bashan',
-                username: 'Dafna',
-                imgUrl: '../assets/imgs/db.png',
-            },
+            byMember: this.props.currUser,
         }
         const { task } = this.props
         task.comments.unshift(newComment)

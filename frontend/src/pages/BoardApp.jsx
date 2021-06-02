@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Route } from 'react-router-dom'
 import { utilService } from '../services/utilService'
+import { socketService } from '../services/socketService'
+import { userService } from '../services/userService'
 import { DragDropContext, Droppable } from 'react-beautiful-dnd';
 
 import { connect } from 'react-redux'
@@ -16,13 +18,29 @@ import { ActivityModal } from '../cmps/ActivitySideBar/ActivityModal';
 // import { ChipCmp } from '../cmps/ChipCmp';
 
 class _BoardApp extends Component {
+    state = {
+        currUser: null
+    }
 
     componentDidMount() {
         const boardId = '60b7e87419a5e8e764d835fe'
         // const boardId = 'b101'
         this.props.loadBoard(boardId)
+        const user = userService.getLoggedinUser()
+        socketService.setup()
+        socketService.on('board loaded', () => {
+            this.props.loadBoard(boardId)
+        })
+        socketService.emit('join board', boardId)
+        this.setState({ ...this.state, currUser: user })
     }
-    addNewGroup = () => {
+    componentWillUnmount() {
+        // socketService.off('chat addMsg', this.addMsg)
+        // socketService.off('chat onUserTyping')
+        socketService.terminate()
+    }
+
+    addNewGroup = async () => {
         const newBoard = { ...this.props.currBoard }
         const newGroup = {
             id: utilService.makeId(),
@@ -32,10 +50,11 @@ class _BoardApp extends Component {
             // add all the rest needed in a group 
         }
         newBoard.groups.unshift(newGroup)
-        this.props.updateBoard(newBoard)
+        await this.props.updateBoard(newBoard)
+        socketService.emit('board updated', newBoard._id)
     }
 
-    onDragEnd = result => {
+    onDragEnd = async (result) => {
         const { destination, source, draggableId, type } = result;
         if (!destination) return;
         if (
@@ -62,14 +81,17 @@ class _BoardApp extends Component {
             currBoard.groups.splice(destination.index, 0, sourceGroup)
         }
         const copyGroup = { ...this.props.currBoard };
-        this.props.updateBoard(copyGroup);
+        await this.props.updateBoard(copyGroup);
+        socketService.emit('board updated', copyGroup._id);
     }
     onSetFilter = (filterBy) => {
         console.log('filterBy', filterBy)
+        // socketService.emit('board updated', copyGroup._id);
         // this.props.loadBoard(filterBy)
     }
     render() {
         const { currBoard } = this.props
+        const { currUser } = this.state
         if (!currBoard) return <div>loading</div>
         return (
             <div className="board-app-container flex">
@@ -87,8 +109,8 @@ class _BoardApp extends Component {
                                     ref={provided.innerRef}
                                     {...provided.droppableProps} >
                                     <GroupList
-
-                                        board={currBoard} groups={currBoard.groups} key={currBoard._id} updateBoard={this.props.updateBoard} />
+                                        board={currBoard} groups={currBoard.groups} key={currBoard._id} 
+                                        updateBoard={this.props.updateBoard} currUser={currUser}/>
                                     {provided.placeholder}
                                 </div>
                             )}
@@ -110,7 +132,9 @@ function mapStateToProps(state) {
     return {
         boards: state.boardModule.boards,
         currBoard: state.boardModule.currBoard,
-        filterBy: state.boardModule.filterBy
+        filterBy: state.boardModule.filterBy,
+        users: state.userModule.users,
+        loggedInUser: state.userModule.loggedInUser,
     }
 }
 
