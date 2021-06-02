@@ -102,7 +102,7 @@ export function CellMember({ task, board, updateBoard }) {
                             <ClickAwayListener onClickAway={handleClose}>
                                 <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
                                     {taskMembers.map(member => {
-                                        return <MenuItem key={member._id} >{member.fullname}<span data-id={member._id} onClick={onRemoveMember}> x</span></MenuItem>
+                                        return <MenuItem key={member._id} >{member.fullname}<i className="fas close" data-id={member._id} onClick={onRemoveMember}></i></MenuItem>
                                     })}
                                     <hr />
                                     {getOtherMembers().map(member => {
