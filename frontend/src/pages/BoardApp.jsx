@@ -24,6 +24,7 @@ class _BoardApp extends Component {
 
     componentDidMount() {
         const boardId = '60b7e87419a5e8e764d835fe'
+        // const boardId = '60b7e7d319a5e8e764d808cb'
         // const boardId = 'b101'
         this.props.loadBoard(boardId)
         const user = userService.getLoggedinUser()
