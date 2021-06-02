@@ -1,4 +1,6 @@
 .board-filter {
+    animation: fade-in 0.3s ease-in-out both;
+
     position: absolute;
     top: 150px;
     left: 320px;
@@ -25,7 +27,6 @@
             &:hover {
                 background-color: #e6e9ef;
                 border-radius: 4px;
-
             }
         }
     }
