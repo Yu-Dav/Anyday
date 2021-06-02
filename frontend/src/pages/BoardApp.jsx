@@ -34,7 +34,7 @@ class _BoardApp extends Component {
         newBoard.groups.unshift(newGroup)
         this.props.updateBoard(newBoard)
     }
-    
+
     onDragEnd = result => {
         const { destination, source, draggableId, type } = result;
         if (!destination) return;
@@ -70,14 +70,14 @@ class _BoardApp extends Component {
     }
     render() {
         const { currBoard } = this.props
-        if(!currBoard) return <div>loading</div>
+        if (!currBoard) return <div>loading</div>
         return (
             <div className="board-app-container flex">
                 <SidebarApp />
                 <SidebarNav />
                 <div className="container board-container">
                     <BoardHeader board={this.props.currBoard} updateBoard={this.props.updateBoard} />
-                    <BoardCtrlPanel board={this.props.currBoard} addNewGroup={this.addNewGroup} onSetFilter={this.onSetFilter} loadBoard={this.props.loadBoard}/>
+                    <BoardCtrlPanel board={this.props.currBoard} addNewGroup={this.addNewGroup} onSetFilter={this.onSetFilter} loadBoard={this.props.loadBoard} />
 
                     <DragDropContext onDragEnd={this.onDragEnd}>
                         <Droppable droppableId="all-groups" type="group">
@@ -95,6 +95,9 @@ class _BoardApp extends Component {
                         </Droppable>
                     </DragDropContext>
                     <Route path={`${this.props.match.path}/:groupId/:taskId`} render={(props) => {
+                        return <ActivityModal {...props} />
+                    }} />
+                    <Route path={`${this.props.match.path}/activity_log`} render={(props) => {
                         return <ActivityModal {...props} />
                     }} />
                 </div>

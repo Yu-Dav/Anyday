@@ -227,15 +227,17 @@ export const boards = [
                         comments: [
                             {
                                 // popup modal on the side of the screen showing the comments each member left
-                                id: 'ZdPnm',
-                                txt: 'also @yaronb please CR this',
+                                id: 'ZdPnm1',
+                                txt: 'https://www.npmjs.com/package/react-contenteditable',
                                 createdAt: getTime(),
                                 byMember: {
                                     _id: 'u102',
                                     fullname: 'Dafna Bashan',
                                     username: 'Dafna',
                                     imgUrl: 'https://ibb.co/NjbxnJw'
-                                }
+                                },
+                                taskId: 'g1t101',
+                                groupId: 'g101'
                             }
                         ],
                         byMember: {
@@ -278,15 +280,17 @@ export const boards = [
                         ],
                         comments: [
                             {
-                                id: 'ZdPnm',
-                                txt: 'also @yaronb please CR this',
+                                id: 'ZdPnm2',
+                                txt: 'Date range - https://reactdatepicker.com/#example-date-range',
                                 createdAt: getTime(),
                                 byMember: {
                                     _id: 'u103',
                                     fullname: 'Yuval David',
                                     username: 'Yuval',
                                     imgUrl: 'https://i.ibb.co/HPFsFbq/yd.png',
-                                }
+                                },
+                                taskId: 'g1t102',
+                                groupId: 'g101'
                             }
                         ],
                         byMember: {
@@ -329,15 +333,17 @@ export const boards = [
                         ],
                         comments: [
                             {
-                                id: 'ZdPnm',
-                                txt: 'also @yaronb please CR this',
+                                id: 'ZdPnm3',
+                                txt: 'Drag and Drop of tasks - https://www.npmjs.com/package/react-beautiful-dnd',
                                 createdAt: getTime(),
                                 byMember: {
                                     _id: 'u103',
                                     fullname: 'Yuval David',
                                     username: 'Yuval',
                                     imgUrl: 'https://i.ibb.co/HPFsFbq/yd.png'
-                                }
+                                },
+                                taskId: 'g1t103',
+                                groupId: 'g101'
                             }
                         ],
                         byMember: {
@@ -399,7 +405,7 @@ export const boards = [
                         ],
                         comments: [
                             {
-                                id: 'ZdPnm',
+                                id: 'ZdPnm4',
                                 txt: 'also @yaronb please CR this',
                                 createdAt: getTime(),
                                 byMember: {
@@ -407,7 +413,9 @@ export const boards = [
                                     fullname: 'Yuval David',
                                     username: 'Yuval',
                                     imgUrl: 'https://i.ibb.co/HPFsFbq/yd.png'
-                                }
+                                },
+                                taskId: 'g2t101',
+                                groupId: 'g102'
                             }
                         ],
                         byMember: {
@@ -456,7 +464,7 @@ export const boards = [
                         ],
                         comments: [
                             {
-                                id: 'ZdPnm',
+                                id: 'ZdPnm5',
                                 txt: 'also @yaronb please CR this',
                                 createdAt: getTime(),
                                 byMember: {
@@ -464,7 +472,9 @@ export const boards = [
                                     fullname: 'Dafna Bashan',
                                     username: 'Dafna',
                                     imgUrl: 'https://i.ibb.co/qsVBFcb/db.png'
-                                }
+                                },
+                                taskId:'g2t102',
+                                groupId: 'g2t102'
                             }
                         ],
                         byMember: {
@@ -507,7 +517,7 @@ export const boards = [
                         ],
                         comments: [
                             {
-                                id: 'ZdPnm',
+                                id: 'ZdPnm6',
                                 txt: 'also @yaronb please CR this',
                                 createdAt: getTime(),
                                 byMember: {
@@ -515,7 +525,9 @@ export const boards = [
                                     fullname: 'Basya coding',
                                     username: 'Basya',
                                     imgUrl: 'https://i.ibb.co/S6XczhC/qb.png'
-                                }
+                                },
+                                taskId:'g2t103',
+                                groupId:'g2t103'
                             }
                         ],
                         byMember: {
@@ -571,7 +583,7 @@ export const boards = [
                         ],
                         comments: [
                             {
-                                id: 'ZdPnm',
+                                id: 'ZdPnm7',
                                 txt: 'also @yaronb please CR this',
                                 createdAt: getTime(),
                                 byMember: {
@@ -579,7 +591,9 @@ export const boards = [
                                     fullname: 'Basya coding',
                                     username: 'Basya',
                                     imgUrl: 'https://i.ibb.co/S6XczhC/qb.png'
-                                }
+                                },
+                                taskId: 'g3t101',
+                                groupId: 'g103'
                             }
                         ],
                         byMember: {
@@ -595,17 +609,78 @@ export const boards = [
         activities: [
             {
                 id: 'a101',
-                txt: 'Changed Color',
+                type: 'Changed title',
                 createdAt: getTime(),
                 byMember: {
                     _id: 'u104',
-                    fullname: 'Basya coding',
+                    fullname: 'Basya Coding',
                     username: 'Basya',
                     imgUrl: 'https://i.ibb.co/S6XczhC/qb.png'
                 },
                 task: {
-                    id: 'c101',
-                    title: 'Replace Logo'
+                    id: 'g3t101',
+                    title: 'git + initial files setup + initial push/pull'
+                },
+                group: {
+                    id: 'g102',
+                    title: 'UX/UI'
+                }
+            },
+            {
+                id: 'a102',
+                type: 'Changed status',
+                createdAt: getTime(),
+                byMember: {
+                    _id: 'u104',
+                    fullname: 'Basya Coding',
+                    username: 'Basya',
+                    imgUrl: 'https://i.ibb.co/S6XczhC/qb.png'
+                },
+                task: {
+                    id: 'g3t101',
+                    title: 'git + initial files setup + initial push/pull'
+                },
+                group: {
+                    id: 'g102',
+                    title: 'UX/UI'
+                }
+            },
+            {
+                id: 'a103',
+                type: 'Deleted',
+                createdAt: getTime(),
+                byMember: {
+                    _id: 'u103',
+                    fullname: 'Yuval David',
+                    username: 'Yuval',
+                    imgUrl: 'https://i.ibb.co/HPFsFbq/yd.png'
+                },
+                task: {
+                    id: 'g3t106',
+                    title: 'git + initial files setup + initial push/pull'
+                },
+                group: {
+                    id: 'g101',
+                    title: 'Features'
+                }
+            },
+            {
+                id: 'a104',
+                type: 'Created',
+                createdAt: getTime(),
+                byMember: {
+                    _id: 'u103',
+                    fullname: 'Yuval David',
+                    username: 'Yuval',
+                    imgUrl: 'https://i.ibb.co/HPFsFbq/yd.png'
+                },
+                task: {
+                    id: 'g1t103',
+                    title: 'Drag and Drop'
+                },
+                group: {
+                    id: 'g101',
+                    title: 'Features'
                 }
             }
         ]

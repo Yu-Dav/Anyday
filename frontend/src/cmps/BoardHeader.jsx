@@ -30,7 +30,7 @@ export class BoardHeader extends Component {
 
                         <button className="btn">Last seen</button>
                         <button className="btn">Invite / 3</button>
-                        <button className="btn">Activity</button>
+                        <button className="btn" onClick={()=> window.location.hash = `/board/${board._id}/activity_log`}>Activity</button>
                     </div>
                 </div>
                 <div className="full subtitle-container">

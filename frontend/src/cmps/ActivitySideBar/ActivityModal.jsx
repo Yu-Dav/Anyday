@@ -13,12 +13,15 @@ export class _ActivityModal extends Component {
         content: 'updates'
     }
 
-    componentDidMount() {
-        this.loadTask()
+    async componentDidMount() {
+        const boardId = 'b101'
+        await this.props.loadBoard(boardId)
+        const taskId = this.props.match.params.taskId
+        if (!taskId) return
+        this.loadTask(taskId)
     }
 
-    loadTask = async () => {
-        const taskId = this.props.match.params.taskId
+    loadTask = async (taskId) => {
         const groupId = this.props.match.params.groupId
         const { currBoard } = this.props
         console.log('props', this.props);
@@ -37,13 +40,15 @@ export class _ActivityModal extends Component {
         this.onUpdateTask(updatedTask)
     }
 
-    onUpdateTask = (updatedTask)=>{
+    onUpdateTask = (updatedTask, groupId = null) => {
         const { currBoard } = this.props
         const newBoard = { ...this.props.currBoard }
         const taskId = this.props.match.params.taskId
-        const groupId = this.props.match.params.groupId
+        if(!groupId) groupId = this.props.match.params.groupId
+        console.log(groupId, newBoard);
         const groupIdx = newBoard.groups.findIndex(group => group.id === groupId)
-        const group = currBoard.groups.find(group => group.id === groupId)
+        const group = newBoard.groups.find(group => group.id === groupId)
+        console.log(group);
         const taskIdx = group.tasks.findIndex(task => task.id === taskId)
         newBoard.groups[groupIdx].tasks.splice(taskIdx, 1, updatedTask)
         this.props.updateBoard(newBoard)
@@ -52,22 +57,23 @@ export class _ActivityModal extends Component {
     render() {
         const { content, task } = this.state
         const { currBoard } = this.props
-        if (!task) return <div className="activity-modal">loading</div>
+        // if (!task) return <div className="activity-modal">loading</div>
         return (
             <div className="activity-modal">
                 <div onClick={() => window.location.hash = `/board/${currBoard._id}`}>X</div>
-                <div className="flex">
-                    <h1>title</h1>
-                    <EditableCmp value={task.title} updateFunc={this.onUpdateTaskTitle}/>
-                    <span>avatars</span>
-                </div>
+                {!task && <div><h2>{currBoard.title}</h2></div>}
+                {task &&
+                    <div className="flex">
+                        <EditableCmp value={task.title} updateFunc={this.onUpdateTaskTitle} />
+                        <span>avatars</span>
+                    </div>}
                 <div>
                     <span onClick={() => { this.setState({ ...this.state, content: 'updates' }) }}>Updates</span>
                     <span onClick={() => { this.setState({ ...this.state, content: 'activity' }) }}>Activity Log</span>
                 </div>
                 <div>
-                    {content === 'updates' && <Updates task={task} onUpdateTask={this.onUpdateTask}/>}
-                    {content === 'activity' && <ActivityLog task={task} />}
+                    {content === 'updates' && <Updates task={task} board={currBoard} onUpdateTask={this.onUpdateTask} />}
+                    {content === 'activity' && <ActivityLog task={task} board={currBoard} />}
                 </div>
             </div>
         )
