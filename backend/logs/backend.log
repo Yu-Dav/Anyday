@@ -362,3 +362,7 @@
 02/06/2021, 20:15:06 - DEBUG - Session ID is | -6leg1yqE-YWc7gFtOuz0pDBHonRClDM 
 02/06/2021, 20:17:17 - DEBUG - auth.service - login with username: Noga (sid: YUf2s6IgP0RykRdskdK_MF36ijavSYBV)
 02/06/2021, 20:17:18 - DEBUG - Session ID is | 7PvRFQhZlZBegJ8Tskof1Z9YdlobQgz8 
+02/06/2021, 20:31:57 - DEBUG - Session ID is | juqjc5hXBDUESmyBaAlRtikod1z-wTbO 
+02/06/2021, 20:31:58 - DEBUG - Session ID is | 1QIwqADrs2EtG7QKPna5jdktmRCdzW_- 
+02/06/2021, 20:32:05 - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 20:32:05 - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)

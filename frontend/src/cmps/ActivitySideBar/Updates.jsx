@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { utilService } from '../../services/utilService'
 import { UpdatePreview } from './UpdatePreview'
 
 export class Updates extends Component {
@@ -7,19 +8,67 @@ export class Updates extends Component {
         comment: ''
     }
 
-    onAddComment = () => {
+    onAddComment = (ev) => {
         ///todo
-        // const newComment = this.state.comment
-        // const { task } = this.props
-        // task.comments.unshift(newComment)
+        ev.preventDefault()
+        const newComment = {
+            id: utilService.makeId(),
+            txt: this.state.comment,
+            createdAt: Date.now(),
+            //change to logged in user
+            byMember: {
+                _id: 'u102',
+                fullname: 'Dafna Bashan',
+                username: 'Dafna',
+                imgUrl: '../assets/imgs/db.png',
+            },
+        }
+        const { task } = this.props
+        task.comments.unshift(newComment)
+        this.props.onUpdateTask(task)
+        this.setState({ comment: '' })
     }
 
-    onUpdateComment = () => {
-
+    onUpdateComment = ({ target }) => {
+        const value = target.innerText
+        if (!value) value = 'New task'
+        let { task, board } = this.props
+        const commentId = target.dataset.id
+        if (!task) {
+            task = board.groups.find(group => group.tasks.find(task => task.comments.find(comment => comment.id === commentId)))
+        }
+        const commentIdx = task.comments.findIndex(comment => comment.id === commentId)
+        const updatedComment = { ...task.comments[commentIdx], txt: value }
+        task.comments.splice(commentIdx, 1, updatedComment)
+        this.props.onUpdateTask(task)
     }
 
-    onRemoveComment = () => {
+    getTask = (commentId) => {
+        let task
+        this.props.board.groups.forEach(group => {
+            group.tasks.forEach(currTask => {
+                currTask.comments.forEach(comment => {
+                    if (comment.id === commentId && comment.taskId === currTask.id)
+                   {
+                        task = currTask
+                    }
+                })
+            })
+        })
+        return task
+    }
 
+    onRemoveComment = (comment) => {
+        let { task, board } = this.props
+        if (!task) {
+            // task = board.groups.find(group => group.tasks.find(task => task.comments.find(comment => comment.id === commentId)))
+            task = this.getTask(comment.id)
+            console.log(task);
+        }
+        const commentId = comment.id
+        const commentIdx = task.comments.findIndex(comment => comment.id === commentId)
+        task.comments.splice(commentIdx, 1)
+        this.props.onUpdateTask(task, comment.groupId)
     }
 
     handleChange = ({ target }) => {
@@ -28,20 +77,40 @@ export class Updates extends Component {
         this.setState({ ...this.state, [name]: value })
     }
 
+    get boardComments() {
+        const boardComments = []
+        console.log(this.props.board);
+        this.props.board.groups.forEach(group => {
+            group.tasks.forEach(task => {
+                task.comments.forEach(comment => boardComments.push(comment))
+            })
+        })
+        return boardComments
+    }
+
     render() {
-        const { task } = this.props
+        const { task, board } = this.props
         const { comment } = this.state
         console.log('task', task);
-        if (!task) return <div>loading</div>
+        if (!board) return <div>loading</div>
         return (
             <div className="updates">
-                <form onSubmit={this.onAddComment}>
-                    <input type="text" name="comment" placeholder="Write an update" value={comment} onChange={this.handleChange} />
-                    <button>Update</button>
-                </form>
-                <div className="updates-list">
-                    {task.comments.map(comment => <UpdatePreview key={comment.id} comment={comment} onUpdateComment={this.onUpdateComment} onRemoveComment={this.onRemoveComment} />)}
-                </div>
+                {!task &&
+                    <div className="updates-list">
+                        render all comments in the board
+                        {this.boardComments.map(comment => <UpdatePreview key={comment.id} comment={comment} onUpdateComment={this.onUpdateComment} onRemoveComment={this.onRemoveComment} />)}
+                    </div>
+                }
+                {task &&
+                    <React.Fragment>
+                        <form onSubmit={this.onAddComment}>
+                            <input type="text" name="comment" placeholder="Write an update" value={comment} onChange={this.handleChange} />
+                            <button>Update</button>
+                        </form>
+                        <div className="updates-list">
+                            {task.comments.map(comment => <UpdatePreview key={comment.id} comment={comment} onUpdateComment={this.onUpdateComment} onRemoveComment={this.onRemoveComment} />)}
+                        </div>
+                    </React.Fragment>}
             </div>
         )
     }

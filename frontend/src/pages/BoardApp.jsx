@@ -117,6 +117,9 @@ class _BoardApp extends Component {
                     <Route path={`${this.props.match.path}/:groupId/:taskId`} render={(props) => {
                         return <ActivityModal {...props} />
                     }} />
+                    <Route path={`${this.props.match.path}/activity_log`} render={(props) => {
+                        return <ActivityModal {...props} />
+                    }} />
                 </div>
             </div>
         )
