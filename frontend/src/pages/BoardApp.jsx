@@ -18,7 +18,7 @@ import { ActivityModal } from '../cmps/ActivitySideBar/ActivityModal';
 class _BoardApp extends Component {
 
     componentDidMount() {
-        const boardId = '60b65fef19a5e8e76413c787'
+        const boardId = 'b101'
         this.props.loadBoard(boardId)
     }
     addNewGroup = () => {

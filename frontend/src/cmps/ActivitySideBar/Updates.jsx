@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { utilService } from '../../services/utilService'
 import { UpdatePreview } from './UpdatePreview'
 
 export class Updates extends Component {
@@ -9,7 +10,17 @@ export class Updates extends Component {
 
     onAddComment = () => {
         ///todo
-        // const newComment = this.state.comment
+        const newComment = {
+            id: utilService.makeId(),
+            txt: this.state.comment,
+            createdAt: getTime(),
+            byMember: {
+                _id: 'u102',
+                fullname: 'Dafna Bashan',
+                username: 'Dafna',
+                imgUrl: '../assets/imgs/db.png',
+            },
+        },
         // const { task } = this.props
         // task.comments.unshift(newComment)
     }
