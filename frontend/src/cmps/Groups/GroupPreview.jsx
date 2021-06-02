@@ -7,7 +7,7 @@ import { Colors } from '../Colors'
 import { Droppable, Draggable } from 'react-beautiful-dnd';
 
 import { GroupMenu } from './GroupMenu'
-// import {ReactComponent as dropDownArrow} from '../../assets/imgs/dropDownArrow.svg'
+
 
 export function GroupPreview({ group, board, updateBoard, index }) {
     const { tasks } = group

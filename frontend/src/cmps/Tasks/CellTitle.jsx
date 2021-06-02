@@ -35,10 +35,10 @@ export class CellTitle extends Component {
 
             <div className="cell title flex">
                 {/* cell title + btn to open chat */}
-                <Link to={`/board/${board._id}/${group.id}/${id}`}>Updates</Link>
                 <i className="fas fa-trash remove-task" onClick={this.onRemoveTask}></i>
                 {/* <div className="remove-task" onClick={this.onRemoveTask}>X</div> */}
                 <EditableCmp className="title" name="title" value={title} updateFunc={this.onUpdateTaskTitle} />
+                <Link to={`/board/${board._id}/${group.id}/${id}`}><i className="fa comment"></i></Link>
             </div>
 
 

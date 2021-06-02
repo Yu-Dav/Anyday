@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { ClickAwayListener } from '@material-ui/core'
 import { Colors } from '../Colors'
 
+import { ReactComponent as DropDownGroup } from '../../assets/imgs/svg/dropDownGroup.svg'
+
 export class GroupMenu extends Component {
 
     state = {
@@ -45,8 +47,9 @@ export class GroupMenu extends Component {
 
         return (
             <ClickAwayListener onClickAway={this.handleClickAway}>
-                <div className="group-modal-choose" onClick={this.onOpenSelector}>^
-                <div>
+                <div className="group-modal-choose" onClick={this.onOpenSelector}>
+              <DropDownGroup/>
+                    <div>
                         {isExpanded && <div className="fade-in group-modal absolute">
                             <div onClick={this.onDeleteGroup}>Delete group</div>
                             <div onClick={this.onSelectChange}>Choose color</div>
@@ -63,3 +66,5 @@ export class GroupMenu extends Component {
         )
     }
 }
+
+

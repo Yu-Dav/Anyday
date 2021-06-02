@@ -1,4 +1,5 @@
 .timeline {
+    .date-picker-cmp,
     .date-picker,
     .no-date,
     .set-dates,
@@ -13,5 +14,8 @@
         line-height: 22px;
         border-radius: 11px;
         margin: 0 auto;
+    }
+    .date-picker-cmp{
+        background-color: transparent;
     }
 }

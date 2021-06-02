@@ -34,13 +34,10 @@
     .label {
         color: #ffffff;
         .modal-container{
-            // animation: fade-in 0.3s ease-in-out both;
-            top: -78px;
+            top: -98px;
         }
         .floating-label-select {
             animation: fade-in 0.3s ease-in-out both;
-            // animation: fade-out 0.5s ease-in-out both;
-            
             z-index: 1;
             position: absolute;
             color: #ffffff;
@@ -59,6 +56,8 @@
     }
     .cell-tag-container{
         width: 142px;
+        position: relative;
+      
     }
 
     .tag-container {
@@ -110,16 +109,7 @@
     width: 142px;
 }
 
-.fas.close::after {
-    content: "\f057";
-}
 
-.fas.close {
-    opacity: 0;
-    &:hover {
-        opacity: 0.5;
-    }
-}
 
 .label {
     width: 113px;
@@ -134,10 +124,9 @@
 }
 
 
-
 .triangle-with-shadow {
    width: 100px;
-   height: 100px;
+   height: 97px;
    overflow: hidden;
    box-shadow: 0 16px 10px -17px #00000052;
 }
@@ -157,5 +146,63 @@
 
 .triangle-with-shadow:hover, .triangle-with-shadow:hover:after {
    box-shadow: none;
+}
+
+ //see if can replace with 1 modal for all
+.tag-options{
+    animation: fade-in 0.3s ease-in-out both;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 8px 16px 0px #00000052;
+    z-index: 1;
+    border-radius: 4px;
+    padding: 16px 11px;
+    top: 36px;
+   
+}
+.fas.close {
+    opacity: 0;
+    &:hover{
+        opacity:1;
+    }
+}
+.fa.comment:hover{
+    color: #0085ff;
+}
+
+.fa.comment::after {
+    content:"\f075";
+    font-size: 24px;
+    color: #c5c7d0;
+}
+
+
+
+
+.tag-option{
+    &:hover{
+        .fas.close {
+            opacity:0.5
+        }
+    }
+}
+.tag-add{
+    margin-bottom: 5px;
+}
+
+.tags-picker-input{
+    width: 130px;
+}
+
+.fas.close::after {
+    content: "\f057";
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a{
+    color: #0085ff;
 }
 
