@@ -14,7 +14,7 @@ export class _ActivityModal extends Component {
     }
 
     async componentDidMount() {
-        const boardId = 'b101'
+        const boardId = '60b7e87419a5e8e764d835fe'
         await this.props.loadBoard(boardId)
         const taskId = this.props.match.params.taskId
         if (!taskId) return
@@ -44,9 +44,10 @@ export class _ActivityModal extends Component {
         const { currBoard } = this.props
         const newBoard = { ...this.props.currBoard }
         const taskId = this.props.match.params.taskId
-        if(!groupId) groupId = this.props.match.params.groupId
+        if (!groupId) groupId = this.props.match.params.groupId
         console.log(groupId, newBoard);
         const groupIdx = newBoard.groups.findIndex(group => group.id === groupId)
+        //group is undefind
         const group = newBoard.groups.find(group => group.id === groupId)
         console.log(group);
         const taskIdx = group.tasks.findIndex(task => task.id === taskId)

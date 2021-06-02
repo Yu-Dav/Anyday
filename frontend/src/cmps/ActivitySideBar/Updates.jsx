@@ -5,8 +5,13 @@ import { UpdatePreview } from './UpdatePreview'
 export class Updates extends Component {
 
     state = {
+        isBoardComments: false,
         comment: ''
     }
+
+    // componentDidMount(){
+    //     if(!this.props.match.params.taskId) this.setState({isBoardComments: true})
+    // }
 
     onAddComment = (ev) => {
         ///todo
@@ -90,14 +95,13 @@ export class Updates extends Component {
 
     render() {
         const { task, board } = this.props
-        const { comment } = this.state
+        const { comment, isBoardComments } = this.state
         console.log('task', task);
         if (!board) return <div>loading</div>
         return (
             <div className="updates">
                 {!task &&
                     <div className="updates-list">
-                        render all comments in the board
                         {this.boardComments.map(comment => <UpdatePreview key={comment.id} comment={comment} onUpdateComment={this.onUpdateComment} onRemoveComment={this.onRemoveComment} />)}
                     </div>
                 }

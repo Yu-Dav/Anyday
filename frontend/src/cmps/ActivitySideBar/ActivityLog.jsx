@@ -10,12 +10,12 @@ export function ActivityLog({task, board}) {
         <div>
            <h1>activities</h1>
            {!task && <div>
-               {board.activities.map(activity => <div className="flex space-between">
+               {board.activities.map(activity => <div key={activity.id} className="flex space-between">
                    <div>{activity.createdAt}</div><div>avatar</div><div>{activity.task.title}</div><div>{activity.type}</div><div>{activity.group.title}</div>
                </div> )}
                </div>}
            {task && <div>
-               {getTaskActivities().map(activity=> <div className="flex space-between">
+               {getTaskActivities().map(activity=> <div key={activity.id} className="flex space-between">
                    <div>{activity.createdAt}</div><div>avatar</div><div>{activity.task.title}</div><div>{activity.type}</div><div>{activity.group.title}</div>  
                </div>)}
                </div>}

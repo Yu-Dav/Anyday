@@ -193,3 +193,12 @@
 01/06/2021, 22:32:04 - INFO - Server is running on port: 3030 
 6/2/2021, 9:16:03 AM - INFO - Server is running on port: 3030 
 6/2/2021, 9:16:46 AM - INFO - Server is running on port: 3030 
+6/2/2021, 11:24:28 PM - INFO - Server is running on port: 3030 
+6/2/2021, 11:24:39 PM - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: 7tntq2N3eX4ve-j1Uqdz1YFxGMo1hYDD)
+6/2/2021, 11:24:39 PM - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: 7tntq2N3eX4ve-j1Uqdz1YFxGMo1hYDD)
+6/2/2021, 11:27:35 PM - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: 22zdgt80n6-rYedSYdwyF6T91cV4mxRp)
+6/2/2021, 11:27:35 PM - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: 22zdgt80n6-rYedSYdwyF6T91cV4mxRp)
+6/2/2021, 11:29:43 PM - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: 22zdgt80n6-rYedSYdwyF6T91cV4mxRp)
+6/2/2021, 11:29:43 PM - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: 22zdgt80n6-rYedSYdwyF6T91cV4mxRp)
+6/2/2021, 11:29:55 PM - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: 22zdgt80n6-rYedSYdwyF6T91cV4mxRp)
+6/2/2021, 11:29:55 PM - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: 22zdgt80n6-rYedSYdwyF6T91cV4mxRp)
