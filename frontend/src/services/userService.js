@@ -1,5 +1,6 @@
 import { storageService } from './asyncStorageService';
 import { httpService } from './httpService';
+import { utilService } from './utilService';
 
 export const userService = {
     login,
@@ -61,5 +62,13 @@ function _saveLocalUser(user) {
 }
 
 function getLoggedinUser() {
-    return JSON.parse(sessionStorage.getItem('loggedinUser'));
+    let user = JSON.parse(sessionStorage.getItem('loggedinUser'));
+    if (!user || !user.length)
+        user = {
+            _id: utilService.makeId(),
+            fullname: 'Guest',
+            username: 'Guest',
+            imgUrl: '../assets/imgs/db.png', // change this to a better photo
+        };
+    return;
 }

@@ -366,3 +366,128 @@
 02/06/2021, 20:31:58 - DEBUG - Session ID is | 1QIwqADrs2EtG7QKPna5jdktmRCdzW_- 
 02/06/2021, 20:32:05 - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
 02/06/2021, 20:32:05 - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 20:32:55 - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 20:32:55 - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 20:33:39 - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 20:33:39 - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 20:34:56 - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 20:34:56 - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 20:35:35 - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 20:35:35 - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 20:44:41 - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 20:44:41 - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 20:45:33 - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 20:45:33 - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 20:46:59 - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 20:46:59 - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 20:47:06 - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 20:47:06 - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 20:47:41 - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 20:47:41 - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 20:48:01 - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 20:48:01 - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 20:49:53 - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 20:49:53 - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 20:49:59 - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 20:49:59 - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 20:50:38 - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 20:50:38 - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 20:51:10 - DEBUG - Session ID is | yhsyDJWUFbD_gXU2f5IPO6An6gZDwg6Z 
+02/06/2021, 20:51:11 - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 20:51:11 - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 20:52:39 - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 20:52:39 - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 20:53:08 - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 20:53:08 - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 20:53:20 - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 20:53:20 - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 20:53:29 - DEBUG - Session ID is | bg224AjBAvhzJQt6MVdkfN5Tds-8wkiH 
+02/06/2021, 20:53:31 - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 20:53:31 - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 20:54:14 - DEBUG - Session ID is | E4z5e7awjzf3EawxNZhmG5JgFjdKjzw8 
+02/06/2021, 20:54:16 - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 20:54:16 - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 20:55:04 - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 20:55:04 - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 20:55:31 - DEBUG - auth.service - login with username: Yuval (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 20:55:31 - DEBUG - Session ID is | fWnx9bqc3Xa0wQ4eM3m3kyd92IAJH-LQ 
+02/06/2021, 20:55:36 - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 20:55:36 - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 20:57:11 - DEBUG - Session ID is | ZIOZVG9p2mh55R29Wth_bS_ZyBprrCNb 
+02/06/2021, 20:57:39 - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 20:57:39 - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 20:57:39 - DEBUG - Session ID is | Otv6qdEtOhtI8erklOFOpWoyyLUNcePJ 
+02/06/2021, 21:00:08 - DEBUG - Session ID is | idyYuQ4nxnuYJRluFRWv_4pbp61Wco5s 
+02/06/2021, 21:00:10 - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 21:00:10 - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 21:00:25 - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: YUf2s6IgP0RykRdskdK_MF36ijavSYBV)
+02/06/2021, 21:00:25 - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: YUf2s6IgP0RykRdskdK_MF36ijavSYBV)
+02/06/2021, 21:00:37 - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 21:00:37 - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 21:01:01 - DEBUG - Session ID is | BpcsEmwTIkd1qjwAMjy4CWyd6Xd6yFg9 
+02/06/2021, 21:01:02 - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: YUf2s6IgP0RykRdskdK_MF36ijavSYBV)
+02/06/2021, 21:01:02 - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: YUf2s6IgP0RykRdskdK_MF36ijavSYBV)
+02/06/2021, 21:01:08 - DEBUG - Session ID is | xE62ix4RERx1J6bjOnzMmRXjVlgty9Iw 
+02/06/2021, 21:01:08 - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: YUf2s6IgP0RykRdskdK_MF36ijavSYBV)
+02/06/2021, 21:01:08 - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: YUf2s6IgP0RykRdskdK_MF36ijavSYBV)
+02/06/2021, 21:01:13 - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 21:01:13 - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 21:01:24 - DEBUG - Session ID is | IKTCwyWLZS0gRA-nHesPyHmCNinsvD3K 
+02/06/2021, 21:01:47 - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 21:01:47 - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 21:01:56 - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 21:01:56 - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 21:17:56 - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 21:17:56 - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 21:21:29 - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 21:21:29 - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 21:21:41 - DEBUG - Session ID is | bcyOJRjJ-ug4FUIeOAX0sRF-B8T7lxux 
+02/06/2021, 21:21:44 - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 21:21:44 - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 21:22:01 - DEBUG - Session ID is | p6oxvLKZHdBcwRB-xwqusnyTKovaYNOK 
+02/06/2021, 21:22:02 - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 21:22:02 - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 21:22:10 - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: YUf2s6IgP0RykRdskdK_MF36ijavSYBV)
+02/06/2021, 21:22:10 - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: YUf2s6IgP0RykRdskdK_MF36ijavSYBV)
+02/06/2021, 21:22:21 - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: YUf2s6IgP0RykRdskdK_MF36ijavSYBV)
+02/06/2021, 21:22:21 - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: YUf2s6IgP0RykRdskdK_MF36ijavSYBV)
+02/06/2021, 21:22:36 - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: YUf2s6IgP0RykRdskdK_MF36ijavSYBV)
+02/06/2021, 21:22:36 - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: YUf2s6IgP0RykRdskdK_MF36ijavSYBV)
+02/06/2021, 22:11:55 - DEBUG - Session ID is | hz4cvQG2alegIBqQa5OTM2-FSXr0gNO9 
+02/06/2021, 22:13:05 - DEBUG - Session ID is | 3EX7al-b9bb2Yoo9IRXgE_dLzFNd0B7U 
+02/06/2021, 22:13:05 - DEBUG - Session ID is | e7GMFVuT76iz7xErEQIx5xhCYWrdiZ-s 
+02/06/2021, 22:13:08 - DEBUG - Session ID is | m9yfPUM50aVRfpPIG9sp_tEddpENueZj 
+02/06/2021, 22:13:08 - DEBUG - Session ID is | 3f7oJFXl4q0tEEroib7W0pdUJO5aJasc 
+02/06/2021, 22:13:22 - DEBUG - Session ID is | nhEt33HH-JqhzSbe9Ov539YChSe_MSAN 
+02/06/2021, 22:13:23 - DEBUG - Session ID is | -AoewbXuGuxneXlF0bJBnWrOcaQdNn32 
+02/06/2021, 22:14:02 - DEBUG - Session ID is | Ye5INj6TtHqw8K1DO_qU2UFGjutyR8Tn 
+02/06/2021, 22:14:02 - DEBUG - Session ID is | 7mCojNdh3J6oEj5esUgu52EO1_-JnF_e 
+02/06/2021, 22:15:27 - DEBUG - Session ID is | tnvHA6P9oRR4-FU1b8i5UmUl1U3gt_jq 
+02/06/2021, 22:19:45 - DEBUG - Session ID is | JPDxKFIrbaNGNmtK81qhNaklhM2KvbyW 
+02/06/2021, 22:20:02 - DEBUG - Session ID is | sP2zcYuqzSCVfs2qWcoSbIUB3NUdNow1 
+02/06/2021, 22:20:39 - DEBUG - Session ID is | _JTBb1O7SghqPEzF_aRH46tVCgBv0RUR 
+02/06/2021, 22:21:12 - DEBUG - Session ID is | dzlVGX6OVeSK_GymHbqyov25UctrBzB5 
+02/06/2021, 22:21:44 - DEBUG - Session ID is | k6pQqvynjku3CI6O4D4zY8JK7x-UwglW 
+02/06/2021, 22:21:44 - DEBUG - Session ID is | 5s6iNlCtpR4n-eNOnjwb74Mi1S10B6MP 
+02/06/2021, 22:21:47 - DEBUG - Session ID is | qf_HV-JmP5S6M16fK1Q3EvUgRLhwNoka 
+02/06/2021, 22:22:48 - DEBUG - Session ID is | vR_ArhuNVhurmUXwYdJeq1cBxOj4kzA9 
+02/06/2021, 22:22:50 - DEBUG - Session ID is | BgPnP8svF9O6Y50kwz1CSmjg8xt3OYYa 
+02/06/2021, 22:22:56 - DEBUG - Session ID is | 9iSoKG0E5XCvPdwN4spjQc0L-juhNAqp 
+02/06/2021, 22:23:08 - DEBUG - Session ID is | XPSD0TymJKFvZGANlUiY3Y0vhoPTfNiV 
+02/06/2021, 22:23:53 - DEBUG - Session ID is | o8jOexvPZEtZ_fdelSBTbaOOll3lvi7j 
+02/06/2021, 22:23:56 - DEBUG - Session ID is | BJwfvY50mdqazHJB2H7YhIg5EzxN32gv 
+02/06/2021, 22:24:02 - DEBUG - Session ID is | 5MXnEcNPxKO2wMJmtfSzQfn58KE-XfWV 
+02/06/2021, 22:25:30 - DEBUG - Session ID is | PWeX2g9LYvULsVBCcTdxQu7It3sq2M6C 
+02/06/2021, 22:25:55 - DEBUG - Session ID is | 0NGpNQL2AF3nB_z-A0NLilmmPxDXb5Tn 
+02/06/2021, 22:26:41 - DEBUG - Session ID is | K8WyVgGmByoZKOvQLgdJFVmKnOeuLB_Z 
+02/06/2021, 22:27:17 - DEBUG - Session ID is | CAOEoozcvw6-jXeGua3UE2Ag1YBnabfz 
+02/06/2021, 22:27:18 - DEBUG - Session ID is | mGHG-T-lIgp8Pzn7WdI-wd6XGpRBp5hD 
+02/06/2021, 22:27:30 - DEBUG - Session ID is | eWh1QHWMZcd8qiZ5AnBK7CQaGvoM5Ko1 
+02/06/2021, 22:27:55 - DEBUG - Session ID is | axIFqv44VlSYEjVmFdMU44kypm5nMzQS 
+02/06/2021, 22:28:55 - DEBUG - Session ID is | FxjEQXWLsX06cLkTzlDwDCO0Nf3c_A38 
+02/06/2021, 22:32:57 - DEBUG - Session ID is | ouDbjdHRZntB0srLjFAUE5Q_CTssKb3r 
+02/06/2021, 22:32:57 - DEBUG - Session ID is | QKFrueP9qQw0OtNbpKT1zqUr7xvjrDhR 
+02/06/2021, 22:33:05 - DEBUG - Session ID is | E4adZKJSXVGl52_rut4xXAUhGHjfWUTN 
+02/06/2021, 22:33:05 - DEBUG - Session ID is | T3LsfPeaF4IH0p1kYa_F0oz_Kc0PMy_q 
+02/06/2021, 22:33:39 - DEBUG - Session ID is | MY935JFuVuXj7XjvljUUcdNyy92WXLVk 
+02/06/2021, 22:33:40 - DEBUG - Session ID is | iIq4379Wuxs-UCYkb_Yfknb7-sTukGzN 

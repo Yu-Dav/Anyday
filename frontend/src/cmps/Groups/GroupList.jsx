@@ -2,7 +2,7 @@ import React from 'react'
 import { GroupPreview } from './GroupPreview'
 import { Droppable } from 'react-beautiful-dnd';
 
-export function GroupList({ groups, board, updateBoard }) {
+export function GroupList({ groups, board, updateBoard, currUser }) {
 
 
     if (!groups || !groups.length) return <p>Loading...</p>
@@ -13,7 +13,7 @@ export function GroupList({ groups, board, updateBoard }) {
         < div className="groups-container">
 
             {groups.map((group, index) => <GroupPreview board={board} key={group.id} group={group}
-                updateBoard={updateBoard} index={index} />)}
+                updateBoard={updateBoard} index={index} currUser={currUser} />)}
 
 
         </div>

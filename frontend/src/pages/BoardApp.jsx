@@ -18,19 +18,20 @@ import { ActivityModal } from '../cmps/ActivitySideBar/ActivityModal';
 // import { ChipCmp } from '../cmps/ChipCmp';
 
 class _BoardApp extends Component {
+    state = {
+        currUser: null
+    }
 
     componentDidMount() {
-        const boardId = '60b65fef19a5e8e76413c787'
+        const boardId = '60b7e87419a5e8e764d835fe'
         // const boardId = 'b101'
         this.props.loadBoard(boardId)
         const user = userService.getLoggedinUser()
         socketService.setup()
         socketService.on('board loaded', () => {
-            console.log('line 29 I got to this spot!')
             this.props.loadBoard(boardId)
         })
         socketService.emit('join board', boardId)
-        // event loadBoard that listens to loadboard. 
         this.setState({ ...this.state, currUser: user })
     }
     componentWillUnmount() {
@@ -53,7 +54,7 @@ class _BoardApp extends Component {
         socketService.emit('board updated', newBoard._id)
     }
 
-     onDragEnd = async (result) => {
+    onDragEnd = async (result) => {
         const { destination, source, draggableId, type } = result;
         if (!destination) return;
         if (
@@ -90,6 +91,7 @@ class _BoardApp extends Component {
     }
     render() {
         const { currBoard } = this.props
+        const { currUser } = this.state
         if (!currBoard) return <div>loading</div>
         return (
             <div className="board-app-container flex">
@@ -107,8 +109,8 @@ class _BoardApp extends Component {
                                     ref={provided.innerRef}
                                     {...provided.droppableProps} >
                                     <GroupList
-
-                                        board={currBoard} groups={currBoard.groups} key={currBoard._id} updateBoard={this.props.updateBoard} />
+                                        board={currBoard} groups={currBoard.groups} key={currBoard._id} 
+                                        updateBoard={this.props.updateBoard} currUser={currUser}/>
                                     {provided.placeholder}
                                 </div>
                             )}

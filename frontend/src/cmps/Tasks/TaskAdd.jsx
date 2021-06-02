@@ -9,6 +9,7 @@ export class TaskAdd extends Component {
         txt: ''
     }
     onAddTask = async ({ target }) => {
+        console.log ('var =',this.props.currUser)
         const value = target.value
         if (!value) return
         const newTask = {

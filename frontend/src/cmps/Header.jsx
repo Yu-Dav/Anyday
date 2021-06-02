@@ -9,7 +9,7 @@ export function Header() {
                         <ul className="flex clean-list">
                             <li><NavLink to="/login" >Login</NavLink></li>
                             <li><NavLink to="/signup" >Signup</NavLink></li>
-                            <li className="try-as-guest"><NavLink to="/board/60b65fef19a5e8e76413c787" >Try as guest</NavLink></li>
+                            <li className="try-as-guest"><NavLink to="/board/60b7e7d319a5e8e764d808cb" >Try as guest</NavLink></li>
                         </ul>
                     </nav>
                 </div>
