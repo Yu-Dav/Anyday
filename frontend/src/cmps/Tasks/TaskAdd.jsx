@@ -1,15 +1,14 @@
 import React, { Component } from 'react'
 import { utilService } from '../../services/utilService';
+import { socketService } from '../../services/socketService';
 // import { EditableCmp } from '../EditableCmp'
 
 
 export class TaskAdd extends Component {
-
     state = {
         txt: ''
     }
-
-    onAddTask = ({ target }) => {
+    onAddTask = async ({ target }) => {
         const value = target.value
         if (!value) return
         const newTask = {
@@ -41,14 +40,12 @@ export class TaskAdd extends Component {
         const newBoard = { ...this.props.board }
         const groupId = this.props.group.id
         const groupIdx = newBoard.groups.findIndex(group => group.id === groupId)
-        console.log(groupId, groupIdx);
         if (!newBoard.groups[groupIdx].tasks || !newBoard.groups[groupIdx].tasks.length) newBoard.groups[groupIdx].tasks = [newTask]
         else newBoard.groups[groupIdx].tasks.push(newTask)
-        this.props.updateBoard(newBoard)
+        await this.props.updateBoard(newBoard)
+        await socketService.emit('board updated', newBoard._id)
         this.setState({ txt: '' })
     }
-
-
     handleUpdate = (ev) => {
         if (ev.key === 'Enter' || ev.type === 'blur') {
             this.setState({ isEditing: false },

@@ -21,7 +21,7 @@ export const boards = [
         createdBy: {
             _id: 'u102',
             fullname: 'Abi Abambi',
-            imgUrl: 'http://some-img',
+            imgUrl: 'http://some-img'
         },
 
         colors: [
@@ -113,78 +113,76 @@ export const boards = [
         ],
 
         tags: [
-            // empty array at first, then once adding a label in a task it will be updated here and will
-            //  be selectable in other tasks/groups
             {
                 id: 't101',
                 title: '#starting',
-                color: '#61bd4f',
+                color: '#61bd4f'
             },
             {
                 id: 't102',
                 title: '#problem',
-                color: '#e2445c',
+                color: '#e2445c'
             },
             {
                 id: 't103',
                 title: '#development',
-                color: '#579bfc',
+                color: '#579bfc'
             },
             {
                 id: 't104',
                 title: '#production',
-                color: '#a25ddc',
-            },
+                color: '#a25ddc'
+            }
         ],
 
         priorityLabels: [
             {
                 id: 'pl1',
                 title: 'High',
-                color: '#e2445c',
+                color: '#e2445c'
             },
             {
                 id: 'pl2',
                 title: 'Medium',
-                color: '#a25ddc',
+                color: '#a25ddc'
             },
             {
                 id: 'pl3',
                 title: 'Low',
-                color: '#579bfc',
+                color: '#579bfc'
             },
             {
                 id: 'pl4',
                 title: '',
-                color: '#c4c4c4',
-            },
+                color: '#c4c4c4'
+            }
         ],
 
         statusLabels: [
             {
                 id: 'sl1',
                 title: 'Done',
-                color: '#00c875',
+                color: '#00c875'
             },
             {
                 id: 'sl2',
                 title: 'Working on it',
-                color: '#fdab3d',
+                color: '#fdab3d'
             },
             {
                 id: 'sl3',
                 title: 'Stuck',
-                color: '#ff642e',
+                color: '#ff642e'
             },
             {
                 id: 'sl4',
                 title: 'On hold',
-                color: '#175a63',
+                color: '#175a63'
             },
             {
                 id: 'sl5',
                 title: '',
-                color: '#c4c4c4',
+                color: '#c4c4c4'
             },
         ],
 
@@ -219,34 +217,35 @@ export const boards = [
                             color: '#e2445c',
                         },
                         members: [
-                            // TASK members
                             {
                                 _id: 'u102',
                                 fullname: 'Dafna Bashan',
                                 username: 'Dafna',
-                                imgUrl: '../assets/imgs/db.png',
+                                imgUrl: 'https://i.ibb.co/qsVBFcb/db.png',
                             },
                         ],
                         comments: [
                             {
                                 // popup modal on the side of the screen showing the comments each member left
-                                id: 'ZdPnm',
-                                txt: 'also @yaronb please CR this',
+                                id: 'ZdPnm1',
+                                txt: 'https://www.npmjs.com/package/react-contenteditable',
                                 createdAt: getTime(),
                                 byMember: {
                                     _id: 'u102',
                                     fullname: 'Dafna Bashan',
                                     username: 'Dafna',
-                                    imgUrl: '../assets/imgs/db.png',
+                                    imgUrl: 'https://ibb.co/NjbxnJw'
                                 },
-                            },
+                                taskId: 'g1t101',
+                                groupId: 'g101'
+                            }
                         ],
                         byMember: {
                             _id: 'u102',
                             fullname: 'Dafna Bashan',
                             username: 'Dafna',
-                            imgUrl: '../assets/imgs/db.png',
-                        },
+                            imgUrl: 'https://i.ibb.co/qsVBFcb/db.png'
+                        }
                     },
                     {
                         id: 'g1t102',
@@ -258,48 +257,48 @@ export const boards = [
                             {
                                 id: 't101',
                                 title: '#starting',
-                                color: '#61bd4f',
-                            },
+                                color: '#61bd4f'
+                            }
                         ],
                         status: {
                             id: 'sl4',
                             title: 'On hold',
-                            color: '#175a63',
+                            color: '#175a63'
                         },
                         priority: {
                             id: 'pl3',
                             title: 'Low',
-                            color: '#579bfc',
+                            color: '#579bfc'
                         },
                         members: [
-                            // TASK members
                             {
                                 _id: 'u103',
                                 fullname: 'Yuval David',
                                 username: 'Yuval',
-                                imgUrl: '../assets/imgs/yd.png',
+                                imgUrl: 'https://i.ibb.co/HPFsFbq/yd.png',
                             },
                         ],
                         comments: [
                             {
-                                // popup modal on the side of the screen showing the comments each member left
-                                id: 'ZdPnm',
-                                txt: 'also @yaronb please CR this',
+                                id: 'ZdPnm2',
+                                txt: 'Date range - https://reactdatepicker.com/#example-date-range',
                                 createdAt: getTime(),
                                 byMember: {
                                     _id: 'u103',
                                     fullname: 'Yuval David',
                                     username: 'Yuval',
-                                    imgUrl: '../assets/imgs/yd.png',
+                                    imgUrl: 'https://i.ibb.co/HPFsFbq/yd.png',
                                 },
-                            },
+                                taskId: 'g1t102',
+                                groupId: 'g101'
+                            }
                         ],
                         byMember: {
                             _id: 'u103',
                             fullname: 'Yuval David',
                             username: 'Yuval',
-                            imgUrl: '../assets/imgs/yd.png',
-                        },
+                            imgUrl: 'https://i.ibb.co/HPFsFbq/yd.png'
+                        }
                     },
                     {
                         id: 'g1t103',
@@ -311,49 +310,49 @@ export const boards = [
                             {
                                 id: 't103',
                                 title: '#development',
-                                color: '#61bd4f',
-                            },
+                                color: '#61bd4f'
+                            }
                         ],
                         status: {
                             id: 'sl2',
                             title: 'Working on it',
-                            color: '#fdab3d',
+                            color: '#fdab3d'
                         },
                         priority: {
                             id: 'pl2',
                             title: 'Medium',
-                            color: '#a25ddc',
+                            color: '#a25ddc'
                         },
                         members: [
-                            // TASK members
                             {
                                 _id: 'u103',
                                 fullname: 'Yuval David',
                                 username: 'Yuval',
-                                imgUrl: '../assets/imgs/yd.png',
-                            },
+                                imgUrl: 'https://i.ibb.co/HPFsFbq/yd.png'
+                            }
                         ],
                         comments: [
                             {
-                                // popup modal on the side of the screen showing the comments each member left
-                                id: 'ZdPnm',
-                                txt: 'also @yaronb please CR this',
+                                id: 'ZdPnm3',
+                                txt: 'Drag and Drop of tasks - https://www.npmjs.com/package/react-beautiful-dnd',
                                 createdAt: getTime(),
                                 byMember: {
                                     _id: 'u103',
                                     fullname: 'Yuval David',
                                     username: 'Yuval',
-                                    imgUrl: '../assets/imgs/yd.png',
+                                    imgUrl: 'https://i.ibb.co/HPFsFbq/yd.png'
                                 },
-                            },
+                                taskId: 'g1t103',
+                                groupId: 'g101'
+                            }
                         ],
                         byMember: {
                             _id: 'u103',
                             fullname: 'Yuval David',
                             username: 'Yuval',
-                            imgUrl: '../assets/imgs/yd.png',
-                        },
-                    },
+                            imgUrl: 'https://i.ibb.co/HPFsFbq/yd.png'
+                        }
+                    }
                 ],
             },
             {
@@ -371,60 +370,60 @@ export const boards = [
                             {
                                 id: 't101',
                                 title: '#starting',
-                                color: '#61bd4f',
-                            },
+                                color: '#61bd4f'
+                            }
                         ],
                         status: {
                             id: 'sl2',
                             title: 'Working on it',
-                            color: '#fdab3d',
+                            color: '#fdab3d'
                         },
                         priority: {
                             id: 'pl2',
                             title: 'Medium',
-                            color: '#a25ddc',
+                            color: '#a25ddc'
                         },
                         members: [
-                            // TASK members
                             {
                                 _id: 'u101',
                                 fullname: 'Noga Jacobi',
                                 username: 'Noga',
-                                imgUrl: '../assets/imgs/nj.png',
+                                imgUrl: 'https://i.ibb.co/qFwz63W/nj.png'
                             },
                             {
                                 _id: 'u102',
                                 fullname: 'Dafna Bashan',
                                 username: 'Dafna',
-                                imgUrl: '../assets/imgs/db.png',
+                                imgUrl: 'https://i.ibb.co/qsVBFcb/db.png'
                             },
                             {
                                 _id: 'u103',
                                 fullname: 'Yuval David',
                                 username: 'Yuval',
-                                imgUrl: '../assets/imgs/yd.png',
+                                imgUrl: 'https://i.ibb.co/HPFsFbq/yd.png'
                             }
                         ],
                         comments: [
                             {
-                                // popup modal on the side of the screen showing the comments each member left
-                                id: 'ZdPnm',
+                                id: 'ZdPnm4',
                                 txt: 'also @yaronb please CR this',
                                 createdAt: getTime(),
                                 byMember: {
                                     _id: 'u103',
                                     fullname: 'Yuval David',
                                     username: 'Yuval',
-                                    imgUrl: '../assets/imgs/yd.png',
-                                }
-                            },
+                                    imgUrl: 'https://i.ibb.co/HPFsFbq/yd.png'
+                                },
+                                taskId: 'g2t101',
+                                groupId: 'g102'
+                            }
                         ],
                         byMember: {
                             _id: 'u103',
                             fullname: 'Yuval David',
                             username: 'Yuval',
-                            imgUrl: '../assets/imgs/yd.png',
-                        },
+                            imgUrl: 'https://i.ibb.co/HPFsFbq/yd.png'
+                        }
                     },
                     {
                         id: 'g2t102',
@@ -436,54 +435,54 @@ export const boards = [
                             {
                                 id: 't101',
                                 title: '#starting',
-                                color: '#61bd4f',
-                            },
+                                color: '#61bd4f'
+                            }
                         ],
                         status: {
                             id: 'sl2',
                             title: 'Working on it',
-                            color: '#fdab3d',
+                            color: '#fdab3d'
                         },
                         priority: {
                             id: 'pl1',
                             title: 'High',
-                            color: '#e2445c',
+                            color: '#e2445c'
                         },
                         members: [
-                            // TASK members
                             {
                                 _id: 'u101',
                                 fullname: 'Noga Jacobi',
                                 username: 'Noga',
-                                imgUrl: '../assets/imgs/nj.png',
+                                imgUrl: 'https://i.ibb.co/qFwz63W/nj.png'
                             },
                             {
                                 _id: 'u102',
                                 fullname: 'Dafna Bashan',
                                 username: 'Dafna',
-                                imgUrl: '../assets/imgs/db.png',
+                                imgUrl: 'https://i.ibb.co/qsVBFcb/db.png'
                             }
                         ],
                         comments: [
                             {
-                                // popup modal on the side of the screen showing the comments each member left
-                                id: 'ZdPnm',
+                                id: 'ZdPnm5',
                                 txt: 'also @yaronb please CR this',
                                 createdAt: getTime(),
                                 byMember: {
                                     _id: 'u102',
                                     fullname: 'Dafna Bashan',
                                     username: 'Dafna',
-                                    imgUrl: '../assets/imgs/db.png',
+                                    imgUrl: 'https://i.ibb.co/qsVBFcb/db.png'
                                 },
-                            },
+                                taskId:'g2t102',
+                                groupId: 'g2t102'
+                            }
                         ],
                         byMember: {
                             _id: 'u101',
                             fullname: 'Noga Jacobi',
                             username: 'Noga',
-                            imgUrl: '../assets/imgs/nj.png',
-                        },
+                            imgUrl: 'https://i.ibb.co/qFwz63W/nj.png'
+                        }
                     },
                     {
                         id: 'g2t103',
@@ -495,50 +494,50 @@ export const boards = [
                             {
                                 id: 't101',
                                 title: '#starting',
-                                color: '#61bd4f',
-                            },
+                                color: '#61bd4f'
+                            }
                         ],
                         status: {
                             id: 'sl2',
                             title: 'Working on it',
-                            color: '#fdab3d',
+                            color: '#fdab3d'
                         },
                         priority: {
                             id: 'pl3',
                             title: 'Low',
-                            color: '#579bfc',
+                            color: '#579bfc'
                         },
                         members: [
-                            // TASK members
                             {
                                 _id: 'u104',
                                 fullname: 'Basya coding',
                                 username: 'Basya',
-                                imgUrl: '../assets/imgs/qb.png'
-                            },
+                                imgUrl: 'https://i.ibb.co/S6XczhC/qb.png'
+                            }
                         ],
                         comments: [
                             {
-                                // popup modal on the side of the screen showing the comments each member left
-                                id: 'ZdPnm',
+                                id: 'ZdPnm6',
                                 txt: 'also @yaronb please CR this',
                                 createdAt: getTime(),
                                 byMember: {
                                     _id: 'u104',
                                     fullname: 'Basya coding',
                                     username: 'Basya',
-                                    imgUrl: '../assets/imgs/qb.png'
+                                    imgUrl: 'https://i.ibb.co/S6XczhC/qb.png'
                                 },
-                            },
+                                taskId:'g2t103',
+                                groupId:'g2t103'
+                            }
                         ],
                         byMember: {
                             _id: 'u104',
                             fullname: 'Basya coding',
                             username: 'Basya',
-                            imgUrl: '../assets/imgs/qb.png'
-                        },
-                    },
-                ],
+                            imgUrl: 'https://i.ibb.co/S6XczhC/qb.png'
+                        }
+                    }
+                ]
             },
             {
                 id: 'g103',
@@ -555,75 +554,135 @@ export const boards = [
                             {
                                 id: 't101',
                                 title: '#starting',
-                                color: '#61bd4f',
-                            },
+                                color: '#61bd4f'
+                            }
                         ],
                         status: {
                             id: 'sl1',
                             title: 'Done',
-                            color: '#00c875',
+                            color: '#00c875'
                         },
                         priority: {
                             id: 'pl4',
                             title: '',
-                            color: '#c4c4c4',
+                            color: '#c4c4c4'
                         },
                         members: [
-                            // TASK members
                             {
                                 _id: 'u103',
                                 fullname: 'Yuval David',
                                 username: 'Yuval',
-                                imgUrl: '../assets/imgs/yd.png',
+                                imgUrl: 'https://i.ibb.co/HPFsFbq/yd.png'
                             },
                             {
                                 _id: 'u104',
                                 fullname: 'Basya coding',
                                 username: 'Basya',
-                                imgUrl: '../assets/imgs/qb.png',
+                                imgUrl: 'https://i.ibb.co/S6XczhC/qb.png'
                             },
                         ],
                         comments: [
                             {
-                                // popup modal on the side of the screen showing the comments each member left
-                                id: 'ZdPnm',
+                                id: 'ZdPnm7',
                                 txt: 'also @yaronb please CR this',
                                 createdAt: getTime(),
                                 byMember: {
                                     _id: 'u104',
                                     fullname: 'Basya coding',
                                     username: 'Basya',
-                                    imgUrl: '../assets/imgs/qb.png',
+                                    imgUrl: 'https://i.ibb.co/S6XczhC/qb.png'
                                 },
-                            },
+                                taskId: 'g3t101',
+                                groupId: 'g103'
+                            }
                         ],
                         byMember: {
                             _id: 'u104',
                             fullname: 'Basya coding',
                             username: 'Basya',
-                            imgUrl: '../assets/imgs/qb.png',
-                        },
-                    },
-                ],
-            },
+                            imgUrl: 'https://i.ibb.co/S6XczhC/qb.png'
+                        }
+                    }
+                ]
+            }
         ],
         activities: [
-            // all activities at the top of the display, then again filtered for each task
             {
                 id: 'a101',
-                txt: 'Changed Color',
+                type: 'Changed title',
                 createdAt: getTime(),
                 byMember: {
                     _id: 'u104',
-                    fullname: 'Basya coding',
+                    fullname: 'Basya Coding',
                     username: 'Basya',
-                    imgUrl: '../assets/imgs/qb.png',
+                    imgUrl: 'https://i.ibb.co/S6XczhC/qb.png'
                 },
                 task: {
-                    id: 'c101',
-                    title: 'Replace Logo',
+                    id: 'g3t101',
+                    title: 'git + initial files setup + initial push/pull'
                 },
+                group: {
+                    id: 'g102',
+                    title: 'UX/UI'
+                }
             },
-        ],
-    },
+            {
+                id: 'a102',
+                type: 'Changed status',
+                createdAt: getTime(),
+                byMember: {
+                    _id: 'u104',
+                    fullname: 'Basya Coding',
+                    username: 'Basya',
+                    imgUrl: 'https://i.ibb.co/S6XczhC/qb.png'
+                },
+                task: {
+                    id: 'g3t101',
+                    title: 'git + initial files setup + initial push/pull'
+                },
+                group: {
+                    id: 'g102',
+                    title: 'UX/UI'
+                }
+            },
+            {
+                id: 'a103',
+                type: 'Deleted',
+                createdAt: getTime(),
+                byMember: {
+                    _id: 'u103',
+                    fullname: 'Yuval David',
+                    username: 'Yuval',
+                    imgUrl: 'https://i.ibb.co/HPFsFbq/yd.png'
+                },
+                task: {
+                    id: 'g3t106',
+                    title: 'git + initial files setup + initial push/pull'
+                },
+                group: {
+                    id: 'g101',
+                    title: 'Features'
+                }
+            },
+            {
+                id: 'a104',
+                type: 'Created',
+                createdAt: getTime(),
+                byMember: {
+                    _id: 'u103',
+                    fullname: 'Yuval David',
+                    username: 'Yuval',
+                    imgUrl: 'https://i.ibb.co/HPFsFbq/yd.png'
+                },
+                task: {
+                    id: 'g1t103',
+                    title: 'Drag and Drop'
+                },
+                group: {
+                    id: 'g101',
+                    title: 'Features'
+                }
+            }
+        ]
+    }
 ];

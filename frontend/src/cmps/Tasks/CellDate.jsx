@@ -4,6 +4,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import { registerLocale, setDefaultLocale } from "react-datepicker";
 import uk from 'date-fns/locale/en-GB';
 import { yellow } from '@material-ui/core/colors';
+import { socketService } from '../../services/socketService'
 registerLocale('uk', uk)
 
 export class CellDate extends Component {
@@ -27,13 +28,15 @@ export class CellDate extends Component {
         return this.setState({ ...this.state, endDate: update[1] },
             this.onSetTimeline)
     }
-    onSetTimeline = () => {
+    onSetTimeline = async () => {
         const { startDate, endDate } = this.state
         const timeline = [startDate, endDate]
         this.props.task.timeline = timeline
         const newBoard = { ...this.props.board }
         this.setState({ ...this.state, isDateSet: true, isDateSetting: false }, () => this.props.updateBoard(newBoard))
 
+        await socketService.emit('board updated', newBoard._id);
+        this.setState({ ...this.state, isDateSet: true, isDateSetting: false }, () => this.props.updateBoard(newBoard))
     }
     onEnter = () => {
         this.setState({ ...this.state, isHover: true })

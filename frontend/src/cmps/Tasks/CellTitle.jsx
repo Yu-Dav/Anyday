@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { EditableCmp } from '../EditableCmp'
+import { socketService } from '../../services/socketService'
 
 export class CellTitle extends Component {
-
-    onRemoveTask = () => {
+    onRemoveTask = async () => {
         const newBoard = { ...this.props.board }
         const { group } = this.props
         const groupId = this.props.group.id
@@ -12,10 +12,10 @@ export class CellTitle extends Component {
         const taskId = this.props.task.id
         const taskIdx = group.tasks.findIndex(task => task.id === taskId)
         newBoard.groups[groupIdx].tasks.splice(taskIdx, 1)
-        this.props.updateBoard(newBoard)
+        await this.props.updateBoard(newBoard)
+        await socketService.emit('board updated', newBoard._id);
     }
-
-    onUpdateTaskTitle = ({ target }) => {
+    onUpdateTaskTitle = async ({ target }) => {
         const value = target.innerText
         const newBoard = { ...this.props.board }
         const { group } = this.props
@@ -26,13 +26,12 @@ export class CellTitle extends Component {
         const updatedTask = { ...this.props.task, title: value }
         newBoard.groups[groupIdx].tasks.splice(taskIdx, 1, updatedTask)
         this.props.updateBoard(newBoard)
+        await socketService.emit('board updated', newBoard._id);
     }
-
     render() {
         const { title, id } = this.props.task
-        const {board, group} = this.props
+        const { board, group } = this.props
         return (
-
             <div className="cell title flex">
                 {/* cell title + btn to open chat */}
                 <i className="fas fa-trash remove-task" onClick={this.onRemoveTask}></i>
@@ -40,8 +39,6 @@ export class CellTitle extends Component {
                 <EditableCmp className="title" name="title" value={title} updateFunc={this.onUpdateTaskTitle} />
                 <Link to={`/board/${board._id}/${group.id}/${id}`}><i className="fa comment"></i></Link>
             </div>
-
-
         )
     }
 }

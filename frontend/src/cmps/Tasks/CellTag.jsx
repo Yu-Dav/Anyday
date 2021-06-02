@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { TagAddNew } from './TagAddNew'
 import { ClickAwayListener } from '@material-ui/core'
+import { socketService } from '../../services/socketService'
 
 
 
@@ -14,7 +15,9 @@ export class CellTag extends Component {
         this.props.task.tags.unshift(selectedTag)
         const newBoard = { ...this.props.board }
         await this.props.updateBoard(newBoard) //updating the entire board
+        await socketService.emit('board updated', newBoard._id);
         this.setState({...this.state, isExpanded:false})
+
     }
 
     update =  async (event, tag) => {

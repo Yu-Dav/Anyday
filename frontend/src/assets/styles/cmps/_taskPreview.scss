@@ -16,7 +16,7 @@
     margin-bottom: 2px;
     font-size: rem(13px);
     text-align: center;
-    cursor: pointer;
+    // cursor: pointer;
     & > * {
         background-color: #f5f6f8;
     }
@@ -32,6 +32,8 @@
         }
     }
     .label {
+        cursor: pointer;
+
         color: #ffffff;
         .modal-container{
             top: -98px;
@@ -84,6 +86,7 @@
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+    cursor: pointer;
 
     .remove-task {
         opacity: 0;
@@ -103,16 +106,22 @@
 .asignee {
     width: 142px;
     text-align: center;
+    // cursor: pointer;
+
 }
 
 .tags {
     width: 142px;
+    cursor: pointer;
+
 }
 
 
 
 .label {
     width: 113px;
+    cursor: pointer;
+
 }
 
 .creation-log {
@@ -121,6 +130,8 @@
 
 .timeline {
     width: 200px;
+    cursor: pointer;
+
 }
 
 

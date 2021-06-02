@@ -3,14 +3,18 @@ import React, { Component } from 'react'
 import { EditableCmp } from './EditableCmp'
 import { ReactComponent as StarSvg } from '../assets/imgs/svg/star.svg'
 
+import { socketService } from '../services/socketService'
+
+
 export class BoardHeader extends Component {
 
-    onUpdateBoard = ({ target }) => {
+    onUpdateBoard = async ({ target }) => {
         const { name } = target.dataset
         const value = target.innerText
         const newBoard = { ...this.props.board }
         newBoard[name] = value
-        this.props.updateBoard(newBoard)
+        await this.props.updateBoard(newBoard)
+        socketService.emit('board updated', newBoard._id)
     }
 
     render = () => {
@@ -30,7 +34,7 @@ export class BoardHeader extends Component {
 
                         <button className="btn">Last seen</button>
                         <button className="btn">Invite / 3</button>
-                        <button className="btn">Activity</button>
+                        <button className="btn" onClick={()=> window.location.hash = `/board/${board._id}/activity_log`}>Activity</button>
                     </div>
                 </div>
                 <div className="full subtitle-container">

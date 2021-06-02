@@ -7,24 +7,24 @@ import { ActivityModal } from './cmps/ActivitySideBar/ActivityModal.jsx';
 export const routes = [
   {
     path: '/',
-    component: Home,
+    component: Home
   },
 
   {
     path: '/login',
-    component: Login,
+    component: Login
   },
   {
     path: '/signup',
-    component: SignUp,
+    component: SignUp
   },
   {
     path: '/board/:boardId/:groupId?/:taskId?',
-    component: BoardApp ,
+    component: BoardApp
   },
-  // {
-  //   path: '/board/:boardId/:taskId',
-  //   component: ActivityModal ,
-  // }
+  {
+    path: '/board/:boardId/activity_log',
+    component: BoardApp 
+  }
 
 ];
