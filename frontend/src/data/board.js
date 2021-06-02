@@ -1,6 +1,6 @@
 import { utilService } from '../services/utilService'
 import { user } from './user'
-
+window.getTime = getTime
 function getTime() {
     return Date.now() -
         utilService.getRandomInt(

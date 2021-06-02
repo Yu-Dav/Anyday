@@ -4,10 +4,11 @@
     createdAt: 1621940297426,
     description: "Planning the final sprint and assigning tasks between team members",
     isFavorite: false,
-    createdBy: {
-    _id: "u102",
-    fullname: "Abi Abambi",
-    imgUrl: "http: //some-img"
+    createdBy:  {
+        _id: 'u103',
+        fullname: 'Yuval David',
+        username: 'Yuval',
+        imgUrl: 'https://i.ibb.co/HPFsFbq/yd.png'
     },
     colors: [
     {
@@ -270,16 +271,19 @@
     }
     ],
     comments: [
-    {
-    id: "ZdPnm",
-    txt: "also @yaronb please CR this",
-    createdAt: 1621958531086,
+    
+     {
+    id: 'ZdPnm1',
+    txt: 'https://www.npmjs.com/package/react-contenteditable',
+    createdAt:1621893062456,
     byMember: {
-    _id: "u102",
-    fullname: "Dafna Bashan",
-    username: "Dafna",
-    imgUrl: "../assets/imgs/db.png"
-    }
+    _id: 'u102',
+    fullname: 'Dafna Bashan',
+    username: 'Dafna',
+    imgUrl: 'https://ibb.co/NjbxnJw'
+    },
+    taskId: 'g1t101',
+    groupId: 'g101'
     }
     ],
     byMember: {
@@ -327,24 +331,24 @@
     ],
     comments: [
     {
-    id: "ZdPnm",
-    txt: "also @yaronb please CR this",
-    createdAt: 1621615250330,
+    id: 'ZdPnm2',
+    txt: 'Date range - https://reactdatepicker.com/#example-date-range',
+    createdAt: 1622203475437,
     byMember: {
-    _id: "u103",
-    fullname: "Yuval David",
-    username: "Yuval",
-    imgUrl: "../assets/imgs/yd.png"
-    }
-    }
-    ],
-    byMember: {
-    _id: "u103",
-    fullname: "Yuval David",
-    username: "Yuval",
-    imgUrl: "../assets/imgs/yd.png"
-    }
+    _id: 'u103',
+    fullname: 'Yuval David',
+    username: 'Yuval',
+    imgUrl: 'https://i.ibb.co/HPFsFbq/yd.png'
     },
+    taskId: 'g1t102',
+    groupId: 'g101'
+    }],
+    byMember: {
+    _id: "u103",
+    fullname: "Yuval David",
+    username: "Yuval",
+    imgUrl: "../assets/imgs/yd.png"
+    }},
     {
     id: "g1t103",
     labelIds: [
@@ -382,16 +386,18 @@
     }
     ],
     comments: [
-    {
-    id: "ZdPnm",
-    txt: "also @yaronb please CR this",
-    createdAt: 1621940297426,
+   {
+    id: 'ZdPnm3',
+    txt: 'Drag and Drop of tasks - https://www.npmjs.com/package/react-beautiful-dnd',
+    createdAt: 1621818253508,
     byMember: {
-    _id: "u103",
-    fullname: "Yuval David",
-    username: "Yuval",
-    imgUrl: "../assets/imgs/yd.png"
-    }
+    _id: 'u103',
+    fullname: 'Yuval David',
+    username: 'Yuval',
+    imgUrl: 'https://i.ibb.co/HPFsFbq/yd.png'
+    },
+    taskId: 'g1t103',
+    groupId: 'g101'
     }
     ],
     byMember: {
@@ -460,15 +466,17 @@
     ],
     comments: [
     {
-    id: "ZdPnm",
-    txt: "also @yaronb please CR this",
-    createdAt: 1621940297426,
+    id: 'ZdPnm4',
+    txt: 'also @yaronb please CR this',
+    createdAt: 1621854790537,
     byMember: {
-    _id: "u103",
-    fullname: "Yuval David",
-    username: "Yuval",
-    imgUrl: "../assets/imgs/yd.png"
-    }
+    _id: 'u103',
+    fullname: 'Yuval David',
+    username: 'Yuval',
+    imgUrl: 'https://i.ibb.co/HPFsFbq/yd.png'
+    },
+    taskId: 'g2t101',
+    groupId: 'g102'
     }
     ],
     byMember: {
@@ -522,15 +530,17 @@
     ],
     comments: [
     {
-    id: "ZdPnm",
-    txt: "also @yaronb please CR this",
-    createdAt: 1621924680977,
+    id: 'ZdPnm5',
+    txt: 'also @yaronb please CR this',
+    createdAt: 1621812240527,
     byMember: {
-    _id: "u102",
-    fullname: "Dafna Bashan",
-    username: "Dafna",
-    imgUrl: "../assets/imgs/db.png"
-    }
+    _id: 'u102',
+    fullname: 'Dafna Bashan',
+    username: 'Dafna',
+    imgUrl: 'https://i.ibb.co/qsVBFcb/db.png'
+    },
+    taskId:'g2t102',
+    groupId: 'g2t102'
     }
     ],
     byMember: {
@@ -577,16 +587,18 @@
     }
     ],
     comments: [
-    {
-    id: "ZdPnm",
-    txt: "also @yaronb please CR this",
-    createdAt: 1621615250330,
+     {
+    id: 'ZdPnm6',
+    txt: 'also @yaronb please CR this',
+    createdAt: 1622086963720,
     byMember: {
-    _id: "u104",
-    fullname: "Basya coding",
-    username: "Basya",
-    imgUrl: "../assets/imgs/qb.png"
-    }
+    _id: 'u104',
+    fullname: 'Basya coding',
+    username: 'Basya',
+    imgUrl: 'https://i.ibb.co/S6XczhC/qb.png'
+    },
+    taskId:'g2t103',
+    groupId:'g2t103'
     }
     ],
     byMember: {
@@ -649,15 +661,17 @@
     ],
     comments: [
     {
-    id: "ZdPnm",
-    txt: "also @yaronb please CR this",
-    createdAt: 1621924680977,
+    id: 'ZdPnm7',
+    txt: 'also @yaronb please CR this',
+    createdAt: 1622170515811,
     byMember: {
-    _id: "u104",
-    fullname: "Basya coding",
-    username: "Basya",
-    imgUrl: "../assets/imgs/qb.png"
-    }
+    _id: 'u104',
+    fullname: 'Basya coding',
+    username: 'Basya',
+    imgUrl: 'https://i.ibb.co/S6XczhC/qb.png'
+    },
+    taskId: 'g3t101',
+    groupId: 'g103'
     }
     ],
     byMember: {
@@ -671,20 +685,81 @@
     }
     ],
     activities: [
-    {
-    id: "a101",
-    txt: "Changed Color",
-    createdAt: "1621958531086)",
-    byMember: {
-    _id: "u104",
-    fullname: "Basya coding",
-    username: "Basya",
-    imgUrl: "../assets/imgs/qb.png"
-    },
-    task: {
-    id: "c101",
-    title: "Replace Logo"
-    }
-    }
+     {
+                id: 'a101',
+                type: 'Changed title',
+                createdAt: 1622089520817,
+                byMember: {
+                    _id: 'u104',
+                    fullname: 'Basya Coding',
+                    username: 'Basya',
+                    imgUrl: 'https://i.ibb.co/S6XczhC/qb.png'
+                },
+                task: {
+                    id: 'g3t101',
+                    title: 'git + initial files setup + initial push/pull'
+                },
+                group: {
+                    id: 'g102',
+                    title: 'UX/UI'
+                }
+            },
+            {
+                id: 'a102',
+                type: 'Changed status',
+                createdAt: 1621983948629,
+                byMember: {
+                    _id: 'u104',
+                    fullname: 'Basya Coding',
+                    username: 'Basya',
+                    imgUrl: 'https://i.ibb.co/S6XczhC/qb.png'
+                },
+                task: {
+                    id: 'g3t101',
+                    title: 'git + initial files setup + initial push/pull'
+                },
+                group: {
+                    id: 'g102',
+                    title: 'UX/UI'
+                }
+            },
+            {
+                id: 'a103',
+                type: 'Deleted',
+                createdAt: 1622010043529,
+                byMember: {
+                    _id: 'u103',
+                    fullname: 'Yuval David',
+                    username: 'Yuval',
+                    imgUrl: 'https://i.ibb.co/HPFsFbq/yd.png'
+                },
+                task: {
+                    id: 'g3t106',
+                    title: 'git + initial files setup + initial push/pull'
+                },
+                group: {
+                    id: 'g101',
+                    title: 'Features'
+                }
+            },
+            {
+                id: 'a104',
+                type: 'Created',
+                createdAt: 1622155727123,
+                byMember: {
+                    _id: 'u103',
+                    fullname: 'Yuval David',
+                    username: 'Yuval',
+                    imgUrl: 'https://i.ibb.co/HPFsFbq/yd.png'
+                },
+                task: {
+                    id: 'g1t103',
+                    title: 'Drag and Drop'
+                },
+                group: {
+                    id: 'g101',
+                    title: 'Features'
+                }
+            }
     ]
     }
