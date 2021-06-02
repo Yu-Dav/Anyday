@@ -1,0 +1,41 @@
+.app-header {
+      // background-color: blanchedalmond;
+      padding: 10px;
+      .nav-container {
+          justify-content: flex-end;
+      }
+      nav {
+          a {
+              text-decoration: none;
+          }
+          a:visited {
+              color: $darkGrey;
+          }
+          ul > *:not(:last-child) {
+              margin-inline-end: 10px;
+          }
+          li {
+              height: 32px;
+              font-size: rem(14px);
+              // letter-spacing: .5px;
+              padding: 4px 8px;
+              font-weight: 400;
+              line-height: 22px;
+              border-radius: 4px;
+              &::after {
+                  content: '';
+                  width: 0px;
+                  height: 1px;
+                  display: block;
+                  background: $Darkblue;
+                  transition: 0.5s;
+              }
+              &:hover::after {
+                  width: 100%;
+              }
+          }
+          .try-as-guest {
+              font-size: rem(18px);
+          }
+      }
+}

@@ -1,0 +1,112 @@
+.home-page-container {
+    min-height: 100vh;
+    color: $darkGrey;
+    background: linear-gradient(141deg, #ecdea8eb, rgba(255, 255, 255, 0) 68%);
+    header {
+        // background-color: blanchedalmond;
+        padding: 10px;
+        .nav-container {
+            justify-content: flex-end;
+        }
+        nav {
+            a {
+                text-decoration: none;
+            }
+            a:visited {
+                color: $darkGrey;
+            }
+            ul > *:not(:last-child) {
+                margin-inline-end: 10px;
+            }
+            li {
+                height: 32px;
+                font-size: rem(14px);
+                // letter-spacing: .5px;
+                padding: 4px 8px;
+                font-weight: 400;
+                line-height: 22px;
+                border-radius: 4px;
+                &::after {
+                    content: '';
+                    width: 0px;
+                    height: 1px;
+                    display: block;
+                    background: $Darkblue;
+                    transition: 0.5s;
+                }
+                &:hover::after {
+                    width: 100%;
+                }
+            }
+            .try-as-guest {
+                font-size: rem(18px);
+            }
+        }
+    }
+    main {
+        flex: 1;
+        img.logo {
+            width: 250px;
+            height: 250px;
+            display: inline-block;
+        }
+        .main-content {
+            p {
+                font-size: rem(18px);
+            }
+            h1 {
+                font-size: rem(24px);
+                span {
+                    animation: color-change 3s infinite;
+                    animation-direction: alternate;
+                }
+            }
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+            a:visited {
+                color: $darkGrey;
+            }
+            button {
+                color: inherit;
+                height: 32px;
+                font-size: rem(20px);
+                padding: 4px 8px;
+                font-weight: 400;
+                line-height: 22px;
+                border: none;
+                border-radius: 4px;
+                background-color: transparent;
+                border: 1px solid $darkGrey;
+                transition: 0.3s;
+                &:hover {
+                    border: 1px solid $Darkblue;
+                    color: $Darkblue;
+                }
+            }
+        }
+    }
+    footer {
+        text-align: center;
+        // margin-top: auto;
+        padding: 2em 0em;
+        & > *:not(:last-child) {
+            margin-inline-end: 15px;
+        }
+    }
+}
+
+@keyframes color-change {
+    0% {
+        color: $red;
+    }
+
+    50% {
+        color: $green;
+    }
+
+    100% {
+        color: $yellow;
+    }
+}

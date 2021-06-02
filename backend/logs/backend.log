@@ -193,3 +193,172 @@
 01/06/2021, 22:32:04 - INFO - Server is running on port: 3030 
 6/2/2021, 9:16:03 AM - INFO - Server is running on port: 3030 
 6/2/2021, 9:16:46 AM - INFO - Server is running on port: 3030 
+02/06/2021, 10:12:33 - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: oF2a-ajQZnbnTfnkc4_SDHfTWsC2YZOG)
+02/06/2021, 10:12:33 - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: oF2a-ajQZnbnTfnkc4_SDHfTWsC2YZOG)
+02/06/2021, 10:12:34 - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: oF2a-ajQZnbnTfnkc4_SDHfTWsC2YZOG)
+02/06/2021, 10:12:34 - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: oF2a-ajQZnbnTfnkc4_SDHfTWsC2YZOG)
+02/06/2021, 10:22:58 - INFO - Server is running on port: 3030 
+02/06/2021, 13:53:15 - DEBUG - auth.service - login with username: bestyy (sid: Rg9d4GjPuxzHFJBP17vRNqFJz3NC64Wc)
+02/06/2021, 13:53:15 - ERROR - Failed to Login Invalid username or password (sid: Rg9d4GjPuxzHFJBP17vRNqFJz3NC64Wc)
+02/06/2021, 13:53:33 - DEBUG - auth.service - login with username: yuvvaa (sid: Rg9d4GjPuxzHFJBP17vRNqFJz3NC64Wc)
+02/06/2021, 13:53:33 - ERROR - Failed to Login Invalid username or password (sid: Rg9d4GjPuxzHFJBP17vRNqFJz3NC64Wc)
+02/06/2021, 13:56:43 - INFO - Server is running on port: 3030 
+02/06/2021, 13:56:50 - DEBUG - auth.service - login with username: yuvuvuvuv (sid: 7Lc07Gltdlz9SKpAlcCs9LD0Og_L2Fq8)
+02/06/2021, 13:56:51 - ERROR - Failed to Login Invalid username or password (sid: 7Lc07Gltdlz9SKpAlcCs9LD0Og_L2Fq8)
+02/06/2021, 14:12:19 - DEBUG - auth.service - login with username: noga (sid: 7Lc07Gltdlz9SKpAlcCs9LD0Og_L2Fq8)
+02/06/2021, 14:12:19 - ERROR - Failed to Login Invalid username or password (sid: 7Lc07Gltdlz9SKpAlcCs9LD0Og_L2Fq8)
+02/06/2021, 14:16:57 - DEBUG - auth.service - login with username: Noga (sid: 7Lc07Gltdlz9SKpAlcCs9LD0Og_L2Fq8)
+02/06/2021, 14:18:04 - DEBUG - auth.service - login with username: Noga (sid: 7Lc07Gltdlz9SKpAlcCs9LD0Og_L2Fq8)
+02/06/2021, 14:20:55 - DEBUG - auth.service - login with username: Noga (sid: 7Lc07Gltdlz9SKpAlcCs9LD0Og_L2Fq8)
+02/06/2021, 14:25:25 - DEBUG - auth.service - login with username: Noga (sid: 7Lc07Gltdlz9SKpAlcCs9LD0Og_L2Fq8)
+02/06/2021, 14:26:24 - DEBUG - auth.service - login with username: Noga (sid: 7Lc07Gltdlz9SKpAlcCs9LD0Og_L2Fq8)
+02/06/2021, 14:27:42 - DEBUG - auth.service - login with username: Noga (sid: 7Lc07Gltdlz9SKpAlcCs9LD0Og_L2Fq8)
+02/06/2021, 16:18:12 - INFO - Server is running on port: 3030 
+02/06/2021, 16:22:39 - DEBUG - auth.service - login with username: Yuval (sid: Cb3zX56UddnxQnjOQ0S4DISWRXkstLae)
+02/06/2021, 16:34:37 - INFO - Server is running on port: 3030 
+02/06/2021, 16:40:46 - INFO - Server is running on port: 3030 
+02/06/2021, 17:06:34 - INFO - Server is running on port: 3030 
+02/06/2021, 17:07:04 - INFO - Server is running on port: 3030 
+02/06/2021, 17:14:14 - INFO - Server is running on port: 3030 
+02/06/2021, 17:15:13 - INFO - Server is running on port: 3030 
+02/06/2021, 17:15:18 - INFO - Server is running on port: 3030 
+02/06/2021, 17:15:19 - INFO - Server is running on port: 3030 
+02/06/2021, 17:17:13 - INFO - Server is running on port: 3030 
+02/06/2021, 17:51:52 - INFO - Server is running on port: 3030 
+02/06/2021, 17:59:46 - INFO - Server is running on port: 3030 
+02/06/2021, 18:00:04 - INFO - Server is running on port: 3030 
+02/06/2021, 18:01:40 - INFO - Server is running on port: 3030 
+02/06/2021, 18:02:38 - INFO - Server is running on port: 3030 
+02/06/2021, 18:02:42 - INFO - Server is running on port: 3030 
+02/06/2021, 18:02:47 - INFO - Server is running on port: 3030 
+02/06/2021, 18:03:01 - INFO - Server is running on port: 3030 
+02/06/2021, 18:03:20 - INFO - Server is running on port: 3030 
+02/06/2021, 18:04:16 - DEBUG - Session ID is | luDwrW0y-8UGUmGdqhl11uiK7q8_EmBR 
+02/06/2021, 18:04:24 - INFO - Server is running on port: 3030 
+02/06/2021, 18:04:39 - INFO - Server is running on port: 3030 
+02/06/2021, 18:04:42 - DEBUG - Session ID is | chXnbEmgNPZ_njwQYj5ywTgpRxgBEa4x 
+02/06/2021, 18:04:57 - INFO - Server is running on port: 3030 
+02/06/2021, 18:10:32 - INFO - Server is running on port: 3030 
+02/06/2021, 18:11:36 - DEBUG - Session ID is | pa_9iU9GuXvIL9rK8o9tgKjEiCyD9jcJ 
+02/06/2021, 18:12:00 - DEBUG - Session ID is | 7nve2wb4EfadZn13NGF-QlIhFGOtAs22 
+02/06/2021, 18:12:06 - INFO - Server is running on port: 3030 
+02/06/2021, 18:12:14 - DEBUG - Session ID is | kFb8hBHTSsnzdtflxVZdKc1PhWDNHQus 
+02/06/2021, 18:14:18 - INFO - Server is running on port: 3030 
+02/06/2021, 18:15:18 - INFO - Server is running on port: 3030 
+02/06/2021, 18:15:20 - INFO - Server is running on port: 3030 
+02/06/2021, 18:15:36 - DEBUG - Session ID is | 5rN2Sl6_Wzh3qt-uxFp1mGmWyT6QYMaj 
+02/06/2021, 18:15:48 - INFO - Server is running on port: 3030 
+02/06/2021, 18:16:18 - INFO - Server is running on port: 3030 
+02/06/2021, 18:20:58 - INFO - Server is running on port: 3030 
+02/06/2021, 18:23:50 - INFO - Server is running on port: 3030 
+02/06/2021, 18:24:01 - DEBUG - Session ID is | dE1lIndAzNFUVRWUIx3k7wf1cUQNuddC 
+02/06/2021, 18:24:08 - DEBUG - Session ID is | RZXGrMLEFi3NM-54xQ95vDHaShwEOKnf 
+02/06/2021, 18:24:15 - DEBUG - Session ID is | srzcqdYhpMAwH_r75VRz52mwISllVdTH 
+02/06/2021, 18:25:25 - DEBUG - Session ID is | pYjhDTbmFi43o17bzSnV-RwWHzdTJfQd 
+02/06/2021, 18:25:39 - DEBUG - Session ID is | 8O3gXl_O36w3Cd-ihsvcjzev25OuBM67 
+02/06/2021, 18:28:18 - DEBUG - Session ID is | IAvayLwMinfiuAheA-THZmjj2ixBm5qN 
+02/06/2021, 18:29:15 - DEBUG - Session ID is | vymoxZE53EzoHPBurtGPf03fXBS9Ujoj 
+02/06/2021, 18:29:32 - DEBUG - Session ID is | _L8UdQ0LUwVBqAjS_Tf_5ApNTAI6ycj3 
+02/06/2021, 18:30:22 - DEBUG - Session ID is | 0uhPk8TC0j4Y5fs66fBO86tIYXc0O4bM 
+02/06/2021, 18:30:23 - DEBUG - Session ID is | bezsjmzvxmqKovti_hCnXz_YMqrrxPwp 
+02/06/2021, 18:30:37 - DEBUG - Session ID is | MfXQt40lu8ANSfqddiXN9hM2CosU4FXI 
+02/06/2021, 18:30:38 - DEBUG - Session ID is | tP9-ylzxXhF4s53j2eknpbpz2dWLs-tK 
+02/06/2021, 18:31:23 - DEBUG - Session ID is | Z4XCMQ0Y3ggLsCAZEmLlnNt3n_e9rA93 
+02/06/2021, 18:31:24 - DEBUG - Session ID is | BBcwGDJOT26jsvJIDHgRsklC-90fhyNl 
+02/06/2021, 18:32:19 - INFO - Server is running on port: 3030 
+02/06/2021, 18:32:22 - DEBUG - Session ID is | cFtVfOVPppkfdvRS7Ez-dOZbTh5BXrYz 
+02/06/2021, 18:33:39 - DEBUG - Session ID is | aizW89mbVnq5AtWY30VQuD3hhH6CwTNS 
+02/06/2021, 18:33:40 - DEBUG - Session ID is | uAc_jMSa-rS9M_-6XHbvDGZAbEpdCP-_ 
+02/06/2021, 18:33:48 - DEBUG - Session ID is | jaDOQ-0y6mMddTeQ0K_Lr06ZMa2fGoq4 
+02/06/2021, 18:35:39 - INFO - Server is running on port: 3030 
+02/06/2021, 18:35:43 - DEBUG - Session ID is | -QsHsjQov538W8pFmMrOMbKts9z4B5iy 
+02/06/2021, 18:35:45 - DEBUG - Session ID is | oP5pvqMRsJILD6NFYHUWle26jZ1vSZAT 
+02/06/2021, 18:36:00 - DEBUG - Session ID is | rGYtbHkiXWz1gmNgRwDAzyNqcKuofvuf 
+02/06/2021, 18:36:20 - INFO - Server is running on port: 3030 
+02/06/2021, 18:36:22 - DEBUG - Session ID is | 63dPRav1qZ2IMMbKKeqJsJRYJwmjtbfE 
+02/06/2021, 18:36:24 - DEBUG - Session ID is | C9sJR0DIMO5bLXLmQFhu7LzYuUI6xGkp 
+02/06/2021, 18:37:08 - DEBUG - Session ID is | pNZ_u6gWOn-dnzSdTIn475BN03Lf6i58 
+02/06/2021, 18:37:58 - DEBUG - Session ID is | 5hok6_nDnR-7SNpwADLGaGEumsPlsVCm 
+02/06/2021, 18:41:13 - DEBUG - Session ID is | YOHKmS5Uw948-K5m1_BbN-TZbXkwEEpl 
+02/06/2021, 18:41:15 - DEBUG - Session ID is | iCfeHI21Z-HPYfS64F4l2uDgniv3RInN 
+02/06/2021, 18:41:17 - DEBUG - Session ID is | 9OPcAq7DVIGhFpg0tcAGnxkgs6cE7ARQ 
+02/06/2021, 18:41:26 - DEBUG - Session ID is | TBFv1vSoVywC3zAwUWMuLWZmQd8XKwud 
+02/06/2021, 18:43:06 - DEBUG - Session ID is | -e6NgvLqKsTBwFTdKagfnhSmyPE7Fsfd 
+02/06/2021, 18:43:14 - DEBUG - Session ID is | e8ZjwctLCAvtSs4PUp9K8IeqDCXzVJ4N 
+02/06/2021, 18:43:39 - DEBUG - Session ID is | lreyJdPtO2h-JZ_V9f-AgDNMmGE3egd5 
+02/06/2021, 18:44:44 - DEBUG - Session ID is | zMtJLBevzMlQvFgTYjfKHFAPh2C59jFR 
+02/06/2021, 18:46:23 - INFO - Server is running on port: 3030 
+02/06/2021, 18:46:48 - DEBUG - Session ID is | 5Ubd7qfRzsOHMbB_KXW51BfCYv_gpJ2n 
+02/06/2021, 18:46:50 - DEBUG - Session ID is | f77BoGWcqr9_FYLd8HXQgRVLp-DblXUj 
+02/06/2021, 18:48:25 - DEBUG - Session ID is | Pkht_HaiQKcppfjKHiKbF5zMpbwaQUkp 
+02/06/2021, 18:50:00 - DEBUG - Session ID is | LhSSt3X7O8gP_JHwfFPjol6y4EDEfnMn 
+02/06/2021, 18:50:01 - DEBUG - Session ID is | x8MdoX8yYE0thJzXRKgNSFDmsvpUtfVB 
+02/06/2021, 18:50:19 - DEBUG - Session ID is | 9cHNksgTqGm6Q3XbqXLMBmNBNrUyD1vC 
+02/06/2021, 18:50:20 - DEBUG - Session ID is | GkGQmDVh3wpHQ9JJM_C0vAfvhu1XVn73 
+02/06/2021, 18:55:13 - DEBUG - Session ID is | YkJBeJ3pZnBhyXEaCxgcg7cjE6uqG0LO 
+02/06/2021, 18:55:14 - DEBUG - Session ID is | znKlN9b_yIUD85bWrUG3xPDaDHXq5cEA 
+02/06/2021, 18:55:20 - DEBUG - Session ID is | 3KJ5yKRimG32Pz1fD15CYy3PQp6VV1EK 
+02/06/2021, 18:55:21 - DEBUG - Session ID is | rZ0Z_fYl04QxAe6W3hP0sxstJe1r3OWw 
+02/06/2021, 19:00:13 - DEBUG - Session ID is | wxJ78fD-6gCaAjVzNKsRGumjZ6jmHHoV 
+02/06/2021, 19:01:37 - DEBUG - Session ID is | YkUZ3DmoDpCNPrOp_QfgGAVrsE6YjC2Q 
+02/06/2021, 19:01:47 - DEBUG - Session ID is | bqISytsvVmrY5CSG5ieV3VGMszDLocMN 
+02/06/2021, 19:02:11 - DEBUG - Session ID is | xhnbSgk863PXkeGRNqYGt0euQVgCJ9rV 
+02/06/2021, 19:02:30 - DEBUG - Session ID is | Tdn3XYRufEy3ph1K2B1AdBopwarMVoFe 
+02/06/2021, 19:07:37 - INFO - Server is running on port: 3030 
+02/06/2021, 19:07:43 - DEBUG - Session ID is | 7C8xmHbAm98oaFoTEF3ZyErqFifggx1C 
+02/06/2021, 19:07:44 - DEBUG - Session ID is | aHWno8OUuiHrXSnV9hCP43txbeB13qnw 
+02/06/2021, 19:08:28 - DEBUG - Session ID is | JObnxBP9m8RoCZSq5VnUmt1kvBqSvkJJ 
+02/06/2021, 19:08:42 - DEBUG - Session ID is | Cigh1yEexivFQvNeV9ZVTbUErzI2OP9k 
+02/06/2021, 19:08:42 - DEBUG - Session ID is | QWgu2aniKx09zcq0X1QIdvF9e4Kq_Xqv 
+02/06/2021, 19:09:05 - DEBUG - Session ID is | QN2HPhrKHgGsiwJOoSkIkU-y1C37QPOk 
+02/06/2021, 19:09:06 - DEBUG - Session ID is | vSTu09ba722VLCDHsd_IbpFTaiilL2pn 
+02/06/2021, 19:09:29 - DEBUG - Session ID is | DqlbD7SnNfOShZGgHgbgwDvBwdV2Lfuj 
+02/06/2021, 19:09:30 - DEBUG - Session ID is | zmLVhda7eBYnQg8JQcRkUiVJLhgNACuj 
+02/06/2021, 19:13:22 - DEBUG - Session ID is | 2r1yehPuzmyl-KM6GHuTzRRgob71ITvu 
+02/06/2021, 19:13:29 - DEBUG - Session ID is | bsYkdQsfwo358xaCu_grE1_VdgEfvvxs 
+02/06/2021, 19:13:46 - DEBUG - Session ID is | Y3wgpu3nFAEKwIYHLJ58k4tzK50rKTXt 
+02/06/2021, 19:14:05 - DEBUG - Session ID is | 2oo0mvDaOCTwwu5r2Hf-195Dt7VxeUmW 
+02/06/2021, 19:15:19 - DEBUG - Session ID is | GGLgxAqt3A-aLlgO9D3CmFRDuzsFP0ug 
+02/06/2021, 19:16:01 - DEBUG - Session ID is | Z0dv91faY-YZmJjmOUf0zFI3ojM9KXyW 
+02/06/2021, 19:16:02 - DEBUG - Session ID is | YXfN8URL8bXbHpSQQ-FRoRa_wsrIEiYG 
+02/06/2021, 19:16:09 - DEBUG - Session ID is | CtdY-ucrY1nOWmpNdUyZDrHQ7K2lwat7 
+02/06/2021, 19:16:48 - DEBUG - Session ID is | gDpzag-5i0YY6nt8jrzXPmLCoEHlhttj 
+02/06/2021, 19:16:49 - DEBUG - Session ID is | 0g7HxpfgM1SSGJyl0s8L412NK22WOSVD 
+02/06/2021, 19:19:11 - DEBUG - Session ID is | FuWFYSNbqWiK08-ztoRsmpycV0qMWq2l 
+02/06/2021, 19:19:12 - DEBUG - Session ID is | S_pn1vIvdKWhuCqMd0mwGsQ5YD9zHabp 
+02/06/2021, 19:21:47 - DEBUG - Session ID is | S9-JN0D-R72Cas-OFCVZ1l6x3A0HZjbc 
+02/06/2021, 19:21:56 - DEBUG - Session ID is | U45C2qAWHw2MZ4LKpQYIIjgMDIya_zxp 
+02/06/2021, 19:22:37 - DEBUG - Session ID is | X4ep6y3ich6rO_2jr3yEYF2tRfT268yu 
+02/06/2021, 19:22:39 - DEBUG - Session ID is | COiMz0I-hMjeDg6fYNoBXnjl3sIidiQ2 
+02/06/2021, 19:24:39 - DEBUG - Session ID is | Oh91zy0FF2J8ZNT5y5cXC48WMiR7DAFP 
+02/06/2021, 19:24:39 - DEBUG - Session ID is | olH9IzxVdHIa_Ig5sewbLADJuQAtZevC 
+02/06/2021, 19:25:15 - DEBUG - Session ID is | lWhUKTVqzYSZoBleBEkVXbyWNDdnzKsr 
+02/06/2021, 19:25:20 - DEBUG - Session ID is | kqGCRShJvm-WRfNmEph-cnamzSyZJExk 
+02/06/2021, 19:25:22 - DEBUG - Session ID is | 1EwunCkGx5u54G5XYKbt6IhJKmfABq3k 
+02/06/2021, 19:30:35 - DEBUG - Session ID is | Hzw9C1DexRRhqNn6XM3RTTMAqkegCAkq 
+02/06/2021, 19:31:55 - DEBUG - Session ID is | OW2uGdC0Msxi9r4RubXOn1wai1M-wOxH 
+02/06/2021, 19:34:00 - DEBUG - Session ID is | U42Fmx03GxhNAv6Yv10c7ZiRuskwA5r9 
+02/06/2021, 19:39:58 - DEBUG - Session ID is | EuZqkiwNDtkIcbRInjY3eFM4Fh16neSs 
+02/06/2021, 19:40:28 - DEBUG - Session ID is | MXw-DIQTvDj8mRU1D6u5sPRrMwlT3B_q 
+02/06/2021, 19:40:49 - DEBUG - Session ID is | 5Io7UCds4Wv_XaBGa5nn86W3VcmY1bkV 
+02/06/2021, 19:40:51 - DEBUG - Session ID is | qLN2U7L8KrazrgQTY_AZw-UQPAbLhXxy 
+02/06/2021, 19:41:27 - DEBUG - Session ID is | zAAEC68GV08bdXBAZtjc6Po5Ue_Pk-Uc 
+02/06/2021, 19:41:28 - DEBUG - Session ID is | n9oYzZ6PjkJTi6dLYCDvlY0vUERNW292 
+02/06/2021, 19:41:36 - DEBUG - Session ID is | aq7fIx8_NFJBCrZrmf5eG95lUUo7sXwN 
+02/06/2021, 19:42:16 - DEBUG - Session ID is | BKwTActM9DY-XvN6N5fgc-QjjG418uAH 
+02/06/2021, 19:42:16 - DEBUG - Session ID is | I-hxERXcld4wPZyHiM0O_AhgUPkp4StE 
+02/06/2021, 19:42:30 - DEBUG - Session ID is | MqdQ45dBsicwN4P780e1EmrBDBrJFgei 
+02/06/2021, 19:42:33 - DEBUG - Session ID is | yOAc1Ydz13c5EV0SMf5CF4183jx1xF-d 
+02/06/2021, 19:42:34 - DEBUG - Session ID is | lkwyF_yj9DF-jYZfdTdIYRc0tu1svkp8 
+02/06/2021, 19:48:46 - DEBUG - auth.service - login with username: Yuval (sid: NYKDXjA-91UUFpd9xr0M79DXi3UxfNUj)
+02/06/2021, 19:48:46 - DEBUG - Session ID is | fyMirjnIl0mTK5FuEt-8k4Aqb_yGP-YM 
+02/06/2021, 19:48:58 - DEBUG - auth.service - login with username: Dafna (sid: YUf2s6IgP0RykRdskdK_MF36ijavSYBV)
+02/06/2021, 19:48:58 - DEBUG - Session ID is | 9_cBTIVGZRZKlhO47tDkOxAm5HH4BGTi 
+02/06/2021, 20:13:19 - DEBUG - Session ID is | oXtcGu7Lpet9r1nT9TKmrxn5J5wZDwKb 
+02/06/2021, 20:13:21 - DEBUG - Session ID is | c0rs7rWHPFrfd6vqCUpQqJi4fzlLIJwK 
+02/06/2021, 20:14:52 - DEBUG - Session ID is | ylUyEdGdoizNVtSW23DPAp_A2FlOkidN 
+02/06/2021, 20:14:59 - DEBUG - Session ID is | JDZ-VGX4qtsEp9uKpHvxWQWL1LB7XBez 
+02/06/2021, 20:15:06 - DEBUG - Session ID is | A_RJyxmSBdogD6CSw7IxAFewDNK93iuf 
+02/06/2021, 20:15:06 - DEBUG - Session ID is | -6leg1yqE-YWc7gFtOuz0pDBHonRClDM 
+02/06/2021, 20:17:17 - DEBUG - auth.service - login with username: Noga (sid: YUf2s6IgP0RykRdskdK_MF36ijavSYBV)
+02/06/2021, 20:17:18 - DEBUG - Session ID is | 7PvRFQhZlZBegJ8Tskof1Z9YdlobQgz8 

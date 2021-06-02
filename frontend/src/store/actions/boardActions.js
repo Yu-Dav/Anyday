@@ -1,4 +1,5 @@
 import { boardService } from '../../services/boardService.js'
+import { socketService } from '../../services/socketService'
 
 export function loadBoards(filterBy) {
     return async dispatch => {
@@ -13,6 +14,7 @@ export function loadBoards(filterBy) {
 }
 
 export function loadBoard(boardId) {
+   
     return async dispatch => {
         try {
             const board = await boardService.getById(boardId)
@@ -47,6 +49,7 @@ export function removeBoard(boardId) {
 }
 
 export function updateBoard(board) {
+     socketService.emit('load board', board._id)
     return async dispatch => {
         try {
             const updatedBoard = await boardService.update(board)

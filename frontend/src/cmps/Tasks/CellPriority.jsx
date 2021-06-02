@@ -1,35 +1,29 @@
 import React, { Component } from 'react'
 import { ClickAwayListener } from '@material-ui/core'
-import Grow from '@material-ui/core/Grow';
-
+import { socketService } from '../../services/socketService'
 
 export class CellPriority extends Component {
     state = {
         isExpanded: false
     }
-
-    handleUpdate = ({ target }) => {
+    handleUpdate = async ({ target }) => {
         const selectedPriority = this.getPriorityById(target.dataset.label)
         this.props.task.priority = selectedPriority
         const newBoard = { ...this.props.board }
         // newBoard.priority = selectedPriority
-        this.props.updateBoard(newBoard) 
+        await this.props.updateBoard(newBoard) 
+        await socketService.emit('board updated', newBoard._id);
     }
-
     getPriorityById = (labelId) => {
         const { priorityLabels } = this.props.board
         return priorityLabels.find(label => label.id === labelId)
     }
-
     onOpenSelector = () => {
         this.setState({ ...this.state, isExpanded: !this.state.isExpanded })
     }
-
-
     handleClickAway = () => {
         this.setState({ ...this.state, isExpanded: false })
     }
-
     render() {
         const { priority } = this.props.task
         const { priorityLabels } = this.props.board

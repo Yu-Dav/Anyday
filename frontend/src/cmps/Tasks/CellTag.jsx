@@ -5,20 +5,18 @@ import Paper from '@material-ui/core/Paper';
 import Popper from '@material-ui/core/Popper';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
+import { socketService } from '../../services/socketService'
 
 import { TagAddNew } from './TagAddNew'
 
 export function CellTag({ task, board, updateBoard }) {
     const tags = task.tags
     const availableTags = board.tags
-    //   const classes = useStyles();
     const [open, setOpen] = React.useState(false);
     const anchorRef = React.useRef(null);
-
     const handleToggle = () => {
         setOpen((prevOpen) => !prevOpen);
     };
-
     const handleClose = (event) => {
         if (!event) return
         event.stopPropagation()
@@ -27,8 +25,7 @@ export function CellTag({ task, board, updateBoard }) {
         }
         setOpen(false);
     };
-
-    const update = (event, tag) => {
+    const update = async (event, tag) => {
         //CREATE
         let selectedTag;
         if (!event) {
@@ -40,20 +37,17 @@ export function CellTag({ task, board, updateBoard }) {
         }
         task.tags.unshift(selectedTag)
         const newBoard = { ...board }
-        updateBoard(newBoard)
+        await updateBoard(newBoard)
+        await socketService.emit('board updated', newBoard._id);
         // TODO- remove comment below when  modal works
         // handleClose(event)
     }
-
     const addNewTag = (tag) => {
         update(null, tag)
     }
-
-
     const getTagById = (tagId) => {
         return availableTags.find(tag => tag.id === tagId)
     }
-
     const onRemoveTag = async (ev) => {
         ev.stopPropagation()
         // if(!tags) return
@@ -66,21 +60,17 @@ export function CellTag({ task, board, updateBoard }) {
         // tags.splice(inTaskIdx, 1)
         const newBoard = { ...board }
         await updateBoard(newBoard)
-
+        await socketService.emit('board updated', newBoard._id);
         const tags = task.tags
     }
-
-
     // return focus to the button when we transitioned from !open -> open
     const prevOpen = React.useRef(open);
     React.useEffect(() => {
         if (prevOpen.current === true && open === false) {
             anchorRef.current.focus();
         }
-
         prevOpen.current = open;
     }, [open]);
-
     return (
         <div ref={anchorRef}
             aria-controls={open ? 'menu-list-grow' : undefined}
@@ -88,7 +78,7 @@ export function CellTag({ task, board, updateBoard }) {
             onClick={handleToggle} className="cell tags">
 
             <div className="cell-tag-container flex justify-center">
- 
+
                 {tags.map((tag) => {
                     return <span className="tag-container" style={{ color: tag.color }} >{tag.title}</span>
                 })}

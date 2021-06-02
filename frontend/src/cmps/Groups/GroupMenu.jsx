@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { ClickAwayListener } from '@material-ui/core'
 import { Colors } from '../Colors'
+import { socketService } from '../../services/socketService'
 
 export class GroupMenu extends Component {
 
@@ -9,14 +10,15 @@ export class GroupMenu extends Component {
         isColor: false
     }
 
-    onDeleteGroup = (ev) => {
+    onDeleteGroup = async (ev) => {
         const newBoard = this.props.board
         const groupId = this.props.group.id
         const groupIdx = newBoard.groups.findIndex(group => group.id === groupId)
         newBoard.groups.splice(groupIdx, 1)
-        this.props.updateBoard(newBoard)
-    }
+        await this.props.updateBoard(newBoard)
+        socketService.emit('board updated', newBoard._id);
 
+    }
     onChangeGroupColor = async (ev) => {
         const newBoard = this.props.board
         const groupId = this.props.group.id
@@ -24,10 +26,9 @@ export class GroupMenu extends Component {
         const { color } = ev.target.dataset
         newBoard.groups[groupIdx].style.bgColor = color
         await this.props.updateBoard(newBoard)
+        await socketService.emit('board updated', newBoard._id);
         this.setState({ ...this.state, isColor: false, isExpanded: false })
     }
-
-
     onSelectChange = (ev) => {
         ev.stopPropagation()
         this.setState({ ...this.state, isColor: !this.state.isColor, isExpanded: false }, console.log(this.state))
@@ -35,14 +36,11 @@ export class GroupMenu extends Component {
     onOpenSelector = () => {
         this.setState({ ...this.state, isExpanded: !this.state.isExpanded })
     }
-
     handleClickAway = () => {
         this.setState({ ...this.state, isExpanded: false, isColor: false })
     }
-
     render() {
         const { isExpanded, isColor } = this.state
-
         return (
             <ClickAwayListener onClickAway={this.handleClickAway}>
                 <div className="group-modal-choose" onClick={this.onOpenSelector}>^
@@ -57,7 +55,6 @@ export class GroupMenu extends Component {
                         </Colors>
                         }
                     </div>
-
                 </div>
             </ClickAwayListener>
         )

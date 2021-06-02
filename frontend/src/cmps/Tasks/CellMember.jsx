@@ -1,5 +1,4 @@
-import React, { createRef } from 'react';
-// import Button from '@material-ui/core/Button';
+import React from 'react';
 import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 import Grow from '@material-ui/core/Grow';
 import Paper from '@material-ui/core/Paper';
@@ -7,6 +6,7 @@ import Popper from '@material-ui/core/Popper';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
 import { makeStyles } from '@material-ui/core/styles';
+import { socketService } from '../../services/socketService'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -43,23 +43,24 @@ export function CellMember({ task, board, updateBoard }) {
         prevOpen.current = open;
     }, [open]);
 
-    const onAddMember = (ev) => {
+    const onAddMember = async (ev) => {
         const memberId = ev.target.dataset.id
         const member = getMemberById(memberId)
         taskMembers.unshift(member)
         const newBoard = { ...board }
-        updateBoard(newBoard)
+        await updateBoard(newBoard)
+        await socketService.emit('board updated', newBoard._id);
         handleClose(ev)
-        console.log(taskMembers);
     }
 
-    const onRemoveMember = (ev) => {
+    const onRemoveMember = async (ev) => {
         const memberId = ev.target.dataset.id
         // console.log('member id',memberId);
         const memberIdx = taskMembers.findIndex(member => member._id === memberId)
         taskMembers.splice(memberIdx, 1)
         const newBoard = { ...board }
-        updateBoard(newBoard)
+        await updateBoard(newBoard)
+        await socketService.emit('board updated', newBoard._id);
         handleClose(ev)
     }
 
@@ -80,7 +81,7 @@ export function CellMember({ task, board, updateBoard }) {
     }
 
     return (
-        <div  ref={anchorRef}
+        <div ref={anchorRef}
             aria-controls={open ? 'menu-list-grow' : undefined}
             aria-haspopup="true"
             onClick={handleToggle} className="cell asignee">

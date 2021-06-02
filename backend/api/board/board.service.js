@@ -7,7 +7,6 @@ async function query(filterBy = {}) {
     try {
         const collection = await dbService.getCollection('board_db');
         var boards = await collection.find().toArray();
-        console.log(`file: board.service.js || line 11 || boards`, boards);
         boards = boards.map((board) => {
             board.createdAt = ObjectId(board._id).getTimestamp();
             // Returning fake fresh data
@@ -30,10 +29,8 @@ async function getById(boardId) {
         throw err;
     }
 }
-//missing save/update
 
 async function update(board) {
-    console.log(`file: board.service.js || line 36 || board`, board);
     try {
         const boardToSave = {
             _id: ObjectId(board._id),
@@ -64,7 +61,6 @@ async function update(board) {
 }
 
 async function add(board) {
-    console.log(`file: board.service.js || line 55 || board`, board);
     try {
         // peek only updatable fields!
         const boardToAdd = {
