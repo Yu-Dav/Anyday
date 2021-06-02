@@ -97,4 +97,99 @@
 6/1/2021, 2:26:45 PM - INFO - Server is running on port: 3030 
 6/1/2021, 2:26:46 PM - ERROR - cannot find boards | ReferenceError: logger is not defined (sid: uuvDq3g3wi1R_Q8IuvUbzHqTydyn5BJ5)
 6/1/2021, 2:26:47 PM - ERROR - Failed to get boards | ReferenceError: logger is not defined (sid: uuvDq3g3wi1R_Q8IuvUbzHqTydyn5BJ5)
-6/1/2021, 6:08:07 PM - INFO - Server is running on port: 3030 
+01/06/2021, 14:44:49 - INFO - Server is running on port: 3030 
+01/06/2021, 14:45:46 - ERROR - cannot find boards | ReferenceError: logger is not defined (sid: a2OlwBFNX5GZyJhSOkeFd0zNrrbO6gnw)
+01/06/2021, 14:45:46 - ERROR - Failed to get boards | ReferenceError: logger is not defined (sid: a2OlwBFNX5GZyJhSOkeFd0zNrrbO6gnw)
+01/06/2021, 15:14:54 - INFO - Server is running on port: 3030 
+01/06/2021, 15:15:01 - ERROR - cannot find boards | ReferenceError: logger is not defined (sid: Lp7ccsysVGV3TU_kflzXjonlJLM-U4Hw)
+01/06/2021, 15:15:01 - ERROR - Failed to get boards | ReferenceError: logger is not defined (sid: Lp7ccsysVGV3TU_kflzXjonlJLM-U4Hw)
+01/06/2021, 15:15:16 - INFO - Server is running on port: 3030 
+01/06/2021, 15:15:36 - INFO - Server is running on port: 3030 
+01/06/2021, 15:15:44 - ERROR - cannot find boards | ReferenceError: logger is not defined (sid: TufcrMUOiqy_kHuXqYzXrDP9L0k-XQll)
+01/06/2021, 15:15:44 - ERROR - Failed to get boards | ReferenceError: logger is not defined (sid: TufcrMUOiqy_kHuXqYzXrDP9L0k-XQll)
+01/06/2021, 15:16:18 - INFO - Server is running on port: 3030 
+01/06/2021, 15:17:56 - INFO - Server is running on port: 3030 
+01/06/2021, 15:18:01 - INFO - Server is running on port: 3030 
+01/06/2021, 15:18:14 - INFO - Server is running on port: 3030 
+01/06/2021, 15:18:16 - INFO - Server is running on port: 3030 
+01/06/2021, 17:36:50 - ERROR - cannot find boards | ReferenceError: logger is not defined (sid: uyX-_ZPrL0vjqH_BqwcJcAPuP2KY8_B_)
+01/06/2021, 17:36:50 - ERROR - Failed to get boards | ReferenceError: logger is not defined (sid: uyX-_ZPrL0vjqH_BqwcJcAPuP2KY8_B_)
+01/06/2021, 17:39:00 - INFO - Server is running on port: 3030 
+01/06/2021, 17:39:07 - ERROR - cannot find boards | ReferenceError: logger is not defined (sid: ViSUj_XmrCMEgkGzyHqew3Kcq-as2Cj0)
+01/06/2021, 17:39:07 - ERROR - Failed to get boards | ReferenceError: logger is not defined (sid: ViSUj_XmrCMEgkGzyHqew3Kcq-as2Cj0)
+01/06/2021, 17:50:12 - INFO - Server is running on port: 3030 
+01/06/2021, 18:23:40 - INFO - Server is running on port: 3030 
+01/06/2021, 18:29:04 - INFO - Server is running on port: 3030 
+01/06/2021, 18:29:33 - INFO - Server is running on port: 3030 
+01/06/2021, 18:29:37 - INFO - Server is running on port: 3030 
+01/06/2021, 18:29:47 - INFO - Server is running on port: 3030 
+01/06/2021, 18:30:11 - INFO - Server is running on port: 3030 
+01/06/2021, 18:30:56 - INFO - Server is running on port: 3030 
+01/06/2021, 18:31:08 - INFO - Server is running on port: 3030 
+01/06/2021, 18:31:18 - INFO - Server is running on port: 3030 
+01/06/2021, 18:32:12 - INFO - Server is running on port: 3030 
+01/06/2021, 18:32:20 - INFO - Server is running on port: 3030 
+01/06/2021, 18:33:40 - INFO - Server is running on port: 3030 
+01/06/2021, 18:34:26 - INFO - Server is running on port: 3030 
+01/06/2021, 18:42:08 - INFO - Server is running on port: 3030 
+01/06/2021, 19:30:18 - INFO - Server is running on port: 3030 
+01/06/2021, 19:30:21 - INFO - Server is running on port: 3030 
+01/06/2021, 19:30:24 - INFO - Server is running on port: 3030 
+01/06/2021, 19:30:35 - INFO - Server is running on port: 3030 
+01/06/2021, 19:30:51 - INFO - Server is running on port: 3030 
+01/06/2021, 19:31:15 - INFO - Server is running on port: 3030 
+01/06/2021, 19:33:09 - ERROR - Failed to update board | TypeError: boardService.update is not a function (sid: RT3QJUZkzWW2-Hs3sCdJvmIRku0obKe-)
+01/06/2021, 19:34:25 - INFO - Server is running on port: 3030 
+01/06/2021, 19:34:29 - ERROR - Failed to update board | ReferenceError: review is not defined (sid: 8OTG47l-Zgv-lJQiemIbLzOx6NYbs8XZ)
+01/06/2021, 19:34:44 - INFO - Server is running on port: 3030 
+01/06/2021, 20:14:33 - INFO - Server is running on port: 3030 
+01/06/2021, 20:14:35 - INFO - Server is running on port: 3030 
+01/06/2021, 20:14:36 - INFO - Server is running on port: 3030 
+01/06/2021, 20:15:19 - INFO - Server is running on port: 3030 
+01/06/2021, 20:15:47 - INFO - Server is running on port: 3030 
+01/06/2021, 20:15:50 - INFO - Server is running on port: 3030 
+01/06/2021, 20:17:14 - INFO - Server is running on port: 3030 
+01/06/2021, 20:17:21 - INFO - Server is running on port: 3030 
+01/06/2021, 20:17:33 - INFO - Server is running on port: 3030 
+01/06/2021, 20:17:38 - INFO - Server is running on port: 3030 
+01/06/2021, 20:17:41 - INFO - Server is running on port: 3030 
+01/06/2021, 20:20:23 - INFO - Server is running on port: 3030 
+01/06/2021, 20:21:31 - INFO - Server is running on port: 3030 
+01/06/2021, 20:22:17 - INFO - Server is running on port: 3030 
+01/06/2021, 20:22:42 - INFO - Server is running on port: 3030 
+01/06/2021, 20:22:44 - INFO - Server is running on port: 3030 
+01/06/2021, 20:22:47 - INFO - Server is running on port: 3030 
+01/06/2021, 20:23:46 - INFO - Server is running on port: 3030 
+01/06/2021, 20:24:13 - INFO - Server is running on port: 3030 
+01/06/2021, 20:24:55 - INFO - Server is running on port: 3030 
+01/06/2021, 20:25:29 - INFO - Server is running on port: 3030 
+01/06/2021, 20:25:48 - INFO - Server is running on port: 3030 
+01/06/2021, 20:26:03 - INFO - Server is running on port: 3030 
+01/06/2021, 20:26:11 - INFO - Server is running on port: 3030 
+01/06/2021, 20:26:17 - INFO - Server is running on port: 3030 
+01/06/2021, 20:26:25 - INFO - Server is running on port: 3030 
+01/06/2021, 20:26:39 - INFO - Server is running on port: 3030 
+01/06/2021, 20:26:43 - ERROR - Failed to add new board | ReferenceError: toyService is not defined (sid: u0sCGIgLbhh2MPGLyxYlkol5RaA0ntBi)
+01/06/2021, 20:27:03 - INFO - Server is running on port: 3030 
+01/06/2021, 20:27:06 - INFO - Server is running on port: 3030 
+01/06/2021, 20:29:07 - INFO - Server is running on port: 3030 
+01/06/2021, 20:31:04 - INFO - Server is running on port: 3030 
+01/06/2021, 20:31:30 - INFO - Server is running on port: 3030 
+01/06/2021, 20:39:56 - INFO - Server is running on port: 3030 
+01/06/2021, 20:40:07 - INFO - Server is running on port: 3030 
+01/06/2021, 20:43:46 - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: wEDcJexOw_aeKzmRdq8b1qICLHEMiYqs)
+01/06/2021, 20:43:46 - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: wEDcJexOw_aeKzmRdq8b1qICLHEMiYqs)
+01/06/2021, 20:43:58 - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: Jp0-PF9gIMLjGNbjVt96XrsE9hIJ_T_P)
+01/06/2021, 20:43:58 - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: Jp0-PF9gIMLjGNbjVt96XrsE9hIJ_T_P)
+01/06/2021, 20:44:01 - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: Jp0-PF9gIMLjGNbjVt96XrsE9hIJ_T_P)
+01/06/2021, 20:44:01 - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: Jp0-PF9gIMLjGNbjVt96XrsE9hIJ_T_P)
+01/06/2021, 20:44:57 - ERROR - while finding board b101 | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: Jp0-PF9gIMLjGNbjVt96XrsE9hIJ_T_P)
+01/06/2021, 20:44:57 - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: Jp0-PF9gIMLjGNbjVt96XrsE9hIJ_T_P)
+01/06/2021, 21:10:57 - INFO - Server is running on port: 3030 
+01/06/2021, 21:11:02 - INFO - Server is running on port: 3030 
+01/06/2021, 21:11:10 - INFO - Server is running on port: 3030 
+01/06/2021, 21:11:29 - INFO - Server is running on port: 3030 
+01/06/2021, 21:19:06 - INFO - Server is running on port: 3030 
+01/06/2021, 22:32:04 - INFO - Server is running on port: 3030 
+6/2/2021, 9:16:03 AM - INFO - Server is running on port: 3030 
+6/2/2021, 9:16:46 AM - INFO - Server is running on port: 3030 

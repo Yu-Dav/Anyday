@@ -19,7 +19,7 @@ export const routes = [
     component: SignUp,
   },
   {
-    path: '/board/:boardId/:taskId?',
+    path: '/board/:boardId/:groupId?/:taskId?',
     component: BoardApp ,
   },
   // {

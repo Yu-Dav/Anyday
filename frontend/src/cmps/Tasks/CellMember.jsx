@@ -18,40 +18,28 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export function CellMember({ task, board, updateBoard }) {
-
     const taskMembers = task.members
     const boardMembers = board.members
-
     const classes = useStyles();
     const [open, setOpen] = React.useState(false);
     const anchorRef = React.useRef(null);
-
     const handleToggle = () => {
         setOpen((prevOpen) => !prevOpen);
     };
-
     const handleClose = (event) => {
-        if (anchorRef.current && anchorRef.current.contains(event.target)) {
-            return;
-        }
-
+        if (anchorRef.current && anchorRef.current.contains(event.target)) return
         setOpen(false);
     };
-
     function handleListKeyDown(event) {
         if (event.key === 'Tab') {
             event.preventDefault();
             setOpen(false);
         }
     }
-
     // return focus to the button when we transitioned from !open -> open
     const prevOpen = React.useRef(open);
     React.useEffect(() => {
-        if (prevOpen.current === true && open === false) {
-            anchorRef.current.focus();
-        }
-
+        if (prevOpen.current === true && open === false) anchorRef.current.focus()
         prevOpen.current = open;
     }, [open]);
 
@@ -68,7 +56,7 @@ export function CellMember({ task, board, updateBoard }) {
     const onRemoveMember = (ev) => {
         const memberId = ev.target.dataset.id
         // console.log('member id',memberId);
-        const memberIdx = taskMembers.findIndex(member=> member._id === memberId)
+        const memberIdx = taskMembers.findIndex(member => member._id === memberId)
         taskMembers.splice(memberIdx, 1)
         const newBoard = { ...board }
         updateBoard(newBoard)
@@ -79,27 +67,22 @@ export function CellMember({ task, board, updateBoard }) {
         return boardMembers.find(member => member._id === id)
     }
 
-    // const otherMembers = boardMembers.filter((member) => {
-    //     // console.log('board', member);
-    //     return taskMembers.filter(taskMember => {
-    //         // console.log('task',taskMember)
-    //     //    console.log(taskMember._id !== member._id)
-    //            return taskMember._id !== member._id})
-        
-    // })
-
-
     function getOtherMembers(){
-        const otherMembers = [...boardMembers]
-        otherMembers.forEach((otherMember, idx)=> {
-            taskMembers.forEach((taskMember) => {
-                if(otherMember._id === taskMember._id){
-                    otherMembers.splice(idx, 1)
-                }
-            })
-        })
-        console.log('other members', otherMembers);
-        return otherMembers
+    var otherMembers = boardMembers.filter(x => {
+        let elementsOfArray2PresentInArray1 = taskMembers.filter(y => {
+          return y._id === x._id
+        });
+      
+        if (elementsOfArray2PresentInArray1.length > 0) {
+          return false
+        } else {
+          return true;
+        }
+        //`return !length;` will  return false if length > 0
+      });
+      
+      console.log(otherMembers)
+      return otherMembers
     }
 
     return (
