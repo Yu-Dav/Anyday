@@ -177,14 +177,15 @@
         opacity:1;
     }
 }
-.fa.comment:hover{
-    color: #0085ff;
-}
 
 .fa.comment::after {
     content:"\f075";
     font-size: 24px;
     color: #c5c7d0;
+    &:hover{
+        color: #0085ff;
+    }
+    
 }
 
 

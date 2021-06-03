@@ -25,7 +25,7 @@ export function TaskPreview({ task, group, board, updateBoard, index }) {
                         <CellStatus task={task} board={board} updateBoard={updateBoard} />
                         <CellPriority task={task} board={board} updateBoard={updateBoard} />
                         <CellCreationLog task={task} />
-                        <CellDate task={task} board={board} updateBoard={updateBoard} />
+                        <CellDate task={task} group={group} board={board} updateBoard={updateBoard} />
                     </div>
                 )}
             </Draggable>

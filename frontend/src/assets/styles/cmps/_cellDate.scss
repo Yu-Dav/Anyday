@@ -1,4 +1,10 @@
 .timeline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .date-pick-wrapper{
+        display: flex;
+    }
     .date-picker-cmp,
     .date-picker,
     .no-date,
@@ -15,7 +21,32 @@
         border-radius: 11px;
         margin: 0 auto;
     }
-    .date-picker-cmp{
-        background-color: transparent;
+    .date-picker-container {
+        width: 155px;
+        height: 25px;
+        border-radius: 11px;
+        position: relative;
+        .date-picker-cmp {
+            width: 155px;
+
+            background-color: transparent;
+            position: absolute;
+            top: -45px;
+            right: -75px;
+        }
+        .progress-bar {
+            position: absolute;
+            // top: 0;
+            // left: 0;
+            height: 25px;
+            border-radius: 11px;
+        }
+
+        .grey-bck {
+            width: 155px;
+            height: 25px;
+            background-color: $grey;
+            border-radius: 11px;
+        }
     }
 }

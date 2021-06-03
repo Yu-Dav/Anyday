@@ -3,7 +3,7 @@ import { ClickAwayListener } from '@material-ui/core'
 import { Colors } from '../Colors'
 import { socketService } from '../../services/socketService'
 
-import { ReactComponent as DropDownGroup } from '../../assets/imgs/svg/dropDownGroup.svg'
+import { ReactComponent as DropDownArrow } from '../../assets/imgs/svg/dropDownArrow.svg'
 
 export class GroupMenu extends Component {
 
@@ -33,7 +33,7 @@ export class GroupMenu extends Component {
     }
     onSelectChange = (ev) => {
         ev.stopPropagation()
-        this.setState({ ...this.state, isColor: !this.state.isColor, isExpanded: false }, console.log(this.state))
+        this.setState({ ...this.state, isColor: !this.state.isColor, isExpanded: false })
     }
     onOpenSelector = () => {
         this.setState({ ...this.state, isExpanded: !this.state.isExpanded })
@@ -43,10 +43,11 @@ export class GroupMenu extends Component {
     }
     render() {
         const { isExpanded, isColor } = this.state
+        const { bgColor } = this.props.group.style
         return (
             <ClickAwayListener onClickAway={this.handleClickAway}>
                 <div className="group-modal-choose" onClick={this.onOpenSelector}>
-              <DropDownGroup/>
+                    <DropDownArrow style={{ fill: bgColor }} />
                     <div>
                         {isExpanded && <div className="fade-in group-modal absolute">
                             <div onClick={this.onDeleteGroup}>Delete group</div>
