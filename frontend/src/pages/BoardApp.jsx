@@ -89,7 +89,6 @@ class _BoardApp extends Component {
     }
     onSetFilter = (filterBy) => {
         console.log('filterBy', filterBy)
-        // socketService.emit('board updated', copyGroup._id);
         // this.props.loadBoard(filterBy)
     }
     render() {

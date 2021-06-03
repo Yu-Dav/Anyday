@@ -23,6 +23,7 @@ class _BoardFilter extends Component {
         this.setState(newState, () =>
             this.props.loadBoard(this.props.currBoard._id, newFilter)
         )
+        // add txt to the filterBy 
     }
     render() {
         const { board } = this.props
