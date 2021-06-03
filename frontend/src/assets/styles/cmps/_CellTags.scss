@@ -15,4 +15,43 @@
         line-height: 32px;
         font-size: 12px;
     }
+
+    .add-tag.btn {
+        color: #0073ea;
+        background-color: white;
+        border: none;
+        border-radius: 4px;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+        transition: 0.3s;
+        &:hover {
+            color: white;
+            background-color: #0073ea;
+        }
+    }
+    .horiz-line {
+        border-top: 0px;
+        border-bottom: 1px solid #c4c4c4;
+    }
+
+    .tag-option {
+        &:hover {
+            .fas.close {
+                opacity: 0.5;
+            }
+        }
+    }
+    .tag-add {
+        margin-bottom: 5px;
+    }
+
+    .tags-picker-input {
+        width: 85px;
+        outline: none;
+        border: none;
+    }
+
+    .fas.close::after {
+        content: "\f057";
+    }
 }

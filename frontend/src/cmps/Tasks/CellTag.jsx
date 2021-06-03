@@ -48,11 +48,12 @@ export class CellTag extends Component {
     }
 
     onOpenSelector = () => {
-        this.setState({ ...this.state, isExpanded: !this.state.isExpanded })
+        this.setState({ ...this.state, isExpanded: true })
     }
 
     
-    handleClickAway = () => {
+    handleClickAway = (ev) => {
+        ev.stopPropagation()
         this.setState({ ...this.state, isExpanded: false })
     }
 
@@ -90,7 +91,7 @@ export class CellTag extends Component {
         const { isExpanded } = this.state
         const { board } = this.props
         return (
-            <ClickAwayListener  onClickAway={this.handleClickAway}>
+            <ClickAwayListener  onClickAway={(ev)=>this.handleClickAway(ev)}>
                 <div className="cell-tag-container flex justify-center"  onClick={this.onOpenSelector} >
                     {tags.map((tag) => {
                         return <span className="tag-container" style={{ color: tag.color }} key={tag.id}>{tag.title} </span>
@@ -108,7 +109,7 @@ export class CellTag extends Component {
                                         className="fas close"></i>
                                 </div>
                             })}
-                            <hr></hr>
+                            <hr className="horiz-line"></hr>
                             {this.getOtherTags().map((tag) => {
                                 return <div className="tag-option" onClick={this.handleUpdate}
                                     key={tag.id} data-tag={tag.id} style={{

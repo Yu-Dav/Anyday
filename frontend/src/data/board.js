@@ -691,8 +691,9 @@ function getTime() {
 
 export const boards = [
     {
-        title: 'Final Sprint',
-        subtitle: 'Our monday',
+        _id:'b101',
+        title: "Final Sprint",
+        subtitle: "Our monday",
         createdAt: 1621940297426,
         description:
             'Planning the final sprint and assigning tasks between team members',

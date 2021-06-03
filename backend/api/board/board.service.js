@@ -98,7 +98,7 @@ module.exports = {
 function _buildCriteria(filterBy) {
     console.log(`file: board.service.js || line 99 || filterBy`, filterBy)
     const criteria = {}
-    if (filterBy.txt) {
+    if (filterBy.priority) {
         const txtCriteria = { $regex: filterBy.txt, $options: 'i' }
         criteria.$or = [
             {
@@ -109,7 +109,10 @@ function _buildCriteria(filterBy) {
             }
         ]
     }
-    if (filterBy.minBalance) {
+    if (filterBy.status) {
+        criteria.score = { $gte: filterBy.minBalance }
+    }
+    if (filterBy.status) {
         criteria.score = { $gte: filterBy.minBalance }
     }
     return criteria

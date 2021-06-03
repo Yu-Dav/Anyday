@@ -134,7 +134,7 @@
     height: 20px;
     background: #fff;
     top: 92px;
-    left: 49px;
+    left: 35px;
 }
 
 .triangle-with-shadow:hover,
@@ -173,24 +173,6 @@
     
 }
 
-.tag-option {
-    &:hover {
-        .fas.close {
-            opacity: 0.5;
-        }
-    }
-}
-.tag-add {
-    margin-bottom: 5px;
-}
-
-.tags-picker-input {
-    width: 130px;
-}
-
-.fas.close::after {
-    content: '\f057';
-}
 
 a:hover {
     text-decoration: none;
