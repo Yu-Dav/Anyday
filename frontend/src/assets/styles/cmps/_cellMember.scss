@@ -5,7 +5,10 @@
         min-width: 100px;
         text-align: center;
         cursor: pointer;
-
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        
         .cell-member-avatar {
             display: inline-block;
             width: 20px;

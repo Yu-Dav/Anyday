@@ -66,7 +66,7 @@
     }
 }
 
-.title {
+// .title {
     // flex: 1;
     // min-width: 380px;
     // text-align: start;
@@ -88,18 +88,19 @@
     // .fa-trash::after {
     //     content: "\f1f8";
     // }
-}
+// }
 
-.asignee {
-    // flex-basis: 142px;
-    // text-align: center;
-    // cursor: pointer;
-}
+// .asignee {
+//     // flex-basis: 142px;
+//     // text-align: center;
+//     // cursor: pointer;
+// // 
+// }
 
-.tags {
-    // flex-basis: 142px;
-    // cursor: pointer;
-}
+// .tags {
+//     // flex-basis: 142px;
+//     // cursor: pointer;
+// }
 
 // .label {
 //     flex-basis: 113px;
@@ -147,7 +148,7 @@
     position: absolute;
     background-color: white;
     box-shadow: 0 8px 16px 0px #00000052;
-    z-index: 1;
+    z-index: 3;
     border-radius: 4px;
     padding: 16px 11px;
     top: 36px;
@@ -166,6 +167,10 @@
     content: '\f075';
     font-size: 24px;
     color: #c5c7d0;
+    &:hover{
+        color: #0085ff;
+    }
+    
 }
 
 .tag-option {

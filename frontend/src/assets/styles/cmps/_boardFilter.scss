@@ -1,6 +1,5 @@
 .board-filter {
     animation: fade-in 0.3s ease-in-out both;
-
     position: absolute;
     top: 150px;
     left: 320px;
@@ -12,6 +11,7 @@
     border-radius: 4px;
     max-height: 152px;
     overflow-y: scroll;
+    z-index: 3;
 
     h1 {
         font-size: rem(16px);

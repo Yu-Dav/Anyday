@@ -7,6 +7,8 @@ import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
 import { makeStyles } from '@material-ui/core/styles';
 import { socketService } from '../../services/socketService'
+import Avatar from '@material-ui/core/Avatar';
+import AvatarGroup from '@material-ui/lab/AvatarGroup';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -85,14 +87,17 @@ export function CellMember({ task, board, updateBoard }) {
             aria-controls={open ? 'menu-list-grow' : undefined}
             aria-haspopup="true"
             onClick={handleToggle} className="cell asignee">
-            <div className="flex align-center justify-center">{taskMembers.map(member => {
+            <div className="flex align-center justify-center">
+               {taskMembers && <AvatarGroup max={4}>
+                {taskMembers.map(member =>  <Avatar alt={member.username} src={member.imgUrl} style={{ width:'30px', height:'30px' }}/>
                 // return <span key={member._id}>{member.username.charAt(0)} </span>
-                return <span className="cell-member-avatar flex align-center" key={member._id}>
-                    <img src={member.imgUrl} alt="Member Avatar" />
-                </span>
-            })}
+                // return <span className="cell-member-avatar flex align-center" key={member._id}>
+                //     <img src={member.imgUrl} alt="Member Avatar" />
+                // </span>
+            )}
+            </AvatarGroup>}
             </div>
-            <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal style={{ zIndex: '1' }}>
+            <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal style={{ zIndex: '5' }}>
                 {({ TransitionProps, placement }) => (
                     <Grow
                         {...TransitionProps}
@@ -100,13 +105,13 @@ export function CellMember({ task, board, updateBoard }) {
                     >
                         <Paper>
                             <ClickAwayListener onClickAway={handleClose}>
-                                <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
+                                <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown} style={{ fontSize:'13px' }}>
                                     {taskMembers.map(member => {
-                                        return <MenuItem key={member._id} >{member.fullname}<i className="fas close" data-id={member._id} onClick={onRemoveMember}></i></MenuItem>
+                                        return <MenuItem style={{ display:'flex', gap:'10px', fontSize:'13px' }} key={member._id}><Avatar alt={member.username} src={member.imgUrl} style={{ width:'30px', height:'30px' }}/>{member.fullname}<i className="fas close" data-id={member._id} onClick={onRemoveMember}></i></MenuItem>
                                     })}
                                     <hr />
                                     {getOtherMembers().map(member => {
-                                        return <MenuItem key={member._id} data-id={member._id} onClick={onAddMember}>{member.fullname}</MenuItem>
+                                        return <MenuItem style={{ display:'flex', gap:'10px', fontSize:'13px' }} key={member._id} data-id={member._id} onClick={onAddMember}><Avatar alt={member.username} src={member.imgUrl} style={{ width:'30px', height:'30px' }}/>{member.fullname}</MenuItem>
                                     }
                                     )}
                                 </MenuList>

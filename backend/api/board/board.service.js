@@ -19,7 +19,8 @@ async function query(filterBy = {}) {
         throw err;
     }
 }
-async function getById(boardId) {
+async function getById(boardId, filterBy) {
+    const criteria = _buildCriteria(filterBy)
     try {
         const collection = await dbService.getCollection('board_db');
         const board = await collection.findOne({ _id: ObjectId(boardId) });
@@ -46,7 +47,7 @@ async function update(board) {
             createdAt: board.createdAt,
             priorityLabels: board.priorityLabels,
             activities: board.activities,
-            tags: board.tags                                   
+            tags: board.tags,
         };
         const collection = await dbService.getCollection('board_db');
         await collection.updateOne(
@@ -93,3 +94,23 @@ module.exports = {
     remove,
     update,
 };
+
+function _buildCriteria(filterBy) {
+    console.log(`file: board.service.js || line 99 || filterBy`, filterBy)
+    const criteria = {}
+    if (filterBy.txt) {
+        const txtCriteria = { $regex: filterBy.txt, $options: 'i' }
+        criteria.$or = [
+            {
+                username: txtCriteria
+            },
+            {
+                fullname: txtCriteria
+            }
+        ]
+    }
+    if (filterBy.minBalance) {
+        criteria.score = { $gte: filterBy.minBalance }
+    }
+    return criteria
+}
