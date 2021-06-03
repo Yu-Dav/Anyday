@@ -90,3 +90,171 @@
 >>>>>>> 4034e86ef254c8c52953d24b61e2cb27a530b7aa
 03/06/2021, 18:28:17 - INFO - Server is running on port: 3030 
 03/06/2021, 18:30:13 - DEBUG - Session ID is | B6EN_BOlOrJnuOAPKn0Ct457f2TxtwXR 
+03/06/2021, 18:38:23 - DEBUG - Session ID is | vHyQicrzSwQkljdqyboGKMx32nAEtq5b 
+03/06/2021, 18:39:12 - DEBUG - Session ID is | kI5mCzZl_bFsEPoUf5pDWeaJWLRFU1IE 
+03/06/2021, 18:39:43 - DEBUG - Session ID is | oqVhgn-gzQ6lplPaIGGaYei02JxeZz7n 
+03/06/2021, 18:39:47 - DEBUG - Session ID is | 5TWuzAedE853LD0lUVV2Dn7Y2ln9Cq6Q 
+03/06/2021, 18:40:43 - DEBUG - Session ID is | mr1YOvX170VBDa78faRtIl6xPxBESg0e 
+03/06/2021, 18:42:29 - DEBUG - Session ID is | MxdPXs9kp0WUVjDLleLm1xejpqCCUzsl 
+03/06/2021, 18:42:57 - DEBUG - Session ID is | SDnxKpaOHgOASCKtOj0GAAenohGTa39y 
+03/06/2021, 18:44:24 - DEBUG - Session ID is | SrIVNntRqTdQ2aAPEDSDFoqrXI2DjGlq 
+03/06/2021, 18:44:30 - DEBUG - Session ID is | kgx8QW2Jeldpvqe5JyhTYlIp1Nw7ADe8 
+03/06/2021, 18:44:40 - DEBUG - Session ID is | ZBw18cP42CaxtexNIRYlfvPXMfjo6R93 
+03/06/2021, 18:44:52 - DEBUG - Session ID is | AuOFzAIXDKTM99617U4etsl30L-M891J 
+03/06/2021, 18:46:01 - DEBUG - Session ID is | za0S84w31d90ZXmhK2mOntzkNLQSrK2L 
+03/06/2021, 18:46:19 - DEBUG - Session ID is | -N4rZeB_5zzNORidHQEWdCZZRgeGTAqp 
+03/06/2021, 18:51:04 - DEBUG - Session ID is | SlN-frxwhgMDmWoSD0klkgokxTA48GwP 
+03/06/2021, 19:05:20 - DEBUG - Session ID is | mz9D2ryJbQ1xSNtuMubfWnLoViMzwT4n 
+03/06/2021, 19:06:16 - DEBUG - Session ID is | SmSD4LRfdvy2ctyXs2Edn5eepzaJEYbN 
+03/06/2021, 19:06:43 - DEBUG - Session ID is | lindij3UhIG8TDaT64VCZoTGrsA2X0d- 
+03/06/2021, 19:11:53 - DEBUG - Session ID is | 0p40cctcfENFkgztFA-RkMJRrL3LvQqp 
+03/06/2021, 19:34:17 - INFO - Server is running on port: 3030 
+03/06/2021, 19:34:24 - DEBUG - Session ID is | W8KU6JL_sdXqc0DakcEXi3e9cbYpNqNS 
+03/06/2021, 19:35:14 - INFO - Server is running on port: 3030 
+03/06/2021, 19:35:23 - INFO - Server is running on port: 3030 
+03/06/2021, 19:38:27 - INFO - Server is running on port: 3030 
+03/06/2021, 19:38:29 - DEBUG - Session ID is | 2d6vTv15b2MFUC5x55UM8Y_3CSWNg2uy 
+03/06/2021, 19:38:40 - INFO - Server is running on port: 3030 
+03/06/2021, 19:38:41 - DEBUG - Session ID is | iXqkqF08PLeq1_WHY9xeyq89tOQG9cSc 
+03/06/2021, 19:38:47 - INFO - Server is running on port: 3030 
+03/06/2021, 19:38:51 - DEBUG - Session ID is | oqjYJ17MwTc3j8jeAkahu2UHzvEIjfJK 
+03/06/2021, 19:39:33 - INFO - Server is running on port: 3030 
+03/06/2021, 19:39:34 - DEBUG - Session ID is | 8sWHr5xN8BnTsEUMWFpOvP77WyCu5Zi- 
+03/06/2021, 19:39:36 - DEBUG - Session ID is | UaMX9FgMmW03xiOG2hRy5-qfMI81gd6B 
+03/06/2021, 19:39:39 - DEBUG - Session ID is | Z2H0VzE1pTMufeAaaKuYoRkBZigmIxeV 
+03/06/2021, 19:47:20 - INFO - Server is running on port: 3030 
+03/06/2021, 19:47:22 - DEBUG - Session ID is | 5o27WPxaiKqahTQBZRaWw64W2OimC6fO 
+03/06/2021, 19:47:23 - ERROR - while finding board 60b7e87419a5e8e764d835fe | ReferenceError: obj is not defined (sid: kXHR4wYsnb298meGVk063f2jiJzwPGsX)
+03/06/2021, 19:47:23 - ERROR - Failed to get board | ReferenceError: obj is not defined (sid: kXHR4wYsnb298meGVk063f2jiJzwPGsX)
+03/06/2021, 19:47:26 - INFO - Server is running on port: 3030 
+03/06/2021, 19:48:38 - INFO - Server is running on port: 3030 
+03/06/2021, 19:48:40 - DEBUG - Session ID is | H87oKQLUnGs4Nw5Sv3wimv29Rj7n8EQP 
+03/06/2021, 19:49:00 - INFO - Server is running on port: 3030 
+03/06/2021, 19:49:02 - DEBUG - Session ID is | IXLPry50V8LN3RL1hDk8L-kYLjq-eIAd 
+03/06/2021, 19:49:06 - INFO - Server is running on port: 3030 
+03/06/2021, 19:49:09 - DEBUG - Session ID is | Aol8c7nOaFaIGrAobeZh6xvGIOU4iy7n 
+03/06/2021, 19:49:13 - INFO - Server is running on port: 3030 
+03/06/2021, 19:49:15 - DEBUG - Session ID is | ng5iehrRe5KaIeV8_gDnlq-CLDqlyba4 
+03/06/2021, 19:49:25 - DEBUG - Session ID is | _uEoQn5fhpnDg6QaBGoLpPA08NqLH4ti 
+03/06/2021, 19:49:32 - DEBUG - Session ID is | dXDN-8RH3WKNoduHlodYgz4qw77PYZ25 
+03/06/2021, 19:49:40 - DEBUG - Session ID is | wn37XoO2BpUguRjBoGSugl30L2pVuAHv 
+03/06/2021, 19:49:45 - DEBUG - Session ID is | yJtq89H2T1QOC66YGiuC9-q5yUyUt3Zs 
+03/06/2021, 19:49:53 - DEBUG - Session ID is | 9Cu2eAuTtMkTu1XYTwMOemH0sNrKABFw 
+03/06/2021, 19:50:00 - INFO - Server is running on port: 3030 
+03/06/2021, 19:50:02 - DEBUG - Session ID is | jJfDkVz5kGMIAqUsHheQ7avK4RLZrkC2 
+03/06/2021, 19:50:06 - INFO - Server is running on port: 3030 
+03/06/2021, 19:50:08 - DEBUG - Session ID is | 9-Xatr9wrnU8L4MNcGV0lM7QqDfWMDv9 
+03/06/2021, 20:06:10 - DEBUG - Session ID is | nHj9O0joncXwtyY6xOIvEsGD0uzJ7ls4 
+03/06/2021, 20:06:19 - DEBUG - Session ID is | mH2wygXMKXEbCqXxfnCN5-dA_NZAMQod 
+03/06/2021, 20:10:00 - INFO - Server is running on port: 3030 
+03/06/2021, 20:15:16 - INFO - Server is running on port: 3030 
+03/06/2021, 20:15:22 - INFO - Server is running on port: 3030 
+03/06/2021, 20:15:25 - DEBUG - Session ID is | FWTebw5ya9j9G-LPRPYwJpLxQM9r0seM 
+03/06/2021, 20:15:25 - ERROR - while finding board 60b7e87419a5e8e764d835fe | ReferenceError: obj is not defined (sid: RMTMrY_0Z3NivQbQuG4ut7uyDGNOQLtA)
+03/06/2021, 20:15:25 - ERROR - Failed to get board | ReferenceError: obj is not defined (sid: RMTMrY_0Z3NivQbQuG4ut7uyDGNOQLtA)
+03/06/2021, 20:15:41 - INFO - Server is running on port: 3030 
+03/06/2021, 20:15:45 - DEBUG - Session ID is | TwbHa3ArZxEpWktGAn_DkdVBcxpybuNV 
+03/06/2021, 20:15:59 - DEBUG - Session ID is | cfy4BD075Fjj2el0MUTnGIiWy6_BcfAY 
+03/06/2021, 20:17:12 - DEBUG - Session ID is | 0PD9GCbSUPa4F3cSSvv2S5Jyq5kR6e5u 
+03/06/2021, 20:17:47 - INFO - Server is running on port: 3030 
+03/06/2021, 20:17:48 - DEBUG - Session ID is | BPX0S_QKkXibLiUN8b4QU8Dtdrv1LMII 
+03/06/2021, 20:19:22 - INFO - Server is running on port: 3030 
+03/06/2021, 20:19:24 - DEBUG - Session ID is | UKxdh0mkiV8jcJPAemsxnOLvtUCg03I5 
+03/06/2021, 20:19:39 - DEBUG - Session ID is | ZgzZxrNf-2ttiEBrJCPSk0KR9igJjpsK 
+03/06/2021, 20:21:35 - INFO - Server is running on port: 3030 
+03/06/2021, 20:21:56 - INFO - Server is running on port: 3030 
+03/06/2021, 20:22:07 - INFO - Server is running on port: 3030 
+03/06/2021, 20:22:09 - DEBUG - Session ID is | K-1SzlBMYqz1AB09TlP7hcNdxQf6FQ1a 
+03/06/2021, 20:22:20 - DEBUG - Session ID is | 42lmAVRbT-wEA3q6HSQqr0pzRUEsyOop 
+03/06/2021, 20:22:41 - INFO - Server is running on port: 3030 
+03/06/2021, 20:22:46 - DEBUG - Session ID is | 3BwPhRqh5kR0rzf3fG0A9bC5g40WNRvU 
+03/06/2021, 20:23:31 - INFO - Server is running on port: 3030 
+03/06/2021, 20:23:33 - DEBUG - Session ID is | G7NCF8fPWuYWavbvVx1OlHVb6bKpAnxX 
+03/06/2021, 20:23:36 - ERROR - while finding board 60b7e87419a5e8e764d835fe | TypeError: collection.find(...).toObject is not a function (sid: DnA_hIFbVxb1nqpnqF8RQX2AHtdQZK6Z)
+03/06/2021, 20:23:36 - ERROR - Failed to get board | TypeError: collection.find(...).toObject is not a function (sid: DnA_hIFbVxb1nqpnqF8RQX2AHtdQZK6Z)
+03/06/2021, 20:23:48 - INFO - Server is running on port: 3030 
+03/06/2021, 20:23:59 - INFO - Server is running on port: 3030 
+03/06/2021, 20:24:00 - INFO - Server is running on port: 3030 
+03/06/2021, 20:24:05 - DEBUG - Session ID is | v09fL_ihRz6ZuM0cRpd9w6FUIL-bB-v_ 
+03/06/2021, 20:24:07 - ERROR - Failed to get board | TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle (sid: QqxL0psf6Aw_IoYtovOnny4Qn_m_4Txk)
+03/06/2021, 20:24:35 - INFO - Server is running on port: 3030 
+03/06/2021, 20:31:30 - DEBUG - Session ID is | Wca4SAwrVjGXw2zG85gjrxk2tB2EWj3E 
+03/06/2021, 20:31:33 - DEBUG - Session ID is | HXLGtffZhCHdwsqwB2PX-UdrjE-tPHHd 
+03/06/2021, 20:33:20 - DEBUG - Session ID is | SXHsE47JiIPdqm2ecoIej-afaRJzRuNl 
+03/06/2021, 20:33:22 - DEBUG - Session ID is | pj-uAsfar1bZVl4DlLOtaX62XJFdCtLL 
+03/06/2021, 20:36:14 - INFO - Server is running on port: 3030 
+03/06/2021, 20:36:19 - DEBUG - Session ID is | fHOI9-L5BuWXf0klXhbxffKs_WufrXdy 
+03/06/2021, 20:37:59 - INFO - Server is running on port: 3030 
+03/06/2021, 20:38:03 - DEBUG - Session ID is | jth3BvsDOo0tHzNrnSNQBFaVApIUt5XQ 
+03/06/2021, 20:39:21 - DEBUG - Session ID is | qjmxgNsmYJznWhQM5vVRYhwJfKO7rptQ 
+03/06/2021, 20:40:08 - INFO - Server is running on port: 3030 
+03/06/2021, 20:40:12 - DEBUG - Session ID is | RTYToFCiAMuOMuxLufQuZwJmV86RGOLz 
+03/06/2021, 20:41:11 - INFO - Server is running on port: 3030 
+03/06/2021, 20:41:13 - DEBUG - Session ID is | aqSRGyCA09lGhb48UwK14__2x00htWer 
+03/06/2021, 20:41:15 - ERROR - Failed to get board | TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle (sid: FANsIvn2nlOffkcyBDS8tuxZWog_b5M8)
+03/06/2021, 20:41:18 - ERROR - Failed to get board | TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle (sid: FANsIvn2nlOffkcyBDS8tuxZWog_b5M8)
+03/06/2021, 20:41:19 - ERROR - Failed to get board | TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle (sid: FANsIvn2nlOffkcyBDS8tuxZWog_b5M8)
+03/06/2021, 20:41:39 - INFO - Server is running on port: 3030 
+03/06/2021, 20:46:09 - DEBUG - Session ID is | NudGgpyIfotHqrKVF5V6dSbqX09xhir4 
+03/06/2021, 20:46:24 - DEBUG - Session ID is | 01aczZikMHxoDAC7KKIGEsq0ktZoyR1g 
+03/06/2021, 20:47:58 - INFO - Server is running on port: 3030 
+03/06/2021, 20:48:03 - DEBUG - Session ID is | 9KN5oO5-e-ceyilf-6nQNuRYxYIjipxA 
+03/06/2021, 20:48:53 - INFO - Server is running on port: 3030 
+03/06/2021, 20:48:55 - DEBUG - Session ID is | JGtiCCFEmNqL56Hze1V8Ob3QeSGD0Om3 
+03/06/2021, 20:49:09 - INFO - Server is running on port: 3030 
+03/06/2021, 20:50:24 - INFO - Server is running on port: 3030 
+03/06/2021, 20:50:41 - INFO - Server is running on port: 3030 
+03/06/2021, 20:50:57 - INFO - Server is running on port: 3030 
+03/06/2021, 20:50:59 - DEBUG - Session ID is | -Y3_1NfR8dgBDPRFYk155KBz1WXSCCJg 
+03/06/2021, 20:51:09 - DEBUG - Session ID is | Z8zqusG8Q_6BHghAhOEyTAmWhu_D6j59 
+03/06/2021, 20:51:22 - INFO - Server is running on port: 3030 
+03/06/2021, 20:55:34 - INFO - Server is running on port: 3030 
+03/06/2021, 20:55:38 - DEBUG - Session ID is | LhfTE6W5HMF6qC-FqDodxUq526CDez2T 
+03/06/2021, 20:55:49 - INFO - Server is running on port: 3030 
+03/06/2021, 20:55:51 - DEBUG - Session ID is | bsfsgKlYKZkR5iubRVVaS2v6lrrAeXAf 
+03/06/2021, 20:56:19 - DEBUG - Session ID is | VWOumoEvBMWEae2QyceTKvpnDndE4RKo 
+03/06/2021, 20:58:15 - INFO - Server is running on port: 3030 
+03/06/2021, 20:58:25 - DEBUG - Session ID is | --pQ4egKeJmbThT5ibL7pCg1P0WC6Tnw 
+03/06/2021, 20:58:53 - DEBUG - Session ID is | 4Hvsev8-33cPGpEOQLQmmKt3lHi2gycm 
+03/06/2021, 20:59:58 - INFO - Server is running on port: 3030 
+03/06/2021, 21:00:08 - INFO - Server is running on port: 3030 
+03/06/2021, 21:00:10 - DEBUG - Session ID is | bUXSpHuG_lKLohgq0Lt_MZ7Hvc3aI3qp 
+03/06/2021, 21:00:12 - DEBUG - Session ID is | 6hWQyvGDKyGOtTagkkkBHbkNTSwLalI1 
+03/06/2021, 21:00:22 - INFO - Server is running on port: 3030 
+03/06/2021, 21:00:32 - INFO - Server is running on port: 3030 
+03/06/2021, 21:01:20 - INFO - Server is running on port: 3030 
+03/06/2021, 21:01:26 - DEBUG - Session ID is | WYxNLgbACR5Ej6NEPLp1Nx2NKSySjX15 
+03/06/2021, 21:01:50 - INFO - Server is running on port: 3030 
+03/06/2021, 21:01:52 - DEBUG - Session ID is | MYLxFudlFfKGL5gFyW-xEFV9SdGrzP5s 
+03/06/2021, 21:01:59 - ERROR - Failed to get board | TypeError: Cannot read property 'tasks' of undefined (sid: d5ahf5VnVwbNU24QL3K8_3V46sHv8nPG)
+03/06/2021, 21:02:02 - ERROR - Failed to get board | TypeError: Cannot read property 'tasks' of undefined (sid: d5ahf5VnVwbNU24QL3K8_3V46sHv8nPG)
+03/06/2021, 21:02:03 - ERROR - Failed to get board | TypeError: Cannot read property 'tasks' of undefined (sid: d5ahf5VnVwbNU24QL3K8_3V46sHv8nPG)
+03/06/2021, 21:02:04 - ERROR - Failed to get board | TypeError: Cannot read property 'tasks' of undefined (sid: d5ahf5VnVwbNU24QL3K8_3V46sHv8nPG)
+03/06/2021, 21:02:05 - ERROR - Failed to get board | TypeError: Cannot read property 'tasks' of undefined (sid: d5ahf5VnVwbNU24QL3K8_3V46sHv8nPG)
+03/06/2021, 21:02:59 - INFO - Server is running on port: 3030 
+03/06/2021, 21:03:08 - DEBUG - Session ID is | h1ycCJiMsjlA38LO2snWFoI7BRY7hfSS 
+03/06/2021, 21:04:11 - ERROR - Failed to get board | TypeError: Cannot read property 'tasks' of undefined (sid: DXjSdoz1aClI-7Wn0xn0SP19n6Alkcs1)
+03/06/2021, 21:04:11 - ERROR - Failed to get board | TypeError: Cannot read property 'tasks' of undefined (sid: DXjSdoz1aClI-7Wn0xn0SP19n6Alkcs1)
+03/06/2021, 21:04:13 - ERROR - Failed to get board | TypeError: Cannot read property 'tasks' of undefined (sid: DXjSdoz1aClI-7Wn0xn0SP19n6Alkcs1)
+03/06/2021, 21:04:56 - INFO - Server is running on port: 3030 
+03/06/2021, 21:04:58 - DEBUG - Session ID is | SWdPYG3QCNDHHvGtzEHFIXCdhmSk7kUQ 
+03/06/2021, 21:06:46 - INFO - Server is running on port: 3030 
+03/06/2021, 21:06:54 - DEBUG - Session ID is | IgIASGwbktFG6FQa45gEacbNX_H1ni0X 
+03/06/2021, 21:07:02 - ERROR - Failed to get board | TypeError: Cannot read property 'tasks' of undefined (sid: H9o0A7HPBeUJEqWjlx9FssjUV1EqzEEI)
+03/06/2021, 21:09:19 - INFO - Server is running on port: 3030 

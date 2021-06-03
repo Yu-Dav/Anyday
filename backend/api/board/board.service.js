@@ -20,11 +20,15 @@ async function query(filterBy = {}) {
     }
 }
 async function getById(boardId, filterBy) {
-    const criteria = _buildCriteria(filterBy)
+    console.log(`file: board.service.js || line 23 || filterBy`, filterBy);
+    const criteria = _buildCriteria(filterBy);
     try {
         const collection = await dbService.getCollection('board_db');
         const board = await collection.findOne({ _id: ObjectId(boardId) });
-        return board;
+        if (Object.keys(filterBy).length === 0) return board;
+        const filteredBoard = await collection.find(criteria).toArray();
+        const objBoard = { ...filteredBoard };
+        return objBoard[0];
     } catch (err) {
         logger.error(`while finding board ${boardId}`, err);
         throw err;
@@ -96,24 +100,38 @@ module.exports = {
 };
 
 function _buildCriteria(filterBy) {
-    console.log(`file: board.service.js || line 99 || filterBy`, filterBy)
-    const criteria = {}
-    if (filterBy.priority) {
-        const txtCriteria = { $regex: filterBy.txt, $options: 'i' }
+    console.log(`file: board.service.js || line 99 || filterBy`, filterBy);
+    const criteria = {};
+    if (filterBy.txt) {
+        const txtCriteria = { $regex: filterBy.txt, $options: 'i' };
         criteria.$or = [
             {
-                username: txtCriteria
+                username: txtCriteria,
             },
             {
-                fullname: txtCriteria
-            }
-        ]
+                fullname: txtCriteria,
+            },
+        ];
+    }
+    if (filterBy.priority) {
+        console.log(' 117 * * * * * * * * * * in priority');
+        // criteria.priority = { $eq: filterBy.priority };
+        criteria.groups.tasks.priority.title = filterBy.priority[0].title;
     }
     if (filterBy.status) {
-        criteria.score = { $gte: filterBy.minBalance }
+        console.log(' 122 * * * * * * * * * * in status');
+
+        // criteria.status = { $eq: filterBy.status };
+        criteria.status = filterBy.status.title;
     }
-    if (filterBy.status) {
-        criteria.score = { $gte: filterBy.minBalance }
+    if (filterBy.tag) {
+        console.log(' 128 * * * * * * * * * * in tag');
+
+        // criteria.tag = { $eq: filterBy.tag };
+        criteria.tag = filterBy.tag.title;
     }
-    return criteria
+    // criteria.isFavorite = true;
+    const BananaCriteria = { $regex: 'mo', $options: 'i' };
+    console.log(`file: board.service.js || line 130 || criteria`, criteria);
+    return criteria;
 }
