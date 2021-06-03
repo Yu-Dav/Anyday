@@ -1,40 +1,41 @@
-.cell.title {
-    flex: 1;
-    min-width: 380px;
-    text-align: start;
-    cursor: pointer;
-    .cell-title-editable {
-        // min-width: 200px;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
-    }
-    &:hover {
-        .remove-task {
-            opacity: 0.5;
-        }
-    }
-    .remove-task {
-        opacity: 0;
+.task-row {
+    .cell.title {
+        flex: 1;
+        min-width: 380px;
+        text-align: start;
         cursor: pointer;
-        transition: ease-in-out 0.2s;
-        height: fit-content;
-        &:hover {
-            opacity: 1;
+        .cell-title-editable {
+            // min-width: 200px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
         }
-    }
-    a {
-        margin-left: auto;
-        margin-right: 10px;
-    }
-    .fa.comment {
-        margin-left: 20px;
-    }
-    .fa-trash::after {
-        content: '\f1f8';
-        margin-inline-end: 10px;
-    }
-    .title-left-sec {
-
+        &:hover {
+            .remove-task {
+                opacity: 0.5;
+            }
+        }
+        .remove-task {
+            opacity: 0;
+            cursor: pointer;
+            transition: ease-in-out 0.2s;
+            height: fit-content;
+            &:hover {
+                opacity: 1;
+            }
+        }
+        a {
+            margin-left: auto;
+            margin-right: 10px;
+        }
+        .fa.comment {
+            margin-left: 20px;
+        }
+        .fa-trash::after {
+            content: '\f1f8';
+            margin-inline-end: 10px;
+        }
+        .title-left-sec {
+        }
     }
 }

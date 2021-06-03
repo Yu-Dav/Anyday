@@ -23,8 +23,8 @@ class _BoardApp extends Component {
     }
 
     componentDidMount() {
-        // const boardId = '60b7e87419a5e8e764d835fe'
-        const boardId = 'b101'
+        const boardId = '60b7e87419a5e8e764d835fe'
+        // const boardId = 'b101'
         this.props.loadBoard(boardId)
         userService.getUsers()
         const user = userService.getLoggedinUser()
@@ -89,7 +89,6 @@ class _BoardApp extends Component {
     }
     onSetFilter = (filterBy) => {
         console.log('filterBy', filterBy)
-        // socketService.emit('board updated', copyGroup._id);
         // this.props.loadBoard(filterBy)
     }
     render() {
