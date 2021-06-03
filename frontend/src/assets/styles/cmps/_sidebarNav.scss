@@ -27,15 +27,20 @@
             font-size: 14px;
         }
         .sidebar-ops {
-            padding: 20px 0px 20px 0px;
+            padding: 20px 16px 16px 14px;
             margin-bottom: 20px;
             border-bottom: 1px solid #e6e9ef;
+            color: #323338;
             i span {
                 font-family: roboto, helvetica, sans-serif;
+            }
+            &.second{
+                border-bottom: none;
             }
         }
     }
     .sidenav-open {
+        color: #323338;
         overflow: hidden;
         position: sticky;
         top: 52px;
@@ -64,10 +69,14 @@
     .arrow-left::after {
         content: '\f100';
     }
-    .fa-plus::before {
-        content: '\f067';
-    }
+    // .fa-plus::before {
+    //     content: '\f067';
+    // }
     .fa-search::before {
         content: '\f002';
+        color:#898a8f;
+    }
+    .plus-board{
+        font-size: 1.1rem;
     }
 }

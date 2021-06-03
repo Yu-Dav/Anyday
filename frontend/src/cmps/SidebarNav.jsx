@@ -5,6 +5,8 @@ import { withRouter } from 'react-router-dom';
 
 import { loadBoards } from '../store/actions/boardActions'
 import { Input } from '@material-ui/core';
+import AddCircleOutlineOutlinedIcon from '@material-ui/icons/AddCircleOutlineOutlined';
+import TableChartOutlinedIcon from '@material-ui/icons/TableChartOutlined';
 
 class _SidebarNav extends Component {
     state = {
@@ -37,18 +39,25 @@ class _SidebarNav extends Component {
                     <div className="sidenav-open">
                         <h1>My Workspace</h1>
                         <div className="sidebar-ops">
-                            <i className="fas fa-plus"><span>Add</span></i>
+                            <i>
+
+                                <AddCircleOutlineOutlinedIcon style={{ fontSize: '18px', color: '#898a8f', cursor: 'pointer' }} />
+                                <span>Add</span>
+                            </i>
+                            {/* <i className="fas fa-plus"></i> */}
                             <div className="flex">
                                 <label htmlFor="boardName"><i className="fas fa-search"></i></label>
-                                <Input name="searchBy" id="boardName" placeholder="Search by name"
+                                <Input style={{ color: '#323338' }} name="searchBy" id="boardName" placeholder="Search by name"
                                     autoComplete="false" disableUnderline={true}
                                     onChange={this.handleChange} value={searchBy} />
                             </div>
                         </div>
-                        {boards.map(board =>
-                            <h2 key={board._id} onClick={() => this.onSelectBoard(board._id)}>
-                                {board.title}
-                            </h2>)}
+                        <div className="sidebar-ops second">
+                            {boards.map(board =>
+                                <h2 key={board._id} onClick={() => this.onSelectBoard(board._id)}>
+                                    <TableChartOutlinedIcon style={{ fontSize: '18px', color: '#898a8f', cursor: 'pointer' }} /> {board.title}
+                                </h2>)}
+                        </div>
                     </div>
                 }
             </section>
