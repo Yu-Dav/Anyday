@@ -32,11 +32,9 @@ export class CellTitle extends Component {
         const { title, id } = this.props.task
         const { board, group } = this.props
         return (
-            <div className="cell title flex">
-                {/* cell title + btn to open chat */}
+            <div className="cell title flex ">
                 <i className="fas fa-trash remove-task" onClick={this.onRemoveTask}></i>
-                {/* <div className="remove-task" onClick={this.onRemoveTask}>X</div> */}
-                <EditableCmp className="title" name="title" value={title} updateFunc={this.onUpdateTaskTitle} />
+                <EditableCmp className="cell-title-editable" name="title" value={title} updateFunc={this.onUpdateTaskTitle} />
                 <Link to={`/board/${board._id}/${group.id}/${id}`}><i className="fa comment"></i></Link>
             </div>
         )

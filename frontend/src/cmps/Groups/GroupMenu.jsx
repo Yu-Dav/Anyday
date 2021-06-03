@@ -46,7 +46,7 @@ export class GroupMenu extends Component {
         return (
             <ClickAwayListener onClickAway={this.handleClickAway}>
                 <div className="group-modal-choose" onClick={this.onOpenSelector}>
-              <DropDownGroup/>
+                    <DropDownGroup />
                     <div>
                         {isExpanded && <div className="fade-in group-modal absolute">
                             <div onClick={this.onDeleteGroup}>Delete group</div>

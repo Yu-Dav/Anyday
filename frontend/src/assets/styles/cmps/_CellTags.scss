@@ -1,0 +1,18 @@
+.task-row {
+    .cell-tag-container {
+        flex-basis: 100px;
+        min-width: 100px;
+        cursor: pointer;
+    }
+
+    .label-option {
+        width: 112px;
+        height: 32px;
+        cursor: pointer;
+        margin-bottom: 8px;
+        border-radius: 2px;
+        color: #ffffff;
+        line-height: 32px;
+        font-size: 12px;
+    }
+}

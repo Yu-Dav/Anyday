@@ -14,25 +14,37 @@
 
 // Components
 
+// Board
+
 @import 'cmps/sidebarNav';
 @import 'cmps/sidebarApp';
+@import 'cmps/header';
 @import 'cmps/boardHeader';
 @import 'cmps/BoardCtrlPanel';
 @import 'cmps/boardSearch';
 @import 'cmps/boardFilter';
 @import 'cmps/boardFilterList';
+
+// Groups
+
 @import 'cmps/groupPreview';
 @import 'cmps/groupHeader';
+
+// Tasks and Cells
+
 @import 'cmps/taskPreview';
 @import 'cmps/taskAdd';
 @import 'cmps/cellPriority';
-@import 'cmps/cellLabels';
+@import 'cmps/cellTags';
 @import 'cmps/cellDate';
+@import 'cmps/cellTitle';
+@import 'cmps/cellLabel';
+@import 'cmps/cellMember';
+@import 'cmps/cellCreationLog';
+
 @import 'cmps/editableCmp';
 @import 'cmps/colors';
 @import 'cmps/activityModal';
-@import 'cmps/cellMember';
-@import 'cmps/header';
 
 // Pages
 
