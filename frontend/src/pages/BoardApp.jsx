@@ -26,6 +26,7 @@ class _BoardApp extends Component {
         const boardId = '60b7e87419a5e8e764d835fe'
         // const boardId = 'b101'
         this.props.loadBoard(boardId)
+        userService.getUsers()
         const user = userService.getLoggedinUser()
         socketService.setup()
         socketService.on('board loaded', () => {
@@ -47,6 +48,8 @@ class _BoardApp extends Component {
             style: { bgColor: '#26de81' },
             title: 'New Group',
             tasks: [],
+            byMember: userService.getLoggedinUser(),
+            createdAt: Date.now()
             // add all the rest needed in a group 
         }
         newBoard.groups.unshift(newGroup)

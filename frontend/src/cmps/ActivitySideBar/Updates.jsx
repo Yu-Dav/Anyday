@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { userService } from '../../services/userService'
 import { utilService } from '../../services/utilService'
 import { UpdatePreview } from './UpdatePreview'
 
@@ -15,15 +16,17 @@ export class Updates extends Component {
 
     onAddComment = (ev) => {
         ///todo
+        const { task, groupId } = this.props
         ev.preventDefault()
         const newComment = {
             id: utilService.makeId(),
             txt: this.state.comment,
             createdAt: Date.now(),
             //change to logged in user
-            byMember: this.props.currUser,
+            byMember: userService.getLoggedinUser(),
+            groupId: groupId,
+            taskId: task.id
         }
-        const { task } = this.props
         task.comments.unshift(newComment)
         this.props.onUpdateTask(task)
         this.setState({ comment: '' })

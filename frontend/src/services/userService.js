@@ -63,12 +63,12 @@ function _saveLocalUser(user) {
 
 function getLoggedinUser() {
     let user = JSON.parse(sessionStorage.getItem('loggedinUser'));
-    if (!user || !user.length)
+    if (typeof user !== 'object')
         user = {
             _id: utilService.makeId(),
             fullname: 'Guest',
             username: 'Guest',
             imgUrl: '../assets/imgs/db.png', // change this to a better photo
         };
-    return;
+    return user;
 }

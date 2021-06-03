@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { utilService } from '../../services/utilService';
 import { socketService } from '../../services/socketService';
 // import { EditableCmp } from '../EditableCmp'
-
+import {userService} from '../../services/userService'
 
 export class TaskAdd extends Component {
     state = {
@@ -31,12 +31,7 @@ export class TaskAdd extends Component {
             },
             members: [],
             comments: [],
-            byMember: {//loggedin user
-                _id: 'u101',
-                username: 'Tal',
-                fullname: 'Tal Tarablus',
-                imgUrl: 'http://res.cloudinary.com/shaishar9/image/upload/v1590850482/j1glw3c9jsoz2py0miol.jpg',
-            },
+            byMember: userService.getLoggedinUser(),
         }
         const newBoard = { ...this.props.board }
         const groupId = this.props.group.id

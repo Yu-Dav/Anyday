@@ -48,21 +48,24 @@ export class _ActivityModal extends Component {
     }
     onUpdateTask = (updatedTask, groupId = null) => {
         const { currBoard } = this.props
-        const newBoard = { ...this.props.currBoard }
+        const newBoard = { ...currBoard }
         const taskId = this.props.match.params.taskId
-        if (!groupId) groupId = this.props.match.params.groupId
         console.log(groupId, newBoard);
+        if (!groupId) groupId = this.props.match.params.groupId
         const groupIdx = newBoard.groups.findIndex(group => group.id === groupId)
         //group is undefind
+        console.log(groupIdx);
         const group = newBoard.groups.find(group => group.id === groupId)
         const taskIdx = group.tasks.findIndex(task => task.id === taskId)
         newBoard.groups[groupIdx].tasks.splice(taskIdx, 1, updatedTask)
         this.props.updateBoard(newBoard)
-
     }
+
+
     render() {
         const { content, task, currUser } = this.state
         const { currBoard } = this.props
+        const {groupId} = this.props.match.params
         // if (!task) return <div className="activity-modal">loading</div>
         return (
             <div className="activity-modal">
@@ -78,7 +81,7 @@ export class _ActivityModal extends Component {
                     <span onClick={() => { this.setState({ ...this.state, content: 'activity' }) }}>Activity Log</span>
                 </div>
                 <div>
-                    {content === 'updates' && <Updates currUser={currUser} task={task} board={currBoard} onUpdateTask={this.onUpdateTask} />}
+                    {content === 'updates' && <Updates currUser={currUser} task={task} groupId={groupId} board={currBoard} onUpdateTask={this.onUpdateTask} />}
                     {content === 'activity' && <ActivityLog task={task} board={currBoard} />}
                 </div>
             </div>
