@@ -61,7 +61,7 @@ class _Login extends Component {
         try {
             this.props.login(userCreds)
             this.setState({ loginCred: { username: '', password: '' } }, console.log(this.state))
-            const boardId = '60b7e7d319a5e8e764d808cb'
+            const boardId = '60b7e87419a5e8e764d835fe'
             // const boardId = 'b101'
             window.location.hash = `/board/${boardId}`
         } catch (err) {

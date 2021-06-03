@@ -2,14 +2,13 @@ import React from 'react'
 import { GroupHeader } from './GroupHeader'
 import { TaskPreview } from '../tasks/TaskPreview'
 import { TaskAdd } from '../tasks/TaskAdd'
-import { SimplePopover } from '../SimplePopover'
-import { Colors } from '../Colors'
+// import { SimplePopover } from '../SimplePopover'
+// import { Colors } from '../Colors'
 import { Droppable, Draggable } from 'react-beautiful-dnd';
 
 import { GroupMenu } from './GroupMenu'
 
-
-export function GroupPreview({ group, board, updateBoard, index, currUser}) {
+export function GroupPreview({ group, board, updateBoard, index, currUser }) {
     const { tasks } = group
     return (
         <Draggable draggableId={group.id} index={index} type="group">
@@ -21,7 +20,10 @@ export function GroupPreview({ group, board, updateBoard, index, currUser}) {
                     <GroupMenu group={group} board={board} updateBoard={updateBoard} />
                     <i className="fas group-handle" {...dragProvided.dragHandleProps}></i>
                     <div className="group-preview">
-                        <GroupHeader group={group} board={board} updateBoard={updateBoard} />
+                        <GroupHeader group={group} board={board} updateBoard={updateBoard}>
+                            {/* <GroupMenu group={group} board={board} updateBoard={updateBoard} /> */}
+                            {/* <i className="fas group-handle" {...dragProvided.dragHandleProps}></i> */}
+                        </GroupHeader>
                         <Droppable droppableId={group.id} type="task">
                             {provided => (
                                 <div
@@ -33,9 +35,7 @@ export function GroupPreview({ group, board, updateBoard, index, currUser}) {
                                 </div>
                             )}
                         </Droppable>
-
-                        {/* {dragProvided.placeholder} */}
-                        <TaskAdd board={board} group={group} updateBoard={updateBoard} currUser={currUser}/>
+                        <TaskAdd board={board} group={group} updateBoard={updateBoard} currUser={currUser} />
                     </div>
                 </div>
 

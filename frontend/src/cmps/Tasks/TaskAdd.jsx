@@ -9,7 +9,7 @@ export class TaskAdd extends Component {
         txt: ''
     }
     onAddTask = async ({ target }) => {
-        console.log ('var =',this.props.currUser)
+        console.log('var =', this.props.currUser)
         const value = target.value
         if (!value) return
         const newTask = {
@@ -42,8 +42,10 @@ export class TaskAdd extends Component {
         const groupId = this.props.group.id
         const groupIdx = newBoard.groups.findIndex(group => group.id === groupId)
         if (!newBoard.groups[groupIdx].tasks || !newBoard.groups[groupIdx].tasks.length) newBoard.groups[groupIdx].tasks = [newTask]
-        else newBoard.groups[groupIdx].tasks.push(newTask)
+        // else newBoard.groups[groupIdx].tasks.push(newTask)
+        else newBoard.groups[groupIdx].tasks = [...newBoard.groups[groupIdx].tasks, newTask]
         await this.props.updateBoard(newBoard)
+        console.log(`file: TaskAdd.jsx || line 47 || newBoard`, this.props.board)
         await socketService.emit('board updated', newBoard._id)
         this.setState({ txt: '' })
     }
@@ -52,7 +54,7 @@ export class TaskAdd extends Component {
             this.setState({ isEditing: false },
                 () => {
                     this.onAddTask(ev)
-                    ev.target.blur()
+                    // ev.target.blur()
                 })
         }
         setTimeout(() => {
@@ -71,6 +73,8 @@ export class TaskAdd extends Component {
         return (
             <div className="task-add flex">
                 <div className="group-color" style={{ backgroundColor: this.props.group.style.bgColor }}></div>
+                {/* <input autoComplete="off" className="full" name="txt" type="text" placeholder="+ New Task"
+                    onKeyUp={this.handleUpdate} value={txt} onChange={this.handleChange} /> */}
                 <input autoComplete="off" className="full" name="txt" type="text" placeholder="+ New Task"
                     onBlur={this.handleUpdate} onKeyUp={this.handleUpdate} value={txt} onChange={this.handleChange} />
                 <button className="add" onClick={this.handleUpdate}>Add</button>
