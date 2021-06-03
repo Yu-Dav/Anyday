@@ -3,7 +3,6 @@ import { EditableCmp } from '../EditableCmp'
 import { socketService } from '../../services/socketService'
 
 export class GroupHeader extends Component {
-
     onUpdateGroupTitle = async ({ target }) => {
         let value = target.innerText;
         if (!value) value = 'New group';
@@ -14,13 +13,10 @@ export class GroupHeader extends Component {
         await this.props.updateBoard(newBoard);
         socketService.emit('board updated', newBoard._id);
     }
-
     render() {
         const { group } = this.props
         return (
-            // <div className="flex">
             <div className="group-header flex">
-                {/* <button>^</button> */}
                 <div className="cell title">
                     <EditableCmp name="group-title" value={group.title} updateFunc={this.onUpdateGroupTitle} style={{ color: group.style.bgColor }} />
                 </div>
@@ -31,9 +27,6 @@ export class GroupHeader extends Component {
                 <div className="cell creation-log">Creation Log</div>
                 <div className="cell timeline">Timeline</div>
             </div>
-            // {/* </div> */}
         )
     }
 }
-
-// todo- editabe

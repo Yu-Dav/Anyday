@@ -1,12 +1,25 @@
-.cell-member-avatar {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    cursor: pointer;
+.task-row {
+    .asignee {
+        // display: none;
+        flex-basis: 100px;
+        min-width: 100px;
+        text-align: center;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        
+        .cell-member-avatar {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            cursor: pointer;
 
-    image {
-        width: 30px;
-        height: 30px;
+            img {
+                width: 20px;
+                height: 20px;
+            }
+        }
     }
 }

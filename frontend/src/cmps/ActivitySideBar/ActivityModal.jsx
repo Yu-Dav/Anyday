@@ -24,7 +24,6 @@ export class _ActivityModal extends Component {
         const boardId = '60b7e87419a5e8e764d835fe'
         const currUser = userService.getLoggedinUser() ?? this.guest
         console.log(`file: ActivityModal.jsx || line 19 || currUser`, currUser)
-        // const boardId = 'b101'
         await this.props.loadBoard(boardId)
         const taskId = this.props.match.params.taskId
         if (!taskId) return

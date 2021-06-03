@@ -9,23 +9,31 @@
     }
     .title {
         font-size: rem(18px);
+        flex: 1;
+        min-width: 388px;
     }
-    // .asignee {
-    //     width: 4%;
-    // }
-    // .tags {
-    //     width: 6%;
-    // }
-    // .status {
-    //     width: 6%;
-    // }
-    // .priority {
-    //     width: 6%;
-    // }
-    // .creation-log {
-    //     width: 10%;
-    // }
-    // .due-date {
-    //     width: 10%;
-    // }
+    .asignee {
+        // members...
+        flex-basis: 100px;
+        min-width: 100px;
+        text-align: center;
+    }
+    .tags {
+        flex-basis: 100px;
+        min-width: 100px;
+    }
+    .label {
+        // status & priority
+        flex-basis: 100px;
+        min-width: 100px;
+    }
+    .creation-log {
+        flex-basis: 100px;
+        min-width: 100px;
+    }
+    .due-date {
+        // timeline
+        flex-basis: 100px;
+        min-width: 100px;
+    }
 }

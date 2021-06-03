@@ -91,9 +91,9 @@ export class CellTag extends Component {
         const { board } = this.props
         return (
             <ClickAwayListener  onClickAway={this.handleClickAway}>
-                <div className="cell-tag-container flex justify-center" >
+                <div className="cell-tag-container flex justify-center"  onClick={this.onOpenSelector} >
                     {tags.map((tag) => {
-                        return <span className="tag-container" style={{ color: tag.color }} key={tag.id} onClick={this.onOpenSelector}>{tag.title} </span>
+                        return <span className="tag-container" style={{ color: tag.color }} key={tag.id}>{tag.title} </span>
                     })}
                     {isExpanded &&
                         <div className="tag-options fade-in">

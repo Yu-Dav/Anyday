@@ -51,18 +51,7 @@ export class CellDate extends Component {
         const { startDate, endDate } = this.state
         const timestampStart = startDate.getTime()
         const timestampEnd = endDate.getTime()
-
-
-        // const totalTimestamp =(timestampEnd - timestampStart)
-        // const diffTimestamp = totalTimestamp-now
-        // const precentProgress = diffTimestamp/totalTimestamp/100
-
-
-
         const totalDays = (timestampEnd - timestampStart) / 1000 / 60 / 60 / 24
-
-
-
         return totalDays
     }
 
@@ -75,7 +64,7 @@ export class CellDate extends Component {
         let milliPassed = now - timestampStart
         const daysPassed = Math.floor(milliPassed / 1000 / 60 / 60 / 24)
         let percent = daysPassed / totalDays * 100
-        console.log('percent', percent);
+        // console.log('percent', Math.floor(percent));
         if (percent < 0) percent = 0
         if (percent > 100) percent = 100
         return percent
@@ -83,7 +72,7 @@ export class CellDate extends Component {
     }
 
     render() {
-
+        const { bgColor } = this.props.group.style
         const { startDate, endDate, isHover, isDateSet, isDateSetting } = this.state
         return (
             <div className="timeline" onMouseEnter={this.onEnter} onMouseLeave={this.onLeave}>
@@ -93,23 +82,29 @@ export class CellDate extends Component {
                     <span className="num-of-days">{this.getNumOfDays()} d</span>
                 }
                 {isDateSet && !isHover &&
-                    <React.Fragment>
-                        <span className="date-picker" style={{backgroundColor:"pink", width:`${this.getPrecents()}`}}>
-                        <DatePicker
-                            className="date-picker-cmp"
-                            locale="uk"
-                            selectsRange={true}
-                            startDate={startDate}
-                            endDate={endDate}
-                            onChange={(update) => {
-                                this.setDateRange(update);
-                            }}
-                        />
-                        </span>
-                        <div className="progress-bar">
-                            <span className="precents">{this.getPrecents()}</span>
+                    <div className="date-pick-wrapper">
+                        <div className="date-picker-container">
+                            <div className="progress-bar" style={{ backgroundColor: bgColor, width: `${this.getPrecents()}%` }}>
+
+                            </div>
+                            <div className="grey-bck"></div>
+                            <DatePicker
+                                className="date-picker-cmp"
+                                locale="uk"
+                                selectsRange={true}
+                                startDate={startDate}
+                                endDate={endDate}
+                                onChange={(update) => {
+                                    this.setDateRange(update);
+                                }}
+                            />
+
+
                         </div>
-                    </React.Fragment>
+                        {/* <div className="progress-bar">
+                            <span className="precents">{this.getPrecents()}</span>
+                        </div> */}
+                    </div>
 
                 }
                 {isDateSetting &&
@@ -141,7 +136,7 @@ export class CellDate extends Component {
 //     width: 100%;
 //     background-color: #ddd;
 //   }
-  
+
 // #myBar {
 //     width: 10%;
 //     height: 30px;
@@ -152,16 +147,16 @@ export class CellDate extends Component {
 //   }
 //   </style>
 //   <body>
-  
- 
-  
+
+
+
 //   <div id="myProgress">
 //     <div id="myBar">10%</div>
 //   </div>
-  
+
 //   <br>
 //   <button onclick="move()">Click Me</button> 
-  
+
 //   <script>
 //   var i = 0;
 //   function move() {
