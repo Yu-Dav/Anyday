@@ -61,6 +61,7 @@ export class _ActivityModal extends Component {
         const taskIdx = group.tasks.findIndex(task => task.id === taskId)
         newBoard.groups[groupIdx].tasks.splice(taskIdx, 1, updatedTask)
         this.props.updateBoard(newBoard)
+      //  await socketService.emit('comment was added', newBoard._id);
     }
 
 

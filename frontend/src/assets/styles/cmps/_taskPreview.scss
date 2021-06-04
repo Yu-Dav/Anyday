@@ -102,18 +102,18 @@
 //     // cursor: pointer;
 // }
 
-.label {
-    flex-basis: 113px;
+// .label {
+//     flex-basis: 113px;
 
-    // cursor: pointer;
-}
+//     // cursor: pointer;
+// }
 
-.creation-log {
-    flex-basis: 142px;
-}
+// .creation-log {
+//     flex-basis: 142px;
+// }
 
 .timeline {
-    flex-basis: 200px;
+    // flex-basis: 200px;
     cursor: pointer;
 }
 
@@ -134,7 +134,7 @@
     height: 20px;
     background: #fff;
     top: 92px;
-    left: 49px;
+    left: 35px;
 }
 
 .triangle-with-shadow:hover,
@@ -148,7 +148,7 @@
     position: absolute;
     background-color: white;
     box-shadow: 0 8px 16px 0px #00000052;
-    z-index: 1;
+    z-index: 3;
     border-radius: 4px;
     padding: 16px 11px;
     top: 36px;
@@ -173,24 +173,6 @@
     
 }
 
-.tag-option {
-    &:hover {
-        .fas.close {
-            opacity: 0.5;
-        }
-    }
-}
-.tag-add {
-    margin-bottom: 5px;
-}
-
-.tags-picker-input {
-    width: 130px;
-}
-
-.fas.close::after {
-    content: '\f057';
-}
 
 a:hover {
     text-decoration: none;

@@ -1,6 +1,7 @@
 .group-container {
     margin-bottom: 30px;
     background-color: #ffffffe6;
+    min-width: 380px;
 
     .group-modal {
         animation: fade-in 0.5s ease-in-out both;
@@ -24,19 +25,21 @@
         font-family: fa-solid;
     }
     .group-handle::after {
-        content: "\f58e";
+        content: '\f58e';
     }
     &:hover {
         .group-handle {
             opacity: 0.5;
         }
     }
-    .group-modal-choose{
+    .group-modal-choose {
         cursor: pointer;
         width: 17px;
+        margin-top: 7px;
     }
     .group-handle {
         opacity: 0;
+        margin: 3.5px 2px 0 5px;
         &:hover {
             opacity: 1;
         }

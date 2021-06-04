@@ -36,10 +36,10 @@ export class TagAddNew extends Component {
         const { txt } = this.state
         return (
             <form className="tag-add flex" onSubmit={this.onAddTag}>
-                <input onClick={(ev) => ev.stopPropagation()} style={{ zIndex: '1' }}
+                <input style={{ zIndex: '1' }}
                     value={txt} name="txt" type="text" onChange={this.handleChange}
                     className="tags-picker-input" placeholder="Add tags" autoComplete="off" spellCheck="false" ></input>
-                <button className="add">Add</button>
+                <button className="add-tag btn">Add</button>
             </form>
         )
     }
