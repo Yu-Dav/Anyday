@@ -15,7 +15,7 @@ async function query(filterBy) {
 }
 
 async function getById(boardId, filterBy) {
-    console.log(`file: boardService.js || line 18 || filterBy`, filterBy)
+    // console.log(`file: boardService.js || line 18 || filterBy`, filterBy)
     // return storageService.get('board', boardId)
     return httpService.get(`board/${boardId}`, filterBy);
 }

@@ -45,6 +45,7 @@ class _SidebarNav extends Component {
                                 <span>Add</span>
                             </i>
                             {/* <i className="fas fa-plus"></i> */}
+                            <i className="fas fa-plus" onClick={this.props.onAddNewBoard}><span>Add new board</span></i>
                             <div className="flex">
                                 <label htmlFor="boardName"><i className="fas fa-search"></i></label>
                                 <Input style={{ color: '#323338' }} name="searchBy" id="boardName" placeholder="Search by name"

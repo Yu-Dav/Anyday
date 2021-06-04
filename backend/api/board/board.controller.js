@@ -65,6 +65,8 @@ async function updateBoard(req, res) {
 async function addBoard(req, res) {
     try {
         const board = req.body;
+        const { user } = req.body
+        console.log(`file: board.controller.js || line 69 || user`, user)
         const addedBoard = await boardService.add(board);
         res.send(addedBoard);
     } catch (err) {

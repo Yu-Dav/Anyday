@@ -10,9 +10,9 @@ export class Updates extends Component {
         comment: ''
     }
 
-    // componentDidMount(){
-    //     if(!this.props.match.params.taskId) this.setState({isBoardComments: true})
-    // }
+    componentDidMount() {
+        console.log(2);
+    }
 
     onAddComment = (ev) => {
         ///todo
@@ -51,8 +51,7 @@ export class Updates extends Component {
         this.props.board.groups.forEach(group => {
             group.tasks.forEach(currTask => {
                 currTask.comments.forEach(comment => {
-                    if (comment.id === commentId && comment.taskId === currTask.id)
-                   {
+                    if (comment.id === commentId && comment.taskId === currTask.id) {
                         task = currTask
                     }
                 })
@@ -83,18 +82,21 @@ export class Updates extends Component {
     get boardComments() {
         const boardComments = []
         console.log(this.props.board);
-        this.props.board.groups.forEach(group => {
-            group.tasks.forEach(task => {
-                task.comments.forEach(comment => boardComments.push(comment))
+        if(this.props.board.groups){
+            this.props.board.groups.forEach(group => {
+                group.tasks.forEach(task => {
+                    task.comments.forEach(comment => boardComments.push(comment))
+                })
             })
-        })
+        }
         return boardComments
     }
 
     render() {
         const { task, board } = this.props
         const { comment, isBoardComments } = this.state
-        console.log('task', task);
+        console.log('task', this.boardComments);
+        console.log('board', board);
         if (!board) return <div>loading</div>
         return (
             <div className="updates">
