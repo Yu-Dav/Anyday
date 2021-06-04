@@ -42,26 +42,13 @@ class _BoardApp extends Component {
         socketService.terminate()
     }
     componentDidUpdate(prevProps, prevState) {
-        // console.log(`file: BoardApp.jsx || line 44 || prevProps`, prevProps)
-        // const id = this.props.match.params.boardId
         const prevId = prevProps.match.params.boardId
         const currId = this.props.match.params.boardId
+        console.log(`file: BoardApp.jsx || line 47 || currId`, currId)
         if (!prevId) return
-        // console.log(`file: BoardApp.jsx || line 47 || currId`, currId)
-        // console.log(`file: BoardApp.jsx || line 47 || prevId`, prevId)
-        // console.log(`file: BoardApp.jsx || line 45 || id`, id)
         if (prevId !== currId) {
-            // console.log('different ids')
             this.props.loadBoard(currId)
         }
-        // if (prevProps.match.params.boardId !== this.props.match.params.boardId) {
-        //     this.props.loadBoard(boardId)
-        // }
-        // if (prevProps.id !== id) {
-        // console.log(`file: BoardApp.jsx || line 51 || prevProps.id`, prevProps.id)
-        // console.log('currID =', id)
-        // console.log('id different will load board =')
-        // this.props.loadBoard(id)
     }
 
 
@@ -126,16 +113,16 @@ class _BoardApp extends Component {
     onSetFilter = (filterBy) => {
         const { currBoard } = this.props;
         console.log('filterBy', filterBy)
-            let filteredBoard = { ...currBoard }
-            if (filterBy.status){
-                filterdBoard= filteredBoard.filter((group)=>{
-                    return group.tasks.filter((task)=>{
-                        return task.status.title === filterBy.status
-                    })
+        let filteredBoard = { ...currBoard }
+        if (filterBy.status) {
+            var filterdBoard = filteredBoard.filter((group) => {
+                return group.tasks.filter((task) => {
+                    return task.status.title === filterBy.status
                 })
-            }
-            return filteredBoard
-    
+            })
+        }
+        return filteredBoard
+
         // this.props.loadBoard(filterBy)
     }
     onAddNewBoard = () => {

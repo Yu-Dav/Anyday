@@ -6,34 +6,65 @@ import { connect } from 'react-redux'
 
 
 export function GroupList({ groups, board, updateBoard, currUser, filterBy }) {
-    console.log('filter in gl', filterBy)
 
-    // getFiltered = (filterBy) => {
-    //     let filteredBoard = { ...board }
-    //     if (filterBy.status){
-    //         filterdBoard= filteredBoard.filter((group)=>{
-    //             return group.tasks.filter((task)=>{
-    //                 return task.status.title === filterBy.status
-    //             })
-    //         })
-    //     }
-    //     return filteredBoard
-    // }
+    onSetFilter(filterBy)
+
+    function onSetFilter(filterBy) {
+        if (!groups) return
+        let copyGroups = [...groups]
+        const test = []
+        if (filterBy.status) {
+            copyGroups.filter(group => {
+                group.tasks.some(task => {
+                    filterBy.status.forEach(status => {
+                        if (task.status.title === status) {
+                            test.push(task.id)
+                        }
+                    })
+
+                })
+            })
 
 
+            // var otherMembers = copyGroups.filter(groups => {
+            //     let filteredArr = test.filter(filteredTask => {
+            //         return filteredTask === boardMem._id
+            //     });
+            //     if (filteredArr.length > 0) return false
+            //     return true
+            //`return !length;` will  return false if length > 0
+            // });
+
+
+
+            // return otherMembers
+
+
+
+            // copyGroups.filter(group => {
+            //     group.tasks.filter(task => {
+            //         return test.some(test => {
+            //             test === task.id
+            //         })
+
+            //     })
+            // })
+            // .map(group => {
+            //     let newGroup = Object.assign({}, group); // copies element
+            //     return newGroup.tasks.filter(task => task.title === '1');
+            // })
+        }
+        // console.log('copyGroups =', copyGroups)
+        console.log('test =', test)
+        return copyGroups
+    }
 
     if (!groups || !groups.length) return <p>Loading...</p>
     return (
-        // the group will be a filtered group
         < div className="groups-container">
-
             {groups.map((group, index) => <GroupPreview board={board} key={group.id} group={group}
                 updateBoard={updateBoard} index={index} currUser={currUser} />)}
-
-
         </div>
-
-
     )
 }
 

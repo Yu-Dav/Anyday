@@ -36,17 +36,14 @@ class _SidebarNav extends Component {
                 <i className={isExpanded ? "fas arrow arrow-left" : "fas arrow arrow-right"}
                     onClick={this.onOpenNavbar}></i>
                 {isExpanded &&
-                    <div className="sidenav-open">
+                    <div className="sidenav-open flex column">
                         <h1>My Workspace</h1>
                         <div className="sidebar-ops">
-                            <i>
-
+                            <i onClick={this.props.onAddNewBoard} className="flex add-board-wrapper flex align-center">
                                 <AddCircleOutlineOutlinedIcon style={{ fontSize: '18px', color: '#898a8f', cursor: 'pointer' }} />
                                 <span>Add</span>
                             </i>
-                            {/* <i className="fas fa-plus"></i> */}
-                            <i className="fas fa-plus" onClick={this.props.onAddNewBoard}><span>Add new board</span></i>
-                            <div className="flex">
+                            <div className="flex align-center search-board-wrapper">
                                 <label htmlFor="boardName"><i className="fas fa-search"></i></label>
                                 <Input style={{ color: '#323338' }} name="searchBy" id="boardName" placeholder="Search by name"
                                     autoComplete="false" disableUnderline={true}
@@ -54,11 +51,11 @@ class _SidebarNav extends Component {
                             </div>
                         </div>
                         <div className="sidebar-ops second flex column">
-                            ?
                             {boards.map(board =>
-                            <Link key={board._id} to={`board/${board._id}`}>
-                                <TableChartOutlinedIcon style={{ fontSize: '18px', color: '#898a8f', cursor: 'pointer' }} /> {board.title}
-                            </Link>)}
+                            <Link  key = { board._id } to = {`${board._id}`} className="flex align-center">
+                                <TableChartOutlinedIcon style={{ fontSize: '18px', color: '#898a8f', cursor: 'pointer' }} /> { board.title }
+
+                                </Link>)}
                         </div>
                     </div>
                 }
