@@ -28,7 +28,7 @@ export class BoardHeader extends Component {
 
                         <EditableCmp className="title" name="title" value={board.title} updateFunc={this.onUpdateBoard} />
 
-                        <StarSvg className="" />
+                        <StarSvg className="star-fav" />
                     </div>
                     <div className="board-header-btns">
 

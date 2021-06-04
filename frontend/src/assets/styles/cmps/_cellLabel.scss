@@ -1,7 +1,30 @@
 .task-row {
     .label {
         // display: none;
-        flex-basis: 100px;
-        min-width: 100px,
+        flex-basis: 139px;
+        min-width: 139px,
+    }
+    .label {
+        cursor: pointer;
+
+        color: #ffffff;
+        .modal-container {
+            top: -98px;
+        }
+        .floating-label-select {
+            animation: fade-in 0.3s ease-in-out both;
+            z-index: 1;
+            position: absolute;
+            color: #ffffff;
+            width: 139px;
+            background-color: #fff;
+            box-shadow: 0 8px 16px 0px #00000052;
+            border-radius: 4px;
+            padding: 16px 11px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            text-align: center; //helper?
+        }
     }
 }
