@@ -7,13 +7,7 @@ async function query(filterBy = {}) {
     // const criteria = _buildCriteria(filterBy)
     try {
         const collection = await dbService.getCollection('board_db');
-        var boards = await collection.find(criteria).toArray();
-        boards = boards.map((board) => {
-            board.createdAt = ObjectId(board._id).getTimestamp();
-            // Returning fake fresh data
-            // board.createdAt = Date.now() - (1000 * 60 * 60 * 24 * 3) // 3 days ago
-            return board;
-        });
+        var boards = await collection.find().toArray();
         return boards;
     } catch (err) {
         logger.error('cannot find boards', err);
@@ -28,9 +22,10 @@ async function getById(boardId, filterBy) {
         const collection = await dbService.getCollection('board_db');
         const board = await collection.findOne({ _id: ObjectId(boardId) });
         if (Object.keys(filterBy).length === 0) return board;
+        console.log('criteria- line 211111111111111111111111', criteria)
         const filteredBoard = await collection.find(criteria).toArray();
         const objBoard = { ...filteredBoard };
-        console.log('filtered- line 311111111111111111111111', objBoard)
+        console.log('filtered- line 311111111111111111111111', filteredBoard)
         return objBoard[0];
     } catch (err) {
         logger.error(`while finding board ${boardId}`, err);
@@ -120,11 +115,12 @@ module.exports = {
 
 function _buildCriteria(filterBy) {
     console.log(`file: board.service.js || line 99 || filterBy`, filterBy);
+    
     const criteria = { groups:{
         tasks:{
-            tags:[],
-            priority:{},
-            status:{}
+            tags:[{title:''}],
+            priority:{title:''},
+            status:{title:''}
         }
     }};
     if (filterBy.txt) {
@@ -140,7 +136,10 @@ function _buildCriteria(filterBy) {
     }
     if (filterBy.priority) {
         // criteria.priority= filterBy.priority;
-        criteria.groups.tasks.priority = filterBy.priority
+        // instock: { qty: 5, warehouse: 'A' 
+
+        criteria.groups.tasks.priority.title = filterBy.priority[0]
+        console.log('git in crit:' , criteria.groups.tasks.priority.title)
     }
     if (filterBy.status) {
         criteria.status = filterBy.status;

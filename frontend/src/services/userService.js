@@ -63,7 +63,7 @@ function _saveLocalUser(user) {
 
 function getLoggedinUser() {
     let user = JSON.parse(sessionStorage.getItem('loggedinUser'));
-    if (typeof user !== 'object') {
+    if (typeof user !== 'object' || !user) {
         user = {
             _id: utilService.makeId(),
             fullname: 'Guest',

@@ -1,0 +1,54 @@
+6/4/2021, 10:13:27 AM - INFO - Server is running on port: 3030 
+6/4/2021, 10:15:12 AM - INFO - Server is running on port: 3030 
+6/4/2021, 10:15:13 AM - DEBUG - Session ID is | zFfQ8UlGbczjT_tU52qN2k_7f-o-BxeG 
+6/4/2021, 10:15:19 AM - ERROR - while finding board 60b7e87419a5e8e764d835fe | ReferenceError: objBoard is not defined (sid: -V_9JLb3d5uvEO7NpzgZc9S0Ko3Ux0yJ)
+6/4/2021, 10:15:19 AM - ERROR - Failed to get board | ReferenceError: objBoard is not defined (sid: -V_9JLb3d5uvEO7NpzgZc9S0Ko3Ux0yJ)
+6/4/2021, 10:17:11 AM - INFO - Server is running on port: 3030 
+6/4/2021, 10:17:17 AM - DEBUG - Session ID is | vKfVta2vF5Q8NUiNA1j0UWUYAap44wNo 
+6/4/2021, 10:17:21 AM - ERROR - while finding board 60b7e87419a5e8e764d835fe | ReferenceError: objBoard is not defined (sid: GJNK5jo5ks0TJff9-q7dgUMQ1vlRN-al)
+6/4/2021, 10:17:21 AM - ERROR - Failed to get board | ReferenceError: objBoard is not defined (sid: GJNK5jo5ks0TJff9-q7dgUMQ1vlRN-al)
+6/4/2021, 10:18:54 AM - INFO - Server is running on port: 3030 
+6/4/2021, 10:18:59 AM - DEBUG - Session ID is | SD0W3Q-ffR92TwoiDPr54QnVN4yDftii 
+6/4/2021, 10:19:03 AM - ERROR - while finding board 60b7e87419a5e8e764d835fe | ReferenceError: objBoard is not defined (sid: yiUQirrUqhmyrKBxx8wkVuJ44I6WHizh)
+6/4/2021, 10:19:03 AM - ERROR - Failed to get board | ReferenceError: objBoard is not defined (sid: yiUQirrUqhmyrKBxx8wkVuJ44I6WHizh)
+6/4/2021, 10:21:46 AM - INFO - Server is running on port: 3030 
+6/4/2021, 10:22:16 AM - INFO - Server is running on port: 3030 
+6/4/2021, 10:23:13 AM - DEBUG - Session ID is | 0KzIamjhhcfIrFOZP97fphkckaoCCMHN 
+6/4/2021, 10:23:19 AM - ERROR - while finding board 60b7e87419a5e8e764d835fe | ReferenceError: objBoard is not defined (sid: c5E86IjU6WguCdjdT39bPBW2y24tP9vn)
+6/4/2021, 10:23:19 AM - ERROR - Failed to get board | ReferenceError: objBoard is not defined (sid: c5E86IjU6WguCdjdT39bPBW2y24tP9vn)
+6/4/2021, 10:25:01 AM - INFO - Server is running on port: 3030 
+6/4/2021, 10:28:36 AM - INFO - Server is running on port: 3030 
+6/4/2021, 10:33:33 AM - INFO - Server is running on port: 3030 
+6/4/2021, 10:33:39 AM - DEBUG - Session ID is | CfyR1ZtnDu_yfzkewSX_rBAbVsvP90yU 
+6/4/2021, 10:33:44 AM - ERROR - while finding board 60b7e87419a5e8e764d835fe | ReferenceError: objBoard is not defined (sid: 8i1ILJex8b5XwP68zPvdELR3fkt-Wmui)
+6/4/2021, 10:33:44 AM - ERROR - Failed to get board | ReferenceError: objBoard is not defined (sid: 8i1ILJex8b5XwP68zPvdELR3fkt-Wmui)
+6/4/2021, 10:33:53 AM - DEBUG - Session ID is | _JS7tyYTGtjT8V-K7VYelHDzlGxUFKf3 
+6/4/2021, 10:33:56 AM - ERROR - while finding board 60b7e87419a5e8e764d835fe | ReferenceError: objBoard is not defined (sid: 8i1ILJex8b5XwP68zPvdELR3fkt-Wmui)
+6/4/2021, 10:33:56 AM - ERROR - Failed to get board | ReferenceError: objBoard is not defined (sid: 8i1ILJex8b5XwP68zPvdELR3fkt-Wmui)
+6/4/2021, 10:35:58 AM - INFO - Server is running on port: 3030 
+6/4/2021, 10:36:10 AM - DEBUG - Session ID is | R22TsriHl6Xmz4LvnVn6LO80K93z3iW2 
+6/4/2021, 10:36:15 AM - ERROR - while finding board 60b7e87419a5e8e764d835fe | ReferenceError: objBoard is not defined (sid: _tcWwje3SlBhqF36zM-pHlYGG9A4bn7W)
+6/4/2021, 10:36:15 AM - ERROR - Failed to get board | ReferenceError: objBoard is not defined (sid: _tcWwje3SlBhqF36zM-pHlYGG9A4bn7W)
+6/4/2021, 10:36:38 AM - DEBUG - Session ID is | efA5l1rCDyYbiIwcC3mwSbcP7MJPy2qg 
+6/4/2021, 10:36:40 AM - ERROR - while finding board 60b7e87419a5e8e764d835fe | ReferenceError: objBoard is not defined (sid: _tcWwje3SlBhqF36zM-pHlYGG9A4bn7W)
+6/4/2021, 10:36:40 AM - ERROR - Failed to get board | ReferenceError: objBoard is not defined (sid: _tcWwje3SlBhqF36zM-pHlYGG9A4bn7W)
+6/4/2021, 10:37:36 AM - INFO - Server is running on port: 3030 
+6/4/2021, 10:39:03 AM - INFO - Server is running on port: 3030 
+6/4/2021, 10:39:04 AM - DEBUG - Session ID is | XmCFr-BpH8msRjXvypCXg9EuLTFVHTTG 
+6/4/2021, 10:39:12 AM - ERROR - Failed to get board | ReferenceError: log is not defined (sid: t_PGfzsO_2slVCpM9S8FDA1Pw_GJApwk)
+6/4/2021, 10:39:33 AM - INFO - Server is running on port: 3030 
+6/4/2021, 10:40:41 AM - DEBUG - Session ID is | TriPYbEGN6qPqiqVg4a1Nx8fhwRCQxCz 
+6/4/2021, 10:44:07 AM - INFO - Server is running on port: 3030 
+6/4/2021, 10:44:27 AM - INFO - Server is running on port: 3030 
+6/4/2021, 10:44:41 AM - DEBUG - Session ID is | 11uKTWJY4TYGskZ2YkTVyWel5P4HIXB_ 
+6/4/2021, 10:52:28 AM - DEBUG - Session ID is | V9-AXNrCs6lLDi7caf2GSWCnRT_SwOK6 
+6/4/2021, 10:53:30 AM - DEBUG - Session ID is | 4qompFwZCWNpwXCHSMLjDPJu6AUSb2Cb 
+6/4/2021, 11:27:23 AM - DEBUG - Session ID is | Aba_SeGP_-mC8_gh2COph4JVtcJyH1W_ 
+6/4/2021, 11:50:32 AM - DEBUG - Session ID is | LT5asHwk1w8xypZkW0gx5EbB2ifxYaMu 
+6/4/2021, 11:52:23 AM - DEBUG - Session ID is | PsEinLQlX4RF_rcpaVXBIPoFOXQwL1Ik 
+6/4/2021, 11:53:19 AM - DEBUG - auth.service - login with username: Noga (sid: RpkpDfgAI1_LpU9qXGb-hJ0lj7Xuz4GD)
+6/4/2021, 11:53:19 AM - DEBUG - Session ID is | mW4lnHNZcwk__pp1Imzz83eeDTf81rbq 
+6/4/2021, 11:54:33 AM - DEBUG - auth.service - login with username: Noga (sid: RpkpDfgAI1_LpU9qXGb-hJ0lj7Xuz4GD)
+6/4/2021, 11:54:34 AM - DEBUG - Session ID is | qLcmHWbjRb259JkE2nFjmmd02iJ8T-md 
+6/4/2021, 12:11:46 PM - DEBUG - Session ID is | LLm2ryD56UI-fXEjRKn36vBuaSCV1sUg 
+6/4/2021, 12:11:47 PM - DEBUG - Session ID is | urxEdqfwCfNvSIIy06JobVFOWIpUueFp 
