@@ -13,11 +13,12 @@ class _BoardFilter extends Component {
         }
     }
     onSetFilter = (newFilterCriteria, filterType) => {
+        // console.log('new criter' , newFilterCriteria)
         const prevCriteria = this.state.filterBy[filterType].find(prevCriteria => prevCriteria.id === newFilterCriteria.id)
         if (prevCriteria) return // checking if the clicked new criteria already present in the state arr. is so return. later -> remove from the array, loadboard and return
         const newFilter = {
             ...this.state.filterBy,
-            [filterType]: [...this.state.filterBy[filterType], newFilterCriteria]
+            [filterType]: [...this.state.filterBy[filterType], newFilterCriteria.title]
         }
         const newState = { ...this.state, filterBy: newFilter }
         this.setState(newState, () =>

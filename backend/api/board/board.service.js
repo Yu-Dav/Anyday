@@ -6,7 +6,7 @@ async function query(filterBy = {}) {
     // const criteria = _buildCriteria(filterBy)
     try {
         const collection = await dbService.getCollection('board_db');
-        var boards = await collection.find().toArray();
+        var boards = await collection.find(criteria).toArray();
         boards = boards.map((board) => {
             board.createdAt = ObjectId(board._id).getTimestamp();
             // Returning fake fresh data
@@ -19,6 +19,7 @@ async function query(filterBy = {}) {
         throw err;
     }
 }
+
 async function getById(boardId, filterBy) {
     console.log(`file: board.service.js || line 23 || filterBy`, filterBy);
     const criteria = _buildCriteria(filterBy);
@@ -28,6 +29,7 @@ async function getById(boardId, filterBy) {
         if (Object.keys(filterBy).length === 0) return board;
         const filteredBoard = await collection.find(criteria).toArray();
         const objBoard = { ...filteredBoard };
+        console.log('filtered- line 311111111111111111111111', objBoard)
         return objBoard[0];
     } catch (err) {
         logger.error(`while finding board ${boardId}`, err);
@@ -99,9 +101,34 @@ module.exports = {
     update,
 };
 
+// await db.collection('inventory').insertMany([
+//     {
+//       item: 'journal',
+//       qty: 25,
+//       tags: ['blank', 'red'],
+//       dim_cm: [14, 21]
+//     },
+// const cursor = db.collection('inventory').find(
+    //  the criteria:::
+    //{
+//     tags: ['red', 'blank']
+//   });
+
+
+
+// const cursor = db.collection('inventory').find({
+//     instock: { warehouse: 'A', qty: 5 }
+//   });
+
 function _buildCriteria(filterBy) {
     console.log(`file: board.service.js || line 99 || filterBy`, filterBy);
-    const criteria = {};
+    const criteria = { groups:{
+        tasks:{
+            tags:[],
+            priority:{},
+            status:{}
+        }
+    }};
     if (filterBy.txt) {
         const txtCriteria = { $regex: filterBy.txt, $options: 'i' };
         criteria.$or = [
@@ -114,24 +141,18 @@ function _buildCriteria(filterBy) {
         ];
     }
     if (filterBy.priority) {
-        console.log(' 117 * * * * * * * * * * in priority');
-        // criteria.priority = { $eq: filterBy.priority };
-        criteria.groups.tasks.priority.title = filterBy.priority[0].title;
+        // criteria.priority= filterBy.priority;
+        criteria.groups.tasks.priority = filterBy.priority
     }
     if (filterBy.status) {
-        console.log(' 122 * * * * * * * * * * in status');
-
-        // criteria.status = { $eq: filterBy.status };
-        criteria.status = filterBy.status.title;
+        criteria.status = filterBy.status;
     }
     if (filterBy.tag) {
-        console.log(' 128 * * * * * * * * * * in tag');
-
-        // criteria.tag = { $eq: filterBy.tag };
-        criteria.tag = filterBy.tag.title;
+        criteria.tag = filterBy.tag;
     }
     // criteria.isFavorite = true;
-    const BananaCriteria = { $regex: 'mo', $options: 'i' };
-    console.log(`file: board.service.js || line 130 || criteria`, criteria);
+    // const subtitle = { $regex: 'mo', $options: 'i' };
+    // console.log(`file: board.service.js || line 130 || criteria`, criteria.subtitle);
+    console.log('crit 143((((( :::::::', criteria)
     return criteria;
 }
