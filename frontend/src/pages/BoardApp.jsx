@@ -23,7 +23,8 @@ class _BoardApp extends Component {
     }
 
     componentDidMount() {
-        const boardId = '60b7e87419a5e8e764d835fe'
+        const boardId = this.props.match.params.boardId
+        // const boardId = '60b7e87419a5e8e764d835fe'
         // const boardId = 'b101'
         this.props.loadBoard(boardId)
         userService.getUsers()
@@ -41,26 +42,13 @@ class _BoardApp extends Component {
         socketService.terminate()
     }
     componentDidUpdate(prevProps, prevState) {
-        console.log(`file: BoardApp.jsx || line 44 || prevProps`, prevProps)
-        // const id = this.props.match.params.boardId
         const prevId = prevProps.match.params.boardId
         const currId = this.props.match.params.boardId
-        if (!prevId) return
         console.log(`file: BoardApp.jsx || line 47 || currId`, currId)
-        console.log(`file: BoardApp.jsx || line 47 || prevId`, prevId)
-        // console.log(`file: BoardApp.jsx || line 45 || id`, id)
+        if (!prevId) return
         if (prevId !== currId) {
-            console.log('different ids')
             this.props.loadBoard(currId)
         }
-        // if (prevProps.match.params.boardId !== this.props.match.params.boardId) {
-        //     this.props.loadBoard(boardId)
-        // }
-        // if (prevProps.id !== id) {
-        // console.log(`file: BoardApp.jsx || line 51 || prevProps.id`, prevProps.id)
-        // console.log('currID =', id)
-        // console.log('id different will load board =')
-        // this.props.loadBoard(id)
     }
 
 
@@ -123,6 +111,7 @@ class _BoardApp extends Component {
         socketService.emit('board updated', copyGroup._id);
     }
     onSetFilter = (filterBy) => {
+<<<<<<< HEAD
         // const { currBoard } = this.props;
         // console.log('filterBy', filterBy)
         //     let filteredBoard = { ...currBoard }
@@ -135,6 +124,20 @@ class _BoardApp extends Component {
         //     }
         //     return filteredBoard
     
+=======
+        const { currBoard } = this.props;
+        console.log('filterBy', filterBy)
+        let filteredBoard = { ...currBoard }
+        if (filterBy.status) {
+            var filterdBoard = filteredBoard.filter((group) => {
+                return group.tasks.filter((task) => {
+                    return task.status.title === filterBy.status
+                })
+            })
+        }
+        return filteredBoard
+
+>>>>>>> 5b797075ea20024de826d889ad0340e0c8a54b62
         // this.props.loadBoard(filterBy)
     }
     onAddNewBoard = () => {

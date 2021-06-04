@@ -3,8 +3,7 @@ const utilService = require('../../services/util.service');
 const logger = require('../../services/logger.service');
 const ObjectId = require('mongodb').ObjectId;
 
-async function query(filterBy = {}) {
-    // const criteria = _buildCriteria(filterBy)
+async function query() {
     try {
         const collection = await dbService.getCollection('board_db');
         var boards = await collection.find().toArray();
@@ -25,7 +24,7 @@ async function getById(boardId, filterBy) {
         console.log('criteria- line 211111111111111111111111', criteria)
         const filteredBoard = await collection.find(criteria).toArray();
         const objBoard = { ...filteredBoard };
-        console.log('filtered- line 311111111111111111111111', filteredBoard)
+        // console.log('filtered- line 311111111111111111111111', filteredBoard)
         return objBoard[0];
     } catch (err) {
         logger.error(`while finding board ${boardId}`, err);
@@ -63,10 +62,9 @@ async function update(board) {
     }
 }
 
-async function add(req) {
-    console.log(`file: board.service.js || line 70 || req`, req)
+async function add(currUser) {
     try {
-        const boardToAdd = _createNewBoard();
+        const boardToAdd = _createNewBoard(currUser);
         const collection = await dbService.getCollection('board_db');
         await collection.insertOne(boardToAdd);
         return boardToAdd;
@@ -102,12 +100,10 @@ module.exports = {
 //       dim_cm: [14, 21]
 //     },
 // const cursor = db.collection('inventory').find(
-    //  the criteria:::
-    //{
+//  the criteria:::
+//{
 //     tags: ['red', 'blank']
 //   });
-
-
 
 // const cursor = db.collection('inventory').find({
 //     instock: { warehouse: 'A', qty: 5 }
@@ -136,10 +132,7 @@ function _buildCriteria(filterBy) {
     }
     if (filterBy.priority) {
         // criteria.priority= filterBy.priority;
-        // instock: { qty: 5, warehouse: 'A' 
-
-        criteria.groups.tasks.priority.title = filterBy.priority[0]
-        console.log('git in crit:' , criteria.groups.tasks.priority.title)
+        criteria.groups.tasks.priority = filterBy.priority;
     }
     if (filterBy.status) {
         criteria.status = filterBy.status;
@@ -150,13 +143,13 @@ function _buildCriteria(filterBy) {
     // criteria.isFavorite = true;
     // const subtitle = { $regex: 'mo', $options: 'i' };
     // console.log(`file: board.service.js || line 130 || criteria`, criteria.subtitle);
-    console.log('crit 143((((( :::::::', criteria)
+    console.log('crit 143((((( :::::::', criteria);
     return criteria;
 }
 
-function _createNewBoard() {
+function _createNewBoard(currUser) {
     return {
-        title: 'Your new Board 222',
+        title: 'Your new Board meow',
         subtitle: 'Your new subtitle',
         description: 'Your new description',
         isFavorite: false,
@@ -167,40 +160,7 @@ function _createNewBoard() {
             { id: 'sl4', title: 'On hold', color: '#175a63' },
             { id: 'sl5', title: '', color: '#c4c4c4' },
         ],
-        members: [ // will be logged in user 
-            {
-                _id: 'u101',
-                fullname: 'Noga Jacobi',
-                username: 'Noga',
-                password: 'noga1234',
-                imgUrl: 'https://i.ibb.co/VD7WqLY/noga.jpg',
-                mentions: [{ id: 'm101', boardId: 'm101', taskId: 't101' }],
-            },
-            {
-                _id: 'u102',
-                fullname: 'Dafna Bashan ',
-                username: 'Dafna',
-                password: 'dafna1234',
-                imgUrl: 'https://i.ibb.co/qMmQnJL/image.jpg',
-                mentions: [{ id: 'm101', boardId: 'm101', taskId: 't101' }],
-            },
-            {
-                _id: 'u103',
-                fullname: 'Yuval David',
-                username: 'Yuval',
-                password: 'yuval1234',
-                imgUrl: 'https://i.ibb.co/GFbDjJx/yuval.jpg',
-                mentions: [{ id: 'm101', boardId: 'm101', taskId: 't101' }],
-            },
-            {
-                _id: 'u104',
-                fullname: 'Basya Coding',
-                username: 'Basya',
-                password: 'basya1234',
-                imgUrl: 'https://i.ibb.co/H2SxZc2/basya.jpg',
-                mentions: [{ id: 'm101', boardId: 'm101', taskId: 't101' }],
-            },
-        ],
+        members: [currUser], /// can't add more members!!
         groups: [
             {
                 id: utilService.makeId(),
@@ -220,43 +180,102 @@ function _createNewBoard() {
                                 color: '#61bd4f',
                             },
                         ],
-                        status: { id: 'sl1', title: 'Done', color: '#00c875' },
+                        status: {
+                            id: 'sl2',
+                            title: 'Working on it',
+                            color: '#fdab3d',
+                        },
                         priority: { id: 'pl4', title: '', color: '#c4c4c4' },
-                        members: [
-                            {
-                                _id: 'u103',
-                                fullname: 'Yuval David',
-                                username: 'Yuval',
-                                imgUrl: 'https://i.ibb.co/GFbDjJx/yuval.jpg',
-                            },
-                            {
-                                _id: 'u104',
-                                fullname: 'Basya coding',
-                                username: 'Basya',
-                                imgUrl: 'https://i.ibb.co/H2SxZc2/basya.jpg',
-                            },
-                        ],
+                        members: [currUser],
                         comments: [
                             {
                                 id: utilService.makeId(),
                                 txt: 'Added new group',
                                 createdAt: Date.now(),
-                                byMember: {
-                                    _id: 'u104',
-                                    fullname: 'Basya coding',
-                                    username: 'Basya',
-                                    imgUrl: 'https://i.ibb.co/H2SxZc2/basya.jpg',
-                                },
+                                byMember: currUser,
                                 taskId: 'g3t101',
                                 // groupId: 'g103',
                             },
                         ],
-                        byMember: {
-                            _id: 'u104',
-                            fullname: 'Basya coding',
-                            username: 'Basya',
-                            imgUrl: 'https://i.ibb.co/H2SxZc2/basya.jpg',
+                        byMember: currUser,
+                    },
+                ],
+            },
+            {
+                id: utilService.makeId(),
+                style: { bgColor: '#00c875' },
+                title: 'Your new group',
+                tasks: [
+                    {
+                        id: utilService.makeId(),
+                        labelIds: ['101'],
+                        createdAt: Date.now(),
+                        timeline: [null, null],
+                        title: 'Your new task',
+                        tags: [
+                            {
+                                id: 't101',
+                                title: '#starting',
+                                color: '#61bd4f',
+                            },
+                        ],
+                        status: {
+                            id: 'sl2',
+                            title: 'Working on it',
+                            color: '#fdab3d',
                         },
+                        priority: { id: 'pl4', title: '', color: '#c4c4c4' },
+                        members: [currUser],
+                        comments: [
+                            {
+                                id: utilService.makeId(),
+                                txt: 'Added new group',
+                                createdAt: Date.now(),
+                                byMember: currUser,
+                                taskId: 'g3t101',
+                                // groupId: 'g103',
+                            },
+                        ],
+                        byMember: currUser,
+                    },
+                ],
+            },
+            {
+                id: utilService.makeId(),
+                style: { bgColor: '#ff642e' },
+                title: 'Your new group',
+                tasks: [
+                    {
+                        id: utilService.makeId(),
+                        labelIds: ['101'],
+                        createdAt: Date.now(),
+                        timeline: [null, null],
+                        title: 'Your new task',
+                        tags: [
+                            {
+                                id: 't101',
+                                title: '#starting',
+                                color: '#61bd4f',
+                            },
+                        ],
+                        status: {
+                            id: 'sl2',
+                            title: 'Working on it',
+                            color: '#fdab3d',
+                        },
+                        priority: { id: 'pl4', title: '', color: '#c4c4c4' },
+                        members: [currUser],
+                        comments: [
+                            {
+                                id: utilService.makeId(),
+                                txt: 'Added new group',
+                                createdAt: Date.now(),
+                                byMember: currUser,
+                                taskId: 'g3t101',
+                                // groupId: 'g103',
+                            },
+                        ],
+                        byMember: currUser,
                     },
                 ],
             },
@@ -280,7 +299,7 @@ function _createNewBoard() {
             { id: 'c116', name: 'grey', value: '#c4c4c4' },
             { id: 'c117', name: 'darkGrey', value: '#808080' },
         ],
-        createdBy: null,
+        createdBy: currUser,
         createdAt: Date.now(),
         priorityLabels: [
             { id: 'pl1', title: 'High', color: '#e2445c' },

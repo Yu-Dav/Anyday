@@ -1,7 +1,7 @@
 import React from 'react'
 import { Component } from 'react'
 import { connect } from 'react-redux'
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 import { loadBoards } from '../store/actions/boardActions'
 import { Input } from '@material-ui/core';
@@ -36,28 +36,26 @@ class _SidebarNav extends Component {
                 <i className={isExpanded ? "fas arrow arrow-left" : "fas arrow arrow-right"}
                     onClick={this.onOpenNavbar}></i>
                 {isExpanded &&
-                    <div className="sidenav-open">
+                    <div className="sidenav-open flex column">
                         <h1>My Workspace</h1>
                         <div className="sidebar-ops">
-                            <i>
-
+                            <i onClick={this.props.onAddNewBoard} className="flex add-board-wrapper flex align-center">
                                 <AddCircleOutlineOutlinedIcon style={{ fontSize: '18px', color: '#898a8f', cursor: 'pointer' }} />
                                 <span>Add</span>
                             </i>
-                            {/* <i className="fas fa-plus"></i> */}
-                            <i className="fas fa-plus" onClick={this.props.onAddNewBoard}><span>Add new board</span></i>
-                            <div className="flex">
+                            <div className="flex align-center search-board-wrapper">
                                 <label htmlFor="boardName"><i className="fas fa-search"></i></label>
                                 <Input style={{ color: '#323338' }} name="searchBy" id="boardName" placeholder="Search by name"
                                     autoComplete="false" disableUnderline={true}
                                     onChange={this.handleChange} value={searchBy} />
                             </div>
                         </div>
-                        <div className="sidebar-ops second">
+                        <div className="sidebar-ops second flex column">
                             {boards.map(board =>
-                                <h2 key={board._id} onClick={() => this.onSelectBoard(board._id)}>
-                                    <TableChartOutlinedIcon style={{ fontSize: '18px', color: '#898a8f', cursor: 'pointer' }} /> {board.title}
-                                </h2>)}
+                            <Link  key = { board._id } to = {`${board._id}`} className="flex align-center">
+                                <TableChartOutlinedIcon style={{ fontSize: '18px', color: '#898a8f', cursor: 'pointer' }} /> { board.title }
+
+                                </Link>)}
                         </div>
                     </div>
                 }
