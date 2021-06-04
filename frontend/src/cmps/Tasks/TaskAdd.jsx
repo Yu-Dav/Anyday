@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { utilService } from '../../services/utilService';
 import { socketService } from '../../services/socketService';
 // import { EditableCmp } from '../EditableCmp'
-import {userService} from '../../services/userService'
+import { userService } from '../../services/userService'
 
 export class TaskAdd extends Component {
     state = {
@@ -33,12 +33,29 @@ export class TaskAdd extends Component {
             comments: [],
             byMember: userService.getLoggedinUser(),
         }
+
         const newBoard = { ...this.props.board }
         const groupId = this.props.group.id
         const groupIdx = newBoard.groups.findIndex(group => group.id === groupId)
+
+        const newActivity = {
+            id: utilService.makeId(),
+            type: 'Task added',
+            createdAt: Date.now(),
+            byMember: userService.getLoggedinUser(),
+            task: {
+                id: newTask.id,
+                title: newTask.title
+            },
+            group: {
+                id: groupId,
+                title: this.props.group.title
+            }
+        }
         if (!newBoard.groups[groupIdx].tasks || !newBoard.groups[groupIdx].tasks.length) newBoard.groups[groupIdx].tasks = [newTask]
         // else newBoard.groups[groupIdx].tasks.push(newTask)
         else newBoard.groups[groupIdx].tasks = [...newBoard.groups[groupIdx].tasks, newTask]
+        newBoard.activities.unshift(newActivity)
         await this.props.updateBoard(newBoard)
         console.log(`file: TaskAdd.jsx || line 47 || newBoard`, this.props.board)
         await socketService.emit('board updated', newBoard._id)

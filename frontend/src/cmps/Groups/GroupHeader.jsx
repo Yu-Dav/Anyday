@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { EditableCmp } from '../EditableCmp'
 import { socketService } from '../../services/socketService'
+import { utilService } from '../../services/utilService'
+import { userService } from '../../services/userService'
 
 export class GroupHeader extends Component {
     onUpdateGroupTitle = async ({ target }) => {
@@ -9,7 +11,19 @@ export class GroupHeader extends Component {
         const newBoard = { ...this.props.board };
         const groupId = this.props.group.id;
         const groupIdx = newBoard.groups.findIndex(group => group.id === groupId);
+        const newActivity = {
+            id: utilService.makeId(),
+            type: 'Title updated',
+            createdAt: Date.now(),
+            byMember: userService.getLoggedinUser(),
+            task: null,
+            group: {
+                id: groupId,
+                title: value
+            }
+        }
         newBoard.groups[groupIdx].title = value;
+        newBoard.activities.unshift(newActivity)
         await this.props.updateBoard(newBoard);
         socketService.emit('board updated', newBoard._id);
     }

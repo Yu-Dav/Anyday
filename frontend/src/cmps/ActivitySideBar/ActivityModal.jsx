@@ -6,6 +6,7 @@ import { userService } from '../../services/userService.js'
 import { utilService } from '../../services/utilService.js'
 import { connect } from 'react-redux'
 import { loadBoard, updateBoard } from '../../store/actions/boardActions'
+import { ReactComponent as CrossSvg } from '../../assets/imgs/svg/cross.svg'
 
 export class _ActivityModal extends Component {
 
@@ -21,10 +22,12 @@ export class _ActivityModal extends Component {
         imgUrl: '../assets/imgs/db.png', // change this to a better photo
     }
     async componentDidMount() {
+        console.log(1);
         const boardId = '60b7e87419a5e8e764d835fe'
         const currUser = userService.getLoggedinUser() ?? this.guest
         console.log(`file: ActivityModal.jsx || line 19 || currUser`, currUser)
         await this.props.loadBoard(boardId)
+        console.log(this.props.currBoard);
         const taskId = this.props.match.params.taskId
         if (!taskId) return
         this.loadTask(taskId)
@@ -65,22 +68,22 @@ export class _ActivityModal extends Component {
         const { content, task, currUser } = this.state
         const { currBoard } = this.props
         const {groupId} = this.props.match.params
-        // if (!task) return <div className="activity-modal">loading</div>
+        if (!currBoard) return <div className="activity-modal">loading</div>
         return (
             <div className="activity-modal">
-                <div onClick={() => window.location.hash = `/board/${currBoard._id}`}>X</div>
-                {!task && <div><h2>{currBoard.title}</h2></div>}
+                <div onClick={() => window.location.hash = `/board/${currBoard._id}`}><CrossSvg className="cross-svg"/></div>
+                {!task && <div className="board-title">{currBoard.title}</div>}
                 {task &&
                     <div className="flex">
                         <EditableCmp value={task.title} updateFunc={this.onUpdateTaskTitle} />
                         <span>avatars</span>
                     </div>}
-                <div>
-                    <span onClick={() => { this.setState({ ...this.state, content: 'updates' }) }}>Updates</span>
-                    <span onClick={() => { this.setState({ ...this.state, content: 'activity' }) }}>Activity Log</span>
+                <div className="sections flex">
+                    <div className={content === 'updates' ? 'active': ''} onClick={() => { this.setState({ ...this.state, content: 'updates' }) }}>Updates</div>
+                    <div className={content === 'activity' ? 'active': ''} onClick={() => { this.setState({ ...this.state, content: 'activity' }) }}>Activity Log</div>
                 </div>
                 <div>
-                    {content === 'updates' && <Updates currUser={currUser} task={task} groupId={groupId} board={currBoard} onUpdateTask={this.onUpdateTask} />}
+                    {content === 'updates' && currBoard && <Updates currUser={currUser} task={task} groupId={groupId} board={currBoard} onUpdateTask={this.onUpdateTask} />}
                     {content === 'activity' && <ActivityLog task={task} board={currBoard} />}
                 </div>
             </div>

@@ -1,4 +1,6 @@
 import React from 'react'
+import Avatar from '@material-ui/core/Avatar'
+import TimeAgo from 'react-timeago'
 
 export function ActivityLog({task, board}) {
 
@@ -7,16 +9,27 @@ export function ActivityLog({task, board}) {
     }
 
     return (
-        <div>
-           <h1>activities</h1>
+        <div className="activities">
            {!task && <div>
-               {board.activities.map(activity => <div key={activity.id} className="flex space-between">
-                   <div>{activity.createdAt}</div><div>avatar</div><div>{activity.task.title}</div><div>{activity.type}</div><div>{activity.group.title}</div>
+               {board.activities.map(activity => <div key={activity.id} className="activity-preview flex align-center">
+                   <div className="time"><TimeAgo date={activity.createdAt} minPeriod={10}/></div>
+                   <Avatar alt={activity.byMember.username} src={activity.byMember.imgUrl} style={{ width:'30px', height:'30px', display:'inline-block' }}/>
+                   {!activity.task && <div className="title">{activity.group.title}</div>}
+                   {activity.task && <div className="title">{activity.task.title}</div>}
+                   <div className="type">{activity.type}</div>
+                   {!activity.task && <div className="group"></div>} 
+                   {activity.task && <div className="group">{activity.group.title}</div>} 
                </div> )}
                </div>}
            {task && <div>
-               {getTaskActivities().map(activity=> <div key={activity.id} className="flex space-between">
-                   <div>{activity.createdAt}</div><div>avatar</div><div>{activity.task.title}</div><div>{activity.type}</div><div>{activity.group.title}</div>  
+               {getTaskActivities().map(activity=> <div key={activity.id} className="activity-preview flex align-center">
+                   <div className="time"><TimeAgo date={activity.createdAt} minPeriod={10}/></div>
+                   <Avatar alt={activity.byMember.username} src={activity.byMember.imgUrl} style={{ width:'30px', height:'30px', display:'inline-block' }}/>
+                   {!activity.task && <div className="title">{activity.group.title}</div>}
+                   {activity.task && <div className="title">{activity.task.title}</div>}
+                   <div className="type">{activity.type}</div>
+                   {!activity.task && <div className="group"></div>} 
+                   {activity.task && <div className="group">{activity.group.title}</div>} 
                </div>)}
                </div>}
         </div>

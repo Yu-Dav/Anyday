@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { EditableCmp } from '../EditableCmp'
 import { socketService } from '../../services/socketService'
+import { utilService } from '../../services/utilService'
+import { userService } from '../../services/userService'
+
 
 export class CellTitle extends Component {
     onRemoveTask = async () => {
@@ -11,10 +14,28 @@ export class CellTitle extends Component {
         const groupIdx = newBoard.groups.findIndex(group => group.id === groupId)
         const taskId = this.props.task.id
         const taskIdx = group.tasks.findIndex(task => task.id === taskId)
+
+        const newActivity = {
+            id: utilService.makeId(),
+            type: 'Task deleted',
+            createdAt: Date.now(),
+            byMember: userService.getLoggedinUser(),
+            task: {
+                id: taskId,
+                title: this.props.task.title
+            },
+            group: {
+                id: groupId,
+                title: group.title
+            }
+        }
+
         newBoard.groups[groupIdx].tasks.splice(taskIdx, 1)
+        newBoard.activities.unshift(newActivity)
         await this.props.updateBoard(newBoard)
         await socketService.emit('board updated', newBoard._id);
     }
+
     onUpdateTaskTitle = async ({ target }) => {
         const value = target.innerText
         const newBoard = { ...this.props.board }
@@ -24,7 +45,22 @@ export class CellTitle extends Component {
         const taskId = this.props.task.id
         const taskIdx = group.tasks.findIndex(task => task.id === taskId)
         const updatedTask = { ...this.props.task, title: value }
+        const newActivity = {
+            id: utilService.makeId(),
+            type: 'Title updated',
+            createdAt: Date.now(),
+            byMember: userService.getLoggedinUser(),
+            task: {
+                id: taskId,
+                title: updatedTask.title
+            },
+            group: {
+                id: groupId,
+                title: group.title
+            }
+        }
         newBoard.groups[groupIdx].tasks.splice(taskIdx, 1, updatedTask)
+        newBoard.activities.unshift(newActivity)
         this.props.updateBoard(newBoard)
         await socketService.emit('board updated', newBoard._id);
     }

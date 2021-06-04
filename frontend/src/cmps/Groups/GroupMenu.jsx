@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import { ClickAwayListener } from '@material-ui/core'
 import { Colors } from '../Colors'
 import { socketService } from '../../services/socketService'
-
+import { utilService } from '../../services/utilService'
+import { userService } from '../../services/userService'
 import { ReactComponent as DropDownArrow } from '../../assets/imgs/svg/dropDownArrow.svg'
 
 export class GroupMenu extends Component {
@@ -16,7 +17,19 @@ export class GroupMenu extends Component {
         const newBoard = this.props.board
         const groupId = this.props.group.id
         const groupIdx = newBoard.groups.findIndex(group => group.id === groupId)
+        const newActivity = {
+            id: utilService.makeId(),
+            type: 'Group deleted',
+            createdAt: Date.now(),
+            byMember: userService.getLoggedinUser(),
+            task: null,
+            group: {
+                id: groupId,
+                title: this.props.group.title
+            }
+        }
         newBoard.groups.splice(groupIdx, 1)
+        newBoard.activities.unshift(newActivity)
         await this.props.updateBoard(newBoard)
         socketService.emit('board updated', newBoard._id);
 

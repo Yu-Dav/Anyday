@@ -23,8 +23,8 @@ class _BoardApp extends Component {
     }
 
     componentDidMount() {
-        // const boardId = '60b7e87419a5e8e764d835fe'
-        const boardId = 'b101'
+        const boardId = '60b7e87419a5e8e764d835fe'
+        // const boardId = 'b101'
         this.props.loadBoard(boardId)
         userService.getUsers()
         const user = userService.getLoggedinUser()
@@ -52,7 +52,19 @@ class _BoardApp extends Component {
             createdAt: Date.now()
             // add all the rest needed in a group 
         }
+        const newActivity = {
+                id : utilService.makeId(),
+                type : 'Group added',
+                createdAt : Date.now(),
+                byMember :userService.getLoggedinUser(),
+                task : null,
+                group : {
+                    id : newGroup.id,
+                    title : newGroup.title
+                }
+        }
         newBoard.groups.unshift(newGroup)
+        newBoard.activities.unshift(newActivity)
         await this.props.updateBoard(newBoard)
         socketService.emit('board updated', newBoard._id)
     }
