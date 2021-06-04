@@ -11,7 +11,7 @@ import { SidebarApp } from '../cmps/SidebarApp.jsx'
 import { BoardHeader } from '../cmps/BoardHeader'
 
 import { BoardCtrlPanel } from '../cmps/BoardCtrlPanel'
-import { loadBoard, updateBoard } from '../store/actions/boardActions'
+import { loadBoard, updateBoard, addBoard } from '../store/actions/boardActions'
 import { GroupList } from '../cmps/groups/GroupList'
 import { ActivityModal } from '../cmps/ActivitySideBar/ActivityModal';
 // import { MenuListComposition } from '../cmps/MenuCmp'
@@ -40,6 +40,29 @@ class _BoardApp extends Component {
         // socketService.off('chat onUserTyping')
         socketService.terminate()
     }
+    componentDidUpdate(prevProps, prevState) {
+        console.log(`file: BoardApp.jsx || line 44 || prevProps`, prevProps)
+        // const id = this.props.match.params.boardId
+        const prevId = prevProps.match.params.boardId
+        const currId = this.props.match.params.boardId
+        if (!prevId) return
+        console.log(`file: BoardApp.jsx || line 47 || currId`, currId)
+        console.log(`file: BoardApp.jsx || line 47 || prevId`, prevId)
+        // console.log(`file: BoardApp.jsx || line 45 || id`, id)
+        if (prevId !== currId) {
+            console.log('different ids')
+            this.props.loadBoard(currId)
+        }
+        // if (prevProps.match.params.boardId !== this.props.match.params.boardId) {
+        //     this.props.loadBoard(boardId)
+        // }
+        // if (prevProps.id !== id) {
+        // console.log(`file: BoardApp.jsx || line 51 || prevProps.id`, prevProps.id)
+        // console.log('currID =', id)
+        // console.log('id different will load board =')
+        // this.props.loadBoard(id)
+    }
+
 
     addNewGroup = async () => {
         const newBoard = { ...this.props.currBoard }
@@ -70,16 +93,10 @@ class _BoardApp extends Component {
             const task = sourceGroup.tasks.find(task => task.id === draggableId)
             sourceGroup.tasks.splice(source.index, 1);
             destinationGroup.tasks.splice(destination.index, 0, task);
-            // const copyGroup = { ...this.props.currBoard };
-            // this.props.updateBoard(copyGroup);
-            // return
         }
         if (type === 'group') {
-            // console.log(`file: BoardApp.jsx || line 35 || result`, result);
-            // console.log('props.currBoard =', this.props.currBoard);
             const { currBoard } = this.props;
             const sourceGroup = this.props.currBoard.groups.find(group => group.id === draggableId);
-            // console.log(`file: BoardApp.jsx || line 53 || sourceGroup`, sourceGroup);
             currBoard.groups.splice(source.index, 1);
             currBoard.groups.splice(destination.index, 0, sourceGroup)
         }
@@ -91,6 +108,11 @@ class _BoardApp extends Component {
         console.log('filterBy', filterBy)
         // this.props.loadBoard(filterBy)
     }
+    onAddNewBoard = () => {
+        console.log('Adding new board =')
+        this.props.addBoard()
+
+    }
     render() {
         const { currBoard } = this.props
         const { currUser } = this.state
@@ -98,7 +120,7 @@ class _BoardApp extends Component {
         return (
             <div className="board-app-container flex">
                 <SidebarApp />
-                <SidebarNav />
+                <SidebarNav onAddNewBoard={this.onAddNewBoard} />
                 <div className="container board-container">
                     <BoardHeader board={this.props.currBoard} updateBoard={this.props.updateBoard} />
                     <BoardCtrlPanel board={this.props.currBoard} addNewGroup={this.addNewGroup} onSetFilter={this.onSetFilter} loadBoard={this.props.loadBoard} />
@@ -111,8 +133,8 @@ class _BoardApp extends Component {
                                     ref={provided.innerRef}
                                     {...provided.droppableProps} >
                                     <GroupList
-                                        board={currBoard} groups={currBoard.groups} key={currBoard._id} 
-                                        updateBoard={this.props.updateBoard} currUser={currUser}/>
+                                        board={currBoard} groups={currBoard.groups} key={currBoard._id}
+                                        updateBoard={this.props.updateBoard} currUser={currUser} />
                                     {provided.placeholder}
                                 </div>
                             )}
@@ -142,7 +164,8 @@ function mapStateToProps(state) {
 
 const mapDispatchToProps = {
     loadBoard,
-    updateBoard
+    updateBoard,
+    addBoard
 }
 
 export const BoardApp = connect(mapStateToProps, mapDispatchToProps)(_BoardApp)

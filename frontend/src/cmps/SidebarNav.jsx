@@ -37,7 +37,7 @@ class _SidebarNav extends Component {
                     <div className="sidenav-open">
                         <h1>My Workspace</h1>
                         <div className="sidebar-ops">
-                            <i className="fas fa-plus"><span>Add</span></i>
+                            <i className="fas fa-plus" onClick={this.props.onAddNewBoard}><span>Add new board</span></i>
                             <div className="flex">
                                 <label htmlFor="boardName"><i className="fas fa-search"></i></label>
                                 <Input name="searchBy" id="boardName" placeholder="Search by name"

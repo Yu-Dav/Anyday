@@ -258,3 +258,95 @@
 03/06/2021, 21:06:54 - DEBUG - Session ID is | IgIASGwbktFG6FQa45gEacbNX_H1ni0X 
 03/06/2021, 21:07:02 - ERROR - Failed to get board | TypeError: Cannot read property 'tasks' of undefined (sid: H9o0A7HPBeUJEqWjlx9FssjUV1EqzEEI)
 03/06/2021, 21:09:19 - INFO - Server is running on port: 3030 
+03/06/2021, 21:17:22 - DEBUG - Session ID is | gbthy3iTgVlWUo-jAi0SbZSo9fTLQLkm 
+04/06/2021, 07:15:05 - DEBUG - Session ID is | pDzA3nCbfdC3IxGG2cNNfCWDK0EPEaiy 
+04/06/2021, 08:26:51 - DEBUG - Session ID is | mN9Yq3OfpLnIHo0x4x6Oi2GWx_CfiXw6 
+04/06/2021, 08:26:56 - DEBUG - Session ID is | dMYJJrUgwKDcTbn0hVZp387Vw2a6rEk0 
+04/06/2021, 08:31:36 - DEBUG - Session ID is | GB0rspPUC8WS-8KdfAbOE2-V7sWj_XS1 
+04/06/2021, 08:31:36 - DEBUG - Session ID is | NHO0TuQfqsgkEfYXL1NLd8DPiOaO7cAi 
+04/06/2021, 08:32:58 - DEBUG - Session ID is | y_GcrXFQ2yOvYXBi4aWgxUZvaki5veWF 
+04/06/2021, 08:32:58 - DEBUG - Session ID is | 3sOwn_ZXepROjkUWVUWLID7B7lTKAlEb 
+04/06/2021, 08:34:02 - DEBUG - Session ID is | vZnmAPxBVzHgJkIOGwl49yBiP_Z8FQGR 
+04/06/2021, 08:34:17 - DEBUG - Session ID is | 6BIFhMonIti7vMob3TxEu9nZ5U2BDoW7 
+04/06/2021, 08:36:55 - DEBUG - Session ID is | NfrpvTuWdJ2CBFb_XoLD_lnUqJlZcrLT 
+04/06/2021, 08:36:56 - DEBUG - Session ID is | KGLA1MTVxglJdiX8ECqZ_WifvqSov7tP 
+04/06/2021, 08:39:03 - DEBUG - Session ID is | belfPsqwaQfvJ7TJktJmAgnFarxxjHJX 
+04/06/2021, 08:39:03 - DEBUG - Session ID is | Jv_kCIMOTeZe9kFtVvmuwlso30WInhs- 
+04/06/2021, 08:40:50 - INFO - Server is running on port: 3030 
+04/06/2021, 08:41:02 - DEBUG - Session ID is | w60PM51Mkkf0BUQPNa4tjiOcsB6DddrH 
+04/06/2021, 08:43:15 - INFO - Server is running on port: 3030 
+04/06/2021, 08:44:53 - INFO - Server is running on port: 3030 
+04/06/2021, 08:44:57 - INFO - Server is running on port: 3030 
+04/06/2021, 08:45:04 - DEBUG - Session ID is | FnjEEZY0JcFI6wbYtAzeTc_wQIbguKh5 
+04/06/2021, 08:45:13 - ERROR - cannot insert board | ReferenceError: board is not defined (sid: TredoI1ZguLjjKSlnXLQY7Sm0prYfRXm)
+04/06/2021, 08:45:13 - ERROR - Failed to add new board | ReferenceError: board is not defined (sid: TredoI1ZguLjjKSlnXLQY7Sm0prYfRXm)
+04/06/2021, 08:45:25 - DEBUG - Session ID is | KL-i71Csk4_cYXvc0Nie-_LSr8djlnq9 
+04/06/2021, 08:45:35 - INFO - Server is running on port: 3030 
+04/06/2021, 08:45:42 - INFO - Server is running on port: 3030 
+04/06/2021, 08:45:44 - DEBUG - Session ID is | Yg-QtCSVrnjhJlLXaCIKkHlUNie9JLrd 
+04/06/2021, 08:45:54 - ERROR - cannot insert board | ReferenceError: board is not defined (sid: XseIUVKJ_QBttg7ISf1e2nNjoPZjPdtI)
+04/06/2021, 08:45:54 - ERROR - Failed to add new board | ReferenceError: board is not defined (sid: XseIUVKJ_QBttg7ISf1e2nNjoPZjPdtI)
+04/06/2021, 08:47:21 - INFO - Server is running on port: 3030 
+04/06/2021, 08:47:23 - DEBUG - Session ID is | AONx62x6CelZk9XHXeT5jdbEnipNP6CL 
+04/06/2021, 08:48:03 - DEBUG - Session ID is | 6sK0Mke30O3yh-OeDqfRjdrPiJ2NlxFf 
+04/06/2021, 08:54:01 - DEBUG - Session ID is | F1DVozdch4ZYLuANHBWmAJk_pHQfSJFa 
+04/06/2021, 08:54:04 - DEBUG - Session ID is | m8rDt8RE2urYQw6wbg9Hydrnp_YZbGSk 
+04/06/2021, 08:55:31 - DEBUG - Session ID is | FMX7evgVViaGGmusvqDdw0yrHxuWxZNr 
+04/06/2021, 08:55:31 - DEBUG - Session ID is | NLoDOonVZupatVBeFYXwaPSbmEadezBt 
+04/06/2021, 08:55:33 - DEBUG - Session ID is | iBWKW8BA1w_UR4q6AzrVpLA77Z1AGw6P 
+04/06/2021, 08:56:12 - DEBUG - Session ID is | 5ede1f1IxnaGiNcAngJkZScIFtIRHzfD 
+04/06/2021, 08:56:12 - DEBUG - Session ID is | dF3YKMrPyK83uIFLfLbRWZ3vJchTM98Y 
+04/06/2021, 08:56:41 - DEBUG - Session ID is | ahUm6MQnYp9n1_eCvXMjV1xkNeMNNS3A 
+04/06/2021, 08:56:41 - DEBUG - Session ID is | aFM5w-rUITr7gyySWDEh08aBYKb36phE 
+04/06/2021, 08:56:44 - DEBUG - Session ID is | sUhSm3D6YAOG6ZVxBuFbPa0gpBg6t_kw 
+04/06/2021, 08:57:11 - DEBUG - Session ID is | 3ZgZrLPgNSCDh5b4x-ppq6w4k5O27evy 
+04/06/2021, 08:57:11 - DEBUG - Session ID is | JpEdxZNNpoWAf0aIhzCx1Ty-ZMRwOSYB 
+04/06/2021, 08:57:15 - DEBUG - Session ID is | XQ5Zx5Vp1AjU2-wgVWfOEXk7shPkmmAa 
+04/06/2021, 08:57:32 - DEBUG - Session ID is | _pkJoBtJYqO4xlmntn36eNhTlDTW1M8X 
+04/06/2021, 08:57:36 - DEBUG - Session ID is | TeUdQlsVbNVOij3NBQcEXA9PLw1CWlxw 
+04/06/2021, 08:58:14 - DEBUG - Session ID is | GYr7oPQk9M-5KCNbr-4YlcvRGX0V8v3T 
+04/06/2021, 08:59:03 - DEBUG - Session ID is | 8GNObPYoDb5pK0BlDdw_oQIaflVEkLqD 
+04/06/2021, 08:59:10 - DEBUG - Session ID is | DSl1rC-1p54BoO0NWRj1JnmDrp_WenMg 
+04/06/2021, 08:59:49 - DEBUG - Session ID is | v0BLOTlW5KS-LIIT990J2Envf9Ozr3hL 
+04/06/2021, 08:59:53 - DEBUG - Session ID is | nCuEZoPkB4EE-8_itbcQ1P2qnIZrKSeE 
+04/06/2021, 09:01:09 - DEBUG - Session ID is | NkZsdp_SnnjARwnnvkf7sCGLJWYMxaMz 
+04/06/2021, 09:01:37 - DEBUG - Session ID is | cI5GhZX0lXUPiVR-LFUpReJz24XZ63DA 
+04/06/2021, 09:01:43 - DEBUG - Session ID is | rsl9jnBfNc-4hK9S4wR4y19kCvsYeXlj 
+04/06/2021, 09:02:01 - DEBUG - Session ID is | C5go9hUQahIuIAqOJJU7cnXMR4vVfrYP 
+04/06/2021, 09:02:08 - DEBUG - Session ID is | DP5BVNKkzQ_QagY_9JIcOYghqd-FWipQ 
+04/06/2021, 09:02:52 - DEBUG - Session ID is | zu0-y6K5Jgm3xbEsg4fk0NzTsi2D1hyS 
+04/06/2021, 09:03:50 - DEBUG - Session ID is | HE99peDZVtMh4oshM5HR6v3O-OsnyEdm 
+04/06/2021, 09:04:44 - DEBUG - Session ID is | t5o14Z4EAM43SWOZVMvR3fCjGesvTk-7 
+04/06/2021, 09:04:53 - DEBUG - Session ID is | 7lL7gL7aUQPlvOeVAjfsKjKZ4Q9AIMoX 
+04/06/2021, 09:04:59 - DEBUG - Session ID is | R9DM1L0kz8fV17OOgoClg_EPnTbtGxoi 
+04/06/2021, 09:05:27 - DEBUG - Session ID is | q3kxPLonGetQ7lB5O6pDVcE6_oxAhYY4 
+04/06/2021, 09:05:52 - DEBUG - Session ID is | Adfn-Q3IKOBfKuWvlxaqcRTG_pXjg3ls 
+04/06/2021, 09:12:33 - DEBUG - Session ID is | tWqaZiYcwpE5NXhEjs5aGv1iw7LWvMDt 
+04/06/2021, 09:23:40 - INFO - Server is running on port: 3030 
+04/06/2021, 09:25:10 - INFO - Server is running on port: 3030 
+04/06/2021, 09:25:44 - INFO - Server is running on port: 3030 
+04/06/2021, 09:25:48 - INFO - Server is running on port: 3030 
+04/06/2021, 09:25:59 - INFO - Server is running on port: 3030 
+04/06/2021, 09:26:01 - INFO - Server is running on port: 3030 
+04/06/2021, 09:26:15 - INFO - Server is running on port: 3030 
+04/06/2021, 09:26:18 - INFO - Server is running on port: 3030 
+04/06/2021, 09:26:28 - INFO - Server is running on port: 3030 
+04/06/2021, 09:26:58 - INFO - Server is running on port: 3030 
+04/06/2021, 09:28:51 - INFO - Server is running on port: 3030 
+04/06/2021, 09:28:53 - INFO - Server is running on port: 3030 
+04/06/2021, 09:29:18 - INFO - Server is running on port: 3030 
+04/06/2021, 09:29:51 - INFO - Server is running on port: 3030 
+04/06/2021, 09:30:29 - INFO - Server is running on port: 3030 
+04/06/2021, 09:31:09 - INFO - Server is running on port: 3030 
+04/06/2021, 09:31:20 - INFO - Server is running on port: 3030 
+04/06/2021, 09:31:29 - DEBUG - Session ID is | yVz5Za9DiEpu7pa8XeyYqW3hFQvtU-qw 
+04/06/2021, 09:31:36 - INFO - Server is running on port: 3030 
+04/06/2021, 09:32:19 - INFO - Server is running on port: 3030 
+04/06/2021, 09:32:27 - INFO - Server is running on port: 3030 
+04/06/2021, 09:35:36 - DEBUG - Session ID is | UWBz--6_uEQD4X_1ptekd4O-elPmu7rD 
+04/06/2021, 09:41:22 - INFO - Server is running on port: 3030 
+04/06/2021, 09:43:53 - INFO - Server is running on port: 3030 
+04/06/2021, 09:43:57 - DEBUG - Session ID is | 5Z33JWAm-KAaESSRlIEF6N7lX5vpFn05 
+04/06/2021, 09:44:51 - INFO - Server is running on port: 3030 
+04/06/2021, 09:46:33 - DEBUG - auth.service - login with username: Yuval (sid: fdfqrXxks2-iimHuioUkR5Up87S-wSXK)
+04/06/2021, 09:46:34 - DEBUG - Session ID is | h0MuYmr_DvojOLkkFnqkIB4D-J0WjYE6 
