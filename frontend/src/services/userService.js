@@ -53,8 +53,8 @@ async function signup(userCred) {
     // return _saveLocalUser(user)
 }
 async function logout() {
-    // sessionStorage.clear()
-    // return await httpService.post('auth/logout')
+    sessionStorage.clear()
+    return await httpService.post('auth/logout')
 }
 function _saveLocalUser(user) {
     sessionStorage.setItem('loggedinUser', JSON.stringify(user));
@@ -63,7 +63,7 @@ function _saveLocalUser(user) {
 
 function getLoggedinUser() {
     let user = JSON.parse(sessionStorage.getItem('loggedinUser'));
-    if (typeof user !== 'object') {
+    if (typeof user !== 'object' || !user) {
         user = {
             _id: utilService.makeId(),
             fullname: 'Guest',

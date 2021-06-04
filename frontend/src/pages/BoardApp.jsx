@@ -23,7 +23,8 @@ class _BoardApp extends Component {
     }
 
     componentDidMount() {
-        const boardId = '60b7e87419a5e8e764d835fe'
+        const boardId = this.props.match.params.boardId
+        // const boardId = '60b7e87419a5e8e764d835fe'
         // const boardId = 'b101'
         this.props.loadBoard(boardId)
         userService.getUsers()
@@ -41,16 +42,16 @@ class _BoardApp extends Component {
         socketService.terminate()
     }
     componentDidUpdate(prevProps, prevState) {
-        console.log(`file: BoardApp.jsx || line 44 || prevProps`, prevProps)
+        // console.log(`file: BoardApp.jsx || line 44 || prevProps`, prevProps)
         // const id = this.props.match.params.boardId
         const prevId = prevProps.match.params.boardId
         const currId = this.props.match.params.boardId
         if (!prevId) return
-        console.log(`file: BoardApp.jsx || line 47 || currId`, currId)
-        console.log(`file: BoardApp.jsx || line 47 || prevId`, prevId)
+        // console.log(`file: BoardApp.jsx || line 47 || currId`, currId)
+        // console.log(`file: BoardApp.jsx || line 47 || prevId`, prevId)
         // console.log(`file: BoardApp.jsx || line 45 || id`, id)
         if (prevId !== currId) {
-            console.log('different ids')
+            // console.log('different ids')
             this.props.loadBoard(currId)
         }
         // if (prevProps.match.params.boardId !== this.props.match.params.boardId) {
@@ -76,15 +77,15 @@ class _BoardApp extends Component {
             // add all the rest needed in a group 
         }
         const newActivity = {
-                id : utilService.makeId(),
-                type : 'Group added',
-                createdAt : Date.now(),
-                byMember :userService.getLoggedinUser(),
-                task : null,
-                group : {
-                    id : newGroup.id,
-                    title : newGroup.title
-                }
+            id: utilService.makeId(),
+            type: 'Group added',
+            createdAt: Date.now(),
+            byMember: userService.getLoggedinUser(),
+            task: null,
+            group: {
+                id: newGroup.id,
+                title: newGroup.title
+            }
         }
         newBoard.groups.unshift(newGroup)
         newBoard.activities.unshift(newActivity)

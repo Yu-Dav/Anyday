@@ -1,7 +1,7 @@
 import React from 'react'
 import { Component } from 'react'
 import { connect } from 'react-redux'
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 import { loadBoards } from '../store/actions/boardActions'
 import { Input } from '@material-ui/core';
@@ -53,11 +53,12 @@ class _SidebarNav extends Component {
                                     onChange={this.handleChange} value={searchBy} />
                             </div>
                         </div>
-                        <div className="sidebar-ops second">
+                        <div className="sidebar-ops second flex column">
+                            ?
                             {boards.map(board =>
-                                <h2 key={board._id} onClick={() => this.onSelectBoard(board._id)}>
-                                    <TableChartOutlinedIcon style={{ fontSize: '18px', color: '#898a8f', cursor: 'pointer' }} /> {board.title}
-                                </h2>)}
+                            <Link key={board._id} to={`board/${board._id}`}>
+                                <TableChartOutlinedIcon style={{ fontSize: '18px', color: '#898a8f', cursor: 'pointer' }} /> {board.title}
+                            </Link>)}
                         </div>
                     </div>
                 }
