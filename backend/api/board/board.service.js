@@ -21,9 +21,10 @@ async function getById(boardId, filterBy) {
         const collection = await dbService.getCollection('board_db');
         const board = await collection.findOne({ _id: ObjectId(boardId) });
         if (Object.keys(filterBy).length === 0) return board;
+        console.log('criteria- line 211111111111111111111111', criteria)
         const filteredBoard = await collection.find(criteria).toArray();
         const objBoard = { ...filteredBoard };
-        console.log('filtered- line 311111111111111111111111', objBoard);
+        // console.log('filtered- line 311111111111111111111111', filteredBoard)
         return objBoard[0];
     } catch (err) {
         logger.error(`while finding board ${boardId}`, err);
@@ -110,15 +111,14 @@ module.exports = {
 
 function _buildCriteria(filterBy) {
     console.log(`file: board.service.js || line 99 || filterBy`, filterBy);
-    const criteria = {
-        groups: {
-            tasks: {
-                tags: [],
-                priority: {},
-                status: {},
-            },
-        },
-    };
+    
+    const criteria = { groups:{
+        tasks:{
+            tags:[{title:''}],
+            priority:{title:''},
+            status:{title:''}
+        }
+    }};
     if (filterBy.txt) {
         const txtCriteria = { $regex: filterBy.txt, $options: 'i' };
         criteria.$or = [

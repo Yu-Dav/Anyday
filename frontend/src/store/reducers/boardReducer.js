@@ -1,7 +1,7 @@
 const initialState = {
     boards: [],// all the boards as arr
     currBoard: {}, // just the selected board as obj
-    filterBy: 'all',
+    filterBy: {},
 };
 
 // const idx = state.boards.findIndex(board => board._id === action.board._id)
@@ -26,9 +26,9 @@ export function boardReducer(state = initialState, action) {
                 ),
             };
         case 'UPDATE_BOARD':
-            console.log ('action.board in reducer =',action.board)
+            console.log('action.board in reducer =', action.board)
             return {
-                ...state, 
+                ...state,
                 boards: state.boards.map((board) =>
                     board._id === action.board._id ? action.board : board
                 ),
@@ -36,8 +36,10 @@ export function boardReducer(state = initialState, action) {
             };
         case 'LOADING_BOARDS':
             return { ...state, isLoading: action.isLoading, err: null };
-        // case 'SET_FILTER':
-        //     return { ...state, currFilterBy: action.filterBy }
+        case 'SET_FILTER':
+            return { ...state, filterBy: action.filterBy };
+
+
 
         // case 'SET_SEARCH':
         //     return { ...state, currSearchBy: action.searchTxt }

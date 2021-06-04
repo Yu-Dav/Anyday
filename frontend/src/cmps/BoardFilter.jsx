@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import { BoardFilterList } from './BoardFilterList.jsx'
 import { connect } from 'react-redux'
-import { loadBoard } from '../store/actions/boardActions'
+import { onSetFilter } from '../store/actions/boardActions'
 
 class _BoardFilter extends Component {
     state = {
         filterBy: {
+            // txt:'',
             member: [],
             priority: [],
             status: [],
@@ -13,7 +14,6 @@ class _BoardFilter extends Component {
         }
     }
     onSetFilter = (newFilterCriteria, filterType) => {
-        // console.log('new criter' , newFilterCriteria)
         const prevCriteria = this.state.filterBy[filterType].find(prevCriteria => prevCriteria.id === newFilterCriteria.id)
         if (prevCriteria) return // checking if the clicked new criteria already present in the state arr. is so return. later -> remove from the array, loadboard and return
         const newFilter = {
@@ -22,7 +22,7 @@ class _BoardFilter extends Component {
         }
         const newState = { ...this.state, filterBy: newFilter }
         this.setState(newState, () =>
-            this.props.loadBoard(this.props.currBoard._id, newFilter)
+            this.props.onSetFilter( newFilter)
         )
         // add txt to the filterBy 
     }
@@ -61,7 +61,7 @@ function mapStateToProps(state) {
 }
 
 const mapDispatchToProps = {
-    loadBoard,
+    onSetFilter,
     // updateBoard
 }
 

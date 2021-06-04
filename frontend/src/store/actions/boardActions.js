@@ -60,3 +60,15 @@ export function updateBoard(board) {
         }
     }
 }
+
+export function onSetFilter(filterBy){
+    return async dispatch => {
+        try {
+            // const board = await boardService.getById(boardId, filterBy)
+            dispatch({ type: 'SET_FILTER', filterBy })
+        } catch (err) {
+            console.log('BoardActions: err in onSetFilter', err);
+        }
+    }
+
+}

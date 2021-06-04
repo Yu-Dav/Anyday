@@ -69,7 +69,7 @@ class _BoardApp extends Component {
         const newBoard = { ...this.props.currBoard }
         const newGroup = {
             id: utilService.makeId(),
-            style: { bgColor: '#26de81' },
+            style: { bgColor: this.getColor() },
             title: 'New Group',
             tasks: [],
             byMember: userService.getLoggedinUser(),
@@ -91,6 +91,12 @@ class _BoardApp extends Component {
         newBoard.activities.unshift(newActivity)
         await this.props.updateBoard(newBoard)
         socketService.emit('board updated', newBoard._id)
+    }
+
+    getColor() {
+        const boardColors = this.props.currBoard.colors
+        var randomColor = boardColors[Math.floor(Math.random() * boardColors.length)]
+        return randomColor.value
     }
 
     onDragEnd = async (result) => {
@@ -118,7 +124,18 @@ class _BoardApp extends Component {
         socketService.emit('board updated', copyGroup._id);
     }
     onSetFilter = (filterBy) => {
+        const { currBoard } = this.props;
         console.log('filterBy', filterBy)
+            let filteredBoard = { ...currBoard }
+            if (filterBy.status){
+                filterdBoard= filteredBoard.filter((group)=>{
+                    return group.tasks.filter((task)=>{
+                        return task.status.title === filterBy.status
+                    })
+                })
+            }
+            return filteredBoard
+    
         // this.props.loadBoard(filterBy)
     }
     onAddNewBoard = () => {
@@ -127,7 +144,7 @@ class _BoardApp extends Component {
 
     }
     render() {
-        const { currBoard } = this.props
+        const { currBoard, filterBy } = this.props
         const { currUser } = this.state
         if (!currBoard) return <div>loading</div>
         return (
@@ -147,6 +164,7 @@ class _BoardApp extends Component {
                                     {...provided.droppableProps} >
                                     <GroupList
                                         board={currBoard} groups={currBoard.groups} key={currBoard._id}
+                                        filterBy={filterBy}
                                         updateBoard={this.props.updateBoard} currUser={currUser} />
                                     {provided.placeholder}
                                 </div>
@@ -178,7 +196,7 @@ function mapStateToProps(state) {
 const mapDispatchToProps = {
     loadBoard,
     updateBoard,
-    addBoard
+    addBoard,
 }
 
 export const BoardApp = connect(mapStateToProps, mapDispatchToProps)(_BoardApp)
