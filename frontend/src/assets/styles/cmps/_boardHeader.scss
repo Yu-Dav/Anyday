@@ -4,6 +4,11 @@
     margin: 20px 0 10px 0;
     padding-bottom: 10px;
     border-bottom: 1px solid $lightGrey;
+
+    .star-fav{
+        stroke: #c3c5ca;
+    }
+
     .title-container {
         .title {
             font-size: rem(24px);

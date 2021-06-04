@@ -19,8 +19,11 @@ export function TaskPreview({ task, group, board, updateBoard, index }) {
                         {...provided.draggableProps}
                         {...provided.dragHandleProps}
                         ref={provided.innerRef}>
-                        <div className="group-color" style={{ backgroundColor: group.style.bgColor }}></div>
-                        <CellTitle task={task} group={group} board={board} updateBoard={updateBoard} />
+                        <span className="left-container flex">
+                            <div className="group-color" style={{ backgroundColor: group.style.bgColor }}></div>
+
+                            <CellTitle task={task} group={group} board={board} updateBoard={updateBoard} />
+                        </span>
                         <CellMember task={task} board={board} updateBoard={updateBoard} />
                         <CellTag task={task} board={board} updateBoard={updateBoard} />
                         <CellStatus task={task} board={board} updateBoard={updateBoard} />

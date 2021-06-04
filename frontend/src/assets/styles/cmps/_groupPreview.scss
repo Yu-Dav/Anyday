@@ -1,8 +1,12 @@
+// .groups-container.wrapper {
+//     overflow-x: scroll;
+// }
+
 .group-container {
     margin-bottom: 30px;
     background-color: #ffffffe6;
     min-width: 380px;
-
+    // overflow-x: scroll;
     .group-modal {
         animation: fade-in 0.5s ease-in-out both;
         z-index: 1;

@@ -113,6 +113,18 @@ class _BoardApp extends Component {
         socketService.emit('board updated', copyGroup._id);
     }
     onSetFilter = (filterBy) => {
+        // const { currBoard } = this.props;
+        // console.log('filterBy', filterBy)
+        //     let filteredBoard = { ...currBoard }
+        //     if (filterBy.status){
+        //         filterdBoard= filteredBoard.filter((group)=>{
+        //             return group.tasks.filter((task)=>{
+        //                 return task.status.title === filterBy.status
+        //             })
+        //         })
+        //     }
+        //     return filteredBoard
+    
         const { currBoard } = this.props;
         console.log('filterBy', filterBy)
         let filteredBoard = { ...currBoard }
