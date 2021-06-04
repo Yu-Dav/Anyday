@@ -10,6 +10,7 @@ import { Draggable } from 'react-beautiful-dnd';
 
 
 export function TaskPreview({ task, group, board, updateBoard, index }) {
+    const cellTypes = ['title', 'member', 'tag', 'status', 'priority', 'creationLog', 'timeline', 'map']
     return (
         <React.Fragment>
             <Draggable draggableId={task.id} index={index} type="task">

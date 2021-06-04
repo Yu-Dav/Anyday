@@ -35,11 +35,12 @@
     .group-modal-choose {
         cursor: pointer;
         width: 17px;
-        margin-top: 7px;
+        margin-top: 6px;
     }
     .group-handle {
         opacity: 0;
         margin: 3.5px 2px 0 5px;
+        font-size: rem(18px);
         &:hover {
             opacity: 1;
         }

@@ -38,15 +38,17 @@ class _BoardApp extends Component {
     }
     componentWillUnmount() {
         // socketService.off('chat addMsg', this.addMsg)
-        // socketService.off('chat onUserTyping')
+        socketService.off('board loaded')
         socketService.terminate()
     }
     componentDidUpdate(prevProps, prevState) {
         const prevId = prevProps.match.params.boardId
+        console.log(`file: BoardApp.jsx || line 46 || prevId`, prevId)
         const currId = this.props.match.params.boardId
-        console.log(`file: BoardApp.jsx || line 47 || currId`, currId)
+        console.log(`BoardApp.jsx || line 47 || currId`, currId)
         if (!prevId) return
         if (prevId !== currId) {
+            console.log('different id loading new board =')
             this.props.loadBoard(currId)
         }
     }
@@ -122,8 +124,6 @@ class _BoardApp extends Component {
             })
         }
         return filteredBoard
-
-        // this.props.loadBoard(filterBy)
     }
     onAddNewBoard = () => {
         console.log('Adding new board =')
@@ -145,7 +145,6 @@ class _BoardApp extends Component {
                     <DragDropContext onDragEnd={this.onDragEnd}>
                         <Droppable droppableId="all-groups" type="group">
                             {provided => (
-
                                 <div
                                     ref={provided.innerRef}
                                     {...provided.droppableProps} >

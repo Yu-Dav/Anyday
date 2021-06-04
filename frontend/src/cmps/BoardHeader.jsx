@@ -1,14 +1,11 @@
 import React, { Component } from 'react'
-// import ContentEditable from 'react-contenteditable'
 import { EditableCmp } from './EditableCmp'
 import { ReactComponent as StarSvg } from '../assets/imgs/svg/star.svg'
-
 import { socketService } from '../services/socketService'
-
 
 export class BoardHeader extends Component {
 
-    onUpdateBoard = async ({ target }) => {
+    onUpdateTitle = async ({ target }) => {
         const { name } = target.dataset
         const value = target.innerText
         const newBoard = { ...this.props.board }
@@ -26,7 +23,7 @@ export class BoardHeader extends Component {
                     {/* <div className="full title-container flex align-center"> */}
                     <div className="title-container flex align-center">
 
-                        <EditableCmp className="title" name="title" value={board.title} updateFunc={this.onUpdateBoard} />
+                        <EditableCmp className="title" name="title" value={board.title} updateFunc={this.onUpdateTitle} />
 
                         <StarSvg className="" />
                     </div>
@@ -34,11 +31,11 @@ export class BoardHeader extends Component {
 
                         <button className="btn">Last seen</button>
                         <button className="btn">Invite / 3</button>
-                        <button className="btn" onClick={()=> window.location.hash = `/board/${board._id}/activity_log`}>Activity</button>
+                        <button className="btn" onClick={() => window.location.hash = `/board/${board._id}/activity_log`}>Activity</button>
                     </div>
                 </div>
                 <div className="full subtitle-container">
-                    <EditableCmp className="subtitle" name="subtitle" value={board.subtitle} updateFunc={this.onUpdateBoard} />
+                    <EditableCmp className="subtitle" name="subtitle" value={board.subtitle} updateFunc={this.onUpdateTitle} />
                 </div>
             </div>
         )

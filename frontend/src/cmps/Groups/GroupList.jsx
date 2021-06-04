@@ -55,7 +55,7 @@ export function GroupList({ groups, board, updateBoard, currUser, filterBy }) {
             // })
         }
         // console.log('copyGroups =', copyGroups)
-        console.log('test =', test)
+        // console.log('test =', test)
         return copyGroups
     }
 

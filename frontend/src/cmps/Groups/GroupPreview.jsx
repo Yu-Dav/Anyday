@@ -18,11 +18,9 @@ export function GroupPreview({ group, board, updateBoard, index, currUser }) {
                     ref={dragProvided.innerRef}
                 >
                     <GroupMenu group={group} board={board} updateBoard={updateBoard} />
-                    <i className="fas group-handle" {...dragProvided.dragHandleProps}></i>
+                    {/* <i className="fas group-handle" {...dragProvided.dragHandleProps}></i> */}
                     <div className="group-preview">
-                        <GroupHeader group={group} board={board} updateBoard={updateBoard}>
-                            {/* <GroupMenu group={group} board={board} updateBoard={updateBoard} /> */}
-                            {/* <i className="fas group-handle" {...dragProvided.dragHandleProps}></i> */}
+                        <GroupHeader group={group} board={board} updateBoard={updateBoard} drag={dragProvided.dragHandleProps}>
                         </GroupHeader>
                         <Droppable droppableId={group.id} type="task">
                             {provided => (
