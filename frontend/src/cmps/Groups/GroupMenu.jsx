@@ -39,6 +39,17 @@ export class GroupMenu extends Component {
         const groupId = this.props.group.id
         const groupIdx = newBoard.groups.findIndex(group => group.id === groupId)
         const { color } = ev.target.dataset
+        const newActivity = {
+            id: utilService.makeId(),
+            type: 'Group color changed',
+            createdAt: Date.now(),
+            byMember: userService.getLoggedinUser(),
+            task: null,
+            group: {
+                id: groupId,
+                title: this.props.group.title
+            }
+        }
         newBoard.groups[groupIdx].style.bgColor = color
         await this.props.updateBoard(newBoard)
         await socketService.emit('board updated', newBoard._id);

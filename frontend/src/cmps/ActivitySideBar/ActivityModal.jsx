@@ -7,6 +7,7 @@ import { utilService } from '../../services/utilService.js'
 import { connect } from 'react-redux'
 import { loadBoard, updateBoard } from '../../store/actions/boardActions'
 import { ReactComponent as CrossSvg } from '../../assets/imgs/svg/cross.svg'
+import { ClickAwayListener } from '@material-ui/core'
 
 export class _ActivityModal extends Component {
 
@@ -64,6 +65,9 @@ export class _ActivityModal extends Component {
       //  await socketService.emit('comment was added', newBoard._id);
     }
 
+    handleClickAway = () => {
+        window.location.hash = `/board/${this.props.currBoard._id}`
+    }
 
     render() {
         const { content, task, currUser } = this.state
@@ -71,13 +75,15 @@ export class _ActivityModal extends Component {
         const {groupId} = this.props.match.params
         if (!currBoard) return <div className="activity-modal">loading</div>
         return (
+         
+            <ClickAwayListener onClickAway={this.handleClickAway}>
             <div className="activity-modal">
                 <div onClick={() => window.location.hash = `/board/${currBoard._id}`}><CrossSvg className="cross-svg"/></div>
                 {!task && <div className="board-title">{currBoard.title}</div>}
                 {task &&
                     <div className="flex">
                         <EditableCmp value={task.title} updateFunc={this.onUpdateTaskTitle} />
-                        <span>avatars</span>
+                        {/* <span>avatars</span> */} 
                     </div>}
                 <div className="sections flex">
                     <div className={content === 'updates' ? 'active': ''} onClick={() => { this.setState({ ...this.state, content: 'updates' }) }}>Updates</div>
@@ -88,6 +94,8 @@ export class _ActivityModal extends Component {
                     {content === 'activity' && <ActivityLog task={task} board={currBoard} />}
                 </div>
             </div>
+            </ClickAwayListener>
+        
         )
     }
 }

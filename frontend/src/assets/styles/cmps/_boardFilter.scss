@@ -9,9 +9,9 @@
     z-index: 1;
     font-size: rem(13px);
     border-radius: 4px;
-    max-height: 152px;
+    max-height: 160px;
     overflow-y: scroll;
-    z-index: 3;
+    z-index: 5;
 
     h1 {
         font-size: rem(16px);
@@ -24,7 +24,13 @@
             // font-weight: 600;
         }
         .filter-group-item {
+            margin: 5px 0;
+            font-family: roboto-light;
             &:hover {
+                background-color: #e6e9ef;
+                border-radius: 4px;
+            }
+            &.selected {
                 background-color: #e6e9ef;
                 border-radius: 4px;
             }

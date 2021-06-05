@@ -9,6 +9,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import { socketService } from '../../services/socketService'
 import Avatar from '@material-ui/core/Avatar';
 import AvatarGroup from '@material-ui/lab/AvatarGroup';
+import { utilService } from '../../services/utilService';
+import { userService } from '../../services/userService';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -19,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export function CellMember({ task, board, updateBoard }) {
+export function CellMember({ task, group, board, updateBoard }) {
     const taskMembers = task.members
     const boardMembers = board.members
     const classes = useStyles();
@@ -48,8 +50,23 @@ export function CellMember({ task, board, updateBoard }) {
     const onAddMember = async (ev) => {
         const memberId = ev.target.dataset.id
         const member = getMemberById(memberId)
-        taskMembers.unshift(member)
+        const newActivity = {
+            id: utilService.makeId(),
+            type: 'Member added',
+            createdAt: Date.now(),
+            byMember: userService.getLoggedinUser(),
+            task: {
+                id: task.id,
+                title: task.title
+            },
+            group: {
+                id: group.id,
+                title: group.title
+            }
+        }
         const newBoard = { ...board }
+        taskMembers.unshift(member)
+        newBoard.activities.unshift(newActivity)
         await updateBoard(newBoard)
         await socketService.emit('board updated', newBoard._id);
         handleClose(ev)
@@ -59,8 +76,25 @@ export function CellMember({ task, board, updateBoard }) {
         const memberId = ev.target.dataset.id
         // console.log('member id',memberId);
         const memberIdx = taskMembers.findIndex(member => member._id === memberId)
+        const member = taskMembers.find(member => member._id === memberId)
         taskMembers.splice(memberIdx, 1)
         const newBoard = { ...board }
+        const newActivity = {
+            id: utilService.makeId(),
+            type: 'Member removed',
+            createdAt: Date.now(),
+            byMember: userService.getLoggedinUser(),
+            task: {
+                id: task.id,
+                title: task.title,
+                changedItem: member.username
+            },
+            group: {
+                id: group.id,
+                title: group.title
+            }
+        }
+        newBoard.activities.unshift(newActivity)
         await updateBoard(newBoard)
         await socketService.emit('board updated', newBoard._id);
         handleClose(ev)
@@ -89,7 +123,7 @@ export function CellMember({ task, board, updateBoard }) {
             onClick={handleToggle} className="cell asignee">
             <div className="flex align-center justify-center">
                {taskMembers && <AvatarGroup max={4}>
-                {taskMembers.map(member =>  <Avatar alt={member.username} src={member.imgUrl} style={{ width:'30px', height:'30px' }}/>
+                {taskMembers.map(member =>  <Avatar key={member._id} alt={member.username} src={member.imgUrl} style={{ width:'30px', height:'30px' }}/>
                 // return <span key={member._id}>{member.username.charAt(0)} </span>
                 // return <span className="cell-member-avatar flex align-center" key={member._id}>
                 //     <img src={member.imgUrl} alt="Member Avatar" />

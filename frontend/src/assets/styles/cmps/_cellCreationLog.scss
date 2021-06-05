@@ -1,8 +1,11 @@
 .task-row {
     .creation-log {
         flex-basis: 100px;
-        min-width: 100px;
+        min-width : 100px;
+
+        p {
+            gap: 7px;
+        }
     }
 
 }
-

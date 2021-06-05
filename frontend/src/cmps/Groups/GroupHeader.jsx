@@ -13,7 +13,7 @@ export class GroupHeader extends Component {
         const groupIdx = newBoard.groups.findIndex(group => group.id === groupId);
         const newActivity = {
             id: utilService.makeId(),
-            type: 'Title updated',
+            type: 'Group title changed',
             createdAt: Date.now(),
             byMember: userService.getLoggedinUser(),
             task: null,
