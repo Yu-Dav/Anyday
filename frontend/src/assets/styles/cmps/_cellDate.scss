@@ -2,6 +2,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-basis: 180px;
+    min-width: 180px;
     .date-pick-wrapper{
         display: flex;
     }
@@ -10,7 +12,8 @@
     .no-date,
     .set-dates,
     .num-of-days {
-        width: 155px;
+        width: 152px;
+        font-size: 13px;
         // amend width side so it won't use pixels.
         display: inline-block;
         padding: 1.25px 5.25px;
@@ -22,12 +25,12 @@
         margin: 0 auto;
     }
     .date-picker-container {
-        width: 155px;
+        width: 152px;
         height: 25px;
         border-radius: 11px;
         position: relative;
         .date-picker-cmp {
-            width: 155px;
+            width: 152px;
 
             background-color: transparent;
             position: absolute;
@@ -43,7 +46,7 @@
         }
 
         .grey-bck {
-            width: 155px;
+            width: 152px;
             height: 25px;
             background-color: $grey;
             border-radius: 11px;

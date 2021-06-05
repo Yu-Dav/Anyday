@@ -1,8 +1,12 @@
+// .groups-container.wrapper {
+//     overflow-x: scroll;
+// }
+
 .group-container {
     margin-bottom: 30px;
     background-color: #ffffffe6;
     min-width: 380px;
-
+    // overflow-x: scroll;
     .group-modal {
         animation: fade-in 0.5s ease-in-out both;
         z-index: 1;
@@ -16,7 +20,7 @@
     }
 
     .group-preview {
-        width: 100%;
+        // width: 100%;
     }
     button {
         height: fit-content;
@@ -35,11 +39,12 @@
     .group-modal-choose {
         cursor: pointer;
         width: 17px;
-        margin-top: 7px;
+        margin-top: 6px;
     }
     .group-handle {
         opacity: 0;
         margin: 3.5px 2px 0 5px;
+        font-size: rem(18px);
         &:hover {
             opacity: 1;
         }

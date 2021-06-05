@@ -3,13 +3,13 @@ const socketService = require('../../services/socket.service');
 const logger = require('../../services/logger.service');
 
 async function getBoard(req, res) {
-    const filterBy = req.query || {}
+    const filterBy = req.query || {};
     try {
         const board = await boardService.getById(req.params.id, filterBy);
         // const filteredBoard = {};
         // filteredBoard.groups.filter(group => {
         //     group.tasks.filter(task => {
-                
+
         //     })
         // })
         res.send(board);
@@ -64,10 +64,9 @@ async function updateBoard(req, res) {
 
 async function addBoard(req, res) {
     try {
-        const board = req.body;
-        const { user } = req.body
-        console.log(`file: board.controller.js || line 69 || user`, user)
-        const addedBoard = await boardService.add(board);
+        const currUser = req.body;
+        console.log(`file: board.controller.js || line 68 || currUser`, currUser)
+        const addedBoard = await boardService.add(currUser);
         res.send(addedBoard);
     } catch (err) {
         logger.error('Failed to add new board', err);

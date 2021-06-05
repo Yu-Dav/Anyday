@@ -1,5 +1,6 @@
 import { storageService } from './asyncStorageService';
 import { httpService } from './httpService';
+import { userService } from './userService';
 
 export const boardService = {
     query,
@@ -27,11 +28,12 @@ async function remove(boardId) {
 
 async function update(board) {
     // we might need to change this to the id of the board
-    // return storageService.put('board', board); 
+    // return storageService.put('board', board);
     return httpService.put(`board/${board._id}`, board);
 }
 
-async function add(board) {
+async function add() {
     // return storageService.post('board', board);
-    return httpService.post(`board`, board);
+    const currUser = userService.getLoggedinUser();
+    return httpService.post(`board`, currUser);
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 6/4/2021, 10:51:07 AM - DEBUG - Session ID is | AvJRqPVR4NFGpfImRQxCDAdhH7Bl9Re5 
 6/4/2021, 10:57:06 AM - INFO - Server is running on port: 3030 
 6/4/2021, 10:57:09 AM - ERROR - cannot find boards | ReferenceError: criteria is not defined (sid: i_zE0ReF49rihc6Hmtb1m50ssqORVPZD)
@@ -241,3 +242,7 @@
 6/5/2021, 9:02:45 AM - ERROR - cannot find boards | ReferenceError: criteria is not defined (sid: i_zE0ReF49rihc6Hmtb1m50ssqORVPZD)
 6/5/2021, 9:02:45 AM - ERROR - Failed to get boards | ReferenceError: criteria is not defined (sid: i_zE0ReF49rihc6Hmtb1m50ssqORVPZD)
 6/5/2021, 9:02:45 AM - DEBUG - Session ID is | ENNRWX_4NlvLh-tfT-rlT9ZB79Ci3pD5 
+=======
+6/5/2021, 10:24:24 AM - DEBUG - Session ID is | yZd10YCaI8hdNf-167IvElX29YkMUmSM 
+>>>>>>> 06566767f40a68313f7072821022dd4798561a9d
+6/5/2021, 11:20:15 AM - INFO - Server is running on port: 3030 

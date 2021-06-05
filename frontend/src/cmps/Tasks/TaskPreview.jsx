@@ -10,6 +10,7 @@ import { Draggable } from 'react-beautiful-dnd';
 
 
 export function TaskPreview({ task, group, board, updateBoard, index }) {
+    const cellTypes = ['title', 'member', 'tag', 'status', 'priority', 'creationLog', 'timeline', 'map']
     return (
         <React.Fragment>
             <Draggable draggableId={task.id} index={index} type="task">
@@ -18,8 +19,10 @@ export function TaskPreview({ task, group, board, updateBoard, index }) {
                         {...provided.draggableProps}
                         {...provided.dragHandleProps}
                         ref={provided.innerRef}>
-                        <div className="group-color" style={{ backgroundColor: group.style.bgColor }}></div>
-                        <CellTitle task={task} group={group} board={board} updateBoard={updateBoard} />
+                        <span className="left-container flex">
+                            <div className="group-color" style={{ backgroundColor: group.style.bgColor }}></div>
+                            <CellTitle task={task} group={group} board={board} updateBoard={updateBoard} />
+                        </span>
                         <CellMember task={task} group={group} board={board} updateBoard={updateBoard} />
                         <CellTag task={task} group={group} board={board} updateBoard={updateBoard} />
                         <CellStatus task={task} group={group} board={board} updateBoard={updateBoard} />

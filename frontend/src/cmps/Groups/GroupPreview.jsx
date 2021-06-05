@@ -9,6 +9,7 @@ import { Droppable, Draggable } from 'react-beautiful-dnd';
 import { GroupMenu } from './GroupMenu'
 
 export function GroupPreview({ group, board, updateBoard, index, currUser }) {
+    
     const { tasks } = group
     return (
         <Draggable draggableId={group.id} index={index} type="group">
@@ -18,11 +19,9 @@ export function GroupPreview({ group, board, updateBoard, index, currUser }) {
                     ref={dragProvided.innerRef}
                 >
                     <GroupMenu group={group} board={board} updateBoard={updateBoard} />
-                    <i className="fas group-handle" {...dragProvided.dragHandleProps}></i>
+                    {/* <i className="fas group-handle" {...dragProvided.dragHandleProps}></i> */}
                     <div className="group-preview">
-                        <GroupHeader group={group} board={board} updateBoard={updateBoard}>
-                            {/* <GroupMenu group={group} board={board} updateBoard={updateBoard} /> */}
-                            {/* <i className="fas group-handle" {...dragProvided.dragHandleProps}></i> */}
+                        <GroupHeader group={group} board={board} updateBoard={updateBoard} drag={dragProvided.dragHandleProps}>
                         </GroupHeader>
                         <Droppable droppableId={group.id} type="task">
                             {provided => (

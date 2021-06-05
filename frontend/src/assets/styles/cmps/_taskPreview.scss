@@ -19,30 +19,6 @@
         margin: 0 10px;
     }
 
-    .label {
-        cursor: pointer;
-
-        color: #ffffff;
-        .modal-container {
-            top: -98px;
-        }
-        .floating-label-select {
-            animation: fade-in 0.3s ease-in-out both;
-            z-index: 1;
-            position: absolute;
-            color: #ffffff;
-            width: 133px;
-            background-color: #fff;
-            box-shadow: 0 8px 16px 0px #00000052;
-            border-radius: 4px;
-            padding: 16px 11px;
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            text-align: center; //helper?
-            right: -11px;
-        }
-    }
     .cell-tag-container {
         width: 142px;
         position: relative;
@@ -66,52 +42,6 @@
     }
 }
 
-// .title {
-    // flex: 1;
-    // min-width: 380px;
-    // text-align: start;
-    // text-overflow: ellipsis;
-    // overflow: hidden;
-    // white-space: nowrap;
-    // cursor: pointer;
-
-    // .remove-task {
-    //     opacity: 0;
-    //     cursor: pointer;
-    //     transition: ease-in-out 0.2s;
-    //     height: fit-content;
-    //     &:hover {
-    //         opacity: 1;
-    //     }
-    // }
-
-    // .fa-trash::after {
-    //     content: "\f1f8";
-    // }
-// }
-
-// .asignee {
-//     // flex-basis: 142px;
-//     // text-align: center;
-//     // cursor: pointer;
-// // 
-// }
-
-// .tags {
-//     // flex-basis: 142px;
-//     // cursor: pointer;
-// }
-
-// .label {
-//     flex-basis: 113px;
-
-//     // cursor: pointer;
-// }
-
-// .creation-log {
-//     flex-basis: 142px;
-// }
-
 .timeline {
     // flex-basis: 200px;
     cursor: pointer;
@@ -134,7 +64,7 @@
     height: 20px;
     background: #fff;
     top: 92px;
-    left: 35px;
+    left: 60px;
 }
 
 .triangle-with-shadow:hover,
@@ -167,12 +97,10 @@
     content: '\f075';
     font-size: 24px;
     color: #c5c7d0;
-    &:hover{
+    &:hover {
         color: #0085ff;
     }
-    
 }
-
 
 a:hover {
     text-decoration: none;
@@ -180,4 +108,17 @@ a:hover {
 
 a {
     color: #0085ff;
+}
+
+// /* MEDIUM */
+@media (max-width: 1500px) {
+    .groups-container.wrapper {
+        overflow-x: scroll;
+        min-height: 100vh;
+        // width: 1400px;
+    }
+    // .board-contrainer {
+    //     overflow-x: scroll;
+    //     overflow: auto;
+    // }
 }
