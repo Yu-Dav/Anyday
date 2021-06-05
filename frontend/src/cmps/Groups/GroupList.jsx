@@ -4,63 +4,11 @@ import { Droppable } from 'react-beautiful-dnd';
 import { connect } from 'react-redux'
 // import { onSetFilter } from '../store/actions/boardActions'
 
-
-export function GroupList({ groups, board, updateBoard, currUser, filterBy }) {
+export function GroupList({ groups, board, updateBoard, currUser}) {
         // window.addEventListener('scroll', this.handleScroll);
 
-    onSetFilter(filterBy)
 
-    function onSetFilter(filterBy) {
-        if (!groups) return
-        let copyGroups = [...groups]
-        const test = []
-        if (filterBy.status) {
-            copyGroups.filter(group => {
-                group.tasks.some(task => {
-                    filterBy.status.forEach(status => {
-                        if (task.status.title === status) {
-                            test.push(task.id)
-                        }
-                    })
-
-                })
-            })
-
-
-            // var otherMembers = copyGroups.filter(groups => {
-            //     let filteredArr = test.filter(filteredTask => {
-            //         return filteredTask === boardMem._id
-            //     });
-            //     if (filteredArr.length > 0) return false
-            //     return true
-            //`return !length;` will  return false if length > 0
-            // });
-
-
-
-            // return otherMembers
-
-
-
-            // copyGroups.filter(group => {
-            //     group.tasks.filter(task => {
-            //         return test.some(test => {
-            //             test === task.id
-            //         })
-
-            //     })
-            // })
-            // .map(group => {
-            //     let newGroup = Object.assign({}, group); // copies element
-            //     return newGroup.tasks.filter(task => task.title === '1');
-            // })
-        }
-        // console.log('copyGroups =', copyGroups)
-        // console.log('test =', test)
-        return copyGroups
-    }
-
-    if (!groups || !groups.length) return <p>Loading...</p>
+    if (!groups || !groups.length) return <p>No tasks for display...</p>
     return (
         // the group will be a filtered group
         < div className="groups-container wrapper">
@@ -72,10 +20,3 @@ export function GroupList({ groups, board, updateBoard, currUser, filterBy }) {
 }
 
 
-// function mapStateToProps(state) {
-//     return {
-//         filterBy: state.boardModule.filterBy,
-//     }
-// }
-
-// export const GroupList = connect(mapStateToProps, null)( _GroupList)

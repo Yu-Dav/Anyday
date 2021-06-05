@@ -68,7 +68,7 @@ function getLoggedinUser() {
             _id: utilService.makeId(),
             fullname: 'Guest',
             username: 'Guest',
-            imgUrl: '../assets/imgs/db.png', // change this to a better photo
+            imgUrl: 'https://i.ibb.co/wS9zKnQ/guest-02.png'
         };
     }
     return user;

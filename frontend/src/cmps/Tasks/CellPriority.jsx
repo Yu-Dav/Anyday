@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { ClickAwayListener } from '@material-ui/core'
 import { socketService } from '../../services/socketService'
+import { utilService } from '../../services/utilService'
+import { userService } from '../../services/userService'
 
 export class CellPriority extends Component {
     state = {
@@ -11,6 +13,22 @@ export class CellPriority extends Component {
         this.props.task.priority = selectedPriority
         const newBoard = { ...this.props.board }
         // newBoard.priority = selectedPriority
+        const newActivity = {
+            id: utilService.makeId(),
+            type: 'Priority changed',
+            createdAt: Date.now(),
+            byMember: userService.getLoggedinUser(),
+            task: {
+                id: this.props.task.id,
+                title: this.props.task.title,
+                changedItem: selectedPriority.title
+            },
+            group: {
+                id: this.props.group.id,
+                title: this.props.group.title
+            }
+        }
+        newBoard.activities.unshift(newActivity)
         await this.props.updateBoard(newBoard) 
         await socketService.emit('board updated', newBoard._id);
     }

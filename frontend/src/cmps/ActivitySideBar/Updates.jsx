@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { userService } from '../../services/userService'
 import { utilService } from '../../services/utilService'
+import { Upload } from '../Upload'
 import { UpdatePreview } from './UpdatePreview'
 
 export class Updates extends Component {
@@ -107,9 +108,10 @@ export class Updates extends Component {
                 }
                 {task &&
                     <React.Fragment>
-                        <form onSubmit={this.onAddComment}>
-                            <input type="text" name="comment" placeholder="Write an update" value={comment} onChange={this.handleChange} />
+                        <form onSubmit={this.onAddComment} className="flex">
+                            <input type="text" name="comment" placeholder="Write an update..." value={comment} onChange={this.handleChange} />
                             <button>Update</button>
+                            <Upload/>
                         </form>
                         <div className="updates-list">
                             {task.comments.map(comment => <UpdatePreview key={comment.id} comment={comment} onUpdateComment={this.onUpdateComment} onRemoveComment={this.onRemoveComment} />)}

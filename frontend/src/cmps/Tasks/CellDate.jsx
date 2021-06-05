@@ -4,6 +4,9 @@ import "react-datepicker/dist/react-datepicker.css";
 import { registerLocale, setDefaultLocale } from "react-datepicker";
 import uk from 'date-fns/locale/en-GB';
 import { socketService } from '../../services/socketService'
+import { utilService } from '../../services/utilService';
+import { userService } from '../../services/userService';
+
 registerLocale('uk', uk)
 
 export class CellDate extends Component {
@@ -20,17 +23,34 @@ export class CellDate extends Component {
         })
     }
     setDateRange = (update) => {
-        if (!update[1]) return this.setState({ startDate: update[0], endDate: null })
+        if (!update[1]) return this.setState({ startDate: update[0], endDate: null, isSettingDate: true  })
         return this.setState({ ...this.state, endDate: update[1] },
             this.onSetTimeline)
     }
     onSetTimeline = async () => {
         const { startDate, endDate } = this.state
+        console.log(startDate, endDate);
         const timeline = [startDate, endDate]
         this.props.task.timeline = timeline
         const newBoard = { ...this.props.board }
+        const newActivity = {
+            id: utilService.makeId(),
+            type: 'Timeline changed',
+            createdAt: Date.now(),
+            byMember: userService.getLoggedinUser(),
+            task: {
+                id: this.props.task.id,
+                title: this.props.task.title,
+                changedItem: `${`${startDate}`.substring(4, 10)}-${`${endDate}`.substring(4, 10)}`
+            },
+            group: {
+                id: this.props.group.id,
+                title: this.props.group.title
+            }
+        }
+        newBoard.activities.unshift(newActivity)
         await socketService.emit('board updated', newBoard._id);
-        this.setState({ ...this.state, isDateSet: true, isSettingDate: false }, () => this.props.updateBoard(newBoard))
+        this.setState({ ...this.state, isDateSet: true, isSettingDate: false}, () => this.props.updateBoard(newBoard))
     }
     onEnter = () => {
         this.setState({ ...this.state, isHover: true })
@@ -43,6 +63,7 @@ export class CellDate extends Component {
     }
     getNumOfDays = () => {
         const { startDate, endDate } = this.state
+        if(!startDate || !endDate) return
         const timestampStart = startDate.getTime()
         const timestampEnd = endDate.getTime()
         const totalDays = (timestampEnd - timestampStart) / 1000 / 60 / 60 / 24
@@ -65,8 +86,8 @@ export class CellDate extends Component {
         const { isHover, isDateSet, isSettingDate } = this.state
         return (
             <div className="timeline" onMouseEnter={this.onEnter} onMouseLeave={this.onLeave}>
-                {isDateSet && isHover &&
-                    <span className="num-of-days">{this.getNumOfDays()} d</span>
+                {isDateSet && !isSettingDate && isHover &&
+                    <span className="num-of-days" onClick={() => this.setState({ ...this.state, isHover: false })}>{this.getNumOfDays()} d</span>
                 }
 
                 {isDateSet && !isHover &&
@@ -100,6 +121,17 @@ export class CellDate extends Component {
                         this.setDateRange(update);
                     }}
                 />}
+
+                {/* {isDateSet && isSettingDate && <DatePicker
+                    className="date-picker-cmp"
+                    locale="uk"
+                    selectsRange={true}
+                    startDate={this.state.startDate}
+                    endDate={this.state.endDate}
+                    onChange={(update) => {
+                        this.setDateRange(update);
+                    }}
+                />} */}
 
                 {!isDateSet && isHover && !isSettingDate &&
                     <span className="set-dates" onClick={this.onSetDates}>Set Dates</span>

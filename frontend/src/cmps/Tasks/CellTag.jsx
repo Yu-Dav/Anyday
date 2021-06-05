@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import { TagAddNew } from './TagAddNew'
 import { ClickAwayListener } from '@material-ui/core'
 import { socketService } from '../../services/socketService'
-
+import { utilService } from '../../services/utilService'
+import { userService } from '../../services/userService'
 
 
 export class CellTag extends Component {
@@ -10,17 +11,17 @@ export class CellTag extends Component {
         isExpanded: false
     }
 
-    handleUpdate = async({ target }) => {
+    handleUpdate = async ({ target }) => {
         const selectedTag = this.getTagById(target.dataset.tag)
         this.props.task.tags.unshift(selectedTag)
         const newBoard = { ...this.props.board }
         await this.props.updateBoard(newBoard) //updating the entire board
         await socketService.emit('board updated', newBoard._id);
-        this.setState({...this.state, isExpanded:false})
+        this.setState({ ...this.state, isExpanded: false })
 
     }
 
-    update =  async (event, tag) => {
+    update = async (event, tag) => {
         const availableTags = this.props.board.tags
         const { task, board, updateBoard } = this.props
         //CREATE
@@ -34,8 +35,24 @@ export class CellTag extends Component {
         }
         task.tags.unshift(selectedTag)
         const newBoard = { ...board }
+        const newActivity = {
+            id: utilService.makeId(),
+            type: 'Tag added',
+            createdAt: Date.now(),
+            byMember: userService.getLoggedinUser(),
+            task: {
+                id: task.id,
+                title: task.title,
+                changedItem: selectedTag.title
+            },
+            group: {
+                id: this.props.group.id,
+                title: this.props.group.title
+            }
+        }
+        newBoard.activities.unshift(newActivity)
         await updateBoard(newBoard)
-        this.setState({...this.state, isExpanded:false})
+        this.setState({ ...this.state, isExpanded: false })
     }
 
     addNewTag = (tag) => {
@@ -51,7 +68,7 @@ export class CellTag extends Component {
         this.setState({ ...this.state, isExpanded: true })
     }
 
-    
+
     handleClickAway = (ev) => {
         ev.stopPropagation()
         this.setState({ ...this.state, isExpanded: false })
@@ -64,8 +81,25 @@ export class CellTag extends Component {
         ev.stopPropagation()
         const tagId = ev.target.dataset.tag
         const tagIdx = tags.findIndex(tag => tag.id === tagId)
+        const tag = tags.find(tag => tag.id === tagId)
         tags.splice(tagIdx, 1)
         const newBoard = { ...this.props.board }
+        const newActivity = {
+            id: utilService.makeId(),
+            type: 'Tag removed',
+            createdAt: Date.now(),
+            byMember: userService.getLoggedinUser(),
+            task: {
+                id: this.props.task.id,
+                title: this.props.task.title,
+                changedItem: tag.title
+            },
+            group: {
+                id: this.props.group.id,
+                title: this.props.group.title
+            }
+        }
+        newBoard.activities.unshift(newActivity)
         await this.props.updateBoard(newBoard)
     }
 
@@ -91,8 +125,8 @@ export class CellTag extends Component {
         const { isExpanded } = this.state
         const { board } = this.props
         return (
-            <ClickAwayListener  onClickAway={(ev)=>this.handleClickAway(ev)}>
-                <div className="cell-tag-container flex justify-center"  onClick={this.onOpenSelector} >
+            <ClickAwayListener onClickAway={(ev) => this.handleClickAway(ev)}>
+                <div className="cell-tag-container flex justify-center" onClick={this.onOpenSelector} >
                     {tags.map((tag) => {
                         return <span className="tag-container" style={{ color: tag.color }} key={tag.id}>{tag.title} </span>
                     })}

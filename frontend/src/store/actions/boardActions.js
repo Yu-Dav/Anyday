@@ -17,6 +17,7 @@ export function loadBoard(boardId, filterBy) {
         try {
             const board = await boardService.getById(boardId, filterBy);
             dispatch({ type: 'SET_BOARD', board });
+            return board
         } catch (err) {
             console.log('BoardActions: err in loadBoard', err);
         }
