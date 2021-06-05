@@ -214,7 +214,7 @@ class _BoardApp extends Component {
     }
     render() {
         const { currBoard, filterBy } = this.props
-        const { currUser } = this.state
+        const { currUser, filteredBoard } = this.state
         if (!currBoard) return <div>loading</div>
         return (
             <div className="board-app-container flex" onScroll={this.onScroll} ref="board-app-container">
