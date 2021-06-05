@@ -9,6 +9,7 @@ import { Droppable, Draggable } from 'react-beautiful-dnd';
 import { GroupMenu } from './GroupMenu'
 
 export function GroupPreview({ group, board, updateBoard, index, currUser }) {
+    
     const { tasks } = group
     return (
         <Draggable draggableId={group.id} index={index} type="group">
