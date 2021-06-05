@@ -18,6 +18,10 @@ export const routes = [
     path: '/signup',
     component: SignUp
   },
+  // {
+  //   path: '/board/:boardId/map',
+  //   component: BoardApp 
+  // },
   {
     path: '/board/:boardId/:groupId?/:taskId?',
     component: BoardApp
@@ -26,9 +30,6 @@ export const routes = [
     path: '/board/:boardId/activity_log',
     component: BoardApp 
   },
-  {
-    path: '/board/:boardId/map',
-    component: BoardApp 
-  }
+ 
 
 ];

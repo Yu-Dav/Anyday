@@ -1,16 +1,7 @@
-@keyframes slide-left {
-    0% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-    }
 
-    100% {
-        -webkit-transform: translateX(-100%);
-        transform: translateX(-50%);
-    }
-}
 
 .activity-modal {
+    animation: fade-in-right 0.3s ease-in-out both;
     overflow-y: scroll;
     padding: 20px;
     height: 100%;

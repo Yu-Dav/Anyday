@@ -50,7 +50,7 @@ panMap = (loc) => {
 
 render() {
     return (
-        <div className="map-container">
+        <div className="map-container container">
             {/* <SearchBox/> */}
             <div className="btn-location-container">
                 <button onClick={() => this.panMap('MILANO')}>Milano</button>
@@ -66,8 +66,10 @@ render() {
                 }}
                 center={this.state.pos}
                 style={{
-                    maxWidth: '550px',
-                    height: '550px',
+                    // position: 'absolute',
+                    // bottom:'-214px',
+                    maxWidth: '1903px',
+                    height: '750px',
                     margin: '0 auto'
                 }}
             >
@@ -85,3 +87,5 @@ render() {
 export const GoogleMap = GoogleApiWrapper({
     apiKey: ('AIzaSyD-Sbj-DvVI1Rf0_mNW0BVF0_9EIzpsPUs')
 })(_MapContainer)
+// AIzaSyAUSc1O5i0XVinJmXD7929Ux1jhjs2NzMw
+//AIzaSyD-Sbj-DvVI1Rf0_mNW0BVF0_9EIzpsPUs

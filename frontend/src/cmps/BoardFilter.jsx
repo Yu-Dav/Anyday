@@ -34,7 +34,7 @@ export class BoardFilter extends Component {
             else newFilter[field] = [...newFilter[field], item]
         }
         console.log(this.props);
-        this.setState({ filterBy: newFilter, isSelected:{...this.state.isSelected, [field]: !this.state.isSelected.filed}  }, () => {
+        this.setState({ filterBy: newFilter }, () => {
             console.log('filter by', this.state.filterBy);
             this.props.setFilter({ ...this.state.filterBy })})
     }
