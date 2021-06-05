@@ -26,8 +26,8 @@ export class BoardHeader extends Component {
                         <EditableCmp className="title" name="title" value={board.title} updateFunc={this.onUpdateTitle} />
 
                         <StarSvg className="star-fav" />
-                        {/* <button className="btn" onClick={()=> window.location.hash = `/board/${board._id}/map`}>Map</button> */}
-                        {/* <LocationSearchInput/> */}
+                        {/* <button className="btn" onClick={()=> window.location.hash = `/board/${board._id}/map`}>Map</button>
+                        <LocationSearchInput/> */}
                     </div>
                     <div className="board-header-btns">
 

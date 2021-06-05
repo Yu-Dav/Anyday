@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom';
-import { Route } from 'react-router-dom'
+// import { Route } from 'react-router-dom'
+import { HashRouter as Router, Route, Switch } from 'react-router-dom'
 import { utilService } from '../services/utilService'
 import { socketService } from '../services/socketService'
 import { userService } from '../services/userService'
@@ -16,13 +17,15 @@ import { loadBoard, updateBoard, addBoard } from '../store/actions/boardActions'
 import { GroupList } from '../cmps/groups/GroupList'
 import { ActivityModal } from '../cmps/ActivitySideBar/ActivityModal';
 import { GoogleMap } from '../cmps/Map.jsx'
+import { LocationSearchInput } from '../cmps/tasks/CellLocation'
 // import { MenuListComposition } from '../cmps/MenuCmp'
 // import { ChipCmp } from '../cmps/ChipCmp';
 
 class _BoardApp extends Component {
     state = {
         currUser: null,
-        filteredBoard: this.props.currBoard
+        filteredBoard: this.props.currBoard,
+        isMap: false,
     }
     appRef = React.createRef();
 
@@ -214,42 +217,63 @@ class _BoardApp extends Component {
     onScroll = (ev) => {
         console.log('ev =', ev)
     }
+    onChangeView = (ev) => {
+        console.log('ev.target', ev.target);
+        this.setState({ ...this.state, isMap: !this.state.isMap })
+    }
+
     render() {
         const { currBoard, filterBy } = this.props
         const { currUser, filteredBoard } = this.state
+        console.log('params', this.props.match.params)
         if (!currBoard) return <div>loading</div>
         return (
             <div className="board-app-container flex" onScroll={this.onScroll} ref="board-app-container">
                 <SidebarApp />
                 <SidebarNav onAddNewBoard={this.onAddNewBoard} />
+
                 <div className="container board-container">
                     <BoardHeader board={filteredBoard} updateBoard={this.props.updateBoard} />
-                    <BoardCtrlPanel board={this.props.currBoard} addNewGroup={this.addNewGroup} setFilter={this.setFilter} loadBoard={this.props.loadBoard} />
-                    <DragDropContext onDragEnd={this.onDragEnd}>
-                        <Droppable droppableId="all-groups" type="group">
-                            {provided => (
-                                <div
-                                    ref={provided.innerRef}
-                                    {...provided.droppableProps} >
+                    <BoardCtrlPanel board={this.props.currBoard} onChangeView={this.onChangeView} addNewGroup={this.addNewGroup} setFilter={this.setFilter} loadBoard={this.props.loadBoard} />
+                    {/* <button className="btn" onClick={() => window.location.hash = `/board/${currBoard._id}/map`}>Map</button> */}
+                    {/* <LocationSearchInput /> */}
+                    <button className="btn-location" onClick={() => this.setState({ ...this.state, isMap: !this.state.isMap })}>Map</button>
+                    {this.state.isMap && <GoogleMap className="container" />}
 
-                                    <GroupList
-                                        board={filteredBoard} groups={filteredBoard.groups} key={currBoard._id}
-                                        updateBoard={this.props.updateBoard} currUser={currUser} />
-                                    {provided.placeholder}
-                                </div>
-                            )}
-                        </Droppable>
-                    </DragDropContext>
-                    <Route path={`${this.props.match.path}/:groupId/:taskId`} render={(props) => {
-                        return <ActivityModal {...props} />
-                    }} />
-                    <Route path={`${this.props.match.path}/activity_log`} render={(props) => {
-                        return <ActivityModal {...props} />
-                    }} />
-                    <Route path={`${this.props.match.path}/map`} render={(props) => {
-                        return <GoogleMap />
-                    }} />
+                    <LocationSearchInput />
+
+                    {!this.state.isMap &&
+                        <DragDropContext onDragEnd={this.onDragEnd}>
+                            <Droppable droppableId="all-groups" type="group">
+                                {provided => (
+                                    <div
+                                        ref={provided.innerRef}
+                                        {...provided.droppableProps} >
+
+                                        <GroupList
+                                            board={filteredBoard} groups={filteredBoard.groups} key={currBoard._id}
+                                            updateBoard={this.props.updateBoard} currUser={currUser} />
+                                        {provided.placeholder}
+                                    </div>
+                                )}
+                            </Droppable>
+                        </DragDropContext>
+                    }
+
+                    <Switch>
+                        {/* <Route path={`${this.props.match.path}/map`} component={GoogleMap} /> */}
+                        {/* <Route path={`${this.props.match.path}/map`} render={(props) => {
+                            return <GoogleMap {...props} />
+                        }} /> */}
+                        <Route path={`${this.props.match.path}/:groupId/:taskId`} render={(props) => {
+                            return <ActivityModal {...props} />
+                        }} />
+                        <Route path={`${this.props.match.path}/activity_log`} render={(props) => {
+                            return <ActivityModal {...props} />
+                        }} />
+                    </Switch>
                 </div>
+
             </div>
         )
     }
