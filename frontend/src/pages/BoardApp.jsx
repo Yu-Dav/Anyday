@@ -14,6 +14,7 @@ import { BoardCtrlPanel } from '../cmps/BoardCtrlPanel'
 import { loadBoard, updateBoard, addBoard } from '../store/actions/boardActions'
 import { GroupList } from '../cmps/groups/GroupList'
 import { ActivityModal } from '../cmps/ActivitySideBar/ActivityModal';
+import {GoogleMap} from '../cmps/Map.jsx'
 // import { MenuListComposition } from '../cmps/MenuCmp'
 // import { ChipCmp } from '../cmps/ChipCmp';
 
@@ -111,20 +112,6 @@ class _BoardApp extends Component {
         socketService.emit('board updated', copyGroup._id);
     }
     onSetFilter = (filterBy) => {
-<<<<<<< HEAD
-        // const { currBoard } = this.props;
-        // console.log('filterBy', filterBy)
-        //     let filteredBoard = { ...currBoard }
-        //     if (filterBy.status){
-        //         filterdBoard= filteredBoard.filter((group)=>{
-        //             return group.tasks.filter((task)=>{
-        //                 return task.status.title === filterBy.status
-        //             })
-        //         })
-        //     }
-        //     return filteredBoard
-    
-=======
         const { currBoard } = this.props;
         console.log('filterBy', filterBy)
         let filteredBoard = { ...currBoard }
@@ -137,7 +124,6 @@ class _BoardApp extends Component {
         }
         return filteredBoard
 
->>>>>>> 5b797075ea20024de826d889ad0340e0c8a54b62
         // this.props.loadBoard(filterBy)
     }
     onAddNewBoard = () => {
@@ -178,6 +164,9 @@ class _BoardApp extends Component {
                     }} />
                     <Route path={`${this.props.match.path}/activity_log`} render={(props) => {
                         return <ActivityModal {...props} />
+                    }} />
+                    <Route path={`${this.props.match.path}/map`} render={(props) => {
+                        return <GoogleMap/>
                     }} />
                 </div>
             </div>

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 // import ContentEditable from 'react-contenteditable'
 import { EditableCmp } from './EditableCmp'
 import { ReactComponent as StarSvg } from '../assets/imgs/svg/star.svg'
-
+import {LocationSearchInput} from './tasks/CellLocation'
 import { socketService } from '../services/socketService'
 
 
@@ -29,6 +29,8 @@ export class BoardHeader extends Component {
                         <EditableCmp className="title" name="title" value={board.title} updateFunc={this.onUpdateBoard} />
 
                         <StarSvg className="star-fav" />
+                        <button className="btn" onClick={()=> window.location.hash = `/board/${board._id}/map`}>Map</button>
+                        <LocationSearchInput/>
                     </div>
                     <div className="board-header-btns">
 

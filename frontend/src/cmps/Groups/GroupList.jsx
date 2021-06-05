@@ -61,13 +61,9 @@ export function GroupList({ groups, board, updateBoard, currUser, filterBy }) {
 
     if (!groups || !groups.length) return <p>Loading...</p>
     return (
-<<<<<<< HEAD
         // the group will be a filtered group
         < div className="groups-container wrapper">
 
-=======
-        < div className="groups-container">
->>>>>>> 5b797075ea20024de826d889ad0340e0c8a54b62
             {groups.map((group, index) => <GroupPreview board={board} key={group.id} group={group}
                 updateBoard={updateBoard} index={index} currUser={currUser} />)}
         </div>
