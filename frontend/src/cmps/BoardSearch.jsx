@@ -4,14 +4,15 @@ import { Input } from '@material-ui/core'
 export class BoardSearch extends Component {
     state = {
         txt: '',
-        inProp: true
+        // inProp: true
     }
     handleChange = (ev) => {
         const field = ev.target.name
         const value = ev.target.value
         this.setState({ ...this.state, [field]: value }, () => {
-            this.props.onSetFilter(this.state)
+            this.props.setFilter(this.state)
         })
+        // this.setState({ txt:'' })
     }
     render() {
         const { txt } = this.state

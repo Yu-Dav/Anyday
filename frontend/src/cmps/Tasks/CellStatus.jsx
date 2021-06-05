@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { ClickAwayListener } from '@material-ui/core'
 import { socketService } from '../../services/socketService'
-
+import { userService } from '../../services/userService'
+import { utilService } from '../../services/utilService'
 
 export class CellStatus extends Component {
     state = {
@@ -12,6 +13,22 @@ export class CellStatus extends Component {
         const newStatus = this.getStatusById(target.dataset.label)
         this.props.task.status = newStatus
         const newBoard = { ...this.props.board }
+        const newActivity = {
+            id: utilService.makeId(),
+            type: 'Status changed',
+            createdAt: Date.now(),
+            byMember: userService.getLoggedinUser(),
+            task: {
+                id: this.props.task.id,
+                title: this.props.task.title,
+                changedItem: newStatus.title
+            },
+            group: {
+                id: this.props.group.id,
+                title: this.props.group.title
+            }
+        }
+        newBoard.activities.unshift(newActivity)
         await this.props.updateBoard(newBoard)
         await socketService.emit('board updated', newBoard._id);
     }

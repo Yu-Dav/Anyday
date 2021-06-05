@@ -47,7 +47,7 @@ export class CellTitle extends Component {
         const updatedTask = { ...this.props.task, title: value }
         const newActivity = {
             id: utilService.makeId(),
-            type: 'Title updated',
+            type: 'Task title changed',
             createdAt: Date.now(),
             byMember: userService.getLoggedinUser(),
             task: {

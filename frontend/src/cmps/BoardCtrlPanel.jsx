@@ -29,14 +29,14 @@ export class BoardCtrlPanel extends Component {
 
                 <button onClick={this.onSearchClicked} className="btn-search flex align-center "> <SearchIcon></SearchIcon>Search</button>
                 {isSearching &&
-                    <BoardSearch onSetFilter={this.props.onSetFilter} />
+                    <BoardSearch setFilter={this.props.setFilter} />
                 }
 
                 <ClickAwayListener onClickAway={this.handleFilterClickAway}>
                     <div>
                         <button onClick={this.onFilterClicked} className="btn-filter flex align-center"><FilterSvg /> <p>Filter</p></button>
                         {isFiltering &&
-                            <BoardFilter board={this.props.board} loadBoard={this.props.loadBoard}></BoardFilter>
+                            <BoardFilter board={this.props.board} loadBoard={this.props.loadBoard} setFilter={this.props.setFilter}></BoardFilter>
                         }
                     </div>
                 </ClickAwayListener>
