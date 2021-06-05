@@ -40,3 +40,11 @@
         margin-inline-end: 15px;
     }
 }
+
+@media (max-width: $normal-breakpoint) {
+    .board-filter {
+        left: 0px;
+        .filter-groups {
+        }
+    }
+}

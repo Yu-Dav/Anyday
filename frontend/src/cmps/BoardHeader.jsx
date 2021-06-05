@@ -20,15 +20,14 @@ export class BoardHeader extends Component {
         return (
 
             <div className="board-header">
-                <div className="flex space-between">
-                    {/* <div className="full title-container flex align-center"> */}
+                <div className="header-top flex space-between">
                     <div className="title-container flex align-center">
 
                         <EditableCmp className="title" name="title" value={board.title} updateFunc={this.onUpdateTitle} />
 
                         <StarSvg className="star-fav" />
-                        <button className="btn" onClick={()=> window.location.hash = `/board/${board._id}/map`}>Map</button>
-                        <LocationSearchInput/>
+                        {/* <button className="btn" onClick={()=> window.location.hash = `/board/${board._id}/map`}>Map</button> */}
+                        {/* <LocationSearchInput/> */}
                     </div>
                     <div className="board-header-btns">
 

@@ -16,6 +16,8 @@
         // color: #e6e9ef;
         padding: 10px 0px 10px 40px;
         cursor: pointer;
+        font-family: roboto-light, helvetica, sans-serif;
+
         &:focus + button {
             opacity: 1;
         }
@@ -33,5 +35,7 @@
         border-radius: 4px;
         border: none;
         transition: 0.3s ease;
+        font-family: roboto-light, helvetica, sans-serif;
+
     }
 }

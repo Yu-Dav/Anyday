@@ -51,7 +51,7 @@ class _BoardApp extends Component {
         if (prevId !== currId) {
             console.log('different id loading new board =')
             const board = await this.props.loadBoard(currId)
-            console.log ('board in cdu in boardApp',board._id, board.title)
+            console.log('board in cdu in boardApp', board._id, board.title)
             this.setState({ ...this.state, filteredBoard: board })
         }
     }
@@ -87,6 +87,7 @@ class _BoardApp extends Component {
         newBoard.activities.unshift(newActivity)
         await this.props.updateBoard(newBoard)
         socketService.emit('board updated', newBoard._id)
+        this.setState({ ...this.state, filteredBoard: newBoard })
     }
 
     getColor() {

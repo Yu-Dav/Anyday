@@ -149,7 +149,7 @@ function _buildCriteria(filterBy) {
 
 function _createNewBoard(currUser) {
     return {
-        title: 'Your new Board meow',
+        title: 'Your new Board',
         subtitle: 'Your new subtitle',
         description: 'Your new description',
         isFavorite: false,

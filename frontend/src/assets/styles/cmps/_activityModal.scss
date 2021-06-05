@@ -161,3 +161,17 @@
         }
     }
 }
+
+@media (max-width: $mobile-breakpoint) {
+    .activity-modal {
+        max-width: 100wv;
+        width: 100%;
+        // display: none;
+        .cross-svg {
+            float: right;
+        }
+        .board-title {
+            margin-top: 40px;
+        }
+    }
+}

@@ -88,3 +88,9 @@ i {
 .fixed{
     position: fixed;
 }
+
+@media (max-width: $mobile-breakpoint) {
+    .container {
+        padding: 0 10px;
+    }
+}

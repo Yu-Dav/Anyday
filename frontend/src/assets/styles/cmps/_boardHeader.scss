@@ -1,11 +1,10 @@
 .board-header {
     color: #323338;
-
     margin: 20px 0 10px 0;
     padding-bottom: 10px;
     border-bottom: 1px solid $lightGrey;
-
-    .star-fav{
+    
+    .star-fav {
         stroke: #c3c5ca;
     }
 
@@ -24,12 +23,14 @@
             font-size: rem(14px);
             width: rem(500px);
             height: rem(25px);
+            font-family: roboto-light, helvetica, sans-serif;
         }
     }
     .btn {
         color: inherit;
         height: 32px;
         font-size: rem(14px);
+        font-family: roboto-light, helvetica, sans-serif;
         padding: 4px 8px;
         font-weight: 400;
         line-height: 22px;
@@ -47,5 +48,29 @@
     svg {
         height: 24px;
         width: 24px;
+    }
+}
+
+@media (max-width: $mobile-breakpoint) {
+    .board-header {
+        // display: none;
+        .header-top {
+            flex-direction: column-reverse; // so 3 btns will come before Board title
+            // align-self: flex-end;
+        }
+        .board-header-btns {
+            display: flex;
+            justify-content: flex-end;
+            margin-inline-end: 10px;
+        }
+        .subtitle-container {
+            .subtitle {
+                // display: none;
+                // font-size: rem(14px);
+                width: 100%;
+                // height: rem(25px);
+                // font-family: roboto-light, helvetica, sans-serif;
+            }
+        }
     }
 }

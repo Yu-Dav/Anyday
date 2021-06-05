@@ -1,6 +1,6 @@
 import { Component } from 'react'
 import { ReactComponent as FilterSvg } from '../assets/imgs/svg/filter.svg'
-import { ReactComponent as SortSvg } from '../assets/imgs/svg/sort.svg'
+// import { ReactComponent as SortSvg } from '../assets/imgs/svg/sort.svg'
 import { BoardSearch } from '../cmps/BoardSearch'
 import { BoardFilter } from '../cmps/BoardFilter'
 import ClickAwayListener from '@material-ui/core/ClickAwayListener';
@@ -42,8 +42,7 @@ export class BoardCtrlPanel extends Component {
                 </ClickAwayListener>
 
 
-                <button className="btn-sort flex align-center"><SortSvg /> <p>Sort</p></button>
-                {/* sort all groups by name */}
+                {/* <button className="btn-sort flex align-center"><SortSvg /> <p>Sort</p></button> */}
             </div>
         )
 
