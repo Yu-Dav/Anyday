@@ -9,6 +9,7 @@
         margin-inline-end: 10px;
     }
     .btn-add-group,
+    .view,
     .btn-filter,
     .btn-sort,
     .btn-search {
@@ -29,6 +30,7 @@
         }
     }
     .btn-filter,
+    .view,
     .btn-sort,
     .btn-search {
         background-color: transparent;
@@ -50,6 +52,10 @@
     .btn-filter > *:not(:last-child) {
         margin-inline-end: 5px;
     }
+    .view >* {
+        margin-inline-end: 5px;
+    }
+    
     svg {
         width: 16px;
         height: 16px;
@@ -60,4 +66,14 @@
     .fa-board-search::before {
         content: '\f002';
     }
+
+    .active{
+        border-bottom: 2px solid #0085ff;
+    }
+    .right-ctrl>*{
+        border-bottom-left-radius: unset;
+        border-bottom-right-radius: unset;
+    }
+
+
 }
