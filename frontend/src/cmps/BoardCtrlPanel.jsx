@@ -5,6 +5,8 @@ import { BoardSearch } from '../cmps/BoardSearch'
 import { BoardFilter } from '../cmps/BoardFilter'
 import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 import SearchIcon from '@material-ui/icons/Search';
+import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
+import TableChartOutlinedIcon from '@material-ui/icons/TableChartOutlined';
 
 export class BoardCtrlPanel extends Component {
     state = {
@@ -44,6 +46,11 @@ export class BoardCtrlPanel extends Component {
 
                 <button className="btn-sort flex align-center"><SortSvg /> <p>Sort</p></button>
                 {/* sort all groups by name */}
+
+                <div className="right-ctrl flex">
+                    <button onClick={this.props.onChangeView} className="btn-map flex align-center"><LocationOnOutlinedIcon />Map</button>
+                    <button onClick={this.props.onChangeView} className="btn-board flex align-center"><TableChartOutlinedIcon />Board</button>
+                </div>
             </div>
         )
 

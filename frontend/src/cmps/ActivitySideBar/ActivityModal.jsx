@@ -23,12 +23,9 @@ export class _ActivityModal extends Component {
         imgUrl: '../assets/imgs/db.png', // change this to a better photo
     }
     async componentDidMount() {
-        console.log(1);
         const boardId = '60b7e87419a5e8e764d835fe'
         const currUser = userService.getLoggedinUser() ?? this.guest
-        console.log(`file: ActivityModal.jsx || line 19 || currUser`, currUser)
         await this.props.loadBoard(boardId)
-        console.log(this.props.currBoard);
         const taskId = this.props.match.params.taskId
         if (!taskId) return
         this.loadTask(taskId)
@@ -53,11 +50,9 @@ export class _ActivityModal extends Component {
         const { currBoard } = this.props
         const newBoard = { ...currBoard }
         const taskId = this.props.match.params.taskId
-        console.log(groupId, newBoard);
         if (!groupId) groupId = this.props.match.params.groupId
         const groupIdx = newBoard.groups.findIndex(group => group.id === groupId)
         //group is undefind
-        console.log(groupIdx);
         const group = newBoard.groups.find(group => group.id === groupId)
         const taskIdx = group.tasks.findIndex(task => task.id === taskId)
         newBoard.groups[groupIdx].tasks.splice(taskIdx, 1, updatedTask)
