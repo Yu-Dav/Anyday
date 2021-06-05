@@ -5,7 +5,7 @@ import TimeAgo from 'react-timeago'
 export function ActivityLog({ task, board }) {
 
     function getTaskActivities() {
-        return board.activities.filter(activity => activity.task.id === task.id)
+        return board.activities.filter(activity => activity.task && (activity.task.id === task.id))
     }
 
     return (
