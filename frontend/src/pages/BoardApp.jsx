@@ -15,7 +15,7 @@ import { BoardCtrlPanel } from '../cmps/BoardCtrlPanel'
 import { loadBoard, updateBoard, addBoard } from '../store/actions/boardActions'
 import { GroupList } from '../cmps/groups/GroupList'
 import { ActivityModal } from '../cmps/ActivitySideBar/ActivityModal';
-import {GoogleMap} from '../cmps/Map.jsx'
+import { GoogleMap } from '../cmps/Map.jsx'
 // import { MenuListComposition } from '../cmps/MenuCmp'
 // import { ChipCmp } from '../cmps/ChipCmp';
 
@@ -26,9 +26,9 @@ class _BoardApp extends Component {
     }
     appRef = React.createRef();
 
-    componentDidMount() {
+    async componentDidMount() {
         const boardId = this.props.match.params.boardId
-        this.props.loadBoard(boardId)
+        const board = await this.props.loadBoard(boardId)
         userService.getUsers()
         const user = userService.getLoggedinUser()
         socketService.setup()
@@ -36,22 +36,23 @@ class _BoardApp extends Component {
             this.props.loadBoard(boardId)
         })
         socketService.emit('join board', boardId)
-        this.setState({ ...this.state, currUser: user })
+        this.setState({ ...this.state, currUser: user, filteredBoard: board })
     }
     componentWillUnmount() {
-        // socketService.off('chat addMsg', this.addMsg)
         socketService.off('board loaded')
         socketService.terminate()
     }
-    componentDidUpdate(prevProps, prevState) {
+    async componentDidUpdate(prevProps, prevState) {
         const prevId = prevProps.match.params.boardId
-        console.log(`file: BoardApp.jsx || line 46 || prevId`, prevId)
+        // console.log(`file: BoardApp.jsx || line 46 || prevId`, prevId)
         const currId = this.props.match.params.boardId
-        console.log(`BoardApp.jsx || line 47 || currId`, currId)
+        // console.log(`BoardApp.jsx || line 47 || currId`, currId)
         if (!prevId) return
         if (prevId !== currId) {
             console.log('different id loading new board =')
-            this.props.loadBoard(currId)
+            const board = await this.props.loadBoard(currId)
+            console.log ('board in cdu in boardApp',board._id, board.title)
+            this.setState({ ...this.state, filteredBoard: board })
         }
     }
 
@@ -109,7 +110,7 @@ class _BoardApp extends Component {
             destinationGroup.tasks.splice(destination.index, 0, task);
         }
         if (type === 'group') {
-            const currBoard  = this.state.filteredBoard;
+            const currBoard = this.state.filteredBoard;
             const sourceGroup = this.state.filteredBoard.groups.find(group => group.id === draggableId);
             currBoard.groups.splice(source.index, 1);
             currBoard.groups.splice(destination.index, 0, sourceGroup)
@@ -221,7 +222,7 @@ class _BoardApp extends Component {
                 <SidebarApp />
                 <SidebarNav onAddNewBoard={this.onAddNewBoard} />
                 <div className="container board-container">
-                    <BoardHeader board={this.props.currBoard} updateBoard={this.props.updateBoard} />
+                    <BoardHeader board={filteredBoard} updateBoard={this.props.updateBoard} />
                     <BoardCtrlPanel board={this.props.currBoard} addNewGroup={this.addNewGroup} setFilter={this.setFilter} loadBoard={this.props.loadBoard} />
                     <DragDropContext onDragEnd={this.onDragEnd}>
                         <Droppable droppableId="all-groups" type="group">
@@ -229,7 +230,7 @@ class _BoardApp extends Component {
                                 <div
                                     ref={provided.innerRef}
                                     {...provided.droppableProps} >
-                                       
+
                                     <GroupList
                                         board={filteredBoard} groups={filteredBoard.groups} key={currBoard._id}
                                         updateBoard={this.props.updateBoard} currUser={currUser} />
@@ -245,7 +246,7 @@ class _BoardApp extends Component {
                         return <ActivityModal {...props} />
                     }} />
                     <Route path={`${this.props.match.path}/map`} render={(props) => {
-                        return <GoogleMap/>
+                        return <GoogleMap />
                     }} />
                 </div>
             </div>

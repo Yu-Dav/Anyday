@@ -26,7 +26,7 @@ export function boardReducer(state = initialState, action) {
                 ),
             };
         case 'UPDATE_BOARD':
-            console.log('action.board in reducer =', action.board)
+            console.log('UPDATE board: in reducer =', action.board)
             return {
                 ...state,
                 boards: state.boards.map((board) =>

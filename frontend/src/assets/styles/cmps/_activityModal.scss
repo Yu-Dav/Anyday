@@ -1,12 +1,12 @@
 @keyframes slide-left {
     0% {
         -webkit-transform: translateX(0);
-        transform        : translateX(0);
+        transform: translateX(0);
     }
 
     100% {
         -webkit-transform: translateX(-100%);
-        transform        : translateX(-50%);
+        transform: translateX(-50%);
     }
 }
 
@@ -20,21 +20,27 @@
     bottom: 0px;
     right: 0px;
     // transform: translateX(100%);
-    z-index         : 5;
-    // max-width: calc(100% - 200px);
-    width           : 550px;
-    // animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s both;
-    // transition: transform 150ms cubic-bezier(0, 0, 0.35, 1);
-
-    &.open {
-        // transform: translateX(100%);
     // transition: transform 150ms cubic-bezier(0, 0, 0.35, 1);
     border-left: 1px solid;
     border-color: #c5c7d0;
     z-index: 5;
     // max-width: calc(100% - 200px);
     width: 550px;
-    box-shadow: 0px 0px 10px 0px #000000a3;
+    box-shadow: 0px 0px 10px 0px;
+
+    &.open {
+        box-shadow: 0px 0px 10px 0px #000000a3;
+    }
+
+    //  // max-width: calc(100% - 200px);
+    //  width           : 550px;
+    //  box-shadow      : 0px 0px 10px 0px;
+    //  // animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s both;
+    //  // transition: transform 150ms cubic-bezier(0, 0, 0.35, 1);
+
+    //  &.open {
+    //      box-shadow  : 0px 0px 10px 0px;
+    //      // transform: translateX(100%);
 
     .board-title {
         font-size: 18px;
@@ -70,8 +76,9 @@
     }
 
     .sections {
-        font-size    : 14px;
-        margin-bottom: 15px;
+        font-size: 14px;
+        // margin-bottom: 15px;
+        // padding-bottom: 3px;
         border-bottom: 1px solid #efefef;
 
         > * {
@@ -132,15 +139,17 @@
             height: 56px;
             padding: 8px 5px;
             border-bottom: 1px solid #c5c7d0;
+
             .time {
                 flex-basis: 80px;
             }
+
             .title {
                 flex: 1;
                 text-overflow: ellipsis;
-                overflow     : hidden;
-                white-space  : nowrap;
-                padding-left : 8px;
+                overflow: hidden;
+                white-space: nowrap;
+                padding-left: 8px;
             }
             .type,
             .group,
@@ -150,5 +159,4 @@
             }
         }
     }
-}
 }
