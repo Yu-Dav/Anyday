@@ -1,6 +1,8 @@
 .board-ops {
+    color: #323338;
     button {
         font-family: inherit;
+        color: inherit;
     }
     margin: 15px 0 15px 0;
     & > *:not(:last-child) {
@@ -37,6 +39,16 @@
         & > *:not(:last-child) {
             margin-inline-end: 10px;
         }
+    }
+    .btn-search svg {
+        width: 20px;
+        height: 20px;
+    }
+    .btn-sort > *:not(:last-child) {
+        // margin-inline-end: 2.5px;
+    }
+    .btn-filter > *:not(:last-child) {
+        margin-inline-end: 5px;
     }
     svg {
         width: 16px;

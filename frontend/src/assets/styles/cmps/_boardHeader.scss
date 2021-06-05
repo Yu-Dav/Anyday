@@ -1,5 +1,6 @@
 .board-header {
-    // height: 100px;
+    color: #323338;
+
     margin: 20px 0 10px 0;
     padding-bottom: 10px;
     border-bottom: 1px solid $lightGrey;
@@ -18,7 +19,6 @@
             font-weight: 600;
         }
     }
-
     .subtitle-container {
         .subtitle {
             font-size: rem(14px);
@@ -26,13 +26,8 @@
             height: rem(25px);
         }
     }
-
-   
-
-    // .board-header-btns {
-
-    // }
     .btn {
+        color: inherit;
         height: 32px;
         font-size: rem(14px);
         padding: 4px 8px;

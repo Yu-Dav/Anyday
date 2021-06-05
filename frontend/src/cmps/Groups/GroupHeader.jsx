@@ -31,7 +31,8 @@ export class GroupHeader extends Component {
         const { group } = this.props
         return (
             <div className="group-header flex">
-                <div className="cell title">
+                <i className="fas group-handle" {...this.props.drag}></i>
+                <div className="cell title" {...this.props.drag}>
                     <EditableCmp name="group-title" value={group.title} updateFunc={this.onUpdateGroupTitle} style={{ color: group.style.bgColor }} />
                 </div>
                 <div className="cell asignee">Members</div>

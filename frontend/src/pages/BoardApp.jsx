@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import ReactDOM from 'react-dom';
 import { Route } from 'react-router-dom'
 import { utilService } from '../services/utilService'
 import { socketService } from '../services/socketService'
@@ -22,11 +23,10 @@ class _BoardApp extends Component {
     state = {
         currUser: null
     }
+    appRef = React.createRef();
 
     componentDidMount() {
         const boardId = this.props.match.params.boardId
-        // const boardId = '60b7e87419a5e8e764d835fe'
-        // const boardId = 'b101'
         this.props.loadBoard(boardId)
         userService.getUsers()
         const user = userService.getLoggedinUser()
@@ -39,15 +39,17 @@ class _BoardApp extends Component {
     }
     componentWillUnmount() {
         // socketService.off('chat addMsg', this.addMsg)
-        // socketService.off('chat onUserTyping')
+        socketService.off('board loaded')
         socketService.terminate()
     }
     componentDidUpdate(prevProps, prevState) {
         const prevId = prevProps.match.params.boardId
+        console.log(`file: BoardApp.jsx || line 46 || prevId`, prevId)
         const currId = this.props.match.params.boardId
-        console.log(`file: BoardApp.jsx || line 47 || currId`, currId)
+        console.log(`BoardApp.jsx || line 47 || currId`, currId)
         if (!prevId) return
         if (prevId !== currId) {
+            console.log('different id loading new board =')
             this.props.loadBoard(currId)
         }
     }
@@ -123,20 +125,20 @@ class _BoardApp extends Component {
             })
         }
         return filteredBoard
-
-        // this.props.loadBoard(filterBy)
     }
     onAddNewBoard = () => {
-        console.log('Adding new board =')
         this.props.addBoard()
 
+    }
+    onScroll = (ev) => {
+        console.log('ev =', ev)
     }
     render() {
         const { currBoard, filterBy } = this.props
         const { currUser } = this.state
         if (!currBoard) return <div>loading</div>
         return (
-            <div className="board-app-container flex">
+            <div className="board-app-container flex" onScroll={this.onScroll} ref="board-app-container">
                 <SidebarApp />
                 <SidebarNav onAddNewBoard={this.onAddNewBoard} />
                 <div className="container board-container">
@@ -146,7 +148,6 @@ class _BoardApp extends Component {
                     <DragDropContext onDragEnd={this.onDragEnd}>
                         <Droppable droppableId="all-groups" type="group">
                             {provided => (
-
                                 <div
                                     ref={provided.innerRef}
                                     {...provided.droppableProps} >
@@ -191,3 +192,31 @@ const mapDispatchToProps = {
 }
 
 export const BoardApp = connect(mapStateToProps, mapDispatchToProps)(_BoardApp)
+
+
+
+// Old DnD 
+// onDragEnd = async (result) => {
+//     const { destination, source, draggableId, type } = result;
+//     if (!destination) return;
+//     if (
+//         destination.droppableId === source.droppableId &&
+//         destination.index === source.index
+//     ) return
+//     if (type === 'task') {
+//         const sourceGroup = this.props.currBoard.groups.find(group => group.id === source.droppableId);
+//         const destinationGroup = this.props.currBoard.groups.find(group => group.id === destination.droppableId);
+//         const task = sourceGroup.tasks.find(task => task.id === draggableId)
+//         sourceGroup.tasks.splice(source.index, 1);
+//         destinationGroup.tasks.splice(destination.index, 0, task);
+//     }
+//     if (type === 'group') {
+//         const { currBoard } = this.props;
+//         const sourceGroup = this.props.currBoard.groups.find(group => group.id === draggableId);
+//         currBoard.groups.splice(source.index, 1);
+//         currBoard.groups.splice(destination.index, 0, sourceGroup)
+//     }
+//     const copyGroup = { ...this.props.currBoard };
+//     await this.props.updateBoard(copyGroup);
+//     socketService.emit('board updated', copyGroup._id);
+// }

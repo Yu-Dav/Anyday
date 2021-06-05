@@ -10,26 +10,26 @@ import logo from '../assets/imgs/favicon/logo-192x192.png'
 import { connect } from 'react-redux'
 import { loadUsers, login, removeUser, signup, logout } from '../store/actions/userActions'
 
-const useStyles = makeStyles((theme) => ({
-    paper: {
-        marginTop: theme.spacing(8),
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center'
-    },
-    avatar: {
-        margin: theme.spacing(1),
-        backgroundColor: theme.palette.secondary.main,
-    },
-    form: {
-        width: '100%', // Fix IE 11 issue.
-        marginTop: theme.spacing(1),
-    },
-    submit: {
-        margin: theme.spacing(3, 0, 2),
-    },
-}));
+// const useStyles = makeStyles((theme) => ({
+//     paper: {
+//         marginTop: theme.spacing(8),
+//         display: 'flex',
+//         flexDirection: 'column',
+//         alignItems: 'center',
+//         justifyContent: 'center'
+//     },
+//     avatar: {
+//         margin: theme.spacing(1),
+//         backgroundColor: theme.palette.secondary.main,
+//     },
+//     form: {
+//         width: '100%', // Fix IE 11 issue.
+//         marginTop: theme.spacing(1),
+//     },
+//     submit: {
+//         margin: theme.spacing(3, 0, 2),
+//     },
+// }));
 
 class _Login extends Component {
     state = {
@@ -62,7 +62,6 @@ class _Login extends Component {
             this.props.login(userCreds)
             this.setState({ loginCred: { username: '', password: '' } }, console.log(this.state))
             const boardId = '60b7e87419a5e8e764d835fe'
-            // const boardId = 'b101'
             window.location.hash = `/board/${boardId}`
         } catch (err) {
             this.setState({ msg: 'Login failed, try again.' })
