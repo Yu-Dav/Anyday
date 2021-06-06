@@ -17,6 +17,7 @@ export function loadBoard(boardId) {
     return async (dispatch) => {
         try {
             const board = await boardService.getById(boardId);
+            console.log(`file: boardActions.js || line 20 || board`, board)
             dispatch({ type: 'SET_BOARD', board });
             return board
         } catch (err) {
@@ -27,7 +28,7 @@ export function loadBoard(boardId) {
 
 export function updateBoard(board) {
     console.log(`file: boardActions.js || line 29 || board`, board)
-    socketService.emit('load board', board._id);
+    // socketService.emit('load board', board._id);
     return async (dispatch) => {
         try {
             const updatedBoard = await boardService.update(board);

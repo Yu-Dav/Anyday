@@ -29,33 +29,38 @@ class _BoardApp extends Component {
     }
 
     async componentDidMount() {
+        socketService.setup()
+        console.log('hello')
         const boardId = this.props.match.params.boardId
         console.log(`file: BoardApp.jsx || line 33 || boardId`, boardId)
+        socketService.emit('join board', boardId)
         const board = await this.props.loadBoard(boardId)
         userService.getUsers()
         const user = userService.getLoggedinUser()
-        socketService.setup()
         socketService.on('board loaded', () => {
             this.props.loadBoard(boardId)
+            console.log('boardId =', boardId)
         })
-        socketService.emit('join board', boardId)
         this.setState({ ...this.state, currUser: user, filteredBoard: board })
     }
     componentWillUnmount() {
-        socketService.off('board loaded')
+
         socketService.terminate()
+        socketService.off('board loaded')
     }
-    async componentDidUpdate(prevProps, prevState) {
+    async componentDidUpdate(prevProps) {
         const prevId = prevProps.match.params.boardId
-        // console.log(`file: BoardApp.jsx || line 46 || prevId`, prevId)
+        console.log(`file: BoardApp.jsx || line 46 || prevId`, prevId)
         const currId = this.props.match.params.boardId
-        // console.log(`BoardApp.jsx || line 47 || currId`, currId)
-        if (!prevId) return
+        console.log(`BoardApp.jsx || line 47 || currId`, currId)
+        // if (!prevId) return
         if (prevId !== currId) {
             console.log('different id loading new board =')
             const board = await this.props.loadBoard(currId)
+            // socketService.emit('join board', currId)
+
             // console.log('board in cdu in boardApp', board._id, board.title)
-            this.setState({ ...this.state, filteredBoard: board })
+            // this.setState({ ...this.state, filteredBoard: board })
         }
     }
 
@@ -237,17 +242,18 @@ class _BoardApp extends Component {
                 <SidebarNav onAddNewBoard={this.onAddNewBoard} />
 
                 <div className="container board-container">
-                    <BoardHeader board={currBoard} updateBoard={this.props.updateBoard} />
-                    {/* <BoardHeader board={filteredBoard} updateBoard={this.props.updateBoard} /> */}
-                    {/* keep line above until issue with boards is fixed  */}
 
-                    <BoardCtrlPanel board={this.props.currBoard} onChangeView={this.onChangeView} addNewGroup={this.addNewGroup} setFilter={this.setFilter} loadBoard={this.props.loadBoard} />
-                    {/* <button className="btn" onClick={() => window.location.hash = `/board/${currBoard._id}/map`}>Map</button> */}
-                    {/* <LocationSearchInput /> */}
-                    {/* <button className="btn-location" onClick={() => this.setState({ ...this.state, isMap: !this.state.isMap })}>Map</button> */}
-                    {this.state.isMap && <GoogleMap className="container" />}
+                    <div>
+                        <BoardHeader board={currBoard} updateBoard={this.props.updateBoard} />
+                        {/* <BoardHeader board={filteredBoard} updateBoard={this.props.updateBoard} /> */}
+                        {/* keep line above until issue with boards is fixed  */}
 
-                    
+                        <BoardCtrlPanel board={this.props.currBoard} onChangeView={this.onChangeView} addNewGroup={this.addNewGroup} setFilter={this.setFilter} loadBoard={this.props.loadBoard} />
+                        {/* <button className="btn" onClick={() => window.location.hash = `/board/${currBoard._id}/map`}>Map</button> */}
+                        {/* <LocationSearchInput /> */}
+                        {/* <button className="btn-location" onClick={() => this.setState({ ...this.state, isMap: !this.state.isMap })}>Map</button> */}
+                        {this.state.isMap && <GoogleMap className="container" />}
+                    </div>
 
                     {!this.state.isMap &&
                         <DragDropContext onDragEnd={this.onDragEnd}>
