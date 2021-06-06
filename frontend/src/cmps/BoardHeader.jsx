@@ -62,7 +62,7 @@ export class BoardHeader extends Component {
                     <div className="board-header-btns">
 
                         <button className="btn">Last seen</button>
-                        <ClickAwayListener>
+                        {/* <ClickAwayListener> */}
                         <button className="btn" onClick={this.onOpenSelector}>Invite / {users.length}</button>
                         {isExpanded && <div className="invite-user">
                             {users.map(user => {
@@ -73,7 +73,7 @@ export class BoardHeader extends Component {
                                 </div>
                             })}
                         </div>}
-                        </ClickAwayListener>
+                        {/* </ClickAwayListener> */}
                         <button className="btn" onClick={() => window.location.hash = `/board/${board._id}/activity_log`}>Activity</button>
                     </div>
                 </div>

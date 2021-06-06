@@ -30,6 +30,9 @@ export const routes = [
     path: '/board/:boardId/activity_log',
     component: BoardApp 
   },
- 
+  {
+    path: '/board/',
+    component: BoardApp 
+  }
 
 ];

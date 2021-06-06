@@ -23,7 +23,7 @@ export class _ActivityModal extends Component {
         imgUrl: '../assets/imgs/db.png', // change this to a better photo
     }
     async componentDidMount() {
-        const boardId = '60b7e87419a5e8e764d835fe'
+        const boardId = this.props.match.params.boardId
         const currUser = userService.getLoggedinUser() ?? this.guest
         await this.props.loadBoard(boardId)
         const taskId = this.props.match.params.taskId

@@ -25,8 +25,8 @@ export function DynamicCell({ type, task, group, board, updateBoard }) {
             return <CellCreationLog task={task} />
         case 'timeline':
             return <CellDate task={task} group={group} board={board} updateBoard={updateBoard} />
-        case 'location': ///optional
-            return
+        // case 'location': ///optional
+        //     return
         default:
             return console.log('not supported yet')
     }

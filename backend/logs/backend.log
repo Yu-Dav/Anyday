@@ -66,3 +66,73 @@
 6/6/2021, 12:42:16 PM - DEBUG - auth.service - login with username: Dafna (sid: wJLM1Z_IOYKnxs0qWsAHCI7L2qui35Of)
 6/6/2021, 12:42:17 PM - DEBUG - Session ID is | fyKSNHu4aCUOLmX14_R1dgZbHxBqAGKz 
 6/6/2021, 1:27:35 PM - INFO - Server is running on port: 3030 
+6/6/2021, 1:35:22 PM - DEBUG - Session ID is | D5wTDEi-NDxkjGMyHoGzVJT4rXfS8qbS 
+6/6/2021, 1:38:43 PM - DEBUG - Session ID is | OjbCTYA5miIDpYAbzpbRUoDYHkkozIxz 
+6/6/2021, 1:39:20 PM - DEBUG - Session ID is | BgHa-K13rycgl_LkR1ETZJj02dqtz-DB 
+6/6/2021, 1:40:21 PM - DEBUG - Session ID is | ljM_GgU4eRGscWxTB420AZ6bS_c6l6db 
+6/6/2021, 2:15:16 PM - DEBUG - Session ID is | lnR2H74ETzkBdmJfaP2RYShkUPtsI1wl 
+6/6/2021, 2:21:11 PM - DEBUG - Session ID is | byyWaNoOGBZO8RJJ6bOV050WcP-DcKKG 
+6/6/2021, 2:24:09 PM - DEBUG - Session ID is | GCZHw5vbSq0jIxd9oVs-kVgwhIUhtWtx 
+6/6/2021, 2:37:39 PM - DEBUG - Session ID is | _4LUAfZv2H7k3FIKrjJD0nvFTtJ1iIKz 
+6/6/2021, 2:37:48 PM - DEBUG - Session ID is | SfodnpJWP1yEM9EiQ5FjiYcvEPZf-ZpF 
+6/6/2021, 2:57:48 PM - DEBUG - Session ID is | U10NurY4EyHxNOX0GLjjwbeY6YXFT66b 
+6/6/2021, 3:20:23 PM - DEBUG - auth.service - signup with username: dafnaba1, fullname: undefined (sid: hg_OlS2s_9fUi4SEqguNwXfzsKf6_kos)
+6/6/2021, 3:20:23 PM - ERROR - Failed to signup fullname, username and password are required! (sid: hg_OlS2s_9fUi4SEqguNwXfzsKf6_kos)
+6/6/2021, 3:22:31 PM - DEBUG - auth.service - signup with username: dafnaba1, fullname: undefined (sid: hg_OlS2s_9fUi4SEqguNwXfzsKf6_kos)
+6/6/2021, 3:22:31 PM - ERROR - Failed to signup fullname, username and password are required! (sid: hg_OlS2s_9fUi4SEqguNwXfzsKf6_kos)
+6/6/2021, 3:23:22 PM - DEBUG - auth.service - signup with username: dafnaba1, fullname: undefined (sid: hg_OlS2s_9fUi4SEqguNwXfzsKf6_kos)
+6/6/2021, 3:23:22 PM - ERROR - Failed to signup fullname, username and password are required! (sid: hg_OlS2s_9fUi4SEqguNwXfzsKf6_kos)
+6/6/2021, 3:26:29 PM - INFO - Server is running on port: 3030 
+6/6/2021, 3:33:28 PM - DEBUG - Session ID is | yymEqYY0ECHmHZFArMwjkvW5siyMuzl8 
+6/6/2021, 3:33:59 PM - DEBUG - Session ID is | mWnKZwaPhbL0GXamO4BNZiW2ANoIkySr 
+6/6/2021, 3:34:28 PM - DEBUG - Session ID is | RIuqJHZmZe7wIx4drsmiKGPcr_3gAh05 
+6/6/2021, 3:38:29 PM - INFO - Server is running on port: 3030 
+6/6/2021, 3:40:26 PM - DEBUG - auth.service - signup with username: dafnaba1, fullname: daf (sid: wN4UAGqRe9vh7fgKEVJh2ixyqS3hCGlp)
+6/6/2021, 3:40:26 PM - ERROR - Failed to signup ReferenceError: hash is not defined (sid: wN4UAGqRe9vh7fgKEVJh2ixyqS3hCGlp)
+6/6/2021, 3:54:13 PM - INFO - Server is running on port: 3030 
+6/6/2021, 3:54:23 PM - DEBUG - auth.service - signup with username: dafnaba1, fullname: daf (sid: qbEFpr9lsYEFEFLIBgK4slvRCmfUBOzX)
+6/6/2021, 3:54:25 PM - DEBUG - auth.route - new account created: {"username":"dafnaba1","password":"1234","fullname":"daf","score":0,"_id":"60bcc5808324cc4ce664afd9"} (sid: qbEFpr9lsYEFEFLIBgK4slvRCmfUBOzX)
+6/6/2021, 3:54:25 PM - DEBUG - auth.service - login with username: dafnaba1 (sid: qbEFpr9lsYEFEFLIBgK4slvRCmfUBOzX)
+6/6/2021, 3:54:42 PM - INFO - Server is running on port: 3030 
+6/6/2021, 3:56:58 PM - INFO - Server is running on port: 3030 
+6/6/2021, 4:01:43 PM - DEBUG - Session ID is | ShcCdcvFPoqr9YcAzwPDvgZsdnENI-x4 
+6/6/2021, 4:04:55 PM - DEBUG - Session ID is | RuV5ElY72Q2aMI8f-Fex5NkKOK8kWAlZ 
+6/6/2021, 4:12:51 PM - DEBUG - Session ID is | ZPj8Q7yI-g9tq2hWEzhfJ0nNijgpyqne 
+6/6/2021, 4:13:02 PM - ERROR - while finding board undefined | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: mKPGpR5TuF4OpBLxuRcAllHyXj_sR8sF)
+6/6/2021, 4:13:02 PM - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: mKPGpR5TuF4OpBLxuRcAllHyXj_sR8sF)
+6/6/2021, 4:13:03 PM - DEBUG - Session ID is | 6mINfP40RKTzUZk9k__Wn4USmH_nA8q1 
+6/6/2021, 4:14:59 PM - ERROR - while finding board undefined | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: mKPGpR5TuF4OpBLxuRcAllHyXj_sR8sF)
+6/6/2021, 4:14:59 PM - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: mKPGpR5TuF4OpBLxuRcAllHyXj_sR8sF)
+6/6/2021, 4:14:59 PM - DEBUG - Session ID is | wfXFSjX3xO3KyVHd172Fvdc9FTwmcES0 
+6/6/2021, 4:15:05 PM - ERROR - while finding board undefined | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: mKPGpR5TuF4OpBLxuRcAllHyXj_sR8sF)
+6/6/2021, 4:15:05 PM - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: mKPGpR5TuF4OpBLxuRcAllHyXj_sR8sF)
+6/6/2021, 4:15:05 PM - DEBUG - Session ID is | j-c731ZeY7CMtu_5Qizr0EJwhLErt9G3 
+6/6/2021, 4:28:06 PM - DEBUG - Session ID is | SfFDiwf2Mu-miDUxZg-2MRIMIT15Q9SP 
+6/6/2021, 4:28:17 PM - ERROR - while finding board undefined | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: mKPGpR5TuF4OpBLxuRcAllHyXj_sR8sF)
+6/6/2021, 4:28:17 PM - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: mKPGpR5TuF4OpBLxuRcAllHyXj_sR8sF)
+6/6/2021, 4:28:28 PM - ERROR - while finding board undefined | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: mKPGpR5TuF4OpBLxuRcAllHyXj_sR8sF)
+6/6/2021, 4:28:28 PM - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: mKPGpR5TuF4OpBLxuRcAllHyXj_sR8sF)
+6/6/2021, 4:33:21 PM - ERROR - while finding board undefined | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: mKPGpR5TuF4OpBLxuRcAllHyXj_sR8sF)
+6/6/2021, 4:33:21 PM - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: mKPGpR5TuF4OpBLxuRcAllHyXj_sR8sF)
+6/6/2021, 4:34:43 PM - INFO - Server is running on port: 3030 
+6/6/2021, 4:37:04 PM - ERROR - while finding board undefined | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: qxRVLddRdAY6ZwLpQjbG8zS_PJm4PP1R)
+6/6/2021, 4:37:04 PM - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: qxRVLddRdAY6ZwLpQjbG8zS_PJm4PP1R)
+6/6/2021, 4:37:16 PM - ERROR - while finding board undefined | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: qxRVLddRdAY6ZwLpQjbG8zS_PJm4PP1R)
+6/6/2021, 4:37:16 PM - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: qxRVLddRdAY6ZwLpQjbG8zS_PJm4PP1R)
+6/6/2021, 4:39:41 PM - INFO - Server is running on port: 3030 
+6/6/2021, 4:40:18 PM - INFO - Server is running on port: 3030 
+6/6/2021, 4:40:36 PM - DEBUG - Session ID is | 1P2N8MhzOB7diOCDpjFEawHb0YdjxnzG 
+6/6/2021, 4:40:54 PM - DEBUG - Session ID is | O-dlhWr-dcKR24OwTQiX-tXpxU1E7noz 
+6/6/2021, 4:41:12 PM - ERROR - while finding board undefined | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: TR4vqpubAB3sQIJ35ULdnwrJocpsqCST)
+6/6/2021, 4:41:12 PM - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: TR4vqpubAB3sQIJ35ULdnwrJocpsqCST)
+6/6/2021, 4:46:16 PM - ERROR - while finding board undefined | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: TR4vqpubAB3sQIJ35ULdnwrJocpsqCST)
+6/6/2021, 4:46:16 PM - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: TR4vqpubAB3sQIJ35ULdnwrJocpsqCST)
+6/6/2021, 4:46:17 PM - DEBUG - Session ID is | ObOzhL2m5iDQNKD_Gh-u7uKNQyijSMWY 
+6/6/2021, 4:46:59 PM - DEBUG - Session ID is | C-gvFERQyHaVpItlDYHtyQS710nefNFC 
+6/6/2021, 4:47:57 PM - DEBUG - Session ID is | 3e-xBHSvYORG0P9C5okshXzs2ntFYaKX 
+6/6/2021, 4:51:19 PM - INFO - Server is running on port: 3030 
+6/6/2021, 4:51:31 PM - DEBUG - Session ID is | 9m7PfaHaJ1OWoDjaJdogekwL9rSTE5PK 
+6/6/2021, 4:53:03 PM - INFO - Server is running on port: 3030 
+6/6/2021, 4:53:35 PM - DEBUG - Session ID is | PIuTbi_RAn1vvfZY8is4c1BgdANwm9WE 
+6/6/2021, 4:56:12 PM - INFO - Server is running on port: 3030 
+6/6/2021, 4:56:17 PM - DEBUG - Session ID is | o2waCEgwzefw5CZDdqjFAhaLsuNRd74S 
