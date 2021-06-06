@@ -246,25 +246,13 @@ class _BoardApp extends Component {
                 <SidebarNav onAddNewBoard={this.onAddNewBoard} />
 
                 <div className="container board-container">
-                    <BoardHeader users={users} board={filteredBoard} updateBoard={this.props.updateBoard} />
-                    <BoardCtrlPanel board={currBoard} onChangeView={this.onChangeView} addNewGroup={this.addNewGroup} setFilter={this.setFilter} loadBoard={this.props.loadBoard} />
+                    <BoardHeader users={users} board={currBoard} updateBoard={this.props.updateBoard} />
+                    <BoardCtrlPanel board={currBoard} onChangeView={this.onChangeView} addNewGroup={this.addNewGroup}
+                     setFilter={this.setFilter} loadBoard={this.props.loadBoard} />
                     {/* <button className="btn" onClick={() => window.location.hash = `/board/${currBoard._id}/map`}>Map</button> */}
                     {/* <LocationSearchInput /> */}
                     {/* <button className="btn-location" onClick={() => this.setState({ ...this.state, isMap: !this.state.isMap })}>Map</button> */}
                     {this.state.isMap && <GoogleMap className="container" />}
-
-                    <div>
-                        <BoardHeader board={currBoard} updateBoard={this.props.updateBoard} />
-                        {/* <BoardHeader board={filteredBoard} updateBoard={this.props.updateBoard} /> */}
-                        {/* keep line above until issue with boards is fixed  */}
-
-                        <BoardCtrlPanel board={this.props.currBoard} onChangeView={this.onChangeView} addNewGroup={this.addNewGroup} setFilter={this.setFilter} loadBoard={this.props.loadBoard} />
-                        {/* <button className="btn" onClick={() => window.location.hash = `/board/${currBoard._id}/map`}>Map</button> */}
-                        {/* <LocationSearchInput /> */}
-                        {/* <button className="btn-location" onClick={() => this.setState({ ...this.state, isMap: !this.state.isMap })}>Map</button> */}
-                        {this.state.isMap && <GoogleMap className="container" />}
-                    </div>
-
                     {!this.state.isMap &&
                         <DragDropContext onDragEnd={this.onDragEnd}>
                             <Droppable droppableId="all-groups" type="group">

@@ -54,30 +54,6 @@
         height: 24px;
         width : 24px;
     }
-}
-
-@media (max-width: $mobile-breakpoint) {
-    .board-header {
-        // display: none;
-        .header-top {
-            flex-direction: column-reverse; // so 3 btns will come before Board title
-            // align-self: flex-end;
-        }
-        .board-header-btns {
-            display: flex;
-            justify-content: flex-end;
-            margin-inline-end: 10px;
-        }
-        .subtitle-container {
-            .subtitle {
-                // display: none;
-                // font-size: rem(14px);
-                width: 100%;
-                // height: rem(25px);
-                // font-family: roboto-light, helvetica, sans-serif;
-            }
-        }
-    }
 
     .invite-user {
         animation: fade-in 0.3s ease-in-out both;
@@ -103,4 +79,30 @@
             margin:auto;
         }
     }
+}
+
+@media (max-width: $mobile-breakpoint) {
+    .board-header {
+        // display: none;
+        .header-top {
+            flex-direction: column-reverse; // so 3 btns will come before Board title
+            // align-self: flex-end;
+        }
+        .board-header-btns {
+            display: flex;
+            justify-content: flex-end;
+            margin-inline-end: 10px;
+        }
+        .subtitle-container {
+            .subtitle {
+                // display: none;
+                // font-size: rem(14px);
+                width: 100%;
+                // height: rem(25px);
+                // font-family: roboto-light, helvetica, sans-serif;
+            }
+        }
+    }
+
+   
 }

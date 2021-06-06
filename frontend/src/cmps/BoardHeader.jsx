@@ -24,18 +24,35 @@ export class BoardHeader extends Component {
 
     onAddUser = async (ev) => {
         ev.stopPropagation()
-        //prob below:
-        console.log('click user:', ev.target);
-        const userId = ev.target.dataset.id
-        console.log('clickes userid:', userId);
+        const newBoard = { ...this.props.board }
+        const userId = ev.currentTarget.dataset.id
         const user = this.getUserById(userId)
-        console.log('got user' , user)
+        newBoard.members.unshift(user)
+        await this.props.updateBoard(newBoard)
+        socketService.emit('board updated', newBoard._id)
+        this.setState({ ...this.state, isExpanded: false })
+    }
 
-
+    
+    getOtherMembers=()=> {
+        const { board, users } = this.props
+        var otherMembers = users.filter(user => {
+            let filteredArr = board.members.filter(boardMem => {
+                return boardMem._id === user._id
+            });
+            if (filteredArr.length > 0) return false
+            return true
+            //`return !length;` will  return false if length > 0
+        });
+        return otherMembers
     }
 
     getUserById = (id) => {
         return this.props.users.find(user => user._id === id)
+    }
+
+    handleClickAway = () => {
+        this.setState({ ...this.state, isExpanded: false })
     }
 
     onOpenSelector = () => {
@@ -44,8 +61,6 @@ export class BoardHeader extends Component {
 
     render = () => {
         const { board, users } = this.props
-        console.log('members in board', board.members)
-        console.log('users in board', users)
         const { isExpanded } = this.state
         return (
 
@@ -59,20 +74,22 @@ export class BoardHeader extends Component {
                         {/* <button className="btn" onClick={()=> window.location.hash = `/board/${board._id}/map`}>Map</button>
                         <LocationSearchInput/> */}
                     </div>
-                    <div className="board-header-btns">
+                    <div className="board-header-btns flex">
 
                         <button className="btn">Last seen</button>
-                        <ClickAwayListener>
-                        <button className="btn" onClick={this.onOpenSelector}>Invite / {users.length}</button>
-                        {isExpanded && <div className="invite-user">
-                            {users.map(user => {
-                                return <div data-id={user._id} onClick={this.onAddUser}
-                                    className="user-select flex" key={user._id}>
-                                    <Avatar alt={user.username} src={user.imgUrl}
-                                        style={{ width: '30px', height: '30px' }} /><span>{user.username}</span>
-                                </div>
-                            })}
-                        </div>}
+                        <ClickAwayListener onClickAway={this.handleClickAway}>
+                        <div className="board-header-btns flex">
+                            <button className="btn" onClick={this.onOpenSelector}>Invite / {users.length}</button>
+                            {isExpanded && <div className="invite-user">
+                                {this.getOtherMembers().map(user => {
+                                    return <div data-id={user._id} onClick={this.onAddUser}
+                                        className="user-select flex" key={user._id}>
+                                        <Avatar alt={user.username} src={user.imgUrl}
+                                            style={{ width: '30px', height: '30px' }} /><span>{user.username}</span>
+                                    </div>
+                                })}
+                            </div>}
+                        </div>
                         </ClickAwayListener>
                         <button className="btn" onClick={() => window.location.hash = `/board/${board._id}/activity_log`}>Activity</button>
                     </div>
@@ -84,11 +101,3 @@ export class BoardHeader extends Component {
         )
     }
 }
-
-// {getOtherMembers().map(member => {
-//     return <MenuItem style={{ display:'flex', gap:'10px', fontSize:'13px' }}
-//      key={member._id} data-id={member._id} onClick={onAddMember}>
-//          <Avatar alt={member.username} src={member.imgUrl} style={{ width:'30px', height:'30px' }}/>
-//          {member.fullname}</MenuItem>
-// }
-// )}
