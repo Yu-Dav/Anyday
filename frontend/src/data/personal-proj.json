@@ -1,0 +1,457 @@
+{
+    "title" : "Personal Projects",
+    "subtitle" : "Your new subtitle",
+    "description" : "Your new description",
+    "isFavorite" : false,
+    "statusLabels" : [ 
+        {
+            "id" : "sl1",
+            "title" : "Done",
+            "color" : "#00c875"
+        }, 
+        {
+            "id" : "sl2",
+            "title" : "Working on it",
+            "color" : "#fdab3d"
+        }, 
+        {
+            "id" : "sl3",
+            "title" : "Stuck",
+            "color" : "#ff642e"
+        }, 
+        {
+            "id" : "sl4",
+            "title" : "On hold",
+            "color" : "#175a63"
+        }, 
+        {
+            "id" : "sl5",
+            "title" : "",
+            "color" : "#c4c4c4"
+        }
+    ],
+    "members" : [ 
+        {
+            "_id" : "60b7755419a5e8e764a2c0dd",
+            "fullname" : "Noga Jacobi",
+            "username" : "Noga",
+            "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+            "mentions" : [ 
+                {
+                    "id" : "m101",
+                    "boardId" : "m101",
+                    "taskId" : "t101"
+                }
+            ]
+        }
+    ],
+    "groups" : [ 
+        {
+            "id" : "eh1JZ",
+            "style" : {
+                "bgColor" : "#784bd1"
+            },
+            "title" : "Your new group",
+            "tasks" : [ 
+                {
+                    "id" : "gzPFj",
+                    "labelIds" : [ 
+                        "101"
+                    ],
+                    "createdAt" : 1622909452880.0,
+                    "timeline" : [ 
+                        null, 
+                        null
+                    ],
+                    "title" : "Your new task",
+                    "tags" : [ 
+                        {
+                            "id" : "t101",
+                            "title" : "#starting",
+                            "color" : "#61bd4f"
+                        }
+                    ],
+                    "status" : {
+                        "id" : "sl2",
+                        "title" : "Working on it",
+                        "color" : "#fdab3d"
+                    },
+                    "priority" : {
+                        "id" : "pl4",
+                        "title" : "",
+                        "color" : "#c4c4c4"
+                    },
+                    "members" : [ 
+                        {
+                            "_id" : "60b7755419a5e8e764a2c0dd",
+                            "fullname" : "Noga Jacobi",
+                            "username" : "Noga",
+                            "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                            "mentions" : [ 
+                                {
+                                    "id" : "m101",
+                                    "boardId" : "m101",
+                                    "taskId" : "t101"
+                                }
+                            ]
+                        }
+                    ],
+                    "comments" : [ 
+                        {
+                            "id" : "ZCMSl",
+                            "txt" : "Added new group",
+                            "createdAt" : 1622909452880.0,
+                            "byMember" : {
+                                "_id" : "60b7755419a5e8e764a2c0dd",
+                                "fullname" : "Noga Jacobi",
+                                "username" : "Noga",
+                                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                                "mentions" : [ 
+                                    {
+                                        "id" : "m101",
+                                        "boardId" : "m101",
+                                        "taskId" : "t101"
+                                    }
+                                ]
+                            },
+                            "taskId" : "g3t101"
+                        }
+                    ],
+                    "byMember" : {
+                        "_id" : "60b7755419a5e8e764a2c0dd",
+                        "fullname" : "Noga Jacobi",
+                        "username" : "Noga",
+                        "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                        "mentions" : [ 
+                            {
+                                "id" : "m101",
+                                "boardId" : "m101",
+                                "taskId" : "t101"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "id" : "VIds7",
+            "style" : {
+                "bgColor" : "#00c875"
+            },
+            "title" : "Your new group",
+            "tasks" : [ 
+                {
+                    "id" : "kMNMS",
+                    "labelIds" : [ 
+                        "101"
+                    ],
+                    "createdAt" : 1622909452880.0,
+                    "timeline" : [ 
+                        null, 
+                        null
+                    ],
+                    "title" : "Your new task",
+                    "tags" : [ 
+                        {
+                            "id" : "t101",
+                            "title" : "#starting",
+                            "color" : "#61bd4f"
+                        }
+                    ],
+                    "status" : {
+                        "id" : "sl2",
+                        "title" : "Working on it",
+                        "color" : "#fdab3d"
+                    },
+                    "priority" : {
+                        "id" : "pl4",
+                        "title" : "",
+                        "color" : "#c4c4c4"
+                    },
+                    "members" : [ 
+                        {
+                            "_id" : "60b7755419a5e8e764a2c0dd",
+                            "fullname" : "Noga Jacobi",
+                            "username" : "Noga",
+                            "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                            "mentions" : [ 
+                                {
+                                    "id" : "m101",
+                                    "boardId" : "m101",
+                                    "taskId" : "t101"
+                                }
+                            ]
+                        }
+                    ],
+                    "comments" : [ 
+                        {
+                            "id" : "JSmI2",
+                            "txt" : "Added new group",
+                            "createdAt" : 1622909452880.0,
+                            "byMember" : {
+                                "_id" : "60b7755419a5e8e764a2c0dd",
+                                "fullname" : "Noga Jacobi",
+                                "username" : "Noga",
+                                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                                "mentions" : [ 
+                                    {
+                                        "id" : "m101",
+                                        "boardId" : "m101",
+                                        "taskId" : "t101"
+                                    }
+                                ]
+                            },
+                            "taskId" : "g3t101"
+                        }
+                    ],
+                    "byMember" : {
+                        "_id" : "60b7755419a5e8e764a2c0dd",
+                        "fullname" : "Noga Jacobi",
+                        "username" : "Noga",
+                        "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                        "mentions" : [ 
+                            {
+                                "id" : "m101",
+                                "boardId" : "m101",
+                                "taskId" : "t101"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "id" : "6OpV9",
+            "style" : {
+                "bgColor" : "#ff642e"
+            },
+            "title" : "Your new group",
+            "tasks" : [ 
+                {
+                    "id" : "IThzk",
+                    "labelIds" : [ 
+                        "101"
+                    ],
+                    "createdAt" : 1622909452880.0,
+                    "timeline" : [ 
+                        null, 
+                        null
+                    ],
+                    "title" : "Your new task",
+                    "tags" : [ 
+                        {
+                            "id" : "t101",
+                            "title" : "#starting",
+                            "color" : "#61bd4f"
+                        }
+                    ],
+                    "status" : {
+                        "id" : "sl2",
+                        "title" : "Working on it",
+                        "color" : "#fdab3d"
+                    },
+                    "priority" : {
+                        "id" : "pl4",
+                        "title" : "",
+                        "color" : "#c4c4c4"
+                    },
+                    "members" : [ 
+                        {
+                            "_id" : "60b7755419a5e8e764a2c0dd",
+                            "fullname" : "Noga Jacobi",
+                            "username" : "Noga",
+                            "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                            "mentions" : [ 
+                                {
+                                    "id" : "m101",
+                                    "boardId" : "m101",
+                                    "taskId" : "t101"
+                                }
+                            ]
+                        }
+                    ],
+                    "comments" : [ 
+                        {
+                            "id" : "OhfHY",
+                            "txt" : "Added new group",
+                            "createdAt" : 1622909452880.0,
+                            "byMember" : {
+                                "_id" : "60b7755419a5e8e764a2c0dd",
+                                "fullname" : "Noga Jacobi",
+                                "username" : "Noga",
+                                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                                "mentions" : [ 
+                                    {
+                                        "id" : "m101",
+                                        "boardId" : "m101",
+                                        "taskId" : "t101"
+                                    }
+                                ]
+                            },
+                            "taskId" : "g3t101"
+                        }
+                    ],
+                    "byMember" : {
+                        "_id" : "60b7755419a5e8e764a2c0dd",
+                        "fullname" : "Noga Jacobi",
+                        "username" : "Noga",
+                        "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                        "mentions" : [ 
+                            {
+                                "id" : "m101",
+                                "boardId" : "m101",
+                                "taskId" : "t101"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "colors" : [ 
+        {
+            "id" : "c101",
+            "name" : "darkGreen",
+            "value" : "#037f4c"
+        }, 
+        {
+            "id" : "c102",
+            "name" : "green",
+            "value" : "#00c875"
+        }, 
+        {
+            "id" : "c103",
+            "name" : "yellowGreen",
+            "value" : "#9cd326"
+        }, 
+        {
+            "id" : "c104",
+            "name" : "beige",
+            "value" : "#cab641"
+        }, 
+        {
+            "id" : "c105",
+            "name" : "yellow",
+            "value" : "#ffcb00"
+        }, 
+        {
+            "id" : "c106",
+            "name" : "darkPurple",
+            "value" : "#784bd1"
+        }, 
+        {
+            "id" : "c107",
+            "name" : "purple",
+            "value" : "#a25ddc"
+        }, 
+        {
+            "id" : "c108",
+            "name" : "turquoise",
+            "value" : "#0086BE"
+        }, 
+        {
+            "id" : "c109",
+            "name" : "blue",
+            "value" : "#579bfc"
+        }, 
+        {
+            "id" : "c110",
+            "name" : "lightBlue",
+            "value" : "#66ccff"
+        }, 
+        {
+            "id" : "c111",
+            "name" : "darkRed",
+            "value" : "#bb3354"
+        }, 
+        {
+            "id" : "c112",
+            "name" : "red",
+            "value" : "#e2445c"
+        }, 
+        {
+            "id" : "c113",
+            "name" : "darkOrange",
+            "value" : "#ff642e"
+        }, 
+        {
+            "id" : "c114",
+            "name" : "orange",
+            "value" : "#fdab3d"
+        }, 
+        {
+            "id" : "c115",
+            "name" : "brown",
+            "value" : "#7f5347"
+        }, 
+        {
+            "id" : "c116",
+            "name" : "grey",
+            "value" : "#c4c4c4"
+        }, 
+        {
+            "id" : "c117",
+            "name" : "darkGrey",
+            "value" : "#808080"
+        }
+    ],
+    "createdBy" : {
+        "_id" : "60b7755419a5e8e764a2c0dd",
+        "fullname" : "Noga Jacobi",
+        "username" : "Noga",
+        "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+        "mentions" : [ 
+            {
+                "id" : "m101",
+                "boardId" : "m101",
+                "taskId" : "t101"
+            }
+        ]
+    },
+    "createdAt" : 1622909452880.0,
+    "priorityLabels" : [ 
+        {
+            "id" : "pl1",
+            "title" : "High",
+            "color" : "#e2445c"
+        }, 
+        {
+            "id" : "pl2",
+            "title" : "Medium",
+            "color" : "#a25ddc"
+        }, 
+        {
+            "id" : "pl3",
+            "title" : "Low",
+            "color" : "#579bfc"
+        }, 
+        {
+            "id" : "pl4",
+            "title" : "",
+            "color" : "#c4c4c4"
+        }
+    ],
+    "activities" : [],
+    "tags" : [ 
+        {
+            "id" : "t101",
+            "title" : "#starting",
+            "color" : "#61bd4f"
+        }, 
+        {
+            "id" : "t102",
+            "title" : "#problem",
+            "color" : "#e2445c"
+        }, 
+        {
+            "id" : "t103",
+            "title" : "#development",
+            "color" : "#579bfc"
+        }, 
+        {
+            "id" : "t104",
+            "title" : "#production",
+            "color" : "#a25ddc"
+        }
+    ]
+}

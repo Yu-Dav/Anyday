@@ -10,6 +10,8 @@ export class BoardHeader extends Component {
         const { name } = target.dataset
         const value = target.innerText
         const newBoard = { ...this.props.board }
+        // console.log(`file: BoardHeader.jsx || line 13 || newBoard`, newBoard)
+        // Getting the correct board above
         newBoard[name] = value
         await this.props.updateBoard(newBoard)
         socketService.emit('board updated', newBoard._id)
