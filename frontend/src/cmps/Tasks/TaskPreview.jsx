@@ -12,9 +12,10 @@ import {DynamicCell} from './DynamicCell'
 
 export function TaskPreview({ task, group, board, updateBoard, index }) {
     // const cellTypes = ['title', 'member', 'tag', 'status', 'priority', 'creationLog', 'timeline', 'location']
-    console.log(board.cellTypes);
+    // console.log(board.cellTypes);
     return (
         <React.Fragment>
+            {/* <i className="fas fa-trash remove-task">xxx</i> */}
             <Draggable draggableId={task.id} index={index} type="task">
                 {provided => (
                     <div className="task-row flex"
