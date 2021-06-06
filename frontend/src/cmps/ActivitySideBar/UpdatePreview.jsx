@@ -24,7 +24,7 @@ export function UpdatePreview({ comment, onUpdateComment, onRemoveComment, imgUr
                 </div>
             </div>
             <EditableCmp value={comment.txt} updateFunc={onUpdateComment} id={comment.id} />
-            {imgUrl && <img src={imgUrl}></img>}
+            {imgUrl && <img className="uplaodImg" src={imgUrl}></img>}
         </div>
     )
 }
