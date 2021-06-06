@@ -35,6 +35,7 @@ class _BoardApp extends Component {
         console.log(`file: BoardApp.jsx || line 33 || boardId`, boardId)
         socketService.emit('join board', boardId)
         const board = await this.props.loadBoard(boardId)
+        console.log('board id did mount', boardId);
         userService.getUsers()
         const user = userService.getLoggedinUser()
         socketService.on('board loaded', () => {

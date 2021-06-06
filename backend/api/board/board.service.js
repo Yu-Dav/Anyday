@@ -31,7 +31,6 @@ async function update(board) {
             _id: ObjectId(board._id),
             title: board.title,
             subtitle: board.subtitle,
-            description: board.description,
             isFavorite: board.isFavorite,
             statusLabels: board.statusLabels,
             members: board.members,

@@ -10,14 +10,15 @@
 
     .title-container {
         .title {
-            font-size: rem(24px);
+            font-size        : rem(24px);
             // width: rem(150px);
-            height: rem(40px);
+            height           : rem(40px);
             margin-inline-end: 15px;
-            color: #323338;
-            font-weight: 600;
+            color            : #323338;
+            font-weight      : 600;
         }
     }
+
     .subtitle-container {
         .subtitle {
             font-size: rem(14px);
@@ -26,6 +27,7 @@
             font-family: roboto-light, helvetica, sans-serif;
         }
     }
+
     .btn {
         color: inherit;
         height: 32px;
@@ -37,17 +39,20 @@
         border: none;
         border-radius: 4px;
         background-color: transparent;
-        transition: 0.3s;
+        transition      : 0.3s;
+
         &:hover {
             background-color: #e6e9ef;
         }
-        & > *:not(:last-child) {
+
+        &>*:not(:last-child) {
             margin-inline-end: 10px;
         }
     }
+
     svg {
         height: 24px;
-        width: 24px;
+        width : 24px;
     }
 }
 

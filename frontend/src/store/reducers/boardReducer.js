@@ -35,6 +35,7 @@ export function boardReducer(state = initialState, action) {
                     board._id === action.board._id ? action.board : board
                 ),
             };
+            // return { ...state,boards: [action.board, ...state.boards.filter(board => action.board._id !== board._id)],  currBoard: {...action.board}}
         case 'LOADING_BOARDS':
             return { ...state, isLoading: action.isLoading, err: null };
 
