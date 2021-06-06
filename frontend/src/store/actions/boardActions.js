@@ -43,6 +43,7 @@ export function addBoard(board) {
     return async (dispatch) => {
         try {
             const addedBoard = await boardService.add(board);
+            console.log('added board', addedBoard);
             dispatch({ type: 'ADD_BOARD', board: addedBoard });
         } catch (err) {
             console.log('BoardActions: err in addBoard', err);

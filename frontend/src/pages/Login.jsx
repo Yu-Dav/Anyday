@@ -4,12 +4,13 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-
+import Link from '@material-ui/core/Link';
 import { Header } from '../cmps/Header.jsx'
+import Grid from '@material-ui/core/Grid';
 import logo from '../assets/imgs/favicon/logo-192x192.png'
 import { connect } from 'react-redux'
 import { loadUsers, login, removeUser, signup, logout } from '../store/actions/userActions'
-
+import Typography from '@material-ui/core/Typography';
 // const useStyles = makeStyles((theme) => ({
 //     paper: {
 //         marginTop: theme.spacing(8),
@@ -71,14 +72,16 @@ class _Login extends Component {
     render() {
         // const classes = useStyles();
         return (
-            <>
+            <div className="login-signup-container">
                 <Header />
                 <Container component="main" maxWidth="xs">
                     <CssBaseline />
                     {/* <div className={classes.paper}> */}
-                    <div className="login-page" >
+                    <div className="login-signup" >
                         <img src={logo} alt="Logo" />
-                        <h1>Sign in</h1>
+                        <Typography component="h1" variant="h5">
+                            Login
+                        </Typography>
                         {/* <form className={classes.form} noValidate> */}
                         <form noValidate onSubmit={this.doLogin}>
                             <TextField
@@ -119,12 +122,18 @@ class _Login extends Component {
                             >
                                 Sign In
                 </Button>
-
+                            <Grid container justify="flex-end">
+                                <Grid item>
+                                    <Link href="#/signup" variant="body2">
+                                        {"Don't have an account? Sign Up"}
+                                    </Link>
+                                </Grid>
+                            </Grid>
                         </form>
                     </div>
 
                 </Container>
-            </>
+                </div>
         );
     }
 }

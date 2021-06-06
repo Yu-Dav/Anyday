@@ -54,6 +54,31 @@
         height: 24px;
         width : 24px;
     }
+
+    .invite-user {
+        animation: fade-in 0.3s ease-in-out both;
+        position: absolute;
+        background-color: white;
+        box-shadow: 0 8px 16px 0px #00000052;
+        z-index: 3;
+        border-radius: 4px;
+        padding: 16px 11px;
+        top: 50px;
+        right: 81px;
+        // & > * :not(:last-child){
+        //     margin-bottom: 5px;
+        // }
+        & .user-select {
+            gap: 10px;
+            font-size: 13px;
+        }
+       .user-select:not(:last-of-type){
+           margin-bottom: 5px;
+       }
+        span{
+            margin:auto;
+        }
+    }
 }
 
 @media (max-width: $mobile-breakpoint) {
@@ -78,4 +103,6 @@
             }
         }
     }
+
+   
 }
