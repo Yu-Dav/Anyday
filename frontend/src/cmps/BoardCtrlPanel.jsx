@@ -28,38 +28,39 @@ export class BoardCtrlPanel extends Component {
         return (
             <div className="board-ops flex space-between ">
                 <div className="left-ctrl flex">
-                {/* filter btn will change the state to open the Boardfilter cmp */}
-                <button className="btn-add-group" onClick={this.props.addNewGroup}>New Group</button>
+                    {/* filter btn will change the state to open the Boardfilter cmp */}
+                    <button className="btn-add-group" onClick={this.props.addNewGroup}>New Group</button>
 
-                <button onClick={this.onSearchClicked} className="btn-search flex align-center "> <SearchIcon></SearchIcon>Search</button>
-                {isSearching &&
-                    <BoardSearch setFilter={this.props.setFilter} />
-                }
+                    <button onClick={this.onSearchClicked} className="btn-search flex align-center "> <SearchIcon></SearchIcon>Search</button>
+                    {isSearching &&
+                        <BoardSearch setFilter={this.props.setFilter} />
+                    }
 
-                <ClickAwayListener onClickAway={this.handleFilterClickAway}>
-                    <div>
-                        <button onClick={this.onFilterClicked} className="btn-filter flex align-center"><FilterSvg /> <p>Filter</p></button>
-                        {isFiltering &&
-                            <BoardFilter board={this.props.board} loadBoard={this.props.loadBoard} setFilter={this.props.setFilter}></BoardFilter>
-                        }
-                    </div>
-                </ClickAwayListener>
+                    <ClickAwayListener onClickAway={this.handleFilterClickAway}>
+                        <div>
+                            <button onClick={this.onFilterClicked} className="btn-filter flex align-center"><FilterSvg /> <p>Filter</p></button>
+                            {isFiltering &&
+                                <BoardFilter board={this.props.board} loadBoard={this.props.loadBoard} setFilter={this.props.setFilter}></BoardFilter>
+                            }
+                        </div>
+                    </ClickAwayListener>
 
 
-                <button className="btn-sort flex align-center"><SortSvg /> <p>Sort</p></button>
-                {/* sort all groups by name */}
+                    <button className="btn-sort flex align-center"><SortSvg /> <p>Sort</p></button>
+                    {/* sort all groups by name */}
                 </div>
                 <div className="right-ctrl flex">
-                <div className={view ==='map-view'? 'view active flex align-center' : 'view flex align-center' } onClick={(ev) => {
+                    <div className={view === 'board-view' ? 'view active flex align-center' : 'view flex align-center'} onClick={(ev) => {
+                        this.props.onChangeView(ev)
+                        this.setState({ ...this.state, view: 'board-view' })
+                    }} ><TableChartOutlinedIcon />Board</div>
+                    <div className={view === 'map-view' ? 'view active flex align-center' : 'view flex align-center'} onClick={(ev) => {
                         this.props.onChangeView(ev)
                         this.setState({ ...this.state, view: 'map-view' })
                     }} >
                         <LocationOnOutlinedIcon />Map
                     </div>
-                    <div className={view ==='board-view'? 'view active flex align-center' : 'view flex align-center' } onClick={(ev) => {
-                        this.props.onChangeView(ev)
-                        this.setState({ ...this.state, view: 'board-view' })
-                    }} ><TableChartOutlinedIcon />Board</div>
+
                 </div>
             </div>
         )

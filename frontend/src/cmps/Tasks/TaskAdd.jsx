@@ -21,12 +21,12 @@ export class TaskAdd extends Component {
             tags: [],
             status: {
                 id: 'sl1',
-                title: '',
+                title: '.',
                 color: '#c4c4c4',
             },
             priority: {
                 id: 'pl1',
-                title: '',
+                title: '.',
                 color: '#c4c4c4',
             },
             members: [],
