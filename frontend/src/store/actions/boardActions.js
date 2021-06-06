@@ -17,9 +17,9 @@ export function loadBoard(boardId) {
     return async (dispatch) => {
         try {
             const board = await boardService.getById(boardId);
-            console.log(`file: boardActions.js || line 20 || board`, board)
+            console.log(`file: boardActions.js || line 20 || board`, board);
             dispatch({ type: 'SET_BOARD', board });
-            return board
+            return board;
         } catch (err) {
             console.log('BoardActions: err in loadBoard', err);
         }
@@ -27,11 +27,11 @@ export function loadBoard(boardId) {
 }
 
 export function updateBoard(board) {
-    console.log(`file: boardActions.js || line 29 || board`, board)
-    // socketService.emit('load board', board._id);
+    // console.log(`file: boardActions.js || line 30 || board`, board);
     return async (dispatch) => {
         try {
             const updatedBoard = await boardService.update(board);
+            socketService.emit('board updated', updatedBoard._id);
             dispatch({ type: 'UPDATE_BOARD', board: updatedBoard });
         } catch (err) {
             console.log('BoardActions: err in updateBoard', err);
@@ -43,6 +43,7 @@ export function addBoard(board) {
     return async (dispatch) => {
         try {
             const addedBoard = await boardService.add(board);
+            console.log('added board', addedBoard);
             dispatch({ type: 'ADD_BOARD', board: addedBoard });
         } catch (err) {
             console.log('BoardActions: err in addBoard', err);
@@ -60,7 +61,6 @@ export function removeBoard(boardId) {
         }
     };
 }
-
 
 export function onSetFilter(filterBy) {
     return async (dispatch) => {

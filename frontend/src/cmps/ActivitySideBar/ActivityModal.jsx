@@ -23,7 +23,7 @@ export class _ActivityModal extends Component {
         imgUrl: '../assets/imgs/db.png', // change this to a better photo
     }
     async componentDidMount() {
-        const boardId = '60b7e87419a5e8e764d835fe'
+        const boardId = this.props.match.params.boardId
         const currUser = userService.getLoggedinUser() ?? this.guest
         await this.props.loadBoard(boardId)
         const taskId = this.props.match.params.taskId
@@ -32,10 +32,11 @@ export class _ActivityModal extends Component {
         this.setState({ ...this.state, currUser })
     }
 
-    loadTask = async (taskId) => {
+    loadTask = (taskId) => {
         const groupId = this.props.match.params.groupId
         const { currBoard } = this.props
-        // console.log('props', this.props);
+        
+        console.log('props', this.props);
         const group = currBoard.groups.find(group => group.id === groupId)
         const task = group.tasks.find(task => task.id === taskId)
         this.setState({ task });

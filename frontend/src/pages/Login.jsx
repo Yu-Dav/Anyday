@@ -10,7 +10,7 @@ import Grid from '@material-ui/core/Grid';
 import logo from '../assets/imgs/favicon/logo-192x192.png'
 import { connect } from 'react-redux'
 import { loadUsers, login, removeUser, signup, logout } from '../store/actions/userActions'
-
+import Typography from '@material-ui/core/Typography';
 // const useStyles = makeStyles((theme) => ({
 //     paper: {
 //         marginTop: theme.spacing(8),
@@ -62,7 +62,7 @@ class _Login extends Component {
         try {
             this.props.login(userCreds)
             this.setState({ loginCred: { username: '', password: '' } }, console.log(this.state))
-            const boardId = '60b7e87419a5e8e764d835fe'
+            const boardId = '60bc9be6fd9a2e731af04c97'
             window.location.hash = `/board/${boardId}`
         } catch (err) {
             this.setState({ msg: 'Login failed, try again.' })
@@ -72,14 +72,16 @@ class _Login extends Component {
     render() {
         // const classes = useStyles();
         return (
-            <>
+            <div className="login-signup-container">
                 <Header />
                 <Container component="main" maxWidth="xs">
                     <CssBaseline />
                     {/* <div className={classes.paper}> */}
-                    <div className="login-page" >
+                    <div className="login-signup" >
                         <img src={logo} alt="Logo" />
-                        <h1>Sign in</h1>
+                        <Typography component="h1" variant="h5">
+                            Login
+                        </Typography>
                         {/* <form className={classes.form} noValidate> */}
                         <form noValidate onSubmit={this.doLogin}>
                             <TextField
@@ -131,7 +133,7 @@ class _Login extends Component {
                     </div>
 
                 </Container>
-            </>
+                </div>
         );
     }
 }

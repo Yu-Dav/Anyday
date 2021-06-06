@@ -31,7 +31,8 @@ async function update(board) {
             _id: ObjectId(board._id),
             title: board.title,
             subtitle: board.subtitle,
-            isFavorite: board.isFavorite,
+            cellTypes: board.cellTypes,
+            // isFavorite: board.isFavorite,
             statusLabels: board.statusLabels,
             members: board.members,
             groups: board.groups,
@@ -58,8 +59,9 @@ async function add(currUser) {
     try {
         const boardToAdd = _createNewBoard(currUser);
         const collection = await dbService.getCollection('board_db');
-        await collection.insertOne(boardToAdd);
-        return boardToAdd;
+        const board = await collection.insertOne(boardToAdd);
+        console.log(board);
+        return board.ops[0];
     } catch (err) {
         logger.error('cannot insert board', err);
         throw err;
@@ -152,7 +154,7 @@ function _createNewBoard(currUser) {
             { id: 'sl4', title: 'On hold', color: '#175a63' },
             { id: 'sl5', title: '', color: '#c4c4c4' },
         ],
-        cellTypes: ['title', 'member', 'tag', 'status', 'priority', 'creationLog', 'timeline', 'location'],
+        cellTypes: ['title', 'member', 'tag', 'status', 'priority', 'creationLog', 'timeline'],
         members: [currUser], /// can't add more members!!
         groups: [
             {
