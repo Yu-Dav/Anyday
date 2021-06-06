@@ -2,8 +2,7 @@
     "title" : "Final Sprint",
     "subtitle" : "Our monday",
     "createdAt" : 1621940297426.0,
-    "description" : "Planning the final sprint and assigning tasks between team members",
-    "isFavorite" : false,
+    "cellTypes": ["title", "member", "tag", "status", "priority", "creationLog", "timeline", "location"],
     "createdBy" : {
         "_id" : "u103",
         "fullname" : "Yuval David",

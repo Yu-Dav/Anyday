@@ -3,6 +3,7 @@ import { ClickAwayListener } from '@material-ui/core'
 import { EditableCmp } from './EditableCmp'
 import { ReactComponent as StarSvg } from '../assets/imgs/svg/star.svg'
 import { socketService } from '../services/socketService'
+import {ReactComponent as User} from '../assets/imgs/avatars/016-user.svg'
 
 import Avatar from '@material-ui/core/Avatar';
 
@@ -75,7 +76,7 @@ export class BoardHeader extends Component {
                         <LocationSearchInput/> */}
                     </div>
                     <div className="board-header-btns flex">
-
+                        {/* <User/> */}
                         <button className="btn">Last seen</button>
                         <ClickAwayListener onClickAway={this.handleClickAway}>
                         <div className="board-header-btns flex">

@@ -143,8 +143,8 @@ function _createNewBoard(currUser) {
     return {
         title: 'Your new Board',
         subtitle: 'Your new subtitle',
-        description: 'Your new description',
-        isFavorite: false,
+        // description: 'Your new description',
+        // isFavorite: false,
         statusLabels: [
             { id: 'sl1', title: 'Done', color: '#00c875' },
             { id: 'sl2', title: 'Working on it', color: '#fdab3d' },
@@ -152,6 +152,7 @@ function _createNewBoard(currUser) {
             { id: 'sl4', title: 'On hold', color: '#175a63' },
             { id: 'sl5', title: '', color: '#c4c4c4' },
         ],
+        cellTypes: ['title', 'member', 'tag', 'status', 'priority', 'creationLog', 'timeline', 'location'],
         members: [currUser], /// can't add more members!!
         groups: [
             {

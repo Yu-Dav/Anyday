@@ -4,6 +4,7 @@ import Avatar from '@material-ui/core/Avatar'
 import TimeAgo from 'react-timeago'
 import { ReactComponent as CrossSvg } from '../../assets/imgs/svg/cross.svg'
 
+
 export function UpdatePreview({ comment, onUpdateComment, onRemoveComment, imgUrl }) {
 
     function getTime(timestamp) {

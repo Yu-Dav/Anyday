@@ -4,8 +4,9 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-
+import Link from '@material-ui/core/Link';
 import { Header } from '../cmps/Header.jsx'
+import Grid from '@material-ui/core/Grid';
 import logo from '../assets/imgs/favicon/logo-192x192.png'
 import { connect } from 'react-redux'
 import { loadUsers, login, removeUser, signup, logout } from '../store/actions/userActions'
@@ -119,7 +120,13 @@ class _Login extends Component {
                             >
                                 Sign In
                 </Button>
-
+                            <Grid container justify="flex-end">
+                                <Grid item>
+                                    <Link href="#/signup" variant="body2">
+                                        {"Don't have an account? Sign Up"}
+                                    </Link>
+                                </Grid>
+                            </Grid>
                         </form>
                     </div>
 
