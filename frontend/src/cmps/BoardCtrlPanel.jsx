@@ -11,7 +11,8 @@ import TableChartOutlinedIcon from '@material-ui/icons/TableChartOutlined';
 export class BoardCtrlPanel extends Component {
     state = {
         isSearching: false,
-        isFiltering: false
+        isFiltering: false,
+        view: 'board-view'
     }
     onSearchClicked = () => {
         this.setState({ ...this.state, isSearching: !this.state.isSearching })
@@ -23,36 +24,49 @@ export class BoardCtrlPanel extends Component {
         this.setState({ ...this.state, isFiltering: false })
     }
     render() {
-        const { isSearching, isFiltering } = this.state
+        const { isSearching, isFiltering, view } = this.state
         return (
-            <div className="board-ops flex ">
-                {/* filter btn will change the state to open the Boardfilter cmp */}
-                <button className="btn-add-group" onClick={this.props.addNewGroup}>New Group</button>
+            <div className="board-ops flex space-between ">
+                <div className="left-ctrl flex">
+                    {/* filter btn will change the state to open the Boardfilter cmp */}
+                    <button className="btn-add-group" onClick={this.props.addNewGroup}>New Group</button>
 
-                <button onClick={this.onSearchClicked} className="btn-search flex align-center "> <SearchIcon></SearchIcon>Search</button>
-                {isSearching &&
-                    <BoardSearch setFilter={this.props.setFilter} />
-                }
+                    <button onClick={this.onSearchClicked} className="btn-search flex align-center "> <SearchIcon></SearchIcon>Search</button>
+                    {isSearching &&
+                        <BoardSearch setFilter={this.props.setFilter} />
+                    }
 
-                <ClickAwayListener onClickAway={this.handleFilterClickAway}>
-                    <div>
-                        <button onClick={this.onFilterClicked} className="btn-filter flex align-center"><FilterSvg /> <p>Filter</p></button>
-                        {isFiltering &&
-                            <BoardFilter board={this.props.board} loadBoard={this.props.loadBoard} setFilter={this.props.setFilter}></BoardFilter>
-                        }
-                    </div>
-                </ClickAwayListener>
+                    <ClickAwayListener onClickAway={this.handleFilterClickAway}>
+                        <div>
+                            <button onClick={this.onFilterClicked} className="btn-filter flex align-center"><FilterSvg /> <p>Filter</p></button>
+                            {isFiltering &&
+                                <BoardFilter board={this.props.board} loadBoard={this.props.loadBoard} setFilter={this.props.setFilter}></BoardFilter>
+                            }
+                        </div>
+                    </ClickAwayListener>
 
 
-                <button className="btn-sort flex align-center"><SortSvg /> <p>Sort</p></button>
-                {/* sort all groups by name */}
-
+                    <button className="btn-sort flex align-center"><SortSvg /> <p>Sort</p></button>
+                    {/* sort all groups by name */}
+                </div>
                 <div className="right-ctrl flex">
-                    <button onClick={this.props.onChangeView} className="btn-map flex align-center"><LocationOnOutlinedIcon />Map</button>
-                    <button onClick={this.props.onChangeView} className="btn-board flex align-center"><TableChartOutlinedIcon />Board</button>
+                    <div className={view === 'board-view' ? 'view active flex align-center' : 'view flex align-center'} onClick={(ev) => {
+                        this.props.onChangeView(ev)
+                        this.setState({ ...this.state, view: 'board-view' })
+                    }} ><TableChartOutlinedIcon />Board</div>
+                    <div className={view === 'map-view' ? 'view active flex align-center' : 'view flex align-center'} onClick={(ev) => {
+                        this.props.onChangeView(ev)
+                        this.setState({ ...this.state, view: 'map-view' })
+                    }} >
+                        <LocationOnOutlinedIcon />Map
+                    </div>
+
                 </div>
             </div>
         )
 
     }
 }
+
+
+// <div className={content === 'activity' ? 'active': ''} onClick={() => { this.setState({ ...this.state, content: 'activity' }) }}>Activity Log</div>
