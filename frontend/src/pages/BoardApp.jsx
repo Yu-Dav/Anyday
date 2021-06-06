@@ -14,6 +14,7 @@ import { BoardHeader } from '../cmps/BoardHeader'
 
 import { BoardCtrlPanel } from '../cmps/BoardCtrlPanel'
 import { loadBoard, updateBoard, addBoard } from '../store/actions/boardActions'
+import {loadUsers} from '../store/actions/userActions'
 import { GroupList } from '../cmps/groups/GroupList'
 import { ActivityModal } from '../cmps/ActivitySideBar/ActivityModal';
 import { GoogleMap } from '../cmps/Map.jsx'
@@ -27,12 +28,12 @@ class _BoardApp extends Component {
         filteredBoard: this.props.currBoard,
         isMap: false,
     }
-    appRef = React.createRef();
 
     async componentDidMount() {
         const boardId = this.props.match.params.boardId
         const board = await this.props.loadBoard(boardId)
-        userService.getUsers()
+        this.props.loadUsers()
+        // userService.getUsers()
         const user = userService.getLoggedinUser()
         socketService.setup()
         socketService.on('board loaded', () => {
@@ -222,7 +223,7 @@ class _BoardApp extends Component {
     }
 
     render() {
-        const { currBoard, filterBy } = this.props
+        const { currBoard, filterBy, users } = this.props
         const { currUser, filteredBoard } = this.state
         console.log('params', this.props.match.params)
         if (!currBoard) return <div>loading</div>
@@ -232,8 +233,8 @@ class _BoardApp extends Component {
                 <SidebarNav onAddNewBoard={this.onAddNewBoard} />
 
                 <div className="container board-container">
-                    <BoardHeader board={filteredBoard} updateBoard={this.props.updateBoard} />
-                    <BoardCtrlPanel board={this.props.currBoard} onChangeView={this.onChangeView} addNewGroup={this.addNewGroup} setFilter={this.setFilter} loadBoard={this.props.loadBoard} />
+                    <BoardHeader users={users} board={filteredBoard} updateBoard={this.props.updateBoard} />
+                    <BoardCtrlPanel board={currBoard} onChangeView={this.onChangeView} addNewGroup={this.addNewGroup} setFilter={this.setFilter} loadBoard={this.props.loadBoard} />
                     {/* <button className="btn" onClick={() => window.location.hash = `/board/${currBoard._id}/map`}>Map</button> */}
                     {/* <LocationSearchInput /> */}
                     {/* <button className="btn-location" onClick={() => this.setState({ ...this.state, isMap: !this.state.isMap })}>Map</button> */}
@@ -292,6 +293,7 @@ const mapDispatchToProps = {
     loadBoard,
     updateBoard,
     addBoard,
+    loadUsers
 }
 
 export const BoardApp = connect(mapStateToProps, mapDispatchToProps)(_BoardApp)
