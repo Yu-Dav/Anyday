@@ -32,10 +32,11 @@ export class _ActivityModal extends Component {
         this.setState({ ...this.state, currUser })
     }
 
-    loadTask = async (taskId) => {
+    loadTask = (taskId) => {
         const groupId = this.props.match.params.groupId
         const { currBoard } = this.props
-        // console.log('props', this.props);
+        
+        console.log('props', this.props);
         const group = currBoard.groups.find(group => group.id === groupId)
         const task = group.tasks.find(task => task.id === taskId)
         this.setState({ task });

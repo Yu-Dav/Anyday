@@ -33,32 +33,37 @@ function connectSockets(http, session) {
         gSocketBySessionIdMap[socket.handshake.sessionID] = socket;
         // if (socket.handshake?.session?.user) socket.join(socket.handshake.session.user._id)
         socket.on('disconnect', (socket) => {
-            console.log('Someone disconnected');
+            // console.log('Someone disconnected');
             if (socket.handshake) {
                 gSocketBySessionIdMap[socket.handshake.sessionID] = null;
             }
         });
-        socket.on('hello', (msg) => {
-            console.log('heard message ', msg);
-        });
-        socket.on('join board', (boardId) => {
-            console.log ('joining the board 45 ',)
-            console.log ('boardId =',boardId)
-            if (socket.myBoard === boardId) return;
+        socket.on('join new board', (boardId) => {
+            console.log('socketService joining board', boardId);
+            // if (socket.myBoard === boardId) return;
             if (socket.myBoard) {
+                console.log ('45 * socket will LEAVE socket.myBoard =',socket.myBoard)
                 socket.leave(socket.myBoard);
             }
             socket.join(boardId);
             logger.debug('Session ID is', socket.handshake.sessionID);
             socket.myBoard = boardId;
+            console.log(`51 *socket will JOIN socket.myBoard`, socket.myBoard)
         });
 
-        socket.on('board updated', boardId => {
-        console.log(`file: socket.service.js || line 59 || boardId`, boardId)
-        console.log(`file: socket.service.js || line 61 || myBoard`, socket.myBoard)
-        // socket.to(socket.myBoard).emit('board loaded', boardId)
-        })
-      
+        socket.on('board updated', (boardId) => {
+            console.log('BE socket heard that boardId ', boardId, 'was updated');
+            console.log('socket.myBoard when hearding \'board updated\' =', socket.myBoard);
+            /* 
+            We first print which board was updated. This is coming from board actions.
+            We then print which board the socket is listening to, its sockt.myBoard.
+            We then emit that a board was updated to all listeners of the same boardId, 
+            which is their socket.myBoard value again. They get it in their cdm 'join new board'
+            it sometimes happens that socket.myBoard is undefines. Then we need to shut 
+            down the server, start it again, refresh both pages of the browser and try again. 
+            */
+            socket.to(socket.myBoard).emit('board was updated', boardId);
+        });
     });
 }
 
