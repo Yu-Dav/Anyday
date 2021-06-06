@@ -1,8 +1,7 @@
 {
     "title" : "Global Branches",
     "subtitle" : "Tracking tasks and goals",
-    "description" : "Your new description",
-    "isFavorite" : false,
+    "cellTypes": ["title", "member", "tag", "status", "priority", "creationLog", "timeline", "location"],
     "statusLabels" : [ 
         {
             "id" : "sl1",

@@ -1,19 +1,9 @@
 .board-header {
-<<<<<<< HEAD
-    color         : #323338;
-    // width         : 90%;
-    // margin        : 0 auto;
-    // margin: 20px 0 10px 0;
-    padding-bottom: 10px;
-    border-bottom : 1px solid $lightGrey;
-
-=======
     color: #323338;
     margin: 20px 0 10px 0;
     padding-bottom: 10px;
     border-bottom: 1px solid $lightGrey;
     
->>>>>>> 80dc1129d57eee5c5c00ddb168a4355e1462d03e
     .star-fav {
         stroke: #c3c5ca;
     }
@@ -32,28 +22,13 @@
     .subtitle-container {
         .subtitle {
             font-size: rem(14px);
-<<<<<<< HEAD
-            width    : rem(500px);
-            height   : rem(25px);
-=======
             width: rem(500px);
             height: rem(25px);
             font-family: roboto-light, helvetica, sans-serif;
->>>>>>> 80dc1129d57eee5c5c00ddb168a4355e1462d03e
         }
     }
 
     .btn {
-<<<<<<< HEAD
-        color           : inherit;
-        height          : 32px;
-        font-size       : rem(14px);
-        padding         : 4px 8px;
-        font-weight     : 400;
-        line-height     : 22px;
-        border          : none;
-        border-radius   : 4px;
-=======
         color: inherit;
         height: 32px;
         font-size: rem(14px);
@@ -63,7 +38,6 @@
         line-height: 22px;
         border: none;
         border-radius: 4px;
->>>>>>> 80dc1129d57eee5c5c00ddb168a4355e1462d03e
         background-color: transparent;
         transition      : 0.3s;
 
@@ -80,9 +54,6 @@
         height: 24px;
         width : 24px;
     }
-<<<<<<< HEAD
-}
-=======
 }
 
 @media (max-width: $mobile-breakpoint) {
@@ -108,4 +79,3 @@
         }
     }
 }
->>>>>>> 80dc1129d57eee5c5c00ddb168a4355e1462d03e

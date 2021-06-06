@@ -31,3 +31,37 @@
 6/6/2021, 9:42:45 AM - DEBUG - Session ID is | wKoRkCgmCV5Os2gWpOllpPuS9HZ_XdOd 
 6/6/2021, 9:51:15 AM - DEBUG - Session ID is | 6DLf52i4io5jBsnISevH6TXZu1WKMXIe 
 6/6/2021, 10:19:08 AM - INFO - Server is running on port: 3030 
+6/6/2021, 10:26:56 AM - DEBUG - Session ID is | ySlV6LyjYZDKLPXgSzeOEiXrFVY7lvxG 
+6/6/2021, 11:08:25 AM - INFO - Server is running on port: 3030 
+6/6/2021, 11:20:43 AM - INFO - Server is running on port: 3030 
+6/6/2021, 11:22:51 AM - DEBUG - Session ID is | BsPYlGY9ng_Fxl1gztLIoUW2R8rrtwwT 
+6/6/2021, 11:25:32 AM - DEBUG - Session ID is | iGSOpUqOWw2Wt_GiHoqCPejILB9tL3Yh 
+6/6/2021, 11:27:03 AM - DEBUG - Session ID is | 4Vhq4uRccpTcAEvWaLVQc6hKYT3M4Ww2 
+6/6/2021, 11:28:56 AM - DEBUG - Session ID is | LWx_SaCQLGAe_zn4dphHs9LD22xj6faa 
+6/6/2021, 11:32:27 AM - DEBUG - Session ID is | CPN3xM0HYF7dzoaKNCrWl3Z7nUxPqQbH 
+6/6/2021, 11:33:17 AM - DEBUG - Session ID is | Fc2mfjnSDRTuYR5r8rZdrZAlxL4Rh5sl 
+6/6/2021, 11:33:27 AM - DEBUG - Session ID is | 51YisE9nnmTd1NWEbF9mC-_WYPMNKIh4 
+6/6/2021, 11:39:40 AM - DEBUG - Session ID is | URsMlyoRhdmV6d-TYlTQ6AhcusHIGF20 
+6/6/2021, 11:41:30 AM - DEBUG - Session ID is | X-3GWroNLJ_QFc0GtQq9vKIgwjt3U8d7 
+6/6/2021, 12:12:51 PM - DEBUG - Session ID is | Y2j2XmICwYieADJM2USuxTWJCbz7iNs9 
+6/6/2021, 12:13:49 PM - DEBUG - Session ID is | zaBnfFDfGkvN2Yhu_Xl1AWz8R_RsOjyz 
+6/6/2021, 12:15:54 PM - DEBUG - Session ID is | IjFnLXudoOuClyhTXxBcMPDHnt2NetzK 
+6/6/2021, 12:16:11 PM - DEBUG - Session ID is | VT2Ta7xhW_iPfOFAiPmQJlECl4qoliqa 
+6/6/2021, 12:16:31 PM - DEBUG - Session ID is | Gd7-ydjtedzSTUHlIY40hTKZBNmO9wEl 
+6/6/2021, 12:16:40 PM - ERROR - while finding board undefined | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: RUvkve1PidFbbUHSXhHfuMJv9ycTV0D7)
+6/6/2021, 12:16:40 PM - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: RUvkve1PidFbbUHSXhHfuMJv9ycTV0D7)
+6/6/2021, 12:19:14 PM - DEBUG - Session ID is | UQc8Oada8RylnQuEPRSQVdSHqb-lEV1c 
+6/6/2021, 12:19:28 PM - ERROR - while finding board undefined | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: RUvkve1PidFbbUHSXhHfuMJv9ycTV0D7)
+6/6/2021, 12:19:28 PM - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: RUvkve1PidFbbUHSXhHfuMJv9ycTV0D7)
+6/6/2021, 12:26:08 PM - DEBUG - Session ID is | cZyqXrSqWnibQF12890vbDvi7_inGB1r 
+6/6/2021, 12:26:17 PM - ERROR - while finding board undefined | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: RUvkve1PidFbbUHSXhHfuMJv9ycTV0D7)
+6/6/2021, 12:26:17 PM - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: RUvkve1PidFbbUHSXhHfuMJv9ycTV0D7)
+6/6/2021, 12:26:21 PM - ERROR - while finding board undefined | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: RUvkve1PidFbbUHSXhHfuMJv9ycTV0D7)
+6/6/2021, 12:26:21 PM - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: RUvkve1PidFbbUHSXhHfuMJv9ycTV0D7)
+6/6/2021, 12:26:22 PM - DEBUG - Session ID is | V1m6dgtpVli6LEee7KvuDY2XXBp9k3gh 
+6/6/2021, 12:30:58 PM - DEBUG - Session ID is | fJUo-RYbRf61rsb1Tm3H9ke73du6GD7O 
+6/6/2021, 12:31:21 PM - DEBUG - Session ID is | 2f6PVPWur3o1u1D7ex6Ka1SLuZWOVe27 
+6/6/2021, 12:36:55 PM - DEBUG - Session ID is | 0bQyGb06uZPpCK9xs6llu1Frppo3pOhg 
+6/6/2021, 12:42:00 PM - DEBUG - Session ID is | RZplJig5fSRpI4pAPk4weYH4-6rH13r5 
+6/6/2021, 12:42:16 PM - DEBUG - auth.service - login with username: Dafna (sid: wJLM1Z_IOYKnxs0qWsAHCI7L2qui35Of)
+6/6/2021, 12:42:17 PM - DEBUG - Session ID is | fyKSNHu4aCUOLmX14_R1dgZbHxBqAGKz 
