@@ -1,0 +1,2817 @@
+{
+    "title" : "Final Sprint",
+    "subtitle" : "Our monday",
+    "createdAt" : 1621940297426.0,
+    "description" : "Planning the final sprint and assigning tasks between team members",
+    "isFavorite" : false,
+    "createdBy" : {
+        "_id" : "u103",
+        "fullname" : "Yuval David",
+        "username" : "Yuval",
+        "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg"
+    },
+    "colors" : [ 
+        {
+            "id" : "c101",
+            "name" : "darkGreen",
+            "value" : "#037f4c"
+        }, 
+        {
+            "id" : "c102",
+            "name" : "green",
+            "value" : "#00c875"
+        }, 
+        {
+            "id" : "c103",
+            "name" : "yellowGreen",
+            "value" : "#9cd326"
+        }, 
+        {
+            "id" : "c104",
+            "name" : "beige",
+            "value" : "#cab641"
+        }, 
+        {
+            "id" : "c105",
+            "name" : "yellow",
+            "value" : "#ffcb00"
+        }, 
+        {
+            "id" : "c106",
+            "name" : "darkPurple",
+            "value" : "#784bd1"
+        }, 
+        {
+            "id" : "c107",
+            "name" : "purple",
+            "value" : "#a25ddc"
+        }, 
+        {
+            "id" : "c108",
+            "name" : "turquoise",
+            "value" : "#0086BE"
+        }, 
+        {
+            "id" : "c109",
+            "name" : "blue",
+            "value" : "#579bfc"
+        }, 
+        {
+            "id" : "c110",
+            "name" : "lightBlue",
+            "value" : "#66ccff"
+        }, 
+        {
+            "id" : "c111",
+            "name" : "darkRed",
+            "value" : "#bb3354"
+        }, 
+        {
+            "id" : "c112",
+            "name" : "red",
+            "value" : "#e2445c"
+        }, 
+        {
+            "id" : "c113",
+            "name" : "darkOrange",
+            "value" : "#ff642e"
+        }, 
+        {
+            "id" : "c114",
+            "name" : "orange",
+            "value" : "#fdab3d"
+        }, 
+        {
+            "id" : "c115",
+            "name" : "brown",
+            "value" : "#7f5347"
+        }, 
+        {
+            "id" : "c116",
+            "name" : "grey",
+            "value" : "#c4c4c4"
+        }, 
+        {
+            "id" : "c117",
+            "name" : "darkGrey",
+            "value" : "#808080"
+        }
+    ],
+    "tags" : [ 
+        {
+            "id" : "t101",
+            "title" : "#starting",
+            "color" : "#61bd4f"
+        }, 
+        {
+            "id" : "t102",
+            "title" : "#problem",
+            "color" : "#e2445c"
+        }, 
+        {
+            "id" : "t103",
+            "title" : "#development",
+            "color" : "#579bfc"
+        }, 
+        {
+            "id" : "t104",
+            "title" : "#production",
+            "color" : "#a25ddc"
+        }
+    ],
+    "priorityLabels" : [ 
+        {
+            "id" : "pl1",
+            "title" : "High",
+            "color" : "#e2445c"
+        }, 
+        {
+            "id" : "pl2",
+            "title" : "Medium",
+            "color" : "#a25ddc"
+        }, 
+        {
+            "id" : "pl3",
+            "title" : "Low",
+            "color" : "#579bfc"
+        }, 
+        {
+            "id" : "pl4",
+            "title" : "",
+            "color" : "#c4c4c4"
+        }
+    ],
+    "statusLabels" : [ 
+        {
+            "id" : "sl1",
+            "title" : "Done",
+            "color" : "#00c875"
+        }, 
+        {
+            "id" : "sl2",
+            "title" : "Working on it",
+            "color" : "#fdab3d"
+        }, 
+        {
+            "id" : "sl3",
+            "title" : "Stuck",
+            "color" : "#ff642e"
+        }, 
+        {
+            "id" : "sl4",
+            "title" : "On hold",
+            "color" : "#175a63"
+        }, 
+        {
+            "id" : "sl5",
+            "title" : "",
+            "color" : "#c4c4c4"
+        }
+    ],
+    "members" : [ 
+        {
+            "_id" : "u101",
+            "fullname" : "Noga Jacobi",
+            "username" : "Noga",
+            "password" : "noga1234",
+            "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+            "mentions" : [ 
+                {
+                    "id" : "m101",
+                    "boardId" : "m101",
+                    "taskId" : "t101"
+                }
+            ]
+        }, 
+        {
+            "_id" : "u102",
+            "fullname" : "Dafna Bashan ",
+            "username" : "Dafna",
+            "password" : "dafna1234",
+            "imgUrl" : "https://i.ibb.co/qMmQnJL/image.jpg",
+            "mentions" : [ 
+                {
+                    "id" : "m101",
+                    "boardId" : "m101",
+                    "taskId" : "t101"
+                }
+            ]
+        }, 
+        {
+            "_id" : "u103",
+            "fullname" : "Yuval David",
+            "username" : "Yuval",
+            "password" : "yuval1234",
+            "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+            "mentions" : [ 
+                {
+                    "id" : "m101",
+                    "boardId" : "m101",
+                    "taskId" : "t101"
+                }
+            ]
+        }, 
+        {
+            "_id" : "u104",
+            "fullname" : "Basya Coding",
+            "username" : "Basya",
+            "password" : "basya1234",
+            "imgUrl" : "https://i.ibb.co/H2SxZc2/basya.jpg",
+            "mentions" : [ 
+                {
+                    "id" : "m101",
+                    "boardId" : "m101",
+                    "taskId" : "t101"
+                }
+            ]
+        }
+    ],
+    "groups" : [ 
+        {
+            "id" : "Tp7Q3",
+            "style" : {
+                "bgColor" : "#ff642e"
+            },
+            "title" : "Bugs",
+            "tasks" : [ 
+                {
+                    "id" : "POGZt",
+                    "labelIds" : [ 
+                        "101"
+                    ],
+                    "createdAt" : 1622912505754.0,
+                    "title" : "Add new task is being duplicated",
+                    "timeline" : [ 
+                        null, 
+                        null
+                    ],
+                    "tags" : [],
+                    "status" : {
+                        "id" : "sl1",
+                        "title" : "Done",
+                        "color" : "#00c875"
+                    },
+                    "priority" : {
+                        "id" : "pl3",
+                        "title" : "Low",
+                        "color" : "#579bfc"
+                    },
+                    "members" : [],
+                    "comments" : [],
+                    "byMember" : {
+                        "_id" : "60b7755419a5e8e764a2c0dd",
+                        "fullname" : "Noga Jacobi",
+                        "username" : "Noga",
+                        "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                        "mentions" : [ 
+                            {
+                                "id" : "m101",
+                                "boardId" : "m101",
+                                "taskId" : "t101"
+                            }
+                        ]
+                    }
+                }, 
+                {
+                    "id" : "ibh8c",
+                    "labelIds" : [ 
+                        "101"
+                    ],
+                    "createdAt" : 1622912521840.0,
+                    "title" : "Err when going straight to update activity log",
+                    "timeline" : [ 
+                        "2021-06-08T21:00:00.000Z", 
+                        "2021-06-10T21:00:00.000Z"
+                    ],
+                    "tags" : [],
+                    "status" : {
+                        "id" : "sl3",
+                        "title" : "Stuck",
+                        "color" : "#ff642e"
+                    },
+                    "priority" : {
+                        "id" : "pl2",
+                        "title" : "Medium",
+                        "color" : "#a25ddc"
+                    },
+                    "members" : [],
+                    "comments" : [],
+                    "byMember" : {
+                        "_id" : "60b7755419a5e8e764a2c0dd",
+                        "fullname" : "Noga Jacobi",
+                        "username" : "Noga",
+                        "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                        "mentions" : [ 
+                            {
+                                "id" : "m101",
+                                "boardId" : "m101",
+                                "taskId" : "t101"
+                            }
+                        ]
+                    }
+                }, 
+                {
+                    "id" : "uxnXm",
+                    "labelIds" : [ 
+                        "101"
+                    ],
+                    "createdAt" : 1622912571420.0,
+                    "title" : "Can't switch between boards",
+                    "timeline" : [ 
+                        "2021-06-15T21:00:00.000Z", 
+                        "2021-06-16T21:00:00.000Z"
+                    ],
+                    "tags" : [],
+                    "status" : {
+                        "id" : "sl2",
+                        "title" : "Working on it",
+                        "color" : "#fdab3d"
+                    },
+                    "priority" : {
+                        "id" : "pl1",
+                        "title" : "High",
+                        "color" : "#e2445c"
+                    },
+                    "members" : [],
+                    "comments" : [],
+                    "byMember" : {
+                        "_id" : "60b7756919a5e8e764a2cae1",
+                        "fullname" : "Dafna Bashan ",
+                        "username" : "Dafna",
+                        "imgUrl" : "https://i.ibb.co/qMmQnJL/image.jpg",
+                        "mentions" : [ 
+                            {
+                                "id" : "m101",
+                                "boardId" : "m101",
+                                "taskId" : "t101"
+                            }
+                        ]
+                    }
+                }, 
+                {
+                    "id" : "FEWHs",
+                    "labelIds" : [ 
+                        "101"
+                    ],
+                    "createdAt" : 1622912587081.0,
+                    "title" : "After an updatBoard being redirected to the first board",
+                    "timeline" : [ 
+                        "2021-06-01T22:00:00.000Z", 
+                        "2021-06-08T22:00:00.000Z"
+                    ],
+                    "tags" : [],
+                    "status" : {
+                        "id" : "sl3",
+                        "title" : "Stuck",
+                        "color" : "#ff642e"
+                    },
+                    "priority" : {
+                        "id" : "pl3",
+                        "title" : "Low",
+                        "color" : "#579bfc"
+                    },
+                    "members" : [ 
+                        {
+                            "_id" : "u102",
+                            "fullname" : "Dafna Bashan ",
+                            "username" : "Dafna",
+                            "password" : "dafna1234",
+                            "imgUrl" : "https://i.ibb.co/qMmQnJL/image.jpg",
+                            "mentions" : [ 
+                                {
+                                    "id" : "m101",
+                                    "boardId" : "m101",
+                                    "taskId" : "t101"
+                                }
+                            ]
+                        }
+                    ],
+                    "comments" : [ 
+                        {
+                            "id" : "Ftxlf",
+                            "txt" : "",
+                            "imgUrl" : "https://res.cloudinary.com/depjjubya/image/upload/v1622915036/flow-01_zczq4o.jpg",
+                            "createdAt" : 1622915038326.0,
+                            "byMember" : {
+                                "_id" : "60b7755419a5e8e764a2c0dd",
+                                "fullname" : "Noga Jacobi",
+                                "username" : "Noga",
+                                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                                "mentions" : [ 
+                                    {
+                                        "id" : "m101",
+                                        "boardId" : "m101",
+                                        "taskId" : "t101"
+                                    }
+                                ]
+                            },
+                            "groupId" : "Tp7Q3",
+                            "taskId" : "FEWHs"
+                        }
+                    ],
+                    "byMember" : {
+                        "_id" : "60b7756919a5e8e764a2cae1",
+                        "fullname" : "Dafna Bashan ",
+                        "username" : "Dafna",
+                        "imgUrl" : "https://i.ibb.co/qMmQnJL/image.jpg",
+                        "mentions" : [ 
+                            {
+                                "id" : "m101",
+                                "boardId" : "m101",
+                                "taskId" : "t101"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "createdAt" : 1622912485917.0
+        }, 
+        {
+            "id" : "K9HI9",
+            "style" : {
+                "bgColor" : "#7f5347"
+            },
+            "title" : "::After Asi\n\n",
+            "tasks" : [ 
+                {
+                    "id" : "VtfoT",
+                    "labelIds" : [ 
+                        "101"
+                    ],
+                    "createdAt" : 1622912611751.0,
+                    "title" : "sidebar nav: border 10 px white",
+                    "timeline" : [ 
+                        null, 
+                        null
+                    ],
+                    "tags" : [],
+                    "status" : {
+                        "id" : "sl1",
+                        "title" : "Done",
+                        "color" : "#00c875"
+                    },
+                    "priority" : {
+                        "id" : "pl1",
+                        "title" : "",
+                        "color" : "#c4c4c4"
+                    },
+                    "members" : [],
+                    "comments" : [],
+                    "byMember" : {
+                        "_id" : "60b7756919a5e8e764a2cae1",
+                        "fullname" : "Dafna Bashan ",
+                        "username" : "Dafna",
+                        "imgUrl" : "https://i.ibb.co/qMmQnJL/image.jpg",
+                        "mentions" : [ 
+                            {
+                                "id" : "m101",
+                                "boardId" : "m101",
+                                "taskId" : "t101"
+                            }
+                        ]
+                    }
+                }, 
+                {
+                    "id" : "chXFG",
+                    "labelIds" : [ 
+                        "101"
+                    ],
+                    "createdAt" : 1622912632653.0,
+                    "title" : "nav width in px, overflow: hidden",
+                    "timeline" : [ 
+                        "2021-06-06T22:00:00.000Z", 
+                        "2021-06-10T22:00:00.000Z"
+                    ],
+                    "tags" : [],
+                    "status" : {
+                        "id" : "sl1",
+                        "title" : "Done",
+                        "color" : "#00c875"
+                    },
+                    "priority" : {
+                        "id" : "pl1",
+                        "title" : "",
+                        "color" : "#c4c4c4"
+                    },
+                    "members" : [],
+                    "comments" : [],
+                    "byMember" : {
+                        "_id" : "60b7756919a5e8e764a2cae1",
+                        "fullname" : "Dafna Bashan ",
+                        "username" : "Dafna",
+                        "imgUrl" : "https://i.ibb.co/qMmQnJL/image.jpg",
+                        "mentions" : [ 
+                            {
+                                "id" : "m101",
+                                "boardId" : "m101",
+                                "taskId" : "t101"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "createdAt" : 1622912457229.0
+        }, 
+        {
+            "id" : "g101",
+            "style" : {
+                "bgColor" : "#26de81"
+            },
+            "title" : "Features",
+            "tasks" : [ 
+                {
+                    "id" : "g1t102",
+                    "labelIds" : [ 
+                        "101"
+                    ],
+                    "createdAt" : 1621924680977.0,
+                    "timeline" : [ 
+                        null, 
+                        null
+                    ],
+                    "title" : "Date Range Picker",
+                    "tags" : [ 
+                        {
+                            "id" : "t101",
+                            "title" : "#starting",
+                            "color" : "#61bd4f"
+                        }
+                    ],
+                    "status" : {
+                        "id" : "sl4",
+                        "title" : "On hold",
+                        "color" : "#175a63"
+                    },
+                    "priority" : {
+                        "id" : "pl3",
+                        "title" : "Low",
+                        "color" : "#579bfc"
+                    },
+                    "members" : [ 
+                        {
+                            "_id" : "u103",
+                            "fullname" : "Yuval David",
+                            "username" : "Yuval",
+                            "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg"
+                        }
+                    ],
+                    "comments" : [ 
+                        {
+                            "id" : "Ys2SJ",
+                            "txt" : "",
+                            "imgUrl" : "https://res.cloudinary.com/depjjubya/image/upload/v1622902827/download_lnay2c.png",
+                            "createdAt" : 1622902890596.0,
+                            "byMember" : {
+                                "_id" : "60b7756919a5e8e764a2cae1",
+                                "fullname" : "Dafna Bashan ",
+                                "username" : "Dafna",
+                                "imgUrl" : "https://i.ibb.co/qMmQnJL/image.jpg",
+                                "mentions" : [ 
+                                    {
+                                        "id" : "m101",
+                                        "boardId" : "m101",
+                                        "taskId" : "t101"
+                                    }
+                                ]
+                            },
+                            "groupId" : "g101",
+                            "taskId" : "g1t102"
+                        }, 
+                        {
+                            "id" : "7THE3",
+                            "txt" : "",
+                            "imgUrl" : "https://res.cloudinary.com/depjjubya/image/upload/v1622888056/guest-02_ilihnx.png",
+                            "createdAt" : 1622888074484.0,
+                            "byMember" : {
+                                "_id" : "60b7756919a5e8e764a2cae1",
+                                "fullname" : "Dafna Bashan ",
+                                "username" : "Dafna",
+                                "imgUrl" : "https://i.ibb.co/qMmQnJL/image.jpg",
+                                "mentions" : [ 
+                                    {
+                                        "id" : "m101",
+                                        "boardId" : "m101",
+                                        "taskId" : "t101"
+                                    }
+                                ]
+                            },
+                            "groupId" : "g101",
+                            "taskId" : "g1t102"
+                        }, 
+                        {
+                            "id" : "lp54P",
+                            "txt" : "dDSA",
+                            "imgUrl" : "https://res.cloudinary.com/depjjubya/image/upload/v1622887134/download_wbsuou.png",
+                            "createdAt" : 1622887140528.0,
+                            "byMember" : {
+                                "_id" : "60b7756919a5e8e764a2cae1",
+                                "fullname" : "Dafna Bashan ",
+                                "username" : "Dafna",
+                                "imgUrl" : "https://i.ibb.co/qMmQnJL/image.jpg",
+                                "mentions" : [ 
+                                    {
+                                        "id" : "m101",
+                                        "boardId" : "m101",
+                                        "taskId" : "t101"
+                                    }
+                                ]
+                            },
+                            "groupId" : "g101",
+                            "taskId" : "g1t102"
+                        }, 
+                        {
+                            "id" : "vxrui",
+                            "txt" : "grerger",
+                            "imgUrl" : "https://res.cloudinary.com/depjjubya/image/upload/v1622887061/guest-02_oot8si.png",
+                            "createdAt" : 1622887069258.0,
+                            "byMember" : {
+                                "_id" : "60b7756919a5e8e764a2cae1",
+                                "fullname" : "Dafna Bashan ",
+                                "username" : "Dafna",
+                                "imgUrl" : "https://i.ibb.co/qMmQnJL/image.jpg",
+                                "mentions" : [ 
+                                    {
+                                        "id" : "m101",
+                                        "boardId" : "m101",
+                                        "taskId" : "t101"
+                                    }
+                                ]
+                            },
+                            "groupId" : "g101",
+                            "taskId" : "g1t102"
+                        }, 
+                        {
+                            "id" : "ZdPnm2",
+                            "txt" : "Date range - https://reactdatepicker.com/#example-date-range",
+                            "createdAt" : 1622203475437.0,
+                            "byMember" : {
+                                "_id" : "u103",
+                                "fullname" : "Yuval David",
+                                "username" : "Yuval",
+                                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg"
+                            },
+                            "taskId" : "g1t102",
+                            "groupId" : "g101"
+                        }
+                    ],
+                    "byMember" : {
+                        "_id" : "u103",
+                        "fullname" : "Yuval David",
+                        "username" : "Yuval",
+                        "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg"
+                    }
+                }, 
+                {
+                    "id" : "g1t102",
+                    "labelIds" : [ 
+                        "101"
+                    ],
+                    "createdAt" : 1621924680977.0,
+                    "timeline" : [ 
+                        "2021-06-02T22:00:00.000Z", 
+                        "2021-06-12T22:00:00.000Z"
+                    ],
+                    "title" : "Date Range Picker",
+                    "tags" : [ 
+                        {
+                            "id" : "t101",
+                            "title" : "#starting",
+                            "color" : "#61bd4f"
+                        }
+                    ],
+                    "status" : {
+                        "id" : "sl4",
+                        "title" : "On hold",
+                        "color" : "#175a63"
+                    },
+                    "priority" : {
+                        "id" : "pl3",
+                        "title" : "Low",
+                        "color" : "#579bfc"
+                    },
+                    "members" : [ 
+                        {
+                            "_id" : "u103",
+                            "fullname" : "Yuval David",
+                            "username" : "Yuval",
+                            "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg"
+                        }
+                    ],
+                    "comments" : [ 
+                        {
+                            "id" : "7THE3",
+                            "txt" : "",
+                            "imgUrl" : "https://res.cloudinary.com/depjjubya/image/upload/v1622888056/guest-02_ilihnx.png",
+                            "createdAt" : 1622888074484.0,
+                            "byMember" : {
+                                "_id" : "60b7756919a5e8e764a2cae1",
+                                "fullname" : "Dafna Bashan ",
+                                "username" : "Dafna",
+                                "imgUrl" : "https://i.ibb.co/qMmQnJL/image.jpg",
+                                "mentions" : [ 
+                                    {
+                                        "id" : "m101",
+                                        "boardId" : "m101",
+                                        "taskId" : "t101"
+                                    }
+                                ]
+                            },
+                            "groupId" : "g101",
+                            "taskId" : "g1t102"
+                        }, 
+                        {
+                            "id" : "lp54P",
+                            "txt" : "dDSA",
+                            "imgUrl" : "https://res.cloudinary.com/depjjubya/image/upload/v1622887134/download_wbsuou.png",
+                            "createdAt" : 1622887140528.0,
+                            "byMember" : {
+                                "_id" : "60b7756919a5e8e764a2cae1",
+                                "fullname" : "Dafna Bashan ",
+                                "username" : "Dafna",
+                                "imgUrl" : "https://i.ibb.co/qMmQnJL/image.jpg",
+                                "mentions" : [ 
+                                    {
+                                        "id" : "m101",
+                                        "boardId" : "m101",
+                                        "taskId" : "t101"
+                                    }
+                                ]
+                            },
+                            "groupId" : "g101",
+                            "taskId" : "g1t102"
+                        }, 
+                        {
+                            "id" : "vxrui",
+                            "txt" : "grerger",
+                            "imgUrl" : "https://res.cloudinary.com/depjjubya/image/upload/v1622887061/guest-02_oot8si.png",
+                            "createdAt" : 1622887069258.0,
+                            "byMember" : {
+                                "_id" : "60b7756919a5e8e764a2cae1",
+                                "fullname" : "Dafna Bashan ",
+                                "username" : "Dafna",
+                                "imgUrl" : "https://i.ibb.co/qMmQnJL/image.jpg",
+                                "mentions" : [ 
+                                    {
+                                        "id" : "m101",
+                                        "boardId" : "m101",
+                                        "taskId" : "t101"
+                                    }
+                                ]
+                            },
+                            "groupId" : "g101",
+                            "taskId" : "g1t102"
+                        }, 
+                        {
+                            "id" : "ZdPnm2",
+                            "txt" : "Date range - https://reactdatepicker.com/#example-date-range",
+                            "createdAt" : 1622203475437.0,
+                            "byMember" : {
+                                "_id" : "u103",
+                                "fullname" : "Yuval David",
+                                "username" : "Yuval",
+                                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg"
+                            },
+                            "taskId" : "g1t102",
+                            "groupId" : "g101"
+                        }
+                    ],
+                    "byMember" : {
+                        "_id" : "u103",
+                        "fullname" : "Yuval David",
+                        "username" : "Yuval",
+                        "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg"
+                    }
+                }, 
+                {
+                    "id" : "g1t103",
+                    "labelIds" : [ 
+                        "101"
+                    ],
+                    "createdAt" : 1621615250330.0,
+                    "timeline" : [ 
+                        "2021-06-04T22:00:00.000Z", 
+                        "2021-06-08T22:00:00.000Z"
+                    ],
+                    "title" : "Drag and Drop",
+                    "tags" : [ 
+                        {
+                            "id" : "t102",
+                            "title" : "#problem",
+                            "color" : "#e2445c"
+                        }
+                    ],
+                    "status" : {
+                        "id" : "sl2",
+                        "title" : "Working on it",
+                        "color" : "#fdab3d"
+                    },
+                    "priority" : {
+                        "id" : "pl2",
+                        "title" : "Medium",
+                        "color" : "#a25ddc"
+                    },
+                    "members" : [ 
+                        {
+                            "_id" : "u103",
+                            "fullname" : "Yuval David",
+                            "username" : "Yuval",
+                            "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg"
+                        }
+                    ],
+                    "comments" : [ 
+                        {
+                            "id" : "ZdPnm3",
+                            "txt" : "Drag and Drop of tasks - https://www.npmjs.com/package/react-beautiful-dnd",
+                            "createdAt" : 1621818253508.0,
+                            "byMember" : {
+                                "_id" : "u103",
+                                "fullname" : "Yuval David",
+                                "username" : "Yuval",
+                                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg"
+                            },
+                            "taskId" : "g1t103",
+                            "groupId" : "g101"
+                        }
+                    ],
+                    "byMember" : {
+                        "_id" : "u103",
+                        "fullname" : "Yuval David",
+                        "username" : "Yuval",
+                        "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg"
+                    }
+                }, 
+                {
+                    "id" : "g1t101",
+                    "labelIds" : [ 
+                        "101"
+                    ],
+                    "createdAt" : 1621940297426.0,
+                    "timeline" : [ 
+                        null, 
+                        null
+                    ],
+                    "title" : "Content Editable",
+                    "tags" : [ 
+                        {
+                            "id" : "t104",
+                            "title" : "#production",
+                            "color" : "#a25ddc"
+                        }, 
+                        {
+                            "id" : "t101",
+                            "title" : "#starting",
+                            "color" : "#61bd4f"
+                        }
+                    ],
+                    "status" : {
+                        "id" : "sl1",
+                        "title" : "Done",
+                        "color" : "#00c875"
+                    },
+                    "priority" : {
+                        "id" : "pl1",
+                        "title" : "High",
+                        "color" : "#e2445c"
+                    },
+                    "members" : [ 
+                        {
+                            "_id" : "u102",
+                            "fullname" : "Dafna Bashan",
+                            "username" : "Dafna",
+                            "imgUrl" : "https://i.ibb.co/qMmQnJL/image.jpg"
+                        }
+                    ],
+                    "comments" : [ 
+                        {
+                            "id" : "ZdPnm1",
+                            "txt" : "https://www.npmjs.com/package/react-contenteditable",
+                            "createdAt" : 1621893062456.0,
+                            "byMember" : {
+                                "_id" : "u102",
+                                "fullname" : "Dafna Bashan",
+                                "username" : "Dafna",
+                                "imgUrl" : "https://i.ibb.co/qMmQnJL/image.jpg"
+                            },
+                            "taskId" : "g1t101",
+                            "groupId" : "g101"
+                        }
+                    ],
+                    "byMember" : {
+                        "_id" : "u102",
+                        "fullname" : "Dafna Bashan",
+                        "username" : "Dafna",
+                        "imgUrl" : "https://i.ibb.co/qMmQnJL/image.jpg"
+                    }
+                }, 
+                {
+                    "id" : "AF7YY",
+                    "labelIds" : [ 
+                        "101"
+                    ],
+                    "createdAt" : 1622912539437.0,
+                    "title" : "Upload images",
+                    "timeline" : [ 
+                        "2021-06-08T22:00:00.000Z", 
+                        "2021-06-15T22:00:00.000Z"
+                    ],
+                    "tags" : [],
+                    "status" : {
+                        "id" : "sl1",
+                        "title" : "",
+                        "color" : "#c4c4c4"
+                    },
+                    "priority" : {
+                        "id" : "pl1",
+                        "title" : "",
+                        "color" : "#c4c4c4"
+                    },
+                    "members" : [],
+                    "comments" : [],
+                    "byMember" : {
+                        "_id" : "60b7755419a5e8e764a2c0dd",
+                        "fullname" : "Noga Jacobi",
+                        "username" : "Noga",
+                        "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                        "mentions" : [ 
+                            {
+                                "id" : "m101",
+                                "boardId" : "m101",
+                                "taskId" : "t101"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "id" : "g103",
+            "style" : {
+                "bgColor" : "#784bd1"
+            },
+            "title" : "Pre Operation",
+            "tasks" : [ 
+                {
+                    "id" : "g3t101",
+                    "labelIds" : [ 
+                        "101"
+                    ],
+                    "createdAt" : 1621924680977.0,
+                    "timeline" : [ 
+                        "2021-06-04T22:00:00.000Z", 
+                        "2021-06-08T22:00:00.000Z"
+                    ],
+                    "title" : "git + initial files setup + initial push/pull",
+                    "tags" : [ 
+                        {
+                            "id" : "t101",
+                            "title" : "#starting",
+                            "color" : "#61bd4f"
+                        }
+                    ],
+                    "status" : {
+                        "id" : "sl1",
+                        "title" : "Done",
+                        "color" : "#00c875"
+                    },
+                    "priority" : {
+                        "id" : "pl4",
+                        "title" : "",
+                        "color" : "#c4c4c4"
+                    },
+                    "members" : [ 
+                        {
+                            "_id" : "u103",
+                            "fullname" : "Yuval David",
+                            "username" : "Yuval",
+                            "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg"
+                        }, 
+                        {
+                            "_id" : "u104",
+                            "fullname" : "Basya coding",
+                            "username" : "Basya",
+                            "imgUrl" : "https://i.ibb.co/H2SxZc2/basya.jpg"
+                        }
+                    ],
+                    "comments" : [ 
+                        {
+                            "id" : "ZdPnm7",
+                            "txt" : "open a new repository",
+                            "createdAt" : 1622170515811.0,
+                            "byMember" : {
+                                "_id" : "u104",
+                                "fullname" : "Basya coding",
+                                "username" : "Basya",
+                                "imgUrl" : "https://i.ibb.co/H2SxZc2/basya.jpg"
+                            },
+                            "taskId" : "g3t101",
+                            "groupId" : "g103"
+                        }
+                    ],
+                    "byMember" : {
+                        "_id" : "u104",
+                        "fullname" : "Basya coding",
+                        "username" : "Basya",
+                        "imgUrl" : "https://i.ibb.co/H2SxZc2/basya.jpg"
+                    }
+                }, 
+                {
+                    "id" : "0DsoW",
+                    "labelIds" : [ 
+                        "101"
+                    ],
+                    "createdAt" : 1622912702810.0,
+                    "title" : "Read documentations and find relevant libs",
+                    "timeline" : [ 
+                        "2021-05-29T22:00:00.000Z", 
+                        "2021-06-04T22:00:00.000Z"
+                    ],
+                    "tags" : [],
+                    "status" : {
+                        "id" : "sl1",
+                        "title" : "",
+                        "color" : "#c4c4c4"
+                    },
+                    "priority" : {
+                        "id" : "pl1",
+                        "title" : "High",
+                        "color" : "#e2445c"
+                    },
+                    "members" : [],
+                    "comments" : [],
+                    "byMember" : {
+                        "_id" : "60b7758c19a5e8e764a2db69",
+                        "fullname" : "Basya coding",
+                        "username" : "Basya",
+                        "imgUrl" : "https://i.ibb.co/H2SxZc2/basya.jpg",
+                        "mentions" : [ 
+                            {
+                                "id" : "m101",
+                                "boardId" : "m101",
+                                "taskId" : "t101"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "id" : "g102",
+            "style" : {
+                "bgColor" : "#bb3354"
+            },
+            "title" : "UX/UI",
+            "tasks" : [ 
+                {
+                    "id" : "g2t103",
+                    "labelIds" : [ 
+                        "101"
+                    ],
+                    "createdAt" : 1621615250330.0,
+                    "timeline" : [ 
+                        "2021-06-04T22:00:00.000Z", 
+                        "2021-06-09T22:00:00.000Z"
+                    ],
+                    "title" : "Add CSS transition/React animations when components changes",
+                    "tags" : [ 
+                        {
+                            "id" : "t103",
+                            "title" : "#development",
+                            "color" : "#579bfc"
+                        }, 
+                        {
+                            "id" : "t101",
+                            "title" : "#starting",
+                            "color" : "#61bd4f"
+                        }
+                    ],
+                    "status" : {
+                        "id" : "sl2",
+                        "title" : "Working on it",
+                        "color" : "#fdab3d"
+                    },
+                    "priority" : {
+                        "id" : "pl3",
+                        "title" : "Low",
+                        "color" : "#579bfc"
+                    },
+                    "members" : [ 
+                        {
+                            "_id" : "u104",
+                            "fullname" : "Basya coding",
+                            "username" : "Basya",
+                            "imgUrl" : "https://i.ibb.co/H2SxZc2/basya.jpg"
+                        }
+                    ],
+                    "comments" : [ 
+                        {
+                            "id" : "ZdPnm6",
+                            "txt" : "also @yaronb please CR this",
+                            "createdAt" : 1622086963720.0,
+                            "byMember" : {
+                                "_id" : "u104",
+                                "fullname" : "Basya coding",
+                                "username" : "Basya",
+                                "imgUrl" : "https://i.ibb.co/S6XczhC/qb.png"
+                            },
+                            "taskId" : "g2t103",
+                            "groupId" : "g2t103"
+                        }
+                    ],
+                    "byMember" : {
+                        "_id" : "u104",
+                        "fullname" : "Basya coding",
+                        "username" : "Basya",
+                        "imgUrl" : "https://i.ibb.co/H2SxZc2/basya.jpg"
+                    }
+                }, 
+                {
+                    "id" : "PIw43",
+                    "labelIds" : [ 
+                        "101"
+                    ],
+                    "createdAt" : 1622665739062.0,
+                    "title" : "Timeline should show num of days left",
+                    "timeline" : [ 
+                        "2021-06-06T22:00:00.000Z", 
+                        "2021-06-16T22:00:00.000Z"
+                    ],
+                    "tags" : [],
+                    "status" : {
+                        "id" : "sl1",
+                        "title" : "",
+                        "color" : "#c4c4c4"
+                    },
+                    "priority" : {
+                        "id" : "pl1",
+                        "title" : "",
+                        "color" : "#c4c4c4"
+                    },
+                    "members" : [ 
+                        {
+                            "_id" : "u101",
+                            "fullname" : "Noga Jacobi",
+                            "username" : "Noga",
+                            "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg"
+                        }
+                    ],
+                    "comments" : [],
+                    "byMember" : {
+                        "_id" : "u101",
+                        "fullname" : "Noga Jacobi",
+                        "username" : "Noga",
+                        "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg"
+                    }
+                }
+            ]
+        }
+    ],
+    "activities" : [ 
+        {
+            "id" : "yMiUT",
+            "type" : "Timeline changed",
+            "createdAt" : 1622917034734.0,
+            "byMember" : {
+                "_id" : "60b7756919a5e8e764a2cae1",
+                "fullname" : "Dafna Bashan ",
+                "username" : "Dafna",
+                "imgUrl" : "https://i.ibb.co/qMmQnJL/image.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "ibh8c",
+                "title" : "Err when going straight to update activity log",
+                "changedItem" : "Jun 09-Jun 11"
+            },
+            "group" : {
+                "id" : "Tp7Q3",
+                "title" : "Bugs"
+            }
+        }, 
+        {
+            "id" : "KlVzb",
+            "type" : "Timeline changed",
+            "createdAt" : 1622917029495.0,
+            "byMember" : {
+                "_id" : "60b7756919a5e8e764a2cae1",
+                "fullname" : "Dafna Bashan ",
+                "username" : "Dafna",
+                "imgUrl" : "https://i.ibb.co/qMmQnJL/image.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "uxnXm",
+                "title" : "Can't switch between boards",
+                "changedItem" : "Jun 16-Jun 17"
+            },
+            "group" : {
+                "id" : "Tp7Q3",
+                "title" : "Bugs"
+            }
+        }, 
+        {
+            "id" : "NkZWA",
+            "type" : "Member added",
+            "createdAt" : 1622914426643.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "FEWHs",
+                "title" : "After an updatBoard being redirected to the first board"
+            },
+            "group" : {
+                "id" : "Tp7Q3",
+                "title" : "Bugs"
+            }
+        }, 
+        {
+            "id" : "HlyP8",
+            "type" : "Priority changed",
+            "createdAt" : 1622914404727.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "FEWHs",
+                "title" : "After an updatBoard being redirected to the first board",
+                "changedItem" : "Low"
+            },
+            "group" : {
+                "id" : "Tp7Q3",
+                "title" : "Bugs"
+            }
+        }, 
+        {
+            "id" : "PmrCR",
+            "type" : "Status changed",
+            "createdAt" : 1622914403095.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "FEWHs",
+                "title" : "After an updatBoard being redirected to the first board",
+                "changedItem" : "Stuck"
+            },
+            "group" : {
+                "id" : "Tp7Q3",
+                "title" : "Bugs"
+            }
+        }, 
+        {
+            "id" : "9e27d",
+            "type" : "Priority changed",
+            "createdAt" : 1622914401021.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "FEWHs",
+                "title" : "After an updatBoard being redirected to the first board",
+                "changedItem" : "High"
+            },
+            "group" : {
+                "id" : "Tp7Q3",
+                "title" : "Bugs"
+            }
+        }, 
+        {
+            "id" : "odVls",
+            "type" : "Status changed",
+            "createdAt" : 1622914394567.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "FEWHs",
+                "title" : "After an updatBoard being redirected to the first board",
+                "changedItem" : "Working on it"
+            },
+            "group" : {
+                "id" : "Tp7Q3",
+                "title" : "Bugs"
+            }
+        }, 
+        {
+            "id" : "HvqqO",
+            "type" : "Status changed",
+            "createdAt" : 1622914368098.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "FEWHs",
+                "title" : "After an updatBoard being redirected to the first board",
+                "changedItem" : "Stuck"
+            },
+            "group" : {
+                "id" : "Tp7Q3",
+                "title" : "Bugs"
+            }
+        }, 
+        {
+            "id" : "vpLVk",
+            "type" : "Status changed",
+            "createdAt" : 1622914362789.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "FEWHs",
+                "title" : "After an updatBoard being redirected to the first board",
+                "changedItem" : "Working on it"
+            },
+            "group" : {
+                "id" : "Tp7Q3",
+                "title" : "Bugs"
+            }
+        }, 
+        {
+            "id" : "Vo0sJ",
+            "type" : "Timeline changed",
+            "createdAt" : 1622912893335.0,
+            "byMember" : {
+                "_id" : "60b7758c19a5e8e764a2db69",
+                "fullname" : "Basya coding",
+                "username" : "Basya",
+                "imgUrl" : "https://i.ibb.co/H2SxZc2/basya.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "uxnXm",
+                "title" : "Can't switch between boards",
+                "changedItem" : "Jun 06-Jun 10"
+            },
+            "group" : {
+                "id" : "Tp7Q3",
+                "title" : "Bugs"
+            }
+        }, 
+        {
+            "id" : "Lm7V8",
+            "type" : "Timeline changed",
+            "createdAt" : 1622912887301.0,
+            "byMember" : {
+                "_id" : "60b7758c19a5e8e764a2db69",
+                "fullname" : "Basya coding",
+                "username" : "Basya",
+                "imgUrl" : "https://i.ibb.co/H2SxZc2/basya.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "FEWHs",
+                "title" : "After an updatBoard being redirected to the first board",
+                "changedItem" : "Jun 02-Jun 09"
+            },
+            "group" : {
+                "id" : "Tp7Q3",
+                "title" : "Bugs"
+            }
+        }, 
+        {
+            "id" : "j8TfZ",
+            "type" : "Timeline changed",
+            "createdAt" : 1622912878616.0,
+            "byMember" : {
+                "_id" : "60b7758c19a5e8e764a2db69",
+                "fullname" : "Basya coding",
+                "username" : "Basya",
+                "imgUrl" : "https://i.ibb.co/H2SxZc2/basya.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "chXFG",
+                "title" : "nav width in px, overflow: hidden",
+                "changedItem" : "Jun 07-Jun 11"
+            },
+            "group" : {
+                "id" : "K9HI9",
+                "title" : "::After Asi\n\n"
+            }
+        }, 
+        {
+            "id" : "1ymsy",
+            "type" : "Timeline changed",
+            "createdAt" : 1622912868378.0,
+            "byMember" : {
+                "_id" : "60b7758c19a5e8e764a2db69",
+                "fullname" : "Basya coding",
+                "username" : "Basya",
+                "imgUrl" : "https://i.ibb.co/H2SxZc2/basya.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "g1t102",
+                "title" : "Date Range Picker",
+                "changedItem" : "Jun 03-Jun 13"
+            },
+            "group" : {
+                "id" : "g101",
+                "title" : "Features"
+            }
+        }, 
+        {
+            "id" : "20a7y",
+            "type" : "Timeline changed",
+            "createdAt" : 1622912857198.0,
+            "byMember" : {
+                "_id" : "60b7758c19a5e8e764a2db69",
+                "fullname" : "Basya coding",
+                "username" : "Basya",
+                "imgUrl" : "https://i.ibb.co/H2SxZc2/basya.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "g1t103",
+                "title" : "Drag and Drop",
+                "changedItem" : "Jun 05-Jun 09"
+            },
+            "group" : {
+                "id" : "g101",
+                "title" : "Features"
+            }
+        }, 
+        {
+            "id" : "1hv1q",
+            "type" : "Timeline changed",
+            "createdAt" : 1622912819395.0,
+            "byMember" : {
+                "_id" : "60b7758c19a5e8e764a2db69",
+                "fullname" : "Basya coding",
+                "username" : "Basya",
+                "imgUrl" : "https://i.ibb.co/H2SxZc2/basya.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "AF7YY",
+                "title" : "Upload images",
+                "changedItem" : "Jun 09-Jun 16"
+            },
+            "group" : {
+                "id" : "g101",
+                "title" : "Features"
+            }
+        }, 
+        {
+            "id" : "wgFdq",
+            "type" : "Timeline changed",
+            "createdAt" : 1622912813300.0,
+            "byMember" : {
+                "_id" : "60b7758c19a5e8e764a2db69",
+                "fullname" : "Basya coding",
+                "username" : "Basya",
+                "imgUrl" : "https://i.ibb.co/H2SxZc2/basya.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "g3t101",
+                "title" : "git + initial files setup + initial push/pull",
+                "changedItem" : "Jun 05-Jun 09"
+            },
+            "group" : {
+                "id" : "g103",
+                "title" : "Pre Operation"
+            }
+        }, 
+        {
+            "id" : "eYAwr",
+            "type" : "Timeline changed",
+            "createdAt" : 1622912808159.0,
+            "byMember" : {
+                "_id" : "60b7758c19a5e8e764a2db69",
+                "fullname" : "Basya coding",
+                "username" : "Basya",
+                "imgUrl" : "https://i.ibb.co/H2SxZc2/basya.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "0DsoW",
+                "title" : "Read documentations and find relevant libs",
+                "changedItem" : "May 30-Jun 05"
+            },
+            "group" : {
+                "id" : "g103",
+                "title" : "Pre Operation"
+            }
+        }, 
+        {
+            "id" : "eFkqH",
+            "type" : "Timeline changed",
+            "createdAt" : 1622912802520.0,
+            "byMember" : {
+                "_id" : "60b7758c19a5e8e764a2db69",
+                "fullname" : "Basya coding",
+                "username" : "Basya",
+                "imgUrl" : "https://i.ibb.co/H2SxZc2/basya.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "PIw43",
+                "title" : "Timeline should show num of days left",
+                "changedItem" : "Jun 07-Jun 17"
+            },
+            "group" : {
+                "id" : "g102",
+                "title" : "UX/UI"
+            }
+        }, 
+        {
+            "id" : "5vE5T",
+            "type" : "Timeline changed",
+            "createdAt" : 1622912793342.0,
+            "byMember" : {
+                "_id" : "60b7758c19a5e8e764a2db69",
+                "fullname" : "Basya coding",
+                "username" : "Basya",
+                "imgUrl" : "https://i.ibb.co/H2SxZc2/basya.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "g2t103",
+                "title" : "Add CSS transition/React animations when components changes",
+                "changedItem" : "Jun 05-Jun 10"
+            },
+            "group" : {
+                "id" : "g102",
+                "title" : "UX/UI"
+            }
+        }, 
+        {
+            "id" : "cAsnn",
+            "type" : "Priority changed",
+            "createdAt" : 1622912775255.0,
+            "byMember" : {
+                "_id" : "60b7758c19a5e8e764a2db69",
+                "fullname" : "Basya coding",
+                "username" : "Basya",
+                "imgUrl" : "https://i.ibb.co/H2SxZc2/basya.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "0DsoW",
+                "title" : "Read documentations and find relevant libs",
+                "changedItem" : "High"
+            },
+            "group" : {
+                "id" : "g103",
+                "title" : "Pre Operation"
+            }
+        }, 
+        {
+            "id" : "B7LJU",
+            "type" : "Status changed",
+            "createdAt" : 1622912766707.0,
+            "byMember" : {
+                "_id" : "60b7758c19a5e8e764a2db69",
+                "fullname" : "Basya coding",
+                "username" : "Basya",
+                "imgUrl" : "https://i.ibb.co/H2SxZc2/basya.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "chXFG",
+                "title" : "nav width in px, overflow: hidden",
+                "changedItem" : "Done"
+            },
+            "group" : {
+                "id" : "K9HI9",
+                "title" : "::After Asi\n\n"
+            }
+        }, 
+        {
+            "id" : "rrgIB",
+            "type" : "Status changed",
+            "createdAt" : 1622912764346.0,
+            "byMember" : {
+                "_id" : "60b7758c19a5e8e764a2db69",
+                "fullname" : "Basya coding",
+                "username" : "Basya",
+                "imgUrl" : "https://i.ibb.co/H2SxZc2/basya.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "VtfoT",
+                "title" : "sidebar nav: border 10 px white",
+                "changedItem" : "Done"
+            },
+            "group" : {
+                "id" : "K9HI9",
+                "title" : "::After Asi\n\n"
+            }
+        }, 
+        {
+            "id" : "vrvmO",
+            "type" : "Status changed",
+            "createdAt" : 1622912759439.0,
+            "byMember" : {
+                "_id" : "60b7758c19a5e8e764a2db69",
+                "fullname" : "Basya coding",
+                "username" : "Basya",
+                "imgUrl" : "https://i.ibb.co/H2SxZc2/basya.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "FEWHs",
+                "title" : "After an updatBoard being redirected to the first board",
+                "changedItem" : "On hold"
+            },
+            "group" : {
+                "id" : "Tp7Q3",
+                "title" : "Bugs"
+            }
+        }, 
+        {
+            "id" : "A4tUw",
+            "type" : "Priority changed",
+            "createdAt" : 1622912755129.0,
+            "byMember" : {
+                "_id" : "60b7758c19a5e8e764a2db69",
+                "fullname" : "Basya coding",
+                "username" : "Basya",
+                "imgUrl" : "https://i.ibb.co/H2SxZc2/basya.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "FEWHs",
+                "title" : "After an updatBoard being redirected to the first board",
+                "changedItem" : "Low"
+            },
+            "group" : {
+                "id" : "Tp7Q3",
+                "title" : "Bugs"
+            }
+        }, 
+        {
+            "id" : "Wx6uF",
+            "type" : "Priority changed",
+            "createdAt" : 1622912752565.0,
+            "byMember" : {
+                "_id" : "60b7758c19a5e8e764a2db69",
+                "fullname" : "Basya coding",
+                "username" : "Basya",
+                "imgUrl" : "https://i.ibb.co/H2SxZc2/basya.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "uxnXm",
+                "title" : "Can't switch between boards",
+                "changedItem" : "High"
+            },
+            "group" : {
+                "id" : "Tp7Q3",
+                "title" : "Bugs"
+            }
+        }, 
+        {
+            "id" : "uoqVo",
+            "type" : "Status changed",
+            "createdAt" : 1622912751462.0,
+            "byMember" : {
+                "_id" : "60b7758c19a5e8e764a2db69",
+                "fullname" : "Basya coding",
+                "username" : "Basya",
+                "imgUrl" : "https://i.ibb.co/H2SxZc2/basya.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "uxnXm",
+                "title" : "Can't switch between boards",
+                "changedItem" : "Working on it"
+            },
+            "group" : {
+                "id" : "Tp7Q3",
+                "title" : "Bugs"
+            }
+        }, 
+        {
+            "id" : "J2RND",
+            "type" : "Priority changed",
+            "createdAt" : 1622912748132.0,
+            "byMember" : {
+                "_id" : "60b7758c19a5e8e764a2db69",
+                "fullname" : "Basya coding",
+                "username" : "Basya",
+                "imgUrl" : "https://i.ibb.co/H2SxZc2/basya.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "ibh8c",
+                "title" : "Err when going straight to update activity log",
+                "changedItem" : "Medium"
+            },
+            "group" : {
+                "id" : "Tp7Q3",
+                "title" : "Bugs"
+            }
+        }, 
+        {
+            "id" : "A3pve",
+            "type" : "Status changed",
+            "createdAt" : 1622912746562.0,
+            "byMember" : {
+                "_id" : "60b7758c19a5e8e764a2db69",
+                "fullname" : "Basya coding",
+                "username" : "Basya",
+                "imgUrl" : "https://i.ibb.co/H2SxZc2/basya.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "ibh8c",
+                "title" : "Err when going straight to update activity log",
+                "changedItem" : "Stuck"
+            },
+            "group" : {
+                "id" : "Tp7Q3",
+                "title" : "Bugs"
+            }
+        }, 
+        {
+            "id" : "lwgks",
+            "type" : "Priority changed",
+            "createdAt" : 1622912741461.0,
+            "byMember" : {
+                "_id" : "60b7758c19a5e8e764a2db69",
+                "fullname" : "Basya coding",
+                "username" : "Basya",
+                "imgUrl" : "https://i.ibb.co/H2SxZc2/basya.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "POGZt",
+                "title" : "Add new task is being duplicated",
+                "changedItem" : "Low"
+            },
+            "group" : {
+                "id" : "Tp7Q3",
+                "title" : "Bugs"
+            }
+        }, 
+        {
+            "id" : "9rgQz",
+            "type" : "Status changed",
+            "createdAt" : 1622912739809.0,
+            "byMember" : {
+                "_id" : "60b7758c19a5e8e764a2db69",
+                "fullname" : "Basya coding",
+                "username" : "Basya",
+                "imgUrl" : "https://i.ibb.co/H2SxZc2/basya.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "POGZt",
+                "title" : "Add new task is being duplicated",
+                "changedItem" : "Done"
+            },
+            "group" : {
+                "id" : "Tp7Q3",
+                "title" : "Bugs"
+            }
+        }, 
+        {
+            "id" : "JWcZj",
+            "type" : "Task title changed",
+            "createdAt" : 1622912722205.0,
+            "byMember" : {
+                "_id" : "60b7758c19a5e8e764a2db69",
+                "fullname" : "Basya coding",
+                "username" : "Basya",
+                "imgUrl" : "https://i.ibb.co/H2SxZc2/basya.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "0DsoW",
+                "title" : "Read documentations and find relevant libs"
+            },
+            "group" : {
+                "id" : "g103",
+                "title" : "Pre Operation"
+            }
+        }, 
+        {
+            "id" : "7RlhX",
+            "type" : "Task deleted",
+            "createdAt" : 1622912704415.0,
+            "byMember" : {
+                "_id" : "60b7758c19a5e8e764a2db69",
+                "fullname" : "Basya coding",
+                "username" : "Basya",
+                "imgUrl" : "https://i.ibb.co/H2SxZc2/basya.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "njIl3",
+                "title" : "drag test"
+            },
+            "group" : {
+                "id" : "g103",
+                "title" : "Pre Operation"
+            }
+        }, 
+        {
+            "id" : "fDHSF",
+            "type" : "Task added",
+            "createdAt" : 1622912702810.0,
+            "byMember" : {
+                "_id" : "60b7758c19a5e8e764a2db69",
+                "fullname" : "Basya coding",
+                "username" : "Basya",
+                "imgUrl" : "https://i.ibb.co/H2SxZc2/basya.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "0DsoW",
+                "title" : "Drag & Drop test"
+            },
+            "group" : {
+                "id" : "g103",
+                "title" : "Pre Operation"
+            }
+        }, 
+        {
+            "id" : "DPd79",
+            "type" : "Task title changed",
+            "createdAt" : 1622912688465.0,
+            "byMember" : {
+                "_id" : "60b7758c19a5e8e764a2db69",
+                "fullname" : "Basya coding",
+                "username" : "Basya",
+                "imgUrl" : "https://i.ibb.co/H2SxZc2/basya.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "njIl3",
+                "title" : "drag test"
+            },
+            "group" : {
+                "id" : "g103",
+                "title" : "Pre Operation"
+            }
+        }, 
+        {
+            "id" : "lnJug",
+            "type" : "Task added",
+            "createdAt" : 1622912632653.0,
+            "byMember" : {
+                "_id" : "60b7756919a5e8e764a2cae1",
+                "fullname" : "Dafna Bashan ",
+                "username" : "Dafna",
+                "imgUrl" : "https://i.ibb.co/qMmQnJL/image.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "chXFG",
+                "title" : "nav width in px, overflow: hidden"
+            },
+            "group" : {
+                "id" : "K9HI9",
+                "title" : "::After Asi\n\n"
+            }
+        }, 
+        {
+            "id" : "aZTiL",
+            "type" : "Task added",
+            "createdAt" : 1622912611751.0,
+            "byMember" : {
+                "_id" : "60b7756919a5e8e764a2cae1",
+                "fullname" : "Dafna Bashan ",
+                "username" : "Dafna",
+                "imgUrl" : "https://i.ibb.co/qMmQnJL/image.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "VtfoT",
+                "title" : "sidebar nav: border 10 px white"
+            },
+            "group" : {
+                "id" : "K9HI9",
+                "title" : "::After Asi\n\n"
+            }
+        }, 
+        {
+            "id" : "czWfl",
+            "type" : "Task added",
+            "createdAt" : 1622912587081.0,
+            "byMember" : {
+                "_id" : "60b7756919a5e8e764a2cae1",
+                "fullname" : "Dafna Bashan ",
+                "username" : "Dafna",
+                "imgUrl" : "https://i.ibb.co/qMmQnJL/image.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "FEWHs",
+                "title" : "After an updatBoard being redirected to the first board"
+            },
+            "group" : {
+                "id" : "Tp7Q3",
+                "title" : "Bugs"
+            }
+        }, 
+        {
+            "id" : "PMcxw",
+            "type" : "Task added",
+            "createdAt" : 1622912571420.0,
+            "byMember" : {
+                "_id" : "60b7756919a5e8e764a2cae1",
+                "fullname" : "Dafna Bashan ",
+                "username" : "Dafna",
+                "imgUrl" : "https://i.ibb.co/qMmQnJL/image.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "uxnXm",
+                "title" : "Can't switch between boards"
+            },
+            "group" : {
+                "id" : "Tp7Q3",
+                "title" : "Bugs"
+            }
+        }, 
+        {
+            "id" : "ySrs4",
+            "type" : "Task added",
+            "createdAt" : 1622912539437.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "AF7YY",
+                "title" : "Upload images"
+            },
+            "group" : {
+                "id" : "g101",
+                "title" : "Features"
+            }
+        }, 
+        {
+            "id" : "TaiDl",
+            "type" : "Task title changed",
+            "createdAt" : 1622912525945.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "ibh8c",
+                "title" : "Err when going straight to update activity log"
+            },
+            "group" : {
+                "id" : "Tp7Q3",
+                "title" : "Bugs"
+            }
+        }, 
+        {
+            "id" : "NsEfa",
+            "type" : "Task added",
+            "createdAt" : 1622912521840.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "ibh8c",
+                "title" : "Err when going straight to update activity log"
+            },
+            "group" : {
+                "id" : "Tp7Q3",
+                "title" : "Bugs"
+            }
+        }, 
+        {
+            "id" : "gUFeT",
+            "type" : "Task added",
+            "createdAt" : 1622912505754.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "POGZt",
+                "title" : "Add new task is being duplicated"
+            },
+            "group" : {
+                "id" : "Tp7Q3",
+                "title" : "Bugs"
+            }
+        }, 
+        {
+            "id" : "M2Pxq",
+            "type" : "Group title changed",
+            "createdAt" : 1622912491252.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "Tp7Q3",
+                "title" : "Bugs"
+            }
+        }, 
+        {
+            "id" : "832yU",
+            "type" : "Group added",
+            "createdAt" : 1622912485917.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "Tp7Q3",
+                "title" : "New Group"
+            }
+        }, 
+        {
+            "id" : "Jya1D",
+            "type" : "Group title changed",
+            "createdAt" : 1622912462432.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "K9HI9",
+                "title" : "::After Asi\n\n"
+            }
+        }, 
+        {
+            "id" : "PLc8O",
+            "type" : "Group added",
+            "createdAt" : 1622912457229.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "K9HI9",
+                "title" : "New Group"
+            }
+        }, 
+        {
+            "id" : "IM3cm",
+            "type" : "Group deleted",
+            "createdAt" : 1622912300200.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "gS5CG",
+                "title" : "New Group"
+            }
+        }, 
+        {
+            "id" : "WJnQg",
+            "type" : "Group deleted",
+            "createdAt" : 1622912298187.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "HaopM",
+                "title" : "New Group"
+            }
+        }, 
+        {
+            "id" : "weNLj",
+            "type" : "Group added",
+            "createdAt" : 1622910419273.0,
+            "byMember" : {
+                "_id" : "60b7756919a5e8e764a2cae1",
+                "fullname" : "Dafna Bashan ",
+                "username" : "Dafna",
+                "imgUrl" : "https://i.ibb.co/qMmQnJL/image.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "gS5CG",
+                "title" : "New Group"
+            }
+        }, 
+        {
+            "id" : "ODS4r",
+            "type" : "Group added",
+            "createdAt" : 1622910409963.0,
+            "byMember" : {
+                "_id" : "60b7756919a5e8e764a2cae1",
+                "fullname" : "Dafna Bashan ",
+                "username" : "Dafna",
+                "imgUrl" : "https://i.ibb.co/qMmQnJL/image.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "HaopM",
+                "title" : "New Group"
+            }
+        }, 
+        {
+            "id" : "L7sfs",
+            "type" : "Task deleted",
+            "createdAt" : 1622909998332.0,
+            "byMember" : {
+                "_id" : "60b7756919a5e8e764a2cae1",
+                "fullname" : "Dafna Bashan ",
+                "username" : "Dafna",
+                "imgUrl" : "https://i.ibb.co/qMmQnJL/image.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "Q3oza",
+                "title" : "gsr"
+            },
+            "group" : {
+                "id" : "g101",
+                "title" : "Features"
+            }
+        }, 
+        {
+            "id" : "wsTYX",
+            "type" : "Task added",
+            "createdAt" : 1622909993117.0,
+            "byMember" : {
+                "_id" : "60b7756919a5e8e764a2cae1",
+                "fullname" : "Dafna Bashan ",
+                "username" : "Dafna",
+                "imgUrl" : "https://i.ibb.co/qMmQnJL/image.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "Q3oza",
+                "title" : "gsr"
+            },
+            "group" : {
+                "id" : "g101",
+                "title" : "Features"
+            }
+        }, 
+        {
+            "id" : "NikFJ",
+            "type" : "Group title changed",
+            "createdAt" : 1622899501264.0,
+            "byMember" : {
+                "_id" : "Y46zR",
+                "fullname" : "Guest",
+                "username" : "Guest",
+                "imgUrl" : "https://i.ibb.co/wS9zKnQ/guest-02.png"
+            },
+            "task" : null,
+            "group" : {
+                "id" : "g101",
+                "title" : "Features"
+            }
+        }, 
+        {
+            "id" : "jmFSR",
+            "type" : "Task added",
+            "createdAt" : 1622899251019.0,
+            "byMember" : {
+                "_id" : "1eQb3",
+                "fullname" : "Guest",
+                "username" : "Guest",
+                "imgUrl" : "https://i.ibb.co/wS9zKnQ/guest-02.png"
+            },
+            "task" : {
+                "id" : "njIl3",
+                "title" : "drag test"
+            },
+            "group" : {
+                "id" : "g103",
+                "title" : "Pre Operation"
+            }
+        }, 
+        {
+            "id" : "AjMsJ",
+            "type" : "Task deleted",
+            "createdAt" : 1622899231024.0,
+            "byMember" : {
+                "_id" : "pMnGu",
+                "fullname" : "Guest",
+                "username" : "Guest",
+                "imgUrl" : "https://i.ibb.co/wS9zKnQ/guest-02.png"
+            },
+            "task" : {
+                "id" : "g1t101",
+                "title" : "Content Editable"
+            },
+            "group" : {
+                "id" : "g103",
+                "title" : "Pre Operation"
+            }
+        }, 
+        {
+            "id" : "jTCN6",
+            "type" : "Member removed",
+            "createdAt" : 1622898767731.0,
+            "byMember" : {
+                "_id" : "wyZ1Z",
+                "fullname" : "Guest",
+                "username" : "Guest",
+                "imgUrl" : "https://i.ibb.co/wS9zKnQ/guest-02.png"
+            },
+            "task" : {
+                "id" : "g1t101",
+                "title" : "Content Editable",
+                "changedItem" : "Noga"
+            },
+            "group" : {
+                "id" : "g103",
+                "title" : "Pre Operation"
+            }
+        }, 
+        {
+            "id" : "C88IF",
+            "type" : "Member added",
+            "createdAt" : 1622898763199.0,
+            "byMember" : {
+                "_id" : "s4ucn",
+                "fullname" : "Guest",
+                "username" : "Guest",
+                "imgUrl" : "https://i.ibb.co/wS9zKnQ/guest-02.png"
+            },
+            "task" : {
+                "id" : "g1t101",
+                "title" : "Content Editable"
+            },
+            "group" : {
+                "id" : "g103",
+                "title" : "Pre Operation"
+            }
+        }, 
+        {
+            "id" : "OFm1u",
+            "type" : "Task title changed",
+            "createdAt" : 1622885049584.0,
+            "byMember" : {
+                "_id" : "TldFe",
+                "fullname" : "Guest",
+                "username" : "Guest",
+                "imgUrl" : "https://i.ibb.co/wS9zKnQ/guest-02.png"
+            },
+            "task" : {
+                "id" : "g1t101",
+                "title" : "Content Editable"
+            },
+            "group" : {
+                "id" : "g103",
+                "title" : "Pre Operation"
+            }
+        }, 
+        {
+            "id" : "xDG4c",
+            "type" : "Task title changed",
+            "createdAt" : 1622885043359.0,
+            "byMember" : {
+                "_id" : "hsLKt",
+                "fullname" : "Guest",
+                "username" : "Guest",
+                "imgUrl" : "https://i.ibb.co/wS9zKnQ/guest-02.png"
+            },
+            "task" : {
+                "id" : "g1t101",
+                "title" : "Content E\nditable"
+            },
+            "group" : {
+                "id" : "g103",
+                "title" : "Pre Operation"
+            }
+        }, 
+        {
+            "id" : "ERpYO",
+            "type" : "Task title changed",
+            "createdAt" : 1622884979061.0,
+            "byMember" : {
+                "_id" : "fb4RG",
+                "fullname" : "Guest",
+                "username" : "Guest",
+                "imgUrl" : "https://i.ibb.co/wS9zKnQ/guest-02.png"
+            },
+            "task" : {
+                "id" : "g1t101",
+                "title" : "Content E\nditable"
+            },
+            "group" : {
+                "id" : "g103",
+                "title" : "Pre Operation"
+            }
+        }, 
+        {
+            "id" : "b7l63",
+            "type" : "Task title changed",
+            "createdAt" : 1622884964663.0,
+            "byMember" : {
+                "_id" : "OAA1i",
+                "fullname" : "Guest",
+                "username" : "Guest",
+                "imgUrl" : "https://i.ibb.co/wS9zKnQ/guest-02.png"
+            },
+            "task" : {
+                "id" : "g1t101",
+                "title" : "Content E.\nditable"
+            },
+            "group" : {
+                "id" : "g103",
+                "title" : "Pre Operation"
+            }
+        }, 
+        {
+            "id" : "DFsPf",
+            "type" : "Title updated",
+            "createdAt" : 1622875162889.0,
+            "byMember" : {
+                "_id" : "cMVPq",
+                "fullname" : "Guest",
+                "username" : "Guest",
+                "imgUrl" : "../assets/imgs/db.png"
+            },
+            "task" : {
+                "id" : "g2t102",
+                "title" : "Popup modals and Material UI drawe\nr"
+            },
+            "group" : {
+                "id" : "g101",
+                "title" : "Features"
+            }
+        }, 
+        {
+            "id" : "a101",
+            "type" : "Changed title",
+            "createdAt" : 1622089520817.0,
+            "byMember" : {
+                "_id" : "u104",
+                "fullname" : "Basya Coding",
+                "username" : "Basya",
+                "imgUrl" : "https://i.ibb.co/H2SxZc2/basya.jpg"
+            },
+            "task" : {
+                "id" : "g3t101",
+                "title" : "git + initial files setup + initial push/pull"
+            },
+            "group" : {
+                "id" : "g102",
+                "title" : "UX/UI"
+            }
+        }, 
+        {
+            "id" : "a102",
+            "type" : "Changed status",
+            "createdAt" : 1621983948629.0,
+            "byMember" : {
+                "_id" : "u104",
+                "fullname" : "Basya Coding",
+                "username" : "Basya",
+                "imgUrl" : "https://i.ibb.co/H2SxZc2/basya.jpg"
+            },
+            "task" : {
+                "id" : "g3t101",
+                "title" : "git + initial files setup + initial push/pull"
+            },
+            "group" : {
+                "id" : "g102",
+                "title" : "UX/UI"
+            }
+        }, 
+        {
+            "id" : "a103",
+            "type" : "Deleted",
+            "createdAt" : 1622010043529.0,
+            "byMember" : {
+                "_id" : "u103",
+                "fullname" : "Yuval David",
+                "username" : "Yuval",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg"
+            },
+            "task" : {
+                "id" : "g3t106",
+                "title" : "git + initial files setup + initial push/pull"
+            },
+            "group" : {
+                "id" : "g101",
+                "title" : "Features"
+            }
+        }, 
+        {
+            "id" : "a104",
+            "type" : "Created",
+            "createdAt" : 1622155727123.0,
+            "byMember" : {
+                "_id" : "u103",
+                "fullname" : "Yuval David",
+                "username" : "Yuval",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg"
+            },
+            "task" : {
+                "id" : "g1t103",
+                "title" : "Drag and Drop"
+            },
+            "group" : {
+                "id" : "g101",
+                "title" : "Features"
+            }
+        }
+    ]
+}

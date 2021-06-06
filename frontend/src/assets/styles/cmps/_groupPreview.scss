@@ -9,7 +9,7 @@
     // overflow-x: scroll;
     .group-modal {
         animation: fade-in 0.5s ease-in-out both;
-        z-index: 1;
+        z-index: 5;
         font-size: 14px;
         line-height: 24px;
         padding: 5px 20px;
@@ -20,7 +20,7 @@
     }
 
     .group-preview {
-        // width: 100%;
+        width: 100%;
     }
     button {
         height: fit-content;
@@ -47,6 +47,34 @@
         font-size: rem(18px);
         &:hover {
             opacity: 1;
+        }
+    }
+}
+
+// /* MEDIUM */
+@media (max-width: $normal-breakpoint) {
+    .groups-container.wrapper {
+        overflow-x: scroll;
+
+        // overflow-x: scroll;
+        // min-height: 100vh;
+        // width: 1400px;
+    }
+}
+
+@media (max-width: $mobile-breakpoint) {
+    .group-container {
+        .group-preview {
+            // overflow-x: scroll;
+        }
+        .group-handle {
+            opacity: 0.5;
+        }
+        .group-modal-choose {
+            margin-left: 10px;
+            svg {
+                width: 16px;
+            }
         }
     }
 }

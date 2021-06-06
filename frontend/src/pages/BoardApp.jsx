@@ -27,10 +27,10 @@ class _BoardApp extends Component {
         filteredBoard: this.props.currBoard,
         isMap: false,
     }
-    appRef = React.createRef();
 
     async componentDidMount() {
         const boardId = this.props.match.params.boardId
+        console.log(`file: BoardApp.jsx || line 33 || boardId`, boardId)
         const board = await this.props.loadBoard(boardId)
         console.log('board id did mount', boardId);
         userService.getUsers()
@@ -55,7 +55,7 @@ class _BoardApp extends Component {
         if (prevId !== currId) {
             console.log('different id loading new board =')
             const board = await this.props.loadBoard(currId)
-            console.log('board in cdu in boardApp', board._id, board.title)
+            // console.log('board in cdu in boardApp', board._id, board.title)
             this.setState({ ...this.state, filteredBoard: board })
         }
     }
@@ -91,6 +91,7 @@ class _BoardApp extends Component {
         newBoard.activities.unshift(newActivity)
         await this.props.updateBoard(newBoard)
         socketService.emit('board updated', newBoard._id)
+        this.setState({ ...this.state, filteredBoard: newBoard })
     }
 
     getColor() {
@@ -115,11 +116,14 @@ class _BoardApp extends Component {
         }
         if (type === 'group') {
             const currBoard = this.state.filteredBoard;
+            // const currBoard = this.state.filteredBoard;
             const sourceGroup = this.state.filteredBoard.groups.find(group => group.id === draggableId);
             currBoard.groups.splice(source.index, 1);
             currBoard.groups.splice(destination.index, 0, sourceGroup)
         }
+        // const copyGroup = {};
         const copyGroup = { ...this.state.filteredBoard };
+        console.log(`file: BoardApp.jsx || line 125 || copyGroup`, copyGroup)
         await this.props.updateBoard(copyGroup);
         socketService.emit('board updated', copyGroup._id);
     }
@@ -205,7 +209,8 @@ class _BoardApp extends Component {
                 } else return false || filterRegex.test(group.title)
             })
         }
-        this.setState({ ...this.state, filteredBoard: filteredBoard })
+        /// state: isFiltered true 
+        // this.setState({ ...this.state, filteredBoard: filteredBoard })
         return filteredBoard
 
     }
@@ -225,7 +230,7 @@ class _BoardApp extends Component {
     render() {
         const { currBoard, filterBy } = this.props
         const { currUser, filteredBoard } = this.state
-        console.log('params', this.props.match.params)
+        // console.log('params', this.props.match.params)
         if (!currBoard) return <div>loading</div>
         return (
             <div className="board-app-container flex" onScroll={this.onScroll} ref="board-app-container">
@@ -233,7 +238,10 @@ class _BoardApp extends Component {
                 <SidebarNav onAddNewBoard={this.onAddNewBoard} />
 
                 <div className="container board-container">
-                    <BoardHeader board={filteredBoard} updateBoard={this.props.updateBoard} />
+                    <BoardHeader board={currBoard} updateBoard={this.props.updateBoard} />
+                    {/* <BoardHeader board={filteredBoard} updateBoard={this.props.updateBoard} /> */}
+                    {/* keep line above until issue with boards is fixed  */}
+
                     <BoardCtrlPanel board={this.props.currBoard} onChangeView={this.onChangeView} addNewGroup={this.addNewGroup} setFilter={this.setFilter} loadBoard={this.props.loadBoard} />
                     {/* <button className="btn" onClick={() => window.location.hash = `/board/${currBoard._id}/map`}>Map</button> */}
                     {/* <LocationSearchInput /> */}
@@ -251,7 +259,7 @@ class _BoardApp extends Component {
                                         {...provided.droppableProps} >
 
                                         <GroupList
-                                            board={filteredBoard} groups={filteredBoard.groups} key={currBoard._id}
+                                            board={currBoard} groups={currBoard.groups} key={currBoard._id}
                                             updateBoard={this.props.updateBoard} currUser={currUser} />
                                         {provided.placeholder}
                                     </div>

@@ -1,5 +1,19 @@
 .board-app-container {
     .board-container {
         width: 100%;
+        // overflow-x: scroll;
     }
 }
+
+@media (max-width: $mobile-breakpoint) {
+    .board-app-container {
+        // overflow-x: clip;
+
+        // .board-container {
+        //     width: 100%;
+        //     // overflow-x: scroll;
+        // }
+    }
+}
+
+// overflow-x: clip;

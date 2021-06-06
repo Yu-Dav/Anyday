@@ -1,6 +1,6 @@
 const initialState = {
-    boards: [],// all the boards as arr
-    currBoard: {}, // just the selected board as obj
+    boards: [],
+    currBoard: {},
     filterBy: {},
 };
 
@@ -10,9 +10,10 @@ const initialState = {
 export function boardReducer(state = initialState, action) {
     switch (action.type) {
         case 'SET_BOARD': // should come from getById
-            return { ...state, currBoard: {...action.board} };
+            console.log('SET BOARD in reducer =', action.board);
+            return { ...state, currBoard: { ...action.board } };
 
-        case 'SET_BOARDS': // should come from query -> the collection of all the boards 
+        case 'SET_BOARDS': // should come from query -> the collection of all the boards
             return { ...state, boards: [...action.boards] };
 
         case 'ADD_BOARD':
@@ -26,21 +27,20 @@ export function boardReducer(state = initialState, action) {
                 ),
             };
         case 'UPDATE_BOARD':
-            console.log('UPDATE board: in reducer =', action.board)
+            console.log('UPDATE board: in reducer =', action.board);
             return {
                 ...state,
+                currBoard: action.board,
                 boards: state.boards.map((board) =>
                     board._id === action.board._id ? action.board : board
                 ),
-                currBoard: {...action.board}
             };
             // return { ...state,boards: [action.board, ...state.boards.filter(board => action.board._id !== board._id)],  currBoard: {...action.board}}
         case 'LOADING_BOARDS':
             return { ...state, isLoading: action.isLoading, err: null };
+
         case 'SET_FILTER':
             return { ...state, filterBy: action.filterBy };
-
-
 
         // case 'SET_SEARCH':
         //     return { ...state, currSearchBy: action.searchTxt }
