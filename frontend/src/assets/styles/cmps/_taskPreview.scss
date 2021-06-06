@@ -40,11 +40,24 @@
     .creation-log {
         color: $fontDarkGrey;
     }
+    .fas.close {
+        opacity: 0;
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    &:hover {
+        .fas.close {
+            // opacity: .5;
+        }
+    } 
+
 }
 
 .timeline {
     // flex-basis: 200px;
-    cursor: pointer;
+    // cursor: pointer;
 }
 
 .triangle-with-shadow {
@@ -115,15 +128,15 @@ a {
     color: #0085ff;
 }
 
-// /* MEDIUM */
-@media (max-width: 1500px) {
-    .groups-container.wrapper {
-        overflow-x: scroll;
-        min-height: 100vh;
-        // width: 1400px;
-    }
-    // .board-contrainer {
-    //     overflow-x: scroll;
-    //     overflow: auto;
-    // }
-}
+// // /* MEDIUM */
+// @media (max-width: 1500px) {
+//     .groups-container.wrapper {
+//         overflow-x: scroll;
+//         min-height: 100vh;
+//         // width: 1400px;
+//     }
+//     // .board-contrainer {
+//     //     overflow-x: scroll;
+//     //     overflow: auto;
+//     // }
+// }

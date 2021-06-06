@@ -1,17 +1,15 @@
 .task-row {
-    .left-container{
+    .left-container {
         position: sticky;
         flex: 1;
         left: 0;
         z-index: 4;
         min-width: 380px;
-        
     }
     .cell.title {
         background-color: #f5f6f8f2;
         flex: 1;
         min-width: 380px;
-        max-width: 380px;
         text-align: start;
         cursor: pointer;
         .cell-title-editable {
@@ -42,7 +40,7 @@
             margin-left: 20px;
         }
         .fa-trash::after {
-            content: "\f1f8";
+            content: '\f1f8';
             margin-inline-end: 10px;
         }
         // .title-left-sec {
@@ -62,3 +60,25 @@
 
 //onscroll event?
 
+// /* MEDIUM */
+@media (max-width: $normal-breakpoint) {
+    .task-row {
+        .cell.title {
+            flex-basis: 380px;
+            max-width: 380px;
+        }
+        .left-container {
+            max-width: 380px;
+            flex-basis: 380px;
+        }
+    }
+}
+
+@media (max-width: $mobile-breakpoint) {
+    .task-row {
+        .cell.title {
+            // max-width: 200px;
+            // flex-basis: 200px;
+        }
+    }
+}

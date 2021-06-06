@@ -30,33 +30,44 @@ class _BoardApp extends Component {
     }
 
     async componentDidMount() {
+        socketService.setup()
+        console.log('hello')
         const boardId = this.props.match.params.boardId
+        console.log(`file: BoardApp.jsx || line 33 || boardId`, boardId)
+        socketService.emit('join board', boardId)
         const board = await this.props.loadBoard(boardId)
+<<<<<<< HEAD
         this.props.loadUsers()
         // userService.getUsers()
+=======
+        console.log('board id did mount', boardId);
+        userService.getUsers()
+>>>>>>> 3ad6b70f7e237c10e35b70c7f4543f8f7c532c04
         const user = userService.getLoggedinUser()
-        socketService.setup()
         socketService.on('board loaded', () => {
             this.props.loadBoard(boardId)
+            console.log('boardId =', boardId)
         })
-        socketService.emit('join board', boardId)
         this.setState({ ...this.state, currUser: user, filteredBoard: board })
     }
     componentWillUnmount() {
-        socketService.off('board loaded')
+
         socketService.terminate()
+        socketService.off('board loaded')
     }
-    async componentDidUpdate(prevProps, prevState) {
+    async componentDidUpdate(prevProps) {
         const prevId = prevProps.match.params.boardId
-        // console.log(`file: BoardApp.jsx || line 46 || prevId`, prevId)
+        console.log(`file: BoardApp.jsx || line 46 || prevId`, prevId)
         const currId = this.props.match.params.boardId
-        // console.log(`BoardApp.jsx || line 47 || currId`, currId)
-        if (!prevId) return
+        console.log(`BoardApp.jsx || line 47 || currId`, currId)
+        // if (!prevId) return
         if (prevId !== currId) {
             console.log('different id loading new board =')
             const board = await this.props.loadBoard(currId)
-            console.log('board in cdu in boardApp', board._id, board.title)
-            this.setState({ ...this.state, filteredBoard: board })
+            // socketService.emit('join board', currId)
+
+            // console.log('board in cdu in boardApp', board._id, board.title)
+            // this.setState({ ...this.state, filteredBoard: board })
         }
     }
 
@@ -91,6 +102,7 @@ class _BoardApp extends Component {
         newBoard.activities.unshift(newActivity)
         await this.props.updateBoard(newBoard)
         socketService.emit('board updated', newBoard._id)
+        this.setState({ ...this.state, filteredBoard: newBoard })
     }
 
     getColor() {
@@ -115,11 +127,14 @@ class _BoardApp extends Component {
         }
         if (type === 'group') {
             const currBoard = this.state.filteredBoard;
+            // const currBoard = this.state.filteredBoard;
             const sourceGroup = this.state.filteredBoard.groups.find(group => group.id === draggableId);
             currBoard.groups.splice(source.index, 1);
             currBoard.groups.splice(destination.index, 0, sourceGroup)
         }
+        // const copyGroup = {};
         const copyGroup = { ...this.state.filteredBoard };
+        console.log(`file: BoardApp.jsx || line 125 || copyGroup`, copyGroup)
         await this.props.updateBoard(copyGroup);
         socketService.emit('board updated', copyGroup._id);
     }
@@ -205,7 +220,8 @@ class _BoardApp extends Component {
                 } else return false || filterRegex.test(group.title)
             })
         }
-        this.setState({ ...this.state, filteredBoard: filteredBoard })
+        /// state: isFiltered true 
+        // this.setState({ ...this.state, filteredBoard: filteredBoard })
         return filteredBoard
 
     }
@@ -225,7 +241,7 @@ class _BoardApp extends Component {
     render() {
         const { currBoard, filterBy, users } = this.props
         const { currUser, filteredBoard } = this.state
-        console.log('params', this.props.match.params)
+        // console.log('params', this.props.match.params)
         if (!currBoard) return <div>loading</div>
         return (
             <div className="board-app-container flex" onScroll={this.onScroll} ref="board-app-container">
@@ -233,14 +249,27 @@ class _BoardApp extends Component {
                 <SidebarNav onAddNewBoard={this.onAddNewBoard} />
 
                 <div className="container board-container">
+<<<<<<< HEAD
                     <BoardHeader users={users} board={filteredBoard} updateBoard={this.props.updateBoard} />
                     <BoardCtrlPanel board={currBoard} onChangeView={this.onChangeView} addNewGroup={this.addNewGroup} setFilter={this.setFilter} loadBoard={this.props.loadBoard} />
                     {/* <button className="btn" onClick={() => window.location.hash = `/board/${currBoard._id}/map`}>Map</button> */}
                     {/* <LocationSearchInput /> */}
                     {/* <button className="btn-location" onClick={() => this.setState({ ...this.state, isMap: !this.state.isMap })}>Map</button> */}
                     {this.state.isMap && <GoogleMap className="container" />}
+=======
+>>>>>>> 3ad6b70f7e237c10e35b70c7f4543f8f7c532c04
 
-                    
+                    <div>
+                        <BoardHeader board={currBoard} updateBoard={this.props.updateBoard} />
+                        {/* <BoardHeader board={filteredBoard} updateBoard={this.props.updateBoard} /> */}
+                        {/* keep line above until issue with boards is fixed  */}
+
+                        <BoardCtrlPanel board={this.props.currBoard} onChangeView={this.onChangeView} addNewGroup={this.addNewGroup} setFilter={this.setFilter} loadBoard={this.props.loadBoard} />
+                        {/* <button className="btn" onClick={() => window.location.hash = `/board/${currBoard._id}/map`}>Map</button> */}
+                        {/* <LocationSearchInput /> */}
+                        {/* <button className="btn-location" onClick={() => this.setState({ ...this.state, isMap: !this.state.isMap })}>Map</button> */}
+                        {this.state.isMap && <GoogleMap className="container" />}
+                    </div>
 
                     {!this.state.isMap &&
                         <DragDropContext onDragEnd={this.onDragEnd}>
@@ -251,7 +280,7 @@ class _BoardApp extends Component {
                                         {...provided.droppableProps} >
 
                                         <GroupList
-                                            board={filteredBoard} groups={filteredBoard.groups} key={currBoard._id}
+                                            board={currBoard} groups={currBoard.groups} key={currBoard._id}
                                             updateBoard={this.props.updateBoard} currUser={currUser} />
                                         {provided.placeholder}
                                     </div>

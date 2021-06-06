@@ -15,6 +15,8 @@ export class BoardHeader extends Component {
         const { name } = target.dataset
         const value = target.innerText
         const newBoard = { ...this.props.board }
+        // console.log(`file: BoardHeader.jsx || line 13 || newBoard`, newBoard)
+        // Getting the correct board above
         newBoard[name] = value
         await this.props.updateBoard(newBoard)
         socketService.emit('board updated', newBoard._id)
@@ -48,8 +50,7 @@ export class BoardHeader extends Component {
         return (
 
             <div className="board-header">
-                <div className="flex space-between">
-                    {/* <div className="full title-container flex align-center"> */}
+                <div className="header-top flex space-between">
                     <div className="title-container flex align-center">
 
                         <EditableCmp className="title" name="title" value={board.title} updateFunc={this.onUpdateTitle} />

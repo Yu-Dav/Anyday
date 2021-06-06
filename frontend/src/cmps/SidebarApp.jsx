@@ -27,8 +27,8 @@ class _SidebarApp extends Component {
                 <nav className="flex justify-center column align-center space-between">
                     <div className="flex column align-center top-sec">
                         <Link to={`/`} ><img src={logo} alt="Logo" className="logo" title="Back to home page" /></Link>
-                        <Link to={`/board`} ><i className="fas fa-th" title="Go to boards"></i></Link>
-                        <i className="far fa-bell" onClick={this.onOpenNotifi}></i>
+                        {/* <Link to={`/board`} ><i className="fas fa-th" title="Go to boards"></i></Link> */}
+                        {/* <i className="far fa-bell" onClick={this.onOpenNotifi}></i> */}
                     </div>
                     <div className="user-greeting"><span>Hello {fullname}</span></div>
                     <div className="flex column align-center">

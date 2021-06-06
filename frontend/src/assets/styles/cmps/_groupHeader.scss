@@ -4,6 +4,7 @@
     text-align: center;
     color: #323338;
     margin-left: 7px;
+    font-family: roboto-light, helvetica, sans-serif;
 
     // background-color: white;
     & > *:not(:last-child) {
@@ -16,7 +17,7 @@
         font-size: rem(18px);
         flex: 1;
         min-width: 388px;
-        max-width: 388px;
+        // max-width: 388px;
         background-color: white;
     }
     .asignee {
@@ -41,5 +42,16 @@
     .timeline {
         flex-basis: 180px;
         min-width: 180px;
+        cursor: default;
     }
+}
+
+@media (max-width: $normal-breakpoint) {
+
+    .group-header {
+        .title {
+            max-width: 388px;
+        }
+    }
+
 }

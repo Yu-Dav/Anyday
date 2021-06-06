@@ -42,6 +42,8 @@ function connectSockets(http, session) {
             console.log('heard message ', msg);
         });
         socket.on('join board', (boardId) => {
+            console.log ('joining the board 45 ',)
+            console.log ('boardId =',boardId)
             if (socket.myBoard === boardId) return;
             if (socket.myBoard) {
                 socket.leave(socket.myBoard);
@@ -50,18 +52,12 @@ function connectSockets(http, session) {
             logger.debug('Session ID is', socket.handshake.sessionID);
             socket.myBoard = boardId;
         });
-        socket.on('board updated', (boardId) => {
-            console.log('line 54 in socket service::::: board loading', boardId);
-            gIo.emit('board loaded', boardId)
-        });
 
-        // socket.on('chat newMsg', msg => {
-        //     console.log('Msg', msg);
-        //     // emits to all sockets:
-        //     // gIo.emit('chat addMsg', msg)
-        //     // emits only to sockets in the same room
-        //     gIo.to(socket.myTopic).emit('chat addMsg', msg)
-        // })
+        socket.on('board updated', boardId => {
+        console.log(`file: socket.service.js || line 59 || boardId`, boardId)
+        console.log(`file: socket.service.js || line 61 || myBoard`, socket.myBoard)
+        // socket.to(socket.myBoard).emit('board loaded', boardId)
+        })
       
     });
 }

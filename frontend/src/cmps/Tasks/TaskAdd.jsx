@@ -9,7 +9,7 @@ export class TaskAdd extends Component {
         txt: ''
     }
     onAddTask = async ({ target }) => {
-        console.log('var =', this.props.currUser)
+        // console.log('var =', this.props.currUser)
         const value = target.value
         if (!value) return
         const newTask = {
@@ -57,7 +57,7 @@ export class TaskAdd extends Component {
         else newBoard.groups[groupIdx].tasks = [...newBoard.groups[groupIdx].tasks, newTask]
         newBoard.activities.unshift(newActivity)
         await this.props.updateBoard(newBoard)
-        console.log(`file: TaskAdd.jsx || line 47 || newBoard`, this.props.board)
+        // console.log(`file: TaskAdd.jsx || line 47 || newBoard`, this.props.board)
         await socketService.emit('board updated', newBoard._id)
         this.setState({ txt: '' })
     }

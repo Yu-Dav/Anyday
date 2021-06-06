@@ -1,0 +1,2747 @@
+{
+    "title" : "2021 Q2 - Quarterly Tasks  ",
+    "subtitle" : "Your new subtitle",
+    "description" : "Your new description",
+    "isFavorite" : false,
+    "statusLabels" : [ 
+        {
+            "id" : "sl1",
+            "title" : "Done",
+            "color" : "#00c875"
+        }, 
+        {
+            "id" : "sl2",
+            "title" : "Working on it",
+            "color" : "#fdab3d"
+        }, 
+        {
+            "id" : "sl3",
+            "title" : "Stuck",
+            "color" : "#ff642e"
+        }, 
+        {
+            "id" : "sl4",
+            "title" : "On hold",
+            "color" : "#175a63"
+        }, 
+        {
+            "id" : "sl5",
+            "title" : "",
+            "color" : "#c4c4c4"
+        }
+    ],
+    "members" : [ 
+        {
+            "_id" : "lDHSQ",
+            "fullname" : "Guest",
+            "username" : "Guest",
+            "imgUrl" : "https://i.ibb.co/wS9zKnQ/guest-02.png"
+        }
+    ],
+    "groups" : [ 
+        {
+            "id" : "4z3xd",
+            "style" : {
+                "bgColor" : "#00c875"
+            },
+            "title" : "Onboarding",
+            "tasks" : [ 
+                {
+                    "id" : "Www3D",
+                    "labelIds" : [ 
+                        "101"
+                    ],
+                    "createdAt" : 1622908542649.0,
+                    "title" : "New QA guidelines",
+                    "timeline" : [ 
+                        "2021-06-03T22:00:00.000Z", 
+                        "2021-06-10T22:00:00.000Z"
+                    ],
+                    "tags" : [ 
+                        {
+                            "id" : "chesY",
+                            "title" : "#new",
+                            "color" : "#c4c4c4"
+                        }
+                    ],
+                    "status" : {
+                        "id" : "sl2",
+                        "title" : "Working on it",
+                        "color" : "#fdab3d"
+                    },
+                    "priority" : {
+                        "id" : "pl1",
+                        "title" : "High",
+                        "color" : "#e2445c"
+                    },
+                    "members" : [],
+                    "comments" : [],
+                    "byMember" : {
+                        "_id" : "60b7755419a5e8e764a2c0dd",
+                        "fullname" : "Noga Jacobi",
+                        "username" : "Noga",
+                        "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                        "mentions" : [ 
+                            {
+                                "id" : "m101",
+                                "boardId" : "m101",
+                                "taskId" : "t101"
+                            }
+                        ]
+                    }
+                }, 
+                {
+                    "id" : "YRQvq",
+                    "labelIds" : [ 
+                        "101"
+                    ],
+                    "createdAt" : 1622908591179.0,
+                    "title" : "Survey new team members onboarding experience  ",
+                    "timeline" : [ 
+                        "2021-06-03T22:00:00.000Z", 
+                        "2021-06-16T22:00:00.000Z"
+                    ],
+                    "tags" : [],
+                    "status" : {
+                        "id" : "sl2",
+                        "title" : "Working on it",
+                        "color" : "#fdab3d"
+                    },
+                    "priority" : {
+                        "id" : "pl2",
+                        "title" : "Medium",
+                        "color" : "#a25ddc"
+                    },
+                    "members" : [],
+                    "comments" : [],
+                    "byMember" : {
+                        "_id" : "60b7755419a5e8e764a2c0dd",
+                        "fullname" : "Noga Jacobi",
+                        "username" : "Noga",
+                        "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                        "mentions" : [ 
+                            {
+                                "id" : "m101",
+                                "boardId" : "m101",
+                                "taskId" : "t101"
+                            }
+                        ]
+                    }
+                }, 
+                {
+                    "id" : "5GKqV",
+                    "labelIds" : [ 
+                        "101"
+                    ],
+                    "createdAt" : 1622909082032.0,
+                    "title" : "Full sync with new CRM",
+                    "timeline" : [ 
+                        "2021-05-31T22:00:00.000Z", 
+                        "2021-06-09T22:00:00.000Z"
+                    ],
+                    "tags" : [ 
+                        {
+                            "id" : "t102",
+                            "title" : "#problem",
+                            "color" : "#e2445c"
+                        }
+                    ],
+                    "status" : {
+                        "id" : "sl2",
+                        "title" : "Working on it",
+                        "color" : "#fdab3d"
+                    },
+                    "priority" : {
+                        "id" : "pl1",
+                        "title" : "High",
+                        "color" : "#e2445c"
+                    },
+                    "members" : [],
+                    "comments" : [],
+                    "byMember" : {
+                        "_id" : "60b7755419a5e8e764a2c0dd",
+                        "fullname" : "Noga Jacobi",
+                        "username" : "Noga",
+                        "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                        "mentions" : [ 
+                            {
+                                "id" : "m101",
+                                "boardId" : "m101",
+                                "taskId" : "t101"
+                            }
+                        ]
+                    }
+                }, 
+                {
+                    "id" : "QaFcp",
+                    "labelIds" : [ 
+                        "101"
+                    ],
+                    "createdAt" : 1622909172391.0,
+                    "title" : "New legislation in Taiwan",
+                    "timeline" : [ 
+                        null, 
+                        null
+                    ],
+                    "tags" : [ 
+                        {
+                            "id" : "chesY",
+                            "title" : "#new",
+                            "color" : "#c4c4c4"
+                        }
+                    ],
+                    "status" : {
+                        "id" : "sl1",
+                        "title" : "",
+                        "color" : "#c4c4c4"
+                    },
+                    "priority" : {
+                        "id" : "pl1",
+                        "title" : "",
+                        "color" : "#c4c4c4"
+                    },
+                    "members" : [],
+                    "comments" : [],
+                    "byMember" : {
+                        "_id" : "60b7755419a5e8e764a2c0dd",
+                        "fullname" : "Noga Jacobi",
+                        "username" : "Noga",
+                        "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                        "mentions" : [ 
+                            {
+                                "id" : "m101",
+                                "boardId" : "m101",
+                                "taskId" : "t101"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "id" : "IW3rE",
+            "style" : {
+                "bgColor" : "#784bd1"
+            },
+            "title" : "IT Departments' Tasks",
+            "tasks" : [ 
+                {
+                    "id" : "oqgMI",
+                    "labelIds" : [ 
+                        "101"
+                    ],
+                    "createdAt" : 1622907525069.0,
+                    "title" : "Dev teams restructuring per tasks",
+                    "timeline" : [ 
+                        "2021-06-01T22:00:00.000Z", 
+                        "2021-06-08T22:00:00.000Z"
+                    ],
+                    "tags" : [ 
+                        {
+                            "id" : "D6ube",
+                            "title" : "#co-department",
+                            "color" : "#0086BE"
+                        }
+                    ],
+                    "status" : {
+                        "id" : "sl4",
+                        "title" : "On hold",
+                        "color" : "#175a63"
+                    },
+                    "priority" : {
+                        "id" : "pl2",
+                        "title" : "Medium",
+                        "color" : "#a25ddc"
+                    },
+                    "members" : [],
+                    "comments" : [],
+                    "byMember" : {
+                        "_id" : "60b7755419a5e8e764a2c0dd",
+                        "fullname" : "Noga Jacobi",
+                        "username" : "Noga",
+                        "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                        "mentions" : [ 
+                            {
+                                "id" : "m101",
+                                "boardId" : "m101",
+                                "taskId" : "t101"
+                            }
+                        ]
+                    }
+                }, 
+                {
+                    "id" : "FQ2l0",
+                    "labelIds" : [ 
+                        "101"
+                    ],
+                    "createdAt" : 1622908276060.0,
+                    "title" : "Find ways to reduce bounce rate",
+                    "timeline" : [ 
+                        "2021-05-30T22:00:00.000Z", 
+                        "2021-06-04T22:00:00.000Z"
+                    ],
+                    "tags" : [ 
+                        {
+                            "id" : "t103",
+                            "title" : "#development",
+                            "color" : "#579bfc"
+                        }
+                    ],
+                    "status" : {
+                        "id" : "sl2",
+                        "title" : "Working on it",
+                        "color" : "#fdab3d"
+                    },
+                    "priority" : {
+                        "id" : "pl1",
+                        "title" : "High",
+                        "color" : "#e2445c"
+                    },
+                    "members" : [],
+                    "comments" : [],
+                    "byMember" : {
+                        "_id" : "60b7756919a5e8e764a2cae1",
+                        "fullname" : "Dafna Bashan ",
+                        "username" : "Dafna",
+                        "imgUrl" : "https://i.ibb.co/qMmQnJL/image.jpg",
+                        "mentions" : [ 
+                            {
+                                "id" : "m101",
+                                "boardId" : "m101",
+                                "taskId" : "t101"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "id" : "Z1AOD",
+            "style" : {
+                "bgColor" : "#ff642e"
+            },
+            "title" : "Team's Tasks\n\n",
+            "tasks" : [ 
+                {
+                    "id" : "bu228",
+                    "labelIds" : [ 
+                        "101"
+                    ],
+                    "createdAt" : 1622907158389.0,
+                    "timeline" : [ 
+                        "2021-05-29T22:00:00.000Z", 
+                        "2021-06-02T22:00:00.000Z"
+                    ],
+                    "title" : "Admin page, need to add more charts\n\n",
+                    "tags" : [ 
+                        {
+                            "id" : "t101",
+                            "title" : "#starting",
+                            "color" : "#61bd4f"
+                        }
+                    ],
+                    "status" : {
+                        "id" : "sl2",
+                        "title" : "Working on it",
+                        "color" : "#fdab3d"
+                    },
+                    "priority" : {
+                        "id" : "pl1",
+                        "title" : "High",
+                        "color" : "#e2445c"
+                    },
+                    "members" : [ 
+                        {
+                            "_id" : "lDHSQ",
+                            "fullname" : "Guest",
+                            "username" : "Guest",
+                            "imgUrl" : "https://i.ibb.co/wS9zKnQ/guest-02.png"
+                        }
+                    ],
+                    "comments" : [ 
+                        {
+                            "id" : "sUnlY",
+                            "txt" : "Added new group",
+                            "createdAt" : 1622907158389.0,
+                            "byMember" : {
+                                "_id" : "lDHSQ",
+                                "fullname" : "Guest",
+                                "username" : "Guest",
+                                "imgUrl" : "https://i.ibb.co/wS9zKnQ/guest-02.png"
+                            },
+                            "taskId" : "g3t101"
+                        }
+                    ],
+                    "byMember" : {
+                        "_id" : "lDHSQ",
+                        "fullname" : "Guest",
+                        "username" : "Guest",
+                        "imgUrl" : "https://i.ibb.co/wS9zKnQ/guest-02.png"
+                    }
+                }, 
+                {
+                    "id" : "Hszy2",
+                    "labelIds" : [ 
+                        "101"
+                    ],
+                    "createdAt" : 1622908304932.0,
+                    "title" : "Weekly HR reports",
+                    "timeline" : [ 
+                        "2021-05-31T22:00:00.000Z", 
+                        "2021-06-29T22:00:00.000Z"
+                    ],
+                    "tags" : [],
+                    "status" : {
+                        "id" : "sl1",
+                        "title" : "",
+                        "color" : "#c4c4c4"
+                    },
+                    "priority" : {
+                        "id" : "pl3",
+                        "title" : "Low",
+                        "color" : "#579bfc"
+                    },
+                    "members" : [],
+                    "comments" : [],
+                    "byMember" : {
+                        "_id" : "60b7756919a5e8e764a2cae1",
+                        "fullname" : "Dafna Bashan ",
+                        "username" : "Dafna",
+                        "imgUrl" : "https://i.ibb.co/qMmQnJL/image.jpg",
+                        "mentions" : [ 
+                            {
+                                "id" : "m101",
+                                "boardId" : "m101",
+                                "taskId" : "t101"
+                            }
+                        ]
+                    }
+                }, 
+                {
+                    "id" : "SHuYZ",
+                    "labelIds" : [ 
+                        "101"
+                    ],
+                    "createdAt" : 1622907459966.0,
+                    "title" : "Landing page footer",
+                    "timeline" : [ 
+                        "2021-06-02T22:00:00.000Z", 
+                        "2021-06-16T22:00:00.000Z"
+                    ],
+                    "tags" : [],
+                    "status" : {
+                        "id" : "sl4",
+                        "title" : "On hold",
+                        "color" : "#175a63"
+                    },
+                    "priority" : {
+                        "id" : "pl3",
+                        "title" : "Low",
+                        "color" : "#579bfc"
+                    },
+                    "members" : [],
+                    "comments" : [],
+                    "byMember" : {
+                        "_id" : "60b7755419a5e8e764a2c0dd",
+                        "fullname" : "Noga Jacobi",
+                        "username" : "Noga",
+                        "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                        "mentions" : [ 
+                            {
+                                "id" : "m101",
+                                "boardId" : "m101",
+                                "taskId" : "t101"
+                            }
+                        ]
+                    }
+                }, 
+                {
+                    "id" : "NsbIL",
+                    "labelIds" : [ 
+                        "101"
+                    ],
+                    "createdAt" : 1622907478750.0,
+                    "title" : "Custom menu in about us",
+                    "timeline" : [ 
+                        null, 
+                        null
+                    ],
+                    "tags" : [],
+                    "status" : {
+                        "id" : "sl1",
+                        "title" : "Done",
+                        "color" : "#00c875"
+                    },
+                    "priority" : {
+                        "id" : "pl1",
+                        "title" : "",
+                        "color" : "#c4c4c4"
+                    },
+                    "members" : [],
+                    "comments" : [],
+                    "byMember" : {
+                        "_id" : "60b7755419a5e8e764a2c0dd",
+                        "fullname" : "Noga Jacobi",
+                        "username" : "Noga",
+                        "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                        "mentions" : [ 
+                            {
+                                "id" : "m101",
+                                "boardId" : "m101",
+                                "taskId" : "t101"
+                            }
+                        ]
+                    }
+                }, 
+                {
+                    "id" : "GpliQ",
+                    "labelIds" : [ 
+                        "101"
+                    ],
+                    "createdAt" : 1622907974683.0,
+                    "title" : "Confirm new layout with marketing and client",
+                    "timeline" : [ 
+                        "2021-06-06T22:00:00.000Z", 
+                        "2021-06-09T22:00:00.000Z"
+                    ],
+                    "tags" : [ 
+                        {
+                            "id" : "t104",
+                            "title" : "#production",
+                            "color" : "#a25ddc"
+                        }
+                    ],
+                    "status" : {
+                        "id" : "sl1",
+                        "title" : "Done",
+                        "color" : "#00c875"
+                    },
+                    "priority" : {
+                        "id" : "pl1",
+                        "title" : "",
+                        "color" : "#c4c4c4"
+                    },
+                    "members" : [],
+                    "comments" : [],
+                    "byMember" : {
+                        "_id" : "60b7756919a5e8e764a2cae1",
+                        "fullname" : "Dafna Bashan ",
+                        "username" : "Dafna",
+                        "imgUrl" : "https://i.ibb.co/qMmQnJL/image.jpg",
+                        "mentions" : [ 
+                            {
+                                "id" : "m101",
+                                "boardId" : "m101",
+                                "taskId" : "t101"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "colors" : [ 
+        {
+            "id" : "c101",
+            "name" : "darkGreen",
+            "value" : "#037f4c"
+        }, 
+        {
+            "id" : "c102",
+            "name" : "green",
+            "value" : "#00c875"
+        }, 
+        {
+            "id" : "c103",
+            "name" : "yellowGreen",
+            "value" : "#9cd326"
+        }, 
+        {
+            "id" : "c104",
+            "name" : "beige",
+            "value" : "#cab641"
+        }, 
+        {
+            "id" : "c105",
+            "name" : "yellow",
+            "value" : "#ffcb00"
+        }, 
+        {
+            "id" : "c106",
+            "name" : "darkPurple",
+            "value" : "#784bd1"
+        }, 
+        {
+            "id" : "c107",
+            "name" : "purple",
+            "value" : "#a25ddc"
+        }, 
+        {
+            "id" : "c108",
+            "name" : "turquoise",
+            "value" : "#0086BE"
+        }, 
+        {
+            "id" : "c109",
+            "name" : "blue",
+            "value" : "#579bfc"
+        }, 
+        {
+            "id" : "c110",
+            "name" : "lightBlue",
+            "value" : "#66ccff"
+        }, 
+        {
+            "id" : "c111",
+            "name" : "darkRed",
+            "value" : "#bb3354"
+        }, 
+        {
+            "id" : "c112",
+            "name" : "red",
+            "value" : "#e2445c"
+        }, 
+        {
+            "id" : "c113",
+            "name" : "darkOrange",
+            "value" : "#ff642e"
+        }, 
+        {
+            "id" : "c114",
+            "name" : "orange",
+            "value" : "#fdab3d"
+        }, 
+        {
+            "id" : "c115",
+            "name" : "brown",
+            "value" : "#7f5347"
+        }, 
+        {
+            "id" : "c116",
+            "name" : "grey",
+            "value" : "#c4c4c4"
+        }, 
+        {
+            "id" : "c117",
+            "name" : "darkGrey",
+            "value" : "#808080"
+        }
+    ],
+    "createdBy" : {
+        "_id" : "lDHSQ",
+        "fullname" : "Guest",
+        "username" : "Guest",
+        "imgUrl" : "https://i.ibb.co/wS9zKnQ/guest-02.png"
+    },
+    "createdAt" : 1622907158389.0,
+    "priorityLabels" : [ 
+        {
+            "id" : "pl1",
+            "title" : "High",
+            "color" : "#e2445c"
+        }, 
+        {
+            "id" : "pl2",
+            "title" : "Medium",
+            "color" : "#a25ddc"
+        }, 
+        {
+            "id" : "pl3",
+            "title" : "Low",
+            "color" : "#579bfc"
+        }, 
+        {
+            "id" : "pl4",
+            "title" : "",
+            "color" : "#c4c4c4"
+        }
+    ],
+    "activities" : [ 
+        {
+            "id" : "niOgJ",
+            "type" : "Group deleted",
+            "createdAt" : 1622917427812.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "VdIMs",
+                "title" : "New Group"
+            }
+        }, 
+        {
+            "id" : "Z9ykB",
+            "type" : "Group deleted",
+            "createdAt" : 1622917425937.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "SCMHl",
+                "title" : "New Group"
+            }
+        }, 
+        {
+            "id" : "TgV2O",
+            "type" : "Group deleted",
+            "createdAt" : 1622917422830.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "Fz9pk",
+                "title" : "New Group"
+            }
+        }, 
+        {
+            "id" : "njFxp",
+            "type" : "Group deleted",
+            "createdAt" : 1622917420940.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "Xwczb",
+                "title" : "New Group"
+            }
+        }, 
+        {
+            "id" : "BhWi7",
+            "type" : "Group deleted",
+            "createdAt" : 1622917419045.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "rvAR3",
+                "title" : "New Group"
+            }
+        }, 
+        {
+            "id" : "5FJ9u",
+            "type" : "Group added",
+            "createdAt" : 1622910652902.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "SCMHl",
+                "title" : "New Group"
+            }
+        }, 
+        {
+            "id" : "0ZZej",
+            "type" : "Group added",
+            "createdAt" : 1622910640842.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "VdIMs",
+                "title" : "New Group"
+            }
+        }, 
+        {
+            "id" : "nllLZ",
+            "type" : "Group added",
+            "createdAt" : 1622910634613.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "Fz9pk",
+                "title" : "New Group"
+            }
+        }, 
+        {
+            "id" : "SZhXi",
+            "type" : "Group added",
+            "createdAt" : 1622910622501.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "Xwczb",
+                "title" : "New Group"
+            }
+        }, 
+        {
+            "id" : "bFzgB",
+            "type" : "Group added",
+            "createdAt" : 1622910613076.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "rvAR3",
+                "title" : "New Group"
+            }
+        }, 
+        {
+            "id" : "6aCCU",
+            "type" : "Group title changed",
+            "createdAt" : 1622910055244.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "IW3rE",
+                "title" : "IT Departments' Tasks"
+            }
+        }, 
+        {
+            "id" : "jZa9x",
+            "type" : "Timeline changed",
+            "createdAt" : 1622909340728.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "5GKqV",
+                "title" : "Full sync with new CRM",
+                "changedItem" : "Jun 01-Jun 10"
+            },
+            "group" : {
+                "id" : "4z3xd",
+                "title" : "Onboarding"
+            }
+        }, 
+        {
+            "id" : "fZoq5",
+            "type" : "Timeline changed",
+            "createdAt" : 1622909328755.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "YRQvq",
+                "title" : "Survey new team members onboarding experience  ",
+                "changedItem" : "Jun 04-Jun 17"
+            },
+            "group" : {
+                "id" : "4z3xd",
+                "title" : "Onboarding"
+            }
+        }, 
+        {
+            "id" : "MgJmX",
+            "type" : "Timeline changed",
+            "createdAt" : 1622909313613.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "Www3D",
+                "title" : "New QA guidelines",
+                "changedItem" : "Jun 04-Jun 11"
+            },
+            "group" : {
+                "id" : "4z3xd",
+                "title" : "Onboarding"
+            }
+        }, 
+        {
+            "id" : "nN2Wl",
+            "type" : "Tag added",
+            "createdAt" : 1622909272692.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "oqgMI",
+                "title" : "Dev teams restructuring per tasks",
+                "changedItem" : "#co-department"
+            },
+            "group" : {
+                "id" : "IW3rE",
+                "title" : "Departments' Tasks"
+            }
+        }, 
+        {
+            "id" : "kd0Mk",
+            "type" : "Tag added",
+            "createdAt" : 1622909211633.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "Www3D",
+                "title" : "New QA guidelines",
+                "changedItem" : "#new"
+            },
+            "group" : {
+                "id" : "4z3xd",
+                "title" : "Onboarding"
+            }
+        }, 
+        {
+            "id" : "Sa3t1",
+            "type" : "Tag removed",
+            "createdAt" : 1622909206090.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "Www3D",
+                "title" : "New QA guidelines",
+                "changedItem" : "##new"
+            },
+            "group" : {
+                "id" : "4z3xd",
+                "title" : "Onboarding"
+            }
+        }, 
+        {
+            "id" : "8xpOT",
+            "type" : "Tag added",
+            "createdAt" : 1622909202218.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "Www3D",
+                "title" : "New QA guidelines",
+                "changedItem" : "##new"
+            },
+            "group" : {
+                "id" : "4z3xd",
+                "title" : "Onboarding"
+            }
+        }, 
+        {
+            "id" : "wNEvY",
+            "type" : "Task title changed",
+            "createdAt" : 1622909185959.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "QaFcp",
+                "title" : "New legislation in Taiwan"
+            },
+            "group" : {
+                "id" : "4z3xd",
+                "title" : "Onboarding"
+            }
+        }, 
+        {
+            "id" : "iFLsS",
+            "type" : "Task added",
+            "createdAt" : 1622909172391.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "QaFcp",
+                "title" : "New "
+            },
+            "group" : {
+                "id" : "4z3xd",
+                "title" : "Onboarding"
+            }
+        }, 
+        {
+            "id" : "Z4FQE",
+            "type" : "Priority changed",
+            "createdAt" : 1622909142396.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "5GKqV",
+                "title" : "Full sync with new CRM",
+                "changedItem" : "High"
+            },
+            "group" : {
+                "id" : "4z3xd",
+                "title" : "Onboarding"
+            }
+        }, 
+        {
+            "id" : "1Wwdn",
+            "type" : "Status changed",
+            "createdAt" : 1622909140833.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "5GKqV",
+                "title" : "Full sync with new CRM",
+                "changedItem" : "Working on it"
+            },
+            "group" : {
+                "id" : "4z3xd",
+                "title" : "Onboarding"
+            }
+        }, 
+        {
+            "id" : "MpYTX",
+            "type" : "Task title changed",
+            "createdAt" : 1622909133184.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "5GKqV",
+                "title" : "Full sync with new CRM"
+            },
+            "group" : {
+                "id" : "4z3xd",
+                "title" : "Onboarding"
+            }
+        }, 
+        {
+            "id" : "2H3T9",
+            "type" : "Task added",
+            "createdAt" : 1622909082033.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "5GKqV",
+                "title" : "Full sync with new CSM"
+            },
+            "group" : {
+                "id" : "4z3xd",
+                "title" : "Onboarding"
+            }
+        }, 
+        {
+            "id" : "GKtUG",
+            "type" : "Priority changed",
+            "createdAt" : 1622908898211.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "Hszy2",
+                "title" : "Weekly HR reports",
+                "changedItem" : "Low"
+            },
+            "group" : {
+                "id" : "IW3rE",
+                "title" : "Departments' Tasks"
+            }
+        }, 
+        {
+            "id" : "hZKQm",
+            "type" : "Status changed",
+            "createdAt" : 1622908894715.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "FQ2l0",
+                "title" : "Find ways to reduce bounce rate",
+                "changedItem" : "Working on it"
+            },
+            "group" : {
+                "id" : "IW3rE",
+                "title" : "Departments' Tasks"
+            }
+        }, 
+        {
+            "id" : "disum",
+            "type" : "Priority changed",
+            "createdAt" : 1622908892239.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "FQ2l0",
+                "title" : "Find ways to reduce bounce rate",
+                "changedItem" : "High"
+            },
+            "group" : {
+                "id" : "IW3rE",
+                "title" : "Departments' Tasks"
+            }
+        }, 
+        {
+            "id" : "ALo78",
+            "type" : "Priority changed",
+            "createdAt" : 1622908890007.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "oqgMI",
+                "title" : "Dev teams restructuring per tasks",
+                "changedItem" : "Medium"
+            },
+            "group" : {
+                "id" : "IW3rE",
+                "title" : "Departments' Tasks"
+            }
+        }, 
+        {
+            "id" : "OdTdj",
+            "type" : "Status changed",
+            "createdAt" : 1622908887318.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "oqgMI",
+                "title" : "Dev teams restructuring per tasks",
+                "changedItem" : "On hold"
+            },
+            "group" : {
+                "id" : "IW3rE",
+                "title" : "Departments' Tasks"
+            }
+        }, 
+        {
+            "id" : "Iidx2",
+            "type" : "Priority changed",
+            "createdAt" : 1622908826558.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "YRQvq",
+                "title" : "Survey new team members onboarding experience  ",
+                "changedItem" : "Medium"
+            },
+            "group" : {
+                "id" : "4z3xd",
+                "title" : "Onboarding"
+            }
+        }, 
+        {
+            "id" : "YOktI",
+            "type" : "Status changed",
+            "createdAt" : 1622908823317.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "YRQvq",
+                "title" : "Survey new team members onboarding experience  ",
+                "changedItem" : "Working on it"
+            },
+            "group" : {
+                "id" : "4z3xd",
+                "title" : "Onboarding"
+            }
+        }, 
+        {
+            "id" : "8Trnk",
+            "type" : "Status changed",
+            "createdAt" : 1622908820471.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "Www3D",
+                "title" : "New QA guidelines",
+                "changedItem" : "Working on it"
+            },
+            "group" : {
+                "id" : "4z3xd",
+                "title" : "Onboarding"
+            }
+        }, 
+        {
+            "id" : "SYnSF",
+            "type" : "Priority changed",
+            "createdAt" : 1622908819370.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "Www3D",
+                "title" : "New QA guidelines",
+                "changedItem" : "High"
+            },
+            "group" : {
+                "id" : "4z3xd",
+                "title" : "Onboarding"
+            }
+        }, 
+        {
+            "id" : "fqXT3",
+            "type" : "Timeline changed",
+            "createdAt" : 1622908801464.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "FQ2l0",
+                "title" : "Find ways to reduce bounce rate",
+                "changedItem" : "May 31-Jun 05"
+            },
+            "group" : {
+                "id" : "IW3rE",
+                "title" : "Departments' Tasks"
+            }
+        }, 
+        {
+            "id" : "hBFYz",
+            "type" : "Timeline changed",
+            "createdAt" : 1622908788709.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "oqgMI",
+                "title" : "Dev teams restructuring per tasks",
+                "changedItem" : "Jun 02-Jun 09"
+            },
+            "group" : {
+                "id" : "IW3rE",
+                "title" : "Departments' Tasks"
+            }
+        }, 
+        {
+            "id" : "LLlqh",
+            "type" : "Timeline changed",
+            "createdAt" : 1622908775139.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "Hszy2",
+                "title" : "Weekly HR reports",
+                "changedItem" : "Jun 01-Jun 30"
+            },
+            "group" : {
+                "id" : "IW3rE",
+                "title" : "Departments' Tasks"
+            }
+        }, 
+        {
+            "id" : "d9Sp0",
+            "type" : "Timeline changed",
+            "createdAt" : 1622908760806.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "GpliQ",
+                "title" : "Confirm new layout with marketing and client",
+                "changedItem" : "Jun 07-Jun 10"
+            },
+            "group" : {
+                "id" : "Z1AOD",
+                "title" : "Team's Tasks\n\n"
+            }
+        }, 
+        {
+            "id" : "euR8I",
+            "type" : "Timeline changed",
+            "createdAt" : 1622908748266.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "SHuYZ",
+                "title" : "Landing page footer",
+                "changedItem" : "Jun 03-Jun 17"
+            },
+            "group" : {
+                "id" : "Z1AOD",
+                "title" : "Team's Tasks\n\n"
+            }
+        }, 
+        {
+            "id" : "oApNf",
+            "type" : "Timeline changed",
+            "createdAt" : 1622908738949.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "bu228",
+                "title" : "Admin page, need to add more charts\n\n",
+                "changedItem" : "May 30-Jun 03"
+            },
+            "group" : {
+                "id" : "Z1AOD",
+                "title" : "Team's Tasks\n\n"
+            }
+        }, 
+        {
+            "id" : "Og7Xo",
+            "type" : "Priority changed",
+            "createdAt" : 1622908726758.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "bu228",
+                "title" : "Admin page, need to add more charts\n\n",
+                "changedItem" : "High"
+            },
+            "group" : {
+                "id" : "Z1AOD",
+                "title" : "Team's Tasks\n\n"
+            }
+        }, 
+        {
+            "id" : "3ZKFj",
+            "type" : "Priority changed",
+            "createdAt" : 1622908725196.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "SHuYZ",
+                "title" : "Landing page footer",
+                "changedItem" : "Low"
+            },
+            "group" : {
+                "id" : "Z1AOD",
+                "title" : "Team's Tasks\n\n"
+            }
+        }, 
+        {
+            "id" : "zC0g1",
+            "type" : "Status changed",
+            "createdAt" : 1622908722193.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "GpliQ",
+                "title" : "Confirm new layout with marketing and client",
+                "changedItem" : "Done"
+            },
+            "group" : {
+                "id" : "Z1AOD",
+                "title" : "Team's Tasks\n\n"
+            }
+        }, 
+        {
+            "id" : "Dx92o",
+            "type" : "Status changed",
+            "createdAt" : 1622908717368.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "NsbIL",
+                "title" : "Custom menu in about us",
+                "changedItem" : "Done"
+            },
+            "group" : {
+                "id" : "Z1AOD",
+                "title" : "Team's Tasks\n\n"
+            }
+        }, 
+        {
+            "id" : "m6M2X",
+            "type" : "Status changed",
+            "createdAt" : 1622908713579.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "SHuYZ",
+                "title" : "Landing page footer",
+                "changedItem" : "On hold"
+            },
+            "group" : {
+                "id" : "Z1AOD",
+                "title" : "Team's Tasks\n\n"
+            }
+        }, 
+        {
+            "id" : "lbVjI",
+            "type" : "Task added",
+            "createdAt" : 1622908591179.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "YRQvq",
+                "title" : "Survey new team members onboarding experience  "
+            },
+            "group" : {
+                "id" : "4z3xd",
+                "title" : "Onboarding"
+            }
+        }, 
+        {
+            "id" : "qZkVq",
+            "type" : "Task deleted",
+            "createdAt" : 1622908544171.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "YbRg8",
+                "title" : "New QA guidelines"
+            },
+            "group" : {
+                "id" : "4z3xd",
+                "title" : "Onboarding"
+            }
+        }, 
+        {
+            "id" : "Y0qeI",
+            "type" : "Task added",
+            "createdAt" : 1622908542649.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "Www3D",
+                "title" : "New QA guidelines"
+            },
+            "group" : {
+                "id" : "4z3xd",
+                "title" : "Onboarding"
+            }
+        }, 
+        {
+            "id" : "ejd8P",
+            "type" : "Task title changed",
+            "createdAt" : 1622908540739.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "YbRg8",
+                "title" : "New QA guidelines"
+            },
+            "group" : {
+                "id" : "4z3xd",
+                "title" : "Onboarding"
+            }
+        }, 
+        {
+            "id" : "CKigS",
+            "type" : "Task title changed",
+            "createdAt" : 1622908536711.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "YbRg8",
+                "title" : "New QA guidelines"
+            },
+            "group" : {
+                "id" : "4z3xd",
+                "title" : "Onboarding"
+            }
+        }, 
+        {
+            "id" : "dQfB5",
+            "type" : "Task deleted",
+            "createdAt" : 1622908511272.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "kruJ9",
+                "title" : "New QA guidelines"
+            },
+            "group" : {
+                "id" : "4z3xd",
+                "title" : "Onboarding"
+            }
+        }, 
+        {
+            "id" : "cPIT6",
+            "type" : "Task added",
+            "createdAt" : 1622908507097.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "YbRg8",
+                "title" : "New QA guidelines"
+            },
+            "group" : {
+                "id" : "4z3xd",
+                "title" : "Onboarding"
+            }
+        }, 
+        {
+            "id" : "6Z0pH",
+            "type" : "Task title changed",
+            "createdAt" : 1622908505491.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "kruJ9",
+                "title" : "New QA guidelines"
+            },
+            "group" : {
+                "id" : "4z3xd",
+                "title" : "Onboarding"
+            }
+        }, 
+        {
+            "id" : "DqHfm",
+            "type" : "Task deleted",
+            "createdAt" : 1622908411915.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "afMNR",
+                "title" : "New QA guidelines"
+            },
+            "group" : {
+                "id" : "4z3xd",
+                "title" : "Onboarding"
+            }
+        }, 
+        {
+            "id" : "JSQuj",
+            "type" : "Task deleted",
+            "createdAt" : 1622908410957.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "4otfs",
+                "title" : "New QA guidelines"
+            },
+            "group" : {
+                "id" : "4z3xd",
+                "title" : "Onboarding"
+            }
+        }, 
+        {
+            "id" : "Of1SE",
+            "type" : "Task added",
+            "createdAt" : 1622908406947.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "kruJ9",
+                "title" : "New QA guidelines"
+            },
+            "group" : {
+                "id" : "4z3xd",
+                "title" : "Onboarding"
+            }
+        }, 
+        {
+            "id" : "VIiJS",
+            "type" : "Task title changed",
+            "createdAt" : 1622908403963.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "4otfs",
+                "title" : "New QA guidelines"
+            },
+            "group" : {
+                "id" : "4z3xd",
+                "title" : "Onboarding"
+            }
+        }, 
+        {
+            "id" : "RX1KP",
+            "type" : "Task added",
+            "createdAt" : 1622908343429.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "4otfs",
+                "title" : "New QA guidelines"
+            },
+            "group" : {
+                "id" : "4z3xd",
+                "title" : "Onboarding"
+            }
+        }, 
+        {
+            "id" : "SKxgK",
+            "type" : "Task title changed",
+            "createdAt" : 1622908341178.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "afMNR",
+                "title" : "New QA guidelines"
+            },
+            "group" : {
+                "id" : "4z3xd",
+                "title" : "Onboarding"
+            }
+        }, 
+        {
+            "id" : "skHlj",
+            "type" : "Task added",
+            "createdAt" : 1622908304932.0,
+            "byMember" : {
+                "_id" : "60b7756919a5e8e764a2cae1",
+                "fullname" : "Dafna Bashan ",
+                "username" : "Dafna",
+                "imgUrl" : "https://i.ibb.co/qMmQnJL/image.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "Hszy2",
+                "title" : "Weekly HR reports"
+            },
+            "group" : {
+                "id" : "IW3rE",
+                "title" : "Departments' Tasks"
+            }
+        }, 
+        {
+            "id" : "6pIRx",
+            "type" : "Task title changed",
+            "createdAt" : 1622908296403.0,
+            "byMember" : {
+                "_id" : "60b7756919a5e8e764a2cae1",
+                "fullname" : "Dafna Bashan ",
+                "username" : "Dafna",
+                "imgUrl" : "https://i.ibb.co/qMmQnJL/image.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "FQ2l0",
+                "title" : "Find ways to reduce bounce rate"
+            },
+            "group" : {
+                "id" : "IW3rE",
+                "title" : "Departments' Tasks"
+            }
+        }, 
+        {
+            "id" : "pOSSN",
+            "type" : "Task title changed",
+            "createdAt" : 1622908286268.0,
+            "byMember" : {
+                "_id" : "60b7756919a5e8e764a2cae1",
+                "fullname" : "Dafna Bashan ",
+                "username" : "Dafna",
+                "imgUrl" : "https://i.ibb.co/qMmQnJL/image.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "FQ2l0",
+                "title" : "Reduce bounce rate\n\n"
+            },
+            "group" : {
+                "id" : "IW3rE",
+                "title" : "Departments' Tasks"
+            }
+        }, 
+        {
+            "id" : "OsQa0",
+            "type" : "Task added",
+            "createdAt" : 1622908276060.0,
+            "byMember" : {
+                "_id" : "60b7756919a5e8e764a2cae1",
+                "fullname" : "Dafna Bashan ",
+                "username" : "Dafna",
+                "imgUrl" : "https://i.ibb.co/qMmQnJL/image.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "FQ2l0",
+                "title" : "Reduce "
+            },
+            "group" : {
+                "id" : "IW3rE",
+                "title" : "Departments' Tasks"
+            }
+        }, 
+        {
+            "id" : "J3KBc",
+            "type" : "Task title changed",
+            "createdAt" : 1622908012990.0,
+            "byMember" : {
+                "_id" : "60b7756919a5e8e764a2cae1",
+                "fullname" : "Dafna Bashan ",
+                "username" : "Dafna",
+                "imgUrl" : "https://i.ibb.co/qMmQnJL/image.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "GpliQ",
+                "title" : "Confirm new layout with marketing and client"
+            },
+            "group" : {
+                "id" : "Z1AOD",
+                "title" : "Team's Tasks\n\n"
+            }
+        }, 
+        {
+            "id" : "Ka8dF",
+            "type" : "Task added",
+            "createdAt" : 1622907974685.0,
+            "byMember" : {
+                "_id" : "60b7756919a5e8e764a2cae1",
+                "fullname" : "Dafna Bashan ",
+                "username" : "Dafna",
+                "imgUrl" : "https://i.ibb.co/qMmQnJL/image.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "GpliQ",
+                "title" : "Confirm new "
+            },
+            "group" : {
+                "id" : "Z1AOD",
+                "title" : "Team's Tasks\n\n"
+            }
+        }, 
+        {
+            "id" : "hRiQQ",
+            "type" : "Group title changed",
+            "createdAt" : 1622907549002.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "IW3rE",
+                "title" : "Departments' Tasks"
+            }
+        }, 
+        {
+            "id" : "3QhKw",
+            "type" : "Task added",
+            "createdAt" : 1622907525069.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "oqgMI",
+                "title" : "Dev teams restructuring per tasks"
+            },
+            "group" : {
+                "id" : "4z3xd",
+                "title" : "Onboarding"
+            }
+        }, 
+        {
+            "id" : "N65Xq",
+            "type" : "Task title changed",
+            "createdAt" : 1622907495979.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "afMNR",
+                "title" : "New QA guidelines\n\n"
+            },
+            "group" : {
+                "id" : "4z3xd",
+                "title" : "Onboarding"
+            }
+        }, 
+        {
+            "id" : "ZGz15",
+            "type" : "Task added",
+            "createdAt" : 1622907478750.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "NsbIL",
+                "title" : "Custom menu in about us"
+            },
+            "group" : {
+                "id" : "Z1AOD",
+                "title" : "Team's Tasks\n\n"
+            }
+        }, 
+        {
+            "id" : "1gERw",
+            "type" : "Task added",
+            "createdAt" : 1622907459967.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "SHuYZ",
+                "title" : "Landing page footer"
+            },
+            "group" : {
+                "id" : "Z1AOD",
+                "title" : "Team's Tasks\n\n"
+            }
+        }, 
+        {
+            "id" : "Syy3n",
+            "type" : "Task title changed",
+            "createdAt" : 1622907450707.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "bu228",
+                "title" : "Admin page, need to add more charts\n\n"
+            },
+            "group" : {
+                "id" : "Z1AOD",
+                "title" : "Team's Tasks\n\n"
+            }
+        }, 
+        {
+            "id" : "Cjjif",
+            "type" : "Group title changed",
+            "createdAt" : 1622907417551.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "4z3xd",
+                "title" : "Onboarding"
+            }
+        }, 
+        {
+            "id" : "gBL8S",
+            "type" : "Group title changed",
+            "createdAt" : 1622907408755.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "Z1AOD",
+                "title" : "Team's Tasks\n\n"
+            }
+        }, 
+        {
+            "id" : "VTj75",
+            "type" : "Task deleted",
+            "createdAt" : 1622907273310.0,
+            "byMember" : {
+                "_id" : "RyNXj",
+                "fullname" : "Guest",
+                "username" : "Guest",
+                "imgUrl" : "https://i.ibb.co/wS9zKnQ/guest-02.png"
+            },
+            "task" : {
+                "id" : "6VQE8",
+                "title" : "Onboarding process"
+            },
+            "group" : {
+                "id" : "IW3rE",
+                "title" : "Your new group"
+            }
+        }, 
+        {
+            "id" : "SDztz",
+            "type" : "Task deleted",
+            "createdAt" : 1622907272585.0,
+            "byMember" : {
+                "_id" : "S0lTh",
+                "fullname" : "Guest",
+                "username" : "Guest",
+                "imgUrl" : "https://i.ibb.co/wS9zKnQ/guest-02.png"
+            },
+            "task" : {
+                "id" : "BFfZN",
+                "title" : "Custom Widgets"
+            },
+            "group" : {
+                "id" : "IW3rE",
+                "title" : "Your new group"
+            }
+        }, 
+        {
+            "id" : "jisrj",
+            "type" : "Task deleted",
+            "createdAt" : 1622907271980.0,
+            "byMember" : {
+                "_id" : "o5GlE",
+                "fullname" : "Guest",
+                "username" : "Guest",
+                "imgUrl" : "https://i.ibb.co/wS9zKnQ/guest-02.png"
+            },
+            "task" : {
+                "id" : "80Ba9",
+                "title" : "Landing page, hero needs better adjustments "
+            },
+            "group" : {
+                "id" : "IW3rE",
+                "title" : "Your new group"
+            }
+        }, 
+        {
+            "id" : "APckU",
+            "type" : "Task deleted",
+            "createdAt" : 1622907271263.0,
+            "byMember" : {
+                "_id" : "hVyok",
+                "fullname" : "Guest",
+                "username" : "Guest",
+                "imgUrl" : "https://i.ibb.co/wS9zKnQ/guest-02.png"
+            },
+            "task" : {
+                "id" : "tLFmw",
+                "title" : "Admin page"
+            },
+            "group" : {
+                "id" : "IW3rE",
+                "title" : "Your new group"
+            }
+        }, 
+        {
+            "id" : "sUgQd",
+            "type" : "Task added",
+            "createdAt" : 1622907253308.0,
+            "byMember" : {
+                "_id" : "E8Trc",
+                "fullname" : "Guest",
+                "username" : "Guest",
+                "imgUrl" : "https://i.ibb.co/wS9zKnQ/guest-02.png"
+            },
+            "task" : {
+                "id" : "6VQE8",
+                "title" : "Onboarding process"
+            },
+            "group" : {
+                "id" : "IW3rE",
+                "title" : "Your new group"
+            }
+        }, 
+        {
+            "id" : "HXQ64",
+            "type" : "Task added",
+            "createdAt" : 1622907226426.0,
+            "byMember" : {
+                "_id" : "Sr8b7",
+                "fullname" : "Guest",
+                "username" : "Guest",
+                "imgUrl" : "https://i.ibb.co/wS9zKnQ/guest-02.png"
+            },
+            "task" : {
+                "id" : "BFfZN",
+                "title" : "Custom Widgets"
+            },
+            "group" : {
+                "id" : "IW3rE",
+                "title" : "Your new group"
+            }
+        }, 
+        {
+            "id" : "PMmGV",
+            "type" : "Task title changed",
+            "createdAt" : 1622907217113.0,
+            "byMember" : {
+                "_id" : "eUtrL",
+                "fullname" : "Guest",
+                "username" : "Guest",
+                "imgUrl" : "https://i.ibb.co/wS9zKnQ/guest-02.png"
+            },
+            "task" : {
+                "id" : "tLFmw",
+                "title" : "Admin page"
+            },
+            "group" : {
+                "id" : "IW3rE",
+                "title" : "Your new group"
+            }
+        }, 
+        {
+            "id" : "PWikr",
+            "type" : "Task added",
+            "createdAt" : 1622907212154.0,
+            "byMember" : {
+                "_id" : "vdaDV",
+                "fullname" : "Guest",
+                "username" : "Guest",
+                "imgUrl" : "https://i.ibb.co/wS9zKnQ/guest-02.png"
+            },
+            "task" : {
+                "id" : "80Ba9",
+                "title" : "Landing page, hero needs better adjustments "
+            },
+            "group" : {
+                "id" : "IW3rE",
+                "title" : "Your new group"
+            }
+        }, 
+        {
+            "id" : "Y9teO",
+            "type" : "Task title changed",
+            "createdAt" : 1622907193309.0,
+            "byMember" : {
+                "_id" : "8qXQo",
+                "fullname" : "Guest",
+                "username" : "Guest",
+                "imgUrl" : "https://i.ibb.co/wS9zKnQ/guest-02.png"
+            },
+            "task" : {
+                "id" : "tLFmw",
+                "title" : "Admin Page"
+            },
+            "group" : {
+                "id" : "IW3rE",
+                "title" : "Your new group"
+            }
+        }, 
+        {
+            "id" : "ssdov",
+            "type" : "Task title changed",
+            "createdAt" : 1622907189860.0,
+            "byMember" : {
+                "_id" : "urjR4",
+                "fullname" : "Guest",
+                "username" : "Guest",
+                "imgUrl" : "https://i.ibb.co/wS9zKnQ/guest-02.png"
+            },
+            "task" : {
+                "id" : "tLFmw",
+                "title" : "Admin Page\n\n"
+            },
+            "group" : {
+                "id" : "IW3rE",
+                "title" : "Your new group"
+            }
+        }
+    ],
+    "tags" : [ 
+        {
+            "id" : "D6ube",
+            "title" : "#co-department",
+            "color" : "#0086BE"
+        }, 
+        {
+            "id" : "chesY",
+            "title" : "#new",
+            "color" : "#c4c4c4"
+        }, 
+        {
+            "id" : "csOjb",
+            "title" : "##new",
+            "color" : "#66ccff"
+        }, 
+        {
+            "id" : "t101",
+            "title" : "#starting",
+            "color" : "#61bd4f"
+        }, 
+        {
+            "id" : "t102",
+            "title" : "#problem",
+            "color" : "#e2445c"
+        }, 
+        {
+            "id" : "t103",
+            "title" : "#development",
+            "color" : "#579bfc"
+        }, 
+        {
+            "id" : "t104",
+            "title" : "#production",
+            "color" : "#a25ddc"
+        }
+    ]
+}

@@ -1,0 +1,3094 @@
+{
+    "title" : "Global Branches",
+    "subtitle" : "Tracking tasks and goals",
+    "description" : "Your new description",
+    "isFavorite" : false,
+    "statusLabels" : [ 
+        {
+            "id" : "sl1",
+            "title" : "Done",
+            "color" : "#00c875"
+        }, 
+        {
+            "id" : "sl2",
+            "title" : "Working on it",
+            "color" : "#fdab3d"
+        }, 
+        {
+            "id" : "sl3",
+            "title" : "Stuck",
+            "color" : "#ff642e"
+        }, 
+        {
+            "id" : "sl4",
+            "title" : "On hold",
+            "color" : "#175a63"
+        }, 
+        {
+            "id" : "sl5",
+            "title" : "",
+            "color" : "#c4c4c4"
+        }
+    ],
+    "members" : [ 
+        {
+            "_id" : "u101",
+            "fullname" : "Noga Jacobi",
+            "username" : "Noga",
+            "password" : "noga1234",
+            "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+            "mentions" : [ 
+                {
+                    "id" : "m101",
+                    "boardId" : "m101",
+                    "taskId" : "t101"
+                }
+            ]
+        }, 
+        {
+            "_id" : "u102",
+            "fullname" : "Dafna Bashan ",
+            "username" : "Dafna",
+            "password" : "dafna1234",
+            "imgUrl" : "https://i.ibb.co/qMmQnJL/image.jpg",
+            "mentions" : [ 
+                {
+                    "id" : "m101",
+                    "boardId" : "m101",
+                    "taskId" : "t101"
+                }
+            ]
+        }, 
+        {
+            "_id" : "u103",
+            "fullname" : "Yuval David",
+            "username" : "Yuval",
+            "password" : "yuval1234",
+            "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+            "mentions" : [ 
+                {
+                    "id" : "m101",
+                    "boardId" : "m101",
+                    "taskId" : "t101"
+                }
+            ]
+        }, 
+        {
+            "_id" : "u104",
+            "fullname" : "Basya Coding",
+            "username" : "Basya",
+            "password" : "basya1234",
+            "imgUrl" : "https://i.ibb.co/H2SxZc2/basya.jpg",
+            "mentions" : [ 
+                {
+                    "id" : "m101",
+                    "boardId" : "m101",
+                    "taskId" : "t101"
+                }
+            ]
+        }
+    ],
+    "groups" : [ 
+        {
+            "id" : "5iuoO",
+            "style" : {
+                "bgColor" : "#784bd1"
+            },
+            "title" : "Tel Aviv ",
+            "tasks" : [ 
+                {
+                    "id" : "AHx58",
+                    "labelIds" : [ 
+                        "101"
+                    ],
+                    "createdAt" : 1622920920726.0,
+                    "timeline" : [ 
+                        null, 
+                        null
+                    ],
+                    "title" : "Mobile app",
+                    "tags" : [ 
+                        {
+                            "id" : "t103",
+                            "title" : "#development",
+                            "color" : "#579bfc"
+                        }, 
+                        {
+                            "id" : "t101",
+                            "title" : "#starting",
+                            "color" : "#61bd4f"
+                        }
+                    ],
+                    "status" : {
+                        "id" : "sl2",
+                        "title" : "Working on it",
+                        "color" : "#fdab3d"
+                    },
+                    "priority" : {
+                        "id" : "pl3",
+                        "title" : "Low",
+                        "color" : "#579bfc"
+                    },
+                    "members" : [ 
+                        {
+                            "_id" : "u102",
+                            "fullname" : "Dafna Bashan ",
+                            "username" : "Dafna",
+                            "password" : "dafna1234",
+                            "imgUrl" : "https://i.ibb.co/qMmQnJL/image.jpg",
+                            "mentions" : [ 
+                                {
+                                    "id" : "m101",
+                                    "boardId" : "m101",
+                                    "taskId" : "t101"
+                                }
+                            ]
+                        }, 
+                        {
+                            "_id" : "60b7755419a5e8e764a2c0dd",
+                            "fullname" : "Noga Jacobi",
+                            "username" : "Noga",
+                            "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                            "mentions" : [ 
+                                {
+                                    "id" : "m101",
+                                    "boardId" : "m101",
+                                    "taskId" : "t101"
+                                }
+                            ]
+                        }
+                    ],
+                    "comments" : [],
+                    "byMember" : {
+                        "_id" : "60b7755419a5e8e764a2c0dd",
+                        "fullname" : "Noga Jacobi",
+                        "username" : "Noga",
+                        "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                        "mentions" : [ 
+                            {
+                                "id" : "m101",
+                                "boardId" : "m101",
+                                "taskId" : "t101"
+                            }
+                        ]
+                    }
+                }, 
+                {
+                    "id" : "F4rHz",
+                    "labelIds" : [ 
+                        "101"
+                    ],
+                    "createdAt" : 1622921825202.0,
+                    "title" : "Responsive design",
+                    "timeline" : [ 
+                        null, 
+                        null
+                    ],
+                    "tags" : [],
+                    "status" : {
+                        "id" : "sl1",
+                        "title" : "Done",
+                        "color" : "#00c875"
+                    },
+                    "priority" : {
+                        "id" : "pl1",
+                        "title" : "High",
+                        "color" : "#e2445c"
+                    },
+                    "members" : [],
+                    "comments" : [],
+                    "byMember" : {
+                        "_id" : "60b7755419a5e8e764a2c0dd",
+                        "fullname" : "Noga Jacobi",
+                        "username" : "Noga",
+                        "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                        "mentions" : [ 
+                            {
+                                "id" : "m101",
+                                "boardId" : "m101",
+                                "taskId" : "t101"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "id" : "9W9ma",
+            "style" : {
+                "bgColor" : "#037f4c"
+            },
+            "title" : "Delft\n\n",
+            "tasks" : [ 
+                {
+                    "id" : "473hT",
+                    "labelIds" : [ 
+                        "101"
+                    ],
+                    "createdAt" : 1622924203409.0,
+                    "title" : "Newvvggggvvvv",
+                    "timeline" : [ 
+                        null, 
+                        null
+                    ],
+                    "tags" : [],
+                    "status" : {
+                        "id" : "sl1",
+                        "title" : "",
+                        "color" : "#c4c4c4"
+                    },
+                    "priority" : {
+                        "id" : "pl1",
+                        "title" : "",
+                        "color" : "#c4c4c4"
+                    },
+                    "members" : [ 
+                        {
+                            "_id" : "u103",
+                            "fullname" : "Yuval David",
+                            "username" : "Yuval",
+                            "password" : "yuval1234",
+                            "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                            "mentions" : [ 
+                                {
+                                    "id" : "m101",
+                                    "boardId" : "m101",
+                                    "taskId" : "t101"
+                                }
+                            ]
+                        }
+                    ],
+                    "comments" : [],
+                    "byMember" : {
+                        "_id" : "60b7755419a5e8e764a2c0dd",
+                        "fullname" : "Noga Jacobi",
+                        "username" : "Noga",
+                        "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                        "mentions" : [ 
+                            {
+                                "id" : "m101",
+                                "boardId" : "m101",
+                                "taskId" : "t101"
+                            }
+                        ]
+                    }
+                }, 
+                {
+                    "id" : "8gniC",
+                    "labelIds" : [ 
+                        "101"
+                    ],
+                    "createdAt" : 1622958382050.0,
+                    "title" : "new task",
+                    "timeline" : [ 
+                        null, 
+                        null
+                    ],
+                    "tags" : [],
+                    "status" : {
+                        "id" : "sl1",
+                        "title" : "",
+                        "color" : "#c4c4c4"
+                    },
+                    "priority" : {
+                        "id" : "pl1",
+                        "title" : "",
+                        "color" : "#c4c4c4"
+                    },
+                    "members" : [],
+                    "comments" : [],
+                    "byMember" : {
+                        "_id" : "60b7755419a5e8e764a2c0dd",
+                        "fullname" : "Noga Jacobi",
+                        "username" : "Noga",
+                        "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                        "mentions" : [ 
+                            {
+                                "id" : "m101",
+                                "boardId" : "m101",
+                                "taskId" : "t101"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "createdAt" : 1622925544111.0
+        }, 
+        {
+            "id" : "rVpUr",
+            "style" : {
+                "bgColor" : "#00c875"
+            },
+            "title" : "Milano",
+            "tasks" : [ 
+                {
+                    "id" : "4Vdul",
+                    "labelIds" : [ 
+                        "101"
+                    ],
+                    "createdAt" : 1622920920726.0,
+                    "timeline" : [ 
+                        null, 
+                        null
+                    ],
+                    "title" : "New website",
+                    "tags" : [ 
+                        {
+                            "id" : "t101",
+                            "title" : "#starting",
+                            "color" : "#61bd4f"
+                        }
+                    ],
+                    "status" : {
+                        "id" : "sl4",
+                        "title" : "On hold",
+                        "color" : "#175a63"
+                    },
+                    "priority" : {
+                        "id" : "pl3",
+                        "title" : "Low",
+                        "color" : "#579bfc"
+                    },
+                    "members" : [ 
+                        {
+                            "_id" : "u101",
+                            "fullname" : "Noga Jacobi",
+                            "username" : "Noga",
+                            "password" : "noga1234",
+                            "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                            "mentions" : [ 
+                                {
+                                    "id" : "m101",
+                                    "boardId" : "m101",
+                                    "taskId" : "t101"
+                                }
+                            ]
+                        }, 
+                        {
+                            "_id" : "u104",
+                            "fullname" : "Basya Coding",
+                            "username" : "Basya",
+                            "password" : "basya1234",
+                            "imgUrl" : "https://i.ibb.co/H2SxZc2/basya.jpg",
+                            "mentions" : [ 
+                                {
+                                    "id" : "m101",
+                                    "boardId" : "m101",
+                                    "taskId" : "t101"
+                                }
+                            ]
+                        }
+                    ],
+                    "comments" : [],
+                    "byMember" : {
+                        "_id" : "60b7755419a5e8e764a2c0dd",
+                        "fullname" : "Noga Jacobi",
+                        "username" : "Noga",
+                        "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                        "mentions" : [ 
+                            {
+                                "id" : "m101",
+                                "boardId" : "m101",
+                                "taskId" : "t101"
+                            }
+                        ]
+                    }
+                }, 
+                {
+                    "id" : "9ENC9",
+                    "labelIds" : [ 
+                        "101"
+                    ],
+                    "createdAt" : 1622921921203.0,
+                    "title" : "Date range picker improvments",
+                    "timeline" : [ 
+                        null, 
+                        null
+                    ],
+                    "tags" : [],
+                    "status" : {
+                        "id" : "sl1",
+                        "title" : "Done",
+                        "color" : "#00c875"
+                    },
+                    "priority" : {
+                        "id" : "pl2",
+                        "title" : "Medium",
+                        "color" : "#a25ddc"
+                    },
+                    "members" : [],
+                    "comments" : [],
+                    "byMember" : {
+                        "_id" : "60b7755419a5e8e764a2c0dd",
+                        "fullname" : "Noga Jacobi",
+                        "username" : "Noga",
+                        "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                        "mentions" : [ 
+                            {
+                                "id" : "m101",
+                                "boardId" : "m101",
+                                "taskId" : "t101"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "id" : "PQgto",
+            "style" : {
+                "bgColor" : "#ff642e"
+            },
+            "title" : "Amsterdam",
+            "tasks" : [ 
+                {
+                    "id" : "mx9Hc",
+                    "labelIds" : [ 
+                        "101"
+                    ],
+                    "createdAt" : 1622920920726.0,
+                    "timeline" : [ 
+                        null, 
+                        null
+                    ],
+                    "title" : "Drag and drop animations",
+                    "tags" : [ 
+                        {
+                            "id" : "t101",
+                            "title" : "#starting",
+                            "color" : "#61bd4f"
+                        }
+                    ],
+                    "status" : {
+                        "id" : "sl2",
+                        "title" : "Working on it",
+                        "color" : "#fdab3d"
+                    },
+                    "priority" : {
+                        "id" : "pl3",
+                        "title" : "Low",
+                        "color" : "#579bfc"
+                    },
+                    "members" : [ 
+                        {
+                            "_id" : "u103",
+                            "fullname" : "Yuval David",
+                            "username" : "Yuval",
+                            "password" : "yuval1234",
+                            "imgUrl" : "https://i.ibb.co/GFbDjJx/yuval.jpg",
+                            "mentions" : [ 
+                                {
+                                    "id" : "m101",
+                                    "boardId" : "m101",
+                                    "taskId" : "t101"
+                                }
+                            ]
+                        }
+                    ],
+                    "comments" : [],
+                    "byMember" : {
+                        "_id" : "60b7755419a5e8e764a2c0dd",
+                        "fullname" : "Noga Jacobi",
+                        "username" : "Noga",
+                        "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                        "mentions" : [ 
+                            {
+                                "id" : "m101",
+                                "boardId" : "m101",
+                                "taskId" : "t101"
+                            }
+                        ]
+                    }
+                }, 
+                {
+                    "id" : "bAvZz",
+                    "labelIds" : [ 
+                        "101"
+                    ],
+                    "createdAt" : 1622922013638.0,
+                    "title" : "Integration with slack",
+                    "timeline" : [ 
+                        null, 
+                        null
+                    ],
+                    "tags" : [ 
+                        {
+                            "id" : "t104",
+                            "title" : "#production",
+                            "color" : "#a25ddc"
+                        }
+                    ],
+                    "status" : {
+                        "id" : "sl1",
+                        "title" : "Done",
+                        "color" : "#00c875"
+                    },
+                    "priority" : {
+                        "id" : "pl1",
+                        "title" : "High",
+                        "color" : "#e2445c"
+                    },
+                    "members" : [],
+                    "comments" : [],
+                    "byMember" : {
+                        "_id" : "60b7755419a5e8e764a2c0dd",
+                        "fullname" : "Noga Jacobi",
+                        "username" : "Noga",
+                        "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                        "mentions" : [ 
+                            {
+                                "id" : "m101",
+                                "boardId" : "m101",
+                                "taskId" : "t101"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "colors" : [ 
+        {
+            "id" : "c101",
+            "name" : "darkGreen",
+            "value" : "#037f4c"
+        }, 
+        {
+            "id" : "c102",
+            "name" : "green",
+            "value" : "#00c875"
+        }, 
+        {
+            "id" : "c103",
+            "name" : "yellowGreen",
+            "value" : "#9cd326"
+        }, 
+        {
+            "id" : "c104",
+            "name" : "beige",
+            "value" : "#cab641"
+        }, 
+        {
+            "id" : "c105",
+            "name" : "yellow",
+            "value" : "#ffcb00"
+        }, 
+        {
+            "id" : "c106",
+            "name" : "darkPurple",
+            "value" : "#784bd1"
+        }, 
+        {
+            "id" : "c107",
+            "name" : "purple",
+            "value" : "#a25ddc"
+        }, 
+        {
+            "id" : "c108",
+            "name" : "turquoise",
+            "value" : "#0086BE"
+        }, 
+        {
+            "id" : "c109",
+            "name" : "blue",
+            "value" : "#579bfc"
+        }, 
+        {
+            "id" : "c110",
+            "name" : "lightBlue",
+            "value" : "#66ccff"
+        }, 
+        {
+            "id" : "c111",
+            "name" : "darkRed",
+            "value" : "#bb3354"
+        }, 
+        {
+            "id" : "c112",
+            "name" : "red",
+            "value" : "#e2445c"
+        }, 
+        {
+            "id" : "c113",
+            "name" : "darkOrange",
+            "value" : "#ff642e"
+        }, 
+        {
+            "id" : "c114",
+            "name" : "orange",
+            "value" : "#fdab3d"
+        }, 
+        {
+            "id" : "c115",
+            "name" : "brown",
+            "value" : "#7f5347"
+        }, 
+        {
+            "id" : "c116",
+            "name" : "grey",
+            "value" : "#c4c4c4"
+        }, 
+        {
+            "id" : "c117",
+            "name" : "darkGrey",
+            "value" : "#808080"
+        }
+    ],
+    "createdBy" : {
+        "_id" : "60b7755419a5e8e764a2c0dd",
+        "fullname" : "Noga Jacobi",
+        "username" : "Noga",
+        "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+        "mentions" : [ 
+            {
+                "id" : "m101",
+                "boardId" : "m101",
+                "taskId" : "t101"
+            }
+        ]
+    },
+    "createdAt" : 1622920920726.0,
+    "priorityLabels" : [ 
+        {
+            "id" : "pl1",
+            "title" : "High",
+            "color" : "#e2445c"
+        }, 
+        {
+            "id" : "pl2",
+            "title" : "Medium",
+            "color" : "#a25ddc"
+        }, 
+        {
+            "id" : "pl3",
+            "title" : "Low",
+            "color" : "#579bfc"
+        }, 
+        {
+            "id" : "pl4",
+            "title" : "",
+            "color" : "#c4c4c4"
+        }
+    ],
+    "activities" : [ 
+        {
+            "id" : "b8maW",
+            "type" : "Task added",
+            "createdAt" : 1622958382050.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "8gniC",
+                "title" : "new task"
+            },
+            "group" : {
+                "id" : "9W9ma",
+                "title" : "Delft\n\n"
+            }
+        }, 
+        {
+            "id" : "0YPOr",
+            "type" : "Group deleted",
+            "createdAt" : 1622958368603.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "uN6rt",
+                "title" : "New Group"
+            }
+        }, 
+        {
+            "id" : "SUYqs",
+            "type" : "Group added",
+            "createdAt" : 1622927156285.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "uN6rt",
+                "title" : "New Group"
+            }
+        }, 
+        {
+            "id" : "wEZwM",
+            "type" : "Group deleted",
+            "createdAt" : 1622926809225.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "3jWOC",
+                "title" : "Delft"
+            }
+        }, 
+        {
+            "id" : "poZgL",
+            "type" : "Group deleted",
+            "createdAt" : 1622926538835.0,
+            "byMember" : {
+                "_id" : "60b7756919a5e8e764a2cae1",
+                "fullname" : "Dafna Bashan ",
+                "username" : "Dafna",
+                "imgUrl" : "https://i.ibb.co/qMmQnJL/image.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "WZBVJ",
+                "title" : "New Group"
+            }
+        }, 
+        {
+            "id" : "I86f6",
+            "type" : "Group added",
+            "createdAt" : 1622926530374.0,
+            "byMember" : {
+                "_id" : "60b7756919a5e8e764a2cae1",
+                "fullname" : "Dafna Bashan ",
+                "username" : "Dafna",
+                "imgUrl" : "https://i.ibb.co/qMmQnJL/image.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "WZBVJ",
+                "title" : "New Group"
+            }
+        }, 
+        {
+            "id" : "4s2vl",
+            "type" : "Task added",
+            "createdAt" : 1622926500292.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "5zM30",
+                "title" : "1"
+            },
+            "group" : {
+                "id" : "3jWOC",
+                "title" : "Delft"
+            }
+        }, 
+        {
+            "id" : "Jzsxi",
+            "type" : "Member added",
+            "createdAt" : 1622925576298.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "473hT",
+                "title" : "Newvvggggvvvv"
+            },
+            "group" : {
+                "id" : "3jWOC",
+                "title" : "Delft"
+            }
+        }, 
+        {
+            "id" : "rMuuC",
+            "type" : "Task title changed",
+            "createdAt" : 1622925563272.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "473hT",
+                "title" : "Newvvggggvvvv"
+            },
+            "group" : {
+                "id" : "3jWOC",
+                "title" : "Delft"
+            }
+        }, 
+        {
+            "id" : "qsYOT",
+            "type" : "Group title changed",
+            "createdAt" : 1622925554093.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "9W9ma",
+                "title" : "Delft\n\n"
+            }
+        }, 
+        {
+            "id" : "SBIkh",
+            "type" : "Group added",
+            "createdAt" : 1622925544111.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "9W9ma",
+                "title" : "New Group"
+            }
+        }, 
+        {
+            "id" : "OptJW",
+            "type" : "Group deleted",
+            "createdAt" : 1622925333331.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "LQsIB",
+                "title" : "New Group"
+            }
+        }, 
+        {
+            "id" : "dHWxR",
+            "type" : "Group deleted",
+            "createdAt" : 1622925331629.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "Yv9Ll",
+                "title" : "New Group"
+            }
+        }, 
+        {
+            "id" : "ANji5",
+            "type" : "Task deleted",
+            "createdAt" : 1622925319026.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "6CNol",
+                "title" : "gulii"
+            },
+            "group" : {
+                "id" : "LQsIB",
+                "title" : "New Group"
+            }
+        }, 
+        {
+            "id" : "zoB5c",
+            "type" : "Task deleted",
+            "createdAt" : 1622925318566.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "BAwQq",
+                "title" : "gggggg"
+            },
+            "group" : {
+                "id" : "LQsIB",
+                "title" : "New Group"
+            }
+        }, 
+        {
+            "id" : "y8peq",
+            "type" : "Task deleted",
+            "createdAt" : 1622925318066.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "9yYxu",
+                "title" : "dbffgssb"
+            },
+            "group" : {
+                "id" : "LQsIB",
+                "title" : "New Group"
+            }
+        }, 
+        {
+            "id" : "RTFHs",
+            "type" : "Task deleted",
+            "createdAt" : 1622925317548.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "EtwwY",
+                "title" : "bbb"
+            },
+            "group" : {
+                "id" : "LQsIB",
+                "title" : "New Group"
+            }
+        }, 
+        {
+            "id" : "RppjI",
+            "type" : "Task added",
+            "createdAt" : 1622925316052.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "EtwwY",
+                "title" : "bbb"
+            },
+            "group" : {
+                "id" : "LQsIB",
+                "title" : "New Group"
+            }
+        }, 
+        {
+            "id" : "4WbiJ",
+            "type" : "Task added",
+            "createdAt" : 1622925312319.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "9yYxu",
+                "title" : "dbffgssb"
+            },
+            "group" : {
+                "id" : "LQsIB",
+                "title" : "New Group"
+            }
+        }, 
+        {
+            "id" : "JXdng",
+            "type" : "Task added",
+            "createdAt" : 1622925308963.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "BAwQq",
+                "title" : "gggggg"
+            },
+            "group" : {
+                "id" : "LQsIB",
+                "title" : "New Group"
+            }
+        }, 
+        {
+            "id" : "3v63V",
+            "type" : "Task added",
+            "createdAt" : 1622925295863.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "6CNol",
+                "title" : "gulii"
+            },
+            "group" : {
+                "id" : "LQsIB",
+                "title" : "New Group"
+            }
+        }, 
+        {
+            "id" : "ZCiHY",
+            "type" : "Group added",
+            "createdAt" : 1622925270948.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "Yv9Ll",
+                "title" : "New Group"
+            }
+        }, 
+        {
+            "id" : "EYekH",
+            "type" : "Task title changed",
+            "createdAt" : 1622924214391.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "473hT",
+                "title" : "Newvvvvvv"
+            },
+            "group" : {
+                "id" : "3jWOC",
+                "title" : "Delft"
+            }
+        }, 
+        {
+            "id" : "g99aQ",
+            "type" : "Task added",
+            "createdAt" : 1622924203409.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "473hT",
+                "title" : "New"
+            },
+            "group" : {
+                "id" : "3jWOC",
+                "title" : "Delft"
+            }
+        }, 
+        {
+            "id" : "SFhxp",
+            "type" : "Group title changed",
+            "createdAt" : 1622924191035.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "3jWOC",
+                "title" : "Delft"
+            }
+        }, 
+        {
+            "id" : "v13v0",
+            "type" : "Group added",
+            "createdAt" : 1622924173612.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "3jWOC",
+                "title" : "New Group"
+            }
+        }, 
+        {
+            "id" : "Uae54",
+            "type" : "Group title changed",
+            "createdAt" : 1622923717442.0,
+            "byMember" : {
+                "_id" : "IaH4b",
+                "fullname" : "Guest",
+                "username" : "Guest",
+                "imgUrl" : "https://i.ibb.co/wS9zKnQ/guest-02.png"
+            },
+            "task" : null,
+            "group" : {
+                "id" : "LQsIB",
+                "title" : "New Group"
+            }
+        }, 
+        {
+            "id" : "I9FOT",
+            "type" : "Group title changed",
+            "createdAt" : 1622923647173.0,
+            "byMember" : {
+                "_id" : "i4JEC",
+                "fullname" : "Guest",
+                "username" : "Guest",
+                "imgUrl" : "https://i.ibb.co/wS9zKnQ/guest-02.png"
+            },
+            "task" : null,
+            "group" : {
+                "id" : "5iuoO",
+                "title" : "Tel Aviv "
+            }
+        }, 
+        {
+            "id" : "L3eID",
+            "type" : "Task deleted",
+            "createdAt" : 1622923516048.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "xzVmy",
+                "title" : "נ"
+            },
+            "group" : {
+                "id" : "LQsIB",
+                "title" : "New Group"
+            }
+        }, 
+        {
+            "id" : "VmwKy",
+            "type" : "Task added",
+            "createdAt" : 1622923511341.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "xzVmy",
+                "title" : "נ"
+            },
+            "group" : {
+                "id" : "LQsIB",
+                "title" : "New Group"
+            }
+        }, 
+        {
+            "id" : "GlNp9",
+            "type" : "Group title changed",
+            "createdAt" : 1622923443729.0,
+            "byMember" : {
+                "_id" : "GzMsv",
+                "fullname" : "Guest",
+                "username" : "Guest",
+                "imgUrl" : "https://i.ibb.co/wS9zKnQ/guest-02.png"
+            },
+            "task" : null,
+            "group" : {
+                "id" : "LQsIB",
+                "title" : "New Group"
+            }
+        }, 
+        {
+            "id" : "OHfVv",
+            "type" : "Group added",
+            "createdAt" : 1622923432284.0,
+            "byMember" : null,
+            "task" : null,
+            "group" : {
+                "id" : "LQsIB",
+                "title" : "New Group"
+            }
+        }, 
+        {
+            "id" : "gBpxb",
+            "type" : "Group deleted",
+            "createdAt" : 1622923406094.0,
+            "byMember" : {
+                "_id" : "YqK07",
+                "fullname" : "Guest",
+                "username" : "Guest",
+                "imgUrl" : "https://i.ibb.co/wS9zKnQ/guest-02.png"
+            },
+            "task" : null,
+            "group" : {
+                "id" : "I3Y5K",
+                "title" : "Delft "
+            }
+        }, 
+        {
+            "id" : "jhc8G",
+            "type" : "Member added",
+            "createdAt" : 1622923343321.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "4Vdul",
+                "title" : "New website"
+            },
+            "group" : {
+                "id" : "rVpUr",
+                "title" : "Milano"
+            }
+        }, 
+        {
+            "id" : "npUzD",
+            "type" : "Member removed",
+            "createdAt" : 1622923341142.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "4Vdul",
+                "title" : "New website",
+                "changedItem" : "Noga"
+            },
+            "group" : {
+                "id" : "rVpUr",
+                "title" : "Milano"
+            }
+        }, 
+        {
+            "id" : "uLnvF",
+            "type" : "Member added",
+            "createdAt" : 1622923321118.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "mx9Hc",
+                "title" : "Drag and drop animations"
+            },
+            "group" : {
+                "id" : "PQgto",
+                "title" : "Amsterdam"
+            }
+        }, 
+        {
+            "id" : "RiNSk",
+            "type" : "Member removed",
+            "createdAt" : 1622923318123.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "mx9Hc",
+                "title" : "Drag and drop animations",
+                "changedItem" : "Noga"
+            },
+            "group" : {
+                "id" : "PQgto",
+                "title" : "Amsterdam"
+            }
+        }, 
+        {
+            "id" : "buYjW",
+            "type" : "Member added",
+            "createdAt" : 1622923315964.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "4Vdul",
+                "title" : "New website"
+            },
+            "group" : {
+                "id" : "rVpUr",
+                "title" : "Milano"
+            }
+        }, 
+        {
+            "id" : "ZEjVA",
+            "type" : "Member added",
+            "createdAt" : 1622923313403.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "AHx58",
+                "title" : "Mobile app"
+            },
+            "group" : {
+                "id" : "5iuoO",
+                "title" : "Tel Aviv "
+            }
+        }, 
+        {
+            "id" : "p2v4m",
+            "type" : "Priority changed",
+            "createdAt" : 1622923305129.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "bAvZz",
+                "title" : "Integration with slack",
+                "changedItem" : "High"
+            },
+            "group" : {
+                "id" : "PQgto",
+                "title" : "Amsterdam"
+            }
+        }, 
+        {
+            "id" : "nJeiS",
+            "type" : "Status changed",
+            "createdAt" : 1622923303057.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "bAvZz",
+                "title" : "Integration with slack",
+                "changedItem" : "Done"
+            },
+            "group" : {
+                "id" : "PQgto",
+                "title" : "Amsterdam"
+            }
+        }, 
+        {
+            "id" : "GRU6G",
+            "type" : "Priority changed",
+            "createdAt" : 1622923300226.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "mx9Hc",
+                "title" : "Drag and drop animations",
+                "changedItem" : "Low"
+            },
+            "group" : {
+                "id" : "PQgto",
+                "title" : "Amsterdam"
+            }
+        }, 
+        {
+            "id" : "ywhb6",
+            "type" : "Priority changed",
+            "createdAt" : 1622923296837.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "9ENC9",
+                "title" : "Date range picker improvments",
+                "changedItem" : "Medium"
+            },
+            "group" : {
+                "id" : "rVpUr",
+                "title" : "Milano"
+            }
+        }, 
+        {
+            "id" : "Iakbq",
+            "type" : "Priority changed",
+            "createdAt" : 1622923294743.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "4Vdul",
+                "title" : "New website",
+                "changedItem" : "Low"
+            },
+            "group" : {
+                "id" : "rVpUr",
+                "title" : "Milano"
+            }
+        }, 
+        {
+            "id" : "0QJq2",
+            "type" : "Status changed",
+            "createdAt" : 1622923290616.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "9ENC9",
+                "title" : "Date range picker improvments",
+                "changedItem" : "Done"
+            },
+            "group" : {
+                "id" : "rVpUr",
+                "title" : "Milano"
+            }
+        }, 
+        {
+            "id" : "p0zBz",
+            "type" : "Status changed",
+            "createdAt" : 1622923287243.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "4Vdul",
+                "title" : "New website",
+                "changedItem" : "On hold"
+            },
+            "group" : {
+                "id" : "rVpUr",
+                "title" : "Milano"
+            }
+        }, 
+        {
+            "id" : "9bduM",
+            "type" : "Priority changed",
+            "createdAt" : 1622923279971.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "AHx58",
+                "title" : "Mobile app",
+                "changedItem" : "Low"
+            },
+            "group" : {
+                "id" : "5iuoO",
+                "title" : "Tel Aviv "
+            }
+        }, 
+        {
+            "id" : "WPxqW",
+            "type" : "Priority changed",
+            "createdAt" : 1622923277184.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "F4rHz",
+                "title" : "Responsive design",
+                "changedItem" : "High"
+            },
+            "group" : {
+                "id" : "5iuoO",
+                "title" : "Tel Aviv "
+            }
+        }, 
+        {
+            "id" : "cFM1Z",
+            "type" : "Status changed",
+            "createdAt" : 1622923274363.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "F4rHz",
+                "title" : "Responsive design",
+                "changedItem" : "Done"
+            },
+            "group" : {
+                "id" : "5iuoO",
+                "title" : "Tel Aviv "
+            }
+        }, 
+        {
+            "id" : "ynOMb",
+            "type" : "Group title changed",
+            "createdAt" : 1622923218155.0,
+            "byMember" : {
+                "_id" : "tTAzj",
+                "fullname" : "Guest",
+                "username" : "Guest",
+                "imgUrl" : "https://i.ibb.co/wS9zKnQ/guest-02.png"
+            },
+            "task" : null,
+            "group" : {
+                "id" : "5iuoO",
+                "title" : "Tel Aviv "
+            }
+        }, 
+        {
+            "id" : "UqQYm",
+            "type" : "Group title changed",
+            "createdAt" : 1622923150134.0,
+            "byMember" : {
+                "_id" : "UTM1S",
+                "fullname" : "Guest",
+                "username" : "Guest",
+                "imgUrl" : "https://i.ibb.co/wS9zKnQ/guest-02.png"
+            },
+            "task" : null,
+            "group" : {
+                "id" : "5iuoO",
+                "title" : "Tel Aviv "
+            }
+        }, 
+        {
+            "id" : "tZaf2",
+            "type" : "Group title changed",
+            "createdAt" : 1622922374649.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "I3Y5K",
+                "title" : "Delft "
+            }
+        }, 
+        {
+            "id" : "uIZTk",
+            "type" : "Group title changed",
+            "createdAt" : 1622922371745.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "I3Y5K",
+                "title" : "Delft "
+            }
+        }, 
+        {
+            "id" : "kXu7t",
+            "type" : "Group title changed",
+            "createdAt" : 1622922370802.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "I3Y5K",
+                "title" : "Delft "
+            }
+        }, 
+        {
+            "id" : "FOlcB",
+            "type" : "Group title changed",
+            "createdAt" : 1622922367799.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "5iuoO",
+                "title" : "Tel Aviv "
+            }
+        }, 
+        {
+            "id" : "ETDo2",
+            "type" : "Group title changed",
+            "createdAt" : 1622922364975.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "5iuoO",
+                "title" : "Tel Aviv "
+            }
+        }, 
+        {
+            "id" : "oj5BS",
+            "type" : "Task title changed",
+            "createdAt" : 1622922060441.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "4Vdul",
+                "title" : "New website"
+            },
+            "group" : {
+                "id" : "rVpUr",
+                "title" : "Milano"
+            }
+        }, 
+        {
+            "id" : "JqkKg",
+            "type" : "Task title changed",
+            "createdAt" : 1622922047894.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "4Vdul",
+                "title" : "New website's hero"
+            },
+            "group" : {
+                "id" : "rVpUr",
+                "title" : "Milano"
+            }
+        }, 
+        {
+            "id" : "clqw2",
+            "type" : "Task title changed",
+            "createdAt" : 1622922029130.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "mx9Hc",
+                "title" : "Drag and drop animations"
+            },
+            "group" : {
+                "id" : "PQgto",
+                "title" : "Amsterdam"
+            }
+        }, 
+        {
+            "id" : "NUl1u",
+            "type" : "Task added",
+            "createdAt" : 1622922013638.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "bAvZz",
+                "title" : "Integration with slack"
+            },
+            "group" : {
+                "id" : "PQgto",
+                "title" : "Amsterdam"
+            }
+        }, 
+        {
+            "id" : "Y9xhr",
+            "type" : "Task title changed",
+            "createdAt" : 1622921965147.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "mx9Hc",
+                "title" : "Drag and drop"
+            },
+            "group" : {
+                "id" : "PQgto",
+                "title" : "Amsterdam"
+            }
+        }, 
+        {
+            "id" : "DJ3ea",
+            "type" : "Task added",
+            "createdAt" : 1622921921203.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "9ENC9",
+                "title" : "Date range picker improvments"
+            },
+            "group" : {
+                "id" : "rVpUr",
+                "title" : "Milano"
+            }
+        }, 
+        {
+            "id" : "b4YBC",
+            "type" : "Task title changed",
+            "createdAt" : 1622921850730.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "4Vdul",
+                "title" : "The new website"
+            },
+            "group" : {
+                "id" : "rVpUr",
+                "title" : "Milano"
+            }
+        }, 
+        {
+            "id" : "RZGZp",
+            "type" : "Task added",
+            "createdAt" : 1622921825202.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "F4rHz",
+                "title" : "Responsive design"
+            },
+            "group" : {
+                "id" : "5iuoO",
+                "title" : "Tel Aviv "
+            }
+        }, 
+        {
+            "id" : "2rZLy",
+            "type" : "Task title changed",
+            "createdAt" : 1622921815266.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "AHx58",
+                "title" : "Mobile app"
+            },
+            "group" : {
+                "id" : "5iuoO",
+                "title" : "Tel Aviv "
+            }
+        }, 
+        {
+            "id" : "udCpQ",
+            "type" : "Member added",
+            "createdAt" : 1622921774216.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "nQg2h",
+                "title" : "Meet the new team members"
+            },
+            "group" : {
+                "id" : "I3Y5K",
+                "title" : "Delft "
+            }
+        }, 
+        {
+            "id" : "uWXA1",
+            "type" : "Priority changed",
+            "createdAt" : 1622921646692.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "nQg2h",
+                "title" : "Meet the new team members",
+                "changedItem" : "Medium"
+            },
+            "group" : {
+                "id" : "I3Y5K",
+                "title" : "Delft "
+            }
+        }, 
+        {
+            "id" : "jo211",
+            "type" : "Status changed",
+            "createdAt" : 1622921644881.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "nQg2h",
+                "title" : "Meet the new team members",
+                "changedItem" : "Working on it"
+            },
+            "group" : {
+                "id" : "I3Y5K",
+                "title" : "Delft "
+            }
+        }, 
+        {
+            "id" : "fsddW",
+            "type" : "Priority changed",
+            "createdAt" : 1622921504502.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "AHx58",
+                "title" : "Your new task",
+                "changedItem" : ""
+            },
+            "group" : {
+                "id" : "5iuoO",
+                "title" : "Tel Aviv "
+            }
+        }, 
+        {
+            "id" : "He57H",
+            "type" : "Priority changed",
+            "createdAt" : 1622921501149.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "AHx58",
+                "title" : "Your new task",
+                "changedItem" : "High"
+            },
+            "group" : {
+                "id" : "5iuoO",
+                "title" : "Tel Aviv "
+            }
+        }, 
+        {
+            "id" : "duUbj",
+            "type" : "Priority changed",
+            "createdAt" : 1622921493178.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "AHx58",
+                "title" : "Your new task",
+                "changedItem" : ""
+            },
+            "group" : {
+                "id" : "5iuoO",
+                "title" : "Tel Aviv "
+            }
+        }, 
+        {
+            "id" : "ojITI",
+            "type" : "Priority changed",
+            "createdAt" : 1622921462661.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "AHx58",
+                "title" : "Your new task",
+                "changedItem" : "High"
+            },
+            "group" : {
+                "id" : "5iuoO",
+                "title" : "Tel Aviv "
+            }
+        }, 
+        {
+            "id" : "sJDPw",
+            "type" : "Priority changed",
+            "createdAt" : 1622921456139.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "AHx58",
+                "title" : "Your new task",
+                "changedItem" : ""
+            },
+            "group" : {
+                "id" : "5iuoO",
+                "title" : "Tel Aviv "
+            }
+        }, 
+        {
+            "id" : "CZilP",
+            "type" : "Priority changed",
+            "createdAt" : 1622921454485.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "AHx58",
+                "title" : "Your new task",
+                "changedItem" : "High"
+            },
+            "group" : {
+                "id" : "5iuoO",
+                "title" : "Tel Aviv "
+            }
+        }, 
+        {
+            "id" : "A0KcJ",
+            "type" : "Priority changed",
+            "createdAt" : 1622921389046.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "nQg2h",
+                "title" : "Meet the new team members",
+                "changedItem" : "Low"
+            },
+            "group" : {
+                "id" : "I3Y5K",
+                "title" : "Delft "
+            }
+        }, 
+        {
+            "id" : "2XKjj",
+            "type" : "Status changed",
+            "createdAt" : 1622921387492.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "nQg2h",
+                "title" : "Meet the new team members",
+                "changedItem" : "Working on it"
+            },
+            "group" : {
+                "id" : "I3Y5K",
+                "title" : "Delft "
+            }
+        }, 
+        {
+            "id" : "walbN",
+            "type" : "Task title changed",
+            "createdAt" : 1622921360583.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "nQg2h",
+                "title" : "Meet the new team members"
+            },
+            "group" : {
+                "id" : "I3Y5K",
+                "title" : "Delft "
+            }
+        }, 
+        {
+            "id" : "q5zZC",
+            "type" : "Task added",
+            "createdAt" : 1622921357570.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : {
+                "id" : "nQg2h",
+                "title" : "Meet the new team members"
+            },
+            "group" : {
+                "id" : "I3Y5K",
+                "title" : "Delft "
+            }
+        }, 
+        {
+            "id" : "hsRbz",
+            "type" : "Group title changed",
+            "createdAt" : 1622921333841.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "I3Y5K",
+                "title" : "Delft "
+            }
+        }, 
+        {
+            "id" : "bPTGH",
+            "type" : "Group title changed",
+            "createdAt" : 1622921330546.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "PQgto",
+                "title" : "Amsterdam"
+            }
+        }, 
+        {
+            "id" : "63m9D",
+            "type" : "Group title changed",
+            "createdAt" : 1622921328970.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "rVpUr",
+                "title" : "Milano"
+            }
+        }, 
+        {
+            "id" : "KhdeI",
+            "type" : "Group title changed",
+            "createdAt" : 1622921327157.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "5iuoO",
+                "title" : "Tel Aviv "
+            }
+        }, 
+        {
+            "id" : "yqBZq",
+            "type" : "Group title changed",
+            "createdAt" : 1622921325911.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "I3Y5K",
+                "title" : "Delft "
+            }
+        }, 
+        {
+            "id" : "2rSEC",
+            "type" : "Group added",
+            "createdAt" : 1622921309002.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "I3Y5K",
+                "title" : "New Group"
+            }
+        }, 
+        {
+            "id" : "GvL8x",
+            "type" : "Group deleted",
+            "createdAt" : 1622921290515.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "2BXIF",
+                "title" : "New Group"
+            }
+        }, 
+        {
+            "id" : "9FR1B",
+            "type" : "Group added",
+            "createdAt" : 1622921252371.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "2BXIF",
+                "title" : "New Group"
+            }
+        }, 
+        {
+            "id" : "HKUvs",
+            "type" : "Group deleted",
+            "createdAt" : 1622921127884.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "oI6dA",
+                "title" : "New Group"
+            }
+        }, 
+        {
+            "id" : "hKwyM",
+            "type" : "Group deleted",
+            "createdAt" : 1622921125983.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "EcdyP",
+                "title" : "New Group"
+            }
+        }, 
+        {
+            "id" : "eF9OW",
+            "type" : "Group added",
+            "createdAt" : 1622921122225.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "EcdyP",
+                "title" : "New Group"
+            }
+        }, 
+        {
+            "id" : "tctwm",
+            "type" : "Group added",
+            "createdAt" : 1622921109761.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "oI6dA",
+                "title" : "New Group"
+            }
+        }, 
+        {
+            "id" : "wzZaP",
+            "type" : "Group deleted",
+            "createdAt" : 1622921078621.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "eVFzE",
+                "title" : "New Group"
+            }
+        }, 
+        {
+            "id" : "vOAqO",
+            "type" : "Group added",
+            "createdAt" : 1622921070984.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "eVFzE",
+                "title" : "New Group"
+            }
+        }, 
+        {
+            "id" : "wXhHq",
+            "type" : "Group title changed",
+            "createdAt" : 1622921070864.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "5iuoO",
+                "title" : "Tel Aviv - Tasks"
+            }
+        }, 
+        {
+            "id" : "MshGI",
+            "type" : "Group title changed",
+            "createdAt" : 1622921029923.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "rVpUr",
+                "title" : "Milano - UX/UI"
+            }
+        }, 
+        {
+            "id" : "sgExf",
+            "type" : "Group title changed",
+            "createdAt" : 1622921023892.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "5iuoO",
+                "title" : "Tel Aviv"
+            }
+        }, 
+        {
+            "id" : "lvgWN",
+            "type" : "Group title changed",
+            "createdAt" : 1622921008462.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "PQgto",
+                "title" : "Amsterdam - IT"
+            }
+        }, 
+        {
+            "id" : "RtNKa",
+            "type" : "Group title changed",
+            "createdAt" : 1622920994429.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "rVpUr",
+                "title" : "Milano - UX/UI"
+            }
+        }, 
+        {
+            "id" : "Riybw",
+            "type" : "Group title changed",
+            "createdAt" : 1622920965278.0,
+            "byMember" : {
+                "_id" : "60b7755419a5e8e764a2c0dd",
+                "fullname" : "Noga Jacobi",
+                "username" : "Noga",
+                "imgUrl" : "https://i.ibb.co/VD7WqLY/noga.jpg",
+                "mentions" : [ 
+                    {
+                        "id" : "m101",
+                        "boardId" : "m101",
+                        "taskId" : "t101"
+                    }
+                ]
+            },
+            "task" : null,
+            "group" : {
+                "id" : "5iuoO",
+                "title" : "Tel Aviv - Marketing"
+            }
+        }
+    ],
+    "tags" : [ 
+        {
+            "id" : "t101",
+            "title" : "#starting",
+            "color" : "#61bd4f"
+        }, 
+        {
+            "id" : "t102",
+            "title" : "#problem",
+            "color" : "#e2445c"
+        }, 
+        {
+            "id" : "t103",
+            "title" : "#development",
+            "color" : "#579bfc"
+        }, 
+        {
+            "id" : "t104",
+            "title" : "#production",
+            "color" : "#a25ddc"
+        }
+    ]
+}

@@ -1,5 +1,30 @@
 .board-app-container {
     .board-container {
-        width: 100%;
+        flex: 1;
+        // width: 100%;
+        // overflow-x: scroll;
+
+        // display: flex;
+        // flex-direction: column;
     }
 }
+
+@media (max-width: $mobile-breakpoint) {
+    .board-app-container {
+        // overflow-x: clip;
+
+        // .board-container {
+        //     width: 100%;
+        //     // overflow-x: scroll;
+        // }
+    }
+}
+@media (min-width: $normal-breakpoint) {
+    .board-app-container {
+        .board-container {
+            flex: 1;
+        }
+    }
+}
+
+// overflow-x: clip;

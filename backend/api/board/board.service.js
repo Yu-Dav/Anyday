@@ -14,18 +14,11 @@ async function query() {
     }
 }
 
-async function getById(boardId, filterBy) {
-    console.log(`file: board.service.js || line 23 || filterBy`, filterBy);
-    const criteria = _buildCriteria(filterBy);
+async function getById(boardId) {
     try {
         const collection = await dbService.getCollection('board_db');
         const board = await collection.findOne({ _id: ObjectId(boardId) });
-        if (Object.keys(filterBy).length === 0) return board;
-        console.log('criteria- line 211111111111111111111111', criteria)
-        const filteredBoard = await collection.find(criteria).toArray();
-        const objBoard = { ...filteredBoard };
-        // console.log('filtered- line 311111111111111111111111', filteredBoard)
-        return objBoard[0];
+        return board;
     } catch (err) {
         logger.error(`while finding board ${boardId}`, err);
         throw err;
@@ -38,7 +31,6 @@ async function update(board) {
             _id: ObjectId(board._id),
             title: board.title,
             subtitle: board.subtitle,
-            description: board.description,
             isFavorite: board.isFavorite,
             statusLabels: board.statusLabels,
             members: board.members,
@@ -149,7 +141,7 @@ function _buildCriteria(filterBy) {
 
 function _createNewBoard(currUser) {
     return {
-        title: 'Your new Board meow',
+        title: 'Your new Board',
         subtitle: 'Your new subtitle',
         description: 'Your new description',
         isFavorite: false,
@@ -187,16 +179,7 @@ function _createNewBoard(currUser) {
                         },
                         priority: { id: 'pl4', title: '', color: '#c4c4c4' },
                         members: [currUser],
-                        comments: [
-                            {
-                                id: utilService.makeId(),
-                                txt: 'Added new group',
-                                createdAt: Date.now(),
-                                byMember: currUser,
-                                taskId: 'g3t101',
-                                // groupId: 'g103',
-                            },
-                        ],
+                        comments: [],
                         byMember: currUser,
                     },
                 ],
@@ -226,16 +209,7 @@ function _createNewBoard(currUser) {
                         },
                         priority: { id: 'pl4', title: '', color: '#c4c4c4' },
                         members: [currUser],
-                        comments: [
-                            {
-                                id: utilService.makeId(),
-                                txt: 'Added new group',
-                                createdAt: Date.now(),
-                                byMember: currUser,
-                                taskId: 'g3t101',
-                                // groupId: 'g103',
-                            },
-                        ],
+                        comments: [],
                         byMember: currUser,
                     },
                 ],
@@ -265,16 +239,7 @@ function _createNewBoard(currUser) {
                         },
                         priority: { id: 'pl4', title: '', color: '#c4c4c4' },
                         members: [currUser],
-                        comments: [
-                            {
-                                id: utilService.makeId(),
-                                txt: 'Added new group',
-                                createdAt: Date.now(),
-                                byMember: currUser,
-                                taskId: 'g3t101',
-                                // groupId: 'g103',
-                            },
-                        ],
+                        comments: [],
                         byMember: currUser,
                     },
                 ],

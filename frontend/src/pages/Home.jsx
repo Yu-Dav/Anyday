@@ -24,7 +24,7 @@ export function Home() {
                     <div className="main-content">
                         <p>Easily manage your team's task or your personal projects</p>
                         <h1>You will quickly use our app <span>Anyday</span></h1>
-                        <Link to={`/board/60b7e87419a5e8e764d835fe`} ><button>Start here</button></Link>
+                        <Link to={`/board/60bc8fa0b954f46a21c940c1`} ><button>Start here</button></Link>
                         {/* <Link to={`/board/b101`} ><button>Try as guest</button></Link> */}
                         
                     </div>
