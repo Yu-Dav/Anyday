@@ -36,13 +36,10 @@ class _BoardApp extends Component {
         console.log(`file: BoardApp.jsx || line 33 || boardId`, boardId)
         socketService.emit('join board', boardId)
         const board = await this.props.loadBoard(boardId)
-<<<<<<< HEAD
         this.props.loadUsers()
         // userService.getUsers()
-=======
         console.log('board id did mount', boardId);
         userService.getUsers()
->>>>>>> 3ad6b70f7e237c10e35b70c7f4543f8f7c532c04
         const user = userService.getLoggedinUser()
         socketService.on('board loaded', () => {
             this.props.loadBoard(boardId)
@@ -249,15 +246,12 @@ class _BoardApp extends Component {
                 <SidebarNav onAddNewBoard={this.onAddNewBoard} />
 
                 <div className="container board-container">
-<<<<<<< HEAD
                     <BoardHeader users={users} board={filteredBoard} updateBoard={this.props.updateBoard} />
                     <BoardCtrlPanel board={currBoard} onChangeView={this.onChangeView} addNewGroup={this.addNewGroup} setFilter={this.setFilter} loadBoard={this.props.loadBoard} />
                     {/* <button className="btn" onClick={() => window.location.hash = `/board/${currBoard._id}/map`}>Map</button> */}
                     {/* <LocationSearchInput /> */}
                     {/* <button className="btn-location" onClick={() => this.setState({ ...this.state, isMap: !this.state.isMap })}>Map</button> */}
                     {this.state.isMap && <GoogleMap className="container" />}
-=======
->>>>>>> 3ad6b70f7e237c10e35b70c7f4543f8f7c532c04
 
                     <div>
                         <BoardHeader board={currBoard} updateBoard={this.props.updateBoard} />
