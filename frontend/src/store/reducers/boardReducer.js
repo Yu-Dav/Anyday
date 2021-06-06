@@ -10,7 +10,7 @@ const initialState = {
 export function boardReducer(state = initialState, action) {
     switch (action.type) {
         case 'SET_BOARD': // should come from getById
-            return { ...state, currBoard: action.board };
+            return { ...state, currBoard: {...action.board} };
 
         case 'SET_BOARDS': // should come from query -> the collection of all the boards 
             return { ...state, boards: [...action.boards] };
@@ -32,8 +32,9 @@ export function boardReducer(state = initialState, action) {
                 boards: state.boards.map((board) =>
                     board._id === action.board._id ? action.board : board
                 ),
-                currBoard: action.board
+                currBoard: {...action.board}
             };
+            // return { ...state,boards: [action.board, ...state.boards.filter(board => action.board._id !== board._id)],  currBoard: {...action.board}}
         case 'LOADING_BOARDS':
             return { ...state, isLoading: action.isLoading, err: null };
         case 'SET_FILTER':

@@ -3,7 +3,7 @@ const express = require('express')
 const {getBoard, getBoards, removeBoard, updateBoard, addBoard } = require('./board.controller')
 const router = express.Router()
 
-router.get('/', getBoards,)
+router.get('/', getBoards)
 router.get('/:id', getBoard)
 router.put('/:id',  updateBoard)
 router.post('/',  addBoard)

@@ -1,51 +1,57 @@
 .board-header {
-    color: #323338;
-
-    margin: 20px 0 10px 0;
+    color         : #323338;
+    // width         : 90%;
+    // margin        : 0 auto;
+    // margin: 20px 0 10px 0;
     padding-bottom: 10px;
-    border-bottom: 1px solid $lightGrey;
+    border-bottom : 1px solid $lightGrey;
 
-    .star-fav{
+    .star-fav {
         stroke: #c3c5ca;
     }
 
     .title-container {
         .title {
-            font-size: rem(24px);
+            font-size        : rem(24px);
             // width: rem(150px);
-            height: rem(40px);
+            height           : rem(40px);
             margin-inline-end: 15px;
-            color: #323338;
-            font-weight: 600;
+            color            : #323338;
+            font-weight      : 600;
         }
     }
+
     .subtitle-container {
         .subtitle {
             font-size: rem(14px);
-            width: rem(500px);
-            height: rem(25px);
+            width    : rem(500px);
+            height   : rem(25px);
         }
     }
+
     .btn {
-        color: inherit;
-        height: 32px;
-        font-size: rem(14px);
-        padding: 4px 8px;
-        font-weight: 400;
-        line-height: 22px;
-        border: none;
-        border-radius: 4px;
+        color           : inherit;
+        height          : 32px;
+        font-size       : rem(14px);
+        padding         : 4px 8px;
+        font-weight     : 400;
+        line-height     : 22px;
+        border          : none;
+        border-radius   : 4px;
         background-color: transparent;
-        transition: 0.3s;
+        transition      : 0.3s;
+
         &:hover {
             background-color: #e6e9ef;
         }
-        & > *:not(:last-child) {
+
+        &>*:not(:last-child) {
             margin-inline-end: 10px;
         }
     }
+
     svg {
         height: 24px;
-        width: 24px;
+        width : 24px;
     }
 }

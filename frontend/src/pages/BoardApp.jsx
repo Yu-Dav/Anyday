@@ -32,6 +32,7 @@ class _BoardApp extends Component {
     async componentDidMount() {
         const boardId = this.props.match.params.boardId
         const board = await this.props.loadBoard(boardId)
+        console.log('board id did mount', boardId);
         userService.getUsers()
         const user = userService.getLoggedinUser()
         socketService.setup()

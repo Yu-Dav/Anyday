@@ -52,7 +52,7 @@ class _SidebarNav extends Component {
                         </div>
                         <div className="sidebar-ops second flex column">
                             {boards.map(board =>
-                            <Link  key = { board._id } to = {`${board._id}`} className="flex align-center">
+                            <Link  key ={ board._id } to ={`/board/${board._id}`} className="flex align-center">
                                 <TableChartOutlinedIcon style={{ fontSize: '18px', color: '#898a8f', cursor: 'pointer' }} /> { board.title }
 
                                 </Link>)}

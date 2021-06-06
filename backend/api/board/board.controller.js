@@ -3,9 +3,9 @@ const socketService = require('../../services/socket.service');
 const logger = require('../../services/logger.service');
 
 async function getBoard(req, res) {
-    const filterBy = req.query || {};
+    // const filterBy = req.query || {};
     try {
-        const board = await boardService.getById(req.params.id, filterBy);
+        const board = await boardService.getById(req.params.id);
         // const filteredBoard = {};
         // filteredBoard.groups.filter(group => {
         //     group.tasks.filter(task => {

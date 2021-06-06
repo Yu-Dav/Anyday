@@ -15,10 +15,10 @@ async function query(filterBy) {
     return httpService.get('board', { params: filterBy });
 }
 
-async function getById(boardId, filterBy) {
+async function getById(boardId) {
     // console.log(`file: boardService.js || line 18 || filterBy`, filterBy)
     // return storageService.get('board', boardId)
-    return httpService.get(`board/${boardId}`, filterBy);
+    return httpService.get(`board/${boardId}`);
 }
 
 async function remove(boardId) {
