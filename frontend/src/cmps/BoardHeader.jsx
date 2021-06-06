@@ -1,10 +1,14 @@
 import React, { Component } from 'react'
 import { EditableCmp } from './EditableCmp'
 import { ReactComponent as StarSvg } from '../assets/imgs/svg/star.svg'
-import {LocationSearchInput} from './tasks/CellLocation'
 import { socketService } from '../services/socketService'
 
+import Avatar from '@material-ui/core/Avatar';
+
 export class BoardHeader extends Component {
+    state = {
+        isExpanded: false
+    }
 
     onUpdateTitle = async ({ target }) => {
         const { name } = target.dataset
@@ -16,9 +20,13 @@ export class BoardHeader extends Component {
         await this.props.updateBoard(newBoard)
         socketService.emit('board updated', newBoard._id)
     }
+    onOpenSelector = () => {
+        this.setState({ ...this.state, isExpanded: !this.state.isExpanded })
+    }
 
     render = () => {
         const { board } = this.props
+        const {isExpanded} = this.state
         return (
 
             <div className="board-header">
@@ -34,7 +42,15 @@ export class BoardHeader extends Component {
                     <div className="board-header-btns">
 
                         <button className="btn">Last seen</button>
-                        <button className="btn">Invite / 3</button>
+                        <button className="btn" onClick={this.onOpenSelector}>Invite / 3</button>
+                        {isExpanded && <div>
+                            {board.members.map(member => {
+                                return <div key={member._id}>
+                                    <Avatar alt={member.username} src={member.imgUrl}
+                                        style={{ width: '30px', height: '30px' }} />{member.fullname}
+                                </div>
+                            })}
+                        </div>}
                         <button className="btn" onClick={() => window.location.hash = `/board/${board._id}/activity_log`}>Activity</button>
                     </div>
                 </div>
@@ -46,3 +62,11 @@ export class BoardHeader extends Component {
     }
 }
 
+// {
+//     taskMembers.map(member => {
+//         return <MenuItem style={{ display: 'flex', gap: '10px', fontSize: '13px' }}
+//             key={member._id}><Avatar alt={member.username} src={member.imgUrl}
+//                 style={{ width: '30px', height: '30px' }} />{member.fullname}<i className="fas close"
+//                     data-id={member._id} onClick={onRemoveMember}></i></MenuItem>
+//     })
+// }

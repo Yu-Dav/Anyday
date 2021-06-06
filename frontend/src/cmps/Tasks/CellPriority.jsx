@@ -29,7 +29,7 @@ export class CellPriority extends Component {
             }
         }
         newBoard.activities.unshift(newActivity)
-        await this.props.updateBoard(newBoard) 
+        await this.props.updateBoard(newBoard)
         await socketService.emit('board updated', newBoard._id);
     }
     getPriorityById = (labelId) => {
@@ -55,8 +55,8 @@ export class CellPriority extends Component {
                             <div className=" triangle-with-shadow relative"></div>
                             <div className=" floating-label-select">
                                 {priorityLabels.map((label) => {
-                                    return <div className="label-option" onClick={this.handleUpdate} key={label.id} 
-                                    data-label={label.id} style={{ backgroundColor: label.color }}>
+                                    return <div className="label-option" onClick={this.handleUpdate} key={label.id}
+                                        data-label={label.id} style={{ backgroundColor: label.color }}>
                                         {label.title}
                                     </div>
                                 })}

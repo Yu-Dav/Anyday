@@ -114,7 +114,12 @@
         color: #0085ff;
     }
 }
-
+.fa.comment:hover::after{
+    color: #0085ff;
+}
+.fa.comment.active::after{
+    color: #0085ff;
+}
 a:hover {
     text-decoration: none;
 }

@@ -56,8 +56,9 @@ class _SidebarNav extends Component {
                             <h1>My Workspace</h1>
                             <div className="sidebar-ops">
                                 <i onClick={this.props.onAddNewBoard} className="flex add-board-wrapper flex align-center">
-                                    <AddCircleOutlineOutlinedIcon style={{ fontSize: '18px', color: '#898a8f', cursor: 'pointer' }} />
-                                    <span>Add</span>
+                                <AddCircleOutlineOutlinedIcon style={{ fontSize: '18px', color: '#898a8f', cursor: 'pointer', position:'absolute', left:'-3.3px' }} />
+                                <span style={{marginLeft:'20px'}}>Add</span>
+
                                 </i>
                                 <div className="flex align-center search-board-wrapper">
                                     <label htmlFor="boardName"><i className="fas fa-search"></i></label>
@@ -65,6 +66,7 @@ class _SidebarNav extends Component {
                                         autoComplete="false" disableUnderline={true}
                                         onChange={this.handleChange} value={searchBy} />
                                 </div>
+
                             </div>
                             <div className="sidebar-ops second flex column">
                                 {boards.map(board =>

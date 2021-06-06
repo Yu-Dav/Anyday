@@ -48,6 +48,9 @@
             .add-board-wrapper > *:not(:last-child) {
                 margin-inline-end: 5px;
             }
+            .add-board-wrapper{
+                position: relative;
+            }
             .search-board-wrapper > *:not(:last-child) {
                 margin-inline-end: 5px;
             }

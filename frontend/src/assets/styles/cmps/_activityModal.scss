@@ -117,7 +117,7 @@
         padding: 15px;
         color: #323338;
         text-align: center;
-        img{
+        .upload-img{
             width: 60%;
         }
         .member {
@@ -139,12 +139,14 @@
         }
 
         .cross-svg {
+            cursor: pointer;
             width: 18px;
             margin-left: 15px;
         }
     }
 
     .cross-svg {
+        cursor: pointer;
         width: 22px;
     }
 

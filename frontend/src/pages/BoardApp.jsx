@@ -244,10 +244,10 @@ class _BoardApp extends Component {
                     <BoardCtrlPanel board={this.props.currBoard} onChangeView={this.onChangeView} addNewGroup={this.addNewGroup} setFilter={this.setFilter} loadBoard={this.props.loadBoard} />
                     {/* <button className="btn" onClick={() => window.location.hash = `/board/${currBoard._id}/map`}>Map</button> */}
                     {/* <LocationSearchInput /> */}
-                    <button className="btn-location" onClick={() => this.setState({ ...this.state, isMap: !this.state.isMap })}>Map</button>
+                    {/* <button className="btn-location" onClick={() => this.setState({ ...this.state, isMap: !this.state.isMap })}>Map</button> */}
                     {this.state.isMap && <GoogleMap className="container" />}
 
-                    <LocationSearchInput />
+                    
 
                     {!this.state.isMap &&
                         <DragDropContext onDragEnd={this.onDragEnd}>

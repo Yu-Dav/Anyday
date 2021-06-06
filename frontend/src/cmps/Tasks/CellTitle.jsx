@@ -67,11 +67,12 @@ export class CellTitle extends Component {
     render() {
         const { title, id } = this.props.task
         const { board, group } = this.props
+        const className = this.props.task.comments.length ? 'fa comment active': 'fa comment'
         return (
             <div className="cell title flex ">
                 <i className="fas fa-trash remove-task" onClick={this.onRemoveTask}></i>
                 <EditableCmp className="cell-title-editable" name="title" value={title} updateFunc={this.onUpdateTaskTitle} />
-                <Link to={`/board/${board._id}/${group.id}/${id}`}><i className="fa comment"></i></Link>
+                <Link to={`/board/${board._id}/${group.id}/${id}`}><i className={className}></i></Link>
             </div>
         )
     }
