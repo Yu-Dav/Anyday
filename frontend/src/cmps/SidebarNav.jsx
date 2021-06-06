@@ -40,8 +40,8 @@ class _SidebarNav extends Component {
                         <h1>My Workspace</h1>
                         <div className="sidebar-ops">
                             <i onClick={this.props.onAddNewBoard} className="flex add-board-wrapper flex align-center">
-                                <AddCircleOutlineOutlinedIcon style={{ fontSize: '18px', color: '#898a8f', cursor: 'pointer', position:'absolute' }} />
-                                <span>Add</span>
+                                <AddCircleOutlineOutlinedIcon style={{ fontSize: '18px', color: '#898a8f', cursor: 'pointer', position:'absolute', left:'-3.3px' }} />
+                                <span style={{marginLeft:'20px'}}>Add</span>
                             </i>
                             <div className="flex align-center search-board-wrapper">
                                 <label htmlFor="boardName"><i className="fas fa-search"></i></label>

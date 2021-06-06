@@ -74,7 +74,6 @@ export function CellMember({ task, group, board, updateBoard }) {
 
     const onRemoveMember = async (ev) => {
         const memberId = ev.target.dataset.id
-        // console.log('member id',memberId);
         const memberIdx = taskMembers.findIndex(member => member._id === memberId)
         const member = taskMembers.find(member => member._id === memberId)
         taskMembers.splice(memberIdx, 1)
@@ -123,7 +122,8 @@ export function CellMember({ task, group, board, updateBoard }) {
             onClick={handleToggle} className="cell asignee">
             <div className="flex align-center justify-center">
                {taskMembers && <AvatarGroup max={4}>
-                {taskMembers.map(member =>  <Avatar key={member._id} alt={member.username} src={member.imgUrl} style={{ width:'30px', height:'30px' }}/>
+                {taskMembers.map(member =>  <Avatar key={member._id} alt={member.username} src={member.imgUrl} 
+                style={{ width:'30px', height:'30px' }}/>
                 // return <span key={member._id}>{member.username.charAt(0)} </span>
                 // return <span className="cell-member-avatar flex align-center" key={member._id}>
                 //     <img src={member.imgUrl} alt="Member Avatar" />
@@ -141,11 +141,17 @@ export function CellMember({ task, group, board, updateBoard }) {
                             <ClickAwayListener onClickAway={handleClose}>
                                 <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown} style={{ fontSize:'13px' }}>
                                     {taskMembers.map(member => {
-                                        return <MenuItem style={{ display:'flex', gap:'10px', fontSize:'13px' }} key={member._id}><Avatar alt={member.username} src={member.imgUrl} style={{ width:'30px', height:'30px' }}/>{member.fullname}<i className="fas close" data-id={member._id} onClick={onRemoveMember}></i></MenuItem>
+                                        return <MenuItem style={{ display:'flex', gap:'10px', fontSize:'13px' }} 
+                                        key={member._id}><Avatar alt={member.username} src={member.imgUrl} 
+                                        style={{ width:'30px', height:'30px' }}/>{member.fullname}<i className="fas close" 
+                                        data-id={member._id} onClick={onRemoveMember}></i></MenuItem>
                                     })}
                                     <hr />
                                     {getOtherMembers().map(member => {
-                                        return <MenuItem style={{ display:'flex', gap:'10px', fontSize:'13px' }} key={member._id} data-id={member._id} onClick={onAddMember}><Avatar alt={member.username} src={member.imgUrl} style={{ width:'30px', height:'30px' }}/>{member.fullname}</MenuItem>
+                                        return <MenuItem style={{ display:'flex', gap:'10px', fontSize:'13px' }}
+                                         key={member._id} data-id={member._id} onClick={onAddMember}>
+                                             <Avatar alt={member.username} src={member.imgUrl} style={{ width:'30px', height:'30px' }}/>
+                                             {member.fullname}</MenuItem>
                                     }
                                     )}
                                 </MenuList>
