@@ -33,42 +33,39 @@ class _BoardApp extends Component {
     async componentDidMount() {
         // console.log('CMP mounted')
         socketService.setup()
-        const boardId = this.props.match.params.boardId
-        userService.getUsers()
         this.props.loadUsers()
+        const boardId = this.props.match.params.boardId
         const user = userService.getLoggedinUser()
         if (!boardId) await this.props.loadBoards()
         else {
             const board = await this.props.loadBoard(boardId)
             socketService.emit('join new board', board._id)
-            socketService.on('board was updated', async () => {
-                // console.log ('boardApp heard \'board loaded\' for =', board._id, board.title)
-                await this.props.loadBoard(board._id)
+            socketService.on('board was updated', async (updatedBoardId) => {
+                // console.log('boardApp heard \'board was updated\' for =\n', updatedBoardId, updatedBoardId)
+                await this.props.loadBoard(updatedBoardId)
+
             })
             this.setState({ ...this.state, currUser: user })
-
+            // this.setState({ ...this.state, currUser: user, filteredBoard: board })
         }
     }
     componentWillUnmount() {
         socketService.terminate()
-        socketService.off('board loaded')
+        socketService.off('join new board')
     }
     async componentDidUpdate(prevProps) {
         const prevId = prevProps.match.params.boardId
         const currId = this.props.match.params.boardId
         // if (!prevId) return
         if (prevId !== currId) {
-            // console.log('diff id will load new board id =', currId)
             const board = await this.props.loadBoard(currId)
-            socketService.emit('join new board', currId)
-            // console.log ('after socket emitted =')
-
+            // console.log('boardApp CMP did update, emitting \'joing new board \'',board._id)
+            socketService.emit('join new board', board._id)
             // this.setState({ ...this.state, filteredBoard: board })
         }
     }
 
     onAddNewBoard = () => {
-        console.log('Adding new board =')
         this.props.addBoard()
     }
 
@@ -240,9 +237,9 @@ class _BoardApp extends Component {
         return (
             <div className="board-app-container flex" onScroll={this.onScroll} ref="board-app-container">
                 <SidebarApp />
-                {boardId && <SidebarNav onAddNewBoard={this.onAddNewBoard} isExpanded={false}/>}
-                {!boardId && <SidebarNav onAddNewBoard={this.onAddNewBoard} isExpanded={true}/>}
-                {!boardId && <Welcome/>}
+                {boardId && <SidebarNav onAddNewBoard={this.onAddNewBoard} isExpanded={false} />}
+                {!boardId && <SidebarNav onAddNewBoard={this.onAddNewBoard} isExpanded={true} />}
+                {!boardId && <Welcome />}
                 {boardId && <div className="container board-container">
                     <BoardHeader users={users} board={currBoard} updateBoard={this.props.updateBoard} />
                     <BoardCtrlPanel board={currBoard} onChangeView={this.onChangeView} addNewGroup={this.addNewGroup}

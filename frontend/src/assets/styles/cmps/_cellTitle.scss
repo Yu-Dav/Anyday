@@ -6,6 +6,9 @@
         z-index: 4;
         min-width: 380px;
     }
+    // .remove-task ~ .cell.title:hover {
+    //     opacity: 0.5;
+    // }
     .cell.title {
         background-color: #f5f6f8f2;
         flex: 1;
@@ -17,6 +20,7 @@
             text-overflow: ellipsis;
             overflow: hidden;
             white-space: nowrap;
+            margin-left: 10px;
         }
         &:hover {
             .remove-task {
@@ -40,7 +44,7 @@
             margin-left: 20px;
         }
         .fa-trash::after {
-            content: '\f1f8';
+            content: "\f1f8";
             margin-inline-end: 10px;
         }
         // .title-left-sec {
@@ -48,17 +52,6 @@
     }
 }
 
-// transform translate x changing on scroll event on the div.
-
-// ﻿scroll left.
-
-// ﻿margin left in the width of cell title. cell title in pos absolute.
-
-// ﻿groups container overflow x auto
-
-// ﻿scroll on "all groups"
-
-//onscroll event?
 
 // /* MEDIUM */
 @media (max-width: $normal-breakpoint) {

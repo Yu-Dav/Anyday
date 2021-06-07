@@ -52,8 +52,11 @@ export class CellStatus extends Component {
         const { isExpanded } = this.state
         return (
             <ClickAwayListener onClickAway={this.handleClickAway}>
+
                 <div className="cell label" style={{ backgroundColor: status.color }} onClick={this.onOpenSelector}>
-                    {status.title}
+                    <div className="status-priority-dog-ear">
+                        {status.title}
+                    </div>
 
                     <div>
                         {isExpanded && <div>
