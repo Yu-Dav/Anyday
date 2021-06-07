@@ -49,7 +49,14 @@ export class CellPriority extends Component {
         return (
             <ClickAwayListener onClickAway={this.handleClickAway}>
                 <div className="cell label" style={{ backgroundColor: priority.color }} onClick={this.onOpenSelector}>
-                    {priority.title}
+
+                    <div className="status-priority-dog-ear">
+                        {priority.title}
+                    </div>
+
+
+
+
                     {isExpanded && <div>
                         <div className=" fade-in modal-container relative">
                             <div className=" triangle-with-shadow relative"></div>
