@@ -63,11 +63,7 @@ export function TaskPreview({ task, group, board, updateBoard, index }) {
                         ref={provided.innerRef}>
                         {/* <span className="left-container flex"> */}
                         <div>
-                            <Snack/>
-                            <i className="fas fa-trash remove-task" onClick={() => {
-                                onRemoveTask()
-                            }}></i>
-                            
+                            <Snack onRemoveTask={onRemoveTask}/>                            
                         </div>
                         <div className="group-color" style={{ backgroundColor: group.style.bgColor }}></div>
                         {/* <CellTitle task={task} group={group} board={board} updateBoard={updateBoard} /> */}
