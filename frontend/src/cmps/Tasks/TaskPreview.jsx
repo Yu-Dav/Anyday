@@ -72,7 +72,8 @@ export function TaskPreview({ task, group, board, updateBoard, index }) {
                         <div className="group-color" style={{ backgroundColor: group.style.bgColor }}></div>
                         {/* <CellTitle task={task} group={group} board={board} updateBoard={updateBoard} /> */}
                         {/* </span> */}
-                        {board.cellTypes.map(cellType => <DynamicCell key={task.id} type={cellType} task={task} group={group} board={board} updateBoard={updateBoard}/>)}
+                        {board.cellTypes.map(cellType => <DynamicCell type={cellType} task={task} group={group} board={board} updateBoard={updateBoard} />)}
+                                                           {/* adding key to the map above causes an error... why? */}                          
                         {/* <CellMember task={task} group={group} board={board} updateBoard={updateBoard} />
                         <CellTag task={task} group={group} board={board} updateBoard={updateBoard} />
                         <CellStatus task={task} group={group} board={board} updateBoard={updateBoard} />

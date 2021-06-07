@@ -43,7 +43,6 @@ class _BoardApp extends Component {
             socketService.on('board was updated', async (updatedBoardId) => {
                 // console.log('boardApp heard \'board was updated\' for =\n', updatedBoardId, updatedBoardId)
                 await this.props.loadBoard(updatedBoardId)
-
             })
             this.setState({ ...this.state, currUser: user })
             // this.setState({ ...this.state, currUser: user, filteredBoard: board })
@@ -95,7 +94,7 @@ class _BoardApp extends Component {
         newBoard.activities.unshift(newActivity)
         await this.props.updateBoard(newBoard)
         socketService.emit('board updated', newBoard._id)
-        this.setState({ ...this.state, filteredBoard: newBoard })
+        // this.setState({ ...this.state, filteredBoard: newBoard })
     }
 
     getColor() {
@@ -232,7 +231,6 @@ class _BoardApp extends Component {
         const { boardId } = this.props.match.params
         const { currBoard, users } = this.props
         const { currUser, filteredBoard } = this.state
-        // console.log('params', this.props.match.params)
         if (!currBoard) return <div>loading</div>
         return (
             <div className="board-app-container flex" onScroll={this.onScroll} ref="board-app-container">
@@ -265,7 +263,6 @@ class _BoardApp extends Component {
                             </Droppable>
                         </DragDropContext>
                     }
-
                 </div>}
                 <Switch>
                     {/* <Route path={`${this.props.match.path}/map`} component={GoogleMap} /> */}
@@ -279,7 +276,6 @@ class _BoardApp extends Component {
                         return <ActivityModal {...props} />
                     }} />
                 </Switch>
-
             </div>
         )
     }
