@@ -14,7 +14,7 @@ import logo from '../assets/imgs/favicon/favicon-32x32.png'
 
 class _SidebarNav extends Component {
     state = {
-        isExpanded: false,
+        isExpanded: this.props.isExpanded,
         searchBy: ''
     }
     componentDidMount() {
@@ -60,12 +60,12 @@ class _SidebarNav extends Component {
                                 <span style={{marginLeft:'20px'}}>Add</span>
 
                                 </i>
-                                <div className="flex align-center search-board-wrapper">
+                                {/* <div className="flex align-center search-board-wrapper">
                                     <label htmlFor="boardName"><i className="fas fa-search"></i></label>
                                     <Input style={{ color: '#323338' }} name="searchBy" id="boardName" placeholder="Search by name"
                                         autoComplete="false" disableUnderline={true}
                                         onChange={this.handleChange} value={searchBy} />
-                                </div>
+                                </div> */}
 
                             </div>
                             <div className="sidebar-ops second flex column">

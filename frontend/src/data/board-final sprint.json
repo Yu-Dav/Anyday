@@ -2,7 +2,7 @@
     "title" : "Final Sprint",
     "subtitle" : "Our monday",
     "createdAt" : 1621940297426.0,
-    "cellTypes": ["title", "member", "tag", "status", "priority", "creationLog", "timeline", "location"],
+    "cellTypes": ["title", "member", "tag", "status", "priority", "creationLog", "timeline"],
     "createdBy" : {
         "_id" : "u103",
         "fullname" : "Yuval David",

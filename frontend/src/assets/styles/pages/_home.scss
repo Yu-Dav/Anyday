@@ -1,7 +1,8 @@
 .home-page-container {
     min-height: 100vh;
-    color: $darkGrey;
-    background: linear-gradient(141deg, #ecdea8eb, rgba(255, 255, 255, 0) 68%);
+    // color: $darkGrey;
+    color: #333;
+    background: linear-gradient(141deg, #ffeb9f, rgba(255, 255, 255, 0) 68%);
     header {
         // background-color: blanchedalmond;
         padding: 10px;
@@ -20,7 +21,7 @@
             }
             li {
                 height: 32px;
-                font-size: rem(14px);
+                font-size: rem(16px);
                 // letter-spacing: .5px;
                 padding: 4px 8px;
                 font-weight: 400;
@@ -45,17 +46,31 @@
     }
     main {
         flex: 1;
-        img.logo {
-            width: 250px;
-            height: 250px;
-            display: inline-block;
+        text-align: center;
+        .anyday{
+            .title{
+                font-size: rem(110px);
+                font-family: roboto-medium;
+            }
+            img{
+                width: rem(110px);
+                height: rem(110px);
+            }
         }
+        // img.logo {
+        //     width: 250px;
+        //     height: 250px;
+        //     display: inline-block;
+        // }
         .main-content {
             p {
                 font-size: rem(18px);
             }
             h1 {
-                font-size: rem(24px);
+                margin-top: 5px;
+                margin-bottom: 30px;
+                font-size: rem(29px);
+
                 span {
                     animation: color-change 3s infinite;
                     animation-direction: alternate;
@@ -70,24 +85,21 @@
             }
             button {
                 color: inherit;
-                height: 32px;
                 font-size: rem(20px);
-                padding: 4px 8px;
-                font-weight: 400;
-                line-height: 22px;
-                border: none;
-                border-radius: 4px;
-                background-color: transparent;
+                padding: 6px 35px;
+                border-radius: 40px;
+                background-color: #01d849;
                 border: 1px solid $darkGrey;
                 transition: 0.3s;
                 &:hover {
-                    border: 1px solid $Darkblue;
-                    color: $Darkblue;
+                    border: 1px solid $yellow;
+                    color: yellow;
                 }
             }
         }
     }
     footer {
+        color: $darkGrey;
         text-align: center;
         // margin-top: auto;
         padding: 2em 0em;
@@ -96,4 +108,38 @@
         }
     }
 }
+@media (max-width: $mobile-breakpoint) {
+    .home-page-container {
+        font-size: 13px;
+        main{
 
+            .anyday{
+                .title{
+                    font-size: rem(90px);
+                    font-family: roboto-medium;
+                }
+                img{
+                    width: rem(90px);
+                    height: rem(90px);
+                }
+            }
+            .main-content {
+                p {
+                    font-size: rem(14px);
+                }
+                h1 {
+                    margin-top: 5px;
+                    margin-bottom: 30px;
+                    font-size: rem(22px);
+      
+                button {
+           
+                    font-size: rem(18px);
+ 
+                }
+            }
+        }
+        }
+    }
+
+}

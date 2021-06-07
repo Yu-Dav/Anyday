@@ -8,9 +8,9 @@
           a {
               text-decoration: none;
           }
-          a:visited {
-              color: $darkGrey;
-          }
+        //   a:visited {
+        //     //   color: $darkGrey;
+        //   }
           ul > *:not(:last-child) {
               margin-inline-end: 10px;
           }
@@ -34,8 +34,8 @@
                   width: 100%;
               }
           }
-          .try-as-guest {
-              font-size: rem(18px);
-          }
+        //   .try-as-guest {
+        //       font-size: rem(18px);
+        //   }
       }
 }
