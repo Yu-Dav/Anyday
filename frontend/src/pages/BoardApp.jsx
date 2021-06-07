@@ -35,16 +35,19 @@ class _BoardApp extends Component {
         socketService.setup()
         this.props.loadUsers()
         const boardId = this.props.match.params.boardId
-        const board = await this.props.loadBoard(boardId)
         const user = userService.getLoggedinUser()
-        this.setState({ ...this.state, currUser: user })
-        // this.setState({ ...this.state, currUser: user, filteredBoard: board })
-        socketService.emit('join new board', board._id)
-        socketService.on('board was updated', async (updatedBoardId) => {
-            // console.log('boardApp heard \'board was updated\' for =\n', updatedBoardId, updatedBoardId)
-            await this.props.loadBoard(updatedBoardId)
+        if (!boardId) await this.props.loadBoards()
+        else {
+            const board = await this.props.loadBoard(boardId)
+            socketService.emit('join new board', board._id)
+            socketService.on('board was updated', async (updatedBoardId) => {
+                // console.log('boardApp heard \'board was updated\' for =\n', updatedBoardId, updatedBoardId)
+                await this.props.loadBoard(updatedBoardId)
 
-        })
+            })
+            this.setState({ ...this.state, currUser: user })
+            // this.setState({ ...this.state, currUser: user, filteredBoard: board })
+        }
     }
     componentWillUnmount() {
         socketService.terminate()
@@ -234,9 +237,9 @@ class _BoardApp extends Component {
         return (
             <div className="board-app-container flex" onScroll={this.onScroll} ref="board-app-container">
                 <SidebarApp />
-                {boardId && <SidebarNav onAddNewBoard={this.onAddNewBoard} isExpanded={false}/>}
-                {!boardId && <SidebarNav onAddNewBoard={this.onAddNewBoard} isExpanded={true}/>}
-                {!boardId && <Welcome/>}
+                {boardId && <SidebarNav onAddNewBoard={this.onAddNewBoard} isExpanded={false} />}
+                {!boardId && <SidebarNav onAddNewBoard={this.onAddNewBoard} isExpanded={true} />}
+                {!boardId && <Welcome />}
                 {boardId && <div className="container board-container">
                     <BoardHeader users={users} board={currBoard} updateBoard={this.props.updateBoard} />
                     <BoardCtrlPanel board={currBoard} onChangeView={this.onChangeView} addNewGroup={this.addNewGroup}
