@@ -31,43 +31,38 @@ class _BoardApp extends Component {
     }
 
     async componentDidMount() {
+        // console.log('CMP mounted')
         socketService.setup()
-        console.log('hello')
         const boardId = this.props.match.params.boardId
-        this.props.loadUsers()
-        // userService.getUsers()
-        console.log('board id did mount', boardId);
         userService.getUsers()
+        this.props.loadUsers()
         const user = userService.getLoggedinUser()
         if (!boardId) await this.props.loadBoards()
         else {
-            console.log(`file: BoardApp.jsx || line 33 || boardId`, boardId)
-            socketService.emit('join board', boardId)
-            await this.props.loadBoard(boardId)
-            socketService.on('board loaded', () => {
-                this.props.loadBoard(boardId)
-                console.log('boardId =', boardId)
+            const board = await this.props.loadBoard(boardId)
+            socketService.emit('join new board', board._id)
+            socketService.on('board was updated', async () => {
+                // console.log ('boardApp heard \'board loaded\' for =', board._id, board.title)
+                await this.props.loadBoard(board._id)
             })
+            this.setState({ ...this.state, currUser: user })
+
         }
-        this.setState({ ...this.state, currUser: user, filteredBoard: this.props.board })
     }
     componentWillUnmount() {
-
         socketService.terminate()
         socketService.off('board loaded')
     }
     async componentDidUpdate(prevProps) {
         const prevId = prevProps.match.params.boardId
-        console.log(`file: BoardApp.jsx || line 46 || prevId`, prevId)
         const currId = this.props.match.params.boardId
-        console.log(`BoardApp.jsx || line 47 || currId`, currId)
         // if (!prevId) return
         if (prevId !== currId) {
-            console.log('different id loading new board =')
+            // console.log('diff id will load new board id =', currId)
             const board = await this.props.loadBoard(currId)
-            // socketService.emit('join board', currId)
+            socketService.emit('join new board', currId)
+            // console.log ('after socket emitted =')
 
-            // console.log('board in cdu in boardApp', board._id, board.title)
             // this.setState({ ...this.state, filteredBoard: board })
         }
     }
@@ -114,30 +109,27 @@ class _BoardApp extends Component {
 
     onDragEnd = async (result) => {
         const { destination, source, draggableId, type } = result;
+        const { currBoard } = this.props;
         if (!destination) return;
         if (
             destination.droppableId === source.droppableId &&
             destination.index === source.index
-        ) return
+        ) return;
         if (type === 'task') {
-            const sourceGroup = this.props.currBoard.groups.find(group => group.id === source.droppableId);
-            const destinationGroup = this.props.currBoard.groups.find(group => group.id === destination.droppableId);
-            const task = sourceGroup.tasks.find(task => task.id === draggableId)
+            const sourceGroup = currBoard.groups.find(group => group.id === source.droppableId);
+            const destinationGroup = currBoard.groups.find(group => group.id === destination.droppableId);
+            const task = sourceGroup.tasks.find(task => task.id === draggableId);
             sourceGroup.tasks.splice(source.index, 1);
             destinationGroup.tasks.splice(destination.index, 0, task);
         }
         if (type === 'group') {
-            const currBoard = this.props.currBoard;
-            // const currBoard = this.props.currBoard;
-            const sourceGroup = this.props.currBoard.groups.find(group => group.id === draggableId);
+            const sourceGroup = currBoard.groups.find(group => group.id === draggableId);
             currBoard.groups.splice(source.index, 1);
-            currBoard.groups.splice(destination.index, 0, sourceGroup)
+            currBoard.groups.splice(destination.index, 0, sourceGroup);
         }
-        // const copyGroup = {};
-        const copyGroup = { ...this.props.currBoard };
-        console.log(`file: BoardApp.jsx || line 125 || copyGroup`, copyGroup)
-        await this.props.updateBoard(copyGroup);
-        socketService.emit('board updated', copyGroup._id);
+        const newBoard = { ...currBoard };
+        await this.props.updateBoard(newBoard);
+        socketService.emit('board updated', newBoard._id);
     }
 
     setFilter = (filterBy) => {
