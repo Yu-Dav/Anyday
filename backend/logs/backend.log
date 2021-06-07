@@ -166,3 +166,8 @@
 6/6/2021, 10:20:41 PM - DEBUG - Session ID is | adasJBqSop98Fd8bJy7c4w0rLSetfuJb 
 6/6/2021, 10:23:31 PM - DEBUG - Session ID is | 5u8Tm9YGrsLc-qk31cD8Ky4wpEdYVWZU 
 6/6/2021, 10:25:51 PM - DEBUG - Session ID is | wFyZOON15z1AoM6npN6UxABwDcms0YAp 
+6/7/2021, 7:58:37 AM - INFO - Server is running on port: 3030 
+6/7/2021, 8:01:47 AM - ERROR - while finding board undefined | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: 3qLucgCIxiyVAsyjr9CooDDq5m-XyTU0)
+6/7/2021, 8:01:47 AM - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: 3qLucgCIxiyVAsyjr9CooDDq5m-XyTU0)
+6/7/2021, 8:02:11 AM - ERROR - while finding board undefined | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: 3qLucgCIxiyVAsyjr9CooDDq5m-XyTU0)
+6/7/2021, 8:02:11 AM - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: 3qLucgCIxiyVAsyjr9CooDDq5m-XyTU0)

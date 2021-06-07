@@ -17,7 +17,7 @@ export function loadBoard(boardId) {
     return async (dispatch) => {
         try {
             const board = await boardService.getById(boardId);
-            console.log(`file: boardActions.js || line 20 || board`, board);
+            // console.log(`SET BOARD action for`, board._id, 'title:', board.title);
             dispatch({ type: 'SET_BOARD', board });
             return board;
         } catch (err) {
@@ -27,11 +27,11 @@ export function loadBoard(boardId) {
 }
 
 export function updateBoard(board) {
-    // console.log(`file: boardActions.js || line 30 || board`, board);
     return async (dispatch) => {
         try {
             const updatedBoard = await boardService.update(board);
-            socketService.emit('board updated', updatedBoard._id);
+            // console.log('34 * updated board in actions =', updatedBoard._id, 'title:', updatedBoard.title);
+            await socketService.emit('board updated', updatedBoard._id);
             dispatch({ type: 'UPDATE_BOARD', board: updatedBoard });
         } catch (err) {
             console.log('BoardActions: err in updateBoard', err);

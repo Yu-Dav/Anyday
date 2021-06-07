@@ -71,14 +71,20 @@
     .active{
         border-bottom: 2px solid #0085ff;
     }
+
+    .right-ctrl {
+        font-family: roboto-light,helvetica,sans-sarif;
+    }
     .right-ctrl>*{
         border-bottom-left-radius: unset;
         border-bottom-right-radius: unset;
+        svg{
+            opacity: .75;
+        }
     }
 
     .view{
         cursor: pointer;
     }
-
 
 }

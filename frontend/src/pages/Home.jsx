@@ -6,7 +6,7 @@ import Snackbar from '@material-ui/core/Snackbar'
 
 export function Home() {
     return (
-        <section className="home-page-container flex column space-between">
+        <section className="home-page-container flex column space-between container">
             {/* <header>
                 <div className="container nav-container flex align-center">
                     <nav>
@@ -20,12 +20,15 @@ export function Home() {
             </header> */}
             <Header/>
             <main className="flex column align-center justify-center">
-                <div className="main-home-container flex">
+                <div className="anyday flex align-center justify-center">
                     <img src={logo} alt="Logo" className="logo" />
+                    <div className="title">nyday</div>
+                </div>
+                <div className="main-home-container flex">
                     <div className="main-content">
                         <p>Easily manage your team's task or your personal projects</p>
                         <h1>You will quickly use our app <span>Anyday</span></h1>
-                        <Link to={`/board/60bc8fa0b954f46a21c940c1`} ><button>Start here</button></Link>
+                        <Link to={`/board/`} ><button>Start here</button></Link>
                         {/* <Link to={`/board/b101`} ><button>Try as guest</button></Link> */}
                         
                     </div>

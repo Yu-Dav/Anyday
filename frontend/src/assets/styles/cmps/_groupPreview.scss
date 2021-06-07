@@ -1,6 +1,19 @@
-// .groups-container.wrapper {
-//     overflow-x: scroll;
-// }
+.loader-no-groups {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    // flex-direction: column;
+    align-items: center;
+    h1 {
+        font-family: roboto-light,helvetica,sans-sarif;
+        font-size: rem(18px);
+    }
+    img {
+        display: inline-block;
+        width: 15%;
+        opacity: .75;
+    }
+}
 
 .group-container {
     margin-bottom: 30px;
