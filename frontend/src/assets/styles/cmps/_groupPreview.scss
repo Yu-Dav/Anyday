@@ -34,6 +34,7 @@
     &:hover {
         .group-handle {
             opacity: 0.5;
+            position: relative;
         }
     }
     .group-modal-choose {
@@ -42,11 +43,14 @@
         margin-top: 6px;
     }
     .group-handle {
+        position: absolute;
         opacity: 0;
         margin: 3.5px 2px 0 5px;
         font-size: rem(18px);
+        transition: .3s;
         &:hover {
             opacity: 1;
+            position: relative;
         }
     }
 }

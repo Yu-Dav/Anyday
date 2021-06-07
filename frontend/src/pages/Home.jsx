@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Header } from '../cmps/Header.jsx'
 import logo from '../assets/imgs/favicon/logo-512x512.png'
+import Snackbar from '@material-ui/core/Snackbar'
 
 export function Home() {
     return (

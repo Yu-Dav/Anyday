@@ -64,11 +64,9 @@ export class BoardHeader extends Component {
         const { board, users } = this.props
         const { isExpanded } = this.state
         return (
-
             <div className="board-header">
                 <div className="header-top flex space-between">
                     <div className="title-container flex align-center">
-
                         <EditableCmp className="title" name="title" value={board.title} updateFunc={this.onUpdateTitle} />
 
                         <StarSvg className="star-fav" />
