@@ -14,10 +14,11 @@ import { BoardHeader } from '../cmps/BoardHeader'
 
 import { BoardCtrlPanel } from '../cmps/BoardCtrlPanel'
 import { loadBoard, updateBoard, addBoard, loadBoards } from '../store/actions/boardActions'
-import {loadUsers} from '../store/actions/userActions'
+import { loadUsers } from '../store/actions/userActions'
 import { GroupList } from '../cmps/groups/GroupList'
 import { ActivityModal } from '../cmps/ActivitySideBar/ActivityModal';
 import { GoogleMap } from '../cmps/Map.jsx'
+import { Welcome } from '../cmps/Welcome';
 // import { LocationSearchInput } from '../cmps/tasks/CellLocation'
 // import { MenuListComposition } from '../cmps/MenuCmp'
 // import { ChipCmp } from '../cmps/ChipCmp';
@@ -38,7 +39,7 @@ class _BoardApp extends Component {
         console.log('board id did mount', boardId);
         userService.getUsers()
         const user = userService.getLoggedinUser()
-        if(!boardId) await this.props.loadBoards()
+        if (!boardId) await this.props.loadBoards()
         else {
             console.log(`file: BoardApp.jsx || line 33 || boardId`, boardId)
             socketService.emit('join board', boardId)
@@ -239,7 +240,7 @@ class _BoardApp extends Component {
     }
 
     render() {
-        const {boardId} = this.props.match.params
+        const { boardId } = this.props.match.params
         const { currBoard, users } = this.props
         const { currUser, filteredBoard } = this.state
         // console.log('params', this.props.match.params)
@@ -247,12 +248,13 @@ class _BoardApp extends Component {
         return (
             <div className="board-app-container flex" onScroll={this.onScroll} ref="board-app-container">
                 <SidebarApp />
-                <SidebarNav onAddNewBoard={this.onAddNewBoard} />
-
-                <div className="container board-container">
+                {boardId && <SidebarNav onAddNewBoard={this.onAddNewBoard} isExpanded={false}/>}
+                {!boardId && <SidebarNav onAddNewBoard={this.onAddNewBoard} isExpanded={true}/>}
+                {!boardId && <Welcome/>}
+                {boardId && <div className="container board-container">
                     <BoardHeader users={users} board={currBoard} updateBoard={this.props.updateBoard} />
                     <BoardCtrlPanel board={currBoard} onChangeView={this.onChangeView} addNewGroup={this.addNewGroup}
-                     setFilter={this.setFilter} loadBoard={this.props.loadBoard} />
+                        setFilter={this.setFilter} loadBoard={this.props.loadBoard} />
                     {/* <button className="btn" onClick={() => window.location.hash = `/board/${currBoard._id}/map`}>Map</button> */}
                     {/* <LocationSearchInput /> */}
                     {/* <button className="btn-location" onClick={() => this.setState({ ...this.state, isMap: !this.state.isMap })}>Map</button> */}
@@ -275,19 +277,19 @@ class _BoardApp extends Component {
                         </DragDropContext>
                     }
 
-                    <Switch>
-                        {/* <Route path={`${this.props.match.path}/map`} component={GoogleMap} /> */}
-                        {/* <Route path={`${this.props.match.path}/map`} render={(props) => {
+                </div>}
+                <Switch>
+                    {/* <Route path={`${this.props.match.path}/map`} component={GoogleMap} /> */}
+                    {/* <Route path={`${this.props.match.path}/map`} render={(props) => {
                             return <GoogleMap {...props} />
                         }} /> */}
-                        <Route path={`${this.props.match.path}/:groupId/:taskId`} render={(props) => {
-                            return <ActivityModal {...props} />
-                        }} />
-                        <Route path={`${this.props.match.path}/activity_log`} render={(props) => {
-                            return <ActivityModal {...props} />
-                        }} />
-                    </Switch>
-                </div>
+                    <Route path={`${this.props.match.path}/:groupId/:taskId`} render={(props) => {
+                        return <ActivityModal {...props} />
+                    }} />
+                    <Route path={`${this.props.match.path}/activity_log`} render={(props) => {
+                        return <ActivityModal {...props} />
+                    }} />
+                </Switch>
 
             </div>
         )
