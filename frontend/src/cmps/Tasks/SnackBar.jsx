@@ -4,10 +4,11 @@ import Snackbar from '@material-ui/core/Snackbar';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 
-export function Snack() {
+export function Snack({ onRemoveTask }) {
     const [open, setOpen] = React.useState(false);
 
     const handleClick = () => {
+        setTimeout(onRemoveTask, 3000)
         setOpen(true);
     };
 
@@ -21,24 +22,26 @@ export function Snack() {
 
     return (
         <div>
-            <Button style={{
-                position: 'absolute',
-                left: '-46px', opacity: '0'
-            }} onClick={handleClick}>bar</Button>
+            <i className="fas fa-trash remove-task" onClick={handleClick}></i>
             <Snackbar
                 anchorOrigin={{
-                    vertical: 'bottom',
-                    horizontal: 'left',
+                    vertical: 'top',
+                    horizontal: 'center',
+                    color: '#323338',
+                    fontFamily: "Roboto-light",
+                    backgroundColor: '#c4c4c4'
+
                 }}
                 open={open}
                 autoHideDuration={2000}
                 onClose={handleClose}
-                message="Note archived"
+                message="Task deleted"
+                varient='success'
                 action={
                     <React.Fragment>
-                        <Button color="secondary" size="small" onClick={handleClose}>
+                        {/* <Button color="secondary" size="small" onClick={handleClose}>
                             UNDO
-            </Button>
+                         </Button> */}
                         <IconButton size="small" aria-label="close" color="inherit" onClick={handleClose}>
                             <CloseIcon fontSize="small" />
                         </IconButton>
