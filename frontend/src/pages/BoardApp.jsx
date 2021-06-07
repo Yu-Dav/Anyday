@@ -26,7 +26,7 @@ import { Welcome } from '../cmps/Welcome';
 class _BoardApp extends Component {
     state = {
         currUser: null,
-        filteredBoard: this.props.currBoard,
+        filteredBoard: {...this.props.currBoard},
         isMap: false,
     }
 
