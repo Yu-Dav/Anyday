@@ -16,9 +16,7 @@
     & > * {
         margin: 0 0 0 1px;
     }
-    // .remove-task {
-    //     margin: 0 10px;
-    // }
+
     .remove-task {
         opacity: 0;
         cursor: pointer;
@@ -62,12 +60,6 @@
             opacity: 1;
         }
     }
-
-    // &:hover {
-    //     .fas.close {
-    //         // opacity: .5;
-    //     }
-    // } 
 
 }
 
@@ -119,7 +111,7 @@
     }
 }
 .fa.comment:hover {
-    color: #0085ff;
+    color: #0073ea;;
 }
 
 .fa.comment::after {
@@ -127,14 +119,14 @@
     font-size: 24px;
     color: #c5c7d0;
     &:hover {
-        color: #0085ff;
+        color: #0073ea;;
     }
 }
 .fa.comment:hover::after {
-    color: #0085ff;
+    color: #0073ea;;
 }
 .fa.comment.active::after {
-    color: #0085ff;
+    color: #0073ea;;
 }
 a:hover {
     text-decoration: none;
