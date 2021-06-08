@@ -51,7 +51,7 @@ class _MapContainer extends Component {
             //     map.setCenter(place.geometry.location);
             //     map.setZoom(17);
             // }
-
+console.log(place);
             this.setState({ position: place.geometry.location }, console.log(this.state.position));
         });
     }
@@ -156,7 +156,7 @@ class _MapContainer extends Component {
 
 export const GoogleMap = GoogleApiWrapper({
     // apiKey: ('AIzaSyALrFJBnFDGcCiP2nGHHWujEFLSpiABtAw')
-    apiKey: ('AIzaSyC7SVSPj8l8YTwLoDGTEtzI4CII1V8-qF0')
+    apiKey: ('AIzaSyA1TpSPtsJIgXzeaeenK7R2XPSz5MzrSkk')
 })(_MapContainer)
 // AIzaSyAUSc1O5i0XVinJmXD7929Ux1jhjs2NzMw
 //AIzaSyD-Sbj-DvVI1Rf0_mNW0BVF0_9EIzpsPUs

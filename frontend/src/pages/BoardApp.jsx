@@ -6,7 +6,7 @@ import { utilService } from '../services/utilService'
 import { socketService } from '../services/socketService'
 import { userService } from '../services/userService'
 import { DragDropContext, Droppable } from 'react-beautiful-dnd';
-
+import {PlacesWithStandaloneSearchBox} from '../cmps/Map3'
 import { connect } from 'react-redux'
 import { SidebarNav } from '../cmps/SidebarNav.jsx'
 import { SidebarApp } from '../cmps/SidebarApp.jsx'
@@ -19,6 +19,8 @@ import { GroupList } from '../cmps/groups/GroupList'
 import { ActivityModal } from '../cmps/ActivitySideBar/ActivityModal';
 import { GoogleMap } from '../cmps/Map.jsx'
 import { Welcome } from '../cmps/Welcome';
+import { CellLocation } from '../cmps/tasks/CellLocation';
+// import { MapWithASearchBox, PlacesWithStandaloneSearchBox } from '../cmps/Map3';
 // import { LocationSearchInput } from '../cmps/tasks/CellLocation'
 // import { MenuListComposition } from '../cmps/MenuCmp'
 // import { ChipCmp } from '../cmps/ChipCmp';
@@ -263,8 +265,9 @@ class _BoardApp extends Component {
                     {/* <button className="btn" onClick={() => window.location.hash = `/board/${currBoard._id}/map`}>Map</button> */}
                     {/* <LocationSearchInput /> */}
                     {/* <button className="btn-location" onClick={() => this.setState({ ...this.state, isMap: !this.state.isMap })}>Map</button> */}
+                    <CellLocation/>
                     {this.state.isMap && <GoogleMap className="container" />}
-                    {/* {this.state.isMap && <MapWrapper/>} */}
+                    {/* {this.state.isMap && <GoogleMap/>} */}
                     {!this.state.isMap &&
                         <DragDropContext onDragEnd={this.onDragEnd}>
                             <Droppable droppableId="all-groups" type="group">
