@@ -11,17 +11,12 @@ import { DynamicCell } from './DynamicCell'
 import { socketService } from '../../services/socketService'
 import { utilService } from '../../services/utilService'
 import { userService } from '../../services/userService'
-
-
 import { Snack } from './SnackBar'
 
-import IconButton from '@material-ui/core/IconButton';
-import CloseIcon from '@material-ui/icons/Close';
-
+// import IconButton from '@material-ui/core/IconButton';
+// import CloseIcon from '@material-ui/icons/Close';
 
 export function TaskPreview({ task, group, board, updateBoard, index }) {
-
-
 
     // const cellTypes = ['title', 'member', 'tag', 'status', 'priority', 'creationLog', 'timeline', 'location']
     // console.log(board.cellTypes);
@@ -44,8 +39,6 @@ export function TaskPreview({ task, group, board, updateBoard, index }) {
                 id: groupId,
                 title: group.title
             }
-
-
         }
 
         newBoard.groups[groupIdx].tasks.splice(taskIdx, 1)

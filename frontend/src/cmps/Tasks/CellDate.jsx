@@ -60,6 +60,7 @@ export class CellDate extends Component {
     onSetDates = () => {
         this.setState({ ...this.state, isSettingDate: true })
     }
+    
     getNumOfDays = () => {
         const { startDate, endDate } = this.state
         if (!startDate || !endDate) return

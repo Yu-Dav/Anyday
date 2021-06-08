@@ -35,6 +35,7 @@ class _BoardApp extends Component {
         socketService.setup()
         this.props.loadUsers()
         const boardId = this.props.match.params.boardId
+        console.log(`file: BoardApp.jsx || line 38 || boardId`, boardId)
         const user = userService.getLoggedinUser()
         if (!boardId) await this.props.loadBoards()
         else {
@@ -104,6 +105,7 @@ class _BoardApp extends Component {
     }
 
     onDragEnd = async (result) => {
+        console.log ('onDragEnd results: =',result)
         const { destination, source, draggableId, type } = result;
         const { currBoard } = this.props;
         if (!destination) return;
@@ -219,10 +221,7 @@ class _BoardApp extends Component {
         this.props.addBoard()
 
     }
-    onScroll = (ev) => {
-        console.log('ev =', ev)
-    }
-    onChangeView = (ev) => {
+     onChangeView = (ev) => {
         console.log('ev.target', ev.target);
         this.setState({ ...this.state, isMap: !this.state.isMap })
     }
