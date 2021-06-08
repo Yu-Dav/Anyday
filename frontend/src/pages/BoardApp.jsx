@@ -26,7 +26,7 @@ import { Welcome } from '../cmps/Welcome';
 class _BoardApp extends Component {
     state = {
         currUser: null,
-        filteredBoard: {...this.props.currBoard},
+        filteredBoard: { ...this.props.currBoard },
         isMap: false,
     }
 
@@ -105,7 +105,7 @@ class _BoardApp extends Component {
     }
 
     onDragEnd = async (result) => {
-        console.log ('onDragEnd results: =',result)
+        console.log('onDragEnd results: =', result)
         const { destination, source, draggableId, type } = result;
         const { currBoard } = this.props;
         if (!destination) return;
@@ -124,6 +124,17 @@ class _BoardApp extends Component {
             const sourceGroup = currBoard.groups.find(group => group.id === draggableId);
             currBoard.groups.splice(source.index, 1);
             currBoard.groups.splice(destination.index, 0, sourceGroup);
+        }
+        if (type === 'column') {
+            console.log('you moved a column =\n', result)
+            // const cellType = this.props.board.cellTypes.find(type => task.id === draggableId);
+            const idx = draggableId.indexOf('-')
+            console.log(`file: BoardApp.jsx || line 132 || idx`, idx)
+            const cellType = draggableId.slice(0,idx)
+            console.log(`file: BoardApp.jsx || line 134 || cellType`, cellType)
+
+            currBoard.cellTypes.splice(source.index, 1);
+            currBoard.cellTypes.splice(destination.index, 0, cellType)
         }
         const newBoard = { ...currBoard };
         await this.props.updateBoard(newBoard);
@@ -221,7 +232,7 @@ class _BoardApp extends Component {
         this.props.addBoard()
 
     }
-     onChangeView = (ev) => {
+    onChangeView = (ev) => {
         console.log('ev.target', ev.target);
         this.setState({ ...this.state, isMap: !this.state.isMap })
     }

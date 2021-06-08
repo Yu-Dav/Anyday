@@ -2,8 +2,6 @@ import React from 'react'
 import { GroupHeader } from './GroupHeader'
 import { TaskPreview } from '../tasks/TaskPreview'
 import { TaskAdd } from '../tasks/TaskAdd'
-// import { SimplePopover } from '../SimplePopover'
-// import { Colors } from '../Colors'
 import { Droppable, Draggable } from 'react-beautiful-dnd';
 
 import { GroupMenu } from './GroupMenu'
@@ -27,7 +25,7 @@ export function GroupPreview({ group, board, updateBoard, index, currUser }) {
                                 <div
                                     ref={provided.innerRef}
                                     {...provided.droppableProps}
-                                    isDraggingOver={snapshot.isDraggingOver}
+                                    // isDraggingOver={snapshot.isDraggingOver}
                                 >
                                     {tasks.map((task, index) => <TaskPreview index={index} board={board} group={group}
                                         key={task.id} task={task} updateBoard={updateBoard} />)}

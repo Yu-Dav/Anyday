@@ -11,6 +11,17 @@
     & > *:not(:last-child) {
         margin: 0 0 0 1px;
     }
+    .isDragging {
+        background-color: #c4c4c4c7;
+        padding: 35px 70px;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg {
+            display: none;
+        }
+    }
     .title {
         position: sticky;
         left: 0;
@@ -44,6 +55,13 @@
         flex-basis: 180px;
         min-width: 180px;
         cursor: default;
+    }
+    .group-handle::after {
+        content: '\f58e';
+    }
+    svg {
+        height: 15px;
+        width: 15px;
     }
 }
 

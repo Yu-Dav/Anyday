@@ -62,8 +62,7 @@ class _Login extends Component {
         try {
             this.props.login(userCreds)
             this.setState({ loginCred: { username: '', password: '' } }, console.log(this.state))
-            const boardId = '60bc9be6fd9a2e731af04c97'
-            window.location.hash = `/board/${boardId}`
+            window.location.hash = `/board/`
         } catch (err) {
             this.setState({ msg: 'Login failed, try again.' })
             console.log('error is login', err);
