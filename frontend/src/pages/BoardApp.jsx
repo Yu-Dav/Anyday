@@ -129,10 +129,7 @@ class _BoardApp extends Component {
             console.log('you moved a column =\n', result)
             // const cellType = this.props.board.cellTypes.find(type => task.id === draggableId);
             const idx = draggableId.indexOf('-')
-            console.log(`file: BoardApp.jsx || line 132 || idx`, idx)
-            const cellType = draggableId.slice(0,idx)
-            console.log(`file: BoardApp.jsx || line 134 || cellType`, cellType)
-
+            const cellType = draggableId.slice(0, idx)
             currBoard.cellTypes.splice(source.index, 1);
             currBoard.cellTypes.splice(destination.index, 0, cellType)
         }
