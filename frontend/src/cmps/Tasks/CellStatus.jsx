@@ -6,7 +6,8 @@ import { utilService } from '../../services/utilService'
 
 export class CellStatus extends Component {
     state = {
-        isExpanded: false
+        isExpanded: false,
+        isDone: false
     }
 
     handleUpdate = async ({ target }) => {
@@ -46,17 +47,35 @@ export class CellStatus extends Component {
         this.setState({ ...this.state, isExpanded: false })
     }
 
+    onClickDone = (ev) => {
+        ev.stopPropagation()
+        // ev.preventDefault;
+        ev.target.classList.toggle('animate')
+        // setTimeout(ev.target.classList.remove('animate'), 700);
+        this.setState({ ...this.state, isDone: true })
+        setTimeout(() => {
+            this.setState({ ...this.state, isDone: false })
+            ev.target.classList.remove('animate')
+        }, 700)
+    }
+
+
     render() {
         const { status } = this.props.task
         const { statusLabels } = this.props.board
-        const { isExpanded } = this.state
+        const { isExpanded, isDone } = this.state
         return (
             <ClickAwayListener onClickAway={this.handleClickAway}>
 
+
                 <div className="cell label" style={{ backgroundColor: status.color }} onClick={this.onOpenSelector}>
-                    <div className="status-priority-dog-ear">
+                   
+                   <div className="status-priority-dog-ear">
                         {status.title}
                     </div>
+                    {/* <div className={ ? "done status-priority-dog-ear" : "status-priority-dog-ear"}>
+                        {status.title}
+                    </div> */}
 
                     <div>
                         {isExpanded && <div>
@@ -64,9 +83,19 @@ export class CellStatus extends Component {
                                 <div className="triangle-with-shadow relative"></div>
                                 <div className="floating-label-select">
                                     {statusLabels.map((label) => {
-                                        return <div className="label-option" onClick={this.handleUpdate} key={label.id} data-label={label.id} style={{ backgroundColor: label.color }}>
-                                            {label.title}
-                                        </div>
+                                        // if (label.title === 'Done') {
+                                        //     return <div className="done label-option" onClick={(ev) => {
+                                        //         this.handleUpdate(ev)
+                                        //         this.onClickDone(ev)
+                                        //     }}
+                                        //         key={label.id} data-label={label.id} style={{ backgroundColor: label.color }}>
+                                        //         {label.title}
+                                        //     </div>
+                                        // } else {
+                                            return <div className="label-option" onClick={this.handleUpdate} key={label.id} data-label={label.id} style={{ backgroundColor: label.color }}>
+                                                {label.title}
+                                            </div>
+                                        // }
                                     })}
 
                                 </div>

@@ -2,9 +2,8 @@
     min-height: 100vh;
     // color: $darkGrey;
     color: #333;
-    background: linear-gradient(141deg, #ffeb9f, rgba(255, 255, 255, 0) 68%);
+
     header {
-        // background-color: blanchedalmond;
         padding: 10px;
         .nav-container {
             justify-content: flex-end;
@@ -28,7 +27,7 @@
                 line-height: 22px;
                 border-radius: 4px;
                 &::after {
-                    content: '';
+                    content: "";
                     width: 0px;
                     height: 1px;
                     display: block;
@@ -44,15 +43,31 @@
             }
         }
     }
+
+    .main-home-container {
+        align-items: center;
+        justify-content: center;
+        h1{
+            margin-top: -7px;
+        }
+    }
+
     main {
+        margin-bottom: 75px;
+        .right {
+            margin-left: 100px;
+        }
         flex: 1;
         text-align: center;
-        .anyday{
-            .title{
+        .illust {
+            width: 40%;
+        }
+        .anyday {
+            .title {
                 font-size: rem(110px);
                 font-family: roboto-medium;
             }
-            img{
+            img {
                 width: rem(110px);
                 height: rem(110px);
             }
@@ -64,17 +79,18 @@
         // }
         .main-content {
             p {
-                font-size: rem(18px);
+                font-size: rem(20px);
+                span {
+                    // animation: color-change 3s infinite;
+                    // animation-direction: alternate;
+                    font-size: 26px;
+                    color: #fe617d;
+                }
             }
             h1 {
-                margin-top: 5px;
-                margin-bottom: 30px;
-                font-size: rem(29px);
-
-                span {
-                    animation: color-change 3s infinite;
-                    animation-direction: alternate;
-                }
+                // margin-top: 5px;
+                // margin-bottom: 30px;
+                font-size: rem(30px);
             }
             a {
                 text-decoration: none;
@@ -84,16 +100,18 @@
                 color: $darkGrey;
             }
             button {
+                margin-top: 30px;
                 color: inherit;
                 font-size: rem(20px);
                 padding: 6px 35px;
                 border-radius: 40px;
-                background-color: #01d849;
-                border: 1px solid $darkGrey;
+                background-color: #ffd73b;
+                border: none;
                 transition: 0.3s;
+                border: 1px solid white;
                 &:hover {
                     border: 1px solid $yellow;
-                    color: yellow;
+                    color: white;
                 }
             }
         }
@@ -111,35 +129,44 @@
 @media (max-width: $mobile-breakpoint) {
     .home-page-container {
         font-size: 13px;
-        main{
 
-            .anyday{
-                .title{
+        main {
+            flex-direction: column;
+            .illust {
+                width: 100%;
+            }
+            .right {
+                margin-left: 0;
+            }
+            .anyday {
+                .title {
                     font-size: rem(90px);
                     font-family: roboto-medium;
                 }
-                img{
+                img {
                     width: rem(90px);
                     height: rem(90px);
                 }
             }
             .main-content {
                 p {
-                    font-size: rem(14px);
+                    font-size: rem(17px);
+                    button {
+                        font-size: rem(18px);
+                        margin-top: 22px;
+                    }
+                }
+                .more-info {
+                    display: none;
                 }
                 h1 {
                     margin-top: 5px;
-                    margin-bottom: 30px;
+                    // margin-bottom: 30px;
                     font-size: rem(22px);
-      
-                button {
-           
-                    font-size: rem(18px);
- 
+
+                  
                 }
             }
         }
-        }
     }
-
 }
