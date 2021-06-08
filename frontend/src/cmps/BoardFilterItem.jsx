@@ -1,6 +1,6 @@
 import React from 'react'
 
-export function BoardFilterItem({ field, onSetFilter, type, filterBy }) {
+export function BoardFilterItem({ field, setFilter, type, filterBy }) {
     // console.log(field);
     let title
     let item
@@ -17,7 +17,7 @@ export function BoardFilterItem({ field, onSetFilter, type, filterBy }) {
     // if (!title) title = 'Unassigned'
     const className = filterBy.includes(item) ? "filter-group-item selected" : "filter-group-item"
     return (
-        <div onClick={() => onSetFilter(type, item)} className={className}>
+        <div onClick={() => setFilter(type, item)} className={className}>
             <span className="badge" style={{ backgroundColor: field.color }}></span>
             {title}
         </div>

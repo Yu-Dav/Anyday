@@ -51,6 +51,9 @@
         height: 100%;
         flex-basis: 8px;
         min-width: 8px;
+        position: sticky;
+        left: 150px;
+        z-index: 3;
     }
 
     .creation-log {
@@ -156,3 +159,11 @@ a {
 //     //     overflow: auto;
 //     // }
 // }
+@media (max-width: $mobile-breakpoint) {
+    .task-row {
+
+        .group-color {
+            position: unset;
+        }
+    }
+}

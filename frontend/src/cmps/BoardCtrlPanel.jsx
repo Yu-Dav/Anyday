@@ -7,6 +7,7 @@ import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 import SearchIcon from '@material-ui/icons/Search';
 import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
 import TableChartOutlinedIcon from '@material-ui/icons/TableChartOutlined';
+import { onSetFilter } from '../store/actions/boardActions';
 
 export class BoardCtrlPanel extends Component {
     state = {
@@ -33,14 +34,14 @@ export class BoardCtrlPanel extends Component {
 
                     <button onClick={this.onSearchClicked} className="btn-search flex align-center "> <SearchIcon></SearchIcon>Search</button>
                     {isSearching &&
-                        <BoardSearch setFilter={this.props.setFilter} />
+                        <BoardSearch filterBoard={this.props.filterBoard}/>
                     }
 
                     <ClickAwayListener onClickAway={this.handleFilterClickAway}>
                         <div>
                             <button onClick={this.onFilterClicked} className="btn-filter flex align-center"><FilterSvg /> <p>Filter</p></button>
                             {isFiltering &&
-                                <BoardFilter board={this.props.board} loadBoard={this.props.loadBoard} setFilter={this.props.setFilter}></BoardFilter>
+                                <BoardFilter board={this.props.board} loadBoard={this.props.loadBoard} filterBoard={this.props.filterBoard}></BoardFilter>
                             }
                         </div>
                     </ClickAwayListener>

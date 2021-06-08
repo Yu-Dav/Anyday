@@ -13,10 +13,11 @@
     .board-app-container {
         // overflow-x: clip;
 
-        // .board-container {
-        //     width: 100%;
-        //     // overflow-x: scroll;
-        // }
+        .board-container {
+            width: 100%;
+            overflow-x: scroll;
+            padding-left: 0;
+        }
     }
 }
 @media (min-width: $normal-breakpoint) {

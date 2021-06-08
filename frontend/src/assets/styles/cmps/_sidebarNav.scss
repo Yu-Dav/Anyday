@@ -1,5 +1,9 @@
 .sidebar-nav {
     // min-width: 35px;
+    position: sticky;
+    background-color: #fff;
+    z-index: 3;
+    left: 66px;
     min-width: 35px;
     min-height: 100vh;
     border-right: 1px solid #e6e9ef;
@@ -15,7 +19,7 @@
         .arrow {
             position: absolute;
             // top: 20px;
-            left: 285px;
+            left: 220px;
             // transform: translateX(108px);
             transition: 0.3s ease;
         }
@@ -85,7 +89,7 @@
         width: 30px;
         height: 30px;
         top: 20px;
-        left: 85px;
+        left: 20px;
         border-radius: 50%;
         border: 1px solid $lightGrey;
         background-color: white;
@@ -143,6 +147,7 @@
         &.is-expanded {
             border-right: 1px solid #e6e9ef;
             left: 0;
+            margin-right: 10px;
             .hamburger {
                 display: none;
             }
