@@ -156,10 +156,12 @@ class _MapContainer extends Component {
 
 export const GoogleMap = GoogleApiWrapper({
     // apiKey: ('AIzaSyALrFJBnFDGcCiP2nGHHWujEFLSpiABtAw')
+    apiKey: ('AIzaSyC7SVSPj8l8YTwLoDGTEtzI4CII1V8-qF0')
 })(_MapContainer)
 // AIzaSyAUSc1O5i0XVinJmXD7929Ux1jhjs2NzMw
 //AIzaSyD-Sbj-DvVI1Rf0_mNW0BVF0_9EIzpsPUs
 // AIzaSyALrFJBnFDGcCiP2nGHHWujEFLSpiABtAw
+// AIzaSyC7SVSPj8l8YTwLoDGTEtzI4CII1V8-qF0
 
 
 // import React, { Component } from 'react';
