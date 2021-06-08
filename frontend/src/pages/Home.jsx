@@ -27,7 +27,7 @@ export function Home() {
                 <div className="main-home-container flex">
                     <div className="main-content">
                         <p>Easily manage your team's task or your personal projects</p>
-                        <h1>You will quickly use our app <span>Anyday</span></h1>
+                        <h1>You will get to use our app <span>Anyday</span></h1>
                         <Link to={`/board/`} ><button>Start here</button></Link>
                         {/* <Link to={`/board/b101`} ><button>Try as guest</button></Link> */}
                         

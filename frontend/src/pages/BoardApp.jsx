@@ -26,7 +26,11 @@ import { Welcome } from '../cmps/Welcome';
 class _BoardApp extends Component {
     state = {
         currUser: null,
+<<<<<<< HEAD
         filteredGroups: [],
+=======
+        filteredBoard: { ...this.props.currBoard },
+>>>>>>> ec110d0854a198f61c411ba46508ab486bb6b3d2
         isMap: false,
     }
 
@@ -35,6 +39,7 @@ class _BoardApp extends Component {
         socketService.setup()
         this.props.loadUsers()
         const boardId = this.props.match.params.boardId
+        console.log(`file: BoardApp.jsx || line 38 || boardId`, boardId)
         const user = userService.getLoggedinUser()
         if (!boardId) await this.props.loadBoards()
         else {
@@ -43,7 +48,6 @@ class _BoardApp extends Component {
             socketService.on('board was updated', async (updatedBoardId) => {
                 // console.log('boardApp heard \'board was updated\' for =\n', updatedBoardId, updatedBoardId)
                 await this.props.loadBoard(updatedBoardId)
-
             })
 
             this.setState({ ...this.state, currUser: user })
@@ -96,7 +100,7 @@ class _BoardApp extends Component {
         newBoard.activities.unshift(newActivity)
         await this.props.updateBoard(newBoard)
         socketService.emit('board updated', newBoard._id)
-        this.setState({ ...this.state, filteredBoard: newBoard })
+        // this.setState({ ...this.state, filteredBoard: newBoard })
     }
 
     getColor() {
@@ -106,6 +110,7 @@ class _BoardApp extends Component {
     }
 
     onDragEnd = async (result) => {
+        console.log('onDragEnd results: =', result)
         const { destination, source, draggableId, type } = result;
         const { currBoard } = this.props;
         if (!destination) return;
@@ -124,6 +129,17 @@ class _BoardApp extends Component {
             const sourceGroup = currBoard.groups.find(group => group.id === draggableId);
             currBoard.groups.splice(source.index, 1);
             currBoard.groups.splice(destination.index, 0, sourceGroup);
+        }
+        if (type === 'column') {
+            console.log('you moved a column =\n', result)
+            // const cellType = this.props.board.cellTypes.find(type => task.id === draggableId);
+            const idx = draggableId.indexOf('-')
+            console.log(`file: BoardApp.jsx || line 132 || idx`, idx)
+            const cellType = draggableId.slice(0,idx)
+            console.log(`file: BoardApp.jsx || line 134 || cellType`, cellType)
+
+            currBoard.cellTypes.splice(source.index, 1);
+            currBoard.cellTypes.splice(destination.index, 0, cellType)
         }
         const newBoard = { ...currBoard };
         await this.props.updateBoard(newBoard);
@@ -227,9 +243,6 @@ class _BoardApp extends Component {
         this.props.addBoard()
 
     }
-    onScroll = (ev) => {
-        console.log('ev =', ev)
-    }
     onChangeView = (ev) => {
         console.log('ev.target', ev.target);
         this.setState({ ...this.state, isMap: !this.state.isMap })
@@ -273,7 +286,6 @@ class _BoardApp extends Component {
                             </Droppable>
                         </DragDropContext>
                     }
-
                 </div>}
                 <Switch>
                     {/* <Route path={`${this.props.match.path}/map`} component={GoogleMap} /> */}
@@ -287,7 +299,6 @@ class _BoardApp extends Component {
                         return <ActivityModal {...props} />
                     }} />
                 </Switch>
-
             </div>
         )
     }
