@@ -60,6 +60,7 @@ export class CellDate extends Component {
     onSetDates = () => {
         this.setState({ ...this.state, isSettingDate: true })
     }
+    
     getNumOfDays = () => {
         const { startDate, endDate } = this.state
         if (!startDate || !endDate) return
@@ -104,7 +105,7 @@ export class CellDate extends Component {
                 />}
 
                 {isDateSet && !isSettingDate && isHover &&
-                    <span className="num-of-days" onClick={() => this.setState({ ...this.state, isHover: false })}>{this.getNumOfDays()} d</span>}
+                    <span className="num-of-days" onClick={() => this.setState({ ...this.state, isHover: false, })}>{this.getNumOfDays()} d</span>}
 
                 {isDateSet && !isHover &&
                     <div className="date-pick-wrapper">

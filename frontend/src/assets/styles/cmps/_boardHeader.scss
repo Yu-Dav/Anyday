@@ -1,83 +1,101 @@
 .board-header {
-    color: #323338;
-    margin: 20px 0 10px 0;
+    color         : #323338;
+    margin        : 20px 0 10px 0;
     padding-bottom: 10px;
-    border-bottom: 1px solid $lightGrey;
+    border-bottom : 1px solid $lightGrey;
 
     .star-fav {
         stroke: #c3c5ca;
     }
 
     .title-container {
+        position: sticky;
+        left    : 130px;
+
         .title {
-            font-size: rem(24px);
+            font-size        : rem(24px);
             // width: rem(150px);
-            height: rem(40px);
+            height           : rem(40px);
             margin-inline-end: 15px;
-            color: #323338;
-            font-weight: 600;
+            color            : #323338;
+            font-weight      : 600;
         }
+    }
+
+    .subtitle {
+
+        position: sticky;
+        left    : 130px;
     }
 
     .subtitle-container {
         .subtitle {
-            font-size: rem(14px);
-            width: rem(500px);
-            height: rem(25px);
+            font-size  : rem(14px);
+            width      : rem(500px);
+            height     : rem(25px);
             font-family: roboto-light, helvetica, sans-serif;
         }
     }
 
+    .board-header-btns {
+        position: sticky;
+        right   : 25px;
+    }
+
     .btn {
-        color: inherit;
-        height: 32px;
-        font-size: rem(14px);
-        font-family: roboto-light, helvetica, sans-serif;
-        padding: 4px 8px;
-        font-weight: 400;
-        line-height: 22px;
-        border: none;
-        border-radius: 4px;
+        color           : inherit;
+        height          : 32px;
+        font-size       : rem(14px);
+        font-family     : roboto-light, helvetica, sans-serif;
+        padding         : 4px 8px;
+        font-weight     : 400;
+        line-height     : 22px;
+        border          : none;
+        border-radius   : 4px;
         background-color: transparent;
-        transition: 0.3s;
+        transition      : 0.3s;
 
         &:hover {
             background-color: #e6e9ef;
         }
 
-        & > *:not(:last-child) {
+        &>*:not(:last-child) {
             margin-inline-end: 10px;
         }
     }
 
     svg {
         height: 24px;
-        width: 24px;
+        width : 24px;
     }
 
     .invite-user {
-        animation: fade-in 0.3s ease-in-out both;
-        position: absolute;
+        animation       : fade-in 0.3s ease-in-out both;
+        position        : absolute;
         background-color: white;
-        box-shadow: 0 8px 16px 0px #00000052;
-        z-index: 3;
-        border-radius: 4px;
-        padding: 16px 11px;
-        top: 50px;
-        right: 81px;
+        box-shadow      : 0 8px 16px 0px #00000052;
+        z-index         : 3;
+        border-radius   : 4px;
+        padding         : 16px 11px;
+        top             : 50px;
+        right           : 81px;
+
         // & > * :not(:last-child){
         //     margin-bottom: 5px;
         // }
-        & > * {
+        &>* {
             cursor: pointer;
         }
+
         & .user-select {
-            gap: 10px;
+            gap      : 10px;
             font-size: 13px;
         }
+
         .user-select:not(:last-of-type) {
             margin-bottom: 5px;
         }
+
         span {
             margin: auto;
         }
@@ -86,21 +104,38 @@
 
 @media (max-width: $mobile-breakpoint) {
     .board-header {
+        width           : 95%;
+        overflow-x      : hidden;
+        position        : fixed;
+        top             : 0;
+        background-color: #fff;
+        z-index: 5;
+        margin-top: 0;
+        margin: 0 auto;
+        padding-top: 15px;
+
         // display: none;
         .header-top {
             flex-direction: column-reverse; // so 3 btns will come before Board title
             // align-self: flex-end;
         }
+
         .board-header-btns {
-            display: flex;
-            justify-content: flex-end;
-            margin-inline-end: 10px;
+            display             : flex;
+            justify-content     : flex-end;
+            // margin-inline-end: 10px;
         }
+
+        .board-header-btns {
+            position: unset;
+
+        }
+
         .subtitle-container {
             .subtitle {
                 // display: none;
                 // font-size: rem(14px);
-                width: 100%;
+                width         : 100%;
                 // height: rem(25px);
                 // font-family: roboto-light, helvetica, sans-serif;
             }

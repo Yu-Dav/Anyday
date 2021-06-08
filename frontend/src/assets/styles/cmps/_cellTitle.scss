@@ -1,35 +1,67 @@
 .task-row {
     .left-container {
-        position: sticky;
-        flex: 1;
-        left: 0;
-        z-index: 4;
+        position : sticky;
+        flex     : 1;
+        left     : 0;
+        z-index  : 4;
         min-width: 380px;
     }
+
     // .remove-task ~ .cell.title:hover {
     //     opacity: 0.5;
     // }
     .cell.title {
         background-color: #f5f6f8f2;
-        flex: 1;
-        min-width: 380px;
-        text-align: start;
-        cursor: pointer;
+        flex            : 1;
+        min-width       : 380px;
+        text-align      : start;
+        cursor          : pointer;
+        position        : sticky;
+        left            : 158px;
+        z-index         : 3;
+
         .cell-title-editable {
             // min-width: 200px;
             text-overflow: ellipsis;
-            overflow: hidden;
-            white-space: nowrap;
-            margin-left: 10px;
+            overflow     : hidden;
+            white-space  : nowrap;
+            margin-left  : 10px;
         }
+
+        &:hover {
+            .remove-task {
+                opacity: 0.5;
+            }
+        }
+
+        .remove-task {
+            opacity   : 0;
+            cursor    : pointer;
+            transition: ease-in-out 0.2s;
+            height    : fit-content;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
        
         a {
-            margin-left: auto;
+            margin-left : auto;
             margin-right: 10px;
         }
+
         .fa.comment {
             margin-left: 20px;
         }
+
+        .fa-trash::after {
+            content          : "\f1f8";
+            margin-inline-end: 10px;
+        }
+
+        // .title-left-sec {
+        // }
     }
 }
 
@@ -41,8 +73,9 @@
             // flex-basis: 380px;
             // max-width: 380px;
         }
+
         .left-container {
-            max-width: 380px;
+            max-width : 380px;
             flex-basis: 380px;
         }
     }
@@ -50,9 +83,13 @@
 
 @media (max-width: $mobile-breakpoint) {
     .task-row {
+        // .cell.title {
+        //     // max-width: 200px;
+        //     // flex-basis: 200px;
+        // }
         .cell.title {
-            // max-width: 200px;
-            // flex-basis: 200px;
+    
+            position        : unset;
         }
     }
 }

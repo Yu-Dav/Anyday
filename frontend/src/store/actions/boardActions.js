@@ -63,7 +63,10 @@ export function removeBoard(boardId) {
 }
 
 export function onSetFilter(filterBy) {
+    console.log('set filter in store');
     return async (dispatch) => {
         dispatch({ type: 'SET_FILTER', filterBy });
     };
 }
+
+

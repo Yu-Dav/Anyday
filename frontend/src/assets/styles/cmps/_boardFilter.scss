@@ -1,7 +1,7 @@
 .board-filter {
     cursor: pointer;
     animation: fade-in 0.3s ease-in-out both;
-    position: absolute;
+    // position: absolute;
     top: 150px;
     left: 320px;
     padding: 10px;
@@ -44,8 +44,8 @@
 
 @media (max-width: $normal-breakpoint) {
     .board-filter {
-        left: 0px;
-        .filter-groups {
-        }
+        left: 5px;
+        // .filter-groups {
+        // }
     }
 }

@@ -4,7 +4,7 @@
     justify-content: center;
     flex-basis: 180px;
     min-width: 180px;
-    .date-pick-wrapper{
+    .date-pick-wrapper {
         display: flex;
     }
     .date-picker-cmp,
@@ -52,5 +52,11 @@
             background-color: $grey;
             border-radius: 11px;
         }
+    }
+
+    .date-picker-cmp {
+        // position: absolute;
+        // top: 36px;
+        // z-index: 3;
     }
 }
