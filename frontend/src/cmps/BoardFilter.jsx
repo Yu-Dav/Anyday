@@ -14,7 +14,7 @@ export class BoardFilter extends Component {
         }
     }
 
-    onSetFilter = (field, item) => {
+    setFilter = (field, item) => {
         console.log('filter item', field, item);
         const newFilter = { ...this.state.filterBy }
         if (field === 'status' || field === 'priority' || field === 'tag') {
@@ -36,7 +36,7 @@ export class BoardFilter extends Component {
         console.log(this.props);
         this.setState({ filterBy: newFilter} , () => {
             console.log('filter by', this.state.filterBy);
-            this.props.setFilter({ ...this.state.filterBy })})
+            this.props.filterBoard({ ...this.state.filterBy })})
     }
 
     render() {
@@ -47,19 +47,19 @@ export class BoardFilter extends Component {
                 <div className=" filter-groups flex flex-column">
                     <div className="filter-group">
                         <h1>Status:</h1>
-                        {board.statusLabels.map(status => status.title !== '' && < BoardFilterItem type='status' filterBy={filterBy.status} key={status.id} field={status} onSetFilter={this.onSetFilter} />)}
+                        {board.statusLabels.map(status => status.title !== '' && < BoardFilterItem type='status' filterBy={filterBy.status} key={status.id} field={status} setFilter={this.setFilter} />)}
                     </div>
                     <div className="filter-group">
                         <h1>Priority:</h1>
-                        {board.priorityLabels.map(priority => priority.title !== '' && < BoardFilterItem type='priority' filterBy={filterBy.priority} key={priority.id} field={priority} onSetFilter={this.onSetFilter} />)}
+                        {board.priorityLabels.map(priority => priority.title !== '' && < BoardFilterItem type='priority' filterBy={filterBy.priority} key={priority.id} field={priority} setFilter={this.setFilter} />)}
                     </div>
                     <div className="filter-group">
                         <h1>Tags:</h1>
-                        {board.tags.map(tag => < BoardFilterItem type='tag' filterBy={filterBy.tag} key={tag.id} field={tag} onSetFilter={this.onSetFilter} />)}
+                        {board.tags.map(tag => < BoardFilterItem type='tag' filterBy={filterBy.tag} key={tag.id} field={tag} setFilter={this.setFilter} />)}
                     </div>
                     <div className="filter-group">
                         <h1>Members:</h1>
-                        {board.members.map(member => < BoardFilterItem type='membersId' filterBy={filterBy.membersId} key={member._id} field={member} onSetFilter={this.onSetFilter} />)}
+                        {board.members.map(member => < BoardFilterItem type='membersId' filterBy={filterBy.membersId} key={member._id} field={member} setFilter={this.setFilter} />)}
                     </div>
                 </div>
             </div>

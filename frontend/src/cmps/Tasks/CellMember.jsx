@@ -121,6 +121,7 @@ export function CellMember({ task, group, board, updateBoard }) {
             aria-haspopup="true"
             onClick={handleToggle} className="cell asignee">
             <div className="flex align-center justify-center">
+               {!taskMembers.length && <Avatar style={{ width:'26px', height:'26px', opacity:'0.4'}} src="https://i.ibb.co/DbbwGK1/016-user.png" alt="016-user" />}
                {taskMembers && <AvatarGroup max={4}>
                 {taskMembers.map(member =>  <Avatar key={member._id} alt={member.username} src={member.imgUrl} 
                 style={{ width:'30px', height:'30px' }}/>

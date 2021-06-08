@@ -3,34 +3,69 @@
     font-size: rem(14px);
     text-align: center;
     color: #323338;
-    margin-left: 7px;
+    background-color: #fffffff0;
+    // margin-left: 7px;
     font-family: roboto-light, helvetica, sans-serif;
-    transition: .3s;
+    transition: 0.3s;
 
     // background-color: white;
     & > *:not(:last-child) {
         margin: 0 0 0 1px;
     }
-    .isDragging {
-        background-color: #c4c4c4c7;
-        padding: 35px 70px;
+    .cell:not(.title) {
+        // margin-left: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .cell:hover {
+        svg {
+            opacity: 0.5;
+        }
+        svg:hover {
+            opacity: 1;
+        }
+    }
+    svg {
+        height: 15px;
+        width: 15px;
+        opacity: 0;
+    }
+    i {
+        // position: relative;
+        // top: 7px;
+        // right: 20px;
+    }
+    .cell.isDragging {
+        background-color: #ffffffe4;
+        border: 1px solid $grey;
+        padding: 35px 35px 105px 35px;
         border-radius: 4px;
         display: flex;
         align-items: center;
         justify-content: center;
+        font-size: rem(16px);
         svg {
             display: none;
         }
     }
+    .column-dnd-container.isDragging {
+        border: 1px solid #e4e4e4e4;
+        padding: 10px;
+        border-radius: 4px;
+        transition: 0.5s;
+    }
+
     .title {
         position: sticky;
-        left: 0;
+        left: 150px;
+        // left: 0;
         z-index: 4;
         font-size: rem(18px);
         flex: 1;
-        min-width: 388px;
+        // min-width: 388px;
         // max-width: 388px;
-        background-color: white;
+        background-color: #ffffff;
     }
     .asignee {
         // members...
@@ -56,21 +91,19 @@
         min-width: 180px;
         cursor: default;
     }
+    .location {
+        flex-basis: 180px;
+        min-width: 180px;
+    }
     .group-handle::after {
         content: '\f58e';
-    }
-    svg {
-        height: 15px;
-        width: 15px;
     }
 }
 
 @media (max-width: $normal-breakpoint) {
-
     .group-header {
         .title {
-            max-width: 388px;
+            // max-width: 388px;
         }
     }
-
 }

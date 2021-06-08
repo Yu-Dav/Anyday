@@ -9,7 +9,7 @@ export function ActivityLog({ task, board }) {
     }
 
     console.log(board)
-    if (!board.activities) return <div>No activities to display</div>
+    if (!board.activities || !board.activities.length ) return <div>No activities to display</div>
     return (
         <div className="activities">
             {!task && <div>

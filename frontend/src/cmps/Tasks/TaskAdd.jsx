@@ -87,7 +87,7 @@ export class TaskAdd extends Component {
                 <div className="group-color" style={{ backgroundColor: this.props.group.style.bgColor }}></div>
                 {/* <input autoComplete="off" className="full" name="txt" type="text" placeholder="+ New Task"
                     onKeyUp={this.handleUpdate} value={txt} onChange={this.handleChange} /> */}
-                <input autoComplete="off" className="full" name="txt" type="text" placeholder="+ New Task"
+                <input autoComplete="off" name="txt" type="text" placeholder="+ New Task"
                     onBlur={this.handleUpdate} onKeyUp={this.handleUpdate} value={txt} onChange={this.handleChange} />
                 <button className="add" onClick={this.handleUpdate}>Add</button>
             </div>
