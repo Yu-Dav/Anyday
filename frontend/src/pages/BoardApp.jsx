@@ -48,9 +48,7 @@ class _BoardApp extends Component {
                 // console.log('boardApp heard \'board was updated\' for =\n', updatedBoardId, updatedBoardId)
                 await this.props.loadBoard(updatedBoardId)
             })
-
             this.setState({ ...this.state, currUser: user })
-
         }
     }
     componentWillUnmount() {
@@ -60,7 +58,6 @@ class _BoardApp extends Component {
     async componentDidUpdate(prevProps) {
         const prevId = prevProps.match.params.boardId
         const currId = this.props.match.params.boardId
-        // if (!prevId) return
         if (prevId !== currId) {
             const board = await this.props.loadBoard(currId)
             // console.log('boardApp CMP did update, emitting \'joing new board \'',board._id)
@@ -109,7 +106,6 @@ class _BoardApp extends Component {
     }
 
     onDragEnd = async (result) => {
-        console.log('onDragEnd results: =', result)
         const { destination, source, draggableId, type } = result;
         const { currBoard } = this.props;
         if (!destination) return;
@@ -130,8 +126,6 @@ class _BoardApp extends Component {
             currBoard.groups.splice(destination.index, 0, sourceGroup);
         }
         if (type === 'column') {
-            console.log('you moved a column =\n', result)
-            // const cellType = this.props.board.cellTypes.find(type => task.id === draggableId);
             const idx = draggableId.indexOf('-')
             const cellType = draggableId.slice(0, idx)
             currBoard.cellTypes.splice(source.index, 1);

@@ -1,31 +1,28 @@
 .task-row {
     .left-container {
-        position : sticky;
-        flex     : 1;
-        left     : 0;
-        z-index  : 4;
+        position: sticky;
+        flex: 1;
+        left: 0;
+        z-index: 4;
         min-width: 380px;
     }
 
-    // .remove-task ~ .cell.title:hover {
-    //     opacity: 0.5;
-    // }
     .cell.title {
         background-color: #f5f6f8f2;
-        flex            : 1;
-        min-width       : 380px;
-        text-align      : start;
-        cursor          : pointer;
-        position        : sticky;
-        left            : 158px;
-        z-index         : 3;
+        flex: 1;
+        min-width: 380px;
+        text-align: start;
+        cursor: pointer;
+        position: sticky;
+        left: 158px;
+        z-index: 3;
 
         .cell-title-editable {
             // min-width: 200px;
             text-overflow: ellipsis;
-            overflow     : hidden;
-            white-space  : nowrap;
-            margin-left  : 10px;
+            overflow: hidden;
+            white-space: nowrap;
+            margin-left: 10px;
         }
 
         &:hover {
@@ -35,19 +32,18 @@
         }
 
         .remove-task {
-            opacity   : 0;
-            cursor    : pointer;
+            opacity: 0;
+            cursor: pointer;
             transition: ease-in-out 0.2s;
-            height    : fit-content;
+            height: fit-content;
 
             &:hover {
                 opacity: 1;
             }
         }
 
-       
         a {
-            margin-left : auto;
+            margin-left: auto;
             margin-right: 10px;
         }
 
@@ -56,26 +52,29 @@
         }
 
         .fa-trash::after {
-            content          : "\f1f8";
+            content: '\f1f8';
             margin-inline-end: 10px;
         }
+        svg {
+            width: 17px;
+            height: 17px;
+            opacity: .75;
+        }
 
-        // .title-left-sec {
-        // }
     }
 }
-
 
 // /* MEDIUM */
 @media (max-width: $normal-breakpoint) {
     .task-row {
-        // .cell.title {
-        //     // flex-basis: 380px;
-        //     // max-width: 380px;
-        // }
+        .cell.title {
+            // flex-basis: 380px;
+            // max-width: 380px;
+            color: #323338;
+        }
 
         .left-container {
-            max-width : 380px;
+            max-width: 380px;
             flex-basis: 380px;
         }
     }
@@ -88,8 +87,12 @@
         //     // flex-basis: 200px;
         // }
         .cell.title {
-    
-            position        : unset;
+            background-color: #fcfdfa;
+            min-width: 180px;
+            position: sticky;
+            left: 2px;
+            z-index: 3;
         }
+        
     }
 }
