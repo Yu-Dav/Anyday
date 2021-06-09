@@ -1,0 +1,17 @@
+6/9/2021, 10:47:23 AM - DEBUG - Session ID is | nc0dV-6ffa3U23e4WRByXodaQRASs4h4 
+6/9/2021, 10:49:25 AM - DEBUG - Session ID is | dqJYbRu8XhkCtIK_PFb6Y2RwLsFtLLmy 
+6/9/2021, 10:49:55 AM - DEBUG - Session ID is | TSKBvk6jpVII_gEZJzw2K9Aca2QSdT7y 
+6/9/2021, 11:31:20 AM - DEBUG - Session ID is | ZuZtuSOiZyDAnwzOJDmwPh8-RoNI5Xov 
+6/9/2021, 11:35:10 AM - DEBUG - Session ID is | K1R3azSgg4dAAP8K9FJ15_DNzqWW9D5m 
+6/9/2021, 11:35:28 AM - DEBUG - Session ID is | 0hhrFCyp8iEjzL8E9OV-npPhi6hMEDv3 
+6/9/2021, 11:37:49 AM - DEBUG - Session ID is | crlU8BuK1TpL9QrWubMtNqJGvYKML-IP 
+6/9/2021, 11:40:57 AM - DEBUG - Session ID is | tm7-d5YZX86uY0akB-AfxCqUbu66X8Fd 
+6/9/2021, 12:00:20 PM - DEBUG - Session ID is | dqoAUBdrNcqnqV4JXJt3Zbzey98mgbL1 
+6/9/2021, 12:08:40 PM - DEBUG - Session ID is | YIxBR7-1yF06_lVEv-rqnl5RyfA7xpDl 
+6/9/2021, 12:09:51 PM - DEBUG - Session ID is | Gpcb3_hpzRSVpNHPRIeSuAQSdEt1F8dx 
+6/9/2021, 12:11:48 PM - ERROR - cannot find boards | MongoServerSelectionError: getaddrinfo ENOTFOUND cluster0-shard-00-00.7zdxr.mongodb.net (sid: QmXr_47nL08ZY3xhCfIaR9dqZnYhRbSQ)
+6/9/2021, 12:11:48 PM - ERROR - Failed to get boards | MongoServerSelectionError: getaddrinfo ENOTFOUND cluster0-shard-00-00.7zdxr.mongodb.net (sid: QmXr_47nL08ZY3xhCfIaR9dqZnYhRbSQ)
+6/9/2021, 12:11:48 PM - ERROR - Failed to get users | ReferenceError: logger is not defined (sid: QmXr_47nL08ZY3xhCfIaR9dqZnYhRbSQ)
+6/9/2021, 12:11:48 PM - ERROR - while finding board 60bdbf547fe26e89775eece4 | MongoServerSelectionError: getaddrinfo ENOTFOUND cluster0-shard-00-00.7zdxr.mongodb.net (sid: QmXr_47nL08ZY3xhCfIaR9dqZnYhRbSQ)
+6/9/2021, 12:11:48 PM - ERROR - Failed to get board | MongoServerSelectionError: getaddrinfo ENOTFOUND cluster0-shard-00-00.7zdxr.mongodb.net (sid: QmXr_47nL08ZY3xhCfIaR9dqZnYhRbSQ)
+6/9/2021, 12:12:52 PM - DEBUG - Session ID is | h2X-5wkXB9vfzPY3v2emF4Arbj4eIenB 
