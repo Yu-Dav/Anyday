@@ -5,13 +5,13 @@
     // flex-direction: column;
     align-items: center;
     h1 {
-        font-family: roboto-light,helvetica,sans-sarif;
+        font-family: roboto-light, helvetica, sans-sarif;
         font-size: rem(18px);
     }
     img {
         display: inline-block;
         width: 15%;
-        opacity: .75;
+        opacity: 0.75;
     }
 }
 
@@ -30,6 +30,7 @@
         box-shadow: 0 8px 16px 0px #00000052;
         border-radius: 4px;
         cursor: pointer;
+        width: 130px;
     }
 
     .group-preview {
@@ -42,8 +43,7 @@
         font-family: fa-solid;
     }
     .group-handle::after {
-        content: '\f58e';
-       
+        content: "\f58e";
     }
     &:hover {
         .group-handle {
@@ -54,21 +54,26 @@
         }
     }
     .group-modal-choose {
+        height: 100%;
         cursor: pointer;
         width: 17px;
         margin-top: 6px;
         position: sticky;
         left: 130px;
-        z-index: 3;
+        z-index: 5;
         background-color: #ffffff7a;
         margin-right: 5px;
+    }
+
+    .group-modal{
+        z-index: 5;
     }
     .group-handle {
         position: absolute;
         opacity: 0;
         margin: 3.5px 2px 0 5px;
         font-size: rem(18px);
-        transition: .3s;
+        transition: 0.3s;
         &:hover {
             opacity: 1;
             position: relative;
@@ -88,6 +93,9 @@
 // }
 
 @media (max-width: $mobile-breakpoint) {
+    // .group-modal{
+    //     z-index: 5;
+    // }
     .group-container {
         // .group-preview {
         //     // overflow-x: scroll;
@@ -98,6 +106,9 @@
         }
         .group-modal-choose {
             margin-left: 10px;
+            margin-right:10px;
+            left:0px;
+            z-index: 5;
             svg {
                 width: 16px;
             }

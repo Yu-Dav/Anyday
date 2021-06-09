@@ -9,7 +9,6 @@ import { CellDate } from './CellDate'
 
 export function DynamicCell({ type, task, group, board, updateBoard }) {
     // const cellTypes = ['title', 'member', 'tag', 'status', 'priority', 'creationLog', 'timeline', 'location']
-    console.log(task.title);
     switch (type) {
         case 'title':
             return <CellTitle task={task} group={group} board={board} updateBoard={updateBoard} />

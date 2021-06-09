@@ -7,9 +7,6 @@
         min-width: 380px;
     }
 
-    // .remove-task ~ .cell.title:hover {
-    //     opacity: 0.5;
-    // }
     .cell.title {
         background-color: #f5f6f8f2;
         flex            : 1;
@@ -60,8 +57,6 @@
             margin-inline-end: 10px;
         }
 
-        // .title-left-sec {
-        // }
     }
 }
 
@@ -72,6 +67,7 @@
         .cell.title {
             // flex-basis: 380px;
             // max-width: 380px;
+            color: #323338;
         }
 
         .left-container {
@@ -88,8 +84,12 @@
         //     // flex-basis: 200px;
         // }
         .cell.title {
-    
-            position        : unset;
+            background-color: #fcfdfa;
+            min-width: 180px;
+            position: sticky;
+            left: 2px;
+            z-index: 3;
         }
+        
     }
 }
