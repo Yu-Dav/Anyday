@@ -19,7 +19,7 @@ export function Home() {
                         <div className="main-content ">
                             <h1>Work Without Limits</h1>
                             <p>Easily build, manage and run your projects <span>Anyday</span></p>
-                            <p className="more-info">Operating system to collaboration</p>
+                            <p className="more-info">Operating system for collaboration</p>
                             <Link to={`/board/`} ><button>Start here</button></Link>
                         </div>
                     </div>
