@@ -16,7 +16,7 @@ import { Snack } from './SnackBar'
 // import IconButton from '@material-ui/core/IconButton';
 // import CloseIcon from '@material-ui/icons/Close';
 
-export function TaskPreview({ task, group, board, updateBoard, index }) {
+export function TaskPreview({ task, group, board, updateBoard, index, setMap }) {
 
     const onRemoveTask = async () => {
         const newBoard = { ...board }
@@ -56,7 +56,7 @@ export function TaskPreview({ task, group, board, updateBoard, index }) {
                             <Snack onRemoveTask={onRemoveTask}/>                            
                         </div>
                         <div className="group-color" style={{ backgroundColor: group.style.bgColor }}></div>
-                        {board.cellTypes.map((cellType, index) => <DynamicCell key={index} type={cellType} task={task} group={group} board={board} updateBoard={updateBoard} />)}
+                        {board.cellTypes.map((cellType, index) => <DynamicCell key={index} type={cellType} task={task} group={group} board={board} updateBoard={updateBoard} setMap={setMap}/>)}
                                                            {/* adding key to the map above causes an error... why? */}                          
                     </div>
                 )}

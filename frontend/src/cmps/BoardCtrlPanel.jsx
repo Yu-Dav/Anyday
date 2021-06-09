@@ -50,11 +50,11 @@ export class BoardCtrlPanel extends Component {
                 </div>
                 <div className="right-ctrl flex">
                     <div className={view === 'board-view' ? 'view active flex align-center' : 'view flex align-center'} onClick={(ev) => {
-                        this.props.onChangeView(ev)
+                        this.props.onChangeView(ev, false)
                         this.setState({ ...this.state, view: 'board-view' })
                     }} ><TableChartOutlinedIcon />Board</div>
                     <div className={view === 'map-view' ? 'view active flex align-center' : 'view flex align-center'} onClick={(ev) => {
-                        this.props.onChangeView(ev)
+                        this.props.onChangeView(ev, true)
                         this.setState({ ...this.state, view: 'map-view' })
                     }} >
                         <LocationOnOutlinedIcon />Map

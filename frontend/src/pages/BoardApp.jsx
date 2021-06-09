@@ -6,7 +6,7 @@ import { utilService } from '../services/utilService'
 import { socketService } from '../services/socketService'
 import { userService } from '../services/userService'
 import { DragDropContext, Droppable } from 'react-beautiful-dnd';
-
+import { PlacesWithStandaloneSearchBox } from '../cmps/Map3'
 import { connect } from 'react-redux'
 import { SidebarNav } from '../cmps/SidebarNav.jsx'
 import { SidebarApp } from '../cmps/SidebarApp.jsx'
@@ -19,6 +19,8 @@ import { GroupList } from '../cmps/groups/GroupList'
 import { ActivityModal } from '../cmps/ActivitySideBar/ActivityModal';
 import { GoogleMap } from '../cmps/Map.jsx'
 import { Welcome } from '../cmps/Welcome';
+import { CellLocation } from '../cmps/tasks/CellLocation';
+// import { MapWithASearchBox, PlacesWithStandaloneSearchBox } from '../cmps/Map3';
 // import { LocationSearchInput } from '../cmps/tasks/CellLocation'
 // import { MenuListComposition } from '../cmps/MenuCmp'
 // import { ChipCmp } from '../cmps/ChipCmp';
@@ -28,6 +30,7 @@ class _BoardApp extends Component {
         currUser: null,
         filteredGroups: [],
         isMap: false,
+        mapPos: null
     }
 
     async componentDidMount() {
@@ -45,9 +48,7 @@ class _BoardApp extends Component {
                 // console.log('boardApp heard \'board was updated\' for =\n', updatedBoardId, updatedBoardId)
                 await this.props.loadBoard(updatedBoardId)
             })
-
             this.setState({ ...this.state, currUser: user })
-
         }
     }
     componentWillUnmount() {
@@ -57,7 +58,6 @@ class _BoardApp extends Component {
     async componentDidUpdate(prevProps) {
         const prevId = prevProps.match.params.boardId
         const currId = this.props.match.params.boardId
-        // if (!prevId) return
         if (prevId !== currId) {
             const board = await this.props.loadBoard(currId)
             // console.log('boardApp CMP did update, emitting \'joing new board \'',board._id)
@@ -106,7 +106,6 @@ class _BoardApp extends Component {
     }
 
     onDragEnd = async (result) => {
-        console.log('onDragEnd results: =', result)
         const { destination, source, draggableId, type } = result;
         const { currBoard } = this.props;
         if (!destination) return;
@@ -127,13 +126,8 @@ class _BoardApp extends Component {
             currBoard.groups.splice(destination.index, 0, sourceGroup);
         }
         if (type === 'column') {
-            console.log('you moved a column =\n', result)
-            // const cellType = this.props.board.cellTypes.find(type => task.id === draggableId);
             const idx = draggableId.indexOf('-')
-            console.log(`file: BoardApp.jsx || line 132 || idx`, idx)
-            const cellType = draggableId.slice(0,idx)
-            console.log(`file: BoardApp.jsx || line 134 || cellType`, cellType)
-
+            const cellType = draggableId.slice(0, idx)
             currBoard.cellTypes.splice(source.index, 1);
             currBoard.cellTypes.splice(destination.index, 0, cellType)
         }
@@ -229,7 +223,7 @@ class _BoardApp extends Component {
             console.log('filtered groups', filteredBoard.groups);
             return filteredBoard.groups
         }
-      
+
         this.setState({ ...this.state, filteredGroups: [] })
         console.log('groups');
         // return this.props.currBoard.groups
@@ -239,15 +233,21 @@ class _BoardApp extends Component {
         this.props.addBoard()
 
     }
-    onChangeView = (ev) => {
+    onChangeView = (ev, isMap) => {
         console.log('ev.target', ev.target);
-        this.setState({ ...this.state, isMap: !this.state.isMap })
+        this.setState({ ...this.state, isMap: isMap })
+    }
+
+    setMap = async(pos) => {
+        console.log(pos);
+        await this.setState({ ...this.state, mapPos: pos})
+        this.setState({isMap: true})
     }
 
     render() {
         const { boardId } = this.props.match.params
         const { currBoard, users } = this.props
-        const { currUser, filteredGroups } = this.state
+        const { currUser, filteredGroups, mapPos } = this.state
         // console.log('params', this.props.match.params)
         if (!currBoard) return <div>loading</div>
         return (
@@ -263,8 +263,8 @@ class _BoardApp extends Component {
                     {/* <button className="btn" onClick={() => window.location.hash = `/board/${currBoard._id}/map`}>Map</button> */}
                     {/* <LocationSearchInput /> */}
                     {/* <button className="btn-location" onClick={() => this.setState({ ...this.state, isMap: !this.state.isMap })}>Map</button> */}
-                    {this.state.isMap && <GoogleMap className="container" />}
-                    {/* {this.state.isMap && <MapWrapper/>} */}
+                    {this.state.isMap && <GoogleMap className="container" pos={mapPos}/>}
+                    {/* {this.state.isMap && <GoogleMap/>} */}
                     {!this.state.isMap &&
                         <DragDropContext onDragEnd={this.onDragEnd}>
                             <Droppable droppableId="all-groups" type="group">
@@ -273,9 +273,9 @@ class _BoardApp extends Component {
                                         ref={provided.innerRef}
                                         {...provided.droppableProps} >
                                         {<GroupList
-                                            board={currBoard} groups={filteredGroups.length ? filteredGroups: currBoard.groups}
+                                            board={currBoard} groups={filteredGroups.length ? filteredGroups : currBoard.groups}
                                             key={currBoard._id}
-                                            updateBoard={this.props.updateBoard} currUser={currUser} />}
+                                            updateBoard={this.props.updateBoard} currUser={currUser} setMap={this.setMap} />}
                                         {provided.placeholder}
                                     </div>
                                 )}

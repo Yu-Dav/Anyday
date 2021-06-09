@@ -12,17 +12,53 @@
     & > *:not(:last-child) {
         margin: 0 0 0 1px;
     }
-    .isDragging {
-        background-color: #c4c4c4c7;
-        padding: 35px 70px;
+    .cell:not(.title) {
+        // margin-left: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .cell:not(.title):hover {
+        background-color: #f5f6f8;
+        border-radius: 4px 4px 0 0;
+        svg {
+            opacity: 0.5;
+        }
+        svg:hover {
+            opacity: 1;
+        }
+    }
+    svg {
+        height: 15px;
+        width: 15px;
+        opacity: 0;
+    }
+    .cell .left-border,
+    .cell .right-border {
+        display: flex;
+        flex: 1;
+    }
+    .cell.isDragging {
+        background-color: #ffffffe4;
+        border: 1px solid $grey;
+        padding: 35px 35px 105px 35px;
         border-radius: 4px;
         display: flex;
         align-items: center;
         justify-content: center;
+        font-size: rem(16px);
         svg {
             display: none;
         }
     }
+    // .column-dnd-container.isDragging {
+    //     border: 1px solid #e4e4e4e4;
+    //     padding: 10px 5px 10px 5px;
+    //     margin-bottom: 5px;
+    //     border-radius: 4px;
+    //     transition: 0.5s;
+    // }
+
     .title {
         position: sticky;
         left: 150px;
@@ -31,7 +67,7 @@
         font-size: rem(18px);
         flex: 1;
         // min-width: 388px;
-        // max-width: 388px;
+        // max-width: 950px;
         background-color: #ffffff;
     }
     .asignee {
@@ -58,12 +94,12 @@
         min-width: 180px;
         cursor: default;
     }
+    .location {
+        flex-basis: 180px;
+        min-width: 180px;
+    }
     .group-handle::after {
         content: "\f58e";
-    }
-    svg {
-        height: 15px;
-        width: 15px;
     }
 }
 
