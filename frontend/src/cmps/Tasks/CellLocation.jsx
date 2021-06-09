@@ -63,6 +63,30 @@ class _CellLocation extends Component {
     console.log(this.props.board);
   }
 
+  onRemoveloc = async()=>{
+    console.log('remove loc');
+    const newBoard = { ...this.props.board }
+    const newActivity = {
+      id: utilService.makeId(),
+      type: 'Location removed',
+      createdAt: Date.now(),
+      byMember: userService.getLoggedinUser(),
+      task: {
+        id: this.props.task.id,
+        title: this.props.task.title,
+        // changedItem: this.props.task.location.name
+      },
+      group: {
+        id: this.props.group.id,
+        title: this.props.group.title
+      }
+    }
+    this.props.task.location = null
+    newBoard.activities.unshift(newActivity)
+    await this.props.updateBoard(newBoard)
+    await socketService.emit('board updated', newBoard._id);
+  }
+
   renderAutoComplete() {
     const { google } = this.props;
     const map = this.map
@@ -91,6 +115,10 @@ class _CellLocation extends Component {
     });
   }
 
+  onSetMap = () => {
+    if (!this.props.task.location || !this.props.task.location.pos) return this.autocomplete.focus()
+    this.props.setMap(this.props.task.location.pos)
+  }
 
   render() {
     const { task } = this.props
@@ -98,7 +126,7 @@ class _CellLocation extends Component {
     const { placeName, position } = this.state
     return (
       <div className="cell-location flex">
-        <span onClick={()=> this.props.setMap(task.location.pos)} className="flex"><LocationOnOutlinedIcon /></span>
+        <span onClick={() => this.onSetMap()} className="flex"><LocationOnOutlinedIcon /></span>
         <form>
           <input
             name="placeName"
@@ -107,12 +135,9 @@ class _CellLocation extends Component {
             type="text"
             onChange={this.handleChange}
             value={placeName}
-          // onBlur={this.onChangeLoc}
           />
-
-          {/* <input type="submit" value="Go" /> */}
         </form>
-
+        {this.props.task.location &&  <span className="flex"><i className="fas close" onClick={() => this.onRemoveloc()}></i></span>}
       </div>
     )
   }
