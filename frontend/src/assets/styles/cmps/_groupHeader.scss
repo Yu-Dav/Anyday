@@ -99,7 +99,7 @@
         min-width: 180px;
     }
     .group-handle::after {
-        content: '\f58e';
+        content: "\f58e";
     }
 }
 
@@ -109,4 +109,16 @@
             // max-width: 388px;
         }
     }
+}
+
+@media (max-width: $mobile-breakpoint) {
+    .group-header {
+        .title {
+            min-width: 180px;
+            flex-basis: 180px;
+            font-size: 15px;
+            left: 23px;
+        }
+    }
+
 }

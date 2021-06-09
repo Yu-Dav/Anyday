@@ -8,8 +8,7 @@ export function ActivityLog({ task, board }) {
         return board.activities.filter(activity => activity.task && (activity.task.id === task.id))
     }
 
-    console.log(board)
-    if (!board.activities || !board.activities.length ) return <div>No activities to display</div>
+    if (!board.activities || !board.activities.length) return <div>No activities to display</div>
     return (
         <div className="activities">
             {!task && <div>

@@ -7,9 +7,6 @@
         min-width: 380px;
     }
 
-    // .remove-task ~ .cell.title:hover {
-    //     opacity: 0.5;
-    // }
     .cell.title {
         background-color: #f5f6f8f2;
         flex: 1;
@@ -64,18 +61,17 @@
             opacity: .75;
         }
 
-        // .title-left-sec {
-        // }
     }
 }
 
 // /* MEDIUM */
 @media (max-width: $normal-breakpoint) {
     .task-row {
-        // .cell.title {
-        //     // flex-basis: 380px;
-        //     // max-width: 380px;
-        // }
+        .cell.title {
+            // flex-basis: 380px;
+            // max-width: 380px;
+            color: #323338;
+        }
 
         .left-container {
             max-width: 380px;
@@ -91,7 +87,12 @@
         //     // flex-basis: 200px;
         // }
         .cell.title {
-            position: unset;
+            background-color: #fcfdfa;
+            min-width: 180px;
+            position: sticky;
+            left: 2px;
+            z-index: 3;
         }
+        
     }
 }

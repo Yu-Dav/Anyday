@@ -78,7 +78,6 @@ export class Updates extends Component {
         if (!task) {
             // task = board.groups.find(group => group.tasks.find(task => task.comments.find(comment => comment.id === commentId)))
             task = this.getTask(comment.id)
-            console.log(task);
         }
         const commentId = comment.id
         const commentIdx = task.comments.findIndex(comment => comment.id === commentId)
@@ -94,7 +93,6 @@ export class Updates extends Component {
 
     get boardComments() {
         const boardComments = []
-        console.log(this.props.board);
         if (this.props.board.groups) {
             this.props.board.groups.forEach(group => {
                 group.tasks.forEach(task => {
@@ -113,8 +111,6 @@ export class Updates extends Component {
             height
         }
         const { task, board } = this.props
-        console.log('task', task);
-        console.log('board', board);
         if (!board) return <div>loading</div>
         return (
             <div className="updates">
