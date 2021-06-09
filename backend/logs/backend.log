@@ -1,115 +1,23 @@
-6/8/2021, 10:28:37 PM - DEBUG - Session ID is | 5HN1SzJ_RApbPxjQBdQDC8tbdWrgh9DL 
-6/8/2021, 10:35:23 PM - DEBUG - Session ID is | PkMBAHyXSCR7KiRBt4iEIGxckURuMoYl 
-6/8/2021, 11:20:35 PM - DEBUG - Session ID is | XTrw-tDsCvqc9BSjBrvrm2LloyTB3__W 
-6/8/2021, 11:21:34 PM - DEBUG - Session ID is | WfXMJqOZ8eOCORoeS0SO6VOGn7fKccMI 
-6/8/2021, 11:22:01 PM - DEBUG - Session ID is | fzYJhypfOQ44f3-YyQH2nE2JZWRp2uB6 
-6/8/2021, 11:26:46 PM - DEBUG - Session ID is | -HSFS2Bk96XOzDUAYS7R1__kfLGQvm5I 
-6/8/2021, 11:30:23 PM - DEBUG - Session ID is | y_eceHA8NGiN96Yx6cgEcRy7fGGDZi0S 
-6/9/2021, 12:02:47 AM - DEBUG - Session ID is | DQ06IsfFnEr5wRJ0T1MnuHk6j4BNBGZ2 
-6/9/2021, 12:05:03 AM - DEBUG - Session ID is | qQKq0Hd6t1o-cRFTC--s53cNU5AIpTbx 
-6/9/2021, 12:07:46 AM - DEBUG - Session ID is | T5J_RSLwsqOrhuS48ZIG0VlzPhmBOKQC 
-6/9/2021, 12:09:41 AM - DEBUG - Session ID is | bAioyeMNEj5fsQauUdJFRor00vGP5QiS 
-6/9/2021, 12:23:53 AM - DEBUG - Session ID is | 7lB-zeklHdFR-HXWTpa3WHLGz74SAuYd 
-6/9/2021, 12:26:10 AM - DEBUG - Session ID is | uqRBOX5TKaQB1DqMXQmOGT_cFDpLfa8x 
-6/9/2021, 12:28:43 AM - DEBUG - Session ID is | _7_bKIQykFBdsgT7qNy4nNwJtkZxTT7O 
-6/9/2021, 12:40:00 AM - DEBUG - Session ID is | G6jhMlqiD2bKQSd3QQGoiTGPwt9nDGdH 
-6/9/2021, 12:42:31 AM - DEBUG - Session ID is | INoBIqRYKAL85DVTWuUAIPBqvrv2nonQ 
-6/9/2021, 12:57:29 AM - DEBUG - Session ID is | pczMWhI1qeeHLu7EwotztvuLp94NLD4w 
-6/9/2021, 12:57:36 AM - DEBUG - Session ID is | KL08KMl4q_RddertXKTppytovsHcBaBf 
-6/9/2021, 12:58:14 AM - DEBUG - Session ID is | sXF67-c3Uzf23iQGSjWUKOD8tUdQ1rqM 
-6/9/2021, 1:04:41 AM - DEBUG - Session ID is | 1Mw7To13fcrn6lWjzKp4b4ZSg2-hjxmW 
-6/9/2021, 8:39:01 AM - DEBUG - Session ID is | H5Bci7IAeDUC2nkPx7GxyVKhDdEO_yrT 
-6/9/2021, 8:39:36 AM - DEBUG - Session ID is | 1qWDYke9XM4aoQjEZTcdx600BFhx9m5T 
-6/9/2021, 8:59:48 AM - DEBUG - Session ID is | VBSuvlaTOLNUR4zfy_dncITGZJBTTUco 
-6/9/2021, 9:15:51 AM - DEBUG - Session ID is | lQQr15ekaKtu-uSpRD9vD0Ypf1AP_uPb 
-6/9/2021, 9:17:46 AM - DEBUG - Session ID is | K6d3TIR2rwzIsxGl6GbddhMcZC6muC9r 
-09/06/2021, 08:22:17 - DEBUG - Session ID is | Td7Ym6uiPiA9uabyUuq-R3r1oRkWK9Ru 
-09/06/2021, 08:22:17 - DEBUG - Session ID is | _-OZnNnqVqZpBtHisNuUjR2H_6B4KYZQ 
-09/06/2021, 08:22:30 - DEBUG - Session ID is | nn8URCZ08TPxthd3TM-3BikWCLY4HYQ6 
-09/06/2021, 08:22:35 - DEBUG - Session ID is | nn8URCZ08TPxthd3TM-3BikWCLY4HYQ6 
-09/06/2021, 08:22:36 - DEBUG - Session ID is | nn8URCZ08TPxthd3TM-3BikWCLY4HYQ6 
-09/06/2021, 08:22:37 - DEBUG - Session ID is | nn8URCZ08TPxthd3TM-3BikWCLY4HYQ6 
-09/06/2021, 08:22:40 - DEBUG - Session ID is | nn8URCZ08TPxthd3TM-3BikWCLY4HYQ6 
-09/06/2021, 08:25:13 - DEBUG - Session ID is | nn8URCZ08TPxthd3TM-3BikWCLY4HYQ6 
-09/06/2021, 08:25:18 - DEBUG - Session ID is | nn8URCZ08TPxthd3TM-3BikWCLY4HYQ6 
-09/06/2021, 08:25:52 - DEBUG - Session ID is | nn8URCZ08TPxthd3TM-3BikWCLY4HYQ6 
-09/06/2021, 08:25:55 - DEBUG - Session ID is | nn8URCZ08TPxthd3TM-3BikWCLY4HYQ6 
-09/06/2021, 08:26:11 - DEBUG - Session ID is | nn8URCZ08TPxthd3TM-3BikWCLY4HYQ6 
-09/06/2021, 08:51:10 - DEBUG - Session ID is | oFqS4QX1F7nI5V6FR5vwc45Z5gd0bpHf 
-09/06/2021, 08:51:24 - DEBUG - Session ID is | oFqS4QX1F7nI5V6FR5vwc45Z5gd0bpHf 
-09/06/2021, 08:52:16 - DEBUG - Session ID is | fRt2uQOKZACpicoyBhknsqyiLj7Ik4VC 
-09/06/2021, 08:52:55 - DEBUG - Session ID is | fRt2uQOKZACpicoyBhknsqyiLj7Ik4VC 
-09/06/2021, 08:53:07 - DEBUG - Session ID is | fRt2uQOKZACpicoyBhknsqyiLj7Ik4VC 
-09/06/2021, 09:06:27 - DEBUG - Session ID is | fRt2uQOKZACpicoyBhknsqyiLj7Ik4VC 
-09/06/2021, 09:10:37 - DEBUG - Session ID is | N6-FD9ReDnfaoH9Uvr5GOP62Ep7V77XI 
-09/06/2021, 09:11:13 - DEBUG - Session ID is | N6-FD9ReDnfaoH9Uvr5GOP62Ep7V77XI 
-09/06/2021, 09:21:04 - DEBUG - Session ID is | xRYgfAOjhNz6ldaOyqyC4RPU-QU7LB3m 
-09/06/2021, 09:21:09 - DEBUG - Session ID is | xRYgfAOjhNz6ldaOyqyC4RPU-QU7LB3m 
-09/06/2021, 09:21:14 - DEBUG - Session ID is | N6-FD9ReDnfaoH9Uvr5GOP62Ep7V77XI 
-09/06/2021, 09:25:14 - DEBUG - Session ID is | FnyQR5PjlNJmIznGrG5thR0ZTnCRprX- 
-09/06/2021, 09:26:02 - DEBUG - Session ID is | oud8yr2Wo6pLsf8QH3e-LLHXe_bhYxMT 
-09/06/2021, 09:26:43 - DEBUG - auth.service - login with username: Yuval (sid: xFN9F0IGvSqQviIPqWdDuT4vwitXDmYx)
-09/06/2021, 09:26:46 - DEBUG - Session ID is | zAsuMRIIvCHwMnK8Nl5qHthdiTNiXGtw 
-09/06/2021, 09:29:05 - DEBUG - Session ID is | yNZXTAXC8hBAM4-stHB7cahwn68ZoZQt 
-09/06/2021, 09:32:24 - DEBUG - Session ID is | yNZXTAXC8hBAM4-stHB7cahwn68ZoZQt 
-09/06/2021, 09:32:24 - DEBUG - Session ID is | yNZXTAXC8hBAM4-stHB7cahwn68ZoZQt 
-09/06/2021, 09:32:26 - DEBUG - Session ID is | yNZXTAXC8hBAM4-stHB7cahwn68ZoZQt 
-09/06/2021, 09:32:43 - DEBUG - Session ID is | Q7Mhb2NVA-vk9zs_d1SyiZeOHARdIkgG 
-09/06/2021, 09:32:54 - DEBUG - Session ID is | 1w0GxNVNWoeIa9dvpViXixxL-Dn-ReVA 
-09/06/2021, 09:32:58 - DEBUG - Session ID is | 1w0GxNVNWoeIa9dvpViXixxL-Dn-ReVA 
-09/06/2021, 09:33:29 - DEBUG - Session ID is | 3gqRHPiabuz87eow25c2TwywxyOM2f1z 
-09/06/2021, 09:33:40 - DEBUG - Session ID is | 4GFtMY5NoCeE3z1LRbVhrX_eyGUz8WFV 
-09/06/2021, 09:45:10 - DEBUG - Session ID is | 4GFtMY5NoCeE3z1LRbVhrX_eyGUz8WFV 
-09/06/2021, 09:45:14 - DEBUG - Session ID is | tKm-bkBUCY5SnvRLkNaVJrMyCIyfruHK 
-09/06/2021, 09:49:31 - DEBUG - Session ID is | 4GFtMY5NoCeE3z1LRbVhrX_eyGUz8WFV 
-09/06/2021, 09:49:34 - DEBUG - Session ID is | 4GFtMY5NoCeE3z1LRbVhrX_eyGUz8WFV 
-09/06/2021, 09:49:35 - DEBUG - Session ID is | 4GFtMY5NoCeE3z1LRbVhrX_eyGUz8WFV 
-09/06/2021, 09:49:37 - DEBUG - Session ID is | 4GFtMY5NoCeE3z1LRbVhrX_eyGUz8WFV 
-09/06/2021, 09:49:53 - DEBUG - Session ID is | 4GFtMY5NoCeE3z1LRbVhrX_eyGUz8WFV 
-09/06/2021, 09:49:56 - DEBUG - Session ID is | 4GFtMY5NoCeE3z1LRbVhrX_eyGUz8WFV 
-09/06/2021, 09:49:57 - DEBUG - Session ID is | 4GFtMY5NoCeE3z1LRbVhrX_eyGUz8WFV 
-09/06/2021, 09:54:53 - DEBUG - Session ID is | DtHc-O_edg1oVkEkwDySdVdYtZLxRgbH 
-09/06/2021, 10:00:09 - DEBUG - Session ID is | Xk6sikeYAVYUzfPTivCHVuFeXOr-aCgt 
-09/06/2021, 10:00:13 - DEBUG - Session ID is | xhoNZ2ppC2ue8KBpbwYzUBc0vJ-W9_7q 
-09/06/2021, 10:00:17 - DEBUG - Session ID is | BoVCfZtqUeh73V9e0WjoTuGFtomJA-_D 
-09/06/2021, 10:01:05 - DEBUG - Session ID is | NqUQ9JZCEZa2URLij4ptr9t4k2PL6NMH 
-09/06/2021, 10:01:21 - DEBUG - Session ID is | Xk6sikeYAVYUzfPTivCHVuFeXOr-aCgt 
-09/06/2021, 10:01:28 - DEBUG - Session ID is | xhoNZ2ppC2ue8KBpbwYzUBc0vJ-W9_7q 
-09/06/2021, 10:01:31 - DEBUG - Session ID is | BoVCfZtqUeh73V9e0WjoTuGFtomJA-_D 
-09/06/2021, 10:02:26 - DEBUG - Session ID is | Ts8xs-fD5FaahwTyx3g5LsjShZe03eND 
-09/06/2021, 10:02:27 - DEBUG - Session ID is | SPKc8XPLjaYSp7K7TjpDKIV9I9fWn8XT 
-09/06/2021, 10:02:28 - DEBUG - Session ID is | 2g8Zjk9meFRO3RDr1PFyQGLJUtzW5Ral 
-09/06/2021, 10:02:29 - DEBUG - Session ID is | fH8noYMWlteDOeuHe2GFBqHDD4etJy22 
-09/06/2021, 10:02:30 - DEBUG - Session ID is | U0vvBT3dytTK4kaP_6hxI4K-ZDKXVrQc 
-09/06/2021, 10:04:05 - DEBUG - Session ID is | uBWzbVCBQFT1q_vWaM6dk64bteNWY9cm 
-09/06/2021, 10:05:11 - DEBUG - Session ID is | PQdj6BhncJWD7kATO98TOw7cDNny825z 
-09/06/2021, 10:05:13 - DEBUG - Session ID is | PQdj6BhncJWD7kATO98TOw7cDNny825z 
-09/06/2021, 10:05:25 - DEBUG - Session ID is | Ts8xs-fD5FaahwTyx3g5LsjShZe03eND 
-09/06/2021, 10:05:31 - DEBUG - Session ID is | PQdj6BhncJWD7kATO98TOw7cDNny825z 
-09/06/2021, 10:05:58 - DEBUG - Session ID is | F90BiCkGLGGX68pwolu83_nZb5Nkueuv 
-09/06/2021, 10:22:27 - DEBUG - Session ID is | JeRxv_eItoR9whncToakW9KHjiF5tOSB 
-09/06/2021, 10:22:28 - DEBUG - Session ID is | Hhh2IK-sripbJCKC-6lV4z_5a82JyDot 
-09/06/2021, 10:22:30 - DEBUG - Session ID is | K1AXeG4MYujR0jGWmCxz33cFNOYtvnvO 
-09/06/2021, 10:22:31 - DEBUG - Session ID is | BuCJDy3GxXxlXDApwCBUDEMbG8isdQrz 
-09/06/2021, 10:22:32 - DEBUG - Session ID is | M6ERaedl4P-hF_DhUhndPNSDXSIOed2z 
-09/06/2021, 10:23:10 - DEBUG - Session ID is | a9cvnoEqhrAcsULVdJt2gqz6snyZKEkw 
-09/06/2021, 10:27:33 - DEBUG - Session ID is | JspnV9vgqw6lQF2ZDtbffe8i118QXCK0 
-09/06/2021, 10:31:01 - DEBUG - Session ID is | 3j9k5o7CmGS4YF1G9x-202WrazXGvZet 
-09/06/2021, 10:34:20 - DEBUG - Session ID is | Hrb5ZXI25Vk8HsAfV53ow6InGRBDV_xB 
-09/06/2021, 10:46:12 - DEBUG - Session ID is | -10QjNakbOXCpP-tvc1cdFWJME3HUUCv 
-09/06/2021, 10:46:14 - DEBUG - Session ID is | XmZExBYaVbzFztAIr0ysgxB3VsgG005c 
-09/06/2021, 10:46:32 - DEBUG - Session ID is | JsDWezK-3DTZWNBT0C2mHb_P7NlUguGM 
-09/06/2021, 10:46:34 - DEBUG - Session ID is | hMpF5wn_7r_JSdDdDskKvQ_dfL8QVr7w 
-09/06/2021, 10:46:35 - DEBUG - Session ID is | vBPZcNjvcmJm8KZbGYQQIws-UTVggEpS 
-09/06/2021, 10:47:40 - DEBUG - Session ID is | tqq2fKVQJMSrNgdua0CCFPtEZA6me2YG 
-09/06/2021, 10:53:02 - DEBUG - Session ID is | o9cnki9oQl64ekZNUFzIwQnjLpHADYKb 
-09/06/2021, 10:53:04 - DEBUG - Session ID is | nRqdjR_7Ywr5BVh57QjNUaJdCX2o_8NL 
-09/06/2021, 11:02:46 - DEBUG - Session ID is | JsDWezK-3DTZWNBT0C2mHb_P7NlUguGM 
-09/06/2021, 11:03:19 - DEBUG - Session ID is | Ll335KkSkp2h-qL6g0UP5v3SX58T8I8- 
-09/06/2021, 11:03:36 - DEBUG - Session ID is | ww1Nfqn6yQEuK2Uy2XLFJeoQh0bUybfD 
-09/06/2021, 11:15:37 - DEBUG - Session ID is | ww1Nfqn6yQEuK2Uy2XLFJeoQh0bUybfD 
-09/06/2021, 11:16:26 - DEBUG - Session ID is | ww1Nfqn6yQEuK2Uy2XLFJeoQh0bUybfD 
-09/06/2021, 11:17:15 - DEBUG - Session ID is | GyuByZ2A4jLlBNsbYdac_VPYHbcmZ35w 
-09/06/2021, 11:18:36 - DEBUG - Session ID is | GyuByZ2A4jLlBNsbYdac_VPYHbcmZ35w 
-09/06/2021, 11:18:37 - DEBUG - Session ID is | GyuByZ2A4jLlBNsbYdac_VPYHbcmZ35w 
-09/06/2021, 11:18:39 - DEBUG - Session ID is | GyuByZ2A4jLlBNsbYdac_VPYHbcmZ35w 
+6/9/2021, 10:47:23 AM - DEBUG - Session ID is | nc0dV-6ffa3U23e4WRByXodaQRASs4h4 
+6/9/2021, 10:49:25 AM - DEBUG - Session ID is | dqJYbRu8XhkCtIK_PFb6Y2RwLsFtLLmy 
+6/9/2021, 10:49:55 AM - DEBUG - Session ID is | TSKBvk6jpVII_gEZJzw2K9Aca2QSdT7y 
+6/9/2021, 11:31:20 AM - DEBUG - Session ID is | ZuZtuSOiZyDAnwzOJDmwPh8-RoNI5Xov 
+6/9/2021, 11:35:10 AM - DEBUG - Session ID is | K1R3azSgg4dAAP8K9FJ15_DNzqWW9D5m 
+6/9/2021, 11:35:28 AM - DEBUG - Session ID is | 0hhrFCyp8iEjzL8E9OV-npPhi6hMEDv3 
+6/9/2021, 11:37:49 AM - DEBUG - Session ID is | crlU8BuK1TpL9QrWubMtNqJGvYKML-IP 
+6/9/2021, 11:40:57 AM - DEBUG - Session ID is | tm7-d5YZX86uY0akB-AfxCqUbu66X8Fd 
+6/9/2021, 12:00:20 PM - DEBUG - Session ID is | dqoAUBdrNcqnqV4JXJt3Zbzey98mgbL1 
+6/9/2021, 12:08:40 PM - DEBUG - Session ID is | YIxBR7-1yF06_lVEv-rqnl5RyfA7xpDl 
+6/9/2021, 12:09:51 PM - DEBUG - Session ID is | Gpcb3_hpzRSVpNHPRIeSuAQSdEt1F8dx 
+6/9/2021, 12:11:48 PM - ERROR - cannot find boards | MongoServerSelectionError: getaddrinfo ENOTFOUND cluster0-shard-00-00.7zdxr.mongodb.net (sid: QmXr_47nL08ZY3xhCfIaR9dqZnYhRbSQ)
+6/9/2021, 12:11:48 PM - ERROR - Failed to get boards | MongoServerSelectionError: getaddrinfo ENOTFOUND cluster0-shard-00-00.7zdxr.mongodb.net (sid: QmXr_47nL08ZY3xhCfIaR9dqZnYhRbSQ)
+6/9/2021, 12:11:48 PM - ERROR - Failed to get users | ReferenceError: logger is not defined (sid: QmXr_47nL08ZY3xhCfIaR9dqZnYhRbSQ)
+6/9/2021, 12:11:48 PM - ERROR - while finding board 60bdbf547fe26e89775eece4 | MongoServerSelectionError: getaddrinfo ENOTFOUND cluster0-shard-00-00.7zdxr.mongodb.net (sid: QmXr_47nL08ZY3xhCfIaR9dqZnYhRbSQ)
+6/9/2021, 12:11:48 PM - ERROR - Failed to get board | MongoServerSelectionError: getaddrinfo ENOTFOUND cluster0-shard-00-00.7zdxr.mongodb.net (sid: QmXr_47nL08ZY3xhCfIaR9dqZnYhRbSQ)
+6/9/2021, 12:12:52 PM - DEBUG - Session ID is | h2X-5wkXB9vfzPY3v2emF4Arbj4eIenB 
+09/06/2021, 11:19:55 - DEBUG - Session ID is | aX6PAVEuk-nlCmgloZzcUnKBokQxWliY 
+09/06/2021, 11:19:55 - DEBUG - Session ID is | 6L5DcFAs41Pp1RZ7QjfmFPnCBb4mg7DD 
+09/06/2021, 11:19:55 - DEBUG - Session ID is | bqa5jeg-Dt-vpZPsepaVII7eVjsIIIFy 
+09/06/2021, 11:20:07 - DEBUG - Session ID is | LI6XkwAfmlQoi_ueUh6kfC-S_vXQVOyA 
+09/06/2021, 11:23:02 - DEBUG - Session ID is | v1bjk6m6usv7jDrxPrGKwwQs-Z3p15uC 
+09/06/2021, 11:23:11 - DEBUG - Session ID is | dJTnoTSw_lkLDlmycY0GHW-rZuwaqnow 

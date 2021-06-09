@@ -247,7 +247,7 @@ class _BoardApp extends Component {
     render() {
         const { boardId } = this.props.match.params
         const { currBoard, users } = this.props
-        const { currUser, filteredGroups, mapPos } = this.state
+        const { currUser, filteredGroups, mapPos, isMap } = this.state
         // console.log('params', this.props.match.params)
         if (!currBoard) return <div>loading</div>
         return (
@@ -255,14 +255,16 @@ class _BoardApp extends Component {
                 <SidebarApp />
                 {boardId && <SidebarNav onAddNewBoard={this.onAddNewBoard} isExpanded={false} />}
                 {!boardId && <SidebarNav onAddNewBoard={this.onAddNewBoard} isExpanded={true} />}
+                
                 {!boardId && <Welcome />}
                 {boardId && <div className="container board-container">
                     <BoardHeader users={users} board={currBoard} updateBoard={this.props.updateBoard} />
                     <BoardCtrlPanel board={currBoard} onChangeView={this.onChangeView} addNewGroup={this.addNewGroup}
-                        filterBoard={this.filterBoard} loadBoard={this.props.loadBoard} />
+                        filterBoard={this.filterBoard} loadBoard={this.props.loadBoard} isMap={isMap}/>
                     {/* <button className="btn" onClick={() => window.location.hash = `/board/${currBoard._id}/map`}>Map</button> */}
                     {/* <LocationSearchInput /> */}
                     {/* <button className="btn-location" onClick={() => this.setState({ ...this.state, isMap: !this.state.isMap })}>Map</button> */}
+                   
                     {this.state.isMap && <GoogleMap className="container" pos={mapPos}/>}
                     {/* {this.state.isMap && <GoogleMap/>} */}
                     {!this.state.isMap &&
