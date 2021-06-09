@@ -41,13 +41,16 @@ export class GroupHeader extends Component {
                     <Draggable draggableId={`member-${groupID}`} index={index} type="column">
                         {(provided, snapshot) => (
 
-                            <div className={snapshot.isDragging ? "cell asignee isDragging" : "cell asignee"}
+                            <div className={snapshot.isDragging ? "cell asignee isDragging flex space-between" : "cell asignee flex space-between"}
                                 {...provided.draggableProps}
                                 ref={provided.innerRef}>
-                                <i {...provided.dragHandleProps}>
-                                    <GripSvg />
-                                </i>
+                                <span className="left-border">
+                                    <i {...provided.dragHandleProps}>
+                                        <GripSvg />
+                                    </i>
+                                </span>
                                 <span>Members</span>
+                                <span className="right-border"></span>
                             </div>
                         )}
                     </Draggable>
@@ -57,13 +60,16 @@ export class GroupHeader extends Component {
                 return (
                     <Draggable draggableId={`tag-${groupID}`} index={index} type="column">
                         {(provided, snapshot) => (
-                            <div className={snapshot.isDragging ? "cell tags isDragging" : "cell tags"}
+                            <div className={snapshot.isDragging ? "cell tags isDragging flex space-between" : "cell tags flex space-between"}
                                 {...provided.draggableProps}
                                 ref={provided.innerRef}>
-                                <i {...provided.dragHandleProps}>
-                                    <GripSvg />
-                                </i>
+                                <span className="left-border">
+                                    <i {...provided.dragHandleProps}>
+                                        <GripSvg />
+                                    </i>
+                                </span>
                                 <span>Tags</span>
+                                <span className="right-border"></span>
                             </div>
                         )}
                     </Draggable>
@@ -76,10 +82,13 @@ export class GroupHeader extends Component {
                             <div className={snapshot.isDragging ? "cell label isDragging" : "cell label"}
                                 {...provided.draggableProps}
                                 ref={provided.innerRef}>
-                                <i {...provided.dragHandleProps}>
-                                    <GripSvg />
-                                </i>
+                                <span className="left-border">
+                                    <i {...provided.dragHandleProps}>
+                                        <GripSvg />
+                                    </i>
+                                </span>
                                 <span>Status</span>
+                                <span className="right-border"></span>
                             </div>
                         )}
                     </Draggable>
@@ -92,10 +101,16 @@ export class GroupHeader extends Component {
                             <div className={snapshot.isDragging ? "cell label isDragging" : "cell label"}
                                 {...provided.draggableProps}
                                 ref={provided.innerRef}>
-                                <i {...provided.dragHandleProps}>
-                                    <GripSvg />
-                                </i>
+                                <span className="left-border">
+
+                                    <i {...provided.dragHandleProps}>
+                                        <GripSvg />
+                                    </i>
+                                </span>
+
                                 <span>Priority</span>
+                                <span className="right-border"></span>
+
                             </div>
                         )}
                     </Draggable>
@@ -108,10 +123,15 @@ export class GroupHeader extends Component {
                             <div className={snapshot.isDragging ? "cell creation-log isDragging" : "cell creation-log"}
                                 {...provided.draggableProps}
                                 ref={provided.innerRef}>
-                                <i {...provided.dragHandleProps}>
-                                    <GripSvg />
-                                </i>
+                                <span className="left-border">
+                                    <i {...provided.dragHandleProps}>
+                                        <GripSvg />
+                                    </i>
+                                </span>
+
                                 <span>Creation Log</span>
+                                <span className="right-border"></span>
+
                             </div>
                         )}
                     </Draggable>
@@ -125,30 +145,42 @@ export class GroupHeader extends Component {
                             <div className={snapshot.isDragging ? "cell timeline isDragging" : "cell timeline"}
                                 {...provided.draggableProps}
                                 ref={provided.innerRef}>
-                                <i {...provided.dragHandleProps}>
-                                    <GripSvg />
-                                </i>
+                                <span className="left-border">
+
+                                    <i {...provided.dragHandleProps}>
+                                        <GripSvg />
+                                    </i>
+                                </span>
+
                                 <span>Timeline</span>
+                                <span className="right-border"></span>
+
                             </div>
                         )}
                     </Draggable>
 
                 )
-            case 'location': 
+            case 'location':
                 return (
                     <Draggable draggableId={`location-${groupID}`} index={index} type="column">
-                    {(provided, snapshot) => (
+                        {(provided, snapshot) => (
 
-                        <div className={snapshot.isDragging ? "cell location isDragging" : "cell location"}
-                            {...provided.draggableProps}
-                            ref={provided.innerRef}>
-                            <i {...provided.dragHandleProps}>
-                                <GripSvg />
-                            </i>
-                            <span>Location</span>
-                        </div>
-                    )}
-                </Draggable>
+                            <div className={snapshot.isDragging ? "cell location isDragging" : "cell location"}
+                                {...provided.draggableProps}
+                                ref={provided.innerRef}>
+                                <span className="left-border">
+
+                                    <i {...provided.dragHandleProps}>
+                                        <GripSvg />
+                                    </i>
+                                </span>
+
+                                <span>Location</span>
+                                <span className="right-border"></span>
+
+                            </div>
+                        )}
+                    </Draggable>
                 )
             default:
                 return <div></div>;

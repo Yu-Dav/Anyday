@@ -119,8 +119,8 @@
 
 .fa.comment::after {
     content: "\f075";
-    font-size: 24px;
-    color: #c5c7d0;
+    font-size: rem(22px);
+    color: #e1e1e4;
     &:hover {
         color: #0073ea;;
     }
@@ -129,7 +129,7 @@
     color: #0073ea;;
 }
 .fa.comment.active::after {
-    color: #0073ea;;
+    color: #95b2d1;;
 }
 a:hover {
     text-decoration: none;
