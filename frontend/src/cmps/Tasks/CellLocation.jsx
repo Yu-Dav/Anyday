@@ -3,6 +3,7 @@ import { Map, Marker, GoogleApiWrapper } from 'google-maps-react';
 import { utilService } from '../../services/utilService';
 import { userService } from '../../services/userService';
 import { socketService } from '../../services/socketService';
+import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
 
 class _CellLocation extends Component {
 
@@ -13,6 +14,10 @@ class _CellLocation extends Component {
 
   componentDidMount() {
     console.log('did mount');
+    console.log(this.props);
+    if (this.props.task && this.props.task.location) {
+      this.setState({ position: this.props.task.location.pos, placeName: this.props.task.location.name })
+    }
     this.renderAutoComplete();
   }
   // map = React.createRef()
@@ -21,17 +26,20 @@ class _CellLocation extends Component {
     console.log('did update');
     if (this.props !== prevProps.map) this.renderAutoComplete();
   }
-  handleChange = () => {
+  handleChange = ({ target }) => {
     console.log('handle change');
-    this.renderAutoComplete();
+    const { name } = target
+    const { value } = target
+    this.setState({ ...this.state, [name]: value })
   }
 
-  onChangeLoc = async(ev)=> {
-    ev.preventDefault();
+  onChangeLoc = async () => {
+    // ev.preventDefault();
     const newLocation = {
       pos: this.state.position,
       name: this.state.placeName
     }
+    console.log('new location', newLocation);
     this.props.task.location = newLocation
     const newBoard = { ...this.props.board }
     const newActivity = {
@@ -40,18 +48,19 @@ class _CellLocation extends Component {
       createdAt: Date.now(),
       byMember: userService.getLoggedinUser(),
       task: {
-          id: this.props.task.id,
-          title: this.props.task.title,
-          changedItem: newLocation.name
+        id: this.props.task.id,
+        title: this.props.task.title,
+        changedItem: newLocation.name
       },
       group: {
-          id: this.props.group.id,
-          title: this.props.group.title
+        id: this.props.group.id,
+        title: this.props.group.title
       }
-  }
-  newBoard.activities.unshift(newActivity)
-  await this.props.updateBoard(newBoard)
-  await socketService.emit('board updated', newBoard._id);
+    }
+    newBoard.activities.unshift(newActivity)
+    await this.props.updateBoard(newBoard)
+    await socketService.emit('board updated', newBoard._id);
+    console.log(this.props.board);
   }
 
   renderAutoComplete() {
@@ -74,24 +83,31 @@ class _CellLocation extends Component {
       //     map.setCenter(place.geometry.location);
       //     map.setZoom(17);
       // }
-      console.log(place);
-      this.setState({ position: place.geometry.location, placeName: place.formatted_address }, console.log(this.state.position));
+      console.log(place.geometry.location.lat(), place.geometry.location.lng(), place.formatted_address);
+      const pos = { lat: place.geometry.location.lat(), lng: place.geometry.location.lng() }
+      const placeName = place.formatted_address
+      console.log(pos, placeName);
+      this.setState({ position: place.geometry.location, placeName: place.formatted_address }, () => { this.onChangeLoc() });
     });
   }
 
 
   render() {
-
-    const { placeName } = this.state
+    const { task } = this.props
+    // if (!task || !task.location) return <div></div>
+    const { placeName, position } = this.state
     return (
-      <div>
-        <form onSubmit={this.onChangeLoc}>
+      <div className="cell-location flex">
+        <span onClick={()=> this.props.setMap(task.location.pos)} className="flex"><LocationOnOutlinedIcon /></span>
+        <form>
           <input
+            name="placeName"
             placeholder="Enter a location"
             ref={ref => (this.autocomplete = ref)}
             type="text"
             onChange={this.handleChange}
             value={placeName}
+          // onBlur={this.onChangeLoc}
           />
 
           {/* <input type="submit" value="Go" /> */}
@@ -102,10 +118,13 @@ class _CellLocation extends Component {
   }
 }
 
-export const CellLocation = GoogleApiWrapper({
+export const CellLocation = GoogleApiWrapper((props) => ({
   // apiKey: ('AIzaSyALrFJBnFDGcCiP2nGHHWujEFLSpiABtAw')
-  apiKey: ('AIzaSyA1TpSPtsJIgXzeaeenK7R2XPSz5MzrSkk')
-})(_CellLocation)
+  apiKey: ('AIzaSyA1TpSPtsJIgXzeaeenK7R2XPSz5MzrSkk'),
+  task: props.task,
+  group: props.group,
+  board: props.board
+}))(_CellLocation)
 
 
 

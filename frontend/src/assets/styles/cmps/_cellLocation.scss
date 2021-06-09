@@ -1,0 +1,28 @@
+.cell-location {
+    width          : 180px;
+    align-items    : center;
+    color          : #666666;
+    justify-content: center;
+
+    svg {
+        opacity: 0.5;
+        width  : 20px;
+        height : 20px;
+    }
+
+    input {
+        color           : #666666;
+        border          : none;
+        background-color: transparent;
+        text-overflow   : ellipsis;
+        overflow        : hidden;
+        white-space     : nowrap;
+
+        &:focus {
+            background-color: #fff;
+            outline         : 1px solid #8b8b8b;
+            border-radius   : 5px;
+            padding         : 3px;
+        }
+    }
+}

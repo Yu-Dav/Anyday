@@ -6,7 +6,7 @@ import { utilService } from '../services/utilService'
 import { socketService } from '../services/socketService'
 import { userService } from '../services/userService'
 import { DragDropContext, Droppable } from 'react-beautiful-dnd';
-import {PlacesWithStandaloneSearchBox} from '../cmps/Map3'
+import { PlacesWithStandaloneSearchBox } from '../cmps/Map3'
 import { connect } from 'react-redux'
 import { SidebarNav } from '../cmps/SidebarNav.jsx'
 import { SidebarApp } from '../cmps/SidebarApp.jsx'
@@ -30,6 +30,7 @@ class _BoardApp extends Component {
         currUser: null,
         filteredGroups: [],
         isMap: false,
+        mapPos: null
     }
 
     async componentDidMount() {
@@ -228,7 +229,7 @@ class _BoardApp extends Component {
             console.log('filtered groups', filteredBoard.groups);
             return filteredBoard.groups
         }
-      
+
         this.setState({ ...this.state, filteredGroups: [] })
         console.log('groups');
         // return this.props.currBoard.groups
@@ -238,15 +239,21 @@ class _BoardApp extends Component {
         this.props.addBoard()
 
     }
-    onChangeView = (ev) => {
+    onChangeView = (ev, isMap) => {
         console.log('ev.target', ev.target);
-        this.setState({ ...this.state, isMap: !this.state.isMap })
+        this.setState({ ...this.state, isMap: isMap })
+    }
+
+    setMap = async(pos) => {
+        console.log(pos);
+        await this.setState({ ...this.state, mapPos: pos})
+        this.setState({isMap: true})
     }
 
     render() {
         const { boardId } = this.props.match.params
         const { currBoard, users } = this.props
-        const { currUser, filteredGroups } = this.state
+        const { currUser, filteredGroups, mapPos } = this.state
         // console.log('params', this.props.match.params)
         if (!currBoard) return <div>loading</div>
         return (
@@ -262,8 +269,7 @@ class _BoardApp extends Component {
                     {/* <button className="btn" onClick={() => window.location.hash = `/board/${currBoard._id}/map`}>Map</button> */}
                     {/* <LocationSearchInput /> */}
                     {/* <button className="btn-location" onClick={() => this.setState({ ...this.state, isMap: !this.state.isMap })}>Map</button> */}
-                    <CellLocation/>
-                    {this.state.isMap && <GoogleMap className="container" />}
+                    {this.state.isMap && <GoogleMap className="container" pos={mapPos}/>}
                     {/* {this.state.isMap && <GoogleMap/>} */}
                     {!this.state.isMap &&
                         <DragDropContext onDragEnd={this.onDragEnd}>
@@ -273,9 +279,9 @@ class _BoardApp extends Component {
                                         ref={provided.innerRef}
                                         {...provided.droppableProps} >
                                         {<GroupList
-                                            board={currBoard} groups={filteredGroups.length ? filteredGroups: currBoard.groups}
+                                            board={currBoard} groups={filteredGroups.length ? filteredGroups : currBoard.groups}
                                             key={currBoard._id}
-                                            updateBoard={this.props.updateBoard} currUser={currUser} />}
+                                            updateBoard={this.props.updateBoard} currUser={currUser} setMap={this.setMap} />}
                                         {provided.placeholder}
                                     </div>
                                 )}
