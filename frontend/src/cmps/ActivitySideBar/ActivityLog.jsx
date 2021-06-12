@@ -14,7 +14,7 @@ export function ActivityLog({ task, board }) {
             {!task && <div>
                 {board.activities.map(activity => <div key={activity.id} className="activity-preview flex align-center">
                     <div className="time"><TimeAgo date={activity.createdAt} minPeriod={10} /></div>
-                    <Avatar alt={activity.byMember.username} src={activity.byMember.imgUrl} style={{ width: '30px', height: '30px', display: 'inline-block' }} />
+                    {activity.byMember && <Avatar alt={activity.byMember.username} src={activity.byMember.imgUrl} style={{ width: '30px', height: '30px', display: 'inline-block' }} />}
                     {!activity.task && <div className="title">{activity.group.title}</div>}
                     {activity.task && <div className="title">{activity.task.title}</div>}
                     <div className="type">{activity.type}</div>
