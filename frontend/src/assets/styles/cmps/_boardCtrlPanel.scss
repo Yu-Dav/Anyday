@@ -1,6 +1,6 @@
 .board-ops {
     color: #323338;
-
+    margin: 2px 0 15px 0;
     .left-ctrl {
         position: sticky;
         left    : 130px;
@@ -12,7 +12,7 @@
         color      : inherit;
     }
 
-    margin: 15px 0 15px 0;
+    
 
     &>*:not(:last-child) {
         margin-inline-end: 10px;
