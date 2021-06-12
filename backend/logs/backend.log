@@ -15,8 +15,30 @@
 6/9/2021, 12:11:48 PM - ERROR - while finding board 60bdbf547fe26e89775eece4 | MongoServerSelectionError: getaddrinfo ENOTFOUND cluster0-shard-00-00.7zdxr.mongodb.net (sid: QmXr_47nL08ZY3xhCfIaR9dqZnYhRbSQ)
 6/9/2021, 12:11:48 PM - ERROR - Failed to get board | MongoServerSelectionError: getaddrinfo ENOTFOUND cluster0-shard-00-00.7zdxr.mongodb.net (sid: QmXr_47nL08ZY3xhCfIaR9dqZnYhRbSQ)
 6/9/2021, 12:12:52 PM - DEBUG - Session ID is | h2X-5wkXB9vfzPY3v2emF4Arbj4eIenB 
+<<<<<<< HEAD
 6/12/2021, 10:46:04 AM - DEBUG - Session ID is | XcyUpIpLMscgNx7VMyGn2b7UNNZQHulS 
 6/12/2021, 10:49:02 AM - DEBUG - Session ID is | MnhFSpGFPn7fggoBiSJOsMB7rEYHCI0o 
 6/12/2021, 10:49:12 AM - DEBUG - Session ID is | rJHJjm41Wae4Y5tmmU9n7zX8gVLfdbdZ 
 6/12/2021, 10:52:46 AM - DEBUG - Session ID is | erpk15VTTWAXz6drAq-jACN_t3qGx6JW 
 6/12/2021, 10:55:12 AM - DEBUG - Session ID is | jtBWq0_kGJFcjOBO0Vf7kPI6wUhXxscP 
+=======
+6/9/2021, 12:52:48 PM - DEBUG - Session ID is | 4cV5W5e7xIleYwGX_XZMZ6SZ4bcIBuQA 
+6/9/2021, 12:53:23 PM - DEBUG - Session ID is | vIaRRkJyE_MGy_LPnMUVzaHFVdkZBOu6 
+6/12/2021, 10:27:03 AM - INFO - Server is running on port: 3030 
+6/12/2021, 10:30:10 AM - DEBUG - Session ID is | K49vGGILLXeM_UPI-h4CiVH8DwpC2IZ7 
+6/12/2021, 10:30:44 AM - DEBUG - Session ID is | K49vGGILLXeM_UPI-h4CiVH8DwpC2IZ7 
+6/12/2021, 10:39:28 AM - DEBUG - Session ID is | S-Utc3k4KNR4b8vTWKoOsEHs14inYICN 
+6/12/2021, 10:47:16 AM - DEBUG - Session ID is | S-Utc3k4KNR4b8vTWKoOsEHs14inYICN 
+6/12/2021, 10:47:58 AM - DEBUG - Session ID is | S-Utc3k4KNR4b8vTWKoOsEHs14inYICN 
+6/12/2021, 11:05:55 AM - DEBUG - Session ID is | S-Utc3k4KNR4b8vTWKoOsEHs14inYICN 
+6/12/2021, 11:08:49 AM - DEBUG - Session ID is | S-Utc3k4KNR4b8vTWKoOsEHs14inYICN 
+6/12/2021, 11:09:12 AM - DEBUG - Session ID is | S-Utc3k4KNR4b8vTWKoOsEHs14inYICN 
+6/12/2021, 11:11:54 AM - DEBUG - Session ID is | S-Utc3k4KNR4b8vTWKoOsEHs14inYICN 
+6/12/2021, 11:12:06 AM - DEBUG - Session ID is | S-Utc3k4KNR4b8vTWKoOsEHs14inYICN 
+6/12/2021, 11:14:42 AM - DEBUG - Session ID is | qhvAOJKhJT0ooaVFkE3BajfOfjGe_SIh 
+6/12/2021, 11:16:26 AM - DEBUG - Session ID is | qhvAOJKhJT0ooaVFkE3BajfOfjGe_SIh 
+6/12/2021, 11:16:30 AM - DEBUG - Session ID is | qhvAOJKhJT0ooaVFkE3BajfOfjGe_SIh 
+6/12/2021, 11:37:55 AM - INFO - Server is running on port: 3030 
+6/12/2021, 11:38:30 AM - DEBUG - Session ID is | LPN1ZaGG5oFcwQipTAG36h3wJuiVcdRL 
+>>>>>>> f15efe21e25276463c1e40205d06c142a473ed0c
+6/12/2021, 10:56:03 AM - DEBUG - Session ID is | RbrYaz-7FvU4C1_N5SO2jU_VgGFJ8QTR 

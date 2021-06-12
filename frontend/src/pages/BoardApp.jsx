@@ -81,7 +81,7 @@ class _BoardApp extends Component {
             id: utilService.makeId(),
             type: 'Group added',
             createdAt: Date.now(),
-            byMember: this.props.loggedInUser,
+            byMember: userService.getLoggedinUser(),
             task: null,
             group: {
                 id: newGroup.id,
