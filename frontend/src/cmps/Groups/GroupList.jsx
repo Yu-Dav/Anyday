@@ -10,6 +10,7 @@ export function GroupList({ groups, board, updateBoard, currUser, setMap}) {
         </div>
     return (
         < div className="groups-container wrapper">
+            <div className="hide-lines"></div>
             {groups.map((group, index) => <GroupPreview board={board} key={group.id} group={group}
                 updateBoard={updateBoard} index={index} currUser={currUser} setMap={setMap}/>)}
         </div>

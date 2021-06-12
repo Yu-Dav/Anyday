@@ -15,6 +15,11 @@ export class BoardCtrlPanel extends Component {
         isFiltering: false,
         view: 'board-view'
     }
+
+    // componentDidUpdate(){
+    //     console.log(this.props);
+    //     this.setState({...this.state, view: this.props.isMap? 'map-view': 'board-view'})
+    // }
     onSearchClicked = () => {
         this.setState({ ...this.state, isSearching: !this.state.isSearching })
     }
@@ -49,6 +54,19 @@ export class BoardCtrlPanel extends Component {
                 {/* <button className="btn-sort flex align-center"><SortSvg /> <p>Sort</p></button> */}
                 </div>
                 <div className="right-ctrl flex">
+                    <div className={!this.props.isMap ? 'view active flex align-center' : 'view flex align-center'} onClick={(ev) => {
+                        this.props.onChangeView(ev, false)
+                        this.setState({ ...this.state, view: 'board-view' })
+                    }} ><TableChartOutlinedIcon />Board</div>
+                    <div className={this.props.isMap ? 'view active flex align-center' : 'view flex align-center'} onClick={(ev) => {
+                        this.props.onChangeView(ev, true)
+                        this.setState({ ...this.state, view: 'map-view' })
+                    }} >
+                        <LocationOnOutlinedIcon />Map
+                    </div>
+
+                </div>
+                {/* <div className="right-ctrl flex">
                     <div className={view === 'board-view' ? 'view active flex align-center' : 'view flex align-center'} onClick={(ev) => {
                         this.props.onChangeView(ev, false)
                         this.setState({ ...this.state, view: 'board-view' })
@@ -60,7 +78,7 @@ export class BoardCtrlPanel extends Component {
                         <LocationOnOutlinedIcon />Map
                     </div>
 
-                </div>
+                </div> */}
             </div>
         )
 

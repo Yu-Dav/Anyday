@@ -235,19 +235,24 @@ class _BoardApp extends Component {
     render() {
         const { boardId } = this.props.match.params
         const { currBoard, users } = this.props
-        const { currUser, filteredGroups, mapPos } = this.state
+        const { currUser, filteredGroups, mapPos, isMap } = this.state
+        // console.log('params', this.props.match.params)
         if (!currBoard) return <div>loading</div>
         return (
             <div className="board-app-container flex" onScroll={this.onScroll} ref="board-app-container">
                 <SidebarApp />
-                {boardId && <SidebarNav onAddNewBoard={this.onAddNewBoard} onRemoveBoard={this.onRemoveBoard} isExpanded={false} />}
-                {!boardId && <SidebarNav onAddNewBoard={this.onAddNewBoard} onRemoveBoard={this.onRemoveBoard} isExpanded={true} />}
+                {boardId && <SidebarNav onAddNewBoard={this.onAddNewBoard} isExpanded={false} />}
+                {!boardId && <SidebarNav onAddNewBoard={this.onAddNewBoard} isExpanded={true} />}
+                
                 {!boardId && <Welcome />}
                 {boardId && <div className="container board-container">
                     <BoardHeader users={users} board={currBoard} updateBoard={this.props.updateBoard} />
                     <BoardCtrlPanel board={currBoard} onChangeView={this.onChangeView} addNewGroup={this.addNewGroup}
-                        filterBoard={this.filterBoard} loadBoard={this.props.loadBoard} />
-                   {/* <button className="btn-location" onClick={() => this.setState({ ...this.state, isMap: !this.state.isMap })}>Map</button> */}
+                        filterBoard={this.filterBoard} loadBoard={this.props.loadBoard} isMap={isMap}/>
+                    {/* <button className="btn" onClick={() => window.location.hash = `/board/${currBoard._id}/map`}>Map</button> */}
+                    {/* <LocationSearchInput /> */}
+                    {/* <button className="btn-location" onClick={() => this.setState({ ...this.state, isMap: !this.state.isMap })}>Map</button> */}
+                   
                     {this.state.isMap && <GoogleMap className="container" pos={mapPos}/>}
                     {!this.state.isMap &&
                         <DragDropContext onDragEnd={this.onDragEnd}>
