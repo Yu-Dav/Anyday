@@ -69,6 +69,9 @@
         width : 24px;
     }
 
+}
+
+
     .invite-user {
         animation       : fade-in 0.3s ease-in-out both;
         position        : absolute;
@@ -77,8 +80,8 @@
         z-index         : 3;
         border-radius   : 4px;
         padding         : 16px 11px;
-        top             : 50px;
-        right           : 81px;
+        top: 31px;
+        right: -14px;
 
         // & > * :not(:last-child){
         //     margin-bottom: 5px;
@@ -100,7 +103,6 @@
             margin: auto;
         }
     }
-}
 
 @media (max-width: $mobile-breakpoint) {
     .board-header {

@@ -1,11 +1,4 @@
 import React from 'react'
-// import { CellTitle } from './CellTitle'
-// import { CellMember } from './CellMember'
-// import { CellTag } from './CellTag'
-// import { CellStatus } from './CellStatus'
-// import { CellPriority } from './CellPriority'
-// import { CellCreationLog } from './CellCreationLog'
-// import { CellDate } from './CellDate'
 import { Draggable } from 'react-beautiful-dnd';
 import { DynamicCell } from './DynamicCell'
 import { socketService } from '../../services/socketService'
@@ -13,8 +6,7 @@ import { utilService } from '../../services/utilService'
 import { userService } from '../../services/userService'
 import { Snack } from './SnackBar'
 
-// import IconButton from '@material-ui/core/IconButton';
-// import CloseIcon from '@material-ui/icons/Close';
+
 
 export function TaskPreview({ task, group, board, updateBoard, index, setMap }) {
 

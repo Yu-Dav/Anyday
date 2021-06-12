@@ -56,8 +56,8 @@ class _SidebarNav extends Component {
                             <h1>My Workspace</h1>
                             <div className="sidebar-ops">
                                 <i onClick={this.props.onAddNewBoard} className="flex add-board-wrapper flex align-center">
-                                <AddCircleOutlineOutlinedIcon style={{ fontSize: '18px', color: '#898a8f', cursor: 'pointer', position:'absolute', left:'-3.3px' }} />
-                                <span style={{marginLeft:'20px'}}>Add</span>
+                                    <AddCircleOutlineOutlinedIcon style={{ fontSize: '18px', color: '#898a8f', cursor: 'pointer', position: 'absolute', left: '-3.3px' }} />
+                                    <span style={{ marginLeft: '20px' }}>Add</span>
 
                                 </i>
                                 {/* <div className="flex align-center search-board-wrapper">
@@ -70,10 +70,17 @@ class _SidebarNav extends Component {
                             </div>
                             <div className="sidebar-ops second flex column">
                                 {boards.map(board =>
-                                    <Link key={board._id} to={`/board/${board._id}`} className="flex align-center">
-                                        <TableChartOutlinedIcon style={{ fontSize: '18px', color: '#898a8f', cursor: 'pointer' }} /> {board.title}
+                                    <div className="flex board-ops">
+                                        <Link key={board._id} to={`/board/${board._id}`} className="flex align-center">
+                                            <TableChartOutlinedIcon style={{ fontSize: '18px', color: '#898a8f', cursor: 'pointer', marginRight: '4px' }} /> {board.title}
 
-                                    </Link>)}
+                                        </Link>
+                                        <button className='delete-board' onClick={() => {
+                                             if (window.confirm('Are you sure you wish to delete this board?'))this.props.onRemoveBoard(board._id) } 
+                                             }><i className="fas close"></i></button>
+                                        {/* <button data-id={board._id} onClick={this.props.onRemoveBoard}>x</button> */}
+                                    </div>
+                                )}
                             </div>
                         </div>
 

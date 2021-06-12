@@ -113,11 +113,13 @@
 
 @media (max-width: $mobile-breakpoint) {
     .group-header {
+    width: 100%;
+
         .title {
             min-width: 180px;
             flex-basis: 180px;
             font-size: 15px;
-            left: 23px;
+            left: 0;
         }
     }
 
