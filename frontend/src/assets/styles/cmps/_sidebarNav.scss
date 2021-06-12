@@ -155,7 +155,8 @@
             display: inline;
             // position: sticky;
             position: fixed;
-            top: 25px;
+            z-index: 10;
+            top: 18px;
             left: 22px;
             height: 25px;
             width: 25px;

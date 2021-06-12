@@ -116,8 +116,11 @@
 @media (max-width: $mobile-breakpoint) {
     .board-ops {
         margin-top: 140px;
-        width     : 380px;
+        // width     : 380px;
+        width: 100%;
         display: block;
+        position: sticky;
+        left: 0px;
 .btn-add-group{
     width: 140px;
 }

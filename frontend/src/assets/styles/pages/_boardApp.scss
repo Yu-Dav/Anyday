@@ -25,6 +25,9 @@
             width: 100%;
             overflow-x: scroll;
             padding-left: 0;
+            .hide-lines{
+               display: none;
+            }
         }
     }
 }
