@@ -2,6 +2,7 @@
     left    : 163px;
     position: sticky;
     border  : 1px solid $lightGrey;
+    border-left: none;
 
     // width: 100vw;  
     &:hover {
@@ -49,7 +50,7 @@
     .group-color {
         // height: 100%;
         width      : 8px;
-        margin-left: 1.1px;
+        margin-left: 1.9px;
         opacity    : 0.5;
         position   : sticky;
         left       : 155px;

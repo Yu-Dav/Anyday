@@ -144,7 +144,7 @@ export function CellMember({ task, group, board, updateBoard }) {
                                     {taskMembers.map(member => {
                                         return <MenuItem style={{ display:'flex', gap:'10px', fontSize:'13px' }} 
                                         key={member._id}><Avatar alt={member.username} src={member.imgUrl} 
-                                        style={{ width:'30px', height:'30px' }}/>{member.fullname}<i className="fas close" 
+                                        style={{ width:'30px', height:'30px' }}/><span className="memb-full-name">{member.fullname}</span><i className="fas close" 
                                         data-id={member._id} onClick={onRemoveMember}></i></MenuItem>
                                     })}
                                     <hr />

@@ -67,11 +67,28 @@
             }
         }
         .sidebar-ops.second {
+            &>*:hover{
+                .fas.close{
+                    opacity:0.5;
+                }
+            }
+            a{
+                flex:1;
+            }
+
             & > *:not(:last-child) {
                 margin-bottom: 10px;
             }
             a > *:not(:last-child) {
                 margin-inline-end: 5px;
+            }
+            .fas.close::after {
+                content: "\f057";
+            }
+            button{
+                // display: flex;
+                border:none;
+                background-color: transparent;
             }
         }
     }
