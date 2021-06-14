@@ -19,6 +19,7 @@ class _SidebarNav extends Component {
     }
     componentDidMount() {
         this.props.loadBoards()
+        window.addEventListener('scroll', this.handleScroll);
     }
     onOpenNavbar = () => {
         const { isExpanded } = this.state
@@ -36,12 +37,18 @@ class _SidebarNav extends Component {
         const { isExpanded } = this.state
         this.setState({ ...this.state, isExpanded: false })
     }
+    handleScroll = (ev)=>{
+        // console.log(ev.currentTarget);  
+          if(ev.currentTarget.scrollX) this.setState({...this.state, isExpanded:false})
+      }
+
+ 
     render() {
         const { isExpanded, searchBy } = this.state
         const { boards } = this.props
         return (
 
-            <section className={isExpanded ? "sidebar-nav is-expanded" : "sidebar-nav"}>
+            <section className={isExpanded ? "sidebar-nav is-expanded" : "sidebar-nav"} onScroll={this.handleScroll}>
                 {/* Icon in desktop - arrow */}
                 <i className={isExpanded ? "fas arrow arrow-left" : "fas arrow arrow-right"}
                     onClick={this.onOpenNavbar}></i>
