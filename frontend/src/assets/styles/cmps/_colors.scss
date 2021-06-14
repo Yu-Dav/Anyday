@@ -1,9 +1,10 @@
 .color-container {
     animation: fade-in 0.3s ease-in-out both;
     width: 140px;
-    z-index: 5;
+    z-index: 6;
     background: #fff;
     position: absolute;
+    top: 30px;
     box-shadow: 0 8px 16px 0px #00000052;
     border-radius: 4px;
     cursor: pointer;
