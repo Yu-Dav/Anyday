@@ -9,6 +9,12 @@
         justify-content: center;
         display: flex;
         
+        .memb-full-name{
+            display: flex;
+            flex: 1;
+        }
+        
+        //in use?
         .cell-member-avatar {
             display: inline-block;
             width: 20px;

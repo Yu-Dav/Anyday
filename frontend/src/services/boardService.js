@@ -22,6 +22,7 @@ async function getById(boardId) {
 }
 
 async function remove(boardId) {
+    console.log('removing in service', boardId)
     // return storageService.remove('board', boardId);
     return httpService.delete(`board/${boardId}`);
 }

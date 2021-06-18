@@ -1,29 +1,21 @@
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom';
-// import { Route } from 'react-router-dom'
 import { HashRouter as Router, Route, Switch } from 'react-router-dom'
 import { utilService } from '../services/utilService'
 import { socketService } from '../services/socketService'
 import { userService } from '../services/userService'
 import { DragDropContext, Droppable } from 'react-beautiful-dnd';
-import { PlacesWithStandaloneSearchBox } from '../cmps/Map3'
 import { connect } from 'react-redux'
 import { SidebarNav } from '../cmps/SidebarNav.jsx'
 import { SidebarApp } from '../cmps/SidebarApp.jsx'
 import { BoardHeader } from '../cmps/BoardHeader'
-// import  MapWrapper from '../cmps/Map2'
 import { BoardCtrlPanel } from '../cmps/BoardCtrlPanel'
-import { loadBoard, updateBoard, addBoard, loadBoards, onSetFilter } from '../store/actions/boardActions'
+import { loadBoard, updateBoard, addBoard, removeBoard, loadBoards, onSetFilter } from '../store/actions/boardActions'
 import { loadUsers } from '../store/actions/userActions'
 import { GroupList } from '../cmps/groups/GroupList'
 import { ActivityModal } from '../cmps/ActivitySideBar/ActivityModal';
 import { GoogleMap } from '../cmps/Map.jsx'
 import { Welcome } from '../cmps/Welcome';
-import { CellLocation } from '../cmps/tasks/CellLocation';
-// import { MapWithASearchBox, PlacesWithStandaloneSearchBox } from '../cmps/Map3';
-// import { LocationSearchInput } from '../cmps/tasks/CellLocation'
-// import { MenuListComposition } from '../cmps/MenuCmp'
-// import { ChipCmp } from '../cmps/ChipCmp';
+
 
 class _BoardApp extends Component {
     state = {
@@ -70,6 +62,10 @@ class _BoardApp extends Component {
         this.props.addBoard()
     }
 
+    onRemoveBoard =(boardId)=>{
+        this.props.removeBoard(boardId)
+    }
+
     addNewGroup = async () => {
         const newBoard = { ...this.props.currBoard }
         const newGroup = {
@@ -85,7 +81,7 @@ class _BoardApp extends Component {
             id: utilService.makeId(),
             type: 'Group added',
             createdAt: Date.now(),
-            byMember: this.props.loggedInUser,
+            byMember: userService.getLoggedinUser(),
             task: null,
             group: {
                 id: newGroup.id,
@@ -204,11 +200,6 @@ class _BoardApp extends Component {
                     return false
                 })
             }
-            // if (filterBy.sortBy && !onDrag) {
-            //     if (filterBy.sortBy === 'name') filteredBoard.groups = boardService.sortByTitle(filteredBoard.groups)
-            //     else filteredBoard.groups = boardService.sortByDate(filteredBoard.groups)
-            // }
-
 
             const filterRegex = new RegExp(filterBy.txt, 'i');
             filteredBoard.groups = filteredBoard.groups.filter(group => {
@@ -220,13 +211,10 @@ class _BoardApp extends Component {
             })
 
             this.setState({ ...this.state, filteredGroups: filteredBoard.groups }, console.log('filtered groups', this.state.filteredGroups))
-            console.log('filtered groups', filteredBoard.groups);
             return filteredBoard.groups
         }
 
         this.setState({ ...this.state, filteredGroups: [] })
-        console.log('groups');
-        // return this.props.currBoard.groups
     }
 
     onAddNewBoard = () => {
@@ -244,6 +232,7 @@ class _BoardApp extends Component {
         this.setState({isMap: true})
     }
 
+
     render() {
         const { boardId } = this.props.match.params
         const { currBoard, users } = this.props
@@ -251,10 +240,10 @@ class _BoardApp extends Component {
         // console.log('params', this.props.match.params)
         if (!currBoard) return <div>loading</div>
         return (
-            <div className="board-app-container flex" onScroll={this.onScroll} ref="board-app-container">
+            <div className="board-app-container flex" ref="board-app-container">
                 <SidebarApp />
-                {boardId && <SidebarNav onAddNewBoard={this.onAddNewBoard} isExpanded={false} />}
-                {!boardId && <SidebarNav onAddNewBoard={this.onAddNewBoard} isExpanded={true} />}
+                {boardId && <SidebarNav onAddNewBoard={this.onAddNewBoard} isExpanded={false} onRemoveBoard={this.onRemoveBoard}/>}
+                {!boardId && <SidebarNav onAddNewBoard={this.onAddNewBoard} isExpanded={true} onRemoveBoard={this.onRemoveBoard}/>}
                 
                 {!boardId && <Welcome />}
                 {boardId && <div className="container board-container">
@@ -266,7 +255,6 @@ class _BoardApp extends Component {
                     {/* <button className="btn-location" onClick={() => this.setState({ ...this.state, isMap: !this.state.isMap })}>Map</button> */}
                    
                     {this.state.isMap && <GoogleMap className="container" pos={mapPos}/>}
-                    {/* {this.state.isMap && <GoogleMap/>} */}
                     {!this.state.isMap &&
                         <DragDropContext onDragEnd={this.onDragEnd}>
                             <Droppable droppableId="all-groups" type="group">
@@ -286,10 +274,6 @@ class _BoardApp extends Component {
                     }
                 </div>}
                 <Switch>
-                    {/* <Route path={`${this.props.match.path}/map`} component={GoogleMap} /> */}
-                    {/* <Route path={`${this.props.match.path}/map`} render={(props) => {
-                            return <GoogleMap {...props} />
-                        }} /> */}
                     <Route path={`${this.props.match.path}/:groupId/:taskId`} render={(props) => {
                         return <ActivityModal {...props} />
                     }} />
@@ -317,6 +301,7 @@ const mapDispatchToProps = {
     loadBoards,
     updateBoard,
     addBoard,
+    removeBoard,
     loadUsers,
     onSetFilter
 }

@@ -39,6 +39,7 @@
 
     .board-header-btns {
         position: sticky;
+        z-index: 1;
         right   : 25px;
     }
 
@@ -69,6 +70,9 @@
         width : 24px;
     }
 
+}
+
+
     .invite-user {
         animation       : fade-in 0.3s ease-in-out both;
         position        : absolute;
@@ -77,8 +81,8 @@
         z-index         : 3;
         border-radius   : 4px;
         padding         : 16px 11px;
-        top             : 50px;
-        right           : 81px;
+        top: 31px;
+        right: -14px;
 
         // & > * :not(:last-child){
         //     margin-bottom: 5px;
@@ -100,11 +104,10 @@
             margin: auto;
         }
     }
-}
 
 @media (max-width: $mobile-breakpoint) {
     .board-header {
-        width           : 97%;
+        width           : 100%;
         overflow-x      : hidden;
         position        : fixed;
         top             : 0;
@@ -113,7 +116,12 @@
         margin-top: 0;
         margin: 0 auto;
         padding-top: 15px;
-
+        padding-right: 20px;
+        .invite-user {
+            position: fixed;
+            right: 50px;
+            top: 45px;
+        }
         // display: none;
         .header-top {
             flex-direction: column-reverse; // so 3 btns will come before Board title

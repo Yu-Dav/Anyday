@@ -1,6 +1,9 @@
 
 .editable-cmp {
     border: 1px solid transparent;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
     &:hover {
         border: 1px dashed black;
     }
