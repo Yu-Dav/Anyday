@@ -22,11 +22,13 @@ export class CellDate extends Component {
             ...this.state, isDateSet: (!this.props.task.timeline[0] && !this.props.task.timeline[1]) ? false : true,
         })
     }
+    
     setDateRange = (update) => {
         if (!update[1]) return this.setState({ startDate: update[0], endDate: null, isSettingDate: true })
         return this.setState({ ...this.state, endDate: update[1] },
             this.onSetTimeline)
     }
+
     onSetTimeline = async () => {
         const { startDate, endDate } = this.state
         const timeline = [startDate, endDate]

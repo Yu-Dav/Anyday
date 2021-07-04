@@ -232,6 +232,7 @@ class _BoardApp extends Component {
         this.setState({isMap: true})
     }
 
+
     render() {
         const { boardId } = this.props.match.params
         const { currBoard, users } = this.props
@@ -239,10 +240,10 @@ class _BoardApp extends Component {
         // console.log('params', this.props.match.params)
         if (!currBoard) return <div>loading</div>
         return (
-            <div className="board-app-container flex" onScroll={this.onScroll} ref="board-app-container">
+            <div className="board-app-container flex" ref="board-app-container">
                 <SidebarApp />
-                {boardId && <SidebarNav onAddNewBoard={this.onAddNewBoard} onRemoveBoard={this.onRemoveBoard} isExpanded={false} />}
-                {!boardId && <SidebarNav onAddNewBoard={this.onAddNewBoard} onRemoveBoard={this.onRemoveBoard} isExpanded={true} />}
+                {boardId && <SidebarNav onAddNewBoard={this.onAddNewBoard} isExpanded={false} onRemoveBoard={this.onRemoveBoard}/>}
+                {!boardId && <SidebarNav onAddNewBoard={this.onAddNewBoard} isExpanded={true} onRemoveBoard={this.onRemoveBoard}/>}
                 
                 {!boardId && <Welcome />}
                 {boardId && <div className="container board-container">

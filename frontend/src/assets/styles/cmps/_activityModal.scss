@@ -86,10 +86,11 @@
         img {
             width: 60%;
         }
-        label{
-            font-size: 14px;
-            font-family: roboto-light; 
-            cursor: pointer;
+
+        label {
+            font-size  : 14px;
+            font-family: roboto-light;
+            cursor     : pointer;
         }
     }
 
@@ -167,7 +168,7 @@
             border-bottom: 1px solid #c5c7d0;
 
             .time {
-                flex-basis: 80px;
+                flex-basis: 115px;
             }
 
             .title {
@@ -181,10 +182,11 @@
             .type,
             .group,
             .item {
-                flex-basis   : 70px;
-                text-align   : center;
+                flex-basis: 60px;
+                text-align: center;
             }
-            .item{
+
+            .item {
                 text-overflow: ellipsis;
                 overflow     : hidden;
                 white-space  : nowrap;
@@ -195,16 +197,17 @@
 
 @media (max-width: $mobile-breakpoint) {
     .activity-modal {
-        width: 100vw;
-
+        width       : 100vw;
+        z-index     : 7;
+        padding: 20px 10px;
         // width: 100%;
         // display: none;
-        .cross-svg {
-            float: right;
-        }
+        // .cross-svg {
+        //     float: right;
+        // }
 
-        .board-title {
-            margin-top: 40px;
-        }
+        // .board-title {
+        //     margin-top: 40px;
+        // }
     }
 }

@@ -70,20 +70,21 @@ export class GroupMenu extends Component {
         const { bgColor } = this.props.group.style
         return (
             <ClickAwayListener onClickAway={this.handleClickAway}>
-                <div className="group-modal-choose" onClick={this.onOpenSelector}>
-                    <DropDownArrow style={{ fill: bgColor }} />
-                    <div>
-                        {isExpanded && <div className="fade-in group-modal absolute">
-                            <div onClick={this.onDeleteGroup}>Delete group</div>
-                            <div onClick={this.onSelectChange}>Choose color</div>
-                        </div>
-                        }
-                        {isColor && <Colors
-                            onChangeGroupColor={this.onChangeGroupColor} board={this.props.board}>
-                        </Colors>
-                        }
+                <section className="group-modal-choose">
+                    <div onClick={this.onOpenSelector}>
+                        <DropDownArrow style={{ fill: bgColor }} />
+
                     </div>
-                </div>
+                    {isExpanded && <div className="fade-in group-modal absolute">
+                        <div onClick={this.onDeleteGroup}>Delete group</div>
+                        <div onClick={this.onSelectChange}>Choose color</div>
+                    </div>
+                    }
+                    {isColor && <Colors
+                        onChangeGroupColor={this.onChangeGroupColor} board={this.props.board}>
+                    </Colors>
+                    }
+                </section>
             </ClickAwayListener>
         )
     }

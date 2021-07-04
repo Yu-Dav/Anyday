@@ -1,6 +1,6 @@
 .task-add {
-    left    : 163px;
-    position: sticky;
+    // left    : 163px;
+    // position: sticky;
     border  : 1px solid $lightGrey;
     border-left: none;
 
@@ -29,7 +29,7 @@
         position         : sticky;
         left             : 163px;
         border-inline-end: none;
-
+        width: 380px;
         &:focus {
             outline: none;
         }
@@ -58,28 +58,35 @@
     }
 
     button.add {
-        height          : 100%;
-        width           : 5%;
+        height          : 36px;
+        padding: 0 10px;
         background-color: #0073ea;
         color           : white;
         border-radius   : 4px;
         border          : none;
         transition      : 0.3s ease;
         font-family     : roboto-light, helvetica, sans-serif;
+        position: fixed;
+        right: 30px;
 
     }
 }
 
 @media (max-width: $mobile-breakpoint) {
     .task-add {
-        // width         : 100%;
+        width         : 1210px;
         //        flex: 1;
-        position      : relative;
-        left          : 0;
+        // position      : relative;
+        // left          : 0;
 
         input {
-            position: unset;
-            flex: 1;
+            // position: unset;
+            // flex: 1;
+            left: 2px;
+        }
+        button.add {
+            right: 0px;
+    
         }
 
         .group-color {

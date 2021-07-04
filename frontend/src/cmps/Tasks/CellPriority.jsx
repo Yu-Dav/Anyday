@@ -46,11 +46,12 @@ export class CellPriority extends Component {
         const { priority } = this.props.task
         const { priorityLabels } = this.props.board
         const { isExpanded } = this.state
+        const classNameDot = priority.title === '.' ? 'no-title': ''
         return (
             <ClickAwayListener onClickAway={this.handleClickAway}>
                 <div className="cell label" style={{ backgroundColor: priority.color }} onClick={this.onOpenSelector}>
 
-                    <div className="status-priority-dog-ear">
+                    <div className={`status-priority-dog-ear ${classNameDot}`}>
                         {priority.title}
                     </div>
 

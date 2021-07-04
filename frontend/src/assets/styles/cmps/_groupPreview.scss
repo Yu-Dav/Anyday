@@ -19,6 +19,7 @@
     margin-bottom: 30px;
     background-color: #ffffffe6;
     min-width: 380px;
+    position: relative;
     // overflow-x: scroll;
     .group-modal {
         animation: fade-in 0.5s ease-in-out both;
@@ -31,6 +32,7 @@
         border-radius: 4px;
         cursor: pointer;
         width: 130px;
+        top: 30px;
     }
 
     .group-preview {

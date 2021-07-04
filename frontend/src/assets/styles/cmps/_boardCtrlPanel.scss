@@ -4,7 +4,7 @@
     .left-ctrl {
         position: sticky;
         left    : 130px;
-      
+      z-index: 5;
     }
 
     button {
@@ -115,8 +115,16 @@
 
 @media (max-width: $mobile-breakpoint) {
     .board-ops {
+<<<<<<< HEAD
         width     : 380px;
+=======
+        margin-top: 140px;
+        // width     : 380px;
+        width: 100%;
+>>>>>>> 5f2af45e35f0bb365af4412612167ab272e4ac6d
         display: block;
+        position: sticky;
+        left: 0px;
 .btn-add-group{
     width: 140px;
 }

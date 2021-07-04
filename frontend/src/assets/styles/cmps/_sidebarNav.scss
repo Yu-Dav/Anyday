@@ -2,7 +2,7 @@
     // min-width: 35px;
     position: sticky;
     background-color: #fff;
-    z-index: 5;
+    z-index: 7;
     left: 66px;
     min-width: 35px;
     min-height: 100vh;
@@ -144,10 +144,11 @@
         left: 235;
         min-width: 1px;
         padding: 25px 5px 10px 10px;
-        z-index: 6;
+        z-index: 7;
         border-right: none;
         background-color: transparent;
-        transition: 0.3s ease;
+        // transition: 0.3s ease;
+        transition: none;
         .fas.arrow {
             display: none;
         }
@@ -155,7 +156,8 @@
             display: inline;
             // position: sticky;
             position: fixed;
-            top: 25px;
+            z-index: 10;
+            top: 18px;
             left: 22px;
             height: 25px;
             width: 25px;
