@@ -16,7 +16,6 @@ export class BoardHeader extends Component {
         const { name } = target.dataset
         const value = target.innerText
         const newBoard = { ...this.props.board }
-        // console.log(`file: BoardHeader.jsx || line 13 || newBoard`, newBoard)
         // Getting the correct board above
         newBoard[name] = value
         await this.props.updateBoard(newBoard)
@@ -70,8 +69,6 @@ export class BoardHeader extends Component {
                         <EditableCmp className="title" name="title" value={board.title} updateFunc={this.onUpdateTitle} />
 
                         <StarSvg className="star-fav" />
-                        {/* <button className="btn" onClick={()=> window.location.hash = `/board/${board._id}/map`}>Map</button>
-                        <LocationSearchInput/> */}
                     </div>
                     <div className="board-header-btns flex">
                         {/* <User/> */}

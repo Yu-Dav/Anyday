@@ -89,12 +89,7 @@ i {
     position: fixed;
 }
 
-@media (max-width: $mobile-breakpoint) {
-    .container {
-        padding: 0 10px;
-    }
 
-}
 
 @media (max-width: $normal-breakpoint) {
 
