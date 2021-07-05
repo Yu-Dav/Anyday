@@ -41,15 +41,3 @@ export function GroupPreview({ group, board, updateBoard, index, currUser, setMa
         </Draggable>
     )
 }
-
-
-// <div
-//     ref={provided.innerRef}
-//     {...provided.droppableProps} >
-//     <GroupList
-
-//         board={currBoard} groups={currBoard.groups} key={currBoard._id} updateBoard={this.props.updateBoard} />
-//     {provided.placeholder}
-// </div>
-
-
