@@ -13,7 +13,7 @@ class _CellLocation extends Component {
   }
 
   componentDidMount() {
-    console.log('did mount');
+    // console.log('did mount');
     console.log(this.props);
     if (this.props.task && this.props.task.location) {
       this.setState({ position: this.props.task.location.pos, placeName: this.props.task.location.name })
@@ -23,11 +23,11 @@ class _CellLocation extends Component {
 
 
   componentDidUpdate(prevProps) {
-    console.log('did update');
+    // console.log('did update');
     if (this.props !== prevProps.map) this.renderAutoComplete();
   }
   handleChange = ({ target }) => {
-    console.log('handle change');
+    // console.log('handle change');
     const { name } = target
     const { value } = target
     this.setState({ ...this.state, [name]: value })
@@ -63,7 +63,7 @@ class _CellLocation extends Component {
   }
 
   onRemoveloc = async()=>{
-    console.log('remove loc');
+    // console.log('remove loc');
     const newBoard = { ...this.props.board }
     const newActivity = {
       id: utilService.makeId(),

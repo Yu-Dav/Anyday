@@ -3,11 +3,11 @@ import { GroupPreview } from './GroupPreview'
 import loader from '../../assets/imgs/loader.gif'
 
 export function GroupList({ groups, board, updateBoard, currUser, setMap}) {
-// console.log(groups);
-    if (!groups || !groups.length) return <div className="loader-no-groups">
-        {/* <h1>Loading tasks</h1> */}
+console.log('groups in group list', groups);
+    if (!groups) return <div className="loader-no-groups">
         <img src={loader} alt="Loader" />
         </div>
+       if (!groups.length) return <div>No tasks to display</div>
     return (
         < div className="groups-container wrapper">
             <div className="hide-lines"></div>

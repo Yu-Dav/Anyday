@@ -13,6 +13,7 @@
     font-size: 0.75em;
     &.is-expanded {
         min-width: 235px;
+        max-width: 235px;
         // position: sticky;
         left: 65px;
         // transform: translateX(200px);

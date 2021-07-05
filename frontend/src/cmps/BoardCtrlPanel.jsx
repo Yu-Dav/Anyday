@@ -46,7 +46,7 @@ export class BoardCtrlPanel extends Component {
                         <div>
                             <button onClick={this.onFilterClicked} className="btn-filter flex align-center"><FilterSvg /> <p>Filter</p></button>
                             {isFiltering &&
-                                <BoardFilter board={this.props.board} loadBoard={this.props.loadBoard} filterBoard={this.props.filterBoard}></BoardFilter>
+                                <BoardFilter board={this.props.board} loadBoard={this.props.loadBoard} filterBy={this.props.filterBy} filterBoard={this.props.filterBoard}></BoardFilter>
                             }
                         </div>
                     </ClickAwayListener>
