@@ -1,48 +1,50 @@
 .board-filter {
-    cursor: pointer;
-    animation: fade-in 0.3s ease-in-out both;
-    position: absolute;
-    top: 40px;
-    left: 175px;
-    padding: 10px;
+    cursor          : pointer;
+    animation       : fade-in 0.3s ease-in-out both;
+    position        : absolute;
+    top             : 40px;
+    left            : 175px;
+    padding         : 10px;
     background-color: white;
-    box-shadow: 0 8px 16px 0px #00000052;
-    z-index: 1;
-    font-size: rem(13px);
-    border-radius: 4px;
-    max-height: 160px;
-    overflow-y: scroll;
-    z-index: 5;
+    box-shadow      : 0 8px 16px 0px #00000052;
+    z-index         : 1;
+    font-size       : rem(13px);
+    border-radius   : 4px;
+    max-height      : 150px;
+    overflow-y      : scroll;
+    z-index         : 5;
 
     h1 {
         font-size: rem(16px);
     }
+
     .filter-groups {
         .filter-group {
             h1 {
                 font-size: rem(13px);
             }
-            // font-weight: 600;
-        }
-        .filter-group-item {
-            margin: 5px 0;
-            font-family: roboto-light;
-            &:hover {
-                background-color: #e6e9ef;
-                border-radius: 4px;
+
+            &.status{
+                width: 110px;
             }
-            &.selected {
-                background-color: #e6e9ef;
-                border-radius: 4px;
+            &.tag{
+                width: 115px;
+            }
+            &.priority{
+                width: 80px;
+            }
+            &.member{
+                width: 60px;
             }
         }
     }
-    .filter-groups > *:not(:last-child) {
+
+    .filter-groups>*:not(:last-child) {
         margin-inline-end: 15px;
     }
 }
 
-@media (max-width: $normal-breakpoint) {
+@media (max-width: $mobile-breakpoint) {
     .board-filter {
         left: 5px;
         // .filter-groups {

@@ -1,6 +1,4 @@
 import { Map, Marker, GoogleApiWrapper } from 'google-maps-react';
-import { SearchBox } from 'react-google-maps/lib/components/places/SearchBox';
-// const { SearchBox } = require("react-google-maps/lib/components/places/SearchBox")
 import React, { Component } from 'react'
 
 class _MapContainer extends Component {
@@ -9,7 +7,7 @@ class _MapContainer extends Component {
         position: null
     }
     componentDidMount() {
-        console.log('did mount');
+        console.log('did mount mao');
         this.setState({ position: this.props.pos }, console.log(this.state))
     }
 
