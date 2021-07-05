@@ -20,7 +20,7 @@ import { Welcome } from '../cmps/Welcome';
 class _BoardApp extends Component {
     state = {
         currUser: null,
-        filteredGroups: [],
+        filteredGroups: null,
         isMap: false,
         mapPos: null
     }
@@ -62,7 +62,7 @@ class _BoardApp extends Component {
         this.props.addBoard()
     }
 
-    onRemoveBoard =(boardId)=>{
+    onRemoveBoard = (boardId) => {
         this.props.removeBoard(boardId)
     }
 
@@ -132,11 +132,21 @@ class _BoardApp extends Component {
         socketService.emit('board updated', newBoard._id);
     }
 
-    filterBoard = (filterBy) => {
+    filterBoard = async (filterBy) => {
         console.log('filtering', filterBy);
-        const filteredBoard = { ...this.props.currBoard }
+        this.props.onSetFilter(filterBy)
+        const filteredBoard = JSON.parse(JSON.stringify(this.props.currBoard))
         if (filterBy) {
-            if (filterBy.status && filterBy.status.length) {
+            if (!filterBy.status?.length && !filterBy.priority?.length &&
+                !filterBy.tag?.length && !filterBy.membersId?.length &&
+                !filterBy.txt?.length) {
+                console.log('no filter');
+                await this.setState({ ...this.state, filteredGroups: this.props.currBoard.groups }, () => console.log('filtered groups', this.state.filteredGroups))
+                //    return this.props.currBoard
+            }
+
+            if (filterBy.status?.length) {
+                // console.log('filter by status');
                 filteredBoard.groups = filteredBoard.groups.filter(group => {
                     const filteredTasks = group.tasks.filter(task => {
                         const status = filterBy.status.find(label => {
@@ -152,7 +162,8 @@ class _BoardApp extends Component {
                     return false
                 })
             }
-            if (filterBy.priority && filterBy.priority.length) {
+            if (filterBy.priority?.length) {
+                // console.log('filter by priority');
                 filteredBoard.groups = filteredBoard.groups.filter(group => {
                     const filteredTasks = group.tasks.filter(task => {
                         const priority = filterBy.priority.find(label => {
@@ -168,7 +179,8 @@ class _BoardApp extends Component {
                     return false
                 })
             }
-            if (filterBy.tag && filterBy.tag.length) {
+            if (filterBy.tag?.length) {
+                // console.log('filter by tag');
                 filteredBoard.groups = filteredBoard.groups.filter(group => {
                     const filteredTasks = group.tasks.filter(task => {
                         const tag = filterBy.tag.find(tagfromFilter => {
@@ -184,7 +196,8 @@ class _BoardApp extends Component {
                     return false
                 })
             }
-            if (filterBy.membersId && filterBy.membersId.length) {
+            if (filterBy.membersId?.length) {
+                // console.log('filter by member');
                 filteredBoard.groups = filteredBoard.groups.filter(group => {
                     const filteredTasks = group.tasks.filter(task => {
                         const member = task.members.find(member => {
@@ -200,21 +213,24 @@ class _BoardApp extends Component {
                     return false
                 })
             }
+            if (filterBy.txt?.length) {
+                // console.log('filter by txt');
+                const filterRegex = new RegExp(filterBy.txt, 'i');
+                filteredBoard.groups = filteredBoard.groups.filter(group => {
+                    const filteredTasks = group.tasks.filter(task => filterRegex.test(task.title))
+                    if (filteredTasks.length) {
+                        group.tasks = filteredTasks
+                        return true
+                    } else return false || filterRegex.test(group.title)
+                })
+            }
 
-            const filterRegex = new RegExp(filterBy.txt, 'i');
-            filteredBoard.groups = filteredBoard.groups.filter(group => {
-                const filteredTasks = group.tasks.filter(task => filterRegex.test(task.title))
-                if (filteredTasks.length) {
-                    group.tasks = filteredTasks
-                    return true
-                } else return false || filterRegex.test(group.title)
-            })
-
-            this.setState({ ...this.state, filteredGroups: filteredBoard.groups }, console.log('filtered groups', this.state.filteredGroups))
-            return filteredBoard.groups
+            await this.setState({ ...this.state, filteredGroups: filteredBoard.groups }, () => console.log('filtered groups', this.state.filteredGroups.length))
+            // return filteredBoard.groups
         }
 
-        this.setState({ ...this.state, filteredGroups: [] })
+        // console.log('filter');
+
     }
 
     onAddNewBoard = () => {
@@ -226,35 +242,38 @@ class _BoardApp extends Component {
         this.setState({ ...this.state, isMap: isMap })
     }
 
-    setMap = async(pos) => {
+    setMap = async (pos) => {
         console.log(pos);
-        await this.setState({ ...this.state, mapPos: pos})
-        this.setState({isMap: true})
+        await this.setState({ ...this.state, mapPos: pos })
+        this.setState({ isMap: true })
     }
 
+    // get groupsToDisplay() {
+    //     if (this.state.filteredGroups.length) {
+    //         console.log('filtered groups');
+    //         return this.state.filteredGroups
+    //     }
+    //     console.log('curr board', this.props.currBoard.groups);
+    //     return this.props.currBoard.groups
+    // }
 
     render() {
         const { boardId } = this.props.match.params
         const { currBoard, users } = this.props
         const { currUser, filteredGroups, mapPos, isMap } = this.state
-        // console.log('params', this.props.match.params)
         if (!currBoard) return <div>loading</div>
         return (
             <div className="board-app-container flex" ref="board-app-container">
                 <SidebarApp />
-                {boardId && <SidebarNav onAddNewBoard={this.onAddNewBoard} isExpanded={false} onRemoveBoard={this.onRemoveBoard}/>}
-                {!boardId && <SidebarNav onAddNewBoard={this.onAddNewBoard} isExpanded={true} onRemoveBoard={this.onRemoveBoard}/>}
-                
+                {boardId && <SidebarNav onAddNewBoard={this.onAddNewBoard} isExpanded={false} onRemoveBoard={this.onRemoveBoard} />}
+                {!boardId && <SidebarNav onAddNewBoard={this.onAddNewBoard} isExpanded={true} onRemoveBoard={this.onRemoveBoard} />}
+
                 {!boardId && <Welcome />}
                 {boardId && <div className="container board-container">
                     <BoardHeader users={users} board={currBoard} updateBoard={this.props.updateBoard} />
                     <BoardCtrlPanel board={currBoard} onChangeView={this.onChangeView} addNewGroup={this.addNewGroup}
-                        filterBoard={this.filterBoard} loadBoard={this.props.loadBoard} isMap={isMap}/>
-                    {/* <button className="btn" onClick={() => window.location.hash = `/board/${currBoard._id}/map`}>Map</button> */}
-                    {/* <LocationSearchInput /> */}
-                    {/* <button className="btn-location" onClick={() => this.setState({ ...this.state, isMap: !this.state.isMap })}>Map</button> */}
-                   
-                    {this.state.isMap && <GoogleMap className="container" pos={mapPos}/>}
+                      filterBy={this.props.filterBy} filterBoard={this.filterBoard} loadBoard={this.props.loadBoard} isMap={isMap} />
+                    {this.state.isMap && <GoogleMap className="container" pos={mapPos} />}
                     {!this.state.isMap &&
                         <DragDropContext onDragEnd={this.onDragEnd}>
                             <Droppable droppableId="all-groups" type="group">
@@ -263,7 +282,8 @@ class _BoardApp extends Component {
                                         ref={provided.innerRef}
                                         {...provided.droppableProps} >
                                         {<GroupList
-                                            board={currBoard} groups={filteredGroups.length ? filteredGroups : currBoard.groups}
+                                            board={currBoard}
+                                            groups={filteredGroups || currBoard.groups}
                                             key={currBoard._id}
                                             updateBoard={this.props.updateBoard} currUser={currUser} setMap={this.setMap} />}
                                         {provided.placeholder}
@@ -308,30 +328,3 @@ const mapDispatchToProps = {
 
 export const BoardApp = connect(mapStateToProps, mapDispatchToProps)(_BoardApp)
 
-
-
-// Old DnD 
-// onDragEnd = async (result) => {
-//     const { destination, source, draggableId, type } = result;
-//     if (!destination) return;
-//     if (
-//         destination.droppableId === source.droppableId &&
-//         destination.index === source.index
-//     ) return
-//     if (type === 'task') {
-//         const sourceGroup = this.props.currBoard.groups.find(group => group.id === source.droppableId);
-//         const destinationGroup = this.props.currBoard.groups.find(group => group.id === destination.droppableId);
-//         const task = sourceGroup.tasks.find(task => task.id === draggableId)
-//         sourceGroup.tasks.splice(source.index, 1);
-//         destinationGroup.tasks.splice(destination.index, 0, task);
-//     }
-//     if (type === 'group') {
-//         const { currBoard } = this.props;
-//         const sourceGroup = this.props.currBoard.groups.find(group => group.id === draggableId);
-//         currBoard.groups.splice(source.index, 1);
-//         currBoard.groups.splice(destination.index, 0, sourceGroup)
-//     }
-//     const copyGroup = { ...this.props.currBoard };
-//     await this.props.updateBoard(copyGroup);
-//     socketService.emit('board updated', copyGroup._id);
-// }

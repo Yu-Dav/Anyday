@@ -1,7 +1,13 @@
 const initialState = {
     boards: [],
     currBoard: {},
-    filterBy: {},
+    filterBy: {
+        txt: '',
+        membersId: [],
+        priority: [],
+        status: [],
+        tag: []
+    },
 };
 
 // const idx = state.boards.findIndex(board => board._id === action.board._id)
@@ -35,11 +41,12 @@ export function boardReducer(state = initialState, action) {
                     board._id === action.board._id ? action.board : board
                 ),
             };
-            // return { ...state,boards: [action.board, ...state.boards.filter(board => action.board._id !== board._id)],  currBoard: {...action.board}}
+        // return { ...state,boards: [action.board, ...state.boards.filter(board => action.board._id !== board._id)],  currBoard: {...action.board}}
         case 'LOADING_BOARDS':
             return { ...state, isLoading: action.isLoading, err: null };
 
         case 'SET_FILTER':
+            console.log('set filter in reducer', action.filterBy);
             return { ...state, filterBy: action.filterBy };
 
         // case 'SET_SEARCH':

@@ -4,6 +4,7 @@ import { EditableCmp } from '../EditableCmp'
 import { socketService } from '../../services/socketService'
 import { utilService } from '../../services/utilService'
 import { userService } from '../../services/userService'
+import { Snack } from './SnackBar'
 
 
 export class CellTitle extends Component {
@@ -37,11 +38,13 @@ export class CellTitle extends Component {
     }
     render() {
         const { title, id } = this.props.task
-        const { board, group } = this.props
+        // const { board, group, onHoverTitle, notHoverTitle } = this.props
+        const { board, group, onRemoveTask } = this.props
         const className = this.props.task.comments.length ? 'fa comment active': 'fa comment'
         return (
-            <div className="cell title flex ">
-                {/* <i className="fas fa-trash remove-task" onClick={this.onRemoveTask}></i> */}
+            <div className="cell title flex">
+                <Snack onRemoveTask={onRemoveTask}/>
+                {/* <i className="fas fa-trash remove-task" onClick={()=>onRemoveTask()}></i> */}
                 <EditableCmp className="cell-title-editable" name="title" value={title} updateFunc={this.onUpdateTaskTitle} />
                 <Link to={`/board/${board._id}/${group.id}/${id}`}><i className={className}></i></Link>
             </div>

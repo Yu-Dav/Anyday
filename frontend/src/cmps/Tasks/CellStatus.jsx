@@ -53,17 +53,6 @@ export class CellStatus extends Component {
         console.log('you need to write a new one');
     }
 
-    // onClickDone = (ev) => {
-    //     ev.stopPropagation()
-    //     // ev.preventDefault;
-    //     ev.target.classList.toggle('animate')
-    //     // setTimeout(ev.target.classList.remove('animate'), 700);
-    //     this.setState({ ...this.state, isDone: true })
-    //     setTimeout(() => {
-    //         this.setState({ ...this.state, isDone: false })
-    //         ev.target.classList.remove('animate')
-    //     }, 700)
-    // }
 
 
     render() {
