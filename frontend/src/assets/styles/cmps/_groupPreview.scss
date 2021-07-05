@@ -98,10 +98,14 @@
     // .group-modal{
     //     z-index: 5;
     // }
+    
     .group-container {
         // .group-preview {
         //     // overflow-x: scroll;
         // }
+        .group-preview {
+            width: 850px;
+        }
         .group-handle {
             opacity: 0.5;
             position: unset;
