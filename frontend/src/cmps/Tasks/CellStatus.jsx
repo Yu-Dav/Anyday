@@ -53,17 +53,6 @@ export class CellStatus extends Component {
         console.log('you need to write a new one');
     }
 
-    // onClickDone = (ev) => {
-    //     ev.stopPropagation()
-    //     // ev.preventDefault;
-    //     ev.target.classList.toggle('animate')
-    //     // setTimeout(ev.target.classList.remove('animate'), 700);
-    //     this.setState({ ...this.state, isDone: true })
-    //     setTimeout(() => {
-    //         this.setState({ ...this.state, isDone: false })
-    //         ev.target.classList.remove('animate')
-    //     }, 700)
-    // }
 
 
     render() {
@@ -76,13 +65,8 @@ export class CellStatus extends Component {
 
 
                 <div className="cell label" style={{ backgroundColor: status.color }} onClick={this.onOpenSelector}>
-<<<<<<< HEAD
-
-                    <div className="status-priority-dog-ear">
-=======
                    
                    <div className={`status-priority-dog-ear ${classNameDot}`}>
->>>>>>> 5f2af45e35f0bb365af4412612167ab272e4ac6d
                         {status.title}
                     </div>
 

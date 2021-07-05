@@ -4,12 +4,13 @@ import { DynamicCell } from './DynamicCell'
 import { socketService } from '../../services/socketService'
 import { utilService } from '../../services/utilService'
 import { userService } from '../../services/userService'
-import { Snack } from './SnackBar'
+import { useState } from 'react';
 
 
 
-export function TaskPreview({ task, group, board, updateBoard, index, setMap }) {
+export const TaskPreview= ({ task, group, board, updateBoard, index, setMap }) =>{
 
+    const [isHover, setHover]= useState(false)
     const onRemoveTask = async () => {
         const newBoard = { ...board }
         const groupId = group.id
@@ -36,6 +37,7 @@ export function TaskPreview({ task, group, board, updateBoard, index, setMap }) 
         await updateBoard(newBoard)
         await socketService.emit('board updated', newBoard._id);
     }
+
     return (
         <React.Fragment>
             <Draggable draggableId={task.id} index={index} type="task">
@@ -44,11 +46,8 @@ export function TaskPreview({ task, group, board, updateBoard, index, setMap }) 
                         {...provided.draggableProps}
                         {...provided.dragHandleProps}
                         ref={provided.innerRef}>
-                        <div>
-                            <Snack onRemoveTask={onRemoveTask}/>                            
-                        </div>
                         <div className="group-color" style={{ backgroundColor: group.style.bgColor }}></div>
-                        {board.cellTypes.map((cellType, index) => <DynamicCell key={index} type={cellType} task={task} group={group} board={board} updateBoard={updateBoard} setMap={setMap}/>)}
+                        {board.cellTypes.map((cellType, index) => <DynamicCell onRemoveTask={onRemoveTask} key={index} type={cellType} task={task} group={group} board={board} updateBoard={updateBoard} setMap={setMap}/>)}
                                                            {/* adding key to the map above causes an error... why? */}                          
                     </div>
                 )}

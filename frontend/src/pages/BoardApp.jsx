@@ -26,7 +26,6 @@ class _BoardApp extends Component {
     }
 
     async componentDidMount() {
-        // console.log('CMP mounted')
         socketService.setup()
         this.props.loadUsers()
         const boardId = this.props.match.params.boardId
@@ -261,8 +260,6 @@ class _BoardApp extends Component {
         const { boardId } = this.props.match.params
         const { currBoard, users } = this.props
         const { currUser, filteredGroups, mapPos, isMap } = this.state
-        // console.log('params', this.props.match.params)
-        // console.log('filtered groups', filteredGroups.length ? 'true' : 'false');
         if (!currBoard) return <div>loading</div>
         return (
             <div className="board-app-container flex" ref="board-app-container">
@@ -275,10 +272,6 @@ class _BoardApp extends Component {
                     <BoardHeader users={users} board={currBoard} updateBoard={this.props.updateBoard} />
                     <BoardCtrlPanel board={currBoard} onChangeView={this.onChangeView} addNewGroup={this.addNewGroup}
                       filterBy={this.props.filterBy} filterBoard={this.filterBoard} loadBoard={this.props.loadBoard} isMap={isMap} />
-                    {/* <button className="btn" onClick={() => window.location.hash = `/board/${currBoard._id}/map`}>Map</button> */}
-                    {/* <LocationSearchInput /> */}
-                    {/* <button className="btn-location" onClick={() => this.setState({ ...this.state, isMap: !this.state.isMap })}>Map</button> */}
-
                     {this.state.isMap && <GoogleMap className="container" pos={mapPos} />}
                     {!this.state.isMap &&
                         <DragDropContext onDragEnd={this.onDragEnd}>
@@ -334,30 +327,3 @@ const mapDispatchToProps = {
 
 export const BoardApp = connect(mapStateToProps, mapDispatchToProps)(_BoardApp)
 
-
-
-// Old DnD 
-// onDragEnd = async (result) => {
-//     const { destination, source, draggableId, type } = result;
-//     if (!destination) return;
-//     if (
-//         destination.droppableId === source.droppableId &&
-//         destination.index === source.index
-//     ) return
-//     if (type === 'task') {
-//         const sourceGroup = this.props.currBoard.groups.find(group => group.id === source.droppableId);
-//         const destinationGroup = this.props.currBoard.groups.find(group => group.id === destination.droppableId);
-//         const task = sourceGroup.tasks.find(task => task.id === draggableId)
-//         sourceGroup.tasks.splice(source.index, 1);
-//         destinationGroup.tasks.splice(destination.index, 0, task);
-//     }
-//     if (type === 'group') {
-//         const { currBoard } = this.props;
-//         const sourceGroup = this.props.currBoard.groups.find(group => group.id === draggableId);
-//         currBoard.groups.splice(source.index, 1);
-//         currBoard.groups.splice(destination.index, 0, sourceGroup)
-//     }
-//     const copyGroup = { ...this.props.currBoard };
-//     await this.props.updateBoard(copyGroup);
-//     socketService.emit('board updated', copyGroup._id);
-// }

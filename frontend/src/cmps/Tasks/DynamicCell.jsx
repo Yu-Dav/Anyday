@@ -8,10 +8,10 @@ import { CellCreationLog } from './CellCreationLog'
 import { CellDate } from './CellDate'
 import { CellLocation } from './CellLocation'
 
-export function DynamicCell({ type, task, group, board, updateBoard, setMap }) {
+export function DynamicCell({ type, task, group, board, updateBoard, setMap, onRemoveTask }) {
     switch (type) {
         case 'title':
-            return <CellTitle task={task} group={group} board={board} updateBoard={updateBoard} />
+            return <CellTitle task={task} group={group} board={board} updateBoard={updateBoard} onRemoveTask={onRemoveTask}  />
         case 'member':
             return <CellMember task={task} group={group} board={board} updateBoard={updateBoard} />
         case 'tag':
