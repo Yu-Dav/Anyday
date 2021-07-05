@@ -1,5 +1,4 @@
 .app-header {
-      // background-color: blanchedalmond;
       padding: 10px;
       .nav-container {
           justify-content: flex-end;
@@ -38,4 +37,11 @@
         //       font-size: rem(18px);
         //   }
       }
+}
+
+.login-signup-container {
+    .nav-container {
+        justify-content: flex-end;
+       
+    }
 }
