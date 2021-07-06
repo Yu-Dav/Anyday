@@ -26,8 +26,7 @@ class _BoardApp extends Component {
     }
 
     async componentDidMount() {
-        // console.log('CMP mounted')
-        await socketService.setup()
+        socketService.setup()
         this.props.loadUsers()
         const boardId = this.props.match.params.boardId
         console.log(`file: BoardApp.jsx || line 38 || boardId`, boardId)
@@ -37,7 +36,6 @@ class _BoardApp extends Component {
             const board = await this.props.loadBoard(boardId)
             socketService.emit('join new board', board._id)
             socketService.on('board was updated', async (updatedBoardId) => {
-                // console.log('boardApp heard \'board was updated\' for =\n', updatedBoardId, updatedBoardId)
                 await this.props.loadBoard(updatedBoardId)
             })
             this.setState({ ...this.state, currUser: user })
@@ -52,9 +50,7 @@ class _BoardApp extends Component {
         const currId = this.props.match.params.boardId
         if (prevId !== currId) {
             const board = await this.props.loadBoard(currId)
-            // console.log('boardApp CMP did update, emitting \'joing new board \'',board._id)
             socketService.emit('join new board', board._id)
-            // this.setState({ ...this.state, filteredBoard: board })
         }
     }
 
@@ -75,7 +71,6 @@ class _BoardApp extends Component {
             tasks: [],
             byMember: userService.getLoggedinUser(),
             createdAt: Date.now()
-            // add all the rest needed in a group 
         }
         const newActivity = {
             id: utilService.makeId(),
@@ -92,7 +87,6 @@ class _BoardApp extends Component {
         newBoard.activities.unshift(newActivity)
         await this.props.updateBoard(newBoard)
         socketService.emit('board updated', newBoard._id)
-        // this.setState({ ...this.state, filteredBoard: newBoard })
     }
 
     getColor() {
@@ -142,11 +136,9 @@ class _BoardApp extends Component {
                 !filterBy.txt?.length) {
                 console.log('no filter');
                 await this.setState({ ...this.state, filteredGroups: this.props.currBoard.groups }, () => console.log('filtered groups', this.state.filteredGroups))
-                //    return this.props.currBoard
             }
 
             if (filterBy.status?.length) {
-                // console.log('filter by status');
                 filteredBoard.groups = filteredBoard.groups.filter(group => {
                     const filteredTasks = group.tasks.filter(task => {
                         const status = filterBy.status.find(label => {
@@ -163,7 +155,6 @@ class _BoardApp extends Component {
                 })
             }
             if (filterBy.priority?.length) {
-                // console.log('filter by priority');
                 filteredBoard.groups = filteredBoard.groups.filter(group => {
                     const filteredTasks = group.tasks.filter(task => {
                         const priority = filterBy.priority.find(label => {
