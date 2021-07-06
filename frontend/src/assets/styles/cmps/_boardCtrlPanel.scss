@@ -1,10 +1,11 @@
 .board-ops {
-    color: #323338;
+    color : #323338;
     margin: 2px 0 15px 0;
+
     .left-ctrl {
         position: sticky;
-        left: 130px;
-        z-index: 5;
+        left    : 130px;
+        z-index : 5;
     }
 
     button {
@@ -12,7 +13,7 @@
         color: inherit;
     }
 
-    & > *:not(:last-child) {
+    &>*:not(:last-child) {
         margin-inline-end: 10px;
     }
 
@@ -110,23 +111,24 @@
 @media (max-width: $mobile-breakpoint) {
     .board-ops {
         margin-top: 140px;
-        // width     : 380px;
-        width: 100%;
-        display: block;
-        position: sticky;
-        left: 0px;
+        width     : 100%;
+        display   : block;
+        position  : sticky;
+        left      : 0px;
+
         .btn-add-group {
             width: 140px;
         }
+
         .left-ctrl {
             position: unset;
-            // left: 50px;
-            gap: 10px;
+            gap     : 10px;
         }
 
         .right-ctrl {
             margin-top: 5px;
-            position: unset;
+            position  : unset;
+
         }
     }
 }

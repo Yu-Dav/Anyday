@@ -4,13 +4,11 @@ import { DynamicCell } from './DynamicCell'
 import { socketService } from '../../services/socketService'
 import { utilService } from '../../services/utilService'
 import { userService } from '../../services/userService'
-import { useState } from 'react';
 
 
 
 export const TaskPreview= ({ task, group, board, updateBoard, index, setMap }) =>{
 
-    const [isHover, setHover]= useState(false)
     const onRemoveTask = async () => {
         const newBoard = { ...board }
         const groupId = group.id

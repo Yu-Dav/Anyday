@@ -4,7 +4,6 @@
     text-align      : center;
     color           : #323338;
     background-color: #fffffff0;
-    // margin-left: 7px;
     font-family     : roboto-light, helvetica, sans-serif;
     transition      : 0.3s;
 
@@ -12,13 +11,11 @@
         margin: 0 0 0 1px;
     }
 
-    // background-color: white;
     &>*:not(:last-child) {
         margin: 0 0 0 1px;
     }
 
     .cell:not(.title) {
-        // margin-left: 4px;
         display        : flex;
         align-items    : center;
         justify-content: center;
@@ -75,12 +72,9 @@
     .title {
         position        : sticky;
         left            : 153px;
-        // left: 0;
         z-index         : 4;
         font-size       : rem(18px);
         flex            : 1;
-        // min-width: 388px;
-        // max-width: 950px;
         background-color: #ffffff;
     }
 
@@ -132,7 +126,7 @@
             min-width : 180px;
             flex-basis: 180px;
             font-size : 15px;
-            left      : 15px;
+            position: unset;
         }
     }
 

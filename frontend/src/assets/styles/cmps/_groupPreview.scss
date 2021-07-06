@@ -2,7 +2,6 @@
     margin-top: 50px;
     display: flex;
     justify-content: center;
-    // flex-direction: column;
     align-items: center;
     h1 {
         font-family: roboto-light, helvetica, sans-sarif;
@@ -20,7 +19,6 @@
     background-color: #ffffffe6;
     min-width: 380px;
     position: relative;
-    // overflow-x: scroll;
     .group-modal {
         animation: fade-in 0.5s ease-in-out both;
         z-index: 5;
@@ -51,8 +49,6 @@
         .group-handle {
             opacity: 0.5;
             position: relative;
-            // position: sticky;
-            // left: 70px;
         }
     }
     .group-modal-choose {
@@ -63,7 +59,7 @@
         position: sticky;
         left: 130px;
         z-index: 5;
-        background-color: #ffffff7a;
+        background-color: #ffffff;
         margin-right: 5px;
     }
 
@@ -95,17 +91,10 @@
 // }
 
 @media (max-width: $mobile-breakpoint) {
-    // .group-modal{
-    //     z-index: 5;
-    // }
-    
     .group-container {
         // .group-preview {
-        //     // overflow-x: scroll;
+        //     width: 850px;
         // }
-        .group-preview {
-            width: 850px;
-        }
         .group-handle {
             opacity: 0.5;
             position: unset;
@@ -113,7 +102,8 @@
         .group-modal-choose {
             margin-left: 10px;
             margin-right:10px;
-            left:0px;
+            position: unset;
+            // left:0px;
             z-index: 5;
             svg {
                 width: 16px;

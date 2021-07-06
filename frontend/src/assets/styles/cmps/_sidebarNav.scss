@@ -1,5 +1,4 @@
 .sidebar-nav {
-    // min-width: 35px;
     position: sticky;
     background-color: #fff;
     z-index: 7;
@@ -13,15 +12,10 @@
     font-size: 0.75em;
     &.is-expanded {
         min-width: 235px;
-        max-width: 235px;
-        // position: sticky;
         left: 65px;
-        // transform: translateX(200px);
         .arrow {
             position: absolute;
-            // top: 20px;
             left: 220px;
-            // transform: translateX(108px);
             transition: 0.3s ease;
         }
         h1 {
@@ -87,7 +81,6 @@
                 content: "\f057";
             }
             button{
-                // display: flex;
                 border:none;
                 background-color: transparent;
             }
@@ -139,23 +132,18 @@
 
 @media (max-width: $mobile-breakpoint) {
     .sidebar-nav {
-        // min-height: 100vh;
-        // position: fixed;
-        // top: 0;
         left: 235;
         min-width: 1px;
         padding: 25px 5px 10px 10px;
         z-index: 7;
         border-right: none;
         background-color: transparent;
-        // transition: 0.3s ease;
         transition: none;
         .fas.arrow {
             display: none;
         }
         .hamburger {
             display: inline;
-            // position: sticky;
             position: fixed;
             z-index: 10;
             top: 18px;

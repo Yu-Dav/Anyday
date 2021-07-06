@@ -20,7 +20,7 @@ class _CellLocation extends Component {
     }
     this.renderAutoComplete();
   }
-  // map = React.createRef()
+
 
   componentDidUpdate(prevProps) {
     // console.log('did update');
@@ -39,7 +39,6 @@ class _CellLocation extends Component {
       pos: this.state.position,
       name: this.state.placeName
     }
-    // console.log('new location', newLocation);
     this.props.task.location = newLocation
     const newBoard = { ...this.props.board }
     const newActivity = {
@@ -90,23 +89,14 @@ class _CellLocation extends Component {
   renderAutoComplete() {
     const { google } = this.props;
     const map = this.map
-    console.log(google, map);
-    console.log(this.props);
     if (!google) return;
 
     const autocomplete = new google.maps.places.Autocomplete(this.autocomplete);
-    // autocomplete.bindTo('bounds', map);
-
     autocomplete.addListener('place_changed', () => {
       const place = autocomplete.getPlace();
 
       if (!place.geometry) return;
 
-      // if (place.geometry.viewport) map.fitBounds(place.geometry.viewport);
-      // else {
-      //     map.setCenter(place.geometry.location);
-      //     map.setZoom(17);
-      // }
       console.log(place.geometry.location.lat(), place.geometry.location.lng(), place.formatted_address);
       const pos = { lat: place.geometry.location.lat(), lng: place.geometry.location.lng() }
       const placeName = place.formatted_address
@@ -144,7 +134,6 @@ class _CellLocation extends Component {
 }
 
 export const CellLocation = GoogleApiWrapper((props) => ({
-  // apiKey: ('AIzaSyALrFJBnFDGcCiP2nGHHWujEFLSpiABtAw')
   apiKey: ('AIzaSyA1TpSPtsJIgXzeaeenK7R2XPSz5MzrSkk'),
   task: props.task,
   group: props.group,

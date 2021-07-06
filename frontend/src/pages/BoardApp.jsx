@@ -38,7 +38,7 @@ class _BoardApp extends Component {
             socketService.on('board was updated', async (updatedBoardId) => {
                 await this.props.loadBoard(updatedBoardId)
             })
-            this.setState({ ...this.state, currUser: user })
+            this.setState({ ...this.state, currUser: user, isMap:false })
         }
     }
     componentWillUnmount() {
@@ -87,6 +87,7 @@ class _BoardApp extends Component {
         newBoard.activities.unshift(newActivity)
         await this.props.updateBoard(newBoard)
         socketService.emit('board updated', newBoard._id)
+     
     }
 
     getColor() {
@@ -135,7 +136,7 @@ class _BoardApp extends Component {
                 !filterBy.tag?.length && !filterBy.membersId?.length &&
                 !filterBy.txt?.length) {
                 console.log('no filter');
-                await this.setState({ ...this.state, filteredGroups: this.props.currBoard.groups }, () => console.log('filtered groups', this.state.filteredGroups))
+                return this.setState({ ...this.state, filteredGroups: this.props.currBoard.groups }, () => console.log('filtered groups', this.state.filteredGroups))
             }
 
             if (filterBy.status?.length) {
@@ -217,10 +218,7 @@ class _BoardApp extends Component {
             }
 
             await this.setState({ ...this.state, filteredGroups: filteredBoard.groups }, () => console.log('filtered groups', this.state.filteredGroups.length))
-            // return filteredBoard.groups
         }
-
-        // console.log('filter');
 
     }
 
@@ -239,14 +237,6 @@ class _BoardApp extends Component {
         this.setState({ isMap: true })
     }
 
-    // get groupsToDisplay() {
-    //     if (this.state.filteredGroups.length) {
-    //         console.log('filtered groups');
-    //         return this.state.filteredGroups
-    //     }
-    //     console.log('curr board', this.props.currBoard.groups);
-    //     return this.props.currBoard.groups
-    // }
 
     render() {
         const { boardId } = this.props.match.params

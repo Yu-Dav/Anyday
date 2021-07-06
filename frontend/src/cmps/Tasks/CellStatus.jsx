@@ -58,12 +58,10 @@ export class CellStatus extends Component {
     render() {
         const { status } = this.props.task
         const { statusLabels } = this.props.board
-        const { isExpanded, isDone } = this.state
+        const { isExpanded} = this.state
         const classNameDot = status.title === '.' ? 'no-title': ''
         return (
             <ClickAwayListener onClickAway={this.handleClickAway}>
-
-
                 <div className="cell label" style={{ backgroundColor: status.color }} onClick={this.onOpenSelector}>
                    
                    <div className={`status-priority-dog-ear ${classNameDot}`}>

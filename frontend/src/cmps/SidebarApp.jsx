@@ -21,7 +21,7 @@ class _SidebarApp extends Component {
     render() {
         const user = userService.getLoggedinUser()
         let fullname = user?.fullname || 'Guest'
-        // if (!fullname) fullname = 'Guest'
+
         return (
             <section className="sidebar-app">
                 <nav className="flex justify-center column align-center space-between">

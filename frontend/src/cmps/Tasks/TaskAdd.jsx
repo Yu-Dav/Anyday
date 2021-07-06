@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { utilService } from '../../services/utilService';
 import { socketService } from '../../services/socketService';
-// import { EditableCmp } from '../EditableCmp'
 import { userService } from '../../services/userService'
 
 export class TaskAdd extends Component {
@@ -84,8 +83,6 @@ export class TaskAdd extends Component {
         return (
             <div className="task-add flex">
                 <div className="group-color" style={{ backgroundColor: this.props.group.style.bgColor }}></div>
-                {/* <input autoComplete="off" className="full" name="txt" type="text" placeholder="+ New Task"
-                    onKeyUp={this.handleUpdate} value={txt} onChange={this.handleChange} /> */}
                 <input autoComplete="off" name="txt" type="text" placeholder="+ New Task"
                     onBlur={this.handleUpdate} onKeyUp={this.handleUpdate} value={txt} onChange={this.handleChange} />
                 <button className="add" onClick={this.handleUpdate}>Add</button>

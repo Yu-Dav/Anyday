@@ -17,7 +17,6 @@ export class CellCreationLog extends Component {
                 <div className="flex justify-center align-center">
                     <Avatar key={byMember._id} alt={byMember.username} 
                     src={byMember.imgUrl} style={{ width:'25px', height:'25px', display: 'inline-block', marginRight:'10px' }}/>  {date}</div>
-                {/* change to named date+ username to avatar */}
             </div>
         )
     }

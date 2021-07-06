@@ -49,7 +49,6 @@ class _Login extends Component {
         }
     }
     render() {
-        // const classes = useStyles();
         return (
             <div className="login-signup-container">
                 <Header />
@@ -61,7 +60,6 @@ class _Login extends Component {
                         <Typography component="h1" variant="h5">
                             Login
                         </Typography>
-                        {/* <form className={classes.form} noValidate> */}
                         <form noValidate onSubmit={this.doLogin}>
                             <TextField
                                 variant="outlined"
@@ -87,20 +85,14 @@ class _Login extends Component {
                                 autoComplete="current-password"
                                 onChange={this.loginHandleChange}
                             />
-                            {/* <FormControlLabel
-                                control={<Checkbox value="remember" color="primary" />}
-                                label="Remember me"
-                            /> */}
                             <Button
                                 type="submit"
                                 fullWidth
                                 variant="contained"
                                 color="primary"
-                                className=""
-                            // className={classes.submit}
-                            >
+                                className="">
                                 Sign In
-                </Button>
+                            </Button>
                             <Grid container justify="flex-end">
                                 <Grid item>
                                     <Link href="#/signup" variant="body2">
@@ -112,7 +104,7 @@ class _Login extends Component {
                     </div>
 
                 </Container>
-                </div>
+            </div>
         );
     }
 }
