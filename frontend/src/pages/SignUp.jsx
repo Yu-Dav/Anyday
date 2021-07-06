@@ -61,10 +61,13 @@ class _SignUp extends Component {
         <div className="login-signup" >
           <Container component="main" maxWidth="xs">
             <CssBaseline />
-            <img src={logo} alt="Logo" />
-            <Typography component="h1" variant="h5">
+            {/* <Container> */}
+
+            <img src={logo} alt="Logo" style={{ display: "inherit"}} />
+            <Typography component="h1" variant="h5" align="center">
               Sign up
-        </Typography>
+            </Typography>
+            {/* </Container> */}
             <form noValidate onSubmit={this.onSignup}>
               <Grid container spacing={2}>
                 <Grid item xs={12}>
@@ -117,7 +120,7 @@ class _SignUp extends Component {
                 <Grid item>
                   <Link href="#/login" variant="body2">
                     Already have an account? Sign in
-              </Link>
+                  </Link>
                 </Grid>
               </Grid>
             </form>

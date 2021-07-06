@@ -58,7 +58,7 @@ export class CellStatus extends Component {
     render() {
         const { status } = this.props.task
         const { statusLabels } = this.props.board
-        const { isExpanded, isDone } = this.state
+        const { isExpanded} = this.state
         const classNameDot = status.title === '.' ? 'no-title': ''
         return (
             <ClickAwayListener onClickAway={this.handleClickAway}>

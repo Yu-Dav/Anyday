@@ -26,7 +26,8 @@ class _BoardApp extends Component {
     }
 
     async componentDidMount() {
-        socketService.setup()
+        // console.log('CMP mounted')
+        await socketService.setup()
         this.props.loadUsers()
         const boardId = this.props.match.params.boardId
         console.log(`file: BoardApp.jsx || line 38 || boardId`, boardId)

@@ -12,7 +12,6 @@ import { connect } from 'react-redux'
 import { loadUsers, login, removeUser, signup, logout } from '../store/actions/userActions'
 import Typography from '@material-ui/core/Typography';
 
-
 class _Login extends Component {
     state = {
         msg: '',
@@ -55,7 +54,8 @@ class _Login extends Component {
                 <Header />
                 <Container component="main" maxWidth="xs">
                     <CssBaseline />
-                    <div className="login-signup" >
+                    {/* <div className={classes.paper}> */}
+                    <div className="login-signup flex column" >
                         <img src={logo} alt="Logo" />
                         <Typography component="h1" variant="h5">
                             Login
