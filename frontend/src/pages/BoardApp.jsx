@@ -38,7 +38,7 @@ class _BoardApp extends Component {
             socketService.on('board was updated', async (updatedBoardId) => {
                 await this.props.loadBoard(updatedBoardId)
             })
-            this.setState({ ...this.state, currUser: user, isMap:false })
+            this.setState({ ...this.state, currUser: user, isMap: false })
         }
     }
     componentWillUnmount() {
@@ -49,8 +49,17 @@ class _BoardApp extends Component {
         const prevId = prevProps.match.params.boardId
         const currId = this.props.match.params.boardId
         if (prevId !== currId) {
-            const board = await this.props.loadBoard(currId)
-            socketService.emit('join new board', board._id)
+            this.setState({ ...this.state, filteredGroups: null }, async () => {
+                this.props.onSetFilter({
+                    txt: '',
+                    membersId: [],
+                    priority: [],
+                    status: [],
+                    tag: []
+                })
+                const board = await this.props.loadBoard(currId)
+                socketService.emit('join new board', board._id)
+            })
         }
     }
 
@@ -87,7 +96,7 @@ class _BoardApp extends Component {
         newBoard.activities.unshift(newActivity)
         await this.props.updateBoard(newBoard)
         socketService.emit('board updated', newBoard._id)
-     
+
     }
 
     getColor() {
@@ -136,7 +145,8 @@ class _BoardApp extends Component {
                 !filterBy.tag?.length && !filterBy.membersId?.length &&
                 !filterBy.txt?.length) {
                 console.log('no filter');
-                return this.setState({ ...this.state, filteredGroups: this.props.currBoard.groups }, () => console.log('filtered groups', this.state.filteredGroups))
+                // return this.setState({ ...this.state, filteredGroups: this.props.currBoard.groups }, () => console.log('filtered groups', this.state.filteredGroups))
+                return this.setState({ ...this.state, filteredGroups: null }, () => console.log('filtered groups', this.state.filteredGroups))
             }
 
             if (filterBy.status?.length) {
@@ -253,7 +263,7 @@ class _BoardApp extends Component {
                 {boardId && <div className="container board-container">
                     <BoardHeader users={users} board={currBoard} updateBoard={this.props.updateBoard} />
                     <BoardCtrlPanel board={currBoard} onChangeView={this.onChangeView} addNewGroup={this.addNewGroup}
-                      filterBy={this.props.filterBy} filterBoard={this.filterBoard} loadBoard={this.props.loadBoard} isMap={isMap} />
+                        filterBy={this.props.filterBy} filterBoard={this.filterBoard} loadBoard={this.props.loadBoard} isMap={isMap} />
                     {this.state.isMap && <GoogleMap className="container" pos={mapPos} />}
                     {!this.state.isMap &&
                         <DragDropContext onDragEnd={this.onDragEnd}>
