@@ -125,10 +125,6 @@ export function CellMember({ task, group, board, updateBoard }) {
                {taskMembers && <AvatarGroup max={4}>
                 {taskMembers.map(member =>  <Avatar key={member._id} alt={member.username} src={member.imgUrl} 
                 style={{ width:'30px', height:'30px' }}/>
-                // return <span key={member._id}>{member.username.charAt(0)} </span>
-                // return <span className="cell-member-avatar flex align-center" key={member._id}>
-                //     <img src={member.imgUrl} alt="Member Avatar" />
-                // </span>
             )}
             </AvatarGroup>}
             </div>

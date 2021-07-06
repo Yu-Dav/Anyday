@@ -86,60 +86,6 @@ module.exports = {
     update,
 };
 
-// await db.collection('inventory').insertMany([
-//     {
-//       item: 'journal',
-//       qty: 25,
-//       tags: ['blank', 'red'],
-//       dim_cm: [14, 21]
-//     },
-// const cursor = db.collection('inventory').find(
-//  the criteria:::
-//{
-//     tags: ['red', 'blank']
-//   });
-
-// const cursor = db.collection('inventory').find({
-//     instock: { warehouse: 'A', qty: 5 }
-//   });
-
-function _buildCriteria(filterBy) {
-    console.log(`file: board.service.js || line 99 || filterBy`, filterBy);
-    
-    const criteria = { groups:{
-        tasks:{
-            tags:[{title:''}],
-            priority:{title:''},
-            status:{title:''}
-        }
-    }};
-    if (filterBy.txt) {
-        const txtCriteria = { $regex: filterBy.txt, $options: 'i' };
-        criteria.$or = [
-            {
-                username: txtCriteria,
-            },
-            {
-                fullname: txtCriteria,
-            },
-        ];
-    }
-    if (filterBy.priority) {
-        // criteria.priority= filterBy.priority;
-        criteria.groups.tasks.priority = filterBy.priority;
-    }
-    if (filterBy.status) {
-        criteria.status = filterBy.status;
-    }
-    if (filterBy.tag) {
-        criteria.tag = filterBy.tag;
-    }
-    // criteria.isFavorite = true;
-    // const subtitle = { $regex: 'mo', $options: 'i' };
-    // console.log(`file: board.service.js || line 130 || criteria`, criteria.subtitle);
-    console.log('crit 143((((( :::::::', criteria);
-    return criteria;
-}
 
 function _createNewBoard(currUser) {
     return {

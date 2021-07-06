@@ -14,7 +14,7 @@ export function BoardFilterItem({ field, setFilter, type, filterBy }) {
         title = field.username
         item = field._id
     }
-    // if (!title) title = 'Unassigned'
+  
     const className = filterBy?.includes(item) ? "filter-group-item selected" : "filter-group-item"
     return (
         <div onClick={() => setFilter(type, item)} className={className}>

@@ -16,10 +16,6 @@ export class BoardCtrlPanel extends Component {
         view: 'board-view'
     }
 
-    // componentDidUpdate(){
-    //     console.log(this.props);
-    //     this.setState({...this.state, view: this.props.isMap? 'map-view': 'board-view'})
-    // }
     onSearchClicked = () => {
         this.setState({ ...this.state, isSearching: !this.state.isSearching })
     }
@@ -85,5 +81,3 @@ export class BoardCtrlPanel extends Component {
     }
 }
 
-
-// <div className={content === 'activity' ? 'active': ''} onClick={() => { this.setState({ ...this.state, content: 'activity' }) }}>Activity Log</div>

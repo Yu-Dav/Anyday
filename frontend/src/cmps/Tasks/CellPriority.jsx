@@ -55,9 +55,6 @@ export class CellPriority extends Component {
                         {priority.title}
                     </div>
 
-
-
-
                     {isExpanded && <div>
                         <div className=" fade-in modal-container relative">
                             <div className=" triangle-with-shadow relative"></div>

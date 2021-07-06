@@ -19,7 +19,6 @@
         z-index: 4;
 
         .cell-title-editable {
-            // min-width: 200px;
             text-overflow: ellipsis;
             overflow: hidden;
             white-space: nowrap;
@@ -70,8 +69,6 @@
 @media (max-width: $normal-breakpoint) {
     .task-row {
         .cell.title {
-            // flex-basis: 380px;
-            // max-width: 380px;
             color: #323338;
         }
 
@@ -84,15 +81,11 @@
 
 @media (max-width: $mobile-breakpoint) {
     .task-row {
-        // .cell.title {
-        //     // max-width: 200px;
-        //     // flex-basis: 200px;
-        // }
+
         .cell.title {
             background-color: #fcfdfa;
             min-width: 180px;
-            position: sticky;
-            left: 2px;
+            position: unset;
             z-index: 3;
         }
         
