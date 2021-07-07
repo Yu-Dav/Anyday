@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import { ClickAwayListener } from '@material-ui/core'
 import { Colors } from '../Colors'
 import { socketService } from '../../services/socketService'
@@ -6,16 +6,13 @@ import { utilService } from '../../services/utilService'
 import { userService } from '../../services/userService'
 import { ReactComponent as DropDownArrow } from '../../assets/imgs/svg/dropDownArrow.svg'
 
-export class GroupMenu extends Component {
+export function GroupMenu({ group, board, updateBoard }) {
+    const [isExpanded, setOpen] = React.useState(false)
+    const [isColor, setColor] = React.useState(false)
 
-    state = {
-        isExpanded: false,
-        isColor: false
-    }
-
-    onDeleteGroup = async (ev) => {
-        const newBoard = this.props.board
-        const groupId = this.props.group.id
+    const onDeleteGroup = async (ev) => {
+        const newBoard = board
+        const groupId = group.id
         const groupIdx = newBoard.groups.findIndex(group => group.id === groupId)
         const newActivity = {
             id: utilService.makeId(),
@@ -25,18 +22,18 @@ export class GroupMenu extends Component {
             task: null,
             group: {
                 id: groupId,
-                title: this.props.group.title
+                title: group.title
             }
         }
         newBoard.groups.splice(groupIdx, 1)
         newBoard.activities.unshift(newActivity)
-        await this.props.updateBoard(newBoard)
+        await updateBoard(newBoard)
         socketService.emit('board updated', newBoard._id);
 
     }
-    onChangeGroupColor = async (ev) => {
-        const newBoard = this.props.board
-        const groupId = this.props.group.id
+    const onChangeGroupColor = async (ev) => {
+        const newBoard = board
+        const groupId = group.id
         const groupIdx = newBoard.groups.findIndex(group => group.id === groupId)
         const { color } = ev.target.dataset
         const newActivity = {
@@ -47,47 +44,49 @@ export class GroupMenu extends Component {
             task: null,
             group: {
                 id: groupId,
-                title: this.props.group.title
+                title: group.title
             }
         }
         newBoard.groups[groupIdx].style.bgColor = color
-        await this.props.updateBoard(newBoard)
+        await updateBoard(newBoard)
         await socketService.emit('board updated', newBoard._id);
-        this.setState({ ...this.state, isColor: false, isExpanded: false })
+        setOpen(false)
+        setColor(false)
     }
-    onSelectChange = (ev) => {
+    const onSelectChange = (ev) => {
         ev.stopPropagation()
-        this.setState({ ...this.state, isColor: !this.state.isColor, isExpanded: false })
+        setOpen(false)
+        setColor(!isColor)
     }
-    onOpenSelector = () => {
-        this.setState({ ...this.state, isExpanded: !this.state.isExpanded })
+    const onOpenSelector = () => {
+        setOpen(!isExpanded)
     }
-    handleClickAway = () => {
-        this.setState({ ...this.state, isExpanded: false, isColor: false })
+    const handleClickAway = () => {
+        setOpen(false)
+        setColor(false)
     }
-    render() {
-        const { isExpanded, isColor } = this.state
-        const { bgColor } = this.props.group.style
-        return (
-            <ClickAwayListener onClickAway={this.handleClickAway}>
-                <section className="group-modal-choose">
-                    <div onClick={this.onOpenSelector}>
-                        <DropDownArrow style={{ fill: bgColor }} />
 
-                    </div>
-                    {isExpanded && <div className="fade-in group-modal absolute">
-                        <div onClick={this.onDeleteGroup}>Delete group</div>
-                        <div onClick={this.onSelectChange}>Choose color</div>
-                    </div>
-                    }
-                    {isColor && <Colors
-                        onChangeGroupColor={this.onChangeGroupColor} board={this.props.board}>
-                    </Colors>
-                    }
-                </section>
-            </ClickAwayListener>
-        )
-    }
+    const { bgColor } = group.style
+    return (
+        <ClickAwayListener onClickAway={handleClickAway}>
+            <section className="group-modal-choose">
+                <div onClick={onOpenSelector}>
+                    <DropDownArrow style={{ fill: bgColor }} />
+
+                </div>
+                {isExpanded && <div className="fade-in group-modal absolute">
+                    <div onClick={onDeleteGroup}>Delete group</div>
+                    <div onClick={onSelectChange}>Choose color</div>
+                </div>
+                }
+                {isColor && <Colors
+                    onChangeGroupColor={onChangeGroupColor} board={board}>
+                </Colors>
+                }
+            </section>
+        </ClickAwayListener>
+    )
+
 }
 
 

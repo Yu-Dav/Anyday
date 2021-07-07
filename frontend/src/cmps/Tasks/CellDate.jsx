@@ -22,7 +22,7 @@ export class CellDate extends Component {
             ...this.state, isDateSet: (!this.props.task.timeline[0] && !this.props.task.timeline[1]) ? false : true,
         })
     }
-    
+
     setDateRange = (update) => {
         if (!update[1]) return this.setState({ startDate: update[0], endDate: null, isSettingDate: true })
         return this.setState({ ...this.state, endDate: update[1] },
@@ -62,7 +62,7 @@ export class CellDate extends Component {
     onSetDates = () => {
         this.setState({ ...this.state, isSettingDate: true })
     }
-    
+
     getNumOfDays = () => {
         const { startDate, endDate } = this.state
         if (!startDate || !endDate) return
@@ -96,6 +96,7 @@ export class CellDate extends Component {
                     <span className="set-dates" onClick={this.onSetDates}>Set Dates</span>}
 
                 {!isDateSet && isSettingDate && <DatePicker
+                    popperPlacement="bottom"
                     className="date-picker-cmp"
                     locale="uk"
                     selectsRange={true}
@@ -118,6 +119,9 @@ export class CellDate extends Component {
                             <div className="grey-bck"></div>
                             <DatePicker
                                 className="date-picker-cmp"
+                                popperPlacement="bottom"
+                                popperClassName="date-picker-pos"
+                                // dateFormat="us"
                                 locale="uk"
                                 selectsRange={true}
                                 startDate={this.state.startDate}
