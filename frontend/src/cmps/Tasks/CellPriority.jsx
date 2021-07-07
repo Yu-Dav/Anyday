@@ -1,17 +1,16 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import { ClickAwayListener } from '@material-ui/core'
 import { socketService } from '../../services/socketService'
 import { utilService } from '../../services/utilService'
 import { userService } from '../../services/userService'
 
-export class CellPriority extends Component {
-    state = {
-        isExpanded: false
-    }
-    handleUpdate = async ({ target }) => {
+export function CellPriority ({board,task,group,updateBoard,})  {
+    const [open, setOpen] = React.useState(false)
+ 
+    const handleUpdate = async ({ target }) => {
         const selectedPriority = this.getPriorityById(target.dataset.label)
-        this.props.task.priority = selectedPriority
-        const newBoard = { ...this.props.board }
+        task.priority = selectedPriority
+        const newBoard = { ...board }
         // newBoard.priority = selectedPriority
         const newActivity = {
             id: utilService.makeId(),
@@ -19,48 +18,47 @@ export class CellPriority extends Component {
             createdAt: Date.now(),
             byMember: userService.getLoggedinUser(),
             task: {
-                id: this.props.task.id,
-                title: this.props.task.title,
+                id: task.id,
+                title: task.title,
                 changedItem: selectedPriority.title
             },
             group: {
-                id: this.props.group.id,
-                title: this.props.group.title
+                id: group.id,
+                title: group.title
             }
         }
         newBoard.activities.unshift(newActivity)
-        await this.props.updateBoard(newBoard)
+        await updateBoard(newBoard)
         await socketService.emit('board updated', newBoard._id);
     }
-    getPriorityById = (labelId) => {
-        const { priorityLabels } = this.props.board
+    const getPriorityById = (labelId) => {
+        const { priorityLabels } = board
         return priorityLabels.find(label => label.id === labelId)
     }
-    onOpenSelector = () => {
-        this.setState({ ...this.state, isExpanded: !this.state.isExpanded })
+    const onOpenSelector = () => {
+        setOpen(!open)
     }
-    handleClickAway = () => {
-        this.setState({ ...this.state, isExpanded: false })
+    const handleClickAway = () => {
+        setOpen(false)
     }
-    render() {
-        const { priority } = this.props.task
-        const { priorityLabels } = this.props.board
-        const { isExpanded } = this.state
+    
+        const { priority } = task
+        const { priorityLabels } = board
         const classNameDot = priority.title === '.' ? 'no-title': ''
         return (
-            <ClickAwayListener onClickAway={this.handleClickAway}>
-                <div className="cell label" style={{ backgroundColor: priority.color }} onClick={this.onOpenSelector}>
+            <ClickAwayListener onClickAway={handleClickAway}>
+                <div className="cell label" style={{ backgroundColor: priority.color }} onClick={onOpenSelector}>
 
                     <div className={`status-priority-dog-ear ${classNameDot}`}>
                         {priority.title}
                     </div>
 
-                    {isExpanded && <div>
+                    {open && <div>
                         <div className=" fade-in modal-container relative">
                             <div className=" triangle-with-shadow relative"></div>
                             <div className=" floating-label-select">
                                 {priorityLabels.map((label) => {
-                                    return <div className="label-option" onClick={this.handleUpdate} key={label.id}
+                                    return <div className="label-option" onClick={handleUpdate} key={label.id}
                                         data-label={label.id} style={{ backgroundColor: label.color }}>
                                         {label.title}
                                     </div>
@@ -73,6 +71,6 @@ export class CellPriority extends Component {
 
             </ClickAwayListener>
         )
-    }
+    
 }
 

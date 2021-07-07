@@ -6,7 +6,7 @@ export class TagAddNew extends Component {
         txt: ''
     }
 
-    //tags is an array with objects
+
     onAddTag = (ev) => {
         ev.preventDefault()
         // if (!value) return

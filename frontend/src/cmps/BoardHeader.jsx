@@ -1,40 +1,42 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import { ClickAwayListener } from '@material-ui/core'
 import { EditableCmp } from './EditableCmp'
 import { ReactComponent as StarSvg } from '../assets/imgs/svg/star.svg'
 import { socketService } from '../services/socketService'
-import {ReactComponent as User} from '../assets/imgs/avatars/016-user.svg'
+import { ReactComponent as User } from '../assets/imgs/avatars/016-user.svg'
 
 import Avatar from '@material-ui/core/Avatar';
 
-export class BoardHeader extends Component {
-    state = {
-        isExpanded: false
-    }
+export function BoardHeader({ board, updateBoard, users }) {
+    const [open, setOpen] = React.useState(false)
+    // state = {
+    //     isExpanded: false
+    // }
 
-    onUpdateTitle = async ({ target }) => {
+    const onUpdateTitle = async ({ target }) => {
         const { name } = target.dataset
         const value = target.innerText
-        const newBoard = { ...this.props.board }
+        const newBoard = { ...board }
         // Getting the correct board above
         newBoard[name] = value
-        await this.props.updateBoard(newBoard)
+        await updateBoard(newBoard)
         socketService.emit('board updated', newBoard._id)
     }
 
-    onAddUser = async (ev) => {
+    const onAddUser = async (ev) => {
         ev.stopPropagation()
-        const newBoard = { ...this.props.board }
+        const newBoard = { ...board }
         const userId = ev.currentTarget.dataset.id
-        const user = this.getUserById(userId)
+        const user = getUserById(userId)
         newBoard.members.unshift(user)
-        await this.props.updateBoard(newBoard)
+        await updateBoard(newBoard)
         socketService.emit('board updated', newBoard._id)
-        this.setState({ ...this.state, isExpanded: false })
+        // this.setState({ ...this.state, isExpanded: false })
+        setOpen(false)
     }
 
-    
-    getOtherMembers=()=> {
+
+    const getOtherMembers = () => {
         const { board, users } = this.props
         var otherMembers = users.filter(user => {
             let filteredArr = board.members.filter(boardMem => {
@@ -47,38 +49,39 @@ export class BoardHeader extends Component {
         return otherMembers
     }
 
-    getUserById = (id) => {
-        return this.props.users.find(user => user._id === id)
+    const getUserById = (id) => {
+        return users.find(user => user._id === id)
     }
 
-    handleClickAway = () => {
-        this.setState({ ...this.state, isExpanded: false })
+    const handleClickAway = () => {
+        // this.setState({ ...this.state, isExpanded: false })
+        setOpen(false)
     }
 
-    onOpenSelector = () => {
-        this.setState({ ...this.state, isExpanded: !this.state.isExpanded })
+    const onOpenSelector = () => {
+        // this.setState({ ...this.state, isExpanded: !this.state.isExpanded })
+        setOpen(!open)
     }
 
-    render = () => {
-        const { board, users } = this.props
-        const { isExpanded } = this.state
-        return (
-            <div className="board-header">
-                <div className="header-top flex space-between">
-                    <div className="title-container flex align-center">
-                        <EditableCmp className="title" name="title" value={board.title} updateFunc={this.onUpdateTitle} />
+    // const { board, users } = this.props
+    // const { isExpanded } = this.state
+    return (
+        <div className="board-header">
+            <div className="header-top flex space-between">
+                <div className="title-container flex align-center">
+                    <EditableCmp className="title" name="title" value={board.title} updateFunc={onUpdateTitle} />
 
-                        <StarSvg className="star-fav" />
-                    </div>
-                    <div className="board-header-btns flex">
-                        {/* <User/> */}
-                        <button className="btn">Last seen</button>
-                        <ClickAwayListener onClickAway={this.handleClickAway}>
+                    <StarSvg className="star-fav" />
+                </div>
+                <div className="board-header-btns flex">
+                    {/* <User/> */}
+                    <button className="btn">Last seen</button>
+                    <ClickAwayListener onClickAway={handleClickAway}>
                         <div className="board-header-btns flex">
-                            <button className="btn" onClick={this.onOpenSelector}>Invite / {users.length}</button>
-                            {isExpanded && <div className="invite-user">
-                                {this.getOtherMembers().map(user => {
-                                    return <div data-id={user._id} onClick={this.onAddUser}
+                            <button className="btn" onClick={onOpenSelector}>Invite / {users.length}</button>
+                            {open && <div className="invite-user">
+                                {getOtherMembers().map(user => {
+                                    return <div data-id={user._id} onClick={onAddUser}
                                         className="user-select flex" key={user._id}>
                                         <Avatar alt={user.username} src={user.imgUrl}
                                             style={{ width: '30px', height: '30px' }} /><span>{user.username}</span>
@@ -86,14 +89,14 @@ export class BoardHeader extends Component {
                                 })}
                             </div>}
                         </div>
-                        </ClickAwayListener>
-                        <button className="btn" onClick={() => window.location.hash = `/board/${board._id}/activity_log`}>Activity</button>
-                    </div>
-                </div>
-                <div className="full subtitle-container">
-                    <EditableCmp className="subtitle" name="subtitle" value={board.subtitle} updateFunc={this.onUpdateTitle} />
+                    </ClickAwayListener>
+                    <button className="btn" onClick={() => window.location.hash = `/board/${board._id}/activity_log`}>Activity</button>
                 </div>
             </div>
-        )
-    }
+            <div className="full subtitle-container">
+                <EditableCmp className="subtitle" name="subtitle" value={board.subtitle} updateFunc={onUpdateTitle} />
+            </div>
+        </div>
+    )
+
 }
