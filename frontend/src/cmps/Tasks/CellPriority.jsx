@@ -8,7 +8,7 @@ export function CellPriority ({board,task,group,updateBoard,})  {
     const [open, setOpen] = React.useState(false)
  
     const handleUpdate = async ({ target }) => {
-        const selectedPriority = this.getPriorityById(target.dataset.label)
+        const selectedPriority = getPriorityById(target.dataset.label)
         task.priority = selectedPriority
         const newBoard = { ...board }
         // newBoard.priority = selectedPriority
