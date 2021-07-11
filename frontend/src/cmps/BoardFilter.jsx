@@ -13,6 +13,7 @@ export const BoardFilter = (props) => {
 
     useEffect(() => {
         setFilterBy(props.filterBy)
+            //  eslint-disable-next-line
     }, [])
 
     const setFilter = (field, item) => {
@@ -41,6 +42,7 @@ export const BoardFilter = (props) => {
 
     useEffect(() => {
         props.filterBoard({ ...currFilterBy })
+            //  eslint-disable-next-line
     }, [currFilterBy])
 
     const { board, filterBy } = props

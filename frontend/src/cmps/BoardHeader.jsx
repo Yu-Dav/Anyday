@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { ClickAwayListener } from '@material-ui/core'
 import { EditableCmp } from './EditableCmp'
-import { ReactComponent as StarSvg } from '../assets/imgs/svg/star.svg'
+// import { ReactComponent as StarSvg } from '../assets/imgs/svg/star.svg'
 import { socketService } from '../services/socketService'
 // import { ReactComponent as User } from '../assets/imgs/avatars/016-user.svg'
 import Avatar from '@material-ui/core/Avatar';
@@ -33,7 +33,6 @@ export function BoardHeader({ board, updateBoard, users }) {
 
 
     const getOtherMembers = () => {
-        // const { board, users } = props
         var otherMembers = users.filter(user => {
             let filteredArr = board.members.filter(boardMem => {
                 return boardMem._id === user._id
@@ -63,11 +62,11 @@ export function BoardHeader({ board, updateBoard, users }) {
                 <div className="title-container flex align-center">
                     <EditableCmp className="title" name="title" value={board.title} updateFunc={onUpdateTitle} />
 
-                    <StarSvg className="star-fav" />
+                    {/* <StarSvg className="star-fav" /> */}
                 </div>
                 <div className="board-header-btns flex">
                     {/* <User/> */}
-                    <button className="btn">Last seen</button>
+                    {/* <button className="btn">Last seen</button> */}
                     <ClickAwayListener onClickAway={handleClickAway}>
                         <div className="board-header-btns flex">
                             <button className="btn" onClick={onOpenSelector}>Invite / {users.length}</button>

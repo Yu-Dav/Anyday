@@ -11,7 +11,6 @@ import AvatarGroup from '@material-ui/lab/AvatarGroup';
 import { utilService } from '../../services/utilService';
 import { userService } from '../../services/userService';
 
-
 export const CellMember = ({ task, group, board, updateBoard }) => {
     const taskMembers = task.members
     const boardMembers = board.members
@@ -37,11 +36,9 @@ export const CellMember = ({ task, group, board, updateBoard }) => {
         prevOpen.current = open;
     }, [open]);
 
-    const onAddMember = async (ev) => {
-        const memberId = ev.target.dataset.id
-        console.log('memeberId', memberId);
-        const member = getMemberById(memberId)
-        if(!member) return
+    const onAddMember = async (ev, id) => {
+        const member = getMemberById(id)
+        console.log(`file: CellMember.jsx || line 44 || member`, member)
         const newActivity = {
             id: utilService.makeId(),
             type: 'Member added',
@@ -64,8 +61,7 @@ export const CellMember = ({ task, group, board, updateBoard }) => {
         handleClose(ev)
     }
 
-    const onRemoveMember = async (ev) => {
-        const memberId = ev.target.dataset.id
+    const onRemoveMember = async (ev, memberId) => {
         const memberIdx = taskMembers.findIndex(member => member._id === memberId)
         const member = taskMembers.find(member => member._id === memberId)
         taskMembers.splice(memberIdx, 1)
@@ -113,12 +109,12 @@ console.log('taskmembers', taskMembers);
             aria-haspopup="true"
             onClick={handleToggle} className="cell asignee">
             <div className="flex align-center justify-center">
-               {!taskMembers.length && <Avatar style={{ width:'26px', height:'26px', opacity:'0.4'}} src="https://i.ibb.co/DbbwGK1/016-user.png" alt="016-user" />}
-               {taskMembers && <AvatarGroup max={4}>
-                {taskMembers.map(member =>  <Avatar key={member._id} alt={member.username} src={member.imgUrl} 
-                style={{ width:'30px', height:'30px' }}/>
-            )}
-            </AvatarGroup>}
+                {!taskMembers.length && <Avatar style={{ width: '26px', height: '26px', opacity: '0.4' }} src="https://i.ibb.co/DbbwGK1/016-user.png" alt="016-user" />}
+                {taskMembers && <AvatarGroup max={4}>
+                    {taskMembers.map(member => <Avatar key={member._id} alt={member.username} src={member.imgUrl}
+                        style={{ width: '30px', height: '30px' }} />
+                    )}
+                </AvatarGroup>}
             </div>
             <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal style={{ zIndex: '5' }}>
                 {({ TransitionProps, placement }) => (
@@ -128,19 +124,23 @@ console.log('taskmembers', taskMembers);
                     >
                         <Paper>
                             <ClickAwayListener onClickAway={handleClose}>
-                                <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown} style={{ fontSize:'13px' }}>
+                                <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown} style={{ fontSize: '13px' }} >
                                     {taskMembers.map(member => {
-                                        return <MenuItem style={{ display:'flex', gap:'10px', fontSize:'13px' }} 
-                                        key={member._id}><Avatar alt={member.username} src={member.imgUrl} 
-                                        style={{ width:'30px', height:'30px' }}/><span className="memb-full-name">{member.fullname}</span><i className="fas close" 
-                                        data-id={member._id} onClick={onRemoveMember}></i></MenuItem>
+                                        return (
+                                            <MenuItem style={{ display: 'flex', gap: '10px', fontSize: '13px' }}
+                                                key={member._id}>
+                                                <Avatar data-id={member._id} alt={member.username} src={member.imgUrl}
+                                                    style={{ width: '30px', height: '30px' }} />
+                                                <span className="memb-full-name">{member.fullname}</span>
+                                                <i className="fas close" data-id={member._id} onClick={(ev) => onRemoveMember(ev, member._id)}></i></MenuItem>
+                                        )
                                     })}
                                     <hr />
                                     {getOtherMembers().map(member => {
-                                        return <MenuItem style={{ display:'flex', gap:'10px', fontSize:'13px' }}
-                                         key={member._id} data-id={member._id} onClick={onAddMember}>
-                                             <Avatar alt={member.username} src={member.imgUrl} style={{ width:'30px', height:'30px' }}/>
-                                             {member.fullname}</MenuItem>
+                                        return <MenuItem style={{ display: 'flex', gap: '10px', fontSize: '13px' }}
+                                            key={member._id} data-id={member._id} onClick={(ev) => onAddMember(ev, member._id)}>
+                                            <Avatar alt={member.username} src={member.imgUrl} style={{ width: '30px', height: '30px' }} />
+                                            {member.fullname}</MenuItem>
                                     }
                                     )}
                                 </MenuList>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { HashRouter as Router, Route, Switch } from 'react-router-dom'
+// import { HashRouter as Router, Route, Switch } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import { utilService } from '../services/utilService'
 import { socketService } from '../services/socketService'
 import { userService } from '../services/userService'
@@ -67,8 +68,9 @@ class _BoardApp extends Component {
         this.props.addBoard()
     }
 
-    onRemoveBoard = (boardId) => {
-        this.props.removeBoard(boardId)
+    onRemoveBoard = async (boardId) => {
+        await this.props.removeBoard(boardId)
+        window.location.hash = `/board/`
     }
 
     addNewGroup = async () => {

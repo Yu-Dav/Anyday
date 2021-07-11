@@ -6,6 +6,9 @@
         position: sticky;
         left    : 130px;
         z-index : 5;
+        &>*:not(:last-child) {
+            margin-inline-end: 10px;
+        }
     }
 
     button {
@@ -13,9 +16,6 @@
         color      : inherit;
     }
 
-    &>*:not(:last-child) {
-        margin-inline-end: 10px;
-    }
 
     .btn-add-group,
     .view,

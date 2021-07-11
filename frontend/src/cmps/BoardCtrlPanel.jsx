@@ -14,6 +14,7 @@ import TableChartOutlinedIcon from '@material-ui/icons/TableChartOutlined';
 export const BoardCtrlPanel = ({ addNewGroup, filterBoard, board, loadBoard, filterBy, onChangeView, isMap }) => {
     const [isSearching, setIsSearching] = useState(false)
     const [isFiltering, setIsFiltering] = useState(false)
+    //  eslint-disable-next-line
     const [view, setView] = useState('board-view')
     // const onSearchClicked = () => {
     //     setIsSearching(!isSearching)
@@ -32,7 +33,7 @@ export const BoardCtrlPanel = ({ addNewGroup, filterBoard, board, loadBoard, fil
                 <button className="btn-add-group" onClick={addNewGroup}>New Group</button>
                 <button onClick={() => setIsSearching(!isSearching)} className="btn-search flex align-center "> <SearchIcon></SearchIcon>Search</button>
                 {isSearching &&
-                    <BoardSearch filterBoard={filterBoard} />
+                    <BoardSearch filterBoard={filterBoard} setIsSearching={setIsSearching} />
                 }
                 <ClickAwayListener onClickAway={() => setIsFiltering(false)}>
                     <div>

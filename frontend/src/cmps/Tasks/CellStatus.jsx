@@ -31,6 +31,7 @@ export const CellStatus = ({ board, group, task, updateBoard }) => {
         newBoard.activities.unshift(newActivity)
         await updateBoard(newBoard)
         await socketService.emit('board updated', newBoard._id);
+        setOpen(false)
     }
 
     const getStatusById = (labelId) => {

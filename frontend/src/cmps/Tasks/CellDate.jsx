@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { registerLocale, setDefaultLocale } from "react-datepicker";
-import uk from 'date-fns/locale/en-GB';
+// import { registerLocale, setDefaultLocale } from "react-datepicker";
+// import uk from 'date-fns/locale/en-GB';
 import { socketService } from '../../services/socketService'
 import { utilService } from '../../services/utilService';
 import { userService } from '../../services/userService';
 
-registerLocale('uk', uk)
+// registerLocale('uk', uk)
 
 export const CellDate = ({ task, group, board, updateBoard }) => {
     const [startDate, setStartDate] = useState((!task.timeline[0]) ? null : new Date(task.timeline[0]))
@@ -17,6 +17,7 @@ export const CellDate = ({ task, group, board, updateBoard }) => {
     const [isHover, setIsHover] = useState(false)
     useEffect(() => {
         setIsDateSet((!task.timeline[0] && !task.timeline[1]) ? false : true)
+            //  eslint-disable-next-line
     }, [])
     const setDateRange = (newRange) => {
         if (!newRange[1]) {
@@ -95,7 +96,7 @@ export const CellDate = ({ task, group, board, updateBoard }) => {
             {!isDateSet && isSettingDate && <DatePicker
                 popperPlacement="bottom"
                 className="date-picker-cmp"
-                locale="uk"
+                // locale="uk"
                 selectsRange={true}
                 startDate={startDate}
                 endDate={endDate}
@@ -119,7 +120,7 @@ export const CellDate = ({ task, group, board, updateBoard }) => {
                             popperPlacement="bottom"
                             popperClassName="date-picker-pos"
                             // dateFormat="us"
-                            locale="uk"
+                            // locale="uk"
                             selectsRange={true}
                             startDate={startDate}
                             endDate={endDate}

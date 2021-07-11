@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
 
 import logo from '../assets/imgs/favicon/logo-192x192.png'
 import { Header } from '../cmps/Header.jsx'
@@ -14,15 +14,15 @@ import Container from '@material-ui/core/Container';
 import { signup } from '../store/actions/userActions'
 
 export const SignUp = () => {
-
+  //eslint-disable-next-line
   const [msg, setMsg] = useState('')
   const [loginCred, setLoginCred] = useState({
     fullName: '',
     username: '',
     password: ''
   })
-  const users = useSelector(state => state.userModule.users)
-  const loggedInUser = useSelector(state => state.userModule.loggedInUser)
+  // const users = useSelector(state => state.userModule.users)
+  // const loggedInUser = useSelector(state => state.userModule.loggedInUser)
   const dispatch = useDispatch()
   const HandleChange = (ev) => {
     const { name, value } = ev.target

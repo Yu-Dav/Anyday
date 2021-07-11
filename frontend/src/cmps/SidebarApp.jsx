@@ -1,25 +1,16 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../assets/imgs/favicon/favicon-32x32.png'
 import { userService } from '../services/userService'
 import { withRouter } from 'react-router-dom';
 
 function _SidebarApp({ history }) {
-    // const [open, setOpen] = useState(false)
-
-    // const onOpenNotifi = () => {
-    //     setOpen(!open)
-    // }
-
     const onLogOut = () => {
         userService.logout()
         history.push('/')
     }
-
-
     const user = userService.getLoggedinUser()
     let fullname = user.fullname 
-
     return (
         <section className="sidebar-app">
             <nav className="flex justify-center column align-center space-between">
@@ -34,7 +25,6 @@ function _SidebarApp({ history }) {
             </nav>
         </section>
     )
-
 }
 
 export const SidebarApp = withRouter(_SidebarApp);

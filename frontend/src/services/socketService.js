@@ -11,7 +11,7 @@ export const socketService = createSocketService()
 // export const socketService = createDummySocketService()
 
 window.socketService = socketService
-
+// eslint-disable-next-line
 var socketIsReady = false;
 // socketService.setup()
 

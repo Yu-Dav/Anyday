@@ -1,10 +1,10 @@
-import React, { useEffect,  useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import { ActivityLog } from './ActivityLog'
 import { EditableCmp } from '../EditableCmp'
 import { Updates } from './Updates'
 import { userService } from '../../services/userService.js'
 // import { utilService } from '../../services/utilService.js'
-import {  useDispatch, useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { loadBoard, updateBoard } from '../../store/actions/boardActions'
 import { ReactComponent as CrossSvg } from '../../assets/imgs/svg/cross.svg'
 import { ClickAwayListener } from '@material-ui/core'
@@ -24,15 +24,16 @@ export const ActivityModal = (props) => {
         const currUser = userService.getLoggedinUser()
         setUser(currUser)
         dispatch(loadBoard(boardId))
-
+        //  eslint-disable-next-line
     }, [])
 
-    useEffect(()=>{
-        if(currBoard.groups){
+    useEffect(() => {
+        if (currBoard.groups) {
             const { taskId } = props.match.params
             if (!taskId) return
             loadTask(taskId)
         }
+        //  eslint-disable-next-line
     }, [currBoard])
 
 
@@ -68,7 +69,7 @@ export const ActivityModal = (props) => {
     }
 
     const handleClickAway = () => {
-        window.location.hash = `/board/${props.currBoard._id}`
+        window.location.hash = `/board/${currBoard._id}`
     }
 
     // const { currBoard } = props
