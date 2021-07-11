@@ -7,15 +7,15 @@ export function Snack({ onRemoveTask }) {
     const [open, setOpen] = React.useState(false);
 
     const handleClick = () => {
-        setTimeout(onRemoveTask, 1000)
+        // setTimeout(onRemoveTask, 1000)
         setOpen(true);
+        onRemoveTask()
     };
 
     const handleClose = (event, reason) => {
         if (reason === 'clickaway') {
             return;
         }
-
         setOpen(false);
     };
 
@@ -32,7 +32,7 @@ export function Snack({ onRemoveTask }) {
 
                 }}
                 open={open}
-                autoHideDuration={1000}
+                autoHideDuration={3000}
                 onClose={handleClose}
                 message="Task deleted"
                 varient='success'

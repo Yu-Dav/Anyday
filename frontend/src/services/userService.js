@@ -43,16 +43,19 @@ async function login(userCred) {
     // return _saveLocalUser(user)
 
     const user = await httpService.post('auth/login', userCred);
-    if (user) return _saveLocalUser(user);
+    if (user) {
+        _saveLocalUser(user);
+        return user;
+    }
 }
 async function signup(userCred) {
     // const user = await storageService.post('user', userCred)
-    const user = await httpService.post('auth/signup', userCred)
-    return _saveLocalUser(user)
+    const user = await httpService.post('auth/signup', userCred);
+    return _saveLocalUser(user);
 }
 async function logout() {
-    sessionStorage.clear()
-    return await httpService.post('auth/logout')
+    sessionStorage.clear();
+    return await httpService.post('auth/logout');
 }
 function _saveLocalUser(user) {
     sessionStorage.setItem('loggedinUser', JSON.stringify(user));
@@ -66,7 +69,7 @@ function getLoggedinUser() {
             _id: utilService.makeId(),
             fullname: 'Guest',
             username: 'Guest',
-            imgUrl: 'https://i.ibb.co/wS9zKnQ/guest-02.png'
+            imgUrl: 'https://i.ibb.co/wS9zKnQ/guest-02.png',
         };
     }
     return user;

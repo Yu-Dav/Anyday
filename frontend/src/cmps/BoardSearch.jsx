@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Input } from '@material-ui/core'
+import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 
 export const BoardSearch = (props) => {
 
@@ -8,21 +9,26 @@ export const BoardSearch = (props) => {
     useEffect(() => {
         props.filterBoard({ txt })
     }, [txt])
-    
+
     const handleChange = async (ev) => {
         // const field = ev.target.name
         const value = ev.target.value
         setTxt(value)
         // props.filterBoard({ txt })
     }
-
+    const onClickAway = () => {
+        props.setIsSearching(false)
+    }
     return (
         <form className="board-search fade-in">
             <label htmlFor="txt" ></label>
-            <Input
-                className="board-search" autoComplete="off" type="text" name="txt" id="txt"
-                value={txt} placeholder="Enter here" onChange={handleChange}
-                autoFocus />
+            <ClickAwayListener onClickAway={onClickAway}>
+                <Input
+
+                    className="board-search" autoComplete="off" type="text" name="txt" id="txt"
+                    value={txt} placeholder="Enter here" onChange={handleChange}
+                    autoFocus />
+            </ClickAwayListener>
         </form>
 
     )

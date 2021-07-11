@@ -32,7 +32,7 @@ export const BoardCtrlPanel = ({ addNewGroup, filterBoard, board, loadBoard, fil
                 <button className="btn-add-group" onClick={addNewGroup}>New Group</button>
                 <button onClick={() => setIsSearching(!isSearching)} className="btn-search flex align-center "> <SearchIcon></SearchIcon>Search</button>
                 {isSearching &&
-                    <BoardSearch filterBoard={filterBoard} />
+                    <BoardSearch filterBoard={filterBoard} setIsSearching={setIsSearching} />
                 }
                 <ClickAwayListener onClickAway={() => setIsFiltering(false)}>
                     <div>

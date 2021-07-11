@@ -67,8 +67,9 @@ class _BoardApp extends Component {
         this.props.addBoard()
     }
 
-    onRemoveBoard = (boardId) => {
-        this.props.removeBoard(boardId)
+    onRemoveBoard = async (boardId) => {
+        await this.props.removeBoard(boardId)
+        window.location.hash = `/board/`
     }
 
     addNewGroup = async () => {

@@ -68,7 +68,7 @@ export const ActivityModal = (props) => {
     }
 
     const handleClickAway = () => {
-        window.location.hash = `/board/${props.currBoard._id}`
+        window.location.hash = `/board/${currBoard._id}`
     }
 
     // const { currBoard } = props

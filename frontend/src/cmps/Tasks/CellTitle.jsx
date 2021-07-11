@@ -4,7 +4,7 @@ import { EditableCmp } from '../EditableCmp'
 import { socketService } from '../../services/socketService'
 import { utilService } from '../../services/utilService'
 import { userService } from '../../services/userService'
-import { Snack } from './SnackBar'
+// import { Snack } from './SnackBar'
 
 
 export function CellTitle ({board,group, task,updateBoard, onRemoveTask}) {
@@ -40,8 +40,8 @@ export function CellTitle ({board,group, task,updateBoard, onRemoveTask}) {
         const className = task.comments.length ? 'fa comment active': 'fa comment'
         return (
             <div className="cell title flex">
-                <Snack onRemoveTask={onRemoveTask}/>
-                {/* <i className="fas fa-trash remove-task" onClick={()=>onRemoveTask()}></i> */}
+                {/* <Snack onRemoveTask={onRemoveTask}/> */}
+                <i className="fas fa-trash remove-task" onClick={()=>onRemoveTask()}></i>
                 <EditableCmp className="cell-title-editable" name="title" value={title} updateFunc={onUpdateTaskTitle} />
                 <Link to={`/board/${board._id}/${group.id}/${id}`}><i className={className}></i></Link>
             </div>

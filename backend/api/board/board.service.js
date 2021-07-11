@@ -86,7 +86,6 @@ module.exports = {
     update,
 };
 
-
 function _createNewBoard(currUser) {
     return {
         title: 'Your new Board',
@@ -100,8 +99,59 @@ function _createNewBoard(currUser) {
             { id: 'sl4', title: 'On hold', color: '#175a63' },
             { id: 'sl5', title: '', color: '#c4c4c4' },
         ],
-        cellTypes: ['title', 'member', 'tag', 'status', 'priority', 'creationLog', 'timeline'],
-        members: [currUser], /// can't add more members!!
+        cellTypes: [
+            'title',
+            'member',
+            'tag',
+            'status',
+            'priority',
+            'creationLog',
+            'timeline',
+        ],
+        members: [
+            currUser,
+            {
+                _id: '60b7757a19a5e8e764a2d307',
+                fullname: 'Yuval David',
+                username: 'Yuval',
+                imgUrl: 'https://i.ibb.co/GFbDjJx/yuval.jpg',
+                mentions: [
+                    {
+                        id: 'm101',
+                        boardId: 'm101',
+                        taskId: 't101',
+                    },
+                ],
+                createdAt: '2021-06-02T12:11:38.000Z',
+            },
+            {
+                _id: '60b7756919a5e8e764a2cae1',
+                fullname: 'Dafna Bashan ',
+                username: 'Dafna',
+                imgUrl: 'https://i.ibb.co/qMmQnJL/image.jpg',
+                mentions: [
+                    {
+                        id: 'm101',
+                        boardId: 'm101',
+                        taskId: 't101',
+                    },
+                ],
+                createdAt: '2021-06-02T12:11:21.000Z',
+            },
+            {
+                _id: '60b7755419a5e8e764a2c0dd',
+                fullname: 'Noga Jacobi',
+                username: 'Noga',
+                imgUrl: 'https://i.ibb.co/VD7WqLY/noga.jpg',
+                mentions: [
+                    {
+                        id: 'm101',
+                        boardId: 'm101',
+                        taskId: 't101',
+                    },
+                ],
+            },
+        ],
         groups: [
             {
                 id: utilService.makeId(),
@@ -126,7 +176,11 @@ function _createNewBoard(currUser) {
                             title: 'Working on it',
                             color: '#fdab3d',
                         },
-                        priority: { id: 'pl2', title: 'Medium', color: '#a25ddc' },
+                        priority: {
+                            id: 'pl2',
+                            title: 'Medium',
+                            color: '#a25ddc',
+                        },
                         members: [],
                         comments: [],
                         byMember: currUser,
@@ -156,7 +210,11 @@ function _createNewBoard(currUser) {
                             title: 'Working on it',
                             color: '#fdab3d',
                         },
-                        priority: { id: 'pl2', title: 'Medium', color: '#a25ddc' },
+                        priority: {
+                            id: 'pl2',
+                            title: 'Medium',
+                            color: '#a25ddc',
+                        },
                         members: [],
                         comments: [],
                         byMember: currUser,
@@ -186,7 +244,11 @@ function _createNewBoard(currUser) {
                             title: 'Working on it',
                             color: '#fdab3d',
                         },
-                        priority: { id: 'pl2', title: 'Medium', color: '#a25ddc' },
+                        priority: {
+                            id: 'pl2',
+                            title: 'Medium',
+                            color: '#a25ddc',
+                        },
                         members: [],
                         comments: [],
                         byMember: currUser,
