@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { registerLocale, setDefaultLocale } from "react-datepicker";
@@ -9,73 +9,72 @@ import { userService } from '../../services/userService';
 
 registerLocale('uk', uk)
 
-export class CellDate extends Component {
-    state = {
-        startDate: (!this.props.task.timeline[0]) ? null : new Date(this.props.task.timeline[0]),
-        endDate: (!this.props.task.timeline[1]) ? null : new Date(this.props.task.timeline[1]),
-        isDateSet: '',
-        isSettingDate: false,
-        isHover: false,
-    }
-    componentDidMount() {
-        this.setState({
-            ...this.state, isDateSet: (!this.props.task.timeline[0] && !this.props.task.timeline[1]) ? false : true,
-        })
+export const CellDate = ({ task, group, board, updateBoard }) => {
+    const [startDate, setStartDate] = useState((!task.timeline[0]) ? null : new Date(task.timeline[0]))
+    const [endDate, setEndDate] = useState((!task.timeline[1]) ? null : new Date(task.timeline[1]))
+    const [isDateSet, setIsDateSet] = useState(false)
+    const [isSettingDate, setIsSettingDate] = useState(false)
+    const [isHover, setIsHover] = useState(false)
+    useEffect(() => {
+        setIsDateSet((!task.timeline[0] && !task.timeline[1]) ? false : true)
+    }, [])
+    const setDateRange = (newRange) => {
+        if (!newRange[1]) {
+            setStartDate(newRange[0])
+            setEndDate(null)
+            setIsSettingDate(true)
+            return
+        }
+        setEndDate(newRange[1])
+        onSetTimeline()
     }
 
-    setDateRange = (update) => {
-        if (!update[1]) return this.setState({ startDate: update[0], endDate: null, isSettingDate: true })
-        return this.setState({ ...this.state, endDate: update[1] },
-            this.onSetTimeline)
-    }
-
-    onSetTimeline = async () => {
-        const { startDate, endDate } = this.state
+    const onSetTimeline = async () => {
         const timeline = [startDate, endDate]
-        this.props.task.timeline = timeline
-        const newBoard = { ...this.props.board }
+        task.timeline = timeline
+        const newBoard = { ...board }
         const newActivity = {
             id: utilService.makeId(),
             type: 'Timeline changed',
             createdAt: Date.now(),
             byMember: userService.getLoggedinUser(),
             task: {
-                id: this.props.task.id,
-                title: this.props.task.title,
+                id: task.id,
+                title: task.title,
                 changedItem: `${`${startDate}`.substring(4, 10)}-${`${endDate}`.substring(4, 10)}`
             },
             group: {
-                id: this.props.group.id,
-                title: this.props.group.title
+                id: group.id,
+                title: group.title
             }
         }
         newBoard.activities.unshift(newActivity)
         await socketService.emit('board updated', newBoard._id);
-        this.setState({ ...this.state, isDateSet: true, isSettingDate: false }, () => this.props.updateBoard(newBoard))
+        setIsDateSet(true)
+        setIsSettingDate(false)
+        updateBoard(newBoard)
     }
-    onEnter = () => {
-        this.setState({ ...this.state, isHover: true })
+    const onEnter = () => {
+        setIsHover(true)
     }
-    onLeave = () => {
-        this.setState({ ...this.state, isHover: false })
+    const onLeave = () => {
+        setIsHover(false)
     }
-    onSetDates = () => {
-        this.setState({ ...this.state, isSettingDate: true })
+    const onSetDates = () => {
+        setIsSettingDate(true)
     }
 
-    getNumOfDays = () => {
-        const { startDate, endDate } = this.state
+    const getNumOfDays = () => {
         if (!startDate || !endDate) return
         const timestampStart = startDate.getTime()
         const timestampEnd = endDate.getTime()
         const totalDays = (timestampEnd - timestampStart) / 1000 / 60 / 60 / 24
         return totalDays
     }
-    getPercent = () => {
-        const { startDate } = this.state
+    const getPercent = () => {
         const now = Date.now()
         const timestampStart = startDate.getTime()
-        const totalDays = this.getNumOfDays()
+        const totalDays = getNumOfDays()
         let milliPassed = now - timestampStart
         const daysPassed = Math.floor(milliPassed / 1000 / 60 / 60 / 24)
         let percent = daysPassed / totalDays * 100
@@ -83,57 +82,53 @@ export class CellDate extends Component {
         if (percent > 100) percent = 100
         return percent
     }
-    render() {
-        const { bgColor } = this.props.group.style
-        const { isHover, isDateSet, isSettingDate } = this.state
-        return (
-            <div className="timeline" onMouseEnter={this.onEnter} onMouseLeave={this.onLeave}>
+    const { bgColor } = group.style
+    return (
+        <div className="timeline" onMouseEnter={onEnter} onMouseLeave={onLeave}>
 
-                {!isDateSet && !isSettingDate && !isHover &&
-                    <span className="no-date">-</span>}
+            {!isDateSet && !isSettingDate && !isHover &&
+                <span className="no-date">-</span>}
 
-                {!isDateSet && !isSettingDate && isHover &&
-                    <span className="set-dates" onClick={this.onSetDates}>Set Dates</span>}
+            {!isDateSet && !isSettingDate && isHover &&
+                <span className="set-dates" onClick={onSetDates}>Set Dates</span>}
 
-                {!isDateSet && isSettingDate && <DatePicker
-                    popperPlacement="bottom"
-                    className="date-picker-cmp"
-                    locale="uk"
-                    selectsRange={true}
-                    startDate={this.state.startDate}
-                    endDate={this.state.endDate}
-                    onChange={(update) => {
-                        this.setDateRange(update);
-                    }}
-                />}
+            {!isDateSet && isSettingDate && <DatePicker
+                popperPlacement="bottom"
+                className="date-picker-cmp"
+                locale="uk"
+                selectsRange={true}
+                startDate={startDate}
+                endDate={endDate}
+                onChange={(update) => {
+                    setDateRange(update);
+                }}
+            />}
 
-                {isDateSet && !isSettingDate && isHover &&
-                    <span className="num-of-days" onClick={() => this.setState({ ...this.state, isHover: false, })}>{this.getNumOfDays()} d</span>}
+            {isDateSet && !isSettingDate && isHover &&
+                <span className="num-of-days" onClick={() => setIsHover(false) }>{getNumOfDays()} d</span>}
 
-                {isDateSet && !isHover &&
-                    <div className="date-pick-wrapper">
-                        <div className="date-picker-container">
-                            <div className="progress-bar"
-                                style={{ backgroundColor: bgColor, width: `${this.getPercent()}%` }}>
-                            </div>
-                            <div className="grey-bck"></div>
-                            <DatePicker
-                                className="date-picker-cmp"
-                                popperPlacement="bottom"
-                                popperClassName="date-picker-pos"
-                                // dateFormat="us"
-                                locale="uk"
-                                selectsRange={true}
-                                startDate={this.state.startDate}
-                                endDate={this.state.endDate}
-                                onChange={(update) => {
-                                    this.setDateRange(update);
-                                }}
-                            />
+            {isDateSet && !isHover &&
+                <div className="date-pick-wrapper">
+                    <div className="date-picker-container">
+                        <div className="progress-bar"
+                            style={{ backgroundColor: bgColor, width: `${getPercent()}%` }}>
                         </div>
-                    </div>}
-
-            </div>
-        );
-    }
+                        <div className="grey-bck"></div>
+                        <DatePicker
+                            className="date-picker-cmp"
+                            popperPlacement="bottom"
+                            popperClassName="date-picker-pos"
+                            // dateFormat="us"
+                            locale="uk"
+                            selectsRange={true}
+                            startDate={startDate}
+                            endDate={endDate}
+                            onChange={(update) => {
+                                setDateRange(update);
+                            }}
+                        />
+                    </div>
+                </div>}
+        </div>
+    );
 }

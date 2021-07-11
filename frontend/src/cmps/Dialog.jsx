@@ -6,7 +6,7 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 
-export  function AlertDialog({boardId, onRemoveBoard}) {
+export function AlertDialog({ boardId, onRemoveBoard }) {
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -19,7 +19,7 @@ export  function AlertDialog({boardId, onRemoveBoard}) {
 
   return (
     <div>
-      <button  onClick={handleClickOpen}><i className="fas close"></i></button>
+      <button onClick={handleClickOpen}><i className="fas close"></i></button>
       <Dialog
         open={open}
         onClose={handleClose}
@@ -36,11 +36,11 @@ export  function AlertDialog({boardId, onRemoveBoard}) {
           <Button onClick={handleClose} color="primary">
             Back
           </Button>
-          <Button onClick={()=>{
-              handleClose() 
-              onRemoveBoard(boardId)
+          <Button onClick={() => {
+            handleClose()
+            onRemoveBoard(boardId)
 
-              }} color="primary" autoFocus>
+          }} color="primary" autoFocus>
             Delete
           </Button>
         </DialogActions>
