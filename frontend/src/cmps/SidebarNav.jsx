@@ -26,12 +26,10 @@ const _SidebarNav = ({ isExpandedProp, onAddNewBoard, onRemoveBoard }) => {
     }, [])
 
     const onOpenNavbar = () => {
-        console.log('open nav');
         setIsExpanded(!isExpanded)
     }
 
     const onClickAway = () => {
-        console.log('open nav2');
         setIsExpanded(false)
     }
     const handleScroll = (ev) => {
