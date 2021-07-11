@@ -226,7 +226,6 @@ class _BoardApp extends Component {
                     } else return false || filterRegex.test(group.title)
                 })
             }
-
             await this.setState({ ...this.state, filteredGroups: filteredBoard.groups }, () => console.log('filtered groups', this.state.filteredGroups.length))
         }
 

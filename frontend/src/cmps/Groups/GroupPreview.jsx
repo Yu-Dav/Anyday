@@ -7,14 +7,13 @@ import { Droppable, Draggable } from 'react-beautiful-dnd';
 import { GroupMenu } from './GroupMenu'
 
 export function GroupPreview({ group, board, updateBoard, index, currUser, setMap }) {
-
     const { tasks } = group
     return (
         <Draggable draggableId={group.id} index={index} type="group">
             {dragProvided => (
                 <div className="group-container flex"
-                    {...dragProvided.draggableProps}
-                    ref={dragProvided.innerRef}
+                {...dragProvided.draggableProps}
+                ref={dragProvided.innerRef}
                 >
                     <GroupMenu group={group} board={board} updateBoard={updateBoard} />
                     {/* <i className="fas group-handle" {...dragProvided.dragHandleProps}></i> */}

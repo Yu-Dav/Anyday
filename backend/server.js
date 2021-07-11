@@ -14,6 +14,7 @@ const session = expressSession({
 })
 // Express App Config
 app.use(express.json())
+
 app.use(session)
 // app.use(express.static('public')); // added this for heroku  
 

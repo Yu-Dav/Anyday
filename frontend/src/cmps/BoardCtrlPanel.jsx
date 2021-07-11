@@ -1,4 +1,6 @@
-import { Component } from 'react'
+// import { Component } from 'react'
+import React, { useState } from 'react';
+
 import { ReactComponent as FilterSvg } from '../assets/imgs/svg/filter.svg'
 // import { ReactComponent as SortSvg } from '../assets/imgs/svg/sort.svg'
 import { BoardSearch } from '../cmps/BoardSearch'
@@ -7,77 +9,53 @@ import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 import SearchIcon from '@material-ui/icons/Search';
 import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
 import TableChartOutlinedIcon from '@material-ui/icons/TableChartOutlined';
-import { onSetFilter } from '../store/actions/boardActions';
+// import { onSetFilter } from '../store/actions/boardActions';
 
-export class BoardCtrlPanel extends Component {
-    state = {
-        isSearching: false,
-        isFiltering: false,
-        view: 'board-view'
-    }
+export const BoardCtrlPanel = ({ addNewGroup, filterBoard, board, loadBoard, filterBy, onChangeView, isMap }) => {
+    const [isSearching, setIsSearching] = useState(false)
+    const [isFiltering, setIsFiltering] = useState(false)
+    const [view, setView] = useState('board-view')
+    // const onSearchClicked = () => {
+    //     setIsSearching(!isSearching)
+    // }
+    // const onFilterClicked = () => {
+    //     setIsFiltering(!isFiltering)
 
-    onSearchClicked = () => {
-        this.setState({ ...this.state, isSearching: !this.state.isSearching })
-    }
-    onFilterClicked = () => {
-        this.setState({ ...this.state, isFiltering: !this.state.isFiltering })
-    }
-    handleFilterClickAway = () => {
-        this.setState({ ...this.state, isFiltering: false })
-    }
-    render() {
-        const { isSearching, isFiltering, view } = this.state
-        return (
-            <div className="board-ops flex space-between ">
-                <div className="left-ctrl flex">
-                    {/* filter btn will change the state to open the Boardfilter cmp */}
-                    <button className="btn-add-group" onClick={this.props.addNewGroup}>New Group</button>
+    // }
+    // const handleFilterClickAway = () => {
+    //     setIsFiltering(false)
 
-                    <button onClick={this.onSearchClicked} className="btn-search flex align-center "> <SearchIcon></SearchIcon>Search</button>
-                    {isSearching &&
-                        <BoardSearch filterBoard={this.props.filterBoard}/>
-                    }
-
-                    <ClickAwayListener onClickAway={this.handleFilterClickAway}>
-                        <div>
-                            <button onClick={this.onFilterClicked} className="btn-filter flex align-center"><FilterSvg /> <p>Filter</p></button>
-                            {isFiltering &&
-                                <BoardFilter board={this.props.board} loadBoard={this.props.loadBoard} filterBy={this.props.filterBy} filterBoard={this.props.filterBoard}></BoardFilter>
-                            }
-                        </div>
-                    </ClickAwayListener>
-
-                {/* <button className="btn-sort flex align-center"><SortSvg /> <p>Sort</p></button> */}
-                </div>
-                <div className="right-ctrl flex">
-                    <div className={!this.props.isMap ? 'view active flex align-center' : 'view flex align-center'} onClick={(ev) => {
-                        this.props.onChangeView(ev, false)
-                        this.setState({ ...this.state, view: 'board-view' })
-                    }} ><TableChartOutlinedIcon />Board</div>
-                    <div className={this.props.isMap ? 'view active flex align-center' : 'view flex align-center'} onClick={(ev) => {
-                        this.props.onChangeView(ev, true)
-                        this.setState({ ...this.state, view: 'map-view' })
-                    }} >
-                        <LocationOnOutlinedIcon />Map
+    // }
+    return (
+        <div className="board-ops flex space-between ">
+            <div className="left-ctrl flex">
+                <button className="btn-add-group" onClick={addNewGroup}>New Group</button>
+                <button onClick={() => setIsSearching(!isSearching)} className="btn-search flex align-center "> <SearchIcon></SearchIcon>Search</button>
+                {isSearching &&
+                    <BoardSearch filterBoard={filterBoard} />
+                }
+                <ClickAwayListener onClickAway={() => setIsFiltering(false)}>
+                    <div>
+                        <button onClick={() => setIsFiltering(!isFiltering)} className="btn-filter flex align-center"><FilterSvg /> <p>Filter</p></button>
+                        {isFiltering &&
+                            <BoardFilter board={board} loadBoard={loadBoard} filterBy={filterBy} filterBoard={filterBoard}></BoardFilter>
+                        }
                     </div>
-
-                </div>
-                {/* <div className="right-ctrl flex">
-                    <div className={view === 'board-view' ? 'view active flex align-center' : 'view flex align-center'} onClick={(ev) => {
-                        this.props.onChangeView(ev, false)
-                        this.setState({ ...this.state, view: 'board-view' })
-                    }} ><TableChartOutlinedIcon />Board</div>
-                    <div className={view === 'map-view' ? 'view active flex align-center' : 'view flex align-center'} onClick={(ev) => {
-                        this.props.onChangeView(ev, true)
-                        this.setState({ ...this.state, view: 'map-view' })
-                    }} >
-                        <LocationOnOutlinedIcon />Map
-                    </div>
-
-                </div> */}
+                </ClickAwayListener>
             </div>
-        )
-
-    }
+            <div className="right-ctrl flex">
+                <div className={!isMap ? 'view active flex align-center' : 'view flex align-center'} onClick={(ev) => {
+                    onChangeView(ev, false)
+                    setView('board-view')
+                }} ><TableChartOutlinedIcon />Board</div>
+                <div className={isMap ? 'view active flex align-center' : 'view flex align-center'} onClick={(ev) => {
+                    onChangeView(ev, true)
+                    setView('map-view')
+                }} >
+                    <LocationOnOutlinedIcon />Map
+                </div>
+            </div>
+        </div>
+    )
 }
 

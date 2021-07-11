@@ -344,3 +344,110 @@
 06/07/2021, 11:20:32 - DEBUG - Session ID is | kvVB3YJq6Jjd96Cuo8-JTX36RfHRL349 
 06/07/2021, 11:21:44 - DEBUG - Session ID is | kvVB3YJq6Jjd96Cuo8-JTX36RfHRL349 
 06/07/2021, 11:56:58 - DEBUG - Session ID is | x7rhEQYROZB-PBfGfrwdfSkgedx2CL5b 
+07/07/2021, 14:37:00 - INFO - Server is running on port: 3030 
+07/07/2021, 14:37:51 - DEBUG - Session ID is | Gtr04gKVOesljIdPAcoEBMPO8nGdfT9L 
+07/07/2021, 14:44:45 - DEBUG - Session ID is | mWHorRDlhFf0v_UMWNqwN8D1VBgbm5ra 
+07/07/2021, 16:35:55 - DEBUG - Session ID is | vzDlH2TS9DRgDEFhlpnynDWy1qjFuSrz 
+07/07/2021, 16:58:47 - DEBUG - Session ID is | lLZpNMEfAV6dJKqiTz7hz2frpJyKYcLp 
+07/07/2021, 16:58:49 - DEBUG - Session ID is | GxNwt74CaU8_tvqjP5NtxmeXnWtmRdaV 
+07/07/2021, 18:15:35 - DEBUG - Session ID is | E538PBZhWDDx_jqIb7C6iAGVNqN8JmU6 
+07/07/2021, 18:34:57 - DEBUG - auth.service - login with username: Yuval (sid: 1K2Eiio9pAm6lMJ0Ivo_o5uAEvYC-JFI)
+07/07/2021, 18:37:03 - DEBUG - auth.service - login with username: Yuval (sid: AlEaWHuUaQzRS02LxD3MrmfP2G0Hio0C)
+07/07/2021, 18:37:11 - DEBUG - Session ID is | H7mgz5G01AYyiKXOHMkofnw3c8pL-tv_ 
+07/07/2021, 19:01:21 - DEBUG - auth.service - signup with username: test, fullname: tasty (sid: AlEaWHuUaQzRS02LxD3MrmfP2G0Hio0C)
+07/07/2021, 19:01:21 - DEBUG - auth.route - new account created: {"username":"test","password":"123456","fullname":"tasty","_id":"60e5dde1a5ef5a6935d1085c"} (sid: AlEaWHuUaQzRS02LxD3MrmfP2G0Hio0C)
+07/07/2021, 19:01:21 - DEBUG - auth.service - login with username: test (sid: AlEaWHuUaQzRS02LxD3MrmfP2G0Hio0C)
+07/07/2021, 19:01:31 - DEBUG - Session ID is | 6VtqUaZdsbXUw84184dhiVaRYxs9EBOc 
+07/07/2021, 19:34:02 - DEBUG - Session ID is | 2vhW1YzRVpZpK42Dfer5-ZFEdcy622li 
+07/07/2021, 19:36:56 - DEBUG - Session ID is | 98QHUyg93zT5PAsUXCf7FKimzrj0BDlF 
+07/07/2021, 19:39:29 - DEBUG - Session ID is | xVrvwG9-iAJpOfXTkj_XrjDCntTq6B9U 
+07/07/2021, 19:40:13 - DEBUG - Session ID is | Bz484otCjd4lJ_vr1FqRtGLC0RaJeIXU 
+07/07/2021, 19:40:35 - DEBUG - Session ID is | 7P68gKktViVpX3c878JAVpynpZrHvg34 
+07/07/2021, 19:41:37 - DEBUG - Session ID is | FvKnT-uNsB1jvpX-JlYsSksiRGncN-YB 
+07/07/2021, 19:41:46 - DEBUG - Session ID is | 6tMv-q2u-h600sjuUFq3KKwDI-ds-fQ8 
+07/07/2021, 19:42:08 - DEBUG - Session ID is | 6Ci8h6RDtKY4jSmN3WJQVHlaklIXzqaB 
+07/07/2021, 19:43:20 - DEBUG - Session ID is | 6Ci8h6RDtKY4jSmN3WJQVHlaklIXzqaB 
+07/07/2021, 20:05:55 - DEBUG - Session ID is | UhbDpIhkewVu2tWDF08Jqq0O5vbqWXCI 
+07/07/2021, 20:06:22 - DEBUG - Session ID is | -SqWHHIx0WrQ8U-KhAI_gICZD2kIIO1P 
+07/07/2021, 20:06:30 - DEBUG - Session ID is | -SqWHHIx0WrQ8U-KhAI_gICZD2kIIO1P 
+07/07/2021, 20:06:31 - DEBUG - Session ID is | -SqWHHIx0WrQ8U-KhAI_gICZD2kIIO1P 
+07/07/2021, 20:06:35 - DEBUG - Session ID is | A6kZWyxlH_iNpu1I1U3hClwsoZmbSUNL 
+07/07/2021, 20:07:51 - DEBUG - Session ID is | B3KQDHXIMTZUfPG1nzEyJXz0fyNpheTh 
+07/07/2021, 20:07:53 - DEBUG - Session ID is | B3KQDHXIMTZUfPG1nzEyJXz0fyNpheTh 
+07/07/2021, 20:07:54 - DEBUG - Session ID is | B3KQDHXIMTZUfPG1nzEyJXz0fyNpheTh 
+07/07/2021, 20:10:38 - DEBUG - Session ID is | B3KQDHXIMTZUfPG1nzEyJXz0fyNpheTh 
+07/07/2021, 20:12:39 - DEBUG - Session ID is | YUw3yrqbEMQ7A4nc0HSjUHNGPapQH4sz 
+07/07/2021, 20:12:46 - DEBUG - Session ID is | YUw3yrqbEMQ7A4nc0HSjUHNGPapQH4sz 
+07/07/2021, 20:12:52 - DEBUG - Session ID is | YUw3yrqbEMQ7A4nc0HSjUHNGPapQH4sz 
+08/07/2021, 12:15:12 - DEBUG - Session ID is | 16Q_SLCdG8KFDu52BbeqUDuOFCppUXZR 
+08/07/2021, 12:15:42 - DEBUG - Session ID is | 5T-ZkVakc9n8wWppjynKc0eYhRfykgzu 
+08/07/2021, 12:16:55 - DEBUG - Session ID is | Sho4S5R7i64ZXU1FSf-Q8VbR3YtKb2IL 
+08/07/2021, 12:17:17 - DEBUG - Session ID is | Sho4S5R7i64ZXU1FSf-Q8VbR3YtKb2IL 
+08/07/2021, 12:17:20 - DEBUG - Session ID is | Sho4S5R7i64ZXU1FSf-Q8VbR3YtKb2IL 
+08/07/2021, 12:17:21 - DEBUG - Session ID is | Sho4S5R7i64ZXU1FSf-Q8VbR3YtKb2IL 
+08/07/2021, 12:18:04 - DEBUG - Session ID is | 15Ao3YLGSu7qW9Djm5ES1Oy5svF0-uxQ 
+08/07/2021, 12:18:18 - DEBUG - Session ID is | N_k_NzT6E8sQAAcbst0UOGzDFDR-h1SI 
+08/07/2021, 12:18:30 - DEBUG - Session ID is | 57xMOWEIg2SbM2eT63JuQ-rSLud_LVtg 
+08/07/2021, 12:26:06 - DEBUG - Session ID is | kBALVCLNxPQvuIBCnDObZj-GfFCHa3Jt 
+08/07/2021, 12:26:26 - DEBUG - Session ID is | mWIMZsouKGOclg1hRqE8iEZA-QUSVCCC 
+08/07/2021, 12:27:07 - INFO - Server is running on port: 3030 
+08/07/2021, 12:27:33 - DEBUG - Session ID is | Bgzep3x0vsdEoFstYirpyhEkXcnagVCH 
+08/07/2021, 12:27:42 - DEBUG - Session ID is | XDMsBZtHSEbAc9ZXRlk9IXi36_SVdC7y 
+08/07/2021, 12:27:47 - DEBUG - Session ID is | XDMsBZtHSEbAc9ZXRlk9IXi36_SVdC7y 
+08/07/2021, 12:30:00 - DEBUG - Session ID is | 0mqyk8GQFYaHC2mpvFW_evQqzn-S3iS_ 
+08/07/2021, 12:30:50 - DEBUG - Session ID is | z9dkGAUmAxEBimjIx2W16lXZb2-C15DG 
+08/07/2021, 12:32:36 - DEBUG - Session ID is | nY853H7sikRNj9Rk-fTQSOoj-zfdsomK 
+08/07/2021, 12:32:40 - DEBUG - Session ID is | RSJeQrYpUJvY33jnYe6caLg2gI09FFvy 
+08/07/2021, 12:32:47 - DEBUG - Session ID is | 4zk8XOnHwdbuAatg3XP4ru6d9CTUUsSF 
+08/07/2021, 12:33:21 - DEBUG - Session ID is | XyjQhlS6RaSVnNmQLN42TlEiWyb3qe-T 
+08/07/2021, 12:34:50 - INFO - Server is running on port: 3030 
+08/07/2021, 12:35:17 - INFO - Server is running on port: 3030 
+08/07/2021, 12:35:44 - INFO - Server is running on port: 3030 
+08/07/2021, 12:35:50 - INFO - Server is running on port: 3030 
+08/07/2021, 12:35:58 - INFO - Server is running on port: 3030 
+08/07/2021, 12:36:32 - INFO - Server is running on port: 3030 
+08/07/2021, 12:37:03 - DEBUG - Session ID is | jmEXlt3BuZkrlHJNOReMj0KCo3wzvNs8 
+08/07/2021, 12:37:05 - DEBUG - Session ID is | jmEXlt3BuZkrlHJNOReMj0KCo3wzvNs8 
+08/07/2021, 12:37:09 - DEBUG - Session ID is | jmEXlt3BuZkrlHJNOReMj0KCo3wzvNs8 
+08/07/2021, 12:37:10 - DEBUG - Session ID is | jmEXlt3BuZkrlHJNOReMj0KCo3wzvNs8 
+08/07/2021, 12:37:11 - DEBUG - Session ID is | jmEXlt3BuZkrlHJNOReMj0KCo3wzvNs8 
+08/07/2021, 12:37:15 - DEBUG - Session ID is | jmEXlt3BuZkrlHJNOReMj0KCo3wzvNs8 
+08/07/2021, 12:37:27 - DEBUG - Session ID is | ZprUWrEaxlb8P2v8ucTSzlWOLxjuCyQ0 
+08/07/2021, 12:37:34 - DEBUG - Session ID is | 4le1e7Hq9y3zueO398ozx4uba-Z8Q6fc 
+08/07/2021, 12:37:49 - DEBUG - Session ID is | CD1ItN4tma0FJNNAzvbjCh8ePfN-xoag 
+08/07/2021, 12:37:53 - DEBUG - Session ID is | CD1ItN4tma0FJNNAzvbjCh8ePfN-xoag 
+08/07/2021, 12:38:03 - DEBUG - Session ID is | AoKTz18ZowoxXKjhysCZVK2thpSEz_4p 
+08/07/2021, 12:38:07 - DEBUG - Session ID is | n4JvGGP1wH9qcsZa2HihAPomrQR0D0Ll 
+08/07/2021, 12:38:19 - DEBUG - Session ID is | oXdJN2_p2rd0xaozH-s120v6D7zKJcxa 
+08/07/2021, 12:38:23 - DEBUG - Session ID is | oXdJN2_p2rd0xaozH-s120v6D7zKJcxa 
+08/07/2021, 12:38:27 - DEBUG - Session ID is | s_rjfxGhtYT0xioIUIWXY-YAFmoVu2A8 
+08/07/2021, 12:38:36 - DEBUG - Session ID is | 2qLygZWDMP4yFiNlrLNTplVKnJTFbgy_ 
+08/07/2021, 12:38:39 - DEBUG - Session ID is | 2qLygZWDMP4yFiNlrLNTplVKnJTFbgy_ 
+08/07/2021, 12:38:40 - DEBUG - Session ID is | 2qLygZWDMP4yFiNlrLNTplVKnJTFbgy_ 
+08/07/2021, 15:58:02 - DEBUG - Session ID is | ceKTTX1RBOznyuJdCNV5R77X-e4OVyGa 
+08/07/2021, 15:58:07 - DEBUG - Session ID is | ceKTTX1RBOznyuJdCNV5R77X-e4OVyGa 
+08/07/2021, 15:58:19 - DEBUG - Session ID is | sm69SyvPEi3ihYiDLUFTzdEAF8od1fxH 
+08/07/2021, 19:47:09 - DEBUG - Session ID is | w3UYWY7Px-gpRzFB11XXvC5xp1oNWyGf 
+08/07/2021, 19:47:10 - DEBUG - Session ID is | 85NNgNUg7R_LNHx-DweWBnfONYMa_Dhz 
+08/07/2021, 19:47:46 - DEBUG - Session ID is | Ld0uZ4CdWk6U9qPhJaa6H_pwU09pbkj0 
+08/07/2021, 19:47:47 - DEBUG - Session ID is | DE8Z_8iFHBpEQgk7AEiT3Ko7ioDHkDOw 
+08/07/2021, 19:48:06 - DEBUG - Session ID is | qaKPM6-vFY5ennmqNV4irJyUQO9tKfEM 
+09/07/2021, 09:16:05 - DEBUG - Session ID is | gi59gfvpFRwzJJW624RUvlkeHv8Vlk5_ 
+09/07/2021, 09:16:05 - ERROR - while finding board undefined | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: ihaV2Q9GdBWRt8cELlrV58E7XeLJjNEG)
+09/07/2021, 09:16:05 - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: ihaV2Q9GdBWRt8cELlrV58E7XeLJjNEG)
+09/07/2021, 09:16:54 - ERROR - while finding board undefined | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: ihaV2Q9GdBWRt8cELlrV58E7XeLJjNEG)
+09/07/2021, 09:16:54 - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: ihaV2Q9GdBWRt8cELlrV58E7XeLJjNEG)
+09/07/2021, 09:16:54 - DEBUG - Session ID is | _agxx6Ag0l7J_ib7vga5dC7LSK7bSVbV 
+09/07/2021, 09:56:55 - DEBUG - Session ID is | OQu8yKUJkLkvGvc5McvKSaN_tv1D__5z 
+09/07/2021, 09:56:56 - ERROR - while finding board undefined | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: ihaV2Q9GdBWRt8cELlrV58E7XeLJjNEG)
+09/07/2021, 09:56:56 - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: ihaV2Q9GdBWRt8cELlrV58E7XeLJjNEG)
+09/07/2021, 09:56:57 - ERROR - while finding board undefined | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: ihaV2Q9GdBWRt8cELlrV58E7XeLJjNEG)
+09/07/2021, 09:56:57 - ERROR - Failed to get board | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (sid: ihaV2Q9GdBWRt8cELlrV58E7XeLJjNEG)
+09/07/2021, 09:56:57 - DEBUG - Session ID is | -FFaphKU4LbLOEHDlDF_POQzlJ17gOIz 
+10/07/2021, 23:37:25 - DEBUG - Session ID is | _kvU6B0NoWXV8tZe8WkyWkW8fXnPsvdN 
+10/07/2021, 23:40:48 - DEBUG - Session ID is | _kvU6B0NoWXV8tZe8WkyWkW8fXnPsvdN 
+10/07/2021, 23:41:19 - DEBUG - Session ID is | wlxu1zcxfGG7SzPzP8Q7bR91KUzhBG7e 
+10/07/2021, 23:43:02 - DEBUG - Session ID is | E53wzewa1JLpByk0KSoOqxsblYjrEQE0 
+10/07/2021, 23:50:45 - DEBUG - Session ID is | yDcTJ0fNyOZdy_6YItDX-8EIgwdvbzy8 
+10/07/2021, 23:51:18 - DEBUG - Session ID is | juEkmUcedffGo5uRweJCC-ZpeYxOmUFn 
+11/07/2021, 00:12:14 - DEBUG - Session ID is | juEkmUcedffGo5uRweJCC-ZpeYxOmUFn 
