@@ -1,13 +1,13 @@
-import React, { Component } from 'react'
+import React, {  useState } from 'react'
 import { utilService } from '../../services/utilService';
 import { socketService } from '../../services/socketService';
 import { userService } from '../../services/userService'
 
-export class TaskAdd extends Component {
-    state = {
-        txt: ''
-    }
-    onAddTask = async ({ target }) => {
+export const TaskAdd = (props) => {
+
+    const [txt, setTxt] = useState('')
+
+    const onAddTask = async ({ target }) => {
         const value = target.value
         if (!value) return
         const newTask = {
@@ -32,8 +32,8 @@ export class TaskAdd extends Component {
             byMember: userService.getLoggedinUser(),
         }
 
-        const newBoard = { ...this.props.board }
-        const groupId = this.props.group.id
+        const newBoard = { ...props.board }
+        const groupId = props.group.id
         const groupIdx = newBoard.groups.findIndex(group => group.id === groupId)
 
         const newActivity = {
@@ -47,46 +47,39 @@ export class TaskAdd extends Component {
             },
             group: {
                 id: groupId,
-                title: this.props.group.title
+                title: props.group.title
             }
         }
         if (!newBoard.groups[groupIdx].tasks || !newBoard.groups[groupIdx].tasks.length) newBoard.groups[groupIdx].tasks = [newTask]
         // else newBoard.groups[groupIdx].tasks.push(newTask)
         else newBoard.groups[groupIdx].tasks = [...newBoard.groups[groupIdx].tasks, newTask]
         newBoard.activities.unshift(newActivity)
-        await this.props.updateBoard(newBoard)
+        await props.updateBoard(newBoard)
         // console.log(`file: TaskAdd.jsx || line 47 || newBoard`, this.props.board)
         await socketService.emit('board updated', newBoard._id)
-        this.setState({ txt: '' })
+        setTxt('')
     }
-    handleUpdate = (ev) => {
+
+    const handleUpdate = (ev) => {
         if (ev.key === 'Enter' || ev.type === 'blur') {
-            this.setState({ isEditing: false },
-                () => {
-                    this.onAddTask(ev)
-                    // ev.target.blur()
-                })
+            onAddTask(ev)
         }
-        setTimeout(() => {
-            this.setState({ isEditing: true })
-        }, 500)
     }
 
-    handleChange = ({ target }) => {
-        const { name } = target
+    const handleChange = ({ target }) => {
         const { value } = target
-        this.setState({ ...this.state, [name]: value })
+        setTxt(value)
     }
 
-    render() {
-        const { txt } = this.state
         return (
             <div className="task-add flex">
-                <div className="group-color" style={{ backgroundColor: this.props.group.style.bgColor }}></div>
+                <div className="group-color" style={{ backgroundColor: props.group.style.bgColor }}></div>
                 <input autoComplete="off" name="txt" type="text" placeholder="+ New Task"
-                    onBlur={this.handleUpdate} onKeyUp={this.handleUpdate} value={txt} onChange={this.handleChange} />
-                <button className="add" onClick={this.handleUpdate}>Add</button>
+                    onBlur={handleUpdate} onKeyUp={handleUpdate} value={txt} onChange={handleChange} />
+                <button className="add" onClick={handleUpdate}>Add</button>
             </div>
         )
-    }
+    
 }
+
+

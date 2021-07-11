@@ -1,6 +1,6 @@
 import React from 'react'
 
-export function BoardFilterItem({ field, setFilter, type, filterBy }) {
+export const BoardFilterItem = ({ field, setFilter, type, filterBy }) => {
     // console.log(filterBy);
     let title
     let item
