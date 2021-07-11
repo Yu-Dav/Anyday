@@ -19,6 +19,7 @@
     }
 
     .filter-groups {
+      
         .filter-group {
             h1 {
                 font-size: rem(13px);
@@ -46,6 +47,11 @@
 
 @media (max-width: $mobile-breakpoint) {
     .board-filter {
-        left: 5px;
+        left: 50px;
+        width: 75%;
+        overflow-x: scroll;
+        .filter-groups {
+            flex-wrap: wrap;
+        }
     }
 }

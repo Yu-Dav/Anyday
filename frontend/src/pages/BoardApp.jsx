@@ -255,8 +255,8 @@ class _BoardApp extends Component {
         return (
             <div className="board-app-container flex" ref="board-app-container">
                 <SidebarApp />
-                {boardId && <SidebarNav onAddNewBoard={this.onAddNewBoard} isExpanded={false} onRemoveBoard={this.onRemoveBoard} />}
-                {!boardId && <SidebarNav onAddNewBoard={this.onAddNewBoard} isExpanded={true} onRemoveBoard={this.onRemoveBoard} />}
+                {boardId && <SidebarNav onAddNewBoard={this.onAddNewBoard} isExpandedProp={false} onRemoveBoard={this.onRemoveBoard} />}
+                {!boardId && <SidebarNav onAddNewBoard={this.onAddNewBoard} isExpandedProp={true} onRemoveBoard={this.onRemoveBoard} />}
 
                 {!boardId && <Welcome />}
                 {boardId && <div className="container board-container">

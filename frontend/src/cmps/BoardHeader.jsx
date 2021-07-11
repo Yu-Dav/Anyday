@@ -33,7 +33,7 @@ export function BoardHeader({ board, updateBoard, users }) {
 
 
     const getOtherMembers = () => {
-        const { board, users } = this.props
+        // const { board, users } = props
         var otherMembers = users.filter(user => {
             let filteredArr = board.members.filter(boardMem => {
                 return boardMem._id === user._id

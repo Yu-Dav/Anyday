@@ -25,10 +25,12 @@ const _SidebarNav = ({ isExpandedProp, onAddNewBoard, onRemoveBoard }) => {
     }, [])
 
     const onOpenNavbar = () => {
+        console.log('open nav');
         setIsExpanded(!isExpanded)
     }
 
     const onClickAway = () => {
+        console.log('open nav2');
         setIsExpanded(false)
     }
     const handleScroll = (ev) => {
@@ -40,10 +42,10 @@ const _SidebarNav = ({ isExpandedProp, onAddNewBoard, onRemoveBoard }) => {
             <i className={isExpanded ? "fas arrow arrow-left" : "fas arrow arrow-right"}
                 onClick={onOpenNavbar}></i>
             <MenuIcon className="hamburger" onClick={onOpenNavbar}></MenuIcon>
-            <Link to={`/`} ><img src={logo} alt="Logo" className="logo" title="Back to home page" /></Link>
             {isExpanded &&
                 <ClickAwayListener onClickAway={onClickAway}>
                     <div className="sidenav-open flex column">
+                    <Link className="logo" to={`/`} ><img src={logo} alt="Logo" className="logo" title="Back to home page" /></Link>
                         <h1>My Workspace</h1>
                         <div className="sidebar-ops">
                             <i onClick={onAddNewBoard} className="flex add-board-wrapper flex align-center">
