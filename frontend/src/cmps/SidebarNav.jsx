@@ -22,6 +22,7 @@ const _SidebarNav = ({ isExpandedProp, onAddNewBoard, onRemoveBoard }) => {
     useEffect(() => {
         dispatch(loadBoards())
         window.addEventListener('scroll', handleScroll);
+            //  eslint-disable-next-line
     }, [])
 
     const onOpenNavbar = () => {

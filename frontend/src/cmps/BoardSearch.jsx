@@ -8,6 +8,7 @@ export const BoardSearch = (props) => {
 
     useEffect(() => {
         props.filterBoard({ txt })
+            //  eslint-disable-next-line
     }, [txt])
 
     const handleChange = async (ev) => {

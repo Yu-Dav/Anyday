@@ -14,6 +14,7 @@ import TableChartOutlinedIcon from '@material-ui/icons/TableChartOutlined';
 export const BoardCtrlPanel = ({ addNewGroup, filterBoard, board, loadBoard, filterBy, onChangeView, isMap }) => {
     const [isSearching, setIsSearching] = useState(false)
     const [isFiltering, setIsFiltering] = useState(false)
+    //  eslint-disable-next-line
     const [view, setView] = useState('board-view')
     // const onSearchClicked = () => {
     //     setIsSearching(!isSearching)

@@ -14,7 +14,7 @@ export const CellCreationLog = ({ task }) => {
         <div className="cell creation-log">
             <div className="flex justify-center align-center">
                 <Avatar key={byMember._id} alt={byMember.username}
-                    src={byMember.imgUrl} style={{ width: '25px', height: '25px', display: 'inline-block', marginRight: '10px', display: 'flex' }} />  {date}</div>
+                    src={byMember.imgUrl} style={{ width: '25px', height: '25px', marginRight: '10px', display: 'flex' }} />  {date}</div>
         </div>
     )
 

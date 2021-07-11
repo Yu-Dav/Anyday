@@ -17,6 +17,7 @@ export const CellDate = ({ task, group, board, updateBoard }) => {
     const [isHover, setIsHover] = useState(false)
     useEffect(() => {
         setIsDateSet((!task.timeline[0] && !task.timeline[1]) ? false : true)
+            //  eslint-disable-next-line
     }, [])
     const setDateRange = (newRange) => {
         if (!newRange[1]) {

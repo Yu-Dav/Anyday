@@ -7,6 +7,7 @@ const _MapContainer = (props) => {
 
     useEffect(() => {
         setPosition(props.pos)
+            //  eslint-disable-next-line
     }, [])
 
     return (
@@ -33,9 +34,9 @@ export const GoogleMap = GoogleApiWrapper((props) => ({
     position: props.pos,
     apiKey: ('AIzaSyA1TpSPtsJIgXzeaeenK7R2XPSz5MzrSkk')
 }))(_MapContainer)
-{/* // AIzaSyAUSc1O5i0XVinJmXD7929Ux1jhjs2NzMw
+/* // AIzaSyAUSc1O5i0XVinJmXD7929Ux1jhjs2NzMw
 //AIzaSyD-Sbj-DvVI1Rf0_mNW0BVF0_9EIzpsPUs
 // AIzaSyALrFJBnFDGcCiP2nGHHWujEFLSpiABtAw
-// AIzaSyC7SVSPj8l8YTwLoDGTEtzI4CII1V8-qF0 */}
+// AIzaSyC7SVSPj8l8YTwLoDGTEtzI4CII1V8-qF0 */
 
 
