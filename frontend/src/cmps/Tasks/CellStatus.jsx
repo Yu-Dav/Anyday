@@ -3,10 +3,11 @@ import { ClickAwayListener } from '@material-ui/core'
 import { socketService } from '../../services/socketService'
 import { userService } from '../../services/userService'
 import { utilService } from '../../services/utilService'
-import { EditableCmp } from '../EditableCmp'
+// import { EditableCmp } from '../EditableCmp'
 
-export function CellStatus({ board, group, task, updateBoard }) {
-    const [open, setOpen] = React.useState(false)
+export const CellStatus = ({ board, group, task, updateBoard }) => {
+
+    const [open, setOpen] = useState(false)
 
     const handleUpdate = async ({ target }) => {
         const newStatus = getStatusById(target.dataset.label)
@@ -48,9 +49,6 @@ export function CellStatus({ board, group, task, updateBoard }) {
     // const onUpdateNewStatus=()=>{
     //     console.log('you need to write a new one');
     // }
-
-
-
 
     const { status } = task
     const { statusLabels } = board

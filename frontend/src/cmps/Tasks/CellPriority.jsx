@@ -4,9 +4,10 @@ import { socketService } from '../../services/socketService'
 import { utilService } from '../../services/utilService'
 import { userService } from '../../services/userService'
 
-export function CellPriority ({board,task,group,updateBoard,})  {
-    const [open, setOpen] = React.useState(false)
- 
+export const CellPriority = ({ board, task, group, updateBoard, }) => {
+
+    const [open, setOpen] = useState(false)
+
     const handleUpdate = async ({ target }) => {
         const selectedPriority = getPriorityById(target.dataset.label)
         task.priority = selectedPriority
@@ -41,36 +42,36 @@ export function CellPriority ({board,task,group,updateBoard,})  {
     const handleClickAway = () => {
         setOpen(false)
     }
-    
-        const { priority } = task
-        const { priorityLabels } = board
-        const classNameDot = priority.title === '.' ? 'no-title': ''
-        return (
-            <ClickAwayListener onClickAway={handleClickAway}>
-                <div className="cell label" style={{ backgroundColor: priority.color }} onClick={onOpenSelector}>
 
-                    <div className={`status-priority-dog-ear ${classNameDot}`}>
-                        {priority.title}
-                    </div>
+    const { priority } = task
+    const { priorityLabels } = board
+    const classNameDot = priority.title === '.' ? 'no-title' : ''
+    return (
+        <ClickAwayListener onClickAway={handleClickAway}>
+            <div className="cell label" style={{ backgroundColor: priority.color }} onClick={onOpenSelector}>
 
-                    {open && <div>
-                        <div className=" fade-in modal-container relative">
-                            <div className=" triangle-with-shadow relative"></div>
-                            <div className=" floating-label-select">
-                                {priorityLabels.map((label) => {
-                                    return <div className="label-option" onClick={handleUpdate} key={label.id}
-                                        data-label={label.id} style={{ backgroundColor: label.color }}>
-                                        {label.title}
-                                    </div>
-                                })}
-                            </div>
-                        </div>
-                    </div>
-                    }
+                <div className={`status-priority-dog-ear ${classNameDot}`}>
+                    {priority.title}
                 </div>
 
-            </ClickAwayListener>
-        )
-    
+                {open && <div>
+                    <div className=" fade-in modal-container relative">
+                        <div className=" triangle-with-shadow relative"></div>
+                        <div className=" floating-label-select">
+                            {priorityLabels.map((label) => {
+                                return <div className="label-option" onClick={handleUpdate} key={label.id}
+                                    data-label={label.id} style={{ backgroundColor: label.color }}>
+                                    {label.title}
+                                </div>
+                            })}
+                        </div>
+                    </div>
+                </div>
+                }
+            </div>
+
+        </ClickAwayListener>
+    )
+
 }
 

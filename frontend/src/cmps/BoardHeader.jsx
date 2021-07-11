@@ -3,15 +3,12 @@ import { ClickAwayListener } from '@material-ui/core'
 import { EditableCmp } from './EditableCmp'
 import { ReactComponent as StarSvg } from '../assets/imgs/svg/star.svg'
 import { socketService } from '../services/socketService'
-import { ReactComponent as User } from '../assets/imgs/avatars/016-user.svg'
-
+// import { ReactComponent as User } from '../assets/imgs/avatars/016-user.svg'
 import Avatar from '@material-ui/core/Avatar';
 
 export function BoardHeader({ board, updateBoard, users }) {
-    const [open, setOpen] = React.useState(false)
-    // state = {
-    //     isExpanded: false
-    // }
+    
+    const [open, setOpen] = useState(false)
 
     const onUpdateTitle = async ({ target }) => {
         const { name } = target.dataset
@@ -31,7 +28,6 @@ export function BoardHeader({ board, updateBoard, users }) {
         newBoard.members.unshift(user)
         await updateBoard(newBoard)
         socketService.emit('board updated', newBoard._id)
-        // this.setState({ ...this.state, isExpanded: false })
         setOpen(false)
     }
 
@@ -54,17 +50,13 @@ export function BoardHeader({ board, updateBoard, users }) {
     }
 
     const handleClickAway = () => {
-        // this.setState({ ...this.state, isExpanded: false })
         setOpen(false)
     }
 
     const onOpenSelector = () => {
-        // this.setState({ ...this.state, isExpanded: !this.state.isExpanded })
         setOpen(!open)
     }
 
-    // const { board, users } = this.props
-    // const { isExpanded } = this.state
     return (
         <div className="board-header">
             <div className="header-top flex space-between">

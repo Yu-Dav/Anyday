@@ -6,12 +6,12 @@ import { utilService } from '../../services/utilService'
 import { userService } from '../../services/userService'
 import { ReactComponent as DropDownArrow } from '../../assets/imgs/svg/dropDownArrow.svg'
 
-export function GroupMenu({ group, board, updateBoard }) {
-    const [isExpanded, setOpen] = React.useState(false)
-    const [isColor, setColor] = React.useState(false)
+export const GroupMenu = ({ group, board, updateBoard }) => {
+    const [isExpanded, setOpen] = useState(false)
+    const [isColor, setColor] = useState(false)
 
-    const onDeleteGroup = async (ev) => {
-        const newBoard = board
+    const onDeleteGroup = async () => {
+        const newBoard = {...board}
         const groupId = group.id
         const groupIdx = newBoard.groups.findIndex(group => group.id === groupId)
         const newActivity = {
@@ -32,7 +32,7 @@ export function GroupMenu({ group, board, updateBoard }) {
 
     }
     const onChangeGroupColor = async (ev) => {
-        const newBoard = board
+        const newBoard = {...board}
         const groupId = group.id
         const groupIdx = newBoard.groups.findIndex(group => group.id === groupId)
         const { color } = ev.target.dataset
@@ -48,6 +48,7 @@ export function GroupMenu({ group, board, updateBoard }) {
             }
         }
         newBoard.groups[groupIdx].style.bgColor = color
+        newBoard.activities.unshift(newActivity)
         await updateBoard(newBoard)
         await socketService.emit('board updated', newBoard._id);
         setOpen(false)

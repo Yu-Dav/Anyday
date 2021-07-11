@@ -1,12 +1,10 @@
 import React from 'react'
 import Avatar from '@material-ui/core/Avatar';
 
-export function CellCreationLog({ task }) {
+export const CellCreationLog = ({ task }) => {
     const getTime = (timestamp) => {
         const options = { day: 'numeric', month: 'long', };
         const date = new Date(timestamp).toLocaleDateString('en-UK', options)
-        let time = new Date(timestamp).toLocaleTimeString('en-UK')
-        time = time.slice(0, 5)
         return date
     }
 

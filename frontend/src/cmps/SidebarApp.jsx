@@ -5,11 +5,11 @@ import { userService } from '../services/userService'
 import { withRouter } from 'react-router-dom';
 
 function _SidebarApp({ history }) {
-    const [open, setOpen] = React.useState(false)
+    // const [open, setOpen] = useState(false)
 
-    const onOpenNotifi = () => {
-        setOpen(!open)
-    }
+    // const onOpenNotifi = () => {
+    //     setOpen(!open)
+    // }
 
     const onLogOut = () => {
         userService.logout()
@@ -18,7 +18,7 @@ function _SidebarApp({ history }) {
 
 
     const user = userService.getLoggedinUser()
-    let fullname = user?.fullname || 'Guest'
+    let fullname = user.fullname 
 
     return (
         <section className="sidebar-app">

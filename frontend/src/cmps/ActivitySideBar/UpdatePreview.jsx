@@ -7,13 +7,6 @@ import { ReactComponent as CrossSvg } from '../../assets/imgs/svg/cross.svg'
 
 export const UpdatePreview = ({ comment, onUpdateComment, onRemoveComment, imgUrl }) => {
 
-    // function getTime(timestamp) {
-    //     const options = { year: 'numeric', day: 'numeric', month: 'long', };
-    //     const date = new Date(timestamp).toLocaleDateString('en-UK', options)
-    //     let time = new Date(timestamp).toLocaleTimeString('en-UK')
-    //     time = time.slice(0, 5)
-    //     return date
-    // }
     return (
         <div className="update-preview">
             <div className="flex space-between">

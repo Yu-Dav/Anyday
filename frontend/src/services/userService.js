@@ -1,4 +1,4 @@
-import { storageService } from './asyncStorageService';
+// import { storageService } from './asyncStorageService';
 import { httpService } from './httpService';
 import { utilService } from './utilService';
 
@@ -15,8 +15,6 @@ export const userService = {
 
 window.userService = userService;
 // Note: due to async, must run one by one...
-// userService.signup({fullname: 'Puki Norma', username: 'user1', password:'123',score: 100, isAdmin: false})
-// userService.signup({fullname: 'Master Adminov', username: 'admin', password:'123', score: 100, isAdmin: true})
 
 function getUsers() {
     // return storageService.query('user')

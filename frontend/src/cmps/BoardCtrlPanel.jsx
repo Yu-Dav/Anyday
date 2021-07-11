@@ -7,7 +7,7 @@ import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 import SearchIcon from '@material-ui/icons/Search';
 import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
 import TableChartOutlinedIcon from '@material-ui/icons/TableChartOutlined';
-import { onSetFilter } from '../store/actions/boardActions';
+
 
 export class BoardCtrlPanel extends Component {
     state = {
@@ -26,7 +26,7 @@ export class BoardCtrlPanel extends Component {
         this.setState({ ...this.state, isFiltering: false })
     }
     render() {
-        const { isSearching, isFiltering, view } = this.state
+        const { isSearching, isFiltering } = this.state
         return (
             <div className="board-ops flex space-between ">
                 <div className="left-ctrl flex">

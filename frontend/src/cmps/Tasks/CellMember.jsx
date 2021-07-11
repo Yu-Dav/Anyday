@@ -1,32 +1,22 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 import Grow from '@material-ui/core/Grow';
 import Paper from '@material-ui/core/Paper';
 import Popper from '@material-ui/core/Popper';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
-import { makeStyles } from '@material-ui/core/styles';
 import { socketService } from '../../services/socketService'
 import Avatar from '@material-ui/core/Avatar';
 import AvatarGroup from '@material-ui/lab/AvatarGroup';
 import { utilService } from '../../services/utilService';
 import { userService } from '../../services/userService';
 
-const useStyles = makeStyles((theme) => ({
-    root: {
-        display: 'flex',
-    },
-    paper: {
-        marginRight: theme.spacing(2),
-    },
-}));
 
-export function CellMember({ task, group, board, updateBoard }) {
+export const CellMember = ({ task, group, board, updateBoard }) => {
     const taskMembers = task.members
     const boardMembers = board.members
-    const classes = useStyles();
-    const [open, setOpen] = React.useState(false);
-    const anchorRef = React.useRef(null);
+    const [open, setOpen] = useState(false);
+    const anchorRef = useRef(null);
     const handleToggle = () => {
         setOpen((prevOpen) => !prevOpen);
     };

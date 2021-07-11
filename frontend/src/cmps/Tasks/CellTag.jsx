@@ -6,8 +6,8 @@ import { utilService } from '../../services/utilService'
 import { userService } from '../../services/userService'
 
 
-export function CellTag({ board, task, group, updateBoard }) {
-    const [open, setOpen] = React.useState(false)
+export const CellTag = ({ board, task, group, updateBoard }) => {
+    const [open, setOpen] = useState(false)
 
     const handleUpdate = async ({ target }) => {
         const selectedTag = getTagById(target.dataset.tag)
@@ -115,7 +115,6 @@ export function CellTag({ board, task, group, updateBoard }) {
         });
         return otherTags
     }
-
 
 
     const { tags } = task
