@@ -9,16 +9,24 @@ import { userService } from '../../services/userService';
 
 // registerLocale('uk', uk)
 
-export const CellDate = ({ task, group, board, updateBoard }) => {
+export const CellDate = (props) => {
+    const { task, group, board, updateBoard } = props
     const [startDate, setStartDate] = useState((!task.timeline[0]) ? null : new Date(task.timeline[0]))
     const [endDate, setEndDate] = useState((!task.timeline[1]) ? null : new Date(task.timeline[1]))
     const [isDateSet, setIsDateSet] = useState(false)
     const [isSettingDate, setIsSettingDate] = useState(false)
     const [isHover, setIsHover] = useState(false)
+    const { bgColor } = group.style
+
     useEffect(() => {
         setIsDateSet((!task.timeline[0] && !task.timeline[1]) ? false : true)
             //  eslint-disable-next-line
     }, [])
+    useEffect(() => {
+        if (!endDate) return
+        onSetTimeline()
+            //  eslint-disable-next-line
+    }, [endDate])
     const setDateRange = (newRange) => {
         if (!newRange[1]) {
             setStartDate(newRange[0])
@@ -27,7 +35,7 @@ export const CellDate = ({ task, group, board, updateBoard }) => {
             return
         }
         setEndDate(newRange[1])
-        onSetTimeline()
+        console.log(`file: CellDate.jsx || line 33 || endDate`, endDate)
     }
 
     const onSetTimeline = async () => {
@@ -83,7 +91,6 @@ export const CellDate = ({ task, group, board, updateBoard }) => {
         if (percent > 100) percent = 100
         return percent
     }
-    const { bgColor } = group.style
     return (
         <div className="timeline" onMouseEnter={onEnter} onMouseLeave={onLeave}>
 

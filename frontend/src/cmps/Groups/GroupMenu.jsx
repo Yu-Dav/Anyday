@@ -38,7 +38,7 @@ export const GroupMenu = ({ group, board, updateBoard }) => {
         const { color } = ev.target.dataset
         const newActivity = {
             id: utilService.makeId(),
-            type: 'Group color changed',
+            type: 'Color changed',
             createdAt: Date.now(),
             byMember: userService.getLoggedinUser(),
             task: null,

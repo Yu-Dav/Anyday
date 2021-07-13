@@ -3,7 +3,6 @@ import { GroupPreview } from './GroupPreview'
 import loader from '../../assets/imgs/loader.gif'
 
 export function GroupList({ groups, board, updateBoard, currUser, setMap}) {
-console.log('groups in group list', groups);
     if (!groups) return <div className="loader-no-groups">
         <img src={loader} alt="Loader" />
         </div>
