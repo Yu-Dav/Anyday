@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 // import { registerLocale, setDefaultLocale } from "react-datepicker";
@@ -17,13 +17,16 @@ export const CellDate = (props) => {
     const [isSettingDate, setIsSettingDate] = useState(false)
     const [isHover, setIsHover] = useState(false)
     const { bgColor } = group.style
+    const firstUpdate = useRef(true);
 
     useEffect(() => {
         setIsDateSet((!task.timeline[0] && !task.timeline[1]) ? false : true)
             //  eslint-disable-next-line
     }, [])
     useEffect(() => {
+        if (firstUpdate.current) return
         if (!endDate) return
+        firstUpdate.current = false
         onSetTimeline()
             //  eslint-disable-next-line
     }, [endDate])
