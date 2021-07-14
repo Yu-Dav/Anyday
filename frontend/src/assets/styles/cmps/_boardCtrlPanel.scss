@@ -58,7 +58,8 @@
         }
     }
 
-    .btn-search svg {
+    .btn-search svg,
+    .board-search svg {
         width : 20px;
         height: 20px;
     }
@@ -118,7 +119,7 @@
         z-index   : 6;
 
         .btn-add-group {
-            width   : 140px;
+            min-width   : 100px;
             overflow: hidden;
             // text-overflow: ellipsis;
         }

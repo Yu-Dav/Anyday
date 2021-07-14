@@ -21,15 +21,22 @@ export const CellDate = (props) => {
 
     useEffect(() => {
         setIsDateSet((!task.timeline[0] && !task.timeline[1]) ? false : true)
+        return () => {
+            firstUpdate.current = true
+        }
             //  eslint-disable-next-line
     }, [])
+   
     useEffect(() => {
-        if (firstUpdate.current) return
+        if (firstUpdate.current) {
+            firstUpdate.current = false
+            return
+        } 
         if (!endDate) return
-        firstUpdate.current = false
         onSetTimeline()
             //  eslint-disable-next-line
     }, [endDate])
+    
     const setDateRange = (newRange) => {
         if (!newRange[1]) {
             setStartDate(newRange[0])
@@ -38,7 +45,6 @@ export const CellDate = (props) => {
             return
         }
         setEndDate(newRange[1])
-        console.log(`file: CellDate.jsx || line 33 || endDate`, endDate)
     }
 
     const onSetTimeline = async () => {

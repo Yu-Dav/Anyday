@@ -31,7 +31,10 @@ export const BoardCtrlPanel = ({ addNewGroup, filterBoard, board, loadBoard, fil
         <div className="board-ops flex space-between">
             <div className="left-ctrl flex">
                 <button className="btn-add-group" onClick={addNewGroup}>New Group</button>
-                <button onClick={() => setIsSearching(!isSearching)} className="btn-search flex align-center "> <SearchIcon></SearchIcon>Search</button>
+                {!isSearching &&
+                    <button onClick={() => setIsSearching(!isSearching)} className="btn-search flex align-center "> <SearchIcon></SearchIcon>Search</button>
+                }
+
                 {isSearching &&
                     <BoardSearch filterBoard={filterBoard} setIsSearching={setIsSearching} />
                 }
