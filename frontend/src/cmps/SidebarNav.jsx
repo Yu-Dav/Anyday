@@ -13,10 +13,7 @@ import { AlertDialog } from '../cmps/Dialog'
 const _SidebarNav = ({ isExpandedProp, onAddNewBoard, onRemoveBoard }) => {
 
     const [isExpanded, setIsExpanded] = useState(isExpandedProp)
-    // const [searchBy, setSearchBy] = useState('')
     const boards = useSelector(state => state.boardModule.boards)
-    // const currBoard = useSelector(state => state.boardModule.currBoard)
-    // const filterBy = useSelector(state => state.boardModule.filterBy)
 
     const dispatch = useDispatch()
     useEffect(() => {
@@ -37,7 +34,6 @@ const _SidebarNav = ({ isExpandedProp, onAddNewBoard, onRemoveBoard }) => {
     }
     return (
         <section className={isExpanded ? "sidebar-nav is-expanded" : "sidebar-nav"} onScroll={handleScroll}>
-            {/* Icon in desktop - arrow */}
             <i className={isExpanded ? "fas arrow arrow-left" : "fas arrow arrow-right"}
                 onClick={onOpenNavbar}></i>
             <MenuIcon className="hamburger" onClick={onOpenNavbar}></MenuIcon>
