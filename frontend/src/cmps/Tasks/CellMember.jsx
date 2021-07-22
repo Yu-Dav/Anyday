@@ -102,7 +102,6 @@ export const CellMember = ({ task, group, board, updateBoard }) => {
         });
         return otherMembers
     }
-
     return (
         <div ref={anchorRef}
             aria-controls={open ? 'menu-list-grow' : undefined}

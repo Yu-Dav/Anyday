@@ -1,4 +1,4 @@
-import React, {  useState } from 'react'
+import React, { useState, useRef } from 'react'
 import { utilService } from '../../services/utilService';
 import { socketService } from '../../services/socketService';
 import { userService } from '../../services/userService'
@@ -6,6 +6,7 @@ import { userService } from '../../services/userService'
 export const TaskAdd = (props) => {
 
     const [txt, setTxt] = useState('')
+    const inputEl = useRef()
 
     const onAddTask = async ({ target }) => {
         const value = target.value
@@ -35,7 +36,6 @@ export const TaskAdd = (props) => {
         const newBoard = { ...props.board }
         const groupId = props.group.id
         const groupIdx = newBoard.groups.findIndex(group => group.id === groupId)
-
         const newActivity = {
             id: utilService.makeId(),
             type: 'Task added',
@@ -71,15 +71,20 @@ export const TaskAdd = (props) => {
         setTxt(value)
     }
 
-        return (
-            <div className="task-add flex">
-                <div className="group-color" style={{ backgroundColor: props.group.style.bgColor }}></div>
-                <input autoComplete="off" name="txt" type="text" placeholder="+ New Task"
-                    onBlur={handleUpdate} onKeyUp={handleUpdate} value={txt} onChange={handleChange} />
-                <button className="add" onClick={handleUpdate}>Add</button>
-            </div>
-        )
-    
+    const onFocusInput = () => {
+        inputEl.current.focus()
+    }
+
+    return (
+        <div className="task-add flex" onClick={onFocusInput}>
+            <div className="group-color" style={{ backgroundColor: props.group.style.bgColor }}></div>
+            <input autoComplete="off" name="txt" type="text" placeholder="+ New Task"
+                onBlur={handleUpdate} onKeyUp={handleUpdate} value={txt} onChange={handleChange} 
+                ref={inputEl}/>
+            <button className="add" onClick={handleUpdate}>Add</button>
+        </div>
+    )
+
 }
 
 

@@ -21,6 +21,7 @@
         left             : 163px;
         border-inline-end: none;
         width: 380px;
+        flex: 1;
         &:focus {
             outline: none;
         }
@@ -48,8 +49,8 @@
         border          : none;
         transition      : 0.3s ease;
         font-family     : roboto-light, helvetica, sans-serif;
-        position: fixed;
-        right: 30px;
+        position: sticky;
+        // right: 30px;
 
     }
 }
