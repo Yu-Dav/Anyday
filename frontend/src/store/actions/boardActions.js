@@ -17,7 +17,7 @@ export function loadBoard(boardId) {
     return async (dispatch) => {
         try {
             const board = await boardService.getById(boardId);
-            console.log(`SET BOARD action for`, board._id, 'title:', board.title);
+            // console.log(`SET BOARD action for`, board._id, 'title:', board.title);
             dispatch({ type: 'SET_BOARD', board });
             return board;
         } catch (err) {
@@ -43,7 +43,7 @@ export function addBoard(board) {
     return async (dispatch) => {
         try {
             const addedBoard = await boardService.add(board);
-            console.log('added board', addedBoard);
+            // console.log('added board', addedBoard);
             dispatch({ type: 'ADD_BOARD', board: addedBoard });
         } catch (err) {
             console.log('BoardActions: err in addBoard', err);
@@ -63,7 +63,7 @@ export function removeBoard(boardId) {
 }
 
 export function onSetFilter(filterBy) {
-    console.log('set filter in store');
+    // console.log('set filter in store');
     return (dispatch) => {
         dispatch({ type: 'SET_FILTER', filterBy });
     };
