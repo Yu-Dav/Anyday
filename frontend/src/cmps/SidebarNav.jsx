@@ -19,7 +19,7 @@ const _SidebarNav = ({ isExpandedProp, onAddNewBoard, onRemoveBoard }) => {
     useEffect(() => {
         dispatch(loadBoards())
         window.addEventListener('scroll', handleScroll);
-            //  eslint-disable-next-line
+        //  eslint-disable-next-line
     }, [])
 
     const onOpenNavbar = () => {
@@ -32,6 +32,12 @@ const _SidebarNav = ({ isExpandedProp, onAddNewBoard, onRemoveBoard }) => {
     const handleScroll = (ev) => {
         if (ev.currentTarget.scrollX) setIsExpanded(false)
     }
+
+    const isLockedBoard = (boardId) => {
+        if (boardId === '60f941e48936c549156ae58b' || boardId === '60f941fb8936c549156aed89') return true
+        return false
+    }
+
     return (
         <section className={isExpanded ? "sidebar-nav is-expanded" : "sidebar-nav"} onScroll={handleScroll}>
             <i className={isExpanded ? "fas arrow arrow-left" : "fas arrow arrow-right"}
@@ -40,7 +46,7 @@ const _SidebarNav = ({ isExpandedProp, onAddNewBoard, onRemoveBoard }) => {
             {isExpanded &&
                 <ClickAwayListener onClickAway={onClickAway}>
                     <div className="sidenav-open flex column">
-                    <Link className="logo" to={`/`} ><img src={logo} alt="Logo" className="logo" title="Back to home page" /></Link>
+                        <Link className="logo" to={`/`} ><img src={logo} alt="Logo" className="logo" title="Back to home page" /></Link>
                         <h1>My Workspace</h1>
                         <div className="sidebar-ops">
                             <i onClick={onAddNewBoard} className="flex add-board-wrapper flex align-center">
@@ -52,9 +58,10 @@ const _SidebarNav = ({ isExpandedProp, onAddNewBoard, onRemoveBoard }) => {
                             {boards.map(board =>
                                 <div className="flex" key={board._id}>
                                     <Link to={`/board/${board._id}`} className="flex align-center">
-                                        <TableChartOutlinedIcon style={{ fontSize: '18px', color: '#898a8f', cursor: 'pointer', marginRight: '4px' }} /> {board.title}
+                                        <TableChartOutlinedIcon style={{ fontSize: '18px', color: '#898a8f', cursor: 'pointer', marginRight: '4px' }} />
+                                        {board.title}
                                     </Link>
-                                    <AlertDialog onRemoveBoard={onRemoveBoard} boardId={board._id} />
+                                    {!isLockedBoard(board._id) && <AlertDialog onRemoveBoard={onRemoveBoard} boardId={board._id} />}
                                 </div>
                             )}
                         </div>
