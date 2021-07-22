@@ -16,7 +16,6 @@ export const ActivityModal = (props) => {
     const [user, setUser] = useState(null)
     const dispatch = useDispatch()
     const { currBoard } = useSelector(state => state.boardModule)
-    console.log(currBoard);
 
     useEffect(() => {
         console.log('did mount');
