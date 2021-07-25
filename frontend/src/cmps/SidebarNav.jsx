@@ -34,7 +34,7 @@ const _SidebarNav = ({ isExpandedProp, onAddNewBoard, onRemoveBoard }) => {
     }
 
     const isLockedBoard = (boardId) => {
-        if (boardId === '60f941e48936c549156ae58b' || boardId === '60f941fb8936c549156aed89') return true
+        if (boardId === '60f9b4d68936c5491595e73b' || boardId === '60f9b4ef8936c5491595efce') return true
         return false
     }
 
