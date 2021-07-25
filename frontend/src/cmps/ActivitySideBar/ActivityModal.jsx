@@ -18,7 +18,6 @@ export const ActivityModal = (props) => {
     const { currBoard } = useSelector(state => state.boardModule)
 
     useEffect(() => {
-        console.log('did mount');
         const { boardId } = props.match.params
         const currUser = userService.getLoggedinUser()
         setUser(currUser)
@@ -38,9 +37,6 @@ export const ActivityModal = (props) => {
 
     const loadTask = (taskId) => {
         const { groupId } = props.match.params
-        console.log(groupId)
-        // const { currBoard } = props
-        console.log('curr board', currBoard);
         const group = currBoard['groups'].find(group => group.id === groupId)
         const task = group.tasks.find(task => task.id === taskId)
         setTask(task)
@@ -71,7 +67,6 @@ export const ActivityModal = (props) => {
         window.location.hash = `/board/${currBoard._id}`
     }
 
-    // const { currBoard } = props
     const { groupId } = props.match.params
     if (!currBoard) return <div className="activity-modal">loading</div>
     return (

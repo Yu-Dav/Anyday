@@ -10,8 +10,6 @@ const initialState = {
     },
 };
 
-// const idx = state.boards.findIndex(board => board._id === action.board._id)
-// state.boards.splice(idx, 1, action.board)
 
 export function boardReducer(state = initialState, action) {
     switch (action.type) {
@@ -41,7 +39,6 @@ export function boardReducer(state = initialState, action) {
                     board._id === action.board._id ? action.board : board
                 ),
             };
-        // return { ...state,boards: [action.board, ...state.boards.filter(board => action.board._id !== board._id)],  currBoard: {...action.board}}
         case 'LOADING_BOARDS':
             return { ...state, isLoading: action.isLoading, err: null };
 
@@ -49,11 +46,6 @@ export function boardReducer(state = initialState, action) {
             console.log('set filter in reducer', action.filterBy);
             return { ...state, filterBy: action.filterBy };
 
-        // case 'SET_SEARCH':
-        //     return { ...state, currSearchBy: action.searchTxt }
-
-        // case 'GET_FILTERD_TODOS':
-        //     return { ...state, todos: [...action.todos] }
         default:
             return state;
     }

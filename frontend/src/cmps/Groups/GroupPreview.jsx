@@ -16,7 +16,6 @@ export function GroupPreview({ group, board, updateBoard, index, currUser, setMa
                 ref={dragProvided.innerRef}
                 >
                     <GroupMenu group={group} board={board} updateBoard={updateBoard} />
-                    {/* <i className="fas group-handle" {...dragProvided.dragHandleProps}></i> */}
                     <div className="group-preview">
                         <GroupHeader group={group} board={board} updateBoard={updateBoard} drag={dragProvided.dragHandleProps}></GroupHeader>
                         <Droppable droppableId={group.id} type="task">
@@ -24,7 +23,6 @@ export function GroupPreview({ group, board, updateBoard, index, currUser, setMa
                                 <div
                                     ref={provided.innerRef}
                                     {...provided.droppableProps}
-                                    // isDraggingOver={snapshot.isDraggingOver}
                                 >
                                     {tasks.map((task, index) => <TaskPreview index={index} board={board} group={group}
                                         key={task.id} task={task} updateBoard={updateBoard} setMap={setMap}/>)}

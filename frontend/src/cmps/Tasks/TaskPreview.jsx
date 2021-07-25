@@ -46,7 +46,6 @@ export const TaskPreview= ({ task, group, board, updateBoard, index, setMap }) =
                         ref={provided.innerRef}>
                         <div className="group-color" style={{ backgroundColor: group.style.bgColor }}></div>
                         {board.cellTypes.map((cellType, index) => <DynamicCell onRemoveTask={onRemoveTask} key={index} type={cellType} task={task} group={group} board={board} updateBoard={updateBoard} setMap={setMap}/>)}
-                                                           {/* adding key to the map above causes an error... why? */}                          
                     </div>
                 )}
             </Draggable>

@@ -42,10 +42,12 @@ class _BoardApp extends Component {
             this.setState({ ...this.state, currUser: user, isMap: false })
         }
     }
+
     componentWillUnmount() {
         socketService.terminate()
         socketService.off('join new board')
     }
+
     async componentDidUpdate(prevProps) {
         const prevId = prevProps.match.params.boardId
         const currId = this.props.match.params.boardId
@@ -237,6 +239,7 @@ class _BoardApp extends Component {
         this.props.addBoard()
 
     }
+
     onChangeView = (ev, isMap) => {
         console.log('ev.target', ev.target);
         this.setState({ ...this.state, isMap: isMap })
@@ -247,7 +250,6 @@ class _BoardApp extends Component {
         await this.setState({ ...this.state, mapPos: pos })
         this.setState({ isMap: true })
     }
-
 
     render() {
         const { boardId } = this.props.match.params

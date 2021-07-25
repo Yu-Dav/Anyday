@@ -54,6 +54,27 @@ export const user = [
                 taskId: 't101'
             }
         ]
+    },
+    {
+        _id : ObjectId("60bce69e19a5e8e76458c22e"),
+        fullname : "Angie Polo",
+        username: "Angie",
+        password : "angie1234",
+        imgUrl : "https://i.ibb.co/6BW5sCy/002-woman-10.png"
+    },
+    {
+        _id : ObjectId("60bcf9d819a5e8e7645e4086"),
+        fullname: "David Moretti",
+        username : "David",
+        password : "david1234",
+        imgUrl : "https://i.ibb.co/hCd2nqq/027-grandfather.png"
+    },
+    {
+        _id: ObjectId("60bcfa7c19a5e8e7645e6f0b"),
+        fullname : "Yoel Navon",
+        username : "Yoel",
+        password : "Yoel1234",
+        imgUrl : "https://i.ibb.co/CJy2k9X/017-hipster.png"
     }
 ];
 
