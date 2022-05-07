@@ -1,5 +1,5 @@
 // import { Component } from 'react'
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { ReactComponent as FilterSvg } from '../assets/imgs/svg/filter.svg'
 // import { ReactComponent as SortSvg } from '../assets/imgs/svg/sort.svg'
@@ -16,17 +16,8 @@ export const BoardCtrlPanel = ({ addNewGroup, filterBoard, board, loadBoard, fil
     const [isFiltering, setIsFiltering] = useState(false)
     //  eslint-disable-next-line
     const [view, setView] = useState('board-view')
-    // const onSearchClicked = () => {
-    //     setIsSearching(!isSearching)
-    // }
-    // const onFilterClicked = () => {
-    //     setIsFiltering(!isFiltering)
 
-    // }
-    // const handleFilterClickAway = () => {
-    //     setIsFiltering(false)
 
-    // }
     return (
         <div className="board-ops flex space-between">
             <div className="left-ctrl flex">
@@ -46,12 +37,24 @@ export const BoardCtrlPanel = ({ addNewGroup, filterBoard, board, loadBoard, fil
                         }
                     </div>
                 </ClickAwayListener>
+                <div className="view flex align-center"  onClick={(ev) => {
+                    const isDash = ( view ==='dash-view');
+                     onChangeView(ev, false, !isDash)
+                     setView(isDash ?'board-view' :'dash-view')
+                }} >
+                    <TableChartOutlinedIcon />
+                    DashBoard
+                </div>
             </div>
             <div className="right-ctrl flex">
-                <div className={!isMap ? 'view active flex align-center' : 'view flex align-center'} onClick={(ev) => {
+         
+                <div className={!isMap ? 'view active flex align-center' : 'view flex align-center'} 
+                onClick={(ev) => {
                     onChangeView(ev, false)
                     setView('board-view')
-                }} ><TableChartOutlinedIcon />Board</div>
+                }} >
+                    <TableChartOutlinedIcon />Board
+                    </div>
                 <div className={isMap ? 'view active flex align-center' : 'view flex align-center'} onClick={(ev) => {
                     onChangeView(ev, true)
                     setView('map-view')

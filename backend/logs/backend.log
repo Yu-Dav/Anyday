@@ -5,3 +5,506 @@
 22/07/2021, 20:27:26 - DEBUG - Session ID is | IBEDnucIVVyC_ehHGY0pDJIqLasZvnCs 
 22/07/2021, 20:27:28 - DEBUG - Session ID is | IBEDnucIVVyC_ehHGY0pDJIqLasZvnCs 
 25/07/2021, 13:34:13 - INFO - Server is running on port: 3030 
+07/05/2022, 11:07:57 - INFO - Server is running on port: 3030 
+07/05/2022, 11:13:37 - INFO - Server is running on port: 3030 
+07/05/2022, 11:37:39 - INFO - Server is running on port: 3030 
+07/05/2022, 11:41:02 - INFO - Server is running on port: 3030 
+07/05/2022, 11:41:25 - INFO - Server is running on port: 3030 
+07/05/2022, 11:41:59 - INFO - Server is running on port: 3030 
+07/05/2022, 11:42:40 - INFO - Server is running on port: 3030 
+07/05/2022, 11:42:41 - INFO - Server is running on port: 3030 
+07/05/2022, 11:42:45 - INFO - Server is running on port: 3030 
+07/05/2022, 11:44:10 - DEBUG - auth.service - login with username: Noga (sid: uC9akEK5TmHAu0t4uxHpCKB2w8rAVZKT)
+07/05/2022, 11:44:10 - ERROR - Failed to Login ReferenceError: logger is not defined (sid: uC9akEK5TmHAu0t4uxHpCKB2w8rAVZKT)
+07/05/2022, 11:45:36 - DEBUG - auth.service - login with username: Noga (sid: uC9akEK5TmHAu0t4uxHpCKB2w8rAVZKT)
+07/05/2022, 11:45:36 - ERROR - Failed to Login ReferenceError: logger is not defined (sid: uC9akEK5TmHAu0t4uxHpCKB2w8rAVZKT)
+07/05/2022, 11:46:19 - DEBUG - auth.service - login with username: Noga (sid: uC9akEK5TmHAu0t4uxHpCKB2w8rAVZKT)
+07/05/2022, 11:46:19 - ERROR - Failed to Login ReferenceError: logger is not defined (sid: uC9akEK5TmHAu0t4uxHpCKB2w8rAVZKT)
+07/05/2022, 11:47:18 - ERROR - Failed to get users | ReferenceError: logger is not defined (sid: uC9akEK5TmHAu0t4uxHpCKB2w8rAVZKT)
+07/05/2022, 11:47:18 - ERROR - cannot find boards | ReferenceError: logger is not defined (sid: uC9akEK5TmHAu0t4uxHpCKB2w8rAVZKT)
+07/05/2022, 11:47:18 - ERROR - Failed to get boards | ReferenceError: logger is not defined (sid: uC9akEK5TmHAu0t4uxHpCKB2w8rAVZKT)
+07/05/2022, 11:47:18 - ERROR - cannot find boards | ReferenceError: logger is not defined (sid: uC9akEK5TmHAu0t4uxHpCKB2w8rAVZKT)
+07/05/2022, 11:47:18 - ERROR - Failed to get boards | ReferenceError: logger is not defined (sid: uC9akEK5TmHAu0t4uxHpCKB2w8rAVZKT)
+07/05/2022, 11:47:21 - ERROR - cannot insert board | ReferenceError: logger is not defined (sid: uC9akEK5TmHAu0t4uxHpCKB2w8rAVZKT)
+07/05/2022, 11:47:21 - ERROR - Failed to add new board | ReferenceError: logger is not defined (sid: uC9akEK5TmHAu0t4uxHpCKB2w8rAVZKT)
+07/05/2022, 11:51:39 - INFO - Server is running on port: 3030 
+07/05/2022, 11:52:14 - DEBUG - auth.service - login with username: Noga (sid: ZwQ_ZaZOFh1xlDqaVO5ltfK8C_a1wiVd)
+07/05/2022, 11:52:15 - ERROR - Failed to Login ReferenceError: logger is not defined (sid: ZwQ_ZaZOFh1xlDqaVO5ltfK8C_a1wiVd)
+07/05/2022, 11:52:38 - ERROR - Failed to get users | ReferenceError: logger is not defined (sid: ZwQ_ZaZOFh1xlDqaVO5ltfK8C_a1wiVd)
+07/05/2022, 11:52:38 - ERROR - cannot find boards | ReferenceError: logger is not defined (sid: ZwQ_ZaZOFh1xlDqaVO5ltfK8C_a1wiVd)
+07/05/2022, 11:52:38 - ERROR - Failed to get boards | ReferenceError: logger is not defined (sid: ZwQ_ZaZOFh1xlDqaVO5ltfK8C_a1wiVd)
+07/05/2022, 11:52:38 - ERROR - cannot find boards | ReferenceError: logger is not defined (sid: ZwQ_ZaZOFh1xlDqaVO5ltfK8C_a1wiVd)
+07/05/2022, 11:52:38 - ERROR - Failed to get boards | ReferenceError: logger is not defined (sid: ZwQ_ZaZOFh1xlDqaVO5ltfK8C_a1wiVd)
+07/05/2022, 11:52:41 - ERROR - cannot insert board | ReferenceError: logger is not defined (sid: ZwQ_ZaZOFh1xlDqaVO5ltfK8C_a1wiVd)
+07/05/2022, 11:52:41 - ERROR - Failed to add new board | ReferenceError: logger is not defined (sid: ZwQ_ZaZOFh1xlDqaVO5ltfK8C_a1wiVd)
+07/05/2022, 12:00:51 - INFO - Server is running on port: 3030 
+07/05/2022, 12:01:11 - DEBUG - auth.service - login with username: Noga (sid: 0yzjA8QyzQF6T0BRS0A-kNa4RJ54if0K)
+07/05/2022, 12:01:11 - ERROR - Failed to Login ReferenceError: logger is not defined (sid: 0yzjA8QyzQF6T0BRS0A-kNa4RJ54if0K)
+07/05/2022, 12:02:06 - DEBUG - auth.service - signup with username: xxx, fullname: XXX (sid: 0yzjA8QyzQF6T0BRS0A-kNa4RJ54if0K)
+07/05/2022, 12:02:06 - ERROR - Failed to get users | ReferenceError: logger is not defined (sid: 0yzjA8QyzQF6T0BRS0A-kNa4RJ54if0K)
+07/05/2022, 12:02:06 - ERROR - cannot find boards | ReferenceError: logger is not defined (sid: 0yzjA8QyzQF6T0BRS0A-kNa4RJ54if0K)
+07/05/2022, 12:02:06 - ERROR - Failed to get boards | ReferenceError: logger is not defined (sid: 0yzjA8QyzQF6T0BRS0A-kNa4RJ54if0K)
+07/05/2022, 12:02:06 - ERROR - cannot find boards | ReferenceError: logger is not defined (sid: 0yzjA8QyzQF6T0BRS0A-kNa4RJ54if0K)
+07/05/2022, 12:02:06 - ERROR - Failed to get boards | ReferenceError: logger is not defined (sid: 0yzjA8QyzQF6T0BRS0A-kNa4RJ54if0K)
+07/05/2022, 12:02:06 - ERROR - Failed to signup ReferenceError: logger is not defined (sid: 0yzjA8QyzQF6T0BRS0A-kNa4RJ54if0K)
+07/05/2022, 12:03:22 - ERROR - Failed to get users | ReferenceError: logger is not defined (sid: 0yzjA8QyzQF6T0BRS0A-kNa4RJ54if0K)
+07/05/2022, 12:03:22 - ERROR - cannot find boards | ReferenceError: logger is not defined (sid: 0yzjA8QyzQF6T0BRS0A-kNa4RJ54if0K)
+07/05/2022, 12:03:22 - ERROR - Failed to get boards | ReferenceError: logger is not defined (sid: 0yzjA8QyzQF6T0BRS0A-kNa4RJ54if0K)
+07/05/2022, 12:03:22 - ERROR - cannot find boards | ReferenceError: logger is not defined (sid: 0yzjA8QyzQF6T0BRS0A-kNa4RJ54if0K)
+07/05/2022, 12:03:22 - ERROR - Failed to get boards | ReferenceError: logger is not defined (sid: 0yzjA8QyzQF6T0BRS0A-kNa4RJ54if0K)
+07/05/2022, 12:58:18 - DEBUG - auth.service - login with username: xxx (sid: 0yzjA8QyzQF6T0BRS0A-kNa4RJ54if0K)
+07/05/2022, 12:58:18 - ERROR - Failed to Login ReferenceError: logger is not defined (sid: 0yzjA8QyzQF6T0BRS0A-kNa4RJ54if0K)
+07/05/2022, 12:58:36 - DEBUG - auth.service - signup with username: kkk, fullname: kkk (sid: 0yzjA8QyzQF6T0BRS0A-kNa4RJ54if0K)
+07/05/2022, 12:58:36 - ERROR - Failed to get users | ReferenceError: logger is not defined (sid: 0yzjA8QyzQF6T0BRS0A-kNa4RJ54if0K)
+07/05/2022, 12:58:36 - ERROR - cannot find boards | ReferenceError: logger is not defined (sid: 0yzjA8QyzQF6T0BRS0A-kNa4RJ54if0K)
+07/05/2022, 12:58:36 - ERROR - Failed to get boards | ReferenceError: logger is not defined (sid: 0yzjA8QyzQF6T0BRS0A-kNa4RJ54if0K)
+07/05/2022, 12:58:36 - ERROR - cannot find boards | ReferenceError: logger is not defined (sid: 0yzjA8QyzQF6T0BRS0A-kNa4RJ54if0K)
+07/05/2022, 12:58:36 - ERROR - Failed to get boards | ReferenceError: logger is not defined (sid: 0yzjA8QyzQF6T0BRS0A-kNa4RJ54if0K)
+07/05/2022, 12:58:36 - ERROR - Failed to signup ReferenceError: logger is not defined (sid: 0yzjA8QyzQF6T0BRS0A-kNa4RJ54if0K)
+07/05/2022, 13:07:58 - INFO - Server is running on port: 3030 
+07/05/2022, 13:09:31 - ERROR - cannot find boards | ReferenceError: logger is not defined (sid: YSXvePRTiMwtOD6NPrxTom2wIWaIC9Ib)
+07/05/2022, 13:09:31 - ERROR - Failed to get boards | ReferenceError: logger is not defined (sid: YSXvePRTiMwtOD6NPrxTom2wIWaIC9Ib)
+07/05/2022, 13:09:31 - ERROR - cannot find boards | ReferenceError: logger is not defined (sid: YSXvePRTiMwtOD6NPrxTom2wIWaIC9Ib)
+07/05/2022, 13:09:31 - ERROR - Failed to get boards | ReferenceError: logger is not defined (sid: YSXvePRTiMwtOD6NPrxTom2wIWaIC9Ib)
+07/05/2022, 13:09:31 - ERROR - Failed to get users | ReferenceError: logger is not defined (sid: YSXvePRTiMwtOD6NPrxTom2wIWaIC9Ib)
+07/05/2022, 13:09:42 - ERROR - Failed to get users | ReferenceError: logger is not defined (sid: YSXvePRTiMwtOD6NPrxTom2wIWaIC9Ib)
+07/05/2022, 13:09:42 - ERROR - cannot find boards | ReferenceError: logger is not defined (sid: YSXvePRTiMwtOD6NPrxTom2wIWaIC9Ib)
+07/05/2022, 13:09:42 - ERROR - Failed to get boards | ReferenceError: logger is not defined (sid: YSXvePRTiMwtOD6NPrxTom2wIWaIC9Ib)
+07/05/2022, 13:09:42 - ERROR - cannot find boards | ReferenceError: logger is not defined (sid: YSXvePRTiMwtOD6NPrxTom2wIWaIC9Ib)
+07/05/2022, 13:09:42 - ERROR - Failed to get boards | ReferenceError: logger is not defined (sid: YSXvePRTiMwtOD6NPrxTom2wIWaIC9Ib)
+07/05/2022, 13:09:52 - ERROR - Failed to get users | ReferenceError: logger is not defined (sid: YSXvePRTiMwtOD6NPrxTom2wIWaIC9Ib)
+07/05/2022, 13:09:52 - ERROR - cannot find boards | ReferenceError: logger is not defined (sid: YSXvePRTiMwtOD6NPrxTom2wIWaIC9Ib)
+07/05/2022, 13:09:52 - ERROR - Failed to get boards | ReferenceError: logger is not defined (sid: YSXvePRTiMwtOD6NPrxTom2wIWaIC9Ib)
+07/05/2022, 13:09:52 - ERROR - cannot find boards | ReferenceError: logger is not defined (sid: YSXvePRTiMwtOD6NPrxTom2wIWaIC9Ib)
+07/05/2022, 13:09:52 - ERROR - Failed to get boards | ReferenceError: logger is not defined (sid: YSXvePRTiMwtOD6NPrxTom2wIWaIC9Ib)
+07/05/2022, 13:10:03 - ERROR - Failed to get users | ReferenceError: logger is not defined (sid: YSXvePRTiMwtOD6NPrxTom2wIWaIC9Ib)
+07/05/2022, 13:10:03 - ERROR - cannot find boards | ReferenceError: logger is not defined (sid: YSXvePRTiMwtOD6NPrxTom2wIWaIC9Ib)
+07/05/2022, 13:10:03 - ERROR - Failed to get boards | ReferenceError: logger is not defined (sid: YSXvePRTiMwtOD6NPrxTom2wIWaIC9Ib)
+07/05/2022, 13:10:03 - ERROR - cannot find boards | ReferenceError: logger is not defined (sid: YSXvePRTiMwtOD6NPrxTom2wIWaIC9Ib)
+07/05/2022, 13:10:03 - ERROR - Failed to get boards | ReferenceError: logger is not defined (sid: YSXvePRTiMwtOD6NPrxTom2wIWaIC9Ib)
+07/05/2022, 13:10:58 - INFO - Server is running on port: 3030 
+07/05/2022, 13:11:03 - ERROR - cannot find boards | ReferenceError: logger is not defined (sid: zGHuqWqq-_WhmLwXin8zy1BGebfWRplj)
+07/05/2022, 13:11:03 - ERROR - Failed to get boards | ReferenceError: logger is not defined (sid: zGHuqWqq-_WhmLwXin8zy1BGebfWRplj)
+07/05/2022, 13:11:03 - ERROR - cannot find boards | ReferenceError: logger is not defined (sid: zGHuqWqq-_WhmLwXin8zy1BGebfWRplj)
+07/05/2022, 13:11:03 - ERROR - Failed to get boards | ReferenceError: logger is not defined (sid: zGHuqWqq-_WhmLwXin8zy1BGebfWRplj)
+07/05/2022, 13:11:03 - ERROR - Failed to get users | ReferenceError: logger is not defined (sid: zGHuqWqq-_WhmLwXin8zy1BGebfWRplj)
+07/05/2022, 13:11:17 - INFO - Server is running on port: 3030 
+07/05/2022, 13:14:24 - INFO - Server is running on port: 3030 
+07/05/2022, 13:14:34 - INFO - Server is running on port: 3030 
+07/05/2022, 13:14:47 - ERROR - cannot find boards | ReferenceError: logger is not defined (sid: 83ENTdeBHTfrWjGWRX2mi8VJO8ziOfKN)
+07/05/2022, 13:14:47 - ERROR - Failed to get boards | ReferenceError: logger is not defined (sid: 83ENTdeBHTfrWjGWRX2mi8VJO8ziOfKN)
+07/05/2022, 13:16:01 - INFO - Server is running on port: 3030 
+07/05/2022, 13:16:16 - ERROR - cannot find boards | ReferenceError: logger is not defined (sid: 89_Vq4pOzCwGCpZLgRPc7egHMhrNj_rc)
+07/05/2022, 13:16:16 - ERROR - Failed to get boards | ReferenceError: logger is not defined (sid: 89_Vq4pOzCwGCpZLgRPc7egHMhrNj_rc)
+07/05/2022, 13:17:03 - INFO - Server is running on port: 3030 
+07/05/2022, 13:17:15 - INFO - Server is running on port: 3030 
+07/05/2022, 13:17:25 - ERROR - Failed to get users | ReferenceError: logger is not defined (sid: G5HCzdd-JnYdzy6QF0UCCKyD2hCE_r1O)
+07/05/2022, 13:17:25 - ERROR - cannot find boards | ReferenceError: logger is not defined (sid: G5HCzdd-JnYdzy6QF0UCCKyD2hCE_r1O)
+07/05/2022, 13:17:25 - ERROR - Failed to get boards | ReferenceError: logger is not defined (sid: G5HCzdd-JnYdzy6QF0UCCKyD2hCE_r1O)
+07/05/2022, 13:17:25 - ERROR - cannot find boards | ReferenceError: logger is not defined (sid: G5HCzdd-JnYdzy6QF0UCCKyD2hCE_r1O)
+07/05/2022, 13:17:25 - ERROR - Failed to get boards | ReferenceError: logger is not defined (sid: G5HCzdd-JnYdzy6QF0UCCKyD2hCE_r1O)
+07/05/2022, 13:18:02 - INFO - Server is running on port: 3030 
+07/05/2022, 13:18:10 - ERROR - Failed to get Mongo collection | TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle (sid: Xh-Impv478_LduxDo02WwUsMwDELf3Mu)
+07/05/2022, 13:18:10 - ERROR - cannot find boards | TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle (sid: Xh-Impv478_LduxDo02WwUsMwDELf3Mu)
+07/05/2022, 13:18:10 - ERROR - Failed to get boards | TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle (sid: Xh-Impv478_LduxDo02WwUsMwDELf3Mu)
+07/05/2022, 13:18:10 - ERROR - Failed to get Mongo collection | TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle (sid: Xh-Impv478_LduxDo02WwUsMwDELf3Mu)
+07/05/2022, 13:18:10 - ERROR - Failed to get users | ReferenceError: logger is not defined (sid: Xh-Impv478_LduxDo02WwUsMwDELf3Mu)
+07/05/2022, 13:18:10 - ERROR - Failed to get Mongo collection | TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle (sid: Xh-Impv478_LduxDo02WwUsMwDELf3Mu)
+07/05/2022, 13:18:10 - ERROR - cannot find boards | TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle (sid: Xh-Impv478_LduxDo02WwUsMwDELf3Mu)
+07/05/2022, 13:18:10 - ERROR - Failed to get boards | TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle (sid: Xh-Impv478_LduxDo02WwUsMwDELf3Mu)
+07/05/2022, 13:19:11 - INFO - Server is running on port: 3030 
+07/05/2022, 13:19:24 - INFO - Server is running on port: 3030 
+07/05/2022, 13:19:54 - INFO - Server is running on port: 3030 
+07/05/2022, 13:20:03 - ERROR - Failed to get Mongo collection | TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle (sid: _Z32AaMPuw3CSZUQKX1oUMCsAjv2WA0R)
+07/05/2022, 13:20:03 - ERROR - cannot find boards | TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle (sid: _Z32AaMPuw3CSZUQKX1oUMCsAjv2WA0R)
+07/05/2022, 13:20:03 - ERROR - Failed to get boards | TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle (sid: _Z32AaMPuw3CSZUQKX1oUMCsAjv2WA0R)
+07/05/2022, 13:20:03 - ERROR - Failed to get Mongo collection | TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle (sid: _Z32AaMPuw3CSZUQKX1oUMCsAjv2WA0R)
+07/05/2022, 13:20:03 - ERROR - Failed to get users | ReferenceError: logger is not defined (sid: _Z32AaMPuw3CSZUQKX1oUMCsAjv2WA0R)
+07/05/2022, 13:20:03 - ERROR - Failed to get Mongo collection | TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle (sid: _Z32AaMPuw3CSZUQKX1oUMCsAjv2WA0R)
+07/05/2022, 13:20:03 - ERROR - cannot find boards | TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle (sid: _Z32AaMPuw3CSZUQKX1oUMCsAjv2WA0R)
+07/05/2022, 13:20:03 - ERROR - Failed to get boards | TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle (sid: _Z32AaMPuw3CSZUQKX1oUMCsAjv2WA0R)
+07/05/2022, 13:20:05 - ERROR - Failed to get Mongo collection | TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle (sid: _Z32AaMPuw3CSZUQKX1oUMCsAjv2WA0R)
+07/05/2022, 13:20:05 - ERROR - cannot find boards | TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle (sid: _Z32AaMPuw3CSZUQKX1oUMCsAjv2WA0R)
+07/05/2022, 13:20:05 - ERROR - Failed to get boards | TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle (sid: _Z32AaMPuw3CSZUQKX1oUMCsAjv2WA0R)
+07/05/2022, 13:20:05 - ERROR - Failed to get Mongo collection | TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle (sid: _Z32AaMPuw3CSZUQKX1oUMCsAjv2WA0R)
+07/05/2022, 13:20:05 - ERROR - Failed to get users | ReferenceError: logger is not defined (sid: _Z32AaMPuw3CSZUQKX1oUMCsAjv2WA0R)
+07/05/2022, 13:20:05 - ERROR - Failed to get Mongo collection | TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle (sid: _Z32AaMPuw3CSZUQKX1oUMCsAjv2WA0R)
+07/05/2022, 13:20:05 - ERROR - cannot find boards | TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle (sid: _Z32AaMPuw3CSZUQKX1oUMCsAjv2WA0R)
+07/05/2022, 13:20:05 - ERROR - Failed to get boards | TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle (sid: _Z32AaMPuw3CSZUQKX1oUMCsAjv2WA0R)
+07/05/2022, 13:20:47 - INFO - Server is running on port: 3030 
+07/05/2022, 13:20:50 - INFO - Server is running on port: 3030 
+07/05/2022, 13:21:08 - ERROR - Failed to get Mongo collection | TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle (sid: N5PVKrAlRvZisSYN5ytQK-EQbOk79GI8)
+07/05/2022, 13:21:08 - ERROR - cannot find boards | TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle (sid: N5PVKrAlRvZisSYN5ytQK-EQbOk79GI8)
+07/05/2022, 13:21:08 - ERROR - Failed to get boards | TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle (sid: N5PVKrAlRvZisSYN5ytQK-EQbOk79GI8)
+07/05/2022, 13:21:08 - ERROR - Failed to get Mongo collection | TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle (sid: N5PVKrAlRvZisSYN5ytQK-EQbOk79GI8)
+07/05/2022, 13:21:08 - ERROR - Failed to get users | ReferenceError: logger is not defined (sid: N5PVKrAlRvZisSYN5ytQK-EQbOk79GI8)
+07/05/2022, 13:21:08 - ERROR - Failed to get Mongo collection | TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle (sid: N5PVKrAlRvZisSYN5ytQK-EQbOk79GI8)
+07/05/2022, 13:21:08 - ERROR - cannot find boards | TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle (sid: N5PVKrAlRvZisSYN5ytQK-EQbOk79GI8)
+07/05/2022, 13:21:08 - ERROR - Failed to get boards | TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle (sid: N5PVKrAlRvZisSYN5ytQK-EQbOk79GI8)
+07/05/2022, 13:22:30 - INFO - Server is running on port: 3030 
+07/05/2022, 13:22:41 - ERROR - Failed to get Mongo collection | TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle (sid: ywOQ1I59YVXogIE_cRiC8kKnVvdEqzhx)
+07/05/2022, 13:22:41 - ERROR - cannot find boards | TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle (sid: ywOQ1I59YVXogIE_cRiC8kKnVvdEqzhx)
+07/05/2022, 13:22:41 - ERROR - Failed to get boards | TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle (sid: ywOQ1I59YVXogIE_cRiC8kKnVvdEqzhx)
+07/05/2022, 13:22:41 - ERROR - Failed to get Mongo collection | TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle (sid: ywOQ1I59YVXogIE_cRiC8kKnVvdEqzhx)
+07/05/2022, 13:22:41 - ERROR - Failed to get users | ReferenceError: logger is not defined (sid: ywOQ1I59YVXogIE_cRiC8kKnVvdEqzhx)
+07/05/2022, 13:22:41 - ERROR - Failed to get Mongo collection | TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle (sid: ywOQ1I59YVXogIE_cRiC8kKnVvdEqzhx)
+07/05/2022, 13:22:41 - ERROR - cannot find boards | TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle (sid: ywOQ1I59YVXogIE_cRiC8kKnVvdEqzhx)
+07/05/2022, 13:22:41 - ERROR - Failed to get boards | TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle (sid: ywOQ1I59YVXogIE_cRiC8kKnVvdEqzhx)
+07/05/2022, 13:27:17 - INFO - Server is running on port: 3030 
+07/05/2022, 13:27:24 - INFO - Server is running on port: 3030 
+07/05/2022, 13:27:33 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 13:27:33 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 13:27:33 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 13:27:38 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 13:27:38 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 13:27:38 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 13:27:38 - DEBUG - Session ID is | L8zxJgiebaedQJFISDun7lpZe4wSMhhR 
+07/05/2022, 13:29:03 - DEBUG - auth.service - login with username: Noga (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 13:29:03 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 13:29:03 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 13:29:03 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 13:29:04 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 13:29:08 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 13:29:08 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 13:29:08 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 13:29:08 - DEBUG - Session ID is | U_kF3SoKUjBxQftHNtNky4bHEpxmmP40 
+07/05/2022, 14:09:37 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 14:09:41 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 14:09:46 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 14:09:49 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 14:09:53 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 14:09:56 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 14:09:58 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 14:10:04 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 14:10:51 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 14:11:02 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:15:21 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:15:25 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:15:28 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:15:44 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:15:50 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:15:58 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:16:03 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:16:04 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:19:07 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:19:36 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:19:48 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:19:58 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:21:06 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:21:06 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:21:06 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:21:06 - DEBUG - Session ID is | 4JmIKYJbIQRAGdwj5Qu0hKFqDFv7ihMu 
+07/05/2022, 17:24:34 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:24:38 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:24:43 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:30:30 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:30:39 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:31:35 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:31:35 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:31:35 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:31:35 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:31:35 - DEBUG - Session ID is | FH7Lkfb-gO_12b89FeqiOdxq3Fa7C2n9 
+07/05/2022, 17:31:40 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:31:43 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:31:44 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:31:50 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:31:50 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:31:55 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:31:55 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:31:55 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:32:02 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:32:02 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:32:02 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:32:05 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:32:05 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:32:05 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:32:06 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:32:06 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:32:06 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:32:40 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:32:40 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:32:40 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:32:42 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:32:43 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:32:43 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:32:44 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:32:44 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:32:45 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:32:47 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:32:47 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:32:47 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:32:55 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:32:55 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:32:55 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:32:56 - DEBUG - Session ID is | rmxdKyqQMm8oj-4Eity1plqRqycRoENK 
+07/05/2022, 17:32:58 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:32:58 - DEBUG - Session ID is | rmxdKyqQMm8oj-4Eity1plqRqycRoENK 
+07/05/2022, 17:33:06 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:33:07 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:33:10 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:33:26 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:33:29 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:33:31 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:33:41 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:33:41 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:33:41 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:33:41 - DEBUG - Session ID is | EFvykzrpj2lt-LF27cfuN7hZnEzjSOOd 
+07/05/2022, 17:36:49 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:36:49 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:36:49 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:36:49 - DEBUG - Session ID is | U413Agta6PWb1koYeQGErOXxkbMTV-Qh 
+07/05/2022, 17:36:54 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:36:54 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:36:54 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:36:54 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:36:54 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:37:13 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:37:13 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:37:13 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:37:14 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:37:14 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:46:01 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:46:01 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:46:01 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:46:02 - DEBUG - Session ID is | iPiQXSzucEXnHZnkxQhhbLlAPxVW4TpR 
+07/05/2022, 17:46:13 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:46:13 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:46:13 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:46:13 - DEBUG - Session ID is | SginPO8HmDF0jZxQrc4Q6g9aOKgaPpSc 
+07/05/2022, 17:53:12 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:53:12 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:53:12 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:53:12 - DEBUG - Session ID is | PQvcUcO0NhNPVzJ5VzBQgMvE4_FrRs3N 
+07/05/2022, 17:55:20 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:55:20 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:55:20 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:55:20 - DEBUG - Session ID is | ImdNHDVS1d-_K1xq67VTzur60z2dHxq4 
+07/05/2022, 17:55:31 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:55:31 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:55:31 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:55:32 - DEBUG - Session ID is | GJafxrI3MerwEjx9-LogpgR5rg6Svkpi 
+07/05/2022, 17:57:31 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:57:31 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:57:31 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:57:32 - DEBUG - Session ID is | 7yUow_-qL_SnEIRcI6ANsnxxzKWh7Frp 
+07/05/2022, 17:59:17 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:59:17 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:59:17 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 17:59:17 - DEBUG - Session ID is | w1DIkQXAzKXfAQUFzr3b29zok_MXc61i 
+07/05/2022, 18:00:02 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:00:02 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:00:02 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:00:02 - DEBUG - Session ID is | Kj9pCz1GzvbA8_KLlNaUqKfTMXd3HKnU 
+07/05/2022, 18:00:10 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:00:10 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:00:10 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:00:10 - DEBUG - Session ID is | x1TemFRE-g-yovPvIxjeMnYiVQVDDqPI 
+07/05/2022, 18:00:37 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:00:37 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:00:37 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:00:37 - DEBUG - Session ID is | j8w4zB4CDY3syf6jrYCl_uxZf5ReFyMu 
+07/05/2022, 18:00:45 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:00:45 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:00:45 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:00:45 - DEBUG - Session ID is | e5Joq7GKUZdq4J8UwFRy-130C0gGa9XW 
+07/05/2022, 18:01:22 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:01:22 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:01:22 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:01:22 - DEBUG - Session ID is | OTyOuEgTNAbkxWXj2QsbZmaP4rSqo1bC 
+07/05/2022, 18:02:58 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:05:49 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:05:49 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:05:49 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:05:49 - DEBUG - Session ID is | DvMSct0aVcxPQOfJe-5PPfvMCUD-kdIo 
+07/05/2022, 18:06:13 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:06:13 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:06:13 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:06:13 - DEBUG - Session ID is | vpfizEEV9ap2aquYUcwN67UgbQcP-Hsg 
+07/05/2022, 18:06:25 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:06:25 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:06:25 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:06:25 - DEBUG - Session ID is | OkYTD0w_F147XFGCCJMkw802ApYj3esG 
+07/05/2022, 18:07:07 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:07:07 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:07:07 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:07:07 - DEBUG - Session ID is | I5d628iFOagDcKFR_4qwvy7nabImZoDU 
+07/05/2022, 18:08:27 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:08:27 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:08:27 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:08:27 - DEBUG - Session ID is | OXQBmTluNlNwCAIf0P8a9xJS8Vg0_gLp 
+07/05/2022, 18:13:59 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:13:59 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:13:59 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:13:59 - DEBUG - Session ID is | RlAMb8nxOKsxOhoQVNc1iTasLfMXQwuI 
+07/05/2022, 18:14:12 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:14:12 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:14:12 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:14:13 - DEBUG - Session ID is | ZKWJo1lcXxECYY61uiJNaVw4gEonQSIi 
+07/05/2022, 18:14:27 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:14:27 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:14:27 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:14:27 - DEBUG - Session ID is | xQiN0LKaH7r8lrQH5TzSPn0AAx2XHkXg 
+07/05/2022, 18:14:36 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:14:36 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:14:36 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:14:36 - DEBUG - Session ID is | 2mWGLuKmS6IMXM7Qetgzt5fI5XBowRbT 
+07/05/2022, 18:15:18 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:15:18 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:15:18 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:15:18 - DEBUG - Session ID is | lz6sIeRJDJvFIpgmNeEzt8c9Ube_v4tl 
+07/05/2022, 18:15:49 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:15:49 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:15:49 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:15:49 - DEBUG - Session ID is | IkHr7T69RpWdePU4FIM_HdSwKK99axrw 
+07/05/2022, 18:18:57 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:18:57 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:18:57 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:18:57 - DEBUG - Session ID is | wO247P0LE9UUR7La3fMtEIQyhXQHFvAH 
+07/05/2022, 18:24:37 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:24:37 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:24:37 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:24:37 - DEBUG - Session ID is | IRqDGuwz-lrMhrBZGUKjEJRbemLBXpYV 
+07/05/2022, 18:24:53 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:24:53 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:24:53 - ERROR - Connect to DB | kjsflkhj (sid: BFUlom5adDBfd7vRihIg4cj4ENk8SMcq)
+07/05/2022, 18:24:53 - DEBUG - Session ID is | AgD7Li8J2war-IdeGTz1tpR7U6wc4Z7J 

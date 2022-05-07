@@ -12,10 +12,11 @@ import { BoardHeader } from '../cmps/BoardHeader'
 import { BoardCtrlPanel } from '../cmps/BoardCtrlPanel'
 import { loadBoard, updateBoard, addBoard, removeBoard, loadBoards, onSetFilter } from '../store/actions/boardActions'
 import { loadUsers } from '../store/actions/userActions'
-import { GroupList } from '../cmps/groups/GroupList'
+import { GroupList } from '../cmps/Groups/GroupList'
 import { ActivityModal } from '../cmps/ActivitySideBar/ActivityModal';
 import { GoogleMap } from '../cmps/Map.jsx'
 import { Welcome } from '../cmps/Welcome';
+import { DashBoard } from '../cmps/DashBoard'
 
 
 class _BoardApp extends Component {
@@ -23,14 +24,14 @@ class _BoardApp extends Component {
         currUser: null,
         filteredGroups: null,
         isMap: false,
-        mapPos: null
+        mapPos: null,
+        isDashBoard: false
     }
 
     async componentDidMount() {
         await socketService.setup()
         this.props.loadUsers()
         const boardId = this.props.match.params.boardId
-        console.log(`file: BoardApp.jsx || line 38 || boardId`, boardId)
         const user = userService.getLoggedinUser()
         if (!boardId) await this.props.loadBoards()
         else {
@@ -240,9 +241,8 @@ class _BoardApp extends Component {
 
     }
 
-    onChangeView = (ev, isMap) => {
-        console.log('ev.target', ev.target);
-        this.setState({ ...this.state, isMap: isMap })
+    onChangeView = (ev, isMap, isDashBoard) => {
+        this.setState({ ...this.state, isMap: isMap, isDashBoard:isDashBoard })
     }
 
     setMap = async (pos) => {
@@ -268,6 +268,7 @@ class _BoardApp extends Component {
                     <BoardCtrlPanel board={currBoard} onChangeView={this.onChangeView} addNewGroup={this.addNewGroup}
                         filterBy={this.props.filterBy} filterBoard={this.filterBoard} loadBoard={this.props.loadBoard} isMap={isMap} />
                     {this.state.isMap && <GoogleMap className="container" pos={mapPos} />}
+                    {this.state.isDashBoard&& <DashBoard/>}
                     {!this.state.isMap &&
                         <DragDropContext onDragEnd={this.onDragEnd}>
                             <Droppable droppableId="all-groups" type="group">
@@ -279,7 +280,7 @@ class _BoardApp extends Component {
                                             board={currBoard}
                                             groups={filteredGroups || currBoard.groups}
                                             key={currBoard._id}
-                                            updateBoard={this.props.updateBoard} currUser={currUser} setMap={this.setMap} />}
+                                            updateBoard={this.props.updateBoard} currUser={currUser} setMap={this.setMap}/>}
                                         {provided.placeholder}
                                     </div>
                                 )}

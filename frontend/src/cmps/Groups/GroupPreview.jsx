@@ -1,7 +1,7 @@
 import React from 'react'
 import { GroupHeader } from './GroupHeader'
-import { TaskPreview } from '../tasks/TaskPreview'
-import { TaskAdd } from '../tasks/TaskAdd'
+import { TaskPreview } from '../Tasks/TaskPreview'
+import { TaskAdd } from '../Tasks/TaskAdd'
 import { Droppable, Draggable } from 'react-beautiful-dnd';
 
 import { GroupMenu } from './GroupMenu'

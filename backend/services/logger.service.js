@@ -23,7 +23,9 @@ function doLog(level, ...args) {
     console.log('LOGGER:', args);
     const strs = args.map(arg =>
         (typeof arg === 'string') ? arg :
-            (isError(arg)) ? arg : JSON.stringify(arg))
+            (isError(arg)) ? arg : 'kjsflkhj')    
+            //    (typeof arg === 'string') ? arg :
+            // (isError(arg)) ? arg : JSON.stringify(arg))
             
     var line = strs.join(' | ')
     const store = asyncLocalStorage.getStore()
