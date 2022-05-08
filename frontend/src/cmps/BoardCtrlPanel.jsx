@@ -1,15 +1,11 @@
-// import { Component } from 'react'
-import React, { useEffect, useState } from 'react';
-
+import React, { useState } from 'react';
 import { ReactComponent as FilterSvg } from '../assets/imgs/svg/filter.svg'
-// import { ReactComponent as SortSvg } from '../assets/imgs/svg/sort.svg'
 import { BoardSearch } from '../cmps/BoardSearch'
 import { BoardFilter } from '../cmps/BoardFilter'
 import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 import SearchIcon from '@material-ui/icons/Search';
 import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
 import TableChartOutlinedIcon from '@material-ui/icons/TableChartOutlined';
-// import { onSetFilter } from '../store/actions/boardActions';
 
 export const BoardCtrlPanel = ({ addNewGroup, filterBoard, board, loadBoard, filterBy, onChangeView, isMap }) => {
     const [isSearching, setIsSearching] = useState(false)

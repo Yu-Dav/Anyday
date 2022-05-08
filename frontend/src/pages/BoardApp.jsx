@@ -246,7 +246,6 @@ class _BoardApp extends Component {
     }
 
     setMap = async (pos) => {
-        console.log(pos);
         await this.setState({ ...this.state, mapPos: pos })
         this.setState({ isMap: true })
     }
@@ -268,7 +267,7 @@ class _BoardApp extends Component {
                     <BoardCtrlPanel board={currBoard} onChangeView={this.onChangeView} addNewGroup={this.addNewGroup}
                         filterBy={this.props.filterBy} filterBoard={this.filterBoard} loadBoard={this.props.loadBoard} isMap={isMap} />
                     {this.state.isMap && <GoogleMap className="container" pos={mapPos} />}
-                    {this.state.isDashBoard&& <DashBoard/>}
+                    {this.state.isDashBoard&& <DashBoard groups={currBoard.groups}/>}
                     {!this.state.isMap &&
                         <DragDropContext onDragEnd={this.onDragEnd}>
                             <Droppable droppableId="all-groups" type="group">
