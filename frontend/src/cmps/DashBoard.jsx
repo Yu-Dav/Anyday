@@ -2,7 +2,7 @@ import React from 'react'
 import HighchartsReact from 'highcharts-react-official';
 import Highcharts from 'highcharts';
 
-
+//todo- colors
 
 const getCharOptions = (groups) => {
     const objs = {}
@@ -15,7 +15,11 @@ const getCharOptions = (groups) => {
             // objs.push( ++objs[task.status.title] || 1)
         });
     });
-    const propertyValues = Object.values(objs);
+
+    const arr =[];
+    for (const [key, value] of Object.entries(objs)) {
+       arr.push({'name':key, 'y':value});
+      }
 
 
     const options = {
@@ -27,7 +31,7 @@ const getCharOptions = (groups) => {
         },
         series: [
             { 
-                data: propertyValues
+                data: arr
             }
         ]
     };
@@ -39,7 +43,6 @@ export const DashBoard = ({ groups }) => {
 
     const y = getCharOptions(groups);
 
-    console.log('cc', y);
     return (
         <HighchartsReact highcharts={Highcharts} options={y} data={y} />
     )
