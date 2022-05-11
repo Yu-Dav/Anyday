@@ -2,25 +2,22 @@ import React from 'react'
 import HighchartsReact from 'highcharts-react-official';
 import Highcharts from 'highcharts';
 
-//todo- colors
 
 const getCharOptions = (groups) => {
-    const objs = {}
+    const colors = []
 
-    groups.forEach(group => {
+    const statusSum = groups.reduce((acc, group) => {
         group.tasks.forEach(task => {
-
-            //each title should be in a diff array
-            objs[task.status.title] = ++objs[task.status.title] || 1
-            // objs.push( ++objs[task.status.title] || 1)
+            acc[task.status.title] = ++acc[task.status.title] || 1
+            colors[task.status.title] = task.status.color;
         });
-    });
+        return acc
+    }, {});
 
-    const arr =[];
-    for (const [key, value] of Object.entries(objs)) {
-       arr.push({'name':key, 'y':value});
-      }
-
+    const arr = [];
+    for (const [key, value] of Object.entries(statusSum)) {
+        arr.push({ 'name': key, 'y': value, color: colors[key] });
+    }
 
     const options = {
         chart: {
@@ -30,7 +27,7 @@ const getCharOptions = (groups) => {
             enabled: false
         },
         series: [
-            { 
+            {
                 data: arr
             }
         ]
@@ -44,6 +41,6 @@ export const DashBoard = ({ groups }) => {
     const y = getCharOptions(groups);
 
     return (
-        <HighchartsReact highcharts={Highcharts} options={y} data={y} />
+        <HighchartsReact highcharts={Highcharts} options={y} />
     )
 }

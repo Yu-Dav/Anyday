@@ -149,8 +149,6 @@ class _BoardApp extends Component {
             if (!filterBy.status?.length && !filterBy.priority?.length &&
                 !filterBy.tag?.length && !filterBy.membersId?.length &&
                 !filterBy.txt?.length) {
-                console.log('no filter');
-                // return this.setState({ ...this.state, filteredGroups: this.props.currBoard.groups }, () => console.log('filtered groups', this.state.filteredGroups))
                 return this.setState({ ...this.state, filteredGroups: null }, () => console.log('filtered groups', this.state.filteredGroups))
             }
 
@@ -187,7 +185,6 @@ class _BoardApp extends Component {
                 })
             }
             if (filterBy.tag?.length) {
-                // console.log('filter by tag');
                 filteredBoard.groups = filteredBoard.groups.filter(group => {
                     const filteredTasks = group.tasks.filter(task => {
                         const tag = filterBy.tag.find(tagfromFilter => {
@@ -204,7 +201,6 @@ class _BoardApp extends Component {
                 })
             }
             if (filterBy.membersId?.length) {
-                // console.log('filter by member');
                 filteredBoard.groups = filteredBoard.groups.filter(group => {
                     const filteredTasks = group.tasks.filter(task => {
                         const member = task.members.find(member => {
@@ -221,7 +217,6 @@ class _BoardApp extends Component {
                 })
             }
             if (filterBy.txt?.length) {
-                // console.log('filter by txt');
                 const filterRegex = new RegExp(filterBy.txt, 'i');
                 filteredBoard.groups = filteredBoard.groups.filter(group => {
                     const filteredTasks = group.tasks.filter(task => filterRegex.test(task.title))
@@ -238,11 +233,10 @@ class _BoardApp extends Component {
 
     onAddNewBoard = () => {
         this.props.addBoard()
-
     }
 
     onChangeView = (ev, isMap, isDashBoard) => {
-        this.setState({ ...this.state, isMap: isMap, isDashBoard:isDashBoard })
+        this.setState({ ...this.state, isMap: isMap, isDashBoard: isDashBoard })
     }
 
     setMap = async (pos) => {
@@ -267,7 +261,7 @@ class _BoardApp extends Component {
                     <BoardCtrlPanel board={currBoard} onChangeView={this.onChangeView} addNewGroup={this.addNewGroup}
                         filterBy={this.props.filterBy} filterBoard={this.filterBoard} loadBoard={this.props.loadBoard} isMap={isMap} />
                     {this.state.isMap && <GoogleMap className="container" pos={mapPos} />}
-                    {this.state.isDashBoard&& <DashBoard groups={currBoard.groups}/>}
+                    {this.state.isDashBoard && <DashBoard groups={currBoard.groups} />}
                     {!this.state.isMap &&
                         <DragDropContext onDragEnd={this.onDragEnd}>
                             <Droppable droppableId="all-groups" type="group">
@@ -279,7 +273,7 @@ class _BoardApp extends Component {
                                             board={currBoard}
                                             groups={filteredGroups || currBoard.groups}
                                             key={currBoard._id}
-                                            updateBoard={this.props.updateBoard} currUser={currUser} setMap={this.setMap}/>}
+                                            updateBoard={this.props.updateBoard} currUser={currUser} setMap={this.setMap} />}
                                         {provided.placeholder}
                                     </div>
                                 )}

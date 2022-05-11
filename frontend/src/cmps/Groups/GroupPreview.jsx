@@ -6,6 +6,7 @@ import { Droppable, Draggable } from 'react-beautiful-dnd';
 
 import { GroupMenu } from './GroupMenu'
 
+//hashmap task titles?
 export function GroupPreview({ group, board, updateBoard, index, currUser, setMap }) {
     const { tasks } = group
     return (
