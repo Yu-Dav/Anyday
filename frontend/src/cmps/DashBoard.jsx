@@ -11,7 +11,6 @@ const charOptions = (groups, type) => {
         group.tasks.forEach(task => {
             const startMonth = new Date(task.timeline[0]).getMonth();
             const endMonth = new Date(task.timeline[1]).getMonth();
-            console.log({startMonth});
             const isSameMonth = startMonth === endMonth;
             monthsSum[startMonth] = ++monthsSum[startMonth] || 1;
             if (!isSameMonth) {
@@ -33,7 +32,8 @@ const charOptions = (groups, type) => {
         if (isBar) {
             monthArr[key] = value
         } else {
-            statusArr.push({ 'name': key, 'y': value, color: colors[key] });
+            const keyName = key === '.' ? 'no status' : key
+            statusArr.push({ 'name': keyName, 'y': value, color: colors[key] });
         }
 
     }
@@ -51,7 +51,7 @@ const charOptions = (groups, type) => {
         xAxis: {
             categories: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
         },
-        yAxis:{
+        yAxis: {
             title: 'disable'
         },
         series: [

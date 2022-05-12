@@ -16,7 +16,8 @@ export const TaskAdd = (props) => {
             labelIds: ['101'],
             createdAt: Date.now(),
             title: value,
-            timeline: [null, null],
+            // timeline: [null, null],
+            timeline: [],
             tags: [],
             status: {
                 id: 'sl1',
