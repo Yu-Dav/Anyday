@@ -2,11 +2,9 @@ import React from 'react'
 import HighchartsReact from 'highcharts-react-official';
 import Highcharts from 'highcharts';
 
-const charOptions = (groups, type) => {
+const prepareData = (groups) => {
     const colors = []
     const monthsSum = {};
-    const isBar = type === 'bar';
-
     const statusSum = groups.reduce((acc, group) => {
         group.tasks.forEach(task => {
             const startMonth = new Date(task.timeline[0]).getMonth();
@@ -25,10 +23,15 @@ const charOptions = (groups, type) => {
         });
         return acc
     }, {});
+    return { statusSum, colors, monthsSum }
+}
+
+const chartOptions = (data, type, colors) => {
+    const isBar = type === 'bar';
 
     const statusArr = [];
     const monthArr = Array(12).fill(0);
-    for (const [key, value] of Object.entries(isBar ? monthsSum : statusSum)) {
+    for (const [key, value] of Object.entries(data)) {
         if (isBar) {
             monthArr[key] = value
         } else {
@@ -66,8 +69,10 @@ const charOptions = (groups, type) => {
 
 
 export const DashBoard = ({ groups }) => {
-    const pieOptions = charOptions(groups, 'pie');
-    const lineOptions = charOptions(groups, 'bar')
+    const { statusSum, monthsSum, colors } = prepareData(groups);
+    const pieOptions = chartOptions(statusSum, 'pie', colors);
+    const lineOptions = chartOptions(monthsSum, 'bar')
+    console.log({ statusSum, monthsSum });
 
     return (
         <div className='flex justify-center'>

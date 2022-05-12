@@ -38,7 +38,6 @@ export const BoardCtrlPanel = ({ addNewGroup, filterBoard, board, loadBoard, fil
                      onChangeView(ev, false, !isDash)
                      setView(isDash ?'board-view' :'dash-view')
                 }} >
-                    {/* TODO: change icon */}
                     <TableChartOutlinedIcon /> 
                     Insights
                 </div>
