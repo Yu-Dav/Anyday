@@ -3,7 +3,8 @@ import HighchartsReact from 'highcharts-react-official';
 import Highcharts from 'highcharts';
 
 //todo: move to a different file
-const charOptions = (groups) => {
+const charOptions = (groups, type) => {
+    console.log({type});
     const colors = []
     const monthsSum = {};
 
@@ -18,7 +19,6 @@ const charOptions = (groups) => {
             const isSameMonth = startMonth === endMonth;
             monthsSum[startMonth] = ++monthsSum[startMonth] || 1;
             if (!isSameMonth) {
-                console.log('here');
                 const diff = endMonth - startMonth
                 for (var i = 0; i < diff; i++) {
                     const vvv =   ++ i + startMonth;
@@ -33,14 +33,15 @@ const charOptions = (groups) => {
     }, {});
     console.log({ monthsSum });
 
+    //change to reusable
     const arr = [];
-    for (const [key, value] of Object.entries(statusSum)) {
+    for (const [key, value] of Object.entries(monthsSum)) {
         arr.push({ 'name': key, 'y': value, color: colors[key] });
     }
 
     const options = {
         chart: {
-            type: 'pie'
+            type
         },
         title: {
             text: 'status'
@@ -50,7 +51,7 @@ const charOptions = (groups) => {
         },
         series: [
             {
-                data: arr
+                data: arr 
             }
         ]
     };
@@ -62,13 +63,13 @@ const lineChartOptions = (groups) => {
 }
 
 export const DashBoard = ({ groups }) => {
-    const y = charOptions(groups);
-    const line = lineChartOptions(groups)
+    const y = charOptions(groups, 'pie');
+    const line = charOptions(groups, 'line')
 
     return (
         <div className='flex justify-center'>
-            {/* <HighchartsReact highcharts={Highcharts} options={y} data={y} /> */}
-            <HighchartsReact highcharts={Highcharts} options={y} data={y} />
+            <HighchartsReact highcharts={Highcharts} options={y} />
+            {/* <HighchartsReact highcharts={Highcharts} options={line} /> */}
         </div>
     )
 }
