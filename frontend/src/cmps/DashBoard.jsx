@@ -2,28 +2,23 @@ import React from 'react'
 import HighchartsReact from 'highcharts-react-official';
 import Highcharts from 'highcharts';
 
-//todo: move to a different file
 const charOptions = (groups, type) => {
-    console.log({type});
     const colors = []
     const monthsSum = {};
+    const isBar = type === 'bar';
 
     const statusSum = groups.reduce((acc, group) => {
         group.tasks.forEach(task => {
-            console.log(task, task.timeline[0]);
-            //todo = move to a diff func
-            // const startMonth = new Date(task.timeline[0]).toLocaleString('default', { month: 'long' });  //reduce code
-            // const endMonth = new Date(task.timeline[1]).toLocaleString('default', { month: 'long' });
             const startMonth = new Date(task.timeline[0]).getMonth();
             const endMonth = new Date(task.timeline[1]).getMonth();
+            console.log({startMonth});
             const isSameMonth = startMonth === endMonth;
             monthsSum[startMonth] = ++monthsSum[startMonth] || 1;
             if (!isSameMonth) {
                 const diff = endMonth - startMonth
                 for (var i = 0; i < diff; i++) {
-                    const vvv =   ++ i + startMonth;
-                    console.log({ vvv });
-                    monthsSum[vvv] = ++monthsSum[vvv] || 1;
+                    const month = ++i + startMonth;
+                    monthsSum[month] = ++monthsSum[month] || 1;
                 }
             }
             acc[task.status.title] = ++acc[task.status.title] || 1
@@ -31,12 +26,16 @@ const charOptions = (groups, type) => {
         });
         return acc
     }, {});
-    console.log({ monthsSum });
 
-    //change to reusable
-    const arr = [];
-    for (const [key, value] of Object.entries(monthsSum)) {
-        arr.push({ 'name': key, 'y': value, color: colors[key] });
+    const statusArr = [];
+    const monthArr = Array(12).fill(0);
+    for (const [key, value] of Object.entries(isBar ? monthsSum : statusSum)) {
+        if (isBar) {
+            monthArr[key] = value
+        } else {
+            statusArr.push({ 'name': key, 'y': value, color: colors[key] });
+        }
+
     }
 
     const options = {
@@ -44,32 +43,36 @@ const charOptions = (groups, type) => {
             type
         },
         title: {
-            text: 'status'
+            text: (isBar) ? 'tasks per month' : 'status'
         },
         credits: {
             enabled: false
         },
+        xAxis: {
+            categories: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
+        },
+        yAxis:{
+            title: 'disable'
+        },
         series: [
             {
-                data: arr 
+                data: isBar ? monthArr : statusArr,
+                showInLegend: false
             }
         ]
     };
     return options;
 };
 
-const lineChartOptions = (groups) => {
-    console.log('fff');
-}
 
 export const DashBoard = ({ groups }) => {
-    const y = charOptions(groups, 'pie');
-    const line = charOptions(groups, 'line')
+    const pieOptions = charOptions(groups, 'pie');
+    const lineOptions = charOptions(groups, 'bar')
 
     return (
         <div className='flex justify-center'>
-            <HighchartsReact highcharts={Highcharts} options={y} />
-            {/* <HighchartsReact highcharts={Highcharts} options={line} /> */}
+            <HighchartsReact highcharts={Highcharts} options={pieOptions} />
+            <HighchartsReact highcharts={Highcharts} options={lineOptions} />
         </div>
     )
 }
